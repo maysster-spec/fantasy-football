@@ -1,0 +1,15 @@
+# my_takes.csv -- your hot takes.  Fill in `direction` (up / down / clear) and `note`.
+# Leave direction BLANK to skip a row.  Apply the whole sheet with:  py my_take.py --file
+# `note` is what you see when you hover the row on the live board, so write it for 8:05 PM you.
+# Rows below were seeded from what you have already told me -- edit or blank any of them.
+player,direction,note
+Kyle Monangai,up,"better blocker by far, earns snaps; Swift is 27 with a long injury history. Grows into the job as the season goes"
+Jonathon Brooks,up,"2nd-rd draft capital, likely the better back. Cheap young legs beat the older expensive guy. Lead back outright if he stays healthy"
+D'Andre Swift,down,"27, storied injury history, contract year. Not the guy I want holding a job into 2027"
+Chuba Hubbard,,
+Bhayshul Tuten,,
+RJ Harvey,,
+Jordan Mason,,
+Tyjae Spears,,
+Kenny Gainwell,,
+Rachaad White,,

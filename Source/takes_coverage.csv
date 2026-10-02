@@ -1,0 +1,91 @@
+show,season,kind,weeks_found,weeks_missing,counted_from
+Establish The Run,2021,WAIVER,5,9,grid
+Establish The Run,2021,PRESEASON,1,,grid
+Establish The Run,2022,WAIVER,3,11,grid
+Establish The Run,2022,PRESEASON,1,,grid
+Establish The Run,2023,WAIVER,8,6,grid
+Establish The Run,2023,PRESEASON,0,,grid
+Establish The Run,2024,WAIVER,6,8,grid
+Establish The Run,2024,PRESEASON,1,,grid
+Establish The Run,2025,WAIVER,5,9,grid
+Establish The Run,2025,PRESEASON,1,,grid
+Fantasy Footballers,2021,WAIVER,12,2,"PART 3 (no grid supplied, UNVERIFIED)"
+Fantasy Footballers,2022,WAIVER,9,5,"PART 3 (no grid supplied, UNVERIFIED)"
+Fantasy Footballers,2023,WAIVER,10,4,"PART 3 (no grid supplied, UNVERIFIED)"
+Fantasy Footballers,2024,WAIVER,7,7,"PART 3 (no grid supplied, UNVERIFIED)"
+Fantasy Footballers,2025,WAIVER,8,6,"PART 3 (no grid supplied, UNVERIFIED)"
+FantasyPros,2021,WAIVER,14,0,grid
+FantasyPros,2021,PRESEASON,1,,grid
+FantasyPros,2022,WAIVER,10,4,grid
+FantasyPros,2022,PRESEASON,1,,grid
+FantasyPros,2023,WAIVER,14,0,grid
+FantasyPros,2023,PRESEASON,1,,grid
+FantasyPros,2024,WAIVER,14,0,grid
+FantasyPros,2024,PRESEASON,1,,grid
+FantasyPros,2025,WAIVER,9,5,grid
+FantasyPros,2025,PRESEASON,0,,grid
+Harris Fantasy Football,2021,WAIVER,0,14,grid
+Harris Fantasy Football,2021,PRESEASON,1,,grid
+Harris Fantasy Football,2022,WAIVER,8,6,grid
+Harris Fantasy Football,2022,PRESEASON,0,,grid
+Harris Fantasy Football,2023,WAIVER,6,8,grid
+Harris Fantasy Football,2023,PRESEASON,1,,grid
+Harris Fantasy Football,2024,WAIVER,8,6,grid
+Harris Fantasy Football,2024,PRESEASON,1,,grid
+Harris Fantasy Football,2025,WAIVER,7,7,grid
+Harris Fantasy Football,2025,PRESEASON,1,,grid
+Late-Round Fantasy Football,2021,WAIVER,0,14,grid
+Late-Round Fantasy Football,2021,PRESEASON,0,,grid
+Late-Round Fantasy Football,2022,WAIVER,3,11,grid
+Late-Round Fantasy Football,2022,PRESEASON,0,,grid
+Late-Round Fantasy Football,2023,WAIVER,1,13,grid
+Late-Round Fantasy Football,2023,PRESEASON,0,,grid
+Late-Round Fantasy Football,2024,WAIVER,5,9,grid
+Late-Round Fantasy Football,2024,PRESEASON,0,,grid
+Late-Round Fantasy Football,2025,WAIVER,8,6,grid
+Late-Round Fantasy Football,2025,PRESEASON,1,,grid
+theScore,2021,WAIVER,6,8,grid
+theScore,2021,PRESEASON,1,,grid
+theScore,2022,WAIVER,7,7,grid
+theScore,2022,PRESEASON,1,,grid
+theScore,2023,WAIVER,10,4,grid
+theScore,2023,PRESEASON,1,,grid
+theScore,2024,WAIVER,11,3,grid
+theScore,2024,PRESEASON,1,,grid
+theScore,2025,WAIVER,0,14,grid
+theScore,2025,PRESEASON,0,,grid
+The Athletic,2021,WAIVER,3,11,grid
+The Athletic,2021,PRESEASON,0,,grid
+The Athletic,2022,WAIVER,0,14,grid
+The Athletic,2022,PRESEASON,0,,grid
+The Athletic,2023,WAIVER,0,14,grid
+The Athletic,2023,PRESEASON,0,,grid
+The Athletic,2024,WAIVER,0,14,grid
+The Athletic,2024,PRESEASON,1,,grid
+The Athletic,2025,WAIVER,0,14,grid
+The Athletic,2025,PRESEASON,0,,grid
+Rotoworld,2021,WAIVER,5,9,grid
+Rotoworld,2021,PRESEASON,1,,grid
+Rotoworld,2022,WAIVER,7,7,grid
+Rotoworld,2022,PRESEASON,1,,grid
+Rotoworld,2023,WAIVER,3,11,grid
+Rotoworld,2023,PRESEASON,1,,grid
+Rotoworld,2024,WAIVER,7,7,grid
+Rotoworld,2024,PRESEASON,1,,grid
+Rotoworld,2025,WAIVER,3,11,grid
+Rotoworld,2025,PRESEASON,1,,grid
+Yahoo Fantasy Forecast,2021,WAIVER,2,12,grid
+Yahoo Fantasy Forecast,2021,PRESEASON,0,,grid
+Yahoo Fantasy Forecast,2022,WAIVER,0,14,grid
+Yahoo Fantasy Forecast,2022,PRESEASON,0,,grid
+Yahoo Fantasy Forecast,2023,WAIVER,1,13,grid
+Yahoo Fantasy Forecast,2023,PRESEASON,1,,grid
+Yahoo Fantasy Forecast,2024,WAIVER,6,8,grid
+Yahoo Fantasy Forecast,2024,PRESEASON,1,,grid
+Yahoo Fantasy Forecast,2025,WAIVER,0,14,grid
+Yahoo Fantasy Forecast,2025,PRESEASON,1,,grid
+Fantasy Life Show,2021,WAIVER,0,14,NOT SEARCHED -- the show may not have existed; unresolved
+Fantasy Life Show,2022,WAIVER,0,14,NOT SEARCHED -- the show may not have existed; unresolved
+Fantasy Life Show,2023,WAIVER,2,12,"supplied by Matt 17 Sept, links only, weeks NOT verified"
+Fantasy Life Show,2024,WAIVER,12,2,"supplied by Matt 17 Sept; 3 of the 12 were already filed under FantasyPros, label contested"
+Fantasy Life Show,2025,WAIVER,3,11,"supplied by Matt 17 Sept, links only, weeks NOT verified"

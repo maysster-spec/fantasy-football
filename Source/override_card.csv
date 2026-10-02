@@ -1,0 +1,7 @@
+player,pos,team,adp,old_rank,new_rank,old_proj,new_proj,delta,hold,note
+Josh Jacobs,RB,GB,100.4,435,93,0.0,152.4947981,152.5,True,"NFL Commissioner's Exempt List, out indefinitely (NBC Sports / DraftSharks, Aug 30 2026). Consensus guidance is to draft as if he does not play in 2026. Reverse by deleting this row and re-running apply_news.py --write."
+Isiah Pacheco,RB,DET,166.29,143,208,114.9189301,66.63148157,-48.3,False,
+MarShawn Lloyd,RB,GB,102.15,184,131,78.23336848,124.40103458,46.2,False,
+Kayshon Boutte,WR,NE,170.53,188,143,72.32660365,113.43311074,41.1,False,
+Kyler Murray,QB,MIN,136.68,141,90,289.27855615,327.19063364,37.9,False,
+De'Zhaun Stribling,WR,SF,137.51,145,116,108.98686329,134.05034529,25.1,False,

@@ -1,0 +1,45 @@
+{
+ "n_events": 114,
+ "arms": {
+  "usage": {
+   "n": 112,
+   "teams": 32,
+   "capped": 53,
+   "r2_m1": 0.0915,
+   "r2_m2": 0.0938,
+   "share_coef_m1": 0.7608,
+   "share_se_m1": 0.2286,
+   "share_coef_m2": 0.7553,
+   "share_se_m2": 0.2296,
+   "breadth_coef": -0.0542,
+   "breadth_se": 0.1019,
+   "breadth_p": 0.5962,
+   "breadth_se_cluster": 0.1057,
+   "breadth_p_cluster": 0.6121,
+   "breadth_points_per_unit": -5.42,
+   "verdict": "DEAD",
+   "target_ratio_coef": -0.2629,
+   "target_ratio_p": 0.1214
+  },
+  "actual": {
+   "n": 102,
+   "teams": 31,
+   "capped": 53,
+   "r2_m1": 0.0038,
+   "r2_m2": 0.0196,
+   "share_coef_m1": 0.1022,
+   "share_se_m1": 0.1655,
+   "share_coef_m2": 0.0775,
+   "share_se_m2": 0.1662,
+   "breadth_coef": 0.1092,
+   "breadth_se": 0.0864,
+   "breadth_p": 0.2092,
+   "breadth_se_cluster": 0.0668,
+   "breadth_p_cluster": 0.1126,
+   "breadth_points_per_unit": 10.92,
+   "verdict": "DEAD",
+   "target_ratio_coef": 0.1819,
+   "target_ratio_p": 0.2465
+  }
+ }
+}

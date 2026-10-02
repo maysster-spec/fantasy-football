@@ -1,0 +1,715 @@
+Year,Manager,Team,Rd,Pick,Player,NFL,Pos,Keeper
+2022,Rychlicki,Dolla Dolla Bills Y'all,1,1,Lamar Jackson,Bal,QB,True
+2022,Pierce (departed),Allen Fantasy Team*,1,2,Dak Prescott,Dal,QB,True
+2022,Grenier,Hurts So Good,1,3,Jalen Hurts,Phi,QB,True
+2022,herman allen,Rick James B!Tch!,1,4,Mecole Hardman,KC,WR,True
+2022,Lobsinger,SLamb'n Kittle SLutz,1,5,Javonte Williams,Den,RB,True
+2022,Matt Mays,Ekeler's Edge,1,6,Ja'Marr Chase,Cin,WR,True
+2022,Cary,Herb Your Enthusiasm,1,7,Michael Pittman Jr.,Ind,WR,True
+2022,R Taylor,Multiple Scorgasms,1,8,Tee Higgins,Cin,WR,True
+2022,Brown/Collins,Brown VS Browns,1,9,Deebo Samuel,SF,WR,True
+2022,Wilson Kam,Bloodied Castaways,1,10,James Conner,Ari,RB,True
+2022,David Snyder,Send'em Packin,1,11,Leonard Fournette,FA,RB,True
+2022,Fleming,Kannapolis Bushmen,1,12,Mark Andrews,Bal,TE,True
+2022,Rychlicki,Dolla Dolla Bills Y'all,2,13,Christian McCaffrey,SF,RB,False
+2022,Pierce (departed),Allen Fantasy Team*,2,14,Jonathan Taylor,Ind,RB,False
+2022,Grenier,Hurts So Good,2,15,Cooper Kupp,LAR,WR,False
+2022,herman allen,Rick James B!Tch!,2,16,Derrick Henry,Ten,RB,False
+2022,Lobsinger,SLamb'n Kittle SLutz,2,17,Dalvin Cook,Min,RB,False
+2022,Matt Mays,Ekeler's Edge,2,18,Austin Ekeler,LAC,RB,False
+2022,Cary,Herb Your Enthusiasm,2,19,Joe Mixon,Cin,RB,False
+2022,R Taylor,Multiple Scorgasms,2,20,Justin Jefferson,Min,WR,False
+2022,Brown/Collins,Brown VS Browns,2,21,Davante Adams,LV,WR,False
+2022,Wilson Kam,Bloodied Castaways,2,22,Tyreek Hill,Mia,WR,False
+2022,David Snyder,Send'em Packin,2,23,Josh Allen,Buf,QB,False
+2022,Fleming,Kannapolis Bushmen,2,24,Alvin Kamara,NO,RB,False
+2022,Fleming,Kannapolis Bushmen,3,25,Stefon Diggs,Buf,WR,False
+2022,David Snyder,Send'em Packin,3,26,Aaron Jones,GB,RB,False
+2022,Wilson Kam,Bloodied Castaways,3,27,Patrick Mahomes,KC,QB,False
+2022,Brown/Collins,Brown VS Browns,3,28,D'Andre Swift,Det,RB,False
+2022,R Taylor,Multiple Scorgasms,3,29,Najee Harris,Pit,RB,False
+2022,Cary,Herb Your Enthusiasm,3,30,Travis Kelce,KC,TE,False
+2022,Matt Mays,Ekeler's Edge,3,31,Saquon Barkley,NYG,RB,False
+2022,Lobsinger,SLamb'n Kittle SLutz,3,32,CeeDee Lamb,Dal,WR,False
+2022,herman allen,Rick James B!Tch!,3,33,Nick Chubb,Cle,RB,False
+2022,Grenier,Hurts So Good,3,34,Mike Evans,TB,WR,False
+2022,Pierce (departed),Allen Fantasy Team*,3,35,Keenan Allen,LAC,WR,False
+2022,Rychlicki,Dolla Dolla Bills Y'all,3,36,DJ Moore,Chi,WR,False
+2022,Rychlicki,Dolla Dolla Bills Y'all,4,37,Kyle Pitts,Atl,TE,False
+2022,Pierce (departed),Allen Fantasy Team*,4,38,Cam Akers,LAR,RB,False
+2022,Grenier,Hurts So Good,4,39,Ezekiel Elliott,FA,RB,False
+2022,herman allen,Rick James B!Tch!,4,40,Terry McLaurin,Wsh,WR,False
+2022,Lobsinger,SLamb'n Kittle SLutz,4,41,Justin Herbert,LAC,QB,False
+2022,Matt Mays,Ekeler's Edge,4,42,A.J. Brown,Phi,WR,False
+2022,Cary,Herb Your Enthusiasm,4,43,Mike Williams,LAC,WR,False
+2022,R Taylor,Multiple Scorgasms,4,44,David Montgomery,Det,RB,False
+2022,Brown/Collins,Brown VS Browns,4,45,Antonio Gibson,Wsh,RB,False
+2022,Wilson Kam,Bloodied Castaways,4,46,J.K. Dobbins,Bal,RB,False
+2022,David Snyder,Send'em Packin,4,47,Gabe Davis,Buf,WR,False
+2022,Fleming,Kannapolis Bushmen,4,48,Breece Hall,NYJ,RB,False
+2022,Fleming,Kannapolis Bushmen,5,49,Brandin Cooks,Dal,WR,False
+2022,David Snyder,Send'em Packin,5,50,DK Metcalf,Sea,WR,False
+2022,Brown/Collins,Brown VS Browns,5,52,Tom Brady,TB,QB,False
+2022,R Taylor,Multiple Scorgasms,5,53,Darren Waller,NYG,TE,False
+2022,Cary,Herb Your Enthusiasm,5,54,Travis Etienne Jr.,Jax,RB,False
+2022,Matt Mays,Ekeler's Edge,5,55,Courtland Sutton,Den,WR,False
+2022,Lobsinger,SLamb'n Kittle SLutz,5,56,George Kittle,SF,TE,False
+2022,herman allen,Rick James B!Tch!,5,57,Jerry Jeudy,Den,WR,False
+2022,Grenier,Hurts So Good,5,58,Josh Jacobs,LV,RB,False
+2022,Pierce (departed),Allen Fantasy Team*,5,59,Diontae Johnson,Pit,WR,False
+2022,Rychlicki,Dolla Dolla Bills Y'all,5,60,Jaylen Waddle,Mia,WR,False
+2022,Rychlicki,Dolla Dolla Bills Y'all,6,61,Michael Thomas,NO,WR,False
+2022,Pierce (departed),Allen Fantasy Team*,6,62,Dalton Schultz,Hou,TE,False
+2022,Grenier,Hurts So Good,6,63,Elijah Mitchell,SF,RB,False
+2022,herman allen,Rick James B!Tch!,6,64,Russell Wilson,Den,QB,False
+2022,Lobsinger,SLamb'n Kittle SLutz,6,65,Allen Robinson II,LAR,WR,False
+2022,Matt Mays,Ekeler's Edge,6,66,Rashod Bateman,Bal,WR,False
+2022,Cary,Herb Your Enthusiasm,6,67,Kyler Murray,Ari,QB,False
+2022,R Taylor,Multiple Scorgasms,6,68,Chris Godwin,TB,WR,False
+2022,Brown/Collins,Brown VS Browns,6,69,Adam Thielen,FA,WR,False
+2022,David Snyder,Send'em Packin,6,71,Devin Singletary,Hou,RB,False
+2022,Fleming,Kannapolis Bushmen,6,72,Darnell Mooney,Chi,WR,False
+2022,Fleming,Kannapolis Bushmen,7,73,Trey Lance,SF,QB,False
+2022,David Snyder,Send'em Packin,7,74,Dawson Knox,Buf,TE,False
+2022,Wilson Kam,Bloodied Castaways,7,75,Clyde Edwards-Helaire,KC,RB,False
+2022,Brown/Collins,Brown VS Browns,7,76,Miles Sanders,Car,RB,False
+2022,R Taylor,Multiple Scorgasms,7,77,Joe Burrow,Cin,QB,False
+2022,Cary,Herb Your Enthusiasm,7,78,Dameon Pierce,Hou,RB,False
+2022,Matt Mays,Ekeler's Edge,7,79,Chase Edmonds,TB,RB,False
+2022,Lobsinger,SLamb'n Kittle SLutz,7,80,AJ Dillon,GB,RB,False
+2022,herman allen,Rick James B!Tch!,7,81,Kareem Hunt,Cle,RB,False
+2022,Grenier,Hurts So Good,7,82,Dallas Goedert,Phi,TE,False
+2022,Pierce (departed),Allen Fantasy Team*,7,83,Aaron Rodgers,GB,QB,False
+2022,Rychlicki,Dolla Dolla Bills Y'all,7,84,Cordarrelle Patterson,Atl,RB,False
+2022,Rychlicki,Dolla Dolla Bills Y'all,8,85,James Cook,Buf,RB,False
+2022,Pierce (departed),Allen Fantasy Team*,8,86,Amon-Ra St. Brown,Det,WR,False
+2022,Grenier,Hurts So Good,8,87,Amari Cooper,Cle,WR,False
+2022,herman allen,Rick James B!Tch!,8,88,DeVonta Smith,Phi,WR,False
+2022,Lobsinger,SLamb'n Kittle SLutz,8,89,JuJu Smith-Schuster,NE,WR,False
+2022,Matt Mays,Ekeler's Edge,8,90,Matthew Stafford,LAR,QB,False
+2022,Cary,Herb Your Enthusiasm,8,91,Drake London,Atl,WR,False
+2022,R Taylor,Multiple Scorgasms,8,92,Allen Lazard,NYJ,WR,False
+2022,Brown/Collins,Brown VS Browns,8,93,Mike Gesicki,NE,TE,False
+2022,Wilson Kam,Bloodied Castaways,8,94,Kirk Cousins,Min,QB,False
+2022,David Snyder,Send'em Packin,8,95,Justin Fields,Chi,QB,False
+2022,Fleming,Kannapolis Bushmen,8,96,Bills D/ST,Buf,D/ST,False
+2022,Fleming,Kannapolis Bushmen,9,97,Elijah Moore,NYJ,WR,False
+2022,David Snyder,Send'em Packin,9,98,Hunter Renfrow,LV,WR,False
+2022,Wilson Kam,Bloodied Castaways,9,99,Damien Harris,Buf,RB,False
+2022,Brown/Collins,Brown VS Browns,9,100,George Pickens,Pit,WR,False
+2022,R Taylor,Multiple Scorgasms,9,101,Rashaad Penny,Phi,RB,False
+2022,Cary,Herb Your Enthusiasm,9,102,Chris Olave,NO,WR,False
+2022,Matt Mays,Ekeler's Edge,9,103,Brandon Aiyuk,SF,WR,False
+2022,Lobsinger,SLamb'n Kittle SLutz,9,104,DeAndre Hopkins,Ari,WR,False
+2022,herman allen,Rick James B!Tch!,9,105,T.J. Hockenson,Min,TE,False
+2022,Grenier,Hurts So Good,9,106,Rhamondre Stevenson,NE,RB,False
+2022,Pierce (departed),Allen Fantasy Team*,9,107,Tony Pollard,Dal,RB,False
+2022,Rychlicki,Dolla Dolla Bills Y'all,9,108,Tyler Lockett,Sea,WR,False
+2022,Rychlicki,Dolla Dolla Bills Y'all,10,109,Robert Woods,FA,WR,False
+2022,Pierce (departed),Allen Fantasy Team*,10,110,Christian Kirk,Jax,WR,False
+2022,Grenier,Hurts So Good,10,111,Derek Carr,NO,QB,False
+2022,herman allen,Rick James B!Tch!,10,112,Chase Claypool,Chi,WR,False
+2022,Lobsinger,SLamb'n Kittle SLutz,10,113,Melvin Gordon III,FA,RB,False
+2022,Matt Mays,Ekeler's Edge,10,114,Cole Kmet,Chi,TE,False
+2022,Cary,Herb Your Enthusiasm,10,115,Trevor Lawrence,Jax,QB,False
+2022,R Taylor,Multiple Scorgasms,10,116,Kadarius Toney,KC,WR,False
+2022,Brown/Collins,Brown VS Browns,10,117,49ers D/ST,SF,D/ST,False
+2022,Wilson Kam,Bloodied Castaways,10,118,Harrison Butker,KC,K,False
+2022,David Snyder,Send'em Packin,10,119,Packers D/ST,GB,D/ST,False
+2022,Fleming,Kannapolis Bushmen,10,120,Marquez Valdes-Scantling,KC,WR,False
+2022,Fleming,Kannapolis Bushmen,11,121,Garrett Wilson,NYJ,WR,False
+2022,David Snyder,Send'em Packin,11,122,Hunter Henry,NE,TE,False
+2022,Wilson Kam,Bloodied Castaways,11,123,Saints D/ST,NO,D/ST,False
+2022,Brown/Collins,Brown VS Browns,11,124,Robbie Anderson,FA,WR,False
+2022,R Taylor,Multiple Scorgasms,11,125,Buccaneers D/ST,TB,D/ST,False
+2022,Cary,Herb Your Enthusiasm,11,126,Matt Gay,Ind,K,False
+2022,Matt Mays,Ekeler's Edge,11,127,Darrell Henderson Jr.,FA,RB,False
+2022,Lobsinger,SLamb'n Kittle SLutz,11,128,Kenneth Walker III,Sea,RB,False
+2022,herman allen,Rick James B!Tch!,11,129,Ravens D/ST,Bal,D/ST,False
+2022,Grenier,Hurts So Good,11,130,Cowboys D/ST,Dal,D/ST,False
+2022,Pierce (departed),Allen Fantasy Team*,11,131,Justin Tucker,Bal,K,False
+2022,Rychlicki,Dolla Dolla Bills Y'all,11,132,Michael Carter,NYJ,RB,False
+2022,Rychlicki,Dolla Dolla Bills Y'all,12,133,Skyy Moore,KC,WR,False
+2022,Pierce (departed),Allen Fantasy Team*,12,134,Nyheim Hines,Buf,RB,False
+2022,Grenier,Hurts So Good,12,135,Tyler Boyd,Cin,WR,False
+2022,herman allen,Rick James B!Tch!,12,136,James Robinson,NE,RB,False
+2022,Lobsinger,SLamb'n Kittle SLutz,12,137,Isaiah McKenzie,FA,WR,False
+2022,Matt Mays,Ekeler's Edge,12,138,Broncos D/ST,Den,D/ST,False
+2022,Cary,Herb Your Enthusiasm,12,139,Noah Fant,Sea,TE,False
+2022,R Taylor,Multiple Scorgasms,12,140,Raheem Mostert,Mia,RB,False
+2022,Brown/Collins,Brown VS Browns,12,141,Zamir White,LV,RB,False
+2022,Wilson Kam,Bloodied Castaways,12,142,Pat Freiermuth,Pit,TE,False
+2022,David Snyder,Send'em Packin,12,143,Russell Gage,TB,WR,False
+2022,Fleming,Kannapolis Bushmen,12,144,Tua Tagovailoa,Mia,QB,False
+2022,Fleming,Kannapolis Bushmen,13,145,Nick Folk,NE,K,False
+2022,David Snyder,Send'em Packin,13,146,Steelers D/ST,Pit,D/ST,False
+2022,Wilson Kam,Bloodied Castaways,13,147,Jakobi Meyers,LV,WR,False
+2022,Brown/Collins,Brown VS Browns,13,148,DeVante Parker,NE,WR,False
+2022,R Taylor,Multiple Scorgasms,13,149,Colts D/ST,Ind,D/ST,False
+2022,Cary,Herb Your Enthusiasm,13,150,Chargers D/ST,LAC,D/ST,False
+2022,Matt Mays,Ekeler's Edge,13,151,Alexander Mattison,Min,RB,False
+2022,Lobsinger,SLamb'n Kittle SLutz,13,152,Treylon Burks,Ten,WR,False
+2022,herman allen,Rick James B!Tch!,13,153,Brian Robinson Jr.,Wsh,RB,False
+2022,Grenier,Hurts So Good,13,154,David Njoku,Cle,TE,False
+2022,Pierce (departed),Allen Fantasy Team*,13,155,Irv Smith Jr.,Min,TE,False
+2022,Rychlicki,Dolla Dolla Bills Y'all,13,156,Isiah Pacheco,KC,RB,False
+2022,Rychlicki,Dolla Dolla Bills Y'all,14,157,Tyler Bass,Buf,K,False
+2022,Pierce (departed),Allen Fantasy Team*,14,158,Jahan Dotson,Wsh,WR,False
+2022,Grenier,Hurts So Good,14,159,Evan McPherson,Cin,K,False
+2022,herman allen,Rick James B!Tch!,14,160,Ryan Succop,TB,K,False
+2022,Lobsinger,SLamb'n Kittle SLutz,14,161,Eagles D/ST,Phi,D/ST,False
+2022,Matt Mays,Ekeler's Edge,14,162,Romeo Doubs,GB,WR,False
+2022,Cary,Herb Your Enthusiasm,14,163,Marvin Jones Jr.,Jax,WR,False
+2022,R Taylor,Multiple Scorgasms,14,164,Michael Gallup,Dal,WR,False
+2022,Brown/Collins,Brown VS Browns,14,165,Jameis Winston,NO,QB,False
+2022,Wilson Kam,Bloodied Castaways,14,166,Jarvis Landry,NO,WR,False
+2022,David Snyder,Send'em Packin,14,167,Matt Prater,Ari,K,False
+2022,Fleming,Kannapolis Bushmen,14,168,Tyler Higbee,LAR,TE,False
+2022,Fleming,Kannapolis Bushmen,15,169,Chuba Hubbard,Car,RB,False
+2022,David Snyder,Send'em Packin,15,170,Joshua Palmer,LAC,WR,False
+2022,Wilson Kam,Bloodied Castaways,15,171,Damien Williams,FA,RB,False
+2022,Brown/Collins,Brown VS Browns,15,172,Daniel Carlson,LV,K,False
+2022,R Taylor,Multiple Scorgasms,15,173,Brandon McManus,Den,K,False
+2022,Cary,Herb Your Enthusiasm,15,174,J.D. McKissic,FA,RB,False
+2022,Matt Mays,Ekeler's Edge,15,175,Greg Joseph,Min,K,False
+2022,Lobsinger,SLamb'n Kittle SLutz,15,176,Wil Lutz,NO,K,False
+2022,herman allen,Rick James B!Tch!,15,177,Logan Thomas,Wsh,TE,False
+2022,Grenier,Hurts So Good,15,178,Jared Bernhardt,Atl,WR,False
+2022,Pierce (departed),Allen Fantasy Team*,15,179,Dolphins D/ST,Mia,D/ST,False
+2022,Rychlicki,Dolla Dolla Bills Y'all,15,180,Bengals D/ST,Cin,D/ST,False
+2023,Rychlicki,Von Down By The River,1,1,James Cook,Buf,RB,True
+2023,Fleming,Kannapolis Bushmen,1,2,Tua Tagovailoa,Mia,QB,True
+2023,Wilson Kam,Bloodied Castaways,1,3,Kirk Cousins,Atl,QB,True
+2023,David Snyder,Send'em Packin,1,4,Dawson Knox,Buf,TE,True
+2023,Pierce (departed),Allen Fantasy Team*,1,5,Dalton Schultz,Hou,TE,True
+2023,Lobsinger,SLambin Juwanna Mann,1,6,Kenneth Walker III,Sea,RB,True
+2023,Cary,Olave Garden,1,7,Chris Olave,NO,WR,True
+2023,Grenier,Trevor's Tremors,1,8,Rhamondre Stevenson,NE,RB,True
+2023,herman allen,Rick James B!Tch!,1,9,DeVonta Smith,Phi,WR,True
+2023,Brown/Collins,Brown VS Browns,1,10,George Pickens,Pit,WR,True
+2023,R Taylor,Multiple Scorgasms,1,11,Joe Burrow,Cin,QB,True
+2023,Matt Mays,Long Arm Of The Lamar,1,12,Alexander Mattison,LV,RB,True
+2023,Matt Mays,Long Arm Of The Lamar,2,13,Justin Jefferson,Min,WR,False
+2023,R Taylor,Multiple Scorgasms,2,14,Ja'Marr Chase,Cin,WR,False
+2023,Brown/Collins,Brown VS Browns,2,15,Christian McCaffrey,SF,RB,False
+2023,herman allen,Rick James B!Tch!,2,16,Austin Ekeler,Wsh,RB,False
+2023,Grenier,Trevor's Tremors,2,17,Saquon Barkley,Phi,RB,False
+2023,Cary,Olave Garden,2,18,Tyreek Hill,Mia,WR,False
+2023,Lobsinger,SLambin Juwanna Mann,2,19,Bijan Robinson,Atl,RB,False
+2023,Pierce (departed),Allen Fantasy Team*,2,20,Travis Kelce,KC,TE,False
+2023,David Snyder,Send'em Packin,2,21,Josh Allen,Buf,QB,False
+2023,Wilson Kam,Bloodied Castaways,2,22,Patrick Mahomes,KC,QB,False
+2023,Fleming,Kannapolis Bushmen,2,23,Jalen Hurts,Phi,QB,False
+2023,Rychlicki,Von Down By The River,2,24,Davante Adams,LV,WR,False
+2023,Rychlicki,Von Down By The River,3,25,Derrick Henry,Bal,RB,False
+2023,Fleming,Kannapolis Bushmen,3,26,Stefon Diggs,Buf,WR,False
+2023,Wilson Kam,Bloodied Castaways,3,27,Nick Chubb,Cle,RB,False
+2023,David Snyder,Send'em Packin,3,28,Tony Pollard,Ten,RB,False
+2023,Pierce (departed),Allen Fantasy Team*,3,29,Cooper Kupp,LAR,WR,False
+2023,Lobsinger,SLambin Juwanna Mann,3,30,CeeDee Lamb,Dal,WR,False
+2023,Cary,Olave Garden,3,31,Amon-Ra St. Brown,Det,WR,False
+2023,Grenier,Trevor's Tremors,3,32,Joe Mixon,Hou,RB,False
+2023,herman allen,Rick James B!Tch!,3,33,Josh Jacobs,GB,RB,False
+2023,Brown/Collins,Brown VS Browns,3,34,A.J. Brown,Phi,WR,False
+2023,R Taylor,Multiple Scorgasms,3,35,Garrett Wilson,NYJ,WR,False
+2023,Matt Mays,Long Arm Of The Lamar,3,36,Jahmyr Gibbs,Det,RB,False
+2023,Matt Mays,Long Arm Of The Lamar,4,37,Lamar Jackson,Bal,QB,False
+2023,R Taylor,Multiple Scorgasms,4,38,Travis Etienne Jr.,Jax,RB,False
+2023,Brown/Collins,Brown VS Browns,4,39,Justin Herbert,LAC,QB,False
+2023,herman allen,Rick James B!Tch!,4,40,Jaylen Waddle,Mia,WR,False
+2023,Grenier,Trevor's Tremors,4,41,Trevor Lawrence,Jax,QB,False
+2023,Cary,Olave Garden,4,42,Aaron Jones,Min,RB,False
+2023,Lobsinger,SLambin Juwanna Mann,4,43,Justin Fields,Pit,QB,False
+2023,Pierce (departed),Allen Fantasy Team*,4,44,DK Metcalf,Sea,WR,False
+2023,David Snyder,Send'em Packin,4,45,Tee Higgins,Cin,WR,False
+2023,Wilson Kam,Bloodied Castaways,4,46,Mark Andrews,Bal,TE,False
+2023,Fleming,Kannapolis Bushmen,4,47,Dameon Pierce,Hou,RB,False
+2023,Rychlicki,Von Down By The River,4,48,Deebo Samuel,SF,WR,False
+2023,Rychlicki,Von Down By The River,5,49,Najee Harris,Pit,RB,False
+2023,Fleming,Kannapolis Bushmen,5,50,Calvin Ridley,Ten,WR,False
+2023,David Snyder,Send'em Packin,5,52,Dalvin Cook,Bal,RB,False
+2023,Pierce (departed),Allen Fantasy Team*,5,53,Breece Hall,NYJ,RB,False
+2023,Lobsinger,SLambin Juwanna Mann,5,54,Amari Cooper,Cle,WR,False
+2023,Cary,Olave Garden,5,55,T.J. Hockenson,Min,TE,False
+2023,Grenier,Trevor's Tremors,5,56,Mike Evans,TB,WR,False
+2023,herman allen,Rick James B!Tch!,5,57,Keenan Allen,Chi,WR,False
+2023,Brown/Collins,Brown VS Browns,5,58,Darren Waller,NYG,TE,False
+2023,R Taylor,Multiple Scorgasms,5,59,George Kittle,SF,TE,False
+2023,Matt Mays,Long Arm Of The Lamar,5,60,Mike Williams,NYJ,WR,False
+2023,Matt Mays,Long Arm Of The Lamar,6,61,DJ Moore,Chi,WR,False
+2023,R Taylor,Multiple Scorgasms,6,62,Isiah Pacheco,KC,RB,False
+2023,Brown/Collins,Brown VS Browns,6,63,Miles Sanders,Car,RB,False
+2023,herman allen,Rick James B!Tch!,6,64,Aaron Rodgers,NYJ,QB,False
+2023,Grenier,Trevor's Tremors,6,65,Diontae Johnson,Car,WR,False
+2023,Cary,Olave Garden,6,66,Deshaun Watson,Cle,QB,False
+2023,Lobsinger,SLambin Juwanna Mann,6,67,Alvin Kamara,NO,RB,False
+2023,Pierce (departed),Allen Fantasy Team*,6,68,Rachaad White,TB,RB,False
+2023,David Snyder,Send'em Packin,6,69,Odell Beckham Jr.,FA,WR,False
+2023,Fleming,Kannapolis Bushmen,6,71,Cam Akers,Min,RB,False
+2023,Rychlicki,Von Down By The River,6,72,DeAndre Hopkins,Ten,WR,False
+2023,Rychlicki,Von Down By The River,7,73,Kyle Pitts,Atl,TE,False
+2023,Fleming,Kannapolis Bushmen,7,74,Dallas Goedert,Phi,TE,False
+2023,Wilson Kam,Bloodied Castaways,7,75,49ers D/ST,SF,D/ST,False
+2023,David Snyder,Send'em Packin,7,76,Adam Thielen,Car,WR,False
+2023,Pierce (departed),Allen Fantasy Team*,7,77,Chris Godwin,TB,WR,False
+2023,Lobsinger,SLambin Juwanna Mann,7,78,Terry McLaurin,Wsh,WR,False
+2023,Cary,Olave Garden,7,79,Javonte Williams,Den,RB,False
+2023,Grenier,Trevor's Tremors,7,80,Evan Engram,Jax,TE,False
+2023,herman allen,Rick James B!Tch!,7,81,David Montgomery,Det,RB,False
+2023,Brown/Collins,Brown VS Browns,7,82,J.K. Dobbins,Bal,RB,False
+2023,R Taylor,Multiple Scorgasms,7,83,Jerry Jeudy,Cle,WR,False
+2023,Matt Mays,Long Arm Of The Lamar,7,84,Khalil Herbert,Chi,RB,False
+2023,Matt Mays,Long Arm Of The Lamar,8,85,Jaxon Smith-Njigba,Sea,WR,False
+2023,R Taylor,Multiple Scorgasms,8,86,Christian Kirk,Jax,WR,False
+2023,Brown/Collins,Brown VS Browns,8,87,Drake London,Atl,WR,False
+2023,herman allen,Rick James B!Tch!,8,88,Zay Flowers,Bal,WR,False
+2023,Grenier,Trevor's Tremors,8,89,Marquise Brown,KC,WR,False
+2023,Cary,Olave Garden,8,90,Tyler Lockett,Sea,WR,False
+2023,Lobsinger,SLambin Juwanna Mann,8,91,Antonio Gibson,NE,RB,False
+2023,Pierce (departed),Allen Fantasy Team*,8,92,Jonathan Taylor,Ind,RB,False
+2023,David Snyder,Send'em Packin,8,93,Gabe Davis,Jax,WR,False
+2023,Wilson Kam,Bloodied Castaways,8,94,Brandon Aiyuk,SF,WR,False
+2023,Fleming,Kannapolis Bushmen,8,95,Michael Pittman Jr.,Ind,WR,False
+2023,Rychlicki,Von Down By The River,8,96,Skyy Moore,KC,WR,False
+2023,Rychlicki,Von Down By The River,9,97,Dak Prescott,Dal,QB,False
+2023,Fleming,Kannapolis Bushmen,9,98,Brandin Cooks,Dal,WR,False
+2023,Wilson Kam,Bloodied Castaways,9,99,Courtland Sutton,Den,WR,False
+2023,David Snyder,Send'em Packin,9,100,Brian Robinson Jr.,Wsh,RB,False
+2023,Pierce (departed),Allen Fantasy Team*,9,101,Jahan Dotson,Wsh,WR,False
+2023,Lobsinger,SLambin Juwanna Mann,9,102,Raheem Mostert,Mia,RB,False
+2023,Cary,Olave Garden,9,103,AJ Dillon,GB,RB,False
+2023,Grenier,Trevor's Tremors,9,104,Jakobi Meyers,LV,WR,False
+2023,herman allen,Rick James B!Tch!,9,105,D'Andre Swift,Chi,RB,False
+2023,Brown/Collins,Brown VS Browns,9,106,Michael Thomas,NO,WR,False
+2023,R Taylor,Multiple Scorgasms,9,107,Bills D/ST,Buf,D/ST,False
+2023,Matt Mays,Long Arm Of The Lamar,9,108,Jordan Addison,Min,WR,False
+2023,Matt Mays,Long Arm Of The Lamar,10,109,Jaylen Warren,Pit,RB,False
+2023,R Taylor,Multiple Scorgasms,10,110,Jamaal Williams,NO,RB,False
+2023,Brown/Collins,Brown VS Browns,10,111,Treylon Burks,Ten,WR,False
+2023,herman allen,Rick James B!Tch!,10,112,Rashaad Penny,Phi,RB,False
+2023,Grenier,Trevor's Tremors,10,113,Samaje Perine,Den,RB,False
+2023,Cary,Olave Garden,10,114,Pat Freiermuth,Pit,TE,False
+2023,Lobsinger,SLambin Juwanna Mann,10,115,Anthony Richardson,Ind,QB,False
+2023,Pierce (departed),Allen Fantasy Team*,10,116,Daniel Jones,NYG,QB,False
+2023,David Snyder,Send'em Packin,10,117,Geno Smith,Sea,QB,False
+2023,Wilson Kam,Bloodied Castaways,10,118,David Njoku,Cle,TE,False
+2023,Fleming,Kannapolis Bushmen,10,119,Cole Kmet,Chi,TE,False
+2023,Rychlicki,Von Down By The River,10,120,Dalton Kincaid,Buf,TE,False
+2023,Rychlicki,Von Down By The River,11,121,Steelers D/ST,Pit,D/ST,False
+2023,Fleming,Kannapolis Bushmen,11,122,JuJu Smith-Schuster,NE,WR,False
+2023,Wilson Kam,Bloodied Castaways,11,123,Quentin Johnston,LAC,WR,False
+2023,David Snyder,Send'em Packin,11,124,Tyler Higbee,LAR,TE,False
+2023,Pierce (departed),Allen Fantasy Team*,11,125,Rondale Moore,Atl,WR,False
+2023,Lobsinger,SLambin Juwanna Mann,11,126,Darnell Mooney,Atl,WR,False
+2023,Cary,Olave Garden,11,127,Cowboys D/ST,Dal,D/ST,False
+2023,Grenier,Trevor's Tremors,11,128,Ezekiel Elliott,NE,RB,False
+2023,herman allen,Rick James B!Tch!,11,129,Commanders D/ST,Wsh,D/ST,False
+2023,Brown/Collins,Brown VS Browns,11,130,Gerald Everett,Chi,TE,False
+2023,R Taylor,Multiple Scorgasms,11,131,Jerick McKinnon,KC,RB,False
+2023,Matt Mays,Long Arm Of The Lamar,11,132,Zach Charbonnet,Sea,RB,False
+2023,Matt Mays,Long Arm Of The Lamar,12,133,Sam LaPorta,Det,TE,False
+2023,R Taylor,Multiple Scorgasms,12,134,Saints D/ST,NO,D/ST,False
+2023,Brown/Collins,Brown VS Browns,12,135,Panthers D/ST,Car,D/ST,False
+2023,herman allen,Rick James B!Tch!,12,136,Justin Tucker,Bal,K,False
+2023,Grenier,Trevor's Tremors,12,137,Tyler Boyd,Cin,WR,False
+2023,Cary,Olave Garden,12,138,Harrison Butker,KC,K,False
+2023,Lobsinger,SLambin Juwanna Mann,12,139,Juwan Johnson,NO,TE,False
+2023,Pierce (departed),Allen Fantasy Team*,12,140,DJ Chark Jr.,Car,WR,False
+2023,David Snyder,Send'em Packin,12,141,Tyler Bass,Buf,K,False
+2023,Wilson Kam,Bloodied Castaways,12,142,Nico Collins,Hou,WR,False
+2023,Fleming,Kannapolis Bushmen,12,143,Elijah Moore,Cle,WR,False
+2023,Rychlicki,Von Down By The River,12,144,Jayden Reed,GB,WR,False
+2023,Rychlicki,Von Down By The River,13,145,Tank Bigsby,Jax,RB,False
+2023,Fleming,Kannapolis Bushmen,13,146,Dolphins D/ST,Mia,D/ST,False
+2023,Wilson Kam,Bloodied Castaways,13,147,Michael Gallup,Dal,WR,False
+2023,David Snyder,Send'em Packin,13,148,Jets D/ST,NYJ,D/ST,False
+2023,Pierce (departed),Allen Fantasy Team*,13,149,Russell Wilson,Pit,QB,False
+2023,Lobsinger,SLambin Juwanna Mann,13,150,De'Von Achane,Mia,RB,False
+2023,Cary,Olave Garden,13,151,Derek Carr,NO,QB,False
+2023,Grenier,Trevor's Tremors,13,152,Browns D/ST,Cle,D/ST,False
+2023,herman allen,Rick James B!Tch!,13,153,Tyler Conklin,NYJ,TE,False
+2023,Brown/Collins,Brown VS Browns,13,154,Jordan Love,GB,QB,False
+2023,R Taylor,Multiple Scorgasms,13,155,Jared Goff,Det,QB,False
+2023,Matt Mays,Long Arm Of The Lamar,13,156,Roschon Johnson,Chi,RB,False
+2023,Matt Mays,Long Arm Of The Lamar,14,157,Eagles D/ST,Phi,D/ST,False
+2023,R Taylor,Multiple Scorgasms,14,158,Evan McPherson,Cin,K,False
+2023,Brown/Collins,Brown VS Browns,14,159,Deon Jackson,NYG,RB,False
+2023,herman allen,Rick James B!Tch!,14,160,Joshua Kelley,LAC,RB,False
+2023,Grenier,Trevor's Tremors,14,161,Cameron Dicker,LAC,K,False
+2023,Cary,Olave Garden,14,162,Elijah Mitchell,SF,RB,False
+2023,Lobsinger,SLambin Juwanna Mann,14,163,Ravens D/ST,Bal,D/ST,False
+2023,Pierce (departed),Allen Fantasy Team*,14,164,Patriots D/ST,NE,D/ST,False
+2023,David Snyder,Send'em Packin,14,165,Bengals D/ST,Cin,D/ST,False
+2023,Wilson Kam,Bloodied Castaways,14,166,Devin Singletary,NYG,RB,False
+2023,Fleming,Kannapolis Bushmen,14,167,Tyler Allgeier,Atl,RB,False
+2023,Rychlicki,Von Down By The River,14,168,Kenny Pickett,Phi,QB,False
+2023,Rychlicki,Von Down By The River,15,169,Jake Elliott,Phi,K,False
+2023,Fleming,Kannapolis Bushmen,15,170,Daniel Carlson,LV,K,False
+2023,Wilson Kam,Bloodied Castaways,15,171,Graham Gano,NYG,K,False
+2023,David Snyder,Send'em Packin,15,172,Chigoziem Okonkwo,Ten,TE,False
+2023,Pierce (departed),Allen Fantasy Team*,15,173,Jason Myers,Sea,K,False
+2023,Lobsinger,SLambin Juwanna Mann,15,174,Younghoe Koo,Atl,K,False
+2023,Cary,Olave Garden,15,175,Jameson Williams,Det,WR,False
+2023,Grenier,Trevor's Tremors,15,176,Jimmy Garoppolo,LAR,QB,False
+2023,herman allen,Rick James B!Tch!,15,177,Cole Turner,Wsh,TE,False
+2023,Brown/Collins,Brown VS Browns,15,178,Riley Patterson,Jax,K,False
+2023,R Taylor,Multiple Scorgasms,15,179,Kyler Murray,Ari,QB,False
+2023,Matt Mays,Long Arm Of The Lamar,15,180,Greg Joseph,Min,K,False
+2024,Grenier,Injury Prone,1,1,Christian McCaffrey,SF,RB,False
+2024,Fleming,NickCannonFanClub,1,2,Bijan Robinson,Atl,RB,False
+2024,herman allen,Professional Substance Abusers,1,3,Tyreek Hill,Mia,WR,False
+2024,Brown/Collins,Window Is Always Open,1,4,Breece Hall,NYJ,RB,False
+2024,Rychlicki,Von Down By The River,1,5,CeeDee Lamb,Dal,WR,False
+2024,Lobsinger,Moore Chubb For U To Love,1,6,Justin Jefferson,Min,WR,False
+2024,R Taylor,Multiple Scorgasms,1,7,Amon-Ra St. Brown,Det,WR,False
+2024,Wilson Kam,Bloodied Castaways,1,8,Jahmyr Gibbs,Det,RB,False
+2024,Matt Mays,Ja'Marracle Whip Juggernauts,1,9,Ja'Marr Chase,Cin,WR,False
+2024,David Snyder,Send'em Packin,1,10,Saquon Barkley,Phi,RB,False
+2024,Cary,Below Mendoza Line,1,11,Garrett Wilson,NYJ,WR,False
+2024,Arthur Ray,Sentinel Sea Stallions,1,12,Kyren Williams,LAR,RB,False
+2024,Arthur Ray,Sentinel Sea Stallions,2,13,Josh Allen,Buf,QB,False
+2024,Cary,Below Mendoza Line,2,14,A.J. Brown,Phi,WR,False
+2024,David Snyder,Send'em Packin,2,15,Puka Nacua,LAR,WR,False
+2024,Matt Mays,Ja'Marracle Whip Juggernauts,2,16,Marvin Harrison Jr.,Ari,WR,False
+2024,Wilson Kam,Bloodied Castaways,2,17,Mike Evans,TB,WR,False
+2024,R Taylor,Multiple Scorgasms,2,18,Travis Etienne Jr.,Jax,RB,False
+2024,Lobsinger,Moore Chubb For U To Love,2,19,Josh Jacobs,GB,RB,False
+2024,Rychlicki,Von Down By The River,2,20,Derrick Henry,Bal,RB,False
+2024,Brown/Collins,Window Is Always Open,2,21,Davante Adams,LAR,WR,False
+2024,herman allen,Professional Substance Abusers,2,22,Joe Mixon,Hou,RB,False
+2024,Fleming,NickCannonFanClub,2,23,Jalen Hurts,Phi,QB,False
+2024,Grenier,Injury Prone,2,24,Rachaad White,TB,RB,False
+2024,Grenier,Injury Prone,3,25,Nico Collins,Hou,WR,False
+2024,Fleming,NickCannonFanClub,3,26,Chris Olave,NO,WR,False
+2024,herman allen,Professional Substance Abusers,3,27,Brandon Aiyuk,SF,WR,False
+2024,Brown/Collins,Window Is Always Open,3,28,James Cook,Buf,RB,False
+2024,Rychlicki,Von Down By The River,3,29,Kenneth Walker III,Sea,RB,False
+2024,Lobsinger,Moore Chubb For U To Love,3,30,De'Von Achane,Mia,RB,False
+2024,R Taylor,Multiple Scorgasms,3,31,Deebo Samuel Sr.,Wsh,WR,False
+2024,Wilson Kam,Bloodied Castaways,3,32,Patrick Mahomes,KC,QB,False
+2024,Matt Mays,Ja'Marracle Whip Juggernauts,3,33,Drake London,Atl,WR,False
+2024,David Snyder,Send'em Packin,3,34,Michael Pittman Jr.,Ind,WR,False
+2024,Cary,Below Mendoza Line,3,35,Jaylen Waddle,Mia,WR,False
+2024,Arthur Ray,Sentinel Sea Stallions,3,36,DK Metcalf,Pit,WR,False
+2024,Arthur Ray,Sentinel Sea Stallions,4,37,Rhamondre Stevenson,NE,RB,False
+2024,Cary,Below Mendoza Line,4,38,D'Andre Swift,Chi,RB,False
+2024,David Snyder,Send'em Packin,4,39,Malik Nabers,NYG,WR,False
+2024,Matt Mays,Ja'Marracle Whip Juggernauts,4,40,Aaron Jones,Min,RB,False
+2024,Wilson Kam,Bloodied Castaways,4,41,Travis Kelce,KC,TE,False
+2024,R Taylor,Multiple Scorgasms,4,42,Lamar Jackson,Bal,QB,False
+2024,Lobsinger,Moore Chubb For U To Love,4,43,DJ Moore,Chi,WR,False
+2024,Rychlicki,Von Down By The River,4,44,Cooper Kupp,Sea,WR,False
+2024,Brown/Collins,Window Is Always Open,4,45,Mark Andrews,Bal,TE,False
+2024,herman allen,Professional Substance Abusers,4,46,Zay Flowers,Bal,WR,False
+2024,Fleming,NickCannonFanClub,4,47,Stefon Diggs,Hou,WR,False
+2024,Grenier,Injury Prone,4,48,Tee Higgins,Cin,WR,False
+2024,Grenier,Injury Prone,5,49,C.J. Stroud,Hou,QB,False
+2024,Fleming,NickCannonFanClub,5,50,DeVonta Smith,Phi,WR,False
+2024,herman allen,Professional Substance Abusers,5,51,Joe Burrow,Cin,QB,False
+2024,Brown/Collins,Window Is Always Open,5,52,George Pickens,Pit,WR,False
+2024,Rychlicki,Von Down By The River,5,53,Dak Prescott,Dal,QB,False
+2024,Lobsinger,Moore Chubb For U To Love,5,54,Trey McBride,Ari,TE,False
+2024,R Taylor,Multiple Scorgasms,5,55,Evan Engram,Den,TE,False
+2024,Matt Mays,Ja'Marracle Whip Juggernauts,5,57,Anthony Richardson,Ind,QB,False
+2024,David Snyder,Send'em Packin,5,58,George Kittle,SF,TE,False
+2024,Cary,Below Mendoza Line,5,59,Kyler Murray,Ari,QB,False
+2024,Arthur Ray,Sentinel Sea Stallions,5,60,Calvin Ridley,Ten,WR,False
+2024,Arthur Ray,Sentinel Sea Stallions,6,61,Chris Godwin,TB,WR,False
+2024,Cary,Below Mendoza Line,6,62,Brock Bowers,LV,TE,False
+2024,David Snyder,Send'em Packin,6,63,Tank Dell,Hou,WR,False
+2024,Matt Mays,Ja'Marracle Whip Juggernauts,6,64,Terry McLaurin,Wsh,WR,False
+2024,R Taylor,Multiple Scorgasms,6,66,Amari Cooper,Buf,WR,False
+2024,Lobsinger,Moore Chubb For U To Love,6,67,Xavier Worthy,KC,WR,False
+2024,Rychlicki,Von Down By The River,6,68,Christian Kirk,Hou,WR,False
+2024,Brown/Collins,Window Is Always Open,6,69,Kyle Pitts,Atl,TE,False
+2024,herman allen,Professional Substance Abusers,6,70,Zack Moss,Cin,RB,False
+2024,Fleming,NickCannonFanClub,6,71,Zamir White,LV,RB,False
+2024,Grenier,Injury Prone,6,72,Najee Harris,LAC,RB,False
+2024,Grenier,Injury Prone,7,73,Diontae Johnson,Bal,WR,False
+2024,Fleming,NickCannonFanClub,7,74,Keenan Allen,Chi,WR,False
+2024,herman allen,Professional Substance Abusers,7,75,David Njoku,Cle,TE,False
+2024,Brown/Collins,Window Is Always Open,7,76,Tua Tagovailoa,Mia,QB,False
+2024,Rychlicki,Von Down By The River,7,77,Rome Odunze,Chi,WR,False
+2024,Lobsinger,Moore Chubb For U To Love,7,78,Jordan Love,GB,QB,False
+2024,R Taylor,Multiple Scorgasms,7,79,Tyjae Spears,Ten,RB,False
+2024,Wilson Kam,Bloodied Castaways,7,80,Raheem Mostert,LV,RB,False
+2024,Matt Mays,Ja'Marracle Whip Juggernauts,7,81,Tony Pollard,Ten,RB,False
+2024,David Snyder,Send'em Packin,7,82,Brock Purdy,SF,QB,False
+2024,Cary,Below Mendoza Line,7,83,Brian Thomas Jr.,Jax,WR,False
+2024,Arthur Ray,Sentinel Sea Stallions,7,84,Austin Ekeler,Wsh,RB,False
+2024,Arthur Ray,Sentinel Sea Stallions,8,85,Devin Singletary,NYG,RB,False
+2024,Cary,Below Mendoza Line,8,86,Chase Brown,Cin,RB,False
+2024,David Snyder,Send'em Packin,8,87,Jaxon Smith-Njigba,Sea,WR,False
+2024,Matt Mays,Ja'Marracle Whip Juggernauts,8,88,Jonathon Brooks,Car,RB,False
+2024,Wilson Kam,Bloodied Castaways,8,89,Jerry Jeudy,Cle,WR,False
+2024,R Taylor,Multiple Scorgasms,8,90,Courtland Sutton,Den,WR,False
+2024,Lobsinger,Moore Chubb For U To Love,8,91,Jerome Ford,Cle,RB,False
+2024,Rychlicki,Von Down By The River,8,92,Jaylen Warren,Pit,RB,False
+2024,Brown/Collins,Window Is Always Open,8,93,Christian Watson,GB,WR,False
+2024,herman allen,Professional Substance Abusers,8,94,Keon Coleman,Buf,WR,False
+2024,Fleming,NickCannonFanClub,8,95,Jayden Reed,GB,WR,False
+2024,Grenier,Injury Prone,8,96,Dalton Schultz,Hou,TE,False
+2024,Grenier,Injury Prone,9,97,Aaron Rodgers,FA,QB,False
+2024,Fleming,NickCannonFanClub,9,98,Jordan Addison,Min,WR,False
+2024,herman allen,Professional Substance Abusers,9,99,Jameson Williams,Det,WR,False
+2024,Brown/Collins,Window Is Always Open,9,100,Adonai Mitchell,Ind,WR,False
+2024,Rychlicki,Von Down By The River,9,101,DeAndre Hopkins,Bal,WR,False
+2024,Lobsinger,Moore Chubb For U To Love,9,102,Khalil Shakir,Buf,WR,False
+2024,R Taylor,Multiple Scorgasms,9,103,J.K. Dobbins,LAC,RB,False
+2024,Wilson Kam,Bloodied Castaways,9,104,Blake Corum,LAR,RB,False
+2024,Matt Mays,Ja'Marracle Whip Juggernauts,9,105,Jayden Daniels,Wsh,QB,False
+2024,David Snyder,Send'em Packin,9,106,Ladd McConkey,LAC,WR,False
+2024,Cary,Below Mendoza Line,9,107,Jake Ferguson,Dal,TE,False
+2024,Arthur Ray,Sentinel Sea Stallions,9,108,Jakobi Meyers,LV,WR,False
+2024,Arthur Ray,Sentinel Sea Stallions,10,109,Tyler Conklin,NYJ,TE,False
+2024,Cary,Below Mendoza Line,10,110,Gus Edwards,FA,RB,False
+2024,David Snyder,Send'em Packin,10,111,Dallas Goedert,Phi,TE,False
+2024,Matt Mays,Ja'Marracle Whip Juggernauts,10,112,Ty Chandler,Min,RB,False
+2024,Wilson Kam,Bloodied Castaways,10,113,Tyler Lockett,FA,WR,False
+2024,R Taylor,Multiple Scorgasms,10,114,Ravens D/ST,Bal,D/ST,False
+2024,Lobsinger,Moore Chubb For U To Love,10,115,Nick Chubb,Cle,RB,False
+2024,Rychlicki,Von Down By The River,10,116,Hollywood Brown,KC,WR,False
+2024,Brown/Collins,Window Is Always Open,10,117,Adam Thielen,Car,WR,False
+2024,herman allen,Professional Substance Abusers,10,118,T.J. Hockenson,Min,TE,False
+2024,Fleming,NickCannonFanClub,10,119,Justin Herbert,LAC,QB,False
+2024,Grenier,Injury Prone,10,120,Mike Williams,LAC,WR,False
+2024,Grenier,Injury Prone,11,121,Tyler Allgeier,Atl,RB,False
+2024,Fleming,NickCannonFanClub,11,122,Kirk Cousins,Atl,QB,False
+2024,herman allen,Professional Substance Abusers,11,123,Jets D/ST,NYJ,D/ST,False
+2024,Brown/Collins,Window Is Always Open,11,124,Khalil Herbert,Ind,RB,False
+2024,Rychlicki,Von Down By The River,11,125,Trevor Lawrence,Jax,QB,False
+2024,Lobsinger,Moore Chubb For U To Love,11,126,Curtis Samuel,Buf,WR,False
+2024,R Taylor,Multiple Scorgasms,11,127,Cowboys D/ST,Dal,D/ST,False
+2024,Wilson Kam,Bloodied Castaways,11,128,Taysom Hill,NO,TE,False
+2024,Matt Mays,Ja'Marracle Whip Juggernauts,11,129,Trey Benson,Ari,RB,False
+2024,David Snyder,Send'em Packin,11,130,Zach Charbonnet,Sea,RB,False
+2024,Cary,Below Mendoza Line,11,131,Caleb Williams,Chi,QB,False
+2024,Arthur Ray,Sentinel Sea Stallions,11,132,DeMario Douglas,NE,WR,False
+2024,Arthur Ray,Sentinel Sea Stallions,12,133,Pat Freiermuth,Pit,TE,False
+2024,Cary,Below Mendoza Line,12,134,Brandin Cooks,Dal,WR,False
+2024,David Snyder,Send'em Packin,12,135,Browns D/ST,Cle,D/ST,False
+2024,Matt Mays,Ja'Marracle Whip Juggernauts,12,136,Dontayvion Wicks,GB,WR,False
+2024,Wilson Kam,Bloodied Castaways,12,137,49ers D/ST,SF,D/ST,False
+2024,R Taylor,Multiple Scorgasms,12,138,Justin Tucker,Bal,K,False
+2024,Lobsinger,Moore Chubb For U To Love,12,139,Jaylen Wright,Mia,RB,False
+2024,Rychlicki,Von Down By The River,12,140,Ray Davis,Buf,RB,False
+2024,Brown/Collins,Window Is Always Open,12,141,Steelers D/ST,Pit,D/ST,False
+2024,herman allen,Professional Substance Abusers,12,142,Jake Elliott,Phi,K,False
+2024,Fleming,NickCannonFanClub,12,143,Chig Okonkwo,Ten,TE,False
+2024,Grenier,Injury Prone,12,144,Antonio Gibson,NE,RB,False
+2024,Grenier,Injury Prone,13,145,Dolphins D/ST,Mia,D/ST,False
+2024,Fleming,NickCannonFanClub,13,146,Saints D/ST,NO,D/ST,False
+2024,herman allen,Professional Substance Abusers,13,147,Jared Goff,Det,QB,False
+2024,Brown/Collins,Window Is Always Open,13,148,Brandon Aubrey,Dal,K,False
+2024,Rychlicki,Von Down By The River,13,149,Bengals D/ST,Cin,D/ST,False
+2024,Lobsinger,Moore Chubb For U To Love,13,150,Bears D/ST,Chi,D/ST,False
+2024,R Taylor,Multiple Scorgasms,13,151,Cole Kmet,Chi,TE,False
+2024,Wilson Kam,Bloodied Castaways,13,152,Jaleel McLaughlin,Den,RB,False
+2024,Matt Mays,Ja'Marracle Whip Juggernauts,13,153,Eagles D/ST,Phi,D/ST,False
+2024,David Snyder,Send'em Packin,13,154,Greg Zuerlein,NYJ,K,False
+2024,Cary,Below Mendoza Line,13,155,Chiefs D/ST,KC,D/ST,False
+2024,Arthur Ray,Sentinel Sea Stallions,13,156,Ka'imi Fairbairn,Hou,K,False
+2024,Arthur Ray,Sentinel Sea Stallions,14,157,Jaguars D/ST,Jax,D/ST,False
+2024,Cary,Below Mendoza Line,14,158,Jake Moody,SF,K,False
+2024,David Snyder,Send'em Packin,14,159,Deshaun Watson,Cle,QB,False
+2024,Matt Mays,Ja'Marracle Whip Juggernauts,14,160,Younghoe Koo,Atl,K,False
+2024,Wilson Kam,Bloodied Castaways,14,161,Hunter Henry,NE,TE,False
+2024,R Taylor,Multiple Scorgasms,14,162,Baker Mayfield,TB,QB,False
+2024,Lobsinger,Moore Chubb For U To Love,14,163,Cameron Dicker,LAC,K,False
+2024,Rychlicki,Von Down By The River,14,164,Tyler Bass,Buf,K,False
+2024,Brown/Collins,Window Is Always Open,14,165,Bucky Irving,TB,RB,False
+2024,herman allen,Professional Substance Abusers,14,166,Dyami Brown,Jax,WR,False
+2024,Fleming,NickCannonFanClub,14,167,Evan McPherson,Cin,K,False
+2024,Grenier,Injury Prone,14,168,Jake Bates,Det,K,False
+2024,Grenier,Injury Prone,15,169,Ezekiel Elliott,FA,RB,True
+2024,Fleming,NickCannonFanClub,15,170,Chuba Hubbard,Car,RB,True
+2024,herman allen,Professional Substance Abusers,15,171,David Montgomery,Det,RB,True
+2024,Brown/Collins,Window Is Always Open,15,172,Treylon Burks,Ten,WR,True
+2024,Rychlicki,Von Down By The River,15,173,Dalton Kincaid,Buf,TE,True
+2024,Lobsinger,Moore Chubb For U To Love,15,174,Alvin Kamara,NO,RB,True
+2024,R Taylor,Multiple Scorgasms,15,175,Isiah Pacheco,KC,RB,True
+2024,Wilson Kam,Bloodied Castaways,15,176,James Conner,Ari,RB,True
+2024,Matt Mays,Ja'Marracle Whip Juggernauts,15,177,Sam LaPorta,Det,TE,True
+2024,David Snyder,Send'em Packin,15,178,Brian Robinson Jr.,Wsh,RB,True
+2024,Cary,Below Mendoza Line,15,179,Javonte Williams,Dal,RB,True
+2024,Arthur Ray,Sentinel Sea Stallions,15,180,Jonathan Taylor,Ind,RB,True
+2025,David Snyder,Send'em Packin,1,1,Josh Allen,Buf,QB,False
+2025,Cary,ChatCTE,1,2,Ja'Marr Chase,Cin,WR,False
+2025,herman allen,We Got This Sh!T,1,3,Saquon Barkley,Phi,RB,False
+2025,Grenier,Jaxson Bates,1,4,Bijan Robinson,Atl,RB,False
+2025,Fleming,NickCannonFanClub,1,5,Jahmyr Gibbs,Det,RB,False
+2025,Brown/Collins,Window Is Always Open,1,6,Justin Jefferson,Min,WR,False
+2025,Rychlicki,The Kunning Stunts,1,7,CeeDee Lamb,Dal,WR,False
+2025,Lobsinger,Breece Up Those Tets,1,8,Christian McCaffrey,SF,RB,False
+2025,Arthur Ray,Sentinel Sea Stallions,1,9,Drake London,Atl,WR,False
+2025,R Taylor,Multiple Scorgasms,1,10,De'Von Achane,Mia,RB,False
+2025,Matt Mays,The Poetry Of Junkyard Juggers,1,11,Malik Nabers,NYG,WR,False
+2025,Wilson Kam,Bloodied Castaways,1,12,Ashton Jeanty,LV,RB,False
+2025,Wilson Kam,Bloodied Castaways,2,13,Puka Nacua,LAR,WR,False
+2025,Matt Mays,The Poetry Of Junkyard Juggers,2,14,Chase Brown,Cin,RB,False
+2025,R Taylor,Multiple Scorgasms,2,15,Jonathan Taylor,Ind,RB,False
+2025,Arthur Ray,Sentinel Sea Stallions,2,16,Amon-Ra St. Brown,Det,WR,False
+2025,Lobsinger,Breece Up Those Tets,2,17,Josh Jacobs,GB,RB,False
+2025,Rychlicki,The Kunning Stunts,2,18,Derrick Henry,Bal,RB,False
+2025,Brown/Collins,Window Is Always Open,2,19,James Cook III,Buf,RB,False
+2025,Fleming,NickCannonFanClub,2,20,Lamar Jackson,Bal,QB,False
+2025,Grenier,Jaxson Bates,2,21,Nico Collins,Hou,WR,False
+2025,herman allen,We Got This Sh!T,2,22,Brock Bowers,LV,TE,False
+2025,Cary,ChatCTE,2,23,Kyren Williams,LAR,RB,False
+2025,David Snyder,Send'em Packin,2,24,Omarion Hampton,LAC,RB,False
+2025,David Snyder,Send'em Packin,3,25,Tee Higgins,Cin,WR,False
+2025,Cary,ChatCTE,3,26,Alvin Kamara,NO,RB,False
+2025,herman allen,We Got This Sh!T,3,27,Terry McLaurin,Wsh,WR,False
+2025,Grenier,Jaxson Bates,3,28,Davante Adams,LAR,WR,False
+2025,Fleming,NickCannonFanClub,3,29,Chuba Hubbard,Car,RB,False
+2025,Brown/Collins,Window Is Always Open,3,30,Jalen Hurts,Phi,QB,False
+2025,Rychlicki,The Kunning Stunts,3,31,A.J. Brown,Phi,WR,False
+2025,Lobsinger,Breece Up Those Tets,3,32,Jaxon Smith-Njigba,Sea,WR,False
+2025,Arthur Ray,Sentinel Sea Stallions,3,33,Patrick Mahomes,KC,QB,False
+2025,R Taylor,Multiple Scorgasms,3,34,Mike Evans,TB,WR,False
+2025,Matt Mays,The Poetry Of Junkyard Juggers,3,35,George Kittle,SF,TE,False
+2025,Wilson Kam,Bloodied Castaways,3,36,James Conner,Ari,RB,False
+2025,Wilson Kam,Bloodied Castaways,4,37,Baker Mayfield,TB,QB,False
+2025,Matt Mays,The Poetry Of Junkyard Juggers,4,38,TreVeyon Henderson,NE,RB,False
+2025,R Taylor,Multiple Scorgasms,4,39,Kenneth Walker III,Sea,RB,False
+2025,Arthur Ray,Sentinel Sea Stallions,4,40,Tyreek Hill,FA,WR,False
+2025,Lobsinger,Breece Up Those Tets,4,41,Breece Hall,NYJ,RB,False
+2025,Rychlicki,The Kunning Stunts,4,42,D'Andre Swift,Chi,RB,False
+2025,Brown/Collins,Window Is Always Open,4,43,Marvin Harrison Jr.,Ari,WR,False
+2025,Fleming,NickCannonFanClub,4,44,Xavier Worthy,KC,WR,False
+2025,Grenier,Jaxson Bates,4,45,Sam LaPorta,Det,TE,False
+2025,herman allen,We Got This Sh!T,4,46,David Montgomery,Hou,RB,False
+2025,Cary,ChatCTE,4,47,Garrett Wilson,NYJ,WR,False
+2025,David Snyder,Send'em Packin,4,48,Isiah Pacheco,KC,RB,False
+2025,David Snyder,Send'em Packin,5,49,T.J. Hockenson,Min,TE,False
+2025,Cary,ChatCTE,5,50,Dak Prescott,Dal,QB,False
+2025,herman allen,We Got This Sh!T,5,51,DJ Moore,Chi,WR,False
+2025,Grenier,Jaxson Bates,5,52,Tony Pollard,Ten,RB,False
+2025,Fleming,NickCannonFanClub,5,53,David Njoku,Cle,TE,False
+2025,Brown/Collins,Window Is Always Open,5,54,Joe Mixon,Hou,RB,False
+2025,Rychlicki,The Kunning Stunts,5,55,DK Metcalf,Pit,WR,False
+2025,Lobsinger,Breece Up Those Tets,5,56,Travis Hunter,Jax,WR,False
+2025,Arthur Ray,Sentinel Sea Stallions,5,57,Aaron Jones Sr.,Min,RB,False
+2025,R Taylor,Multiple Scorgasms,5,58,Travis Kelce,KC,TE,False
+2025,Matt Mays,The Poetry Of Junkyard Juggers,5,59,George Pickens,Dal,WR,False
+2025,Wilson Kam,Bloodied Castaways,5,60,Tucker Kraft,GB,TE,False
+2025,Wilson Kam,Bloodied Castaways,6,61,Zay Flowers,Bal,WR,False
+2025,Matt Mays,The Poetry Of Junkyard Juggers,6,62,RJ Harvey,Den,RB,False
+2025,R Taylor,Multiple Scorgasms,6,63,Jameson Williams,Det,WR,False
+2025,Arthur Ray,Sentinel Sea Stallions,6,64,Tyrone Tracy Jr.,NYG,RB,False
+2025,Lobsinger,Breece Up Those Tets,6,65,Tetairoa McMillan,Car,WR,False
+2025,Rychlicki,The Kunning Stunts,6,66,Bo Nix,Den,QB,False
+2025,Brown/Collins,Window Is Always Open,6,67,Stefon Diggs,NE,WR,False
+2025,Fleming,NickCannonFanClub,6,68,Calvin Ridley,Ten,WR,False
+2025,Grenier,Jaxson Bates,6,69,Jaylen Waddle,Mia,WR,False
+2025,herman allen,We Got This Sh!T,6,70,Matthew Golden,GB,WR,False
+2025,Cary,ChatCTE,6,71,Jaylen Warren,Pit,RB,False
+2025,David Snyder,Send'em Packin,6,72,Jakobi Meyers,Jax,WR,False
+2025,David Snyder,Send'em Packin,7,73,J.K. Dobbins,Den,RB,False
+2025,Cary,ChatCTE,7,74,Rashee Rice,KC,WR,False
+2025,herman allen,We Got This Sh!T,7,75,Jacory Croskey-Merritt,Wsh,RB,False
+2025,Grenier,Jaxson Bates,7,76,Kyler Murray,Ari,QB,False
+2025,Fleming,NickCannonFanClub,7,77,Xavier Legette,Car,WR,False
+2025,Brown/Collins,Window Is Always Open,7,78,Evan Engram,Den,TE,False
+2025,Rychlicki,The Kunning Stunts,7,79,Kaleb Johnson,Pit,RB,False
+2025,Lobsinger,Breece Up Those Tets,7,80,Ricky Pearsall,SF,WR,False
+2025,Arthur Ray,Sentinel Sea Stallions,7,81,Mark Andrews,Bal,TE,False
+2025,R Taylor,Multiple Scorgasms,7,82,Jared Goff,Det,QB,False
+2025,Matt Mays,The Poetry Of Junkyard Juggers,7,83,Emeka Egbuka,TB,WR,False
+2025,Wilson Kam,Bloodied Castaways,7,84,Deebo Samuel,Wsh,WR,False
+2025,Wilson Kam,Bloodied Castaways,8,85,Jordan Mason,Min,RB,False
+2025,Matt Mays,The Poetry Of Junkyard Juggers,8,86,Tyler Warren,Ind,TE,False
+2025,R Taylor,Multiple Scorgasms,8,87,Chris Olave,NO,WR,False
+2025,Arthur Ray,Sentinel Sea Stallions,8,88,Chris Godwin Jr.,TB,WR,False
+2025,Lobsinger,Breece Up Those Tets,8,89,Keon Coleman,Buf,WR,False
+2025,Rychlicki,The Kunning Stunts,8,90,Colston Loveland,Chi,TE,False
+2025,Brown/Collins,Window Is Always Open,8,91,Cooper Kupp,Sea,WR,False
+2025,Fleming,NickCannonFanClub,8,92,Javonte Williams,Dal,RB,False
+2025,Grenier,Jaxson Bates,8,93,Cam Skattebo,NYG,RB,False
+2025,herman allen,We Got This Sh!T,8,94,Jauan Jennings,SF,WR,False
+2025,Cary,ChatCTE,8,95,Dalton Kincaid,Buf,TE,False
+2025,David Snyder,Send'em Packin,8,96,Justin Herbert,LAC,QB,False
+2025,David Snyder,Send'em Packin,9,97,Travis Etienne Jr.,Jax,RB,False
+2025,Cary,ChatCTE,9,98,Brock Purdy,SF,QB,False
+2025,herman allen,We Got This Sh!T,9,99,Nick Chubb,Hou,RB,False
+2025,Grenier,Jaxson Bates,9,100,Michael Pittman Jr.,Ind,WR,False
+2025,Fleming,NickCannonFanClub,9,101,Khalil Shakir,Buf,WR,False
+2025,Brown/Collins,Window Is Always Open,9,102,Isaiah Likely,Bal,TE,False
+2025,Rychlicki,The Kunning Stunts,9,103,Caleb Williams,Chi,QB,False
+2025,Lobsinger,Breece Up Those Tets,9,104,Jordan Love,GB,QB,False
+2025,Arthur Ray,Sentinel Sea Stallions,9,105,Rhamondre Stevenson,NE,RB,False
+2025,R Taylor,Multiple Scorgasms,9,106,Jerome Ford,Cle,RB,False
+2025,Matt Mays,The Poetry Of Junkyard Juggers,9,107,Zach Charbonnet,Sea,RB,False
+2025,Wilson Kam,Bloodied Castaways,9,108,Harrison Butker,KC,K,False
+2025,Wilson Kam,Bloodied Castaways,10,109,Texans D/ST,Hou,D/ST,False
+2025,Matt Mays,The Poetry Of Junkyard Juggers,10,110,Braelon Allen,NYJ,RB,False
+2025,R Taylor,Multiple Scorgasms,10,111,Keenan Allen,LAC,WR,False
+2025,Arthur Ray,Sentinel Sea Stallions,10,112,Jordan Addison,Min,WR,False
+2025,Lobsinger,Breece Up Those Tets,10,113,Trevor Lawrence,Jax,QB,False
+2025,Rychlicki,The Kunning Stunts,10,114,Jayden Higgins,Hou,WR,False
+2025,Brown/Collins,Window Is Always Open,10,115,Quentin Johnston,LAC,WR,False
+2025,Fleming,NickCannonFanClub,10,116,Kyle Pitts Sr.,Atl,TE,False
+2025,Grenier,Jaxson Bates,10,117,Tank Bigsby,Phi,RB,False
+2025,herman allen,We Got This Sh!T,10,118,Rashid Shaheed,Sea,WR,False
+2025,Cary,ChatCTE,10,119,Najee Harris,LAC,RB,False
+2025,David Snyder,Send'em Packin,10,120,Cade Otton,TB,TE,False
+2025,David Snyder,Send'em Packin,11,121,Ravens D/ST,Bal,D/ST,False
+2025,Cary,ChatCTE,11,122,Trey Benson,Ari,RB,False
+2025,herman allen,We Got This Sh!T,11,123,Broncos D/ST,Den,D/ST,False
+2025,Grenier,Jaxson Bates,11,124,Josh Downs,Ind,WR,False
+2025,Fleming,NickCannonFanClub,11,125,Justin Fields,NYJ,QB,False
+2025,Brown/Collins,Window Is Always Open,11,126,Steelers D/ST,Pit,D/ST,False
+2025,Rychlicki,The Kunning Stunts,11,127,Ray Davis,Buf,RB,False
+2025,Lobsinger,Breece Up Those Tets,11,128,Brian Robinson Jr.,SF,RB,False
+2025,Arthur Ray,Sentinel Sea Stallions,11,129,Jayden Reed,GB,WR,False
+2025,R Taylor,Multiple Scorgasms,11,130,Vikings D/ST,Min,D/ST,False
+2025,Matt Mays,The Poetry Of Junkyard Juggers,11,131,Bhayshul Tuten,Jax,RB,False
+2025,Wilson Kam,Bloodied Castaways,11,132,J.J. McCarthy,Min,QB,False
+2025,Wilson Kam,Bloodied Castaways,12,133,Tyjae Spears,Ten,RB,False
+2025,Matt Mays,The Poetry Of Junkyard Juggers,12,134,Bills D/ST,Buf,D/ST,False
+2025,R Taylor,Multiple Scorgasms,12,135,Lions D/ST,Det,D/ST,False
+2025,Arthur Ray,Sentinel Sea Stallions,12,136,Rachaad White,TB,RB,False
+2025,Lobsinger,Breece Up Those Tets,12,137,Ollie Gordon II,Mia,RB,False
+2025,Rychlicki,The Kunning Stunts,12,138,Seahawks D/ST,Sea,D/ST,False
+2025,Brown/Collins,Window Is Always Open,12,139,Michael Penix Jr.,Atl,QB,False
+2025,Fleming,NickCannonFanClub,12,140,Buccaneers D/ST,TB,D/ST,False
+2025,Grenier,Jaxson Bates,12,141,Dallas Goedert,Phi,TE,False
+2025,herman allen,We Got This Sh!T,12,142,Drake Maye,NE,QB,False
+2025,Cary,ChatCTE,12,143,Quinshon Judkins,Cle,RB,False
+2025,David Snyder,Send'em Packin,12,144,Adam Thielen,Pit,WR,False
+2025,David Snyder,Send'em Packin,13,145,Eagles D/ST,Phi,D/ST,False
+2025,Cary,ChatCTE,13,146,Jets D/ST,NYJ,D/ST,False
+2025,herman allen,We Got This Sh!T,13,147,Jaylin Lane,Wsh,WR,False
+2025,Grenier,Jaxson Bates,13,148,Giants D/ST,NYG,D/ST,False
+2025,Fleming,NickCannonFanClub,13,149,Tyler Allgeier,Atl,RB,False
+2025,Brown/Collins,Window Is Always Open,13,150,Brandon Aubrey,Dal,K,False
+2025,Rychlicki,The Kunning Stunts,13,151,Jake Ferguson,Dal,TE,False
+2025,Lobsinger,Breece Up Those Tets,13,152,Chargers D/ST,LAC,D/ST,False
+2025,Arthur Ray,Sentinel Sea Stallions,13,153,Patriots D/ST,NE,D/ST,False
+2025,R Taylor,Multiple Scorgasms,13,154,Darren Waller,Mia,TE,False
+2025,Matt Mays,The Poetry Of Junkyard Juggers,13,155,Cameron Dicker,LAC,K,False
+2025,Wilson Kam,Bloodied Castaways,13,156,Hollywood Brown,KC,WR,False
+2025,Wilson Kam,Bloodied Castaways,14,157,Hunter Henry,NE,TE,False
+2025,Matt Mays,The Poetry Of Junkyard Juggers,14,158,Rashod Bateman,Bal,WR,False
+2025,R Taylor,Multiple Scorgasms,14,159,Chase McLaughlin,TB,K,False
+2025,Arthur Ray,Sentinel Sea Stallions,14,160,Jake Bates,Det,K,False
+2025,Lobsinger,Breece Up Those Tets,14,161,Wil Lutz,Den,K,False
+2025,Rychlicki,The Kunning Stunts,14,162,Cam Little,Jax,K,False
+2025,Brown/Collins,Window Is Always Open,14,163,Chiefs D/ST,KC,D/ST,False
+2025,Fleming,NickCannonFanClub,14,164,Ryan Fitzgerald,Car,K,False
+2025,Grenier,Jaxson Bates,14,165,Tyler Bass,Buf,K,False
+2025,herman allen,We Got This Sh!T,14,166,Jake Elliott,Phi,K,False
+2025,Cary,ChatCTE,14,167,Matt Gay,FA,K,False
+2025,David Snyder,Send'em Packin,14,168,Chris Boswell,Pit,K,False
+2025,David Snyder,Send'em Packin,15,169,Ladd McConkey,LAC,WR,True
+2025,Cary,ChatCTE,15,170,Brian Thomas Jr.,Jax,WR,True
+2025,herman allen,We Got This Sh!T,15,171,Joe Burrow,Cin,QB,True
+2025,Grenier,Jaxson Bates,15,172,C.J. Stroud,Hou,QB,True
+2025,Fleming,NickCannonFanClub,15,173,Devonta Smith,Phi,WR,True
+2025,Brown/Collins,Window Is Always Open,15,174,Bucky Irving,TB,RB,True
+2025,Rychlicki,The Kunning Stunts,15,175,Rome Odunze,Chi,WR,True
+2025,Lobsinger,Breece Up Those Tets,15,176,Trey McBride,Ari,TE,True
+2025,Arthur Ray,Sentinel Sea Stallions,15,177,Austin Ekeler,Wsh,RB,True
+2025,R Taylor,Multiple Scorgasms,15,178,Courtland Sutton,Den,WR,True
+2025,Matt Mays,The Poetry Of Junkyard Juggers,15,179,Jayden Daniels,Wsh,QB,True
+2025,Wilson Kam,Bloodied Castaways,15,180,Jerry Jeudy,Cle,WR,True

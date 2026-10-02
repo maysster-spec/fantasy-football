@@ -1,0 +1,26 @@
+Week,Date,Team,TeamB,Type,Status,Transaction
+4,2025-09-23 12:39,ChatCTE,Send'em Packin,TRADE_PROPOSAL,CANCELED,TRADE Player ID 4038941 [Send'em Packin -> ChatCTE] | TRADE Player ID 4036133 [Send'em Packin -> ChatCTE] | TRADE Player ID 15864 [ChatCTE -> Send'em Packin] | TRADE Player ID 3054850 [ChatCTE -> Send'em Packin]
+4,2025-09-23 12:59,Send'em Packin,,TRADE_ACCEPT,,
+5,2025-10-04 13:36,The Poetry of Junkyard Juggers,Sentinel Sea Stallions,TRADE_PROPOSAL,CANCELED,TRADE Player ID 4429205 [Sentinel Sea Stallions -> The Poetry of Junkyard Juggers] | TRADE Player ID 3929645 [The Poetry of Junkyard Juggers -> Sentinel Sea Stallions]
+5,2025-10-04 13:06,The Poetry of Junkyard Juggers,Sentinel Sea Stallions,TRADE_PROPOSAL,PENDING,TRADE Player ID 4429205 [Sentinel Sea Stallions -> The Poetry of Junkyard Juggers] | TRADE Player ID 3929645 [The Poetry of Junkyard Juggers -> Sentinel Sea Stallions]
+5,2025-10-02 09:29,ChatCTE,The Kunning Stunts,TRADE_PROPOSAL,CANCELED,TRADE Player ID 4036133 [ChatCTE -> The Kunning Stunts] | TRADE Player ID 4242355 [The Kunning Stunts -> ChatCTE] | TRADE Player ID 4047650 [The Kunning Stunts -> ChatCTE] | TRADE Player ID 4697815 [ChatCTE -> The Kunning Stunts]
+5,2025-10-04 13:36,Sentinel Sea Stallions,,TRADE_DECLINE,EXECUTED,
+7,2025-10-15 08:37,Bloodied Castaways,,TRADE_ACCEPT,,
+8,2025-10-26 00:58,Multiple Scorgasms,,TRADE_DECLINE,EXECUTED,
+10,2025-11-05 19:11,ChatCTE,The Poetry of Junkyard Juggers,TRADE_PROPOSAL,PENDING,TRADE Player ID 4428557 [ChatCTE -> The Poetry of Junkyard Juggers] | TRADE Player ID 4362238 [The Poetry of Junkyard Juggers -> ChatCTE] | TRADE Player ID 4361741 [ChatCTE -> The Poetry of Junkyard Juggers]
+10,2025-11-05 19:27,The Poetry of Junkyard Juggers,,TRADE_DECLINE,EXECUTED,
+10,2025-11-05 19:27,ChatCTE,The Poetry of Junkyard Juggers,TRADE_PROPOSAL,CANCELED,TRADE Player ID 4360569 [ChatCTE -> The Poetry of Junkyard Juggers] | TRADE Player ID 4361741 [ChatCTE -> The Poetry of Junkyard Juggers] | TRADE Player ID 4808766 [ChatCTE -> The Poetry of Junkyard Juggers] | TRADE Player ID 4362238 [The Poetry of Junkyard Juggers -> ChatCTE] | TRADE Player ID 3040151 [The Poetry of Junkyard Juggers -> ChatCTE]
+10,2025-11-06 15:29,Window is Always Open,,TRADE_DECLINE,EXECUTED,
+10,2025-11-05 19:27,ChatCTE,The Poetry of Junkyard Juggers,TRADE_PROPOSAL,CANCELED,TRADE Player ID 4428557 [ChatCTE -> The Poetry of Junkyard Juggers] | TRADE Player ID 4362238 [The Poetry of Junkyard Juggers -> ChatCTE] | TRADE Player ID 4361741 [ChatCTE -> The Poetry of Junkyard Juggers]
+10,2025-11-05 19:13,ChatCTE,The Poetry of Junkyard Juggers,TRADE_PROPOSAL,PENDING,TRADE Player ID 4360569 [ChatCTE -> The Poetry of Junkyard Juggers] | TRADE Player ID 4361741 [ChatCTE -> The Poetry of Junkyard Juggers] | TRADE Player ID 4808766 [ChatCTE -> The Poetry of Junkyard Juggers] | TRADE Player ID 4362238 [The Poetry of Junkyard Juggers -> ChatCTE] | TRADE Player ID 3040151 [The Poetry of Junkyard Juggers -> ChatCTE]
+10,2025-11-05 19:27,The Poetry of Junkyard Juggers,,TRADE_DECLINE,EXECUTED,
+11,2025-11-15 13:00,The Poetry of Junkyard Juggers,Sentinel Sea Stallions,TRADE_PROPOSAL,PENDING,TRADE Player ID 12483 [Sentinel Sea Stallions -> The Poetry of Junkyard Juggers] | TRADE Player ID 4426348 [The Poetry of Junkyard Juggers -> Sentinel Sea Stallions] | TRADE Player ID 4608686 [The Poetry of Junkyard Juggers -> Sentinel Sea Stallions]
+11,2025-11-15 17:14,The Poetry of Junkyard Juggers,ChatCTE,TRADE_PROPOSAL,PENDING,TRADE Player ID 2577417 [ChatCTE -> The Poetry of Junkyard Juggers] | TRADE Player ID 3040151 [The Poetry of Junkyard Juggers -> ChatCTE]
+11,2025-11-15 17:14,The Poetry of Junkyard Juggers,Sentinel Sea Stallions,TRADE_PROPOSAL,CANCELED,TRADE Player ID 12483 [Sentinel Sea Stallions -> The Poetry of Junkyard Juggers] | TRADE Player ID 4426348 [The Poetry of Junkyard Juggers -> Sentinel Sea Stallions] | TRADE Player ID 4608686 [The Poetry of Junkyard Juggers -> Sentinel Sea Stallions]
+11,2025-11-15 21:16,The Poetry of Junkyard Juggers,ChatCTE,TRADE_PROPOSAL,PENDING,TRADE Player ID 4038941 [ChatCTE -> The Poetry of Junkyard Juggers] | TRADE Player ID 3040151 [The Poetry of Junkyard Juggers -> ChatCTE]
+11,2025-11-15 20:44,The Poetry of Junkyard Juggers,Sentinel Sea Stallions,TRADE_PROPOSAL,PENDING,TRADE Player ID 3139477 [Sentinel Sea Stallions -> The Poetry of Junkyard Juggers] | TRADE Player ID 3040151 [The Poetry of Junkyard Juggers -> Sentinel Sea Stallions]
+11,2025-11-15 20:37,The Poetry of Junkyard Juggers,ChatCTE,TRADE_PROPOSAL,CANCELED,TRADE Player ID 2577417 [ChatCTE -> The Poetry of Junkyard Juggers] | TRADE Player ID 3040151 [The Poetry of Junkyard Juggers -> ChatCTE]
+11,2025-11-15 21:19,The Poetry of Junkyard Juggers,Sentinel Sea Stallions,TRADE_PROPOSAL,CANCELED,TRADE Player ID 3139477 [Sentinel Sea Stallions -> The Poetry of Junkyard Juggers] | TRADE Player ID 3040151 [The Poetry of Junkyard Juggers -> Sentinel Sea Stallions]
+11,2025-11-15 21:19,ChatCTE,,TRADE_ACCEPT,,DROP Player ID 3929645 [ChatCTE -> 0]
+11,2025-11-16 12:03,Multiple Scorgasms,,TRADE_VETO,EXECUTED,
+12,2025-11-18 03:04,The Poetry of Junkyard Juggers,ChatCTE,TRADE_ACCEPT,EXECUTED,TRADE Player ID 4038941 [ChatCTE -> The Poetry of Junkyard Juggers] | TRADE Player ID 3040151 [The Poetry of Junkyard Juggers -> ChatCTE] | DROP Player ID 3929645 [ChatCTE -> 0]

@@ -1,0 +1,86 @@
+═══════════════════════════════════════════════════════════════════════════════
+FABLE TASK #2 — PICKS 17 AND 32, IN DOLLARS, ON THE SHIPPED BOARD
+Written 2026-08-30. Draft is Mon Sept 7, 8:00 PM ET. This is the last open
+question that changes what Matt does on the clock.
+═══════════════════════════════════════════════════════════════════════════════
+
+Read `00_PROJECT_DIRECTIVE.md` first — §0.2 (test before you claim), §0.3 (the
+objective is DOLLARS against the §2 payout table), §3 (tag every claim), §4.12
+(the noise model), §5 (the opponent model). Obey §0.1 in your reply.
+
+───────────────────────────────────────────────────────────────────────────────
+WHY THIS IS OPEN
+───────────────────────────────────────────────────────────────────────────────
+Pick 8 is CLOSED (doc 70): best board player, QB later. Do not reopen it.
+Picks 104/113 have a rule (doc 92/93 + §4.18). Do not reopen those either.
+
+Picks 17 and 32 were last measured in **doc 09 §5**, and every input under that
+measurement has since been replaced:
+
+  • noise      doc 09 ran `sd = 0.135 × ADP` (v4). The fitted model is now
+               **`sd = 0.111 × ADP + 5.40`** (§4.12, n=680). v4 under-dispersed
+               by ~4× at the top of the board — exactly where picks 17 and 32 are.
+  • board      doc 09 ran a board the ledger later records as **39% fabricated**
+               in its 200-row export (doc 57). The shipped board is
+               `board_v8_fixed.csv`.
+  • replacement  WR30 moved 168.5 → **163.540**. Doc 11's words: the old value was
+               "a systematic thumb on the scale for RB in every RB-vs-WR comparison."
+               Doc 09's pick-32 answer IS an RB-vs-TE/RB comparison.
+  • depletion  §2.1's table was corrected: **pick 32 has 3 keepers gone ahead, not 5** —
+               effective ADP ~35, not ~37. Doc 09's pick-32 baseline was **two picks
+               too deep**, and its answer there was a "±4 coin flip." A ±4 coin flip
+               on a two-pick-wrong baseline is not a finding.
+  • objective  doc 09 reported POINTS. §0.3 is DOLLARS, and the payout table is convex.
+               Pick 8 changed character when it was re-scored in dollars.
+
+Doc 09's verdicts, for you to confirm or kill — not to inherit:
+  pick 17, given the pick-8 player:  Henry +0 (baseline) · Allen +5.3 (only if he
+    survives — §4.15/doc 70 now say survival to 17 is ≈0.03, not 0.10) · Hampton −2.9 ·
+    Walker −5.3 · Jacobs −6.7 · Hall −15.9 · **Bowers −26.5 · McBride −26.8**
+  pick 32, given the first two: Kyren +3.8 · Hall +3.2 · McBride +2.2 · Judkins 0.0 ·
+    Adams −0.9 · Bowers −2.0 · Burrow −6.9 · Warren −17.1
+    → doc 09 called this "genuinely flat, a ±4 coin flip, call it on roster fit and bye."
+
+───────────────────────────────────────────────────────────────────────────────
+WHAT TO DO, IN ORDER
+───────────────────────────────────────────────────────────────────────────────
+1. **State the pick-8 arm you are conditioning on, and why.** Doc 70's best-non-QB
+   arm takes Amon-Ra St. Brown 120/120. If your run disagrees, say so before
+   going further — everything downstream inherits it.
+
+2. **Pick 17, paired, in dollars AND points.** Shipped board, §4.12 affine noise on
+   `eff_pick`, §5 opponent model with Snyder at q=0.90, N large enough to resolve
+   the ±4 that doc 09 could not. Report the full slate, not just the winner.
+   Include the two TEs explicitly — §4.7 says zero TEs went inside the first 17
+   picks in 2024 or 2025, and herman allen (slot 5, picks 20 and 29) is the
+   league's only early-TE manager, so a TE at 17 is a real question about whether
+   Bowers/McBride survive to 32, not just about their value at 17.
+
+3. **Pick 32, same treatment, on the CORRECTED depletion (3 keepers gone, eff ~35).**
+   This is the one most likely to move. If it is still flat, say "flat" — §3 expects
+   "this is a coin flip" as an answer. If the WR replacement correction alone flips
+   it, that is the headline.
+
+4. **The 17→32 gap is the longest of the draft (15 picks) and 32→41 has the steepest
+   attrition (3 → 10 keepers gone).** Price the *pair*, not two independent picks:
+   what does taking X at 17 do to the distribution of what is there at 32? A pick-17
+   choice that is −2 alone but +6 through its effect on 32 is the answer.
+
+5. **Bye collisions are a constraint, not a footnote (§4.11).** Week 13 holds Taylor,
+   Jeanty, Henry, Hall, Bowers and Warren. From slot 8 the live collision is
+   Taylor-or-Henry with Bowers-or-Warren. If your top-two at 17 and 32 stack week 13,
+   report the cost of the swap rather than silently preferring one.
+
+6. **Say what you could NOT check.** Doc 92's value was partly that it named its own
+   limits; doc 93's review was possible because of it.
+
+───────────────────────────────────────────────────────────────────────────────
+RULES THAT COST US LAST TIME
+───────────────────────────────────────────────────────────────────────────────
+• **Do not inherit a baseline.** Task #1 shipped with an instruction to *use* a
+  streaming number whose n was irreproducible. Re-derive anything you lean on, or
+  tag it `[SOURCED, n irreproducible]`.
+• **Never report a magnitude you have not measured.** Twice this project has
+  overstated a defect's cost by 100×.
+• **"Three methods agree" is one measurement if two of them share an input.**
+• Report the result **including when it kills the hypothesis.**

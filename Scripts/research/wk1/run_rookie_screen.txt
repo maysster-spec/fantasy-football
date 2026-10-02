@@ -1,0 +1,74 @@
+population: WR seasons 2021-2025, drafted 2021 or later, NFL years 1 to 3, not startable the season before (under 9.62 a game) or no season before; outcome startable (>= 9.62) over weeks W+1 to 14 on 4+ games
+
+== read at the end of week 3: n=174, base rate 16.7% (29 of 174); rookies 85
+    0 of 3 signals (rounds 1-3, ypt>7.13 on 5+ tgt, tpg>3.2)     0 of 35     0.0%
+    1 of 3 signals (rounds 1-3, ypt>7.13 on 5+ tgt, tpg>3.2)     2 of 51     3.9%
+    2 of 3 signals (rounds 1-3, ypt>7.13 on 5+ tgt, tpg>3.2)    10 of 49    20.4%
+    3 of 3 signals (rounds 1-3, ypt>7.13 on 5+ tgt, tpg>3.2)    17 of 39    43.6%
+    3 of 3 against fewer: +34.7 points, permutation p=0.0000
+    ROOKIES, 3 of 3                                             11 of 19    57.9%
+    ROOKIES, fewer than 3                                        6 of 66     9.1%
+    years 2 to 3, 3 of 3                                         6 of 20    30.0%
+    the last game was a breakout (60+ yds or 7+ targets)        20 of 50    40.0%
+    the last game was not                                        9 of 124    7.3%
+    ROOKIE, rounds 1-3, breakout last game                      13 of 22    59.1%
+      ... and still under the bar through week W (Bell's shape)   2 of 8     25.0%
+    ROOKIE, rounds 1-3, no breakout last game                    3 of 37     8.1%
+    breakout against not, among rounds 1-3 rookies: +51.0 points, permutation p=0.0000
+    3 of 3 AND a breakout last game                             14 of 25    56.0%
+    3 of 3, no breakout last game                                3 of 14    21.4%
+    rookies 3 of 3 at week 3: Ja'Marr Chase 2021 (hit, 14.2); Tank Dell 2023 (hit, 13.8); Chris Olave 2022 (hit, 11.3); Tetairoa McMillan 2025 (hit, 11.8); Emeka Egbuka 2025 (hit, 10.1); Zay Flowers 2023 (hit, 9.8); Jordan Addison 2023 (hit, 10.4); Rashee Rice 2023 (hit, 10.8); Jayden Reed 2023 (hit, 10.1); Brian Thomas Jr. 2024 (hit, 12.1); Malik Nabers 2024 (hit, 10.4); Drake London 2022 (miss, 5.7); Rondale Moore 2021 (miss, 5.0); Alec Pierce 2022 (miss, 7.1); Treylon Burks 2022 (miss, 7.9); Marvin Harrison Jr. 2024 (miss, 8.5); Xavier Legette 2024 (miss, 7.8); Rome Odunze 2024 (miss, 7.4); Xavier Worthy 2024 (miss, 7.8)
+
+== read at the end of week 4: n=162, base rate 17.9% (29 of 162); rookies 80
+    0 of 3 signals (rounds 1-3, ypt>7.13 on 5+ tgt, tpg>3.2)     0 of 30     0.0%
+    1 of 3 signals (rounds 1-3, ypt>7.13 on 5+ tgt, tpg>3.2)     1 of 39     2.6%
+    2 of 3 signals (rounds 1-3, ypt>7.13 on 5+ tgt, tpg>3.2)    13 of 51    25.5%
+    3 of 3 signals (rounds 1-3, ypt>7.13 on 5+ tgt, tpg>3.2)    15 of 42    35.7%
+    3 of 3 against fewer: +24.0 points, permutation p=0.0000
+    ROOKIES, 3 of 3                                             10 of 24    41.7%
+    ROOKIES, fewer than 3                                        6 of 56    10.7%
+    years 2 to 3, 3 of 3                                         5 of 18    27.8%
+    the last game was a breakout (60+ yds or 7+ targets)        13 of 43    30.2%
+    the last game was not                                       16 of 119   13.4%
+    ROOKIE, rounds 1-3, breakout last game                       5 of 16    31.2%
+      ... and still under the bar through week W (Bell's shape)   2 of 7     28.6%
+    ROOKIE, rounds 1-3, no breakout last game                   10 of 39    25.6%
+    breakout against not, among rounds 1-3 rookies: +5.6 points, permutation p=0.4490
+    3 of 3 AND a breakout last game                              8 of 22    36.4%
+    3 of 3, no breakout last game                                7 of 20    35.0%
+
+== read at the end of week 5: n=147, base rate 18.4% (27 of 147); rookies 73
+    0 of 3 signals (rounds 1-3, ypt>7.13 on 5+ tgt, tpg>3.2)     0 of 24     0.0%
+    1 of 3 signals (rounds 1-3, ypt>7.13 on 5+ tgt, tpg>3.2)     2 of 31     6.5%
+    2 of 3 signals (rounds 1-3, ypt>7.13 on 5+ tgt, tpg>3.2)    10 of 51    19.6%
+    3 of 3 signals (rounds 1-3, ypt>7.13 on 5+ tgt, tpg>3.2)    15 of 41    36.6%
+    3 of 3 against fewer: +25.3 points, permutation p=0.0008
+    ROOKIES, 3 of 3                                             10 of 24    41.7%
+    ROOKIES, fewer than 3                                        5 of 49    10.2%
+    years 2 to 3, 3 of 3                                         5 of 17    29.4%
+    the last game was a breakout (60+ yds or 7+ targets)        11 of 36    30.6%
+    the last game was not                                       16 of 111   14.4%
+    ROOKIE, rounds 1-3, breakout last game                       5 of 15    33.3%
+      ... and still under the bar through week W (Bell's shape)   2 of 8     25.0%
+    ROOKIE, rounds 1-3, no breakout last game                    9 of 37    24.3%
+    breakout against not, among rounds 1-3 rookies: +9.0 points, permutation p=0.3630
+    3 of 3 AND a breakout last game                              8 of 22    36.4%
+    3 of 3, no breakout last game                                7 of 19    36.8%
+
+== read at the end of week 6: n=126, base rate 17.5% (22 of 126); rookies 60
+    0 of 3 signals (rounds 1-3, ypt>7.13 on 5+ tgt, tpg>3.2)     0 of 22     0.0%
+    1 of 3 signals (rounds 1-3, ypt>7.13 on 5+ tgt, tpg>3.2)     0 of 26     0.0%
+    2 of 3 signals (rounds 1-3, ypt>7.13 on 5+ tgt, tpg>3.2)     8 of 44    18.2%
+    3 of 3 signals (rounds 1-3, ypt>7.13 on 5+ tgt, tpg>3.2)    14 of 34    41.2%
+    3 of 3 against fewer: +32.5 points, permutation p=0.0000
+    ROOKIES, 3 of 3                                             10 of 18    55.6%
+    ROOKIES, fewer than 3                                        4 of 42     9.5%
+    years 2 to 3, 3 of 3                                         4 of 16    25.0%
+    the last game was a breakout (60+ yds or 7+ targets)        11 of 25    44.0%
+    the last game was not                                       11 of 101   10.9%
+    ROOKIE, rounds 1-3, breakout last game                       5 of 8     62.5%
+      ... and still under the bar through week W (Bell's shape)   2 of 5     40.0%
+    ROOKIE, rounds 1-3, no breakout last game                    8 of 33    24.2%
+    breakout against not, among rounds 1-3 rookies: +38.3 points, permutation p=0.0517
+    3 of 3 AND a breakout last game                              6 of 11    54.5%
+    3 of 3, no breakout last game                                8 of 23    34.8%

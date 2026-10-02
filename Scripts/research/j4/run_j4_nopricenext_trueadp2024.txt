@@ -1,0 +1,29 @@
+POPULATION 427 {'WR': 182, 'RB': 109, 'TE': 86, 'QB': 50} {2022: 109, 2023: 166, 2024: 152}
+DROPPED {'no_nflverse_match': 81, 'ambiguous_name': 0, 'no_window_share': 91, 'not_priced_next_year': 241, 'no_next_year_games': 103, 'matched_by_fallback': 11}
+REPLACEMENT weeks 1-14 totals by N+1 season {2023: {'QB': 261.86, 'RB': 119.0, 'WR': 129.6, 'TE': 93.5}, 2024: {'QB': 241.48, 'RB': 115.60000000000001, 'WR': 122.5, 'TE': 96.0}, 2025: {'QB': 261.42, 'RB': 110.5, 'WR': 115.0, 'TE': 100.10000000000001}}
+BASE {'startable_N1': 0.27634660421545665, 'vbd14_N1_mean': -41.461639344262295, 'riser_mean': -0.0030176629388699084, 'riser_sd': 0.15287489731905038}
+VBD14 ~ logADP + pos: logADP -31.25 (se 5.27)
+VBD14 ~ logADP + pos + riser: riser per +10 share pts 6.30 (se 1.60), logADP -33.08
+GAP VBD14, top tercile riser minus bottom, net of price+pos: 19.1 [8.4, 30.9]
+  bottom (fell)  n=143 riser -0.119 adp 145.8  VBD14  -49.1  startable 22%
+  middle         n=141 riser -0.002 adp 156.6  VBD14  -41.6  startable 30%
+  top (rose)     n=143 riser +0.112 adp 162.7  VBD14  -33.7  startable 31%
+STARTABLE ~ logADP + pos + riser: riser per +10 share pts 0.237 (se 0.084)
+STARTABLE adjusted (model, own prices): top 30.5%  bottom 25.0%
+  QB n= 50 riser per +10 4.33 (se 2.85)  logADP 12.99
+  RB n=109 riser per +10 17.37 (se 4.94)  logADP -43.93
+  WR n=182 riser per +10 2.67 (se 4.73)  logADP -41.52
+  TE n= 86 riser per +10 7.27 (se 4.82)  logADP -32.31
+VARIANT 2 (N vs N-1 share) n=261: per +10 5.47 (se 2.13)
+WHEN PLAYED (availability held out) n=427: riser per +10 8.10 (se 2.27); RB n=109 15.95 (se 5.46)
+YOUTH ARM n=427 (young 192): riser(old) 3.02 (se 1.92)  young 10.15 (se 4.94)  riser x young 9.71 (se 3.51)
+  young/rose   n= 71 VBD14 -27.4 startable 38% adp 169
+  young/fell   n= 53 VBD14 -47.0 startable 23% adp 150
+  older/rose   n= 72 VBD14 -40.0 startable 24% adp 156
+  older/fell   n= 90 VBD14 -50.3 startable 22% adp 144
+  hit, share fell  n= 39  VBD14_N  +26.0 -> VBD14_N+1  -15.4  startable 49%  still above replacement 36%
+  hit, share flat  n= 39  VBD14_N  +38.7 -> VBD14_N+1  -12.2  startable 59%  still above replacement 44%
+  hit, share rose  n= 39  VBD14_N  +30.5 -> VBD14_N+1   +1.4  startable 49%  still above replacement 46%
+HITS ARM n=117: riser per +10, net of price and the size of the hit: 2.37 (se 5.73); hit size itself -0.00 (se 0.20)
+POWER: residual sd 49.7; n per tercile to resolve a 10-point gap at 80%: 388
+written J4_rows_nopricenext.csv, J4_summary_nopricenext.json

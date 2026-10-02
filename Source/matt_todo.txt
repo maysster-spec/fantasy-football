@@ -1,0 +1,145 @@
+# MATT_TODO -- what YOU do. One line each. Nothing else lives in this file.
+# [ ] open   [x] done.   Why any line is here lives in the docs, not here.
+# Everything this list held before 24 Sept 2026: _archive\matt_todo_20260924.txt
+# Rewritten 24 Sept at Matt's instruction: it had 49 open items, 11 of which said
+# "READ ONLY, NOTHING TO RUN", under 1,172 lines of my commentary.
+# Rewritten 28 Sept (doc 435): the dated items from 25 to 28 Sept were past, and the
+# Wednesday claim line was wrong for this roster.
+
+## RUN NOW
+
+[x] .\ff.bat           # done 30 Sept 21:46: every term 0, P3 and P4 live, the crowd table on the sheet (doc 455)
+[x] .\ff.bat           # done 29 Sept 21:26 by hand: wire 0, locals 0, rules 0, every term 0 (doc 448 to 450)
+[x] FRI 2 OCT    (done early: the file landed with the 17:30 run of 1 Oct and the odds printed the same evening, doc 469)
+[x] Paste directive v9.38 into the project's custom instructions.   # shipped 1 Oct 09:45 (doc 463); pasted 1 Oct evening
+[x] Paste directive v9.39 into the project's custom instructions.   # pasted, confirmed 2 Oct 01:00
+[x] One click: delete G:\My Drive\_Fantasy\2026\Source\293_the_late_pick_needs_a_door-1.md   # done 2 Oct (Matt)
+[x] Paste directive v9.37 into the project's custom instructions.   # done: the project holds v9.37 (checked 30 Sept 09:30)
+[x] Paste directive v9.36 into the project's custom instructions.   # superseded the same night by v9.37; paste that instead
+[x] Paste directive v9.35 into the project's custom instructions.   # done: the project holds v9.35 (checked 29 Sept 22:20)
+[x] .\ff.bat           # done 28 Sept 22:35 by hand; every check in the RESULT line was 0 (doc 436)
+                       # The kit check and the page check stop failing on this run (they had
+                       # failed every run since 25 Sept on stale pins and a bad link), and
+                       # OPEN_THREADS.md now rebuilds inside it.
+[x] Paste directive v9.34 into the project's custom instructions.   # done: the project holds v9.34 (checked 29 Sept 18:50)
+[x] Paste directive v9.33 into the project's custom instructions.   # done: the project holds v9.33 (checked 29 Sept 08:15)
+[x] Paste directive v9.32 into the project's custom instructions.   # done: the project holds v9.32 (checked 28 Sept 23:00)
+
+## THIS WEEK
+
+[x] THU 1 OCT    (closed, doc 462: with Vele and Malik Washington spent on Bryant and Allgeier, a Wilson claim costs a real man; do not place it.) CLAIM Emanuel Wilson (RB, SEA), DROP Devaughn Vele. He clears FRIDAY about 03:00, so place it today. The
+                 fattest free ticket on the measured table (doc 460): a committee partner at 11 touches a game whose man
+                 ahead, Jadarian Price, is questionable (chest). Your priority is 11 of 12 and resets Tuesday: it costs ~nothing.
+[x] THU 1 OCT    (done 08:14, with Pat Bryant for Vele; ESPN accepted the fifth active back with two on IR, so IR men do not count against the cap, doc 462.) ADD Tyler Allgeier (RB, ARI) as a FREE AGENT now, DROP Malik Washington, if you accept making Sunday's seat
+                 for Nacua out of the Bengals D/ST or Barner instead. Second ticket (doc 460). If ESPN REFUSES the add on the
+                 RB limit, that settles whether IR men count against the cap of six (they would) and the Wilson claim fails
+                 the same way: tell me which happened, either way.
+[x] FRI 2 OCT    Nothing to check Friday: no claim is pending.
+[x] .\ff.bat        # done 08:04, every term 0; the 07:30 run of 2 Oct carries doc 462's waterfall and the fixed drop pairing
+[ ] SUN 4 OCT    THE FLEX (doc 462 reply): Nacua if he is active (14.2 a week on the blend; activate him off the IR slot and drop AJ Barner,
+                 re-claim a tight end in week 5 for the week-6 hole). If Nacua is out: J.K. Dobbins over Kalif Raymond. The blend says
+                 Raymond 9.7 to 8.0, but Dobbins is the quiet-volume cell (13.4 expected a game over his last two on 4.7 actual, 19
+                 touches last game, the Denver job), the cell measured better than the pool for the next four weeks, and Raymond's
+                 12.3 a game sits on 7.8 expected. A judgement between two reads under two points apart, stated as one.
+
+[x] WED 30 SEP   Place waiver claims before 03:00 Thursday.   # done 1 Oct 00:20; Raymond and Packers landed, Gordon lost (doc 460) Every claim carries a drop from your ACTIVE
+                 fifteen: all three IR seats are full, so a claim with no drop fails on the roster limit
+                 (16% of no-drop waiver claims do; yours did, 8 times last year). NEVER a man in the IR
+                 slot (Nacua, Dowdle, Coleman): dropping him frees no seat, so the claim still fails.
+                 Want BOTH claims to land: two different drops. Want only ONE of several: the same drop
+                 on each is your hedge, and the first winner takes it (doc 436).
+[x] WED 30 SEP   The claims, in order (doc 455): Ollie Gordon II FIRST, drop Devaughn Vele; Michael Mayer second, drop
+                 Samaje Perine. Two claims, not three: Bell is off (your call, 30 Sept), and the sheet's third row (Raymond
+                 for Dobbins, +4.8) is inside the noise and against the bench rule. Keep the third seat: Nacua is
+                 questionable with a return date of Sunday and Dowdle of Thursday; to START either you must move him off
+                 the IR slot into an active seat, and the man to cut then is Malik Washington. Gordon is contested and you
+                 are 8 of 12: expect to lose him; ranking him first costs nothing.
+[ ] SUN 4 OCT    Before Nacua's kickoff: if he is active, move him from the IR slot to the lineup and make the seat by dropping
+                 Malik Washington (or, if Allgeier took that seat, the Bengals D/ST or Barner; never Dobbins, doc 460). Same for Dowdle on Thursday if he is
+                 active and you want him in the nine (you do not this week: Jeanty, Judkins and Gordon or Dobbins are ahead).
+[x] WED 30 SEP   Claims placed 1 Oct 00:20: Gordon for Vele, Raymond for Tucker, Bears D/ST for Chiefs D/ST (seen, doc 457)
+[x] WED 30 SEP   If still up before 03:00: swap the third claim to PACKERS D/ST   # done: Packers landed, Chiefs dropped for Chiefs D/ST (the wire's rule: lowest
+                 opponent total this week, 17.5 against the Bears' 20.0, and the better week-5 draw too). Under a point a
+                 week either way; not worth losing sleep over.
+[x] WED 30 SEP   After placing them:  py claim_order_log.py          # done 30 Sept 23:27 and 1 Oct 08:15
+[x] THU 1 OCT    Nothing to run for doc 456: the 07:30 run writes standings_2026.csv and the sheet prints where you
+                 stand (record, seed, points for against the league). Read that line before deciding how much risk to buy.
+[x] THU 1 OCT    After 06:00:  py waivers.py --live  then  py claim_order_log.py --pair   # done 08:15; pairs the order with
+                 what executed and what failed (doc 442). Two commands, every Thursday from now on.
+[ ] THU 1 OCT    Morning: open the roster. A man dropped on Wednesday clears FRIDAY about 03:00, not
+                 Thursday, so if you claimed one, check again Friday morning.
+[ ] SUN 4 OCT    Before 13:00: open the roster. If Nacua, Dowdle or Coleman lost his designation
+                 entirely, the lineup is frozen until you cut someone. Questionable or doubtful is fine.
+
+## EVERY WEEK
+
+[ ] WED night    py claim_order_log.py                                  # after placing claims
+[ ] THU morning  py waivers.py --live  then  py claim_order_log.py --pair   # after 06:00; pairs order with outcome
+[x] TUE projections, MON-night usage and snaps   # ff.bat does all three now (doc 439): usage and snaps at
+                                                   # the top of every run, ESPN's projections on the Tuesday
+                                                   # 06:00 task. Nothing to run.
+
+## ON THE CALENDAR
+
+[ ] week 5    Claim a TE for LaPorta's week-6 bye. The sheet marks such a row "week 5" now and leaves it out of the
+              total (doc 457); Waller is a candidate if Coker stays out, and the week-5 calendar row names the best man.
+[ ] week 7    Add a kicker for Pineiro's week-8 bye. Not before.
+[ ] week 9    Claim a QB for Hurts' week-10 bye. Shough is gone, so nobody covers it.
+[ ] week 10   A backup QB bought now covers about two thirds of a season's missed starts (not 96%). Worth
+              a bench spot if one is spare; not worth a drop you would regret.
+[ ] week 14   Swap the D/ST to Indianapolis for the playoffs.
+
+## WAITING ON YOU, NO DEADLINE
+
+[x] DECIDE: apply directive v9.36, the second diet (doc 447).   # done: "yes, go" 29 Sept 22:10; applied by doc 452
+[x] DECIDE: apply directive v9.35, the diet (doc 444).   # done: "I accept your top recommendation", 29 Sept 20:20; applied by doc 446
+[ ] DECIDE, money: a paid live routes feed (PFF or Fantasy Points Data). My recommendation is NO for now.
+                 Routes beat snap share on history (doc 441), but the only in-season use they would serve is the
+                 40 to 80% snap band, and no page uses that split yet. If you want it anyway, say so and I will
+                 name the page it goes on first.
+[ ] One ESPN box score, 2 minutes: in our league, open DEN D/ST's week 1 2025 line (the Mims muffed punt)
+                 and tell me whether it shows a minus 2 for the fumble lost. That one line decides whether the
+                 D/ST bar carries the fumble term (doc 440). Any week with a known return fumble lost will do.
+[x] Paste directive v9.27 into the project's custom instructions.   # done
+[x] Paste directive v9.29 into the project's custom instructions.   # done: the project holds v9.31 (checked 25 Sept)
+[x] MON 28 SEP   Open a NEW Fable chat and paste Source\AUDIT_PROMPT_20260925.md.   # done 28 Sept, all five batches, doc 435
+[x] MON 28 SEP   Once, from Scripts:  py research\open_threads.py   # done 28 Sept from here; ff.bat runs it now
+[ ] py probe_stats_payload.py     # 5 sec. Tells me if the sheet can self-refresh daily.
+
+[ ] Send me the PRIOR OPUS RESEARCH CHAT on fantasy signals. Export it, paste it, or tell me
+                 where it lives. Only you have it. It is the one input that answers "are all the
+                 signals measured", and I wrongly told you on 25 Sept that the question was
+                 unanswerable in principle. It is not; I just had no route to what you already ran.
+[ ] Decide the PODCAST SOURCE and hand me one of three things: transcript files, audio files,   # not tonight (30 Sept), his words
+                 or the show names plus episode dates. I cannot fetch podcast audio myself. I CAN
+                 read transcripts or audio you supply, and I can search published show notes and
+                 articles. An earlier model either refused this or never started it and nothing was
+                 written down, so the refusal has been re-litigated instead of resolved.
+
+## YOURS, WHENEVER
+
+[ ] Build the 2022 notebook, then 2023, 2024, 2025. One per season, never two at once.
+[ ] Re-run the 2021 and 2024 notebooks. Do not download more exports of either.
+[ ] Answer the notebook with  Next 5  and paste me what it names.
+[ ] Delete the two duplicate downloads in 10_Gemni\Takes. Byte-identical, nothing lost.
+
+## STANDING RULES -- not tasks, do not tick
+
+    Place claims Wednesday night, before 03:00 Thursday. They run Thursday 03:00 to 06:00 regardless
+    of when you place them. A man dropped Wednesday clears Friday instead.
+    Every claim carries a drop from the active fifteen, never a man in the IR slot. One drop covers
+    one claim: two different drops to land two men, the same drop on several claims to land only the
+    first winner (your hedge). With 15 active men every claim needs one; a free IR seat is the only
+    thing that changes that.
+    Never drop Mike Washington Jr. Never drop George Pickens.
+    Never drop J.K. Dobbins for a ticket: a lead back with the touches and not yet the points is the best
+    ticket there is (28% of them give a league-winning month; a handcuff 6%, a third-string back 0 of 249).
+    Done 1 Oct 06:47 (free agency): AJ Barner added, Samaje Perine dropped. Perine's cell was 0 of 35 on six
+    startable weeks; Barner is the week-6 tight end. A wash, not a loss (doc 460).
+    A defense is worth its MATCHUP, and the wire page prices it now: take the free defense facing the
+    lowest opponent implied total this week (about three points a week over picking at random).
+    Your kicker slot must stay filled. A replacement kicker is worth 8.26 a week, so Pineiro
+    at 9.2 is about +0.9 a week over whoever you would add. Not free, not sacred.
+    DO NOT DROP RICO DOWDLE   # you said you would wait on him, 24 Sept. He is in the IR seat now
+                              # (Out). If he improves to questionable he keeps the seat; if he loses
+                              # the designation entirely the lineup freezes until you cut someone.

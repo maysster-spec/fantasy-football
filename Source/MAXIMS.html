@@ -1,0 +1,279 @@
+<title>Slot Eight Maxims</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+  :root{
+    --ground:#F6F8F4; --panel:#FFFFFF; --ink:#14181A; --ink2:#565E5F; --ink3:#7E8785;
+    --rule:#D8DED6; --rule2:#E9EDE7; --accent:#1E5B3C; --accent-soft:#E3EDE5; --flag:#9E3520;
+    --flag-soft:#F6E7E2;
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --ground:#0E1112; --panel:#171B1C; --ink:#E9EDE6; --ink2:#A3ADAA; --ink3:#78827F;
+      --rule:#2A3132; --rule2:#202727; --accent:#74C395; --accent-soft:#172C21;
+      --flag:#E3866C; --flag-soft:#2C1A16;
+    }
+  }
+  :root[data-theme="dark"]{
+    --ground:#0E1112; --panel:#171B1C; --ink:#E9EDE6; --ink2:#A3ADAA; --ink3:#78827F;
+    --rule:#2A3132; --rule2:#202727; --accent:#74C395; --accent-soft:#172C21;
+    --flag:#E3866C; --flag-soft:#2C1A16;
+  }
+  *{box-sizing:border-box}
+  body{
+    background:var(--ground); color:var(--ink);
+    font-family:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    font-size:16px; line-height:1.5; -webkit-text-size-adjust:100%;
+  }
+  .wrap{max-width:38rem; margin:0 auto; padding:2rem 1.15rem 4rem;
+        display:flex; flex-direction:column; gap:2.25rem}
+
+  /* ---------- masthead ---------- */
+  .head{display:flex; flex-direction:column; gap:.85rem}
+  .eyebrow{font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:.68rem; letter-spacing:.14em;
+           text-transform:uppercase; color:var(--ink3)}
+  h1{font-family:Fraunces,Georgia,serif; font-weight:700; font-size:2.35rem; line-height:1.04;
+     margin:0; letter-spacing:-.015em; text-wrap:balance;
+     font-variation-settings:"opsz" 100}
+  .standfirst{color:var(--ink2); font-size:.95rem; max-width:32rem; margin:0}
+  .ladder{border-top:2px solid var(--ink); border-bottom:1px solid var(--rule);
+          padding:.7rem 0; display:flex; flex-wrap:wrap; gap:.34rem .5rem;
+          font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:.8rem;
+          font-variant-numeric:tabular-nums}
+  .ladder b{font-weight:600; color:var(--accent)}
+  .ladder .sep{color:var(--ink3)}
+  .ladder .lbl{color:var(--ink3); letter-spacing:.08em; text-transform:uppercase; font-size:.66rem;
+               width:100%; margin-bottom:.15rem}
+
+  /* ---------- corrections ---------- */
+  .corrections{display:flex; flex-direction:column; gap:1rem;
+               background:var(--flag-soft); border-left:3px solid var(--flag);
+               padding:1.05rem 1.1rem}
+  .corrections .kicker{font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:.66rem;
+                       letter-spacing:.14em; text-transform:uppercase; color:var(--flag);
+                       font-weight:600}
+  .fix{display:flex; flex-direction:column; gap:.3rem}
+  .fix h3{font-family:Fraunces,Georgia,serif; font-weight:700; font-size:1.06rem; line-height:1.25;
+          margin:0; color:var(--ink); text-wrap:balance}
+  .fix p{margin:0; font-size:.875rem; color:var(--ink2)}
+
+  /* ---------- groups ---------- */
+  section{display:flex; flex-direction:column; gap:0}
+  .grouphead{font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:.68rem;
+             letter-spacing:.15em; text-transform:uppercase; color:var(--accent);
+             font-weight:600; padding-bottom:.55rem; border-bottom:1px solid var(--rule)}
+  .m{display:grid; grid-template-columns:4.6rem 1fr; gap:.15rem .9rem;
+     padding:1.05rem 0; border-bottom:1px solid var(--rule2)}
+  .m:last-child{border-bottom:0}
+  .where{grid-row:1 / span 2; font-family:"IBM Plex Mono",ui-monospace,monospace;
+         font-size:.7rem; letter-spacing:.03em; color:var(--ink3); padding-top:.28rem;
+         font-variant-numeric:tabular-nums; text-align:right}
+  .where.hot{color:var(--accent); font-weight:600}
+  .m h2{font-family:Fraunces,Georgia,serif; font-weight:700; font-size:1.14rem; line-height:1.24;
+        margin:0; letter-spacing:-.005em; text-wrap:balance;
+        font-variation-settings:"opsz" 30}
+  .m p{margin:.34rem 0 0; font-size:.875rem; color:var(--ink2)}
+  .m p .n{font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:.83rem;
+          color:var(--ink); font-weight:600; font-variant-numeric:tabular-nums;
+          white-space:nowrap}
+  .m p em{font-style:normal; color:var(--accent); font-weight:600}
+
+  /* ---------- clock ---------- */
+  .clock{background:var(--panel); border:1px solid var(--rule); padding:1.15rem 1.2rem;
+         display:flex; flex-direction:column; gap:.55rem}
+  .clock .grouphead{border-bottom:0; padding-bottom:0}
+  .clock h2{font-family:Fraunces,Georgia,serif; font-weight:700; font-size:1.2rem; margin:0;
+            line-height:1.25; text-wrap:balance}
+  .clock code{font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:.9em;
+              background:var(--accent-soft); color:var(--accent); padding:.06em .32em;
+              border-radius:2px}
+  .clock p{margin:0; font-size:.875rem; color:var(--ink2)}
+
+  footer{border-top:1px solid var(--rule); padding-top:.9rem; font-size:.78rem; color:var(--ink3)}
+  footer p{margin:0 0 .35rem}
+  @media (max-width:26rem){
+    h1{font-size:1.95rem}
+    .m{grid-template-columns:1fr; gap:.1rem}
+    .where{grid-row:auto; text-align:left; padding-top:0; padding-bottom:.2rem}
+  }
+</style>
+
+<div class="wrap">
+
+  <header class="head">
+    <div class="eyebrow">E-Discovery Keeper League · 12 team · 0.5 PPR · 6-pt pass TD</div>
+    <h1>Slot Eight Maxims</h1>
+    <p class="standfirst">Everything this project measured, in the form you can hold in your head
+      with sixty seconds on the clock. Each line carries the number it rests on. Nothing here is
+      an opinion.</p>
+    <div class="ladder">
+      <span class="lbl">Your fourteen selections · keeper George Pickens, bye 14</span>
+      <b>8</b><span class="sep">·</span><b>17</b><span class="sep">·</span><b>32</b><span class="sep">·</span><b>41</b><span class="sep">·</span><b>56</b><span class="sep">·</span><b>65</b><span class="sep">·</span><b>80</b><span class="sep">·</span><b>89</b><span class="sep">·</span><b>104</b><span class="sep">·</span><b>113</b><span class="sep">·</span><b>128</b><span class="sep">·</span><b>137</b><span class="sep">·</span><b>152</b> D/ST <span class="sep">·</span><b>161</b> K
+    </div>
+  </header>
+
+  <div class="corrections">
+    <div class="kicker">Corrected Sept 5 — replaces what you were told earlier</div>
+    <div class="fix">
+      <h3>Pick 8 is still St. Brown. “About 20 points” is not.</h3>
+      <p>He is the engine's #1 in every state anyone has run — 10 of 10, 96 of 100, 13 of 13. But the
+        cushion over Derrick Henry is <span class="n">5.9 VOR</span> and about <span class="n">8</span>
+        rollout points, and the 20 came from a single board state. Take him. Don't carry the number.</p>
+    </div>
+    <div class="fix">
+      <h3>Auditions are rounds 5–8, not 5–9.</h3>
+      <p>The keeper rate halves at that seam — <span class="n">15.1% → 8.3%</span> — and the value goes
+        to zero with it: a kept RB drafted round 9 or later returned <span class="n">−2.5</span> the
+        following season. A round-9 pick is a 2026 dart, not an audition.</p>
+    </div>
+  </div>
+
+  <section>
+    <div class="grouphead">Where the value is</div>
+
+    <div class="m">
+      <div class="where hot">bench</div>
+      <h2>Draft the position waivers won't save you at.</h2>
+      <p>Waiver hit rate: <span class="n">QB 62%</span>, <span class="n">RB 22%</span>. On your own
+        four-year record, four of five running backs you add never give you a startable stretch.
+        <em>Bench RB to the cap. Stream QB and TE.</em></p>
+    </div>
+
+    <div class="m">
+      <div class="where">rds 1–4</div>
+      <h2>RB-RB-RB is an output, not an input.</h2>
+      <p>The two winning rules open that way in <span class="n">64–65%</span> of drafts — because of
+        what the board offers, not because the position is favoured. Static VBD with the caps removed
+        drafts 1.46 receivers and loses <span class="n">8.7</span> points.</p>
+    </div>
+
+    <div class="m">
+      <div class="where">any pick</div>
+      <h2>One QB cliff, then a plateau.</h2>
+      <p>QB1 to QB2 is <span class="n">47.3</span> points. QB2 all the way through QB6 is
+        <span class="n">11.8</span> points in total. <em>There is no correct target pick for a
+        quarterback</em> — take one when the board offers value.</p>
+    </div>
+
+    <div class="m">
+      <div class="where">pick 32</div>
+      <h2>Only two tight ends carry a premium.</h2>
+      <p>Bowers <span class="n">+51.2</span>, McBride <span class="n">+47.6</span>, then Warren
+        <span class="n">+28.1</span> and a long flat tail. Don't pay for TE5 through TE10.</p>
+    </div>
+
+    <div class="m">
+      <div class="where">152 · 161</div>
+      <h2>Defence and kicker draft value is an illusion.</h2>
+      <p>Eleven or twelve of twelve teams stream a defence every season. The cost of drafting them as
+        though that value is real: <span class="n">+105.6</span> points per manager-season.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="grouphead">How to read a player</div>
+
+    <div class="m">
+      <div class="where">any pick</div>
+      <h2>When the market and the projection disagree, the market is right.</h2>
+      <p><span class="n">rho −0.173</span>, <span class="n">p&lt;0.001</span>,
+        <span class="n">n=409</span>. Buying the players ADP prices below their projection
+        <em>loses</em>. This one is yours — you called it and it tested true.</p>
+    </div>
+
+    <div class="m">
+      <div class="where">any pick</div>
+      <h2>Buy the job, never the name.</h2>
+      <p>In an unsettled backfield, incumbent minus challenger is <span class="n">+8.2</span>,
+        <span class="n">p=0.604</span> — a null that leans the opposite way to the intuition. The flag
+        tells you the job is worth having. It has no opinion on who gets it.</p>
+    </div>
+
+    <div class="m">
+      <div class="where">any pick</div>
+      <h2>The team barely varies. The job does.</h2>
+      <p>Team pass volume is <span class="n">7.5%</span> of the variance in a receiver's year; his own
+        share of it is <span class="n">93%</span>. The running-back pie varies
+        <span class="n">±6%</span> across all thirty-two teams.</p>
+    </div>
+
+    <div class="m">
+      <div class="where">any pick</div>
+      <h2>Read the number on the injury badge, not the badge.</h2>
+      <p>Games played the prior season, against projection: <span class="n">1–6 g → −40.8</span> ·
+        <span class="n">7–9 g → −27.1</span> · <span class="n">10–12 g → −16.9</span> ·
+        <span class="n">13+ g → −12.6</span>. A four-game season and an eleven-game season are not the
+        same warning.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="grouphead">When to gamble</div>
+
+    <div class="m">
+      <div class="where hot">rd 9+</div>
+      <h2>Risk from round nine. Never before.</h2>
+      <p>A tilt toward upside across the whole draft costs <span class="n">$22–41</span> of expected
+        payout, <span class="n">p=0.003</span>. The same tilt confined to round nine and later is
+        free.</p>
+    </div>
+
+    <div class="m">
+      <div class="where">rd 9+</div>
+      <h2>A late hit is, on average, a role that existed for one year.</h2>
+      <p>A back who hit from ADP 97 or later returned <span class="n">−3.9</span> the following season.
+        The same size of hit from ADP 1–48 returned <span class="n">+47.5</span>. The late band
+        regresses <em>through</em> replacement, not toward it.</p>
+    </div>
+
+    <div class="m">
+      <div class="where">rd 9+</div>
+      <h2>Late players beat their price more often, and give you a starter far less often.</h2>
+      <p>ADP 121–180: <span class="n">17.0%</span> beat their projection by 1.35× — but only
+        <span class="n">20.5%</span> were startable at all. In the top 24 it is
+        <span class="n">91.7%</span>. Both numbers are real and they answer different questions.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="grouphead">What not to over-weight</div>
+
+    <div class="m">
+      <div class="where">any pick</div>
+      <h2>Byes are a tiebreaker, never a constraint.</h2>
+      <p>The worst bye collision available on this board costs <span class="n">1.16</span> points —
+        Lamb with Pickens in week 14. Never move a pick that has real margin behind it.</p>
+    </div>
+
+    <div class="m">
+      <div class="where">104 · 113</div>
+      <h2>A same-bye backup adds exactly zero.</h2>
+      <p>Measured at <span class="n">+0.00</span>, because he never enters the lineup. Your rule about
+        complementarity was right, and this is the arithmetic under it.</p>
+    </div>
+
+    <div class="m">
+      <div class="where">after</div>
+      <h2>Season luck is six times draft luck.</h2>
+      <p>Corrected for sampling error, the spread in title odds between one good draft and another is
+        <span class="n">zero</span>. The draft is worth getting right because it is the part you
+        control — not because it decides the season.</p>
+    </div>
+  </section>
+
+  <div class="clock">
+    <div class="grouphead">On the clock</div>
+    <h2><code>cost vs #1</code> is the sort key. <code>free</code> is the pick.</h2>
+    <p>Not VBD, and never Δ — Δ is tempo, and showing it once made the biggest bar on the page belong
+      to a row the engine did not choose. The rollout that orders the board beats static VBD by
+      <span class="n">4 to 9</span> points. VONA loses <span class="n">8.8</span>. Following ADP loses
+      <span class="n">24.5</span>.</p>
+  </div>
+
+  <footer>
+    <p>Every figure traces to a numbered document in <span style="font-family:'IBM Plex Mono',monospace">Source\</span>.
+      Where a number is one measurement rather than several, the document says so and this card leaves
+      it out.</p>
+    <p>Built Sept 5, 2026 · draft Monday Sept 7, 8:00 PM ET · keeper lock 7:00 PM</p>
+  </footer>
+
+</div>

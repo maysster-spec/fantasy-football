@@ -1,0 +1,208 @@
+routes_vs_snaps.py -- does ROUTE PARTICIPATION add anything to SNAP SHARE at predicting a claimable
+receiver's next four weeks? (doc 437 section 6 item 5: routes run is the one published waiver signal with no free
+LIVE source; test on history before anyone pays for it.)
+
+TESTABLE FORM, stated before the run (0.5(a2)):
+  POPULATION  WR and TE player-weeks, REG 2023-2025, weeks 2-16, NOT startable in week w on 4.13b's bar
+              (season-to-date half-PPR average through w below WR 9.62 / TE 8.25), at least one target in w,
+              a game row in w-1 (so a two-game mean exists), played in w+1, and a snap-share row and a
+              participation row in w.
+  PREDICTORS  measured in week w: SNAP = offensive snap share (nflverse snap counts, offense_pct);
+              ROUTE = route participation = dropbacks on which he was on the field / team dropbacks
+              (nflverse pbp_participation offense_players joined to play-by-play qb_dropback == 1; an
+              APPROXIMATION of routes run, because a man on the field for a dropback who stays in to block is
+              counted as if he ran a route); ROUTE2 = the two-game mean of ROUTE; TGT = targets in w;
+              TPRR = targets per route run = targets / routes (the published metric), and its two-game form.
+  OUTCOMES    spike in w+1 (18.0+ half-PPR); startable in w+1 (>= bar); NEXT4 = mean half-PPR over the games he
+              plays in w+1..w+4 (2+ games), and startable over those four (NEXT4 >= bar).
+  TESTS       (a) Spearman (rank then Pearson) of each predictor with NEXT4; (b) OLS of NEXT4 and of start4 on
+              SNAP and ROUTE together (both in percentage points), HC1 robust se, then with targets and TPRR
+              added; (c) top-fifth cells: snap top fifth, route top fifth, both, route-only, snap-only, on
+              spike / start1 / start4 / next4 with n.
+  FALSIFIER   fixed in advance: if the ROUTE coefficient net of SNAP is under +0.05 points of NEXT4 per
+              percentage point of participation AND the route-only cell is under +3 points of start4 over the
+              snap-only cell, routes add nothing worth buying.
+
+==== PARTICIPATION COVERAGE ====
+  2023: 46168 plays, 285 games, weeks 1-18 plus playoffs; REG dropbacks 20770, 100.0% carry an offense_players list; pass attempts 19807, 100.0% carry one; posteam == possession_team on 100.0%
+  2024: 45919 plays, 285 games, weeks 1-18 plus playoffs; REG dropbacks 20215, 100.0% carry an offense_players list; pass attempts 19224, 100.0% carry one; posteam == possession_team on 100.0%
+  2025: 45184 plays, 285 games, weeks 1-18 plus playoffs; REG dropbacks 19830, 100.0% carry an offense_players list; pass attempts 18822, 100.0% carry one; posteam == possession_team on 100.0%
+  seasons in the test: [2023, 2024, 2025]; file dates (GitHub Last-Modified): 2023 and 2024 4 Sep 2025, 2025 10 Feb 2026
+  team dropbacks per team-game: mean 37.3
+
+join: 100.0% of 9623 WR/TE target-weeks carry a participation row, 99.9% a snap-share row
+targets > routes on 0 of 9621 joined target-weeks (a participation gap, dropped from TPRR)
+
+POPULATION n=4596  WR 2921  TE 1675  by season 2023 1537  2024 1550  2025 1509
+base rates: spike 3.8%  startable w+1 19.5%  startable next four 16.7% (n=4329)  next-four mean 5.18
+predictors in the pool: snap 57.0% (sd 23.8), route part 59.5% (sd 26.6), targets 3.73, TPRR 18.2%
+  WR: snap 57.8%  route part 62.0%  corr(snap, route) 0.960  route part minus snap: mean +4.1, sd 7.5
+  TE: snap 55.6%  route part 55.2%  corr(snap, route) 0.924  route part minus snap: mean -0.4, sd 10.1
+  ALL: corr(snap, route) 0.945; corr(route, targets) 0.593; corr(snap, targets) 0.554
+
+==== TEST (a): Spearman rho with NEXT4 (2+ games ahead), whole WR/TE pool and by position ====
+                                 ALL            WR            TE
+snap share               0.487 n=4329   0.474 n=2765   0.506 n=1564
+snap share, 2-game       0.510 n=4329   0.501 n=2765   0.525 n=1564
+route part               0.531 n=4329   0.496 n=2765   0.589 n=1564
+route part, 2-game       0.552 n=4329   0.520 n=2765   0.607 n=1564
+targets                  0.449 n=4329   0.428 n=2765   0.481 n=1564
+targets, 2-game          0.538 n=4329   0.515 n=2765   0.574 n=1564
+target share             0.475 n=4329   0.451 n=2765   0.511 n=1564
+TPRR                     0.051 n=4329   0.037 n=2765   0.073 n=1564
+TPRR, 2-game             0.126 n=4329   0.096 n=2765   0.173 n=1564
+WOPR                     0.464 n=4329   0.441 n=2765   0.509 n=1564
+act2                     0.439 n=4329   0.423 n=2765   0.460 n=1564
+by season, rho with NEXT4:
+  2023: snap 0.484  route 0.527  route2 0.536  targets 0.438  tprr 0.010  n=1451
+  2024: snap 0.496  route 0.547  route2 0.566  targets 0.484  tprr 0.103  n=1467
+  2025: snap 0.475  route 0.512  route2 0.548  targets 0.419  tprr 0.035  n=1411
+partial: rho of NEXT4 with route part AFTER residualising both on snap share (Spearman of OLS residuals):
+  ALL n= 4329  route|snap +0.238   route2|snap +0.273
+  WR  n= 2765  route|snap +0.153   route2|snap +0.209
+  TE  n= 1564  route|snap +0.367   route2|snap +0.374
+
+==== TEST (b): OLS of NEXT4 and of start4 on snap share and route participation together (percentage points, HC1 se) ====
+-- ALL
+  NEXT4 ~ snap                                 n= 4329  snap +0.0762 (se 0.0023)
+  NEXT4 ~ route                                n= 4329  route +0.0744 (se 0.0019)
+  NEXT4 ~ snap + route                         n= 4329  snap -0.0195 (se 0.0063)  route +0.0909 (se 0.0054)
+  NEXT4 ~ snap + route2                        n= 4329  snap +0.0013 (se 0.0047)  route2 +0.0790 (se 0.0043)
+  NEXT4 ~ snap + route + targets               n= 4329  snap -0.0174 (se 0.0061)  route +0.0714 (se 0.0056)  tgt +0.3131 (se 0.0284)
+  NEXT4 ~ snap + route + tprr                  n= 4329  snap -0.0124 (se 0.0063)  route +0.0910 (se 0.0053)  tprr +0.0517 (se 0.0050)
+  NEXT4 ~ snap + route + targets + tprr        n= 4329  snap -0.0154 (se 0.0062)  route +0.0752 (se 0.0058)  tgt +0.2524 (se 0.0366)  tprr +0.0179 (se 0.0055)
+  start4 (x100) ~ snap + route                 n= 4329  snap -0.0498 (se 0.0656)  route +0.4830 (se 0.0566)
+  start4 (x100) ~ snap + route + targets       n= 4329  snap -0.0343 (se 0.0648)  route +0.3347 (se 0.0589)  tgt +2.3731 (se 0.3067)
+  NEXT4 ~ snap + route + TE dummy              n= 4329  snap -0.0192 (se 0.0066)  route +0.0907 (se 0.0057)  TE -0.0197 (se 0.1085)
+  NEXT4 ~ snap + route + targets + TE dummy    n= 4329  snap -0.0179 (se 0.0064)  route +0.0718 (se 0.0059)  tgt +0.3135 (se 0.0284)  TE +0.0364 (se 0.1072)
+-- WR
+  NEXT4 ~ snap                                 n= 2765  snap +0.0748 (se 0.0028)
+  NEXT4 ~ route                                n= 2765  route +0.0721 (se 0.0025)
+  NEXT4 ~ snap + route                         n= 2765  snap +0.0041 (se 0.0094)  route +0.0684 (se 0.0085)
+  NEXT4 ~ snap + route2                        n= 2765  snap +0.0108 (se 0.0062)  route2 +0.0687 (se 0.0058)
+  NEXT4 ~ snap + route + targets               n= 2765  snap +0.0006 (se 0.0091)  route +0.0516 (se 0.0084)  tgt +0.3532 (se 0.0349)
+  NEXT4 ~ snap + route + tprr                  n= 2765  snap +0.0066 (se 0.0092)  route +0.0739 (se 0.0083)  tprr +0.0532 (se 0.0063)
+  NEXT4 ~ snap + route + targets + tprr        n= 2765  snap +0.0016 (se 0.0091)  route +0.0547 (se 0.0087)  tgt +0.3138 (se 0.0443)  tprr +0.0118 (se 0.0064)
+  start4 (x100) ~ snap + route                 n= 2765  snap +0.0231 (se 0.0912)  route +0.3761 (se 0.0820)
+  start4 (x100) ~ snap + route + targets       n= 2765  snap -0.0057 (se 0.0886)  route +0.2383 (se 0.0807)  tgt +2.8951 (se 0.3563)
+-- TE
+  NEXT4 ~ snap                                 n= 1564  snap +0.0785 (se 0.0038)
+  NEXT4 ~ route                                n= 1564  route +0.0784 (se 0.0030)
+  NEXT4 ~ snap + route                         n= 1564  snap -0.0445 (se 0.0093)  route +0.1132 (se 0.0075)
+  NEXT4 ~ snap + route2                        n= 1564  snap -0.0123 (se 0.0075)  route2 +0.0928 (se 0.0064)
+  NEXT4 ~ snap + route + targets               n= 1564  snap -0.0401 (se 0.0095)  route +0.0983 (se 0.0086)  tgt +0.2037 (se 0.0474)
+  NEXT4 ~ snap + route + tprr                  n= 1564  snap -0.0374 (se 0.0095)  route +0.1110 (se 0.0075)  tprr +0.0465 (se 0.0079)
+  NEXT4 ~ snap + route + targets + tprr        n= 1564  snap -0.0374 (se 0.0095)  route +0.1053 (se 0.0090)  tgt +0.0849 (se 0.0623)  tprr +0.0345 (se 0.0099)
+  start4 (x100) ~ snap + route                 n= 1564  snap -0.2221 (se 0.1103)  route +0.7345 (se 0.0896)
+  start4 (x100) ~ snap + route + targets       n= 1564  snap -0.1946 (se 0.1121)  route +0.6407 (se 0.1020)  tgt +1.2750 (se 0.5949)
+
+==== TEST (c): top-fifth cells (fifths cut inside the pool named on the row) ====
+-- ALL: snap top fifth = 80.0%+, route part top fifth = 85.7%+
+  the pool                                       n= 4596  spike   3.8%  start w+1  19.5%  start next4  16.7% (n=4329)  next4  5.18
+  snap top fifth                                 n=  965  spike   9.2%  start w+1  34.6%  start next4  34.7% (n=921)  next4  7.73
+  route top fifth                                n=  962  spike   9.6%  start w+1  35.9%  start next4  36.1% (n=926)  next4  7.86
+  both top fifth                                 n=  772  spike   9.8%  start w+1  36.1%  start next4  36.5% (n=742)  next4  7.96
+  route-only (route top, snap not)               n=  190  spike   8.4%  start w+1  34.7%  start next4  34.2% (n=184)  next4  7.47
+  snap-only (snap top, route not)                n=  193  spike   6.7%  start w+1  28.5%  start next4  27.4% (n=179)  next4  6.79
+  neither                                        n= 3441  spike   2.0%  start w+1  14.5%  start next4  10.5% (n=3224)  next4  4.34
+  route-only minus snap-only, start next4: +6.9 points (se 4.8); next4 +0.68
+  two-game route part top fifth = 83.9%+; TPRR top fifth = 25.0%+
+  route2 top fifth                               n=  920  spike  10.0%  start w+1  36.1%  start next4  37.2% (n=890)  next4  8.06
+  route2-only (route2 top, snap not)             n=  228  spike   7.5%  start w+1  32.9%  start next4  33.9% (n=218)  next4  7.57
+  TPRR top fifth                                 n=  972  spike   3.2%  start w+1  18.1%  start next4  16.0% (n=908)  next4  4.90
+  TPRR top fifth AND route top fifth             n=  138  spike   8.0%  start w+1  41.3%  start next4  44.7% (n=132)  next4  8.83
+  TPRR top fifth, route NOT top fifth            n=  834  spike   2.4%  start w+1  14.3%  start next4  11.1% (n=776)  next4  4.25
+  targets top fifth                              n= 1005  spike   8.1%  start w+1  32.6%  start next4  33.5% (n=962)  next4  7.72
+  targets top fifth AND route top fifth          n=  482  spike  11.2%  start w+1  40.5%  start next4  43.8% (n=466)  next4  8.80
+  targets top fifth, route NOT top fifth         n=  523  spike   5.2%  start w+1  25.4%  start next4  23.8% (n=496)  next4  6.73
+  route top fifth, targets NOT top fifth         n=  480  spike   7.9%  start w+1  31.2%  start next4  28.3% (n=460)  next4  6.93
+-- WR: snap top fifth = 82.0%+, route part top fifth = 87.8%+
+  the pool                                       n= 2921  spike   4.4%  start w+1  19.3%  start next4  15.5% (n=2765)  next4  5.40
+  snap top fifth                                 n=  599  spike  10.4%  start w+1  33.6%  start next4  32.4% (n=571)  next4  7.90
+  route top fifth                                n=  587  spike  10.4%  start w+1  35.1%  start next4  32.9% (n=563)  next4  7.92
+  both top fifth                                 n=  476  spike  10.9%  start w+1  35.3%  start next4  34.4% (n=454)  next4  8.06
+  route-only (route top, snap not)               n=  111  spike   8.1%  start w+1  34.2%  start next4  26.6% (n=109)  next4  7.31
+  snap-only (snap top, route not)                n=  123  spike   8.1%  start w+1  26.8%  start next4  24.8% (n=117)  next4  7.28
+  neither                                        n= 2211  spike   2.6%  start w+1  14.7%  start next4  10.3% (n=2085)  next4  4.62
+  route-only minus snap-only, start next4: +1.8 points (se 5.8); next4 +0.03
+  two-game route part top fifth = 85.8%+; TPRR top fifth = 25.0%+
+  route2 top fifth                               n=  585  spike  10.9%  start w+1  35.9%  start next4  35.8% (n=570)  next4  8.27
+  route2-only (route2 top, snap not)             n=  150  spike   7.3%  start w+1  33.3%  start next4  30.6% (n=147)  next4  7.73
+  TPRR top fifth                                 n=  673  spike   3.6%  start w+1  18.3%  start next4  16.1% (n=632)  next4  5.17
+  TPRR top fifth AND route top fifth             n=   89  spike   6.7%  start w+1  38.2%  start next4  45.3% (n=86)  next4  8.60
+  TPRR top fifth, route NOT top fifth            n=  584  spike   3.1%  start w+1  15.2%  start next4  11.5% (n=546)  next4  4.65
+  targets top fifth                              n=  709  spike   9.0%  start w+1  32.4%  start next4  32.3% (n=679)  next4  7.91
+  targets top fifth AND route top fifth          n=  311  spike  12.2%  start w+1  41.5%  start next4  42.7% (n=300)  next4  8.92
+  targets top fifth, route NOT top fifth         n=  398  spike   6.5%  start w+1  25.4%  start next4  24.0% (n=379)  next4  7.12
+  route top fifth, targets NOT top fifth         n=  276  spike   8.3%  start w+1  27.9%  start next4  21.7% (n=263)  next4  6.79
+-- TE: snap top fifth = 76.0%+, route part top fifth = 82.9%+
+  the pool                                       n= 1675  spike   2.7%  start w+1  19.9%  start next4  18.7% (n=1564)  next4  4.80
+  snap top fifth                                 n=  349  spike   8.0%  start w+1  37.8%  start next4  40.2% (n=336)  next4  7.47
+  route top fifth                                n=  336  spike   6.8%  start w+1  37.2%  start next4  41.7% (n=326)  next4  7.61
+  both top fifth                                 n=  277  spike   7.6%  start w+1  39.0%  start next4  42.0% (n=269)  next4  7.66
+  route-only (route top, snap not)               n=   59  spike   3.4%  start w+1  28.8%  start next4  40.4% (n=57)  next4  7.36
+  snap-only (snap top, route not)                n=   72  spike   9.7%  start w+1  33.3%  start next4  32.8% (n=67)  next4  6.72
+  neither                                        n= 1267  spike   1.2%  start w+1  14.5%  start next4  11.5% (n=1171)  next4  3.94
+  route-only minus snap-only, start next4: +7.5 points (se 8.7); next4 +0.64
+  two-game route part top fifth = 79.9%+; TPRR top fifth = 23.3%+
+  route2 top fifth                               n=  335  spike   6.0%  start w+1  37.3%  start next4  40.2% (n=321)  next4  7.61
+  route2-only (route2 top, snap not)             n=   83  spike   3.6%  start w+1  28.9%  start next4  36.4% (n=77)  next4  7.30
+  TPRR top fifth                                 n=  341  spike   2.6%  start w+1  19.6%  start next4  18.1% (n=315)  next4  4.67
+  TPRR top fifth AND route top fifth             n=   50  spike   8.0%  start w+1  48.0%  start next4  50.0% (n=48)  next4  8.49
+  TPRR top fifth, route NOT top fifth            n=  291  spike   1.7%  start w+1  14.8%  start next4  12.4% (n=267)  next4  4.02
+  targets top fifth                              n=  452  spike   6.0%  start w+1  29.9%  start next4  32.3% (n=434)  next4  6.94
+  targets top fifth AND route top fifth          n=  197  spike   8.1%  start w+1  36.5%  start next4  42.9% (n=191)  next4  8.11
+  targets top fifth, route NOT top fifth         n=  255  spike   4.3%  start w+1  24.7%  start next4  23.9% (n=243)  next4  6.03
+  route top fifth, targets NOT top fifth         n=  139  spike   5.0%  start w+1  38.1%  start next4  40.0% (n=135)  next4  6.91
+
+==== inside a snap band, route participation fifths (does route split the men snap share already picked?) ====
+  WR snap <40   n= 783: route above median (25%) start4   5.1% (n=375) next4  3.60  | below: start4   2.5% (n=360) next4  2.31  | diff start4 +2.6  | snap inside the band: above 31.3% vs below 17.9%
+  WR snap 40-60 n= 626: route above median (55%) start4  14.3% (n=294) next4  5.30  | below: start4   6.8% (n=292) next4  4.30  | diff start4 +7.4  | snap inside the band: above 53.1% vs below 47.2%
+  WR snap 60-80 n= 826: route above median (77%) start4  20.9% (n=397) next4  6.95  | below: start4  11.9% (n=395) next4  5.41  | diff start4 +9.0  | snap inside the band: above 72.8% vs below 66.9%
+  WR snap 80+   n= 686: route above median (92%) start4  36.4% (n=330) next4  8.44  | below: start4  27.6% (n=322) next4  7.12  | diff start4 +8.7  | snap inside the band: above 92.1% vs below 84.6%
+  TE snap <40   n= 435: route above median (24%) start4   8.4% (n=203) next4  3.19  | below: start4   1.6% (n=186) next4  2.17  | diff start4 +6.8  | snap inside the band: above 32.6% vs below 23.2%
+  TE snap 40-60 n= 505: route above median (47%) start4  21.1% (n=242) next4  5.46  | below: start4   3.0% (n=232) next4  2.74  | diff start4 +18.1  | snap inside the band: above 51.9% vs below 47.0%
+  TE snap 60-80 n= 456: route above median (73%) start4  31.8% (n=220) next4  6.99  | below: start4  16.0% (n=212) next4  4.74  | diff start4 +15.8  | snap inside the band: above 71.7% vs below 66.0%
+  TE snap 80+   n= 279: route above median (90%) start4  44.9% (n=138) next4  7.91  | below: start4  37.4% (n=131) next4  7.25  | diff start4 +7.5  | snap inside the band: above 91.8% vs below 84.6%
+  the same split on the TILT (route part minus snap share, so snap share cannot leak through the split):
+  WR snap <40   n= 783: tilt above median (+2) start4   4.3% (n=373) next4  3.38  | below: start4   3.3% (n=362) next4  2.53  | diff start4 +1.0  | snap: above 26.0% vs below 23.2%
+  WR snap 40-60 n= 626: tilt above median (+5) start4  15.5% (n=296) next4  5.40  | below: start4   5.5% (n=290) next4  4.20  | diff start4 +10.0  | snap: above 50.8% vs below 49.5%
+  WR snap 60-80 n= 826: tilt above median (+6) start4  19.0% (n=400) next4  6.61  | below: start4  13.8% (n=392) next4  5.75  | diff start4 +5.2  | snap: above 69.8% vs below 69.9%
+  WR snap 80+   n= 686: tilt above median (+3) start4  35.8% (n=335) next4  8.21  | below: start4  28.1% (n=317) next4  7.35  | diff start4 +7.7  | snap: above 86.7% vs below 90.0%
+  TE snap <40   n= 435: tilt above median (-4) start4   8.6% (n=198) next4  3.20  | below: start4   1.6% (n=191) next4  2.15  | diff start4 +7.0  | snap: above 25.8% vs below 30.1%
+  TE snap 40-60 n= 505: tilt above median (-2) start4  20.5% (n=244) next4  5.50  | below: start4   3.5% (n=230) next4  2.70  | diff start4 +17.0  | snap: above 50.2% vs below 48.7%
+  TE snap 60-80 n= 456: tilt above median (+3) start4  31.7% (n=221) next4  6.87  | below: start4  16.1% (n=211) next4  4.87  | diff start4 +15.6  | snap: above 69.6% vs below 68.2%
+  TE snap 80+   n= 279: tilt above median (+1) start4  45.9% (n=135) next4  8.07  | below: start4  36.6% (n=134) next4  7.10  | diff start4 +9.4  | snap: above 86.6% vs below 90.0%
+  the disagreement cells by season (ALL, fifths cut on the whole pool):
+  2023: route-only start4  34.4% (n=64) next4  7.65  |  snap-only start4  27.5% (n=51) next4  6.49
+  2024: route-only start4  42.2% (n=64) next4  8.26  |  snap-only start4  22.1% (n=68) next4  6.62
+  2025: route-only start4  25.0% (n=56) next4  6.37  |  snap-only start4  33.3% (n=60) next4  7.25
+
+==== the three-signal screen (targets 8+, snaps 80%+, target share 20%+) and route part 80%+ as a fourth ====
+  0 of 3 signals                                 n= 3216  spike   1.7%  start w+1  13.4%  start next4   9.6% (n=3016)  next4  4.14
+  1 of 3 signals                                 n=  831  spike   6.9%  start w+1  30.4%  start next4  27.2% (n=790)  next4  6.97
+  2 of 3 signals                                 n=  353  spike  10.8%  start w+1  38.5%  start next4  36.3% (n=336)  next4  8.11
+  3 of 3 signals                                 n=  196  spike  12.2%  start w+1  39.8%  start next4  50.3% (n=187)  next4  9.41
+  2+ of 3 (the operative bar)                    n=  549  spike  11.3%  start w+1  39.0%  start next4  41.3% (n=523)  next4  8.58
+  2+ of 3 AND route part 80%+                    n=  456  spike  12.3%  start w+1  40.1%  start next4  43.2% (n=437)  next4  8.85
+  2+ of 3 and route part under 80%               n=   93  spike   6.5%  start w+1  33.3%  start next4  31.4% (n=86)  next4  7.23
+  route part 80%+ alone, fewer than 2 of 3       n=  924  spike   7.3%  start w+1  31.0%  start next4  27.4% (n=886)  next4  7.04
+  GAIN from the fourth signal on the 2+ bar: spike +1.0 points, start next4 +1.9 points (n 437 vs 523)
+  swap: route part 80%+ in place of snaps 80%+ inside the three-signal count
+  0 of 3 (route in place of snap)                n= 2972  spike   1.3%  start w+1  12.2%  start next4   8.3% (n=2779)  next4  3.91
+  1 of 3 (route in place of snap)                n=  981  spike   6.2%  start w+1  29.0%  start next4  25.9% (n=935)  next4  6.80
+  2 of 3 (route in place of snap)                n=  370  spike  11.1%  start w+1  37.8%  start next4  37.5% (n=355)  next4  8.31
+  3 of 3 (route in place of snap)                n=  273  spike  11.7%  start w+1  40.3%  start next4  44.2% (n=260)  next4  8.93
+  2+ of 3 (route in place of snap)               n=  643  spike  11.4%  start w+1  38.9%  start next4  40.3% (n=615)  next4  8.57
+
+==== VERDICT against the falsifier fixed in advance ====
+  route coefficient net of snap share (ALL, NEXT4 per percentage point): +0.0909 (se 0.0054); bar +0.05
+  route-only cell minus snap-only cell, start next4: +6.9 points (n 184 vs 179); bar +3
+  NOT FALSIFIED: route participation carries information net of snap share on both arms.
+  size in decision units, WR: one sd of the tilt (route part minus snap share) is 7.5 points of participation, worth +0.52 half-PPR a week of NEXT4 net of snap share (pool NEXT4 mean 5.40, bar 9.62)
+  size in decision units, TE: one sd of the tilt (route part minus snap share) is 10.1 points of participation, worth +1.15 half-PPR a week of NEXT4 net of snap share (pool NEXT4 mean 4.80, bar 8.25)
+  as a FOURTH SIGNAL on the wire screen (2+ of 3 bar): spike +1.0, start next4 +1.9 points (n 437 vs 523), the same order doc 437 called display-only for xfp (+2 bar)
+  CAVEAT: route participation here is DROPBACK participation (on the field for a dropback), not charted routes; a man who stays in to block counts as a route. The paid metric strips those out, so this is NOT a measurement of the paid metric. HYPOTHESIS, not tested here: charted routes add more than this approximation does.
+  TPRR net of snap and route (ALL, NEXT4 per percentage point of TPRR): +0.0517 (se 0.0050)
+
+pool pickled beside the script as routes_pool.pkl

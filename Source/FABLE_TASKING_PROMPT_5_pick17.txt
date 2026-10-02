@@ -1,0 +1,134 @@
+===============================================================================
+FABLE TASK #5 — PICK 17 IN DOLLARS. IT IS THE LAST UNPRICED PICK, AND THE
+ENGINE AND THE HARNESS DISAGREE ABOUT IT 40% OF THE TIME.
+Written 2026-09-03. PROVENANCE REFRESHED 2026-09-03 night -- see the box below before you
+start; the inputs moved after this task was drafted. Draft is Mon Sept 7, 8:00 PM ET.
+===============================================================================
+
+Read `00_PROJECT_DIRECTIVE.md` (**v6.9**, the FILE in `Source\` -- not the copy pasted into
+the project settings, which is three versions behind) first -- SS0.2, SS0.3 (dollars), SS1.1 (the ADP
+hard rule), SS2.1 (the keeper-depleted pick table), SS3 (tag every claim), SS4.12,
+SS4.15, SS5, SS7. Obey SS0.1 in your reply.
+
+Your task #4 closed pick 32 and corrected my doc 139 while doing it. This is the
+same harness pointed one turn earlier, and the finding that motivates it is YOURS:
+doc 140 SS2, in an aside about your own state generator --
+
+  "the engine agreed with the state generator at pick 8 in 96/100 ... and at pick
+   17 in 57/100 -- the rollout takes JEREMIYAH LOVE in ~40% of states over
+   Hall/Lamb by 2-4 roll points; the harness takes top VBD. Noted, not this
+   task's question."
+
+Make it the question.
+
+-------------------------------------------------------------------------------
+WHY THIS IS THE LAST ONE THAT MATTERS
+-------------------------------------------------------------------------------
+* **Pick 8 is closed** three ways: doc 70's dollars, doc 139's ten seeds at three
+  sample sizes (St. Brown 10/10, margin 20), your own 96/100. Do not reopen it.
+* **Pick 32 is closed** by doc 140: a five-name tie, everything else $10-24 behind.
+* **Pick 17 has only doc 94**, which ran on a **pre-news board and the 08-23 ADP**.
+  Doc 140 supersedes doc 94 for pick 32 and leaves its pick-17 half standing on
+  inputs that have since changed -- 383 rows re-priced and Jacobs zeroed by news.
+
+  *** THE BOARD'S VINTAGE CHANGED AFTER THIS TASK WAS WRITTEN. READ THIS. ***
+  This paragraph used to say the board was re-frozen to
+  `espn_projections_2026_20260830_0142.csv`. That is no longer true, and the truth
+  has TWO HALVES that do not match -- state both in anything you write (SS1.1, SS3):
+
+    ADP / eff_pick : re-frozen 2026-09-03 to `espn_projections_2026_20260903_0902.csv`.
+                     `Scripts\live_draft\adp_vintage.txt` holds this string and
+                     `board_audit.py` checks the board against it. Read it; do not
+                     take my word for it here.
+    PROJECTIONS    : STILL the 08-23 spine, and they CANNOT be rebuilt -- docs 143
+                     and 144. `board_audit.py` requires `proj_leaguepts` to equal
+                     `code_universe_v5.csv` at 1e-6, so re-deriving them drops the
+                     audit 39/39 -> 35/39. This was attempted and reverted.
+                     `Scripts\mkoverride.py` names the players it costs: on 09-03,
+                     six, all board rank 90+. None of them is live at pick 17.
+
+  So: the MARKET under you is current and the POINTS are fifteen days old. That is
+  the honest state of the input, it is not fixable before Sept 7, and a pick-17
+  answer that does not say so is not portable.
+* **A 2-4 roll-point disagreement is LARGER than pick 32's median margin (3.65).**
+* **An independent measurement agrees the turn is unstable.** 2026-09-03 night, twelve
+  rooms drawn under SS4.12's own noise (`Source\decision_space.csv`): at pick 17,
+  **twelve distinct players** land within 6 points of the engine's own first choice,
+  **two** appear in at least a quarter of the rooms and **none** in half. Pick 8 by
+  contrast yields seven live and one stable. Different machinery, same conclusion --
+  and it is why "it is a five-name tie" would be a USEFUL answer here, not a failure.
+  Do not manufacture a winner. If it ties, say it ties and say how wide.
+  If the rollout is right, doc 94's pick-17 slate is wrong in 40% of rooms. If the
+  harness is right, the shipped engine reaches for Love on draft night and should
+  not. Either way one of the two tools Matt runs is wrong at his second pick.
+* SS2.1: **17->32 is the longest gap in his draft.** What he takes at 17 sets the
+  slate at 32, which is exactly the tie you just measured.
+
+-------------------------------------------------------------------------------
+WHAT TO COMPUTE
+-------------------------------------------------------------------------------
+1. Reuse the doc 140 machinery unchanged: ~100 realistic pick-17 states from the
+   SS5 opponent model, candidates from `code_live_engine.Engine` built as
+   production builds it (`recommend(17, top=12, rollout_inner=60)`), paired dollar
+   sim on common random numbers, N=2000, SS2 payout, ctrl17 = best legal VBD at 17.
+   State the pick-8 arm you use and keep it identical across every arm.
+2. Report, as doc 140 did: the engine's #1 / top-3 / on-board frequencies; the
+   policy table; the CONDITIONAL head-to-heads; and the head-to-head grid inside
+   whatever core emerges, with n per pair.
+3. **Adjudicate Love vs Hall vs Lamb explicitly.** The rollout prefers Love by 2-4
+   roll points in ~40% of states; the harness prefers top VBD. Which is right in
+   dollars? A 2-4 point roll edge is small -- if it does not survive pricing, say
+   so, because the shipped engine acts on it every time.
+4. **Re-run the availability sensitivity** (SS4.22e, from `Source\games_2025.csv`)
+   exactly as you did at 32: separate column, not merged. Several pick-17-range
+   WRs carry the badge -- London 12 g, G. Wilson 7 g, Nabers 4 g.
+   NOTE: that file had a duplicated `espn_id` (4568024) which is now removed --
+   479 rows, id unique, and `make_board.py` asserts on it. Use the current file.
+5. **Say whether 17 is a tie, a decision, or a tie with contaminated edges** --
+   doc 140's third answer, which was the useful one at 32 and which nobody
+   anticipated.
+
+-------------------------------------------------------------------------------
+FIX YOUR FALSIFIER BEFORE COMPUTING (SS0.2)
+-------------------------------------------------------------------------------
+Same shape as #4, and say so if you change it:
+  * a candidate beats every other core name by > $15 with a CI clear of zero -> 17
+    has an answer, name him;
+  * core names within +-$10, nothing CI-clear -> CONFIRMED TIE;
+  * **Love vs top-VBD resolves either way with a clear CI -> that is the headline**,
+    because it is a disagreement between two shipped tools, not a preference.
+
+-------------------------------------------------------------------------------
+GUARDS -- each has already cost this project
+-------------------------------------------------------------------------------
+* BASELINE, POPULATION, SAMPLE SIZE on every number (SS3).
+* SS1.1 is a HARD REFUSAL: never `espn_adp` from a historical pull.
+* Never quote a simulated ABSOLUTE win probability (SS5) -- paired only.
+* Cluster first on any team-level variable (ERROR_PATTERNS A5; three kills).
+* Never condition on an outcome-correlated filter (SS4.23a).
+* Do not claim corroboration from a source you have just discredited (doc 93).
+* **Carry forward doc 142's warning about your own QB survival model:** SS4.12 fits
+  a TE shift and Snyder-on-Allen and NOTHING for QBs generally, while SS5 has four
+  managers taking a QB in rounds 2.5-3.2. At 17 that cuts the other way from 32 --
+  Lamar/Burrow are likelier to be gone, not likelier to be there. Bound it as you
+  bounded it at 32 (the QB2->QB6 plateau is 11.8 points, SS4.15).
+
+-------------------------------------------------------------------------------
+DO NOT DO THESE
+-------------------------------------------------------------------------------
+* Do NOT modify `_lineup()` to add an absence model (SS4.18c). Post-draft.
+* Do NOT touch `Scripts\live_draft\` -- hash-pinned, it is the draft-night kit.
+  Write your scripts to `Source\`.
+* Do NOT reopen pick 8, SS4.21, SS4.23 or SS4.24. All closed.
+* **Reserve your doc number by listing `Source\` first.** 142 is taken; 143 should
+  be free. Two agents both wrote a doc 138 on Sept 2 and five draft-path scripts
+  had to be edited to fix it (SS0.2, v6.6).
+
+-------------------------------------------------------------------------------
+DELIVERABLE
+-------------------------------------------------------------------------------
+`Source\143_pick17_in_dollars.md`, SS0.1 format, SS7 closing block (top 3
+assumptions, what would invalidate each, most valuable missing input). Scripts and
+CSVs as `Source\k5_artifacts.zip`.
+
+If it is a tie, say so in the first line -- at 32 that was the more useful answer.

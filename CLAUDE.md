@@ -1,10 +1,12 @@
 # CLAUDE.md
 
+**Final reply to Matt: 5 lines max. Line 1 is what he must do, or 'Nothing for you to do.' Details go in files, not chat.**
+
 Fantasy football decision kit for Matt Mays (team JUG, ESPN league 21985, slot 8 of 12). Python scripts pull ESPN and nflverse data and build the HTML pages he reads each week (`WEEK_SHEET.html` above all).
 
 ## 0. Where the files are
 
-**This git repo holds no project files yet.** The tree is attached to the GitHub release tagged `upload` as three zips (`fantasy_upload_part{1,2,3}_of_3.zip`, about 51 MB). They are a snapshot of `G:\My Drive\_Fantasy\2026` taken on 2 Oct 2026. Unzip all three into one folder to get:
+The repo root is a snapshot of `G:\My Drive\_Fantasy\2026` taken on 2 Oct 2026, unzipped from the three zips on the GitHub release tagged `upload`. It contains:
 
 ```
 01_START_HERE/   stale August notes (RESTART_PROMPT.md, ERROR_PATTERNS.md); superseded

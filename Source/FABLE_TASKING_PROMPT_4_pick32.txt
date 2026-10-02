@@ -1,0 +1,150 @@
+===============================================================================
+FABLE TASK #4 — PRICE PICK 32 IN DOLLARS. THE ENGINE HAS NO OPINION THERE.
+Written 2026-09-03. Draft is Mon Sept 7, 8:00 PM ET.
+This is now the last unmeasured quantity in the directive that changes a pick.
+===============================================================================
+
+Read `00_PROJECT_DIRECTIVE.md` (v6.6) first -- SS0.2 (test before you claim),
+SS0.3 (the objective is DOLLARS against the SS2 payout table), SS1.1 (the ADP hard
+rule), SS3 (tag every claim), SS2.1 (the keeper-depleted pick table), SS4.12 (the
+opponent noise model), SS5 (the opponent read). Obey SS0.1 in your reply.
+
+Your task #3 answered the previous "last unmeasured quantity" and changed the
+draft-night rule at 104/113. This one is the same shape at a bigger pick.
+
+-------------------------------------------------------------------------------
+THE QUESTION, IN ONE SENTENCE
+-------------------------------------------------------------------------------
+**At pick 32, the shipped engine cannot tell its top candidates apart, and more
+compute does not help.** Measured in doc 139 SS5 -- ten runs per pick under ten
+different seeds, at three Monte-Carlo sample sizes:
+
+    pick   8   inner= 24   top1 agrees 10/10 (St. Brown)  margin 19.96 +-0.55
+    pick   8   inner=150   top1 agrees 10/10             margin 20.20 +-0.13
+    pick  32   inner= 24   top1 agrees  7/10  THREE winners  margin 0.31 +-0.35
+    pick  32   inner= 60   top1 agrees  9/10             margin 0.15 +-0.07
+    pick  32   inner=150   top1 agrees 10/10             margin 0.15 +-0.07
+    pick  56   inner= 24   top1 agrees 10/10 (Burden)    margin  2.77 +-0.18
+
+**The margin CONVERGES to 0.15 points.** Raising the sample count does not find a
+winner; it makes the engine consistent about there not being one. Pick 8 is decided
+(three independent routes now agree). Pick 32 is not decided by anything.
+
+That matters more than the number suggests. SS2.1 calls 17->32 **the longest gap in
+Matt's draft**, and 32->41 **the steepest attrition** (3 keepers gone ahead at 32,
+10 by 41). It is the pick with the least margin and the most consequence.
+
+-------------------------------------------------------------------------------
+WHY THE ENGINE'S ANSWER IS NOT ENOUGH
+-------------------------------------------------------------------------------
+Three reasons, and the third is the important one.
+
+1. **Wrong objective.** The rollout maximises weeks-1-14 starting-lineup POINTS.
+   SS0.3 says the objective is DOLLARS against a convex payout table ($525/$225/
+   $150/$85/$25/$25), and SS0.3 states outright that the two "can disagree." Doc 70
+   settled pick 8 in dollars for exactly this reason. Pick 32 has never been.
+
+2. **A 0.15-point margin is inside every error bar the project owns.** SS4.1b puts
+   honest RB/WR replacement uncertainty at ~+-1.5 VBD per player. SS4.23(a)'s
+   positional-calibration HYPOTHESIS, if real, is a ~6% RB-vs-WR tilt. Either
+   swamps 0.15.
+
+3. **THE ENGINE IS BLIND IN A DIRECTION WE NOW KNOW THE SIZE OF (SS4.18c, doc 139).**
+   `_lineup()` models exactly one kind of absence -- the bye week. Measured: a
+   second QB on a different bye adds +2.49 to lineup value; a second QB on QB1's
+   bye adds **+0.00**, because he never starts. Against SS4.17b's measured 2.98
+   missed QB weeks and 5.54 missed top-2-RB slot-weeks a season, **the rollout
+   prices roughly one week of absence out of three.** At pick 32 that is not a QB
+   question, but it means the engine's ranking of RB-vs-WR-vs-TE there does not
+   include availability at all -- and SS4.22(c) found prior-season availability IS
+   predictive (players at <=12 games beat their projection by -16.2 points less,
+   p=0.025; entirely a WR effect at -25.4, RB null).
+
+-------------------------------------------------------------------------------
+WHAT TO COMPUTE
+-------------------------------------------------------------------------------
+1. Take the engine's top ~6 candidates at pick 32 from the SHIPPED board
+   (`board_v8_fixed.csv` through `code_live_engine.Engine`, not a CSV read --
+   SS0.2 v5.5: build the object production builds). State them and their VBD.
+
+2. **Price each one in DOLLARS**, paired, the way doc 70 priced pick 8: same
+   opponent realisations for every arm, SS4.12's affine noise
+   `sd = 0.111 x ADP + 5.40` on `eff_pick` (SS2.1e -- do NOT convert back to raw
+   ADP), SS5's cheat-sheet opponents, simulated to a finishing position and mapped
+   through the SS2 payout table. Report the paired difference and its CI, and
+   P(1st) / P(top 6) / p10 as doc 70 did.
+
+3. **Then re-run it with an availability adjustment** and report BOTH. Use
+   SS4.22(e)'s dose-dependent shape as the haircut -- 1-6 g -40.8 / 7-9 g -27.1 /
+   10-12 g -16.9 / 13+ g -12.6 -- applied from the committed `Source\games_2025.csv`
+   that the `12g` badge already reads. **SURFACE THE DIFFERENCE, DO NOT MERGE IT
+   INTO ONE NUMBER.** SS4.22 shipped availability as a badge and NOT as a VBD
+   coefficient on purpose ("one measurement on 45 receivers does not become a VBD
+   coefficient"). The deliverable is "does availability break the tie", not a
+   re-scored board.
+
+4. **Say plainly whether it is still a tie.** If the dollar spread across the top
+   candidates is inside its own CI, say so. A confirmed tie is a real answer and it
+   is worth as much as a winner -- it tells Matt to spend his 60 seconds on the
+   analyst read and the UNSETTLED flag instead of on the board.
+
+-------------------------------------------------------------------------------
+FIX YOUR FALSIFIER BEFORE YOU COMPUTE ANYTHING (SS0.2)
+-------------------------------------------------------------------------------
+Write it down first, as task #3 did. Suggested, but choose your own and justify it:
+  * A candidate leads by **> $15** with a CI clear of zero  -> pick 32 has an answer;
+    name him and the directive gets a SS4 entry.
+  * The whole top group sits inside **+-$10** of each other  -> CONFIRMED TIE; the
+    directive records that the engine's coin-flip tag at 32 is correct and final.
+  * The availability-adjusted and unadjusted orderings DISAGREE -> that is itself
+    the finding, and it is a bigger one than either ordering.
+
+-------------------------------------------------------------------------------
+GUARDS -- each of these has already cost this project
+-------------------------------------------------------------------------------
+* **State BASELINE, POPULATION and SAMPLE SIZE for every number** (SS3).
+* **SS1.1 IS A HARD REFUSAL.** Never touch `espn_adp` from a historical pull. The
+  only sanctioned market is `code_adp_guard.load_preseason_adp(season)`.
+* **Never quote a simulated ABSOLUTE win probability** (SS5). Matt's board and the
+  scoring share one projection, so absolute numbers are artifacts. Relative and
+  paired comparisons only.
+* **Do not claim corroboration from a source you have just discredited** (doc 93's
+  finding about doc 92). Task #3 handled this correctly; keep it up.
+* **Cluster first on any team-level variable** (ERROR_PATTERNS A5). It has fired
+  three times: PROE, vacated target share (SS4.21), and OL disruption (SS4.24c).
+  If anything you compute is a team constant, honest n is 32, not the player count.
+* **Never condition on an outcome-correlated filter** (SS4.23a). Filtering on games
+  played selects on success -- it produced a fake 20.7% rushing under-projection.
+* **Do not re-derive settled things.** Pick 8 is CLOSED (SS4.2, three routes).
+  SS4.21 (opportunity environment), SS4.23 (board calibration), SS4.24 (offensive
+  line) are all closed NULLs. SS4.11 (byes) is a last-resort tiebreaker at <=1.2
+  points and must not move a pick with real margin behind it.
+* **A severity or magnitude you have not measured is not a number** (SS0.2). If you
+  cannot measure it, label it HYPOTHESIS.
+
+-------------------------------------------------------------------------------
+DO NOT DO THESE
+-------------------------------------------------------------------------------
+* **Do not modify `_lineup()` to add an absence model.** It is tempting -- SS4.18c
+  names the blind spot -- but SS4.10's rule ranking, SS4.2's pick-8 dollars and
+  SS4.12's calibration were ALL fitted against the current objective. Changing what
+  the objective measures four days before the draft invalidates the measurements
+  that make the tool worth running. Log it for post-draft. Your dollar sim is
+  allowed its own lineup model; the SHIPPED engine must not change.
+* **Do not touch anything in `Scripts\live_draft\`.** That tree is hash-pinned by
+  `check_kit.py` and is the draft-night kit. Write your own scripts to `Source\`.
+* **Do not renumber or reuse a doc number.** The next free one is **140** -- list
+  `Source\` and confirm before you write. Two agents both wrote a doc 138 on the
+  night of Sept 2 and five draft-path scripts had to be edited to fix it.
+
+-------------------------------------------------------------------------------
+DELIVERABLE
+-------------------------------------------------------------------------------
+`Source\140_pick32_in_dollars.md`, obeying SS0.1 (numbered do-this list first, then
+2-5 short paragraphs) and SS7's closing block: top 3 assumptions, what would
+invalidate each, and which missing input would most improve the analysis.
+Bundle your scripts and intermediate CSVs as `Source\k4_artifacts.zip`.
+
+If the answer is "it is a tie," say that in the first line. It is the more useful
+answer of the two, because it is the one that tells Matt to stop looking at the
+board at pick 32.

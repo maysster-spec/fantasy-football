@@ -1,0 +1,823 @@
+<title>The Takes Corpus</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap">
+<style>
+:root{
+  --ground:#F5F7F3; --surface:#FFFFFF; --sunk:#EDF0EA;
+  --ink:#161A17; --ink2:#39433C; --muted:#5C665E; --rule:#D8DED6;
+  --accent:#14614C; --accent-ink:#0C3F32; --accent-soft:#E2EEE8;
+  --warn:#8A4315; --warn-soft:#F7EADF; --warn-rule:#E5C9AF;
+  --display:"Newsreader",Georgia,"Times New Roman",serif;
+  --body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ground:#111412; --surface:#191D1A; --sunk:#141815;
+    --ink:#E9EDE8; --ink2:#C2CAC4; --muted:#95A099; --rule:#2B312D;
+    --accent:#6CC9A6; --accent-ink:#A9E2CC; --accent-soft:#1A2B25;
+    --warn:#DD9A63; --warn-soft:#2A1F17; --warn-rule:#4A3626;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#111412; --surface:#191D1A; --sunk:#141815;
+  --ink:#E9EDE8; --ink2:#C2CAC4; --muted:#95A099; --rule:#2B312D;
+  --accent:#6CC9A6; --accent-ink:#A9E2CC; --accent-soft:#1A2B25;
+  --warn:#DD9A63; --warn-soft:#2A1F17; --warn-rule:#4A3626;
+}
+*{box-sizing:border-box}
+body{background:var(--ground);color:var(--ink);font-family:var(--body);
+  font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:820px;margin:0 auto;padding-inline:20px;padding-block:44px 80px;
+  display:flex;flex-direction:column;gap:44px}
+h1,h2,h3{text-wrap:balance;margin:0}
+.eyebrow{font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--accent)}
+h1{font-family:var(--display);font-size:clamp(2.1rem,6vw,3rem);font-weight:600;
+  line-height:1.05;letter-spacing:-.015em;margin-top:10px}
+.stand{font-size:1.05rem;color:var(--ink2);max-width:60ch;margin-top:14px}
+h2{font-family:var(--display);font-size:1.5rem;font-weight:600;letter-spacing:-.01em}
+.sec{display:flex;flex-direction:column;gap:18px}
+.sechead{display:flex;flex-direction:column;gap:6px;
+  border-bottom:1px solid var(--rule);padding-bottom:12px}
+.sechead p{margin:0;color:var(--muted);font-size:.92rem;max-width:62ch}
+p{margin:0}
+a{color:var(--accent);text-underline-offset:3px}
+
+/* corrections block */
+.fix{background:var(--warn-soft);border:1px solid var(--warn-rule);border-radius:3px;
+  padding:20px 22px;display:flex;flex-direction:column;gap:12px}
+.fix h2{font-size:1.15rem;color:var(--warn)}
+.fix ul{margin:0;padding-left:0;list-style:none;display:flex;flex-direction:column;gap:10px}
+.fix li{font-size:.93rem;color:var(--ink2);padding-left:20px;position:relative}
+.fix li::before{content:"";position:absolute;left:0;top:.6em;width:9px;height:1px;
+  background:var(--warn)}
+.fix b{color:var(--ink);font-weight:600}
+
+/* steps */
+ol.steps{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px}
+ol.steps>li{background:var(--surface);border:1px solid var(--rule);padding:20px 22px;
+  display:grid;grid-template-columns:38px 1fr;gap:16px;align-items:start}
+ol.steps>li+li{border-top:none}
+ol.steps>li:first-child{border-radius:3px 3px 0 0}
+ol.steps>li:last-child{border-radius:0 0 3px 3px}
+.num{font-family:var(--mono);font-size:1.5rem;font-weight:700;color:var(--accent);
+  line-height:1;padding-top:2px;font-variant-numeric:tabular-nums}
+.stepbody{display:flex;flex-direction:column;gap:8px;min-width:0}
+.stepbody h3{font-size:1.02rem;font-weight:600}
+.stepbody p{font-size:.93rem;color:var(--ink2)}
+.stepbody .sub{font-size:.87rem;color:var(--muted)}
+kbd{font-family:var(--mono);font-size:.82em;background:var(--sunk);border:1px solid var(--rule);
+  border-radius:2px;padding:1px 6px;color:var(--ink);white-space:nowrap}
+
+/* copy control */
+.copy{font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.08em;
+  text-transform:uppercase;background:var(--accent);color:#fff;border:none;border-radius:2px;
+  padding:9px 14px;cursor:pointer;white-space:nowrap;transition:background .15s,transform .1s}
+.copy:hover{background:var(--accent-ink)}
+.copy:active{transform:translateY(1px)}
+.copy:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+.copy.done{background:var(--ink)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .copy{color:#0C1512}}
+:root[data-theme="dark"] .copy{color:#0C1512}
+
+/* shows */
+.shows{display:flex;flex-direction:column;gap:2px}
+.show{background:var(--surface);border:1px solid var(--rule)}
+.show+.show{border-top:none}
+.show:first-child{border-radius:3px 3px 0 0}
+.show:last-child{border-radius:0 0 3px 3px}
+.showtop{display:grid;grid-template-columns:22px 1fr auto;gap:14px;align-items:center;
+  padding:14px 18px}
+.showtop input[type=checkbox]{width:17px;height:17px;accent-color:var(--accent);cursor:pointer;
+  margin:0}
+.showname{min-width:0;display:flex;flex-direction:column;gap:3px}
+.showname b{font-weight:600;font-size:.97rem;line-height:1.3}
+.showname span{font-family:var(--mono);font-size:11px;color:var(--muted);
+  overflow-wrap:anywhere}
+.show.on .showname b{color:var(--muted);text-decoration:line-through}
+.showacts{display:flex;gap:8px;align-items:center}
+.peek{font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.06em;
+  text-transform:uppercase;background:none;border:1px solid var(--rule);border-radius:2px;
+  padding:8px 10px;color:var(--muted);cursor:pointer}
+.peek:hover{color:var(--ink);border-color:var(--muted)}
+.peek:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+pre{margin:0;font-family:var(--mono);font-size:12px;line-height:1.55;color:var(--ink2);
+  background:var(--sunk);border-top:1px solid var(--rule);padding:18px;
+  overflow-x:auto;white-space:pre;tab-size:2}
+
+/* standalone prompt block */
+.block{background:var(--surface);border:1px solid var(--rule);border-radius:3px;
+  display:flex;flex-direction:column}
+.blockhead{display:flex;justify-content:space-between;align-items:center;gap:14px;
+  padding:14px 18px;flex-wrap:wrap}
+.blockhead b{font-weight:600;font-size:.97rem}
+.blockhead .c{font-family:var(--mono);font-size:11px;color:var(--muted)}
+
+.foot{border-top:1px solid var(--rule);padding-top:20px;font-size:.87rem;color:var(--muted);
+  display:flex;flex-direction:column;gap:8px}
+.foot b{color:var(--ink2);font-weight:600}
+
+@media (max-width:520px){
+  ol.steps>li{grid-template-columns:1fr;gap:8px}
+  .num{font-size:1.15rem}
+  .showtop{grid-template-columns:22px 1fr;row-gap:12px}
+  .showacts{grid-column:1 / -1;justify-content:flex-start}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+
+<div class="wrap">
+
+<header>
+  <div class="eyebrow">E-Discovery Keeper League</div>
+  <h1>The Takes Corpus</h1>
+  <p class="stand">What is left, and only what is left. The link hunting is finished for nine
+  shows. Four seasons still need a notebook, one new show needs a research run, and every
+  block on this page has a copy button.</p>
+</header>
+
+<div class="fix">
+  <h2>Where you are, 16 September</h2>
+  <ul>
+    <li><b>2021 is partly done and the nine files are now one.</b> You saved nine exports;
+      five of them were byte-identical and the biggest one was missing half the work of the
+      first two. Merged and de-duplicated to <b>418 rows across 19 episodes</b>, in
+      <kbd>2021_MERGED_USE_THIS.csv</kbd>. Nothing was lost. Nothing else in that folder is
+      worth keeping.</li>
+    <li><b>2022, 2023, 2024 and 2025 have no notebook yet.</b> Their links are ready and are
+      below, one flat list per year, no headings, no hash marks. One paste per season.</li>
+    <li><b>One show to add: the Fantasy Life Show.</b> It publishes daily and has about 888
+      episodes, so it needs a tighter research prompt than the other nine. That prompt is
+      step 1.</li>
+    <li><b>The notebook keeps its own count and its count was wrong.</b> Treat what it says
+      it has done as a claim, not a record. The files are the record, and asking it to name
+      what it processed is how you check.</li>
+  </ul>
+</div>
+
+<section class="sec">
+  <div class="sechead">
+    <h2>Step 1 &middot; the one new research run</h2>
+    <p>Gemini proper, with Deep Research on. Not Notebook. One run, and it answers whether the
+    show even existed in 2021 and 2022 before it gives you a single link.</p>
+  </div>
+  
+  <div class="show" id="flshow">
+    <div class="showtop">
+      <input type="checkbox" aria-label="done">
+      <div class="showname"><b>Fantasy Life Show &middot; Deep Research</b><span>youtube.com/@MBFantasyLifeShow · enumerate week by week, NOT a search</span></div>
+      <div class="showacts">
+        <button class="peek" data-for="flshow">show</button>
+        <button class="copy" data-key="flshow">copy</button>
+      </div>
+    </div>
+    <pre id="pre-flshow" hidden>SHOW: Fantasy Life Show (Matthew Berry&#x27;s Fantasy Life)
+
+THE LAST ATTEMPT RETURNED 17 LINKS AND NOTHING BEFORE 2023. Do not repeat it. Here is why it
+failed and what to do instead.
+
+WHY IT FAILED: you searched Apple Podcasts. Apple&#x27;s pages are not scrapeable and carry no usable
+per-episode links for my purpose. This show&#x27;s episodes live on YouTube and on fantasylife.com.
+
+DO NOT USE podcasts.apple.com AT ALL. Do not use Spotify, iHeart, Podchaser, Goodpods, Deezer,
+Podcast Republic, Metacast or Musixmatch either. I cannot use any of them.
+
+WHERE TO LOOK, and only here:
+  https://www.youtube.com/@MBFantasyLifeShow/videos
+  https://www.youtube.com/@MBFantasyLifeShow/search?query=waiver
+  https://www.fantasylife.com
+
+ANSWER THIS FIRST, IN ONE LINE, BEFORE ANY LINKS: what is the publish date of the OLDEST video on
+that YouTube channel? If the show did not exist in 2021 or 2022, say so plainly and return nothing
+for those seasons. Do not pad a season from a different show or a different feed.
+
+THE METHOD, AND IT IS AN ENUMERATION, NOT A SEARCH. Do not ask &quot;find the waiver episodes&quot;. Work
+through a grid, one cell at a time, and report every cell:
+
+  For each season the show existed (2023, 2024, 2025 at least), and for each NFL week 1 to 14:
+    - The waiver wire episode for that week. A daily show does this on the Tuesday or Wednesday.
+    - NFL week 1 begins the Thursday after Labor Day. Week N&#x27;s waiver episode therefore publishes
+      in the days right after week N&#x27;s Sunday. Use the channel&#x27;s date filter and go week by week.
+    - If a week has more than one candidate, take the ONE whose title most clearly names waivers,
+      adds, pickups, claims or the wire.
+    - ONE per week. Fourteen per season. No more.
+
+  Then, separately, every PRESEASON sleepers, breakouts, busts, post-hype or draft-targets episode,
+  usually July or August. There should only be a handful per season and I want all of them.
+
+EVERYTHING ELSE THIS SHOW PUBLISHES IS OUT OF SCOPE: news reactions, DFS, best ball, dynasty,
+mailbags, Sunday previews, Monday recaps, betting, interviews, and anything that is not a weekly
+waiver episode or a preseason sleepers episode.
+
+THE LINK RULE: one link per episode, youtube.com/watch?v=... only, or the show&#x27;s own page on
+fantasylife.com if the episode is genuinely not on YouTube. Never a channel, a playlist, a search
+results page, an archive index, a tag page or a third-party recap.
+
+RETURN FOUR PARTS, IN THIS ORDER, AND NOTHING ELSE.
+
+PART 0. The oldest video&#x27;s publish date, one line, as demanded above.
+
+PART 1. THE COVERAGE GRID. One row per season, fourteen columns for weeks 1 to 14, plus a final
+row per season for the preseason episodes. Put the episode title in the cell, or the word MISSING
+if you checked that week and found nothing. I read this grid to see what you skipped, so write
+MISSING rather than leaving a cell blank or dropping a season.
+
+PART 2. THE LINKS. One block per season, under a heading that is just the year. Inside each block,
+one URL per line and nothing else on the line: no bullets, no numbers, no titles, no commentary,
+no markdown headings, no hash marks.
+
+PART 3. One line per season: how many of the fourteen weeks you found, and how many you checked
+and could not find.
+
+Do not curate, rank, filter or recommend. If an episode looks routine, that is the reason to
+include it: routine episodes are the denominator and skipping them is the one thing that ruins
+this.</pre>
+  </div>
+  <p class="sub" style="font-size:.87rem;color:var(--muted)">Send me what it returns. I add
+  the links to the year files and this page, and the new show goes into the coverage count.</p>
+</section>
+
+<section class="sec">
+  <div class="sechead">
+    <h2>Step 2 &middot; one notebook per season</h2>
+    <p>Four to build. Fifteen minutes each, most of it waiting. Never mix two seasons in one
+    notebook: the season is the join key to what actually happened and it is the one thing
+    that cannot be undone afterwards.</p>
+  </div>
+  <ol class="steps">
+    <li><div class="num">1</div><div class="stepbody">
+      <h3>New notebook, named for the year</h3>
+      <p>Call it exactly <kbd>Takes 2022</kbd>, <kbd>Takes 2023</kbd> and so on. The name is how
+      you will tell them apart in six weeks.</p>
+    </div></li>
+    <li><div class="num">2</div><div class="stepbody">
+      <h3>Add sources, Websites, one paste</h3>
+      <p>Copy that year's block below and paste the whole thing into the one box. Notebook
+      accepts many URLs separated by new lines. You do not paste per show any more.</p>
+      <p class="sub">Some will fail to import. That is normal and it is information: tell me
+      which ones and I take them out of the list rather than leaving you to retry them.</p>
+    </div></li>
+    <li><div class="num">3</div><div class="stepbody">
+      <h3>Configure Chat, once, per notebook</h3>
+      <p>Custom style, paste the standing rules from step 3 below, response length Longer.
+      This is the single biggest saving: the rules then apply to every answer in that notebook
+      and you never paste them again.</p>
+    </div></li>
+    <li><div class="num">4</div><div class="stepbody">
+      <h3>Run the batches</h3>
+      <p>Paste the extraction prompt once. After that, the short command in step 5 is the whole
+      of your job until the year is done.</p>
+    </div></li>
+    <li><div class="num">5</div><div class="stepbody">
+      <h3>Save every batch as its own file</h3>
+      <p>Into <kbd>10_Gemni\Takes\</kbd>, named <kbd>2022_batch1.csv</kbd>,
+      <kbd>2022_batch2.csv</kbd> and so on. One file per batch, never one growing file. If a
+      batch comes back wrong you throw away one file instead of untangling a merged one.</p>
+    </div></li>
+  </ol>
+</section>
+
+<section class="sec">
+  <div class="sechead">
+    <h2>The links, one flat list per year</h2>
+    <p>No headings, no hash marks, nothing but URLs. Copy, then paste once into Add sources.</p>
+  </div>
+  <div class="shows">
+  <div class="show" id="y2021">
+    <div class="showtop">
+      <input type="checkbox" aria-label="done">
+      <div class="showname"><b>2021 · 65 links</b><span>paste into Add sources, Websites. One box, one paste.</span></div>
+      <div class="showacts">
+        <button class="peek" data-for="y2021">show</button>
+        <button class="copy" data-key="y2021">copy</button>
+      </div>
+    </div>
+    <pre id="pre-y2021" hidden>https://establishtherun.com/waiver-wire-analysis-week-1-2021/
+https://establishtherun.com/waiver-wire-analysis-week-2-3/
+https://establishtherun.com/waiver-wire-analysis-week-3-3/
+https://establishtherun.com/waiver-wire-analysis-week-7-3/
+https://establishtherun.com/waiver-wire-analysis-week-10-2021/
+https://www.youtube.com/watch?v=GbQQe5NDDQU
+https://www.youtube.com/watch?v=v2BtsWtc84Q
+https://www.youtube.com/watch?v=OEmhg4HMWZU
+https://www.youtube.com/watch?v=d4q7K7xrxLA
+https://www.youtube.com/watch?v=vDpyZUYLUdM
+https://www.youtube.com/watch?v=fcNmxOy-eoo
+https://www.youtube.com/watch?v=0dEvAhYI-k0
+https://www.thefantasyfootballers.com/episodes/week-2-waivers-full-stream-ahead-mike-gets-nothing/
+https://www.youtube.com/watch?v=BSJenwSf8RY
+https://www.youtube.com/watch?v=GlLVNxKyGzA
+https://www.youtube.com/watch?v=AsP00lRQEJU
+https://www.youtube.com/watch?v=bsNDW8RggY8
+https://www.youtube.com/watch?v=s0RODKNV2jw
+https://www.thefantasyfootballers.com/episodes/week-8-waivers-full-stream-ahead-iron-pants/
+https://www.youtube.com/watch?v=Zkzp0QPcVNM
+https://www.youtube.com/watch?v=WE7D-_czqXE
+https://www.youtube.com/watch?v=b1kOb__nKh0
+https://www.thefantasyfootballers.com/episodes/week-13-waivers-full-stream-ahead-big-shimmy-returns/
+https://www.youtube.com/watch?v=zxayHEZ4x3Y
+https://www.youtube.com/watch?v=Xeyjd7MT3gI
+https://www.youtube.com/watch?v=reu7xFneg3s
+https://www.youtube.com/watch?v=AgpQlQOS1Os
+https://www.youtube.com/watch?v=HscWc79W94s
+https://www.youtube.com/watch?v=I1q0BGgS07s
+https://www.youtube.com/watch?v=KDdnqN8HOa0
+https://www.youtube.com/watch?v=xs_fsTcPoCo
+https://www.youtube.com/watch?v=ebSGHc2JPQ0
+https://www.youtube.com/watch?v=aUYR-SCCdTE
+https://www.youtube.com/watch?v=ESLsRpBZqB0
+https://www.youtube.com/watch?v=JtWTDbkJTFQ
+https://www.youtube.com/watch?v=gJkRy-EDxzQ
+https://www.youtube.com/watch?v=A729KMXwpQw
+https://www.youtube.com/watch?v=SDsaT-4r-Jk
+https://www.harrisfootball.com/episode-august-9-2021
+https://www.harrisfootball.com/episode-august-12-2021
+https://www.harrisfootball.com/episode-august-20-2021
+https://www.harrisfootball.com/episode-august-23-2021
+https://www.harrisfootball.com/episode-august-26-2021
+https://www.harrisfootball.com/episode-august-27-2021
+https://www.harrisfootball.com/episode-august-31-2021
+https://www.thescore.com/news/2191659/fantasy-podcast-te-breakouts-busts-and-draft-strategy
+https://www.thescore.com/nfl/news/2190783/fantasy-podcast-rb-breakouts-busts-and-draft-strategy
+https://www.thescore.com/nflfan/news/2190624/fantasy-podcast-qb-breakouts-busts-and-draft-strategy
+https://www.thescore.com/nflfan/news/2191658/fantasy-podcast-wr-breakouts-busts-and-draft-strategy
+https://www.thescore.com/nflfan/news/2195448/fantasy-waiver-wire-week-1
+https://www.thescore.com/nfl/news/2199425/fantasy-podcast-week-3-surprises-top-waiver-adds
+https://www.thescore.com/nflfan/news/2202906/fantasy-podcast-top-waiver-adds-breaking-down-backfields-injuries
+https://www.thescore.com/news/2226500/fantasy-podcast-packers-turn-to-dillon-top-waiver-adds-for-week-11
+https://www.thescore.com/nfl/news/639776/fantasy-waiver-wire-week-13
+https://www.thescore.com/nflfan/news/2245019/fantasy-podcast-top-waiver-adds-for-week-14-injury-roundup
+https://www.youtube.com/watch?v=JcZeEE_47Os
+https://www.youtube.com/watch?v=HOuiDj3mqK8
+https://www.youtube.com/watch?v=ulPF8syI_1E
+https://www.youtube.com/watch?v=p9SB_Q0uCcM
+https://www.youtube.com/watch?v=jxr89jIQAz0
+https://www.youtube.com/watch?v=ApM_ivGtde0
+https://www.youtube.com/watch?v=bTlPDXg20H4
+https://www.youtube.com/watch?v=0tyl6Vlq_Mk
+https://www.youtube.com/watch?v=L2kiXh99bpQ
+https://www.youtube.com/watch?v=f59OL8z4qX4</pre>
+  </div>
+
+  <div class="show" id="y2022">
+    <div class="showtop">
+      <input type="checkbox" aria-label="done">
+      <div class="showname"><b>2022 · 55 links</b><span>paste into Add sources, Websites. One box, one paste.</span></div>
+      <div class="showacts">
+        <button class="peek" data-for="y2022">show</button>
+        <button class="copy" data-key="y2022">copy</button>
+      </div>
+    </div>
+    <pre id="pre-y2022" hidden>https://www.youtube.com/watch?v=SquwrfO_CMM
+https://establishtherun.com/waiver-wire-analysis-week-8-4/
+https://establishtherun.com/preparing-for-the-playoffs-week-13/
+https://www.youtube.com/watch?v=rTmqFLvGZB0
+https://www.youtube.com/watch?v=-eFiZ-kzpsY
+https://www.youtube.com/watch?v=7GCOgYKY4To
+https://www.youtube.com/watch?v=8YC7MA2MmHQ
+https://www.youtube.com/watch?v=_JOSqpZ7o44
+https://www.youtube.com/watch?v=07IWZTl1blI
+https://www.youtube.com/watch?v=nuQui13KXkg
+https://www.thefantasyfootballers.com/episodes/week-7-waivers-goose-talk-full-stream-ahead/
+https://www.youtube.com/watch?v=wuns3rmk0-Q
+https://www.youtube.com/watch?v=_65kqsx74pY
+https://www.thefantasyfootballers.com/episodes/week-11-waivers-upset-city-full-stream-ahead/
+https://www.youtube.com/watch?v=zCReHKDTOGA
+https://www.thefantasyfootballers.com/episodes/week-13-waivers-fathomable-greatness-full-stream-ahead/
+https://www.youtube.com/watch?v=9zJYSQjMLQs
+https://www.youtube.com/watch?v=xTWcIngael0
+https://www.youtube.com/watch?v=J74ac33ROyA
+https://www.youtube.com/watch?v=ekGRnUfT2m8
+https://www.youtube.com/watch?v=PB41NZecYUQ
+https://www.youtube.com/watch?v=yfD8Nj4Xa2I
+https://www.youtube.com/watch?v=zSt10kAhT3Q
+https://www.youtube.com/watch?v=vvW2VO8xtFw
+https://www.youtube.com/watch?v=YiZi6-B3P1k
+https://www.youtube.com/watch?v=J-fkQriC1W4
+https://www.youtube.com/watch?v=hIBVSOBycz0
+https://www.youtube.com/watch?v=OLNn3LSkZY0
+https://www.harrisfootball.com/episode-september-6-2022
+https://www.harrisfootball.com/episode-september-13-2022
+https://www.harrisfootball.com/episode-september-20-2022
+https://www.harrisfootball.com/episode-october-4-2022
+https://www.harrisfootball.com/episode-october-11-2022
+https://www.harrisfootball.com/episode-october-18-2022
+https://www.harrisfootball.com/episode-october-25-2022
+https://www.harrisfootball.com/episode-november-29-2022
+https://www.youtube.com/watch?v=KfeKcoc4S60
+https://www.youtube.com/watch?v=Kv1dXNbylYA
+https://www.youtube.com/watch?v=phKjhJj88j0
+https://www.thescore.com/news/2410100/fantasy-podcast-preseason-risers-and-fallers-cut-down-day-surprises
+https://www.thescore.com/nfl/news/2414079
+https://www.thescore.com/nflfan/news/2430850/fantasy-waiver-wire-week-4
+https://www.thescore.com/news/2427443/fantasy-podcast-top-waiver-adds-for-week-5-injury-roundup
+https://www.thescore.com/nflfan/news/2427447/fantasy-podcast-anderson-trade-top-waiver-adds-injury-roundup
+https://www.thescore.com/nflfan/news/2427448/fantasy-podcast-top-waiver-adds-for-week-9-injury-roundup
+https://www.thescore.com/nflfan/news/2427449/amp
+https://www.thescore.com/nflfan/news/2488984/fantasy-podcast-top-waiver-adds-for-week-12-injury-roundup
+https://www.youtube.com/watch?v=pBN4jcuxuKg
+https://www.youtube.com/watch?v=StvyLQB6Wh4
+https://www.youtube.com/watch?v=eTB32NzNmbk
+https://music.youtube.com/podcast/ok7hAadOWyE
+https://www.youtube.com/watch?v=TOeXh2WkPMk
+https://www.youtube.com/watch?v=XdvcmJSU4Yk
+https://music.youtube.com/podcast/X69kyj5EP68
+https://www.youtube.com/watch?v=21I_BsIAOfg</pre>
+  </div>
+
+  <div class="show" id="y2023">
+    <div class="showtop">
+      <input type="checkbox" aria-label="done">
+      <div class="showname"><b>2023 · 62 links</b><span>paste into Add sources, Websites. One box, one paste.</span></div>
+      <div class="showacts">
+        <button class="peek" data-for="y2023">show</button>
+        <button class="copy" data-key="y2023">copy</button>
+      </div>
+    </div>
+    <pre id="pre-y2023" hidden>https://establishtherun.com/waiver-wire-analysis-week-1-5/
+https://www.youtube.com/watch?v=yY7B8r30XzE
+https://establishtherun.com/waiver-wire-analysis-week-3-5/
+https://establishtherun.com/waiver-wire-analysis-week-4-3/
+https://establishtherun.com/waiver-wire-analysis-week-5-3/
+https://establishtherun.com/waiver-wire-analysis-week-6-3/
+https://www.youtube.com/watch?v=da38YAuo1Kc
+https://establishtherun.com/waiver-wire-analysis-week-11-5/
+https://www.youtube.com/watch?v=6x1-4tminL0
+https://www.youtube.com/watch?v=E8j5JEO-Mxs
+https://www.thefantasyfootballers.com/episodes/week-3-waivers-full-stream-ahead-jason-survives/
+https://www.thefantasyfootballers.com/episodes/week-4-waivers-streamers-drops-dart-oclock/
+https://www.youtube.com/watch?v=OJU7BxCqdVQ
+https://www.youtube.com/watch?v=eGHl9JFSxZM
+https://www.youtube.com/watch?v=Ks5twwUGvR4
+https://www.youtube.com/watch?v=YEV99b2var0
+https://www.youtube.com/watch?v=Vi7EG0O1Owg
+https://www.youtube.com/watch?v=ponmV1nl9uY
+https://www.youtube.com/watch?v=iGCK_TzwbhU
+https://www.youtube.com/watch?v=pEWchOIaIMU
+https://www.youtube.com/watch?v=IQs9rqi0ysc
+https://www.youtube.com/watch?v=fR8l8DRVWzA
+https://www.youtube.com/watch?v=MSFU8UeMxmY
+https://www.youtube.com/watch?v=zL6FhFEuXyE
+https://www.youtube.com/watch?v=X15cywBV_x0
+https://www.youtube.com/watch?v=EYOoY7m0sw4
+https://www.youtube.com/watch?v=pGdGDi98o5g
+https://www.youtube.com/watch?v=-CFHNC1yAPY
+https://www.youtube.com/watch?v=LCwBnJP088g
+https://www.youtube.com/watch?v=DgkbjREL8HA
+https://www.youtube.com/watch?v=OCOJLC-rLeI
+https://www.youtube.com/watch?v=qUhZN4JfwwI
+https://www.youtube.com/watch?v=6cJkQlDe0j4
+https://www.youtube.com/watch?v=tO3_kPXzFyo
+https://www.harrisfootball.com/episode-august-25-2023
+https://www.harrisfootball.com/episode-august-28-2023
+https://www.harrisfootball.com/episode-august-29-2023
+https://www.harrisfootball.com/episode-august-30-2023
+https://www.harrisfootball.com/episode-september-12-2023
+https://www.harrisfootball.com/episode-september-26-2023
+https://www.harrisfootball.com/episode-october-3-2023
+https://www.harrisfootball.com/episode-october-17-2023
+https://www.harrisfootball.com/episode-october-24-2023
+https://www.youtube.com/watch?v=9_4PmjpJrpI
+https://www.thescore.com/news/2686220/fantasy-podcast-rb-breakouts-busts-and-draft-strategy
+https://www.thescore.com/nfl/news/2689308/fantasy-podcast-te-breakouts-busts-and-draft-strategy
+https://www.thescore.com/nflfan/news/2712001/fantasy-podcast-week-1-takeaways-for-every-nfc-team-top-waiver-adds
+https://www.thescore.com/nfl/news/2712074
+https://www.thescore.com/nflfan/news/2721111/fantasy-waiver-wire-week-4
+https://www.thescore.com/nfl/news/2728237/fantasy-waiver-wire-week-5
+https://www.thescore.com/nflfan/news/2733477/fantasy-waiver-wire-week-6
+https://www.thescore.com/nflfan/news/2743678/fantasy-podcast-top-waiver-adds-for-week-8-injury-roundup
+https://www.thescore.com/news/2756169/fantasy-waiver-wire-week-10
+https://www.thescore.com/nfl/news/2764101/fantasy-waiver-wire-week-11
+https://www.thescore.com/nflfan/news/2770306/fantasy-podcast-top-waiver-adds-for-week-12-injury-roundup
+https://www.thescore.com/nfl/news/2784295/fantasy-waiver-wire-week-14
+https://www.youtube.com/watch?v=47UG8AvzN1A
+https://www.youtube.com/watch?v=FgCtzCSTRWE
+https://www.youtube.com/watch?v=OaIehWnOw3s
+https://www.youtube.com/watch?v=wnQD27tdIBY
+https://www.youtube.com/watch?v=ZbfejHbyV_s
+https://www.youtube.com/watch?v=H84siJfKSPs</pre>
+  </div>
+
+  <div class="show" id="y2024">
+    <div class="showtop">
+      <input type="checkbox" aria-label="done">
+      <div class="showname"><b>2024 · 89 links</b><span>paste into Add sources, Websites. One box, one paste.</span></div>
+      <div class="showacts">
+        <button class="peek" data-for="y2024">show</button>
+        <button class="copy" data-key="y2024">copy</button>
+      </div>
+    </div>
+    <pre id="pre-y2024" hidden>https://establishtherun.com/waiver-wire-analysis-week-1-6/
+https://www.youtube.com/watch?v=AkreY_Zx-Mo
+https://establishtherun.com/waiver-wire-analysis-week-4-5/
+https://www.youtube.com/watch?v=GGrSC_y2Hl8
+https://www.youtube.com/watch?v=fMSN3gbxma8
+https://establishtherun.com/waiver-wire-analysis-week-14-7/
+https://www.youtube.com/watch?v=53eodTmOC_I
+https://www.thefantasyfootballers.com/episodes/week-5-waivers-streamers-the-mark-andrews-discussion/
+https://www.youtube.com/watch?v=936wwUq5uXI
+https://www.youtube.com/watch?v=XMctEFwnN1Q
+https://www.youtube.com/watch?v=5tYw9-UqSaU
+https://www.youtube.com/watch?v=K5SIps_rxOo
+https://www.youtube.com/watch?v=Z8uWRZjGq4A
+https://www.youtube.com/watch?v=Zx3-5mJO7dk
+https://www.youtube.com/watch?v=vImEFT62Q0c
+https://www.youtube.com/watch?v=OkUbGHE0FXk
+https://www.youtube.com/watch?v=GHkw-yv-fas
+https://www.youtube.com/watch?v=-OCT8kiJGoQ
+https://www.youtube.com/watch?v=X7G56O9ZH8I
+https://www.youtube.com/watch?v=dOGoYAdNxAU
+https://www.youtube.com/watch?v=sM_a98cGOYk
+https://www.youtube.com/watch?v=HnqZU7D6D3s
+https://www.youtube.com/watch?v=zEBf5XsX-Lc
+https://www.youtube.com/watch?v=Vks_cHZhXJ8
+https://www.youtube.com/watch?v=K-j15dZmtB0
+https://www.youtube.com/watch?v=0Xzz8bnHb-8
+https://www.harrisfootball.com/episode-august-14-2024
+https://www.harrisfootball.com/episode-august-15-2024
+https://www.harrisfootball.com/episode-august-16-2024
+https://www.harrisfootball.com/episode-august-19-2024
+https://www.harrisfootball.com/episode-august-20-2024
+https://www.harrisfootball.com/episode-august-22-2024
+https://www.harrisfootball.com/episode-august-23-2024
+https://www.harrisfootball.com/episode-august-26-2024
+https://www.harrisfootball.com/episode-august-27-2024
+https://www.harrisfootball.com/episode-august-28-2024
+https://www.harrisfootball.com/episode-september-3-2024
+https://www.harrisfootball.com/episode-september-10-2024
+https://www.harrisfootball.com/episode-september-17-2024
+https://www.harrisfootball.com/episode-october-1-2024
+https://www.harrisfootball.com/episode-october-15-2024
+https://www.harrisfootball.com/episode-november-5-2024
+https://www.harrisfootball.com/episode-november-12-2024
+https://www.harrisfootball.com/episode-december-3-2024
+https://www.youtube.com/watch?v=nPzAXfQMBho
+https://www.youtube.com/watch?v=vQdk06ylI2E
+https://www.youtube.com/watch?v=Hz3h4Bd05JY
+https://www.youtube.com/watch?v=aM5jhknDg4s
+https://www.youtube.com/watch?v=-yZlPTr56po
+https://www.thescore.com/news/3046199/fantasy-podcast-wr-breakouts-busts-and-draft-strategy
+https://www.thescore.com/news/3066350/fantasy-podcast-top-waiver-adds-before-week-1
+https://www.thescore.com/nflfan/news/3076165
+https://www.thescore.com/nflfan/news/3081981/fantasy-waiver-wire-week-4
+https://www.thescore.com/nflfan/news/3087588/fantasy-podcast-top-waiver-adds-for-week-5-injury-roundup
+https://www.thescore.com/nflfan/news/3093173/fantasy-podcast-top-waiver-adds-for-week-6-injury-roundup
+https://www.thescore.com/nflfan/news/3098904/fantasy-waiver-wire-week-7
+https://www.thescore.com/nflfan/news/3110008/fantasy-waiver-wire-week-9
+https://www.thescore.com/nflfan/news/3116744/fantasy-podcast-top-waiver-adds-for-week-10-injury-roundup
+https://www.thescore.com/news/3124725/fantasy-waiver-wire-week-11
+https://www.thescore.com/nflfan/news/3132129
+https://www.thescore.com/news/3138557/fantasy-podcast-top-waiver-adds-for-week-13-injury-roundup
+https://www.youtube.com/watch?v=6yoPXpKXbLc
+https://www.youtube.com/watch?v=CtIxJg6Gkg8
+https://www.youtube.com/watch?v=--DeiUID_Cg
+https://www.youtube.com/watch?v=_-d8CLKu1kE
+https://www.youtube.com/watch?v=c9DQNXKjT7I
+https://www.youtube.com/watch?v=ZoxRjn54xLk
+https://www.youtube.com/watch?v=1NGKL7clTHE
+https://www.youtube.com/watch?v=g9FxZ57o-uY
+https://www.youtube.com/watch?v=aoalfDl1Igo
+https://www.youtube.com/watch?v=mvMpGun6ZQo
+https://www.youtube.com/watch?v=CC6Pkyoh2pA
+https://www.youtube.com/watch?v=tlg0vbkmZQQ
+https://www.youtube.com/watch?v=YAA9KqxTALU
+https://www.youtube.com/watch?v=eU0uYP8fQ-g
+https://www.youtube.com/watch?v=0IUw_BfIS70
+https://www.youtube.com/watch?v=G2tYgYSD1e8
+https://www.youtube.com/watch?v=zlpMrIModvc
+https://www.youtube.com/watch?v=4FXu6srfxpg
+https://www.youtube.com/watch?v=3cXx_UFr_ms
+https://www.youtube.com/watch?v=7rBvoToVrMY
+https://www.youtube.com/watch?v=ypBwdyoZMWY
+https://www.youtube.com/watch?v=FN17VdFDvPM
+https://www.youtube.com/watch?v=rIcAYN2LZCM
+https://www.youtube.com/watch?v=UpUvWRl3HzM
+https://www.youtube.com/watch?v=vqF-LiV6vlk
+https://www.youtube.com/watch?v=UgP0Icnrswo
+https://www.youtube.com/watch?v=Ii29HmizYAo
+https://www.youtube.com/watch?v=UE27ZB784OY</pre>
+  </div>
+
+  <div class="show" id="y2025">
+    <div class="showtop">
+      <input type="checkbox" aria-label="done">
+      <div class="showname"><b>2025 · 51 links</b><span>paste into Add sources, Websites. One box, one paste.</span></div>
+      <div class="showacts">
+        <button class="peek" data-for="y2025">show</button>
+        <button class="copy" data-key="y2025">copy</button>
+      </div>
+    </div>
+    <pre id="pre-y2025" hidden>https://establishtherun.com/waiver-wire-analysis-week-1-7/
+https://establishtherun.com/waiver-wire-analysis-week-2-7/
+https://establishtherun.com/waiver-wire-analysis-week-10-7/
+https://establishtherun.com/waiver-wire-analysis-week-11-7/
+https://establishtherun.com/waiver-wire-analysis-week-13-7/
+https://www.youtube.com/watch?v=PNswzWEdZKI
+https://www.youtube.com/watch?v=XBNNZRTKCVY
+https://www.youtube.com/watch?v=PTBjm4FPOZ0
+https://www.youtube.com/watch?v=LSoK5mqCFLI
+https://www.thefantasyfootballers.com/episodes/week-5-waivers-full-stream-ahead-tilting-psa/
+https://www.youtube.com/watch?v=cCkxk0AjBEA
+https://www.youtube.com/watch?v=3K4v62N1_xU
+https://www.youtube.com/watch?v=1cYN-ziq_J0
+https://www.youtube.com/watch?v=665KSpjIk64
+https://www.youtube.com/watch?v=4E9vkI_kYqo
+https://www.youtube.com/watch?v=GRmCyuh5UMU
+https://www.youtube.com/watch?v=uymrv3ELpN0
+https://www.youtube.com/watch?v=T2lghuaR3Wg
+https://www.youtube.com/watch?v=3aD9rDXRL8o
+https://www.youtube.com/watch?v=nA--00D6Qrk
+https://www.youtube.com/watch?v=gSNI9TU4XLI
+https://www.youtube.com/watch?v=m5Uh0uGIF20
+https://www.youtube.com/watch?v=aPJdyoK9x2U
+https://www.youtube.com/watch?v=ukw_fmVuooM
+https://www.youtube.com/watch?v=ELbbTj9L_lQ
+https://www.youtube.com/watch?v=WMHNWsi27YI
+https://www.harrisfootball.com/episode-september-2-2025
+https://www.harrisfootball.com/episode-september-9-2025
+https://www.harrisfootball.com/episode-september-16-2025
+https://www.harrisfootball.com/episode-october-7-2025
+https://www.harrisfootball.com/episode-october-14-2025
+https://www.harrisfootball.com/episode-october-28-2025
+https://www.harrisfootball.com/episode-november-18-2025
+https://www.youtube.com/watch?v=jgx4WTukKlc
+https://www.youtube.com/watch?v=qoqlACxHGHY
+https://www.youtube.com/watch?v=JApPYX0Jx5o
+https://www.youtube.com/watch?v=7xgG1bmj4Vc
+https://www.youtube.com/watch?v=EpY0Md5ijok
+https://www.youtube.com/watch?v=6ZQKITSkPag
+https://www.youtube.com/watch?v=KnU7UZ8h3Gs
+https://www.youtube.com/watch?v=jN_04A3o7zw
+https://www.youtube.com/watch?v=-BgeuhGdIU0
+https://www.youtube.com/watch?v=3PCL02FcG3E
+https://www.youtube.com/watch?v=qeGqru9_e5w
+https://www.youtube.com/watch?v=Aqq9Op7AIUE
+https://www.youtube.com/watch?v=q0LTnNUs7rM
+https://www.youtube.com/watch?v=lmK2N4_y6Mk
+https://www.youtube.com/watch?v=QRXzTTXdbyE
+https://www.youtube.com/watch?v=--NklLqet1s
+https://www.youtube.com/watch?v=Po-_V8OlZNI
+https://www.youtube.com/watch?v=LKDs4auXPB4</pre>
+  </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="sechead">
+    <h2>Step 3 &middot; the standing rules</h2>
+    <p>Configure Chat, Custom style. Once per notebook, before you ask it anything.</p>
+  </div>
+  
+  <div class="show" id="config">
+    <div class="showtop">
+      <input type="checkbox" aria-label="done">
+      <div class="showname"><b>Standing rules</b><span>paste into Configure Chat, Custom style</span></div>
+      <div class="showacts">
+        <button class="peek" data-for="config">show</button>
+        <button class="copy" data-key="config">copy</button>
+      </div>
+    </div>
+    <pre id="pre-config" hidden>You are converting fantasy football podcast transcripts into rows of a dataset that will be
+scored against what actually happened. These rules apply to every answer in this notebook.
+
+1. You are not summarising and you are not selecting the interesting parts. Completeness
+   matters more than insight. A player an analyst mentioned and was WRONG about is the most
+   valuable row in this file, because without those rows there is no hit rate to compute.
+2. Never add a player an analyst did not name. Never quote a number they did not say.
+3. If you cannot tell who spoke, write UNATTRIBUTED rather than guessing.
+4. Speech to text mangles player names. When a token is probably a garbled name, correct it
+   and say so. If you cannot identify it, write UNKNOWN rather than a plausible player. A
+   wrong name is worse than a missing one, because a wrong name joins to the wrong outcome.
+5. Do not rank, order or editorialise rows. Emit them in the order they were discussed.
+6. Every row names the source it came from, spelled exactly as the source panel spells it.
+7. Output preference, in this order: if you have code execution, run it and export a CSV.
+   If you do not, output a strict Markdown table and nothing else, and save it as a Note.
+8. This league is half PPR with six-point passing touchdowns. Almost every public ranking
+   assumes full PPR and four-point passing touchdowns. Say so whenever you use one.</pre>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="sechead">
+    <h2>Step 4 &middot; the extraction prompt</h2>
+    <p>Paste this once, after the rules are set. Tick your first ten sources first.</p>
+  </div>
+  
+  <div class="show" id="prompt2">
+    <div class="showtop">
+      <input type="checkbox" aria-label="done">
+      <div class="showname"><b>The extraction prompt</b><span>paste once per notebook</span></div>
+      <div class="showacts">
+        <button class="peek" data-for="prompt2">show</button>
+        <button class="copy" data-key="prompt2">copy</button>
+      </div>
+    </div>
+    <pre id="pre-prompt2" hidden>Process only the sources I have ticked in the source panel. Work through them one at a time,
+in the order they appear, and finish one before starting the next.
+
+FIRST, a name correction table. Speech to text mangles player names. Real examples from a
+previous pass: &quot;Davian Wicks&quot;, &quot;Cam Scaboo&quot;, &quot;Amarian Hampton&quot;, &quot;Jaylen Coker&quot;.
+
+  source_title, heard_as, corrected_to, confidence_HIGH_MED_LOW, why
+
+THEN one row per player per analyst per episode. Include the players they praised, the ones
+they dismissed in half a sentence, and the ones they listed and moved past.
+
+  source_title, show, publish_date_ISO, nfl_week, analyst, player, position, team,
+  call_type, direction, strength, horizon, verbatim, reason
+
+  call_type   SLEEPER | BREAKOUT | BUST | WAIVER_ADD | WAIVER_FADE | HANDCUFF | STASH |
+              START | SIT | RANKING_ONLY
+  direction   UP | DOWN | NEUTRAL, relative to where the market has him
+  strength    STRONG | MODERATE | HEDGED. Use HEDGED whenever they qualified it. Do not
+              convert a maybe into a take. &quot;I could see it going either way&quot; is HEDGED and
+              it still gets a row.
+  horizon     THIS_WEEK | REST_OF_SEASON | NEXT_SEASON | DYNASTY
+  verbatim    the sentence they actually said, quoted. Trimmed is fine, paraphrased is not.
+  reason      the mechanism in a few words if they gave one: target share, the man ahead of
+              him, a scheme change, red zone work, a snap count. Blank if they gave none.
+              &quot;They like him&quot; is not a reason, leave it blank.
+  publish_date_ISO and nfl_week   take them from the source title if it states them,
+              otherwise write SUPPLIED and I will fill them in.
+
+If an episode lists ten names and only discusses three, all ten get rows, with call_type
+RANKING_ONLY for the seven. If a ticked source has no usable transcript, say so BY NAME and
+move on. Do not silently drop it and do not tell me it was low value.
+
+FINISH with five lines:
+  1. one line per source: its title and how many rows came from it
+  2. how many distinct players, and how many rows in total
+  3. how many rows are HEDGED and how many RANKING_ONLY. If both are near zero you have
+     filtered, and you should go back
+  4. any name from the correction table you could not resolve
+  5. anything you deliberately did not emit, and why</pre>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="sechead">
+    <h2>Step 5 &middot; the command that runs every batch after the first</h2>
+    <p>This is the whole of the repeat work. Two lines, and the second line is the guard.</p>
+  </div>
+  
+  <div class="show" id="next">
+    <div class="showtop">
+      <input type="checkbox" aria-label="done">
+      <div class="showname"><b>Next batch</b><span>paste after each batch comes back</span></div>
+      <div class="showacts">
+        <button class="peek" data-for="next">hide</button>
+        <button class="copy" data-key="next">copy</button>
+      </div>
+    </div>
+    <pre id="pre-next">Next 5
+
+Then, in this same reply, list the five sources you just processed, by episode title and
+publication date. If any of them produced no rows, name it and say why.</pre>
+  </div>
+  <p class="sub" style="font-size:.87rem;color:var(--muted)">Why the second line: Notebook has
+  said you can leave every source ticked and that it tracks what it has done. Ticking was how a
+  batch got identified, so with that gone the batch has to name itself. Asking it costs you one
+  line and turns a silent repeat or a silent gap into something I can catch.</p>
+</section>
+
+<div class="foot">
+  <p><b>Send me each batch CSV as you save it.</b> I check for repeats and gaps against the
+  year's link list and tell you what is still outstanding.</p>
+  <p><b>A source with no transcript is processed and empty, not done.</b> Get its name so the
+  coverage file records a zero rather than a hole.</p>
+  <p>Extraction output goes in <kbd>10_Gemni\Takes\</kbd>. The raw link hunting lives in
+  <kbd>The Takes Corpus\</kbd> and the cleaned lists in <kbd>Source\takes_links\</kbd>.
+  Those two are inputs and are finished.</p>
+</div>
+
+</div>
+
+<script>
+const DATA = {"config": "You are converting fantasy football podcast transcripts into rows of a dataset that will be\nscored against what actually happened. These rules apply to every answer in this notebook.\n\n1. You are not summarising and you are not selecting the interesting parts. Completeness\n   matters more than insight. A player an analyst mentioned and was WRONG about is the most\n   valuable row in this file, because without those rows there is no hit rate to compute.\n2. Never add a player an analyst did not name. Never quote a number they did not say.\n3. If you cannot tell who spoke, write UNATTRIBUTED rather than guessing.\n4. Speech to text mangles player names. When a token is probably a garbled name, correct it\n   and say so. If you cannot identify it, write UNKNOWN rather than a plausible player. A\n   wrong name is worse than a missing one, because a wrong name joins to the wrong outcome.\n5. Do not rank, order or editorialise rows. Emit them in the order they were discussed.\n6. Every row names the source it came from, spelled exactly as the source panel spells it.\n7. Output preference, in this order: if you have code execution, run it and export a CSV.\n   If you do not, output a strict Markdown table and nothing else, and save it as a Note.\n8. This league is half PPR with six-point passing touchdowns. Almost every public ranking\n   assumes full PPR and four-point passing touchdowns. Say so whenever you use one.", "prompt2": "Process only the sources I have ticked in the source panel. Work through them one at a time,\nin the order they appear, and finish one before starting the next.\n\nFIRST, a name correction table. Speech to text mangles player names. Real examples from a\nprevious pass: \"Davian Wicks\", \"Cam Scaboo\", \"Amarian Hampton\", \"Jaylen Coker\".\n\n  source_title, heard_as, corrected_to, confidence_HIGH_MED_LOW, why\n\nTHEN one row per player per analyst per episode. Include the players they praised, the ones\nthey dismissed in half a sentence, and the ones they listed and moved past.\n\n  source_title, show, publish_date_ISO, nfl_week, analyst, player, position, team,\n  call_type, direction, strength, horizon, verbatim, reason\n\n  call_type   SLEEPER | BREAKOUT | BUST | WAIVER_ADD | WAIVER_FADE | HANDCUFF | STASH |\n              START | SIT | RANKING_ONLY\n  direction   UP | DOWN | NEUTRAL, relative to where the market has him\n  strength    STRONG | MODERATE | HEDGED. Use HEDGED whenever they qualified it. Do not\n              convert a maybe into a take. \"I could see it going either way\" is HEDGED and\n              it still gets a row.\n  horizon     THIS_WEEK | REST_OF_SEASON | NEXT_SEASON | DYNASTY\n  verbatim    the sentence they actually said, quoted. Trimmed is fine, paraphrased is not.\n  reason      the mechanism in a few words if they gave one: target share, the man ahead of\n              him, a scheme change, red zone work, a snap count. Blank if they gave none.\n              \"They like him\" is not a reason, leave it blank.\n  publish_date_ISO and nfl_week   take them from the source title if it states them,\n              otherwise write SUPPLIED and I will fill them in.\n\nIf an episode lists ten names and only discusses three, all ten get rows, with call_type\nRANKING_ONLY for the seven. If a ticked source has no usable transcript, say so BY NAME and\nmove on. Do not silently drop it and do not tell me it was low value.\n\nFINISH with five lines:\n  1. one line per source: its title and how many rows came from it\n  2. how many distinct players, and how many rows in total\n  3. how many rows are HEDGED and how many RANKING_ONLY. If both are near zero you have\n     filtered, and you should go back\n  4. any name from the correction table you could not resolve\n  5. anything you deliberately did not emit, and why", "flshow": "SHOW: Fantasy Life Show (Matthew Berry's Fantasy Life)\n\nTHE LAST ATTEMPT RETURNED 17 LINKS AND NOTHING BEFORE 2023. Do not repeat it. Here is why it\nfailed and what to do instead.\n\nWHY IT FAILED: you searched Apple Podcasts. Apple's pages are not scrapeable and carry no usable\nper-episode links for my purpose. This show's episodes live on YouTube and on fantasylife.com.\n\nDO NOT USE podcasts.apple.com AT ALL. Do not use Spotify, iHeart, Podchaser, Goodpods, Deezer,\nPodcast Republic, Metacast or Musixmatch either. I cannot use any of them.\n\nWHERE TO LOOK, and only here:\n  https://www.youtube.com/@MBFantasyLifeShow/videos\n  https://www.youtube.com/@MBFantasyLifeShow/search?query=waiver\n  https://www.fantasylife.com\n\nANSWER THIS FIRST, IN ONE LINE, BEFORE ANY LINKS: what is the publish date of the OLDEST video on\nthat YouTube channel? If the show did not exist in 2021 or 2022, say so plainly and return nothing\nfor those seasons. Do not pad a season from a different show or a different feed.\n\nTHE METHOD, AND IT IS AN ENUMERATION, NOT A SEARCH. Do not ask \"find the waiver episodes\". Work\nthrough a grid, one cell at a time, and report every cell:\n\n  For each season the show existed (2023, 2024, 2025 at least), and for each NFL week 1 to 14:\n    - The waiver wire episode for that week. A daily show does this on the Tuesday or Wednesday.\n    - NFL week 1 begins the Thursday after Labor Day. Week N's waiver episode therefore publishes\n      in the days right after week N's Sunday. Use the channel's date filter and go week by week.\n    - If a week has more than one candidate, take the ONE whose title most clearly names waivers,\n      adds, pickups, claims or the wire.\n    - ONE per week. Fourteen per season. No more.\n\n  Then, separately, every PRESEASON sleepers, breakouts, busts, post-hype or draft-targets episode,\n  usually July or August. There should only be a handful per season and I want all of them.\n\nEVERYTHING ELSE THIS SHOW PUBLISHES IS OUT OF SCOPE: news reactions, DFS, best ball, dynasty,\nmailbags, Sunday previews, Monday recaps, betting, interviews, and anything that is not a weekly\nwaiver episode or a preseason sleepers episode.\n\nTHE LINK RULE: one link per episode, youtube.com/watch?v=... only, or the show's own page on\nfantasylife.com if the episode is genuinely not on YouTube. Never a channel, a playlist, a search\nresults page, an archive index, a tag page or a third-party recap.\n\nRETURN FOUR PARTS, IN THIS ORDER, AND NOTHING ELSE.\n\nPART 0. The oldest video's publish date, one line, as demanded above.\n\nPART 1. THE COVERAGE GRID. One row per season, fourteen columns for weeks 1 to 14, plus a final\nrow per season for the preseason episodes. Put the episode title in the cell, or the word MISSING\nif you checked that week and found nothing. I read this grid to see what you skipped, so write\nMISSING rather than leaving a cell blank or dropping a season.\n\nPART 2. THE LINKS. One block per season, under a heading that is just the year. Inside each block,\none URL per line and nothing else on the line: no bullets, no numbers, no titles, no commentary,\nno markdown headings, no hash marks.\n\nPART 3. One line per season: how many of the fourteen weeks you found, and how many you checked\nand could not find.\n\nDo not curate, rank, filter or recommend. If an episode looks routine, that is the reason to\ninclude it: routine episodes are the denominator and skipping them is the one thing that ruins\nthis.", "next": "Next 5\n\nThen, in this same reply, list the five sources you just processed, by episode title and\npublication date. If any of them produced no rows, name it and say why.", "y2021": "# 2021 SOURCES FOR GEMINI NOTEBOOK\n# Paste EVERYTHING below the line into Add sources, Websites. One box, one paste.\n# Notebook accepts multiple URLs separated by a space or a new line.\n# ------------------------------------------------------------------\n\n# --- Establish The Run ---\nhttps://establishtherun.com/waiver-wire-analysis-week-1-2021/\nhttps://establishtherun.com/waiver-wire-analysis-week-2-3/\nhttps://establishtherun.com/waiver-wire-analysis-week-3-3/\nhttps://establishtherun.com/waiver-wire-analysis-week-7-3/\nhttps://establishtherun.com/waiver-wire-analysis-week-10-2021/\nhttps://www.youtube.com/watch?v=GbQQe5NDDQU\n\n# --- Fantasy Footballers ---\nhttps://www.youtube.com/watch?v=v2BtsWtc84Q\nhttps://www.youtube.com/watch?v=OEmhg4HMWZU\nhttps://www.youtube.com/watch?v=d4q7K7xrxLA\nhttps://www.youtube.com/watch?v=vDpyZUYLUdM\nhttps://www.youtube.com/watch?v=fcNmxOy-eoo\nhttps://www.youtube.com/watch?v=0dEvAhYI-k0\nhttps://www.thefantasyfootballers.com/episodes/week-2-waivers-full-stream-ahead-mike-gets-nothing/\nhttps://www.youtube.com/watch?v=BSJenwSf8RY\nhttps://www.youtube.com/watch?v=GlLVNxKyGzA\nhttps://www.youtube.com/watch?v=AsP00lRQEJU\nhttps://www.youtube.com/watch?v=bsNDW8RggY8\nhttps://www.youtube.com/watch?v=s0RODKNV2jw\nhttps://www.thefantasyfootballers.com/episodes/week-8-waivers-full-stream-ahead-iron-pants/\nhttps://www.youtube.com/watch?v=Zkzp0QPcVNM\nhttps://www.youtube.com/watch?v=WE7D-_czqXE\nhttps://www.youtube.com/watch?v=b1kOb__nKh0\nhttps://www.thefantasyfootballers.com/episodes/week-13-waivers-full-stream-ahead-big-shimmy-returns/\nhttps://www.youtube.com/watch?v=zxayHEZ4x3Y\n\n# --- FantasyPros ---\nhttps://www.youtube.com/watch?v=Xeyjd7MT3gI\nhttps://www.youtube.com/watch?v=reu7xFneg3s\nhttps://www.youtube.com/watch?v=AgpQlQOS1Os\nhttps://www.youtube.com/watch?v=HscWc79W94s\nhttps://www.youtube.com/watch?v=I1q0BGgS07s\nhttps://www.youtube.com/watch?v=KDdnqN8HOa0\nhttps://www.youtube.com/watch?v=xs_fsTcPoCo\nhttps://www.youtube.com/watch?v=ebSGHc2JPQ0\nhttps://www.youtube.com/watch?v=aUYR-SCCdTE\nhttps://www.youtube.com/watch?v=ESLsRpBZqB0\nhttps://www.youtube.com/watch?v=JtWTDbkJTFQ\nhttps://www.youtube.com/watch?v=gJkRy-EDxzQ\nhttps://www.youtube.com/watch?v=A729KMXwpQw\nhttps://www.youtube.com/watch?v=SDsaT-4r-Jk\n\n# --- Harris Fantasy Football ---\nhttps://www.harrisfootball.com/episode-august-9-2021\nhttps://www.harrisfootball.com/episode-august-12-2021\nhttps://www.harrisfootball.com/episode-august-20-2021\nhttps://www.harrisfootball.com/episode-august-23-2021\nhttps://www.harrisfootball.com/episode-august-26-2021\nhttps://www.harrisfootball.com/episode-august-27-2021\nhttps://www.harrisfootball.com/episode-august-31-2021\n\n# --- theScore ---\nhttps://www.thescore.com/news/2191659/fantasy-podcast-te-breakouts-busts-and-draft-strategy\nhttps://www.thescore.com/nfl/news/2190783/fantasy-podcast-rb-breakouts-busts-and-draft-strategy\nhttps://www.thescore.com/nflfan/news/2190624/fantasy-podcast-qb-breakouts-busts-and-draft-strategy\nhttps://www.thescore.com/nflfan/news/2191658/fantasy-podcast-wr-breakouts-busts-and-draft-strategy\nhttps://www.thescore.com/nflfan/news/2195448/fantasy-waiver-wire-week-1\nhttps://www.thescore.com/nfl/news/2199425/fantasy-podcast-week-3-surprises-top-waiver-adds\nhttps://www.thescore.com/nflfan/news/2202906/fantasy-podcast-top-waiver-adds-breaking-down-backfields-injuries\nhttps://www.thescore.com/news/2226500/fantasy-podcast-packers-turn-to-dillon-top-waiver-adds-for-week-11\nhttps://www.thescore.com/nfl/news/639776/fantasy-waiver-wire-week-13\nhttps://www.thescore.com/nflfan/news/2245019/fantasy-podcast-top-waiver-adds-for-week-14-injury-roundup\n\n# --- The Athletic ---\nhttps://www.youtube.com/watch?v=JcZeEE_47Os\nhttps://www.youtube.com/watch?v=HOuiDj3mqK8\nhttps://www.youtube.com/watch?v=ulPF8syI_1E\n\n# --- Rotoworld ---\nhttps://www.youtube.com/watch?v=p9SB_Q0uCcM\nhttps://www.youtube.com/watch?v=jxr89jIQAz0\nhttps://www.youtube.com/watch?v=ApM_ivGtde0\nhttps://www.youtube.com/watch?v=bTlPDXg20H4\nhttps://www.youtube.com/watch?v=0tyl6Vlq_Mk\nhttps://www.youtube.com/watch?v=L2kiXh99bpQ\n\n# --- Yahoo Fantasy Forecast ---\nhttps://www.youtube.com/watch?v=f59OL8z4qX4\n", "y2022": "# 2022 SOURCES FOR GEMINI NOTEBOOK\n# Paste EVERYTHING below the line into Add sources, Websites. One box, one paste.\n# Notebook accepts multiple URLs separated by a space or a new line.\n# ------------------------------------------------------------------\n\n# --- Establish The Run ---\nhttps://www.youtube.com/watch?v=SquwrfO_CMM\nhttps://establishtherun.com/waiver-wire-analysis-week-8-4/\nhttps://establishtherun.com/preparing-for-the-playoffs-week-13/\nhttps://www.youtube.com/watch?v=rTmqFLvGZB0\n\n# --- Fantasy Footballers ---\nhttps://www.youtube.com/watch?v=-eFiZ-kzpsY\nhttps://www.youtube.com/watch?v=7GCOgYKY4To\nhttps://www.youtube.com/watch?v=8YC7MA2MmHQ\nhttps://www.youtube.com/watch?v=_JOSqpZ7o44\nhttps://www.youtube.com/watch?v=07IWZTl1blI\nhttps://www.youtube.com/watch?v=nuQui13KXkg\nhttps://www.thefantasyfootballers.com/episodes/week-7-waivers-goose-talk-full-stream-ahead/\nhttps://www.youtube.com/watch?v=wuns3rmk0-Q\nhttps://www.youtube.com/watch?v=_65kqsx74pY\nhttps://www.thefantasyfootballers.com/episodes/week-11-waivers-upset-city-full-stream-ahead/\nhttps://www.youtube.com/watch?v=zCReHKDTOGA\nhttps://www.thefantasyfootballers.com/episodes/week-13-waivers-fathomable-greatness-full-stream-ahead/\nhttps://www.youtube.com/watch?v=9zJYSQjMLQs\n\n# --- FantasyPros ---\nhttps://www.youtube.com/watch?v=xTWcIngael0\nhttps://www.youtube.com/watch?v=J74ac33ROyA\nhttps://www.youtube.com/watch?v=ekGRnUfT2m8\nhttps://www.youtube.com/watch?v=PB41NZecYUQ\nhttps://www.youtube.com/watch?v=yfD8Nj4Xa2I\nhttps://www.youtube.com/watch?v=zSt10kAhT3Q\nhttps://www.youtube.com/watch?v=vvW2VO8xtFw\nhttps://www.youtube.com/watch?v=YiZi6-B3P1k\nhttps://www.youtube.com/watch?v=J-fkQriC1W4\nhttps://www.youtube.com/watch?v=hIBVSOBycz0\nhttps://www.youtube.com/watch?v=OLNn3LSkZY0\n\n# --- Harris Fantasy Football ---\nhttps://www.harrisfootball.com/episode-september-6-2022\nhttps://www.harrisfootball.com/episode-september-13-2022\nhttps://www.harrisfootball.com/episode-september-20-2022\nhttps://www.harrisfootball.com/episode-october-4-2022\nhttps://www.harrisfootball.com/episode-october-11-2022\nhttps://www.harrisfootball.com/episode-october-18-2022\nhttps://www.harrisfootball.com/episode-october-25-2022\nhttps://www.harrisfootball.com/episode-november-29-2022\n\n# --- Late-Round Fantasy Football ---\nhttps://www.youtube.com/watch?v=KfeKcoc4S60\nhttps://www.youtube.com/watch?v=Kv1dXNbylYA\nhttps://www.youtube.com/watch?v=phKjhJj88j0\n\n# --- theScore ---\nhttps://www.thescore.com/news/2410100/fantasy-podcast-preseason-risers-and-fallers-cut-down-day-surprises\nhttps://www.thescore.com/nfl/news/2414079\nhttps://www.thescore.com/nflfan/news/2430850/fantasy-waiver-wire-week-4\nhttps://www.thescore.com/news/2427443/fantasy-podcast-top-waiver-adds-for-week-5-injury-roundup\nhttps://www.thescore.com/nflfan/news/2427447/fantasy-podcast-anderson-trade-top-waiver-adds-injury-roundup\nhttps://www.thescore.com/nflfan/news/2427448/fantasy-podcast-top-waiver-adds-for-week-9-injury-roundup\nhttps://www.thescore.com/nflfan/news/2427449/amp\nhttps://www.thescore.com/nflfan/news/2488984/fantasy-podcast-top-waiver-adds-for-week-12-injury-roundup\n\n# --- Rotoworld ---\nhttps://www.youtube.com/watch?v=pBN4jcuxuKg\nhttps://www.youtube.com/watch?v=StvyLQB6Wh4\nhttps://www.youtube.com/watch?v=eTB32NzNmbk\nhttps://music.youtube.com/podcast/ok7hAadOWyE\nhttps://www.youtube.com/watch?v=TOeXh2WkPMk\nhttps://www.youtube.com/watch?v=XdvcmJSU4Yk\nhttps://music.youtube.com/podcast/X69kyj5EP68\nhttps://www.youtube.com/watch?v=21I_BsIAOfg\n", "y2023": "# 2023 SOURCES FOR GEMINI NOTEBOOK\n# Paste EVERYTHING below the line into Add sources, Websites. One box, one paste.\n# Notebook accepts multiple URLs separated by a space or a new line.\n# ------------------------------------------------------------------\n\n# --- Establish The Run ---\nhttps://establishtherun.com/waiver-wire-analysis-week-1-5/\nhttps://www.youtube.com/watch?v=yY7B8r30XzE\nhttps://establishtherun.com/waiver-wire-analysis-week-3-5/\nhttps://establishtherun.com/waiver-wire-analysis-week-4-3/\nhttps://establishtherun.com/waiver-wire-analysis-week-5-3/\nhttps://establishtherun.com/waiver-wire-analysis-week-6-3/\nhttps://www.youtube.com/watch?v=da38YAuo1Kc\nhttps://establishtherun.com/waiver-wire-analysis-week-11-5/\n\n# --- Fantasy Footballers ---\nhttps://www.youtube.com/watch?v=6x1-4tminL0\nhttps://www.youtube.com/watch?v=E8j5JEO-Mxs\nhttps://www.thefantasyfootballers.com/episodes/week-3-waivers-full-stream-ahead-jason-survives/\nhttps://www.thefantasyfootballers.com/episodes/week-4-waivers-streamers-drops-dart-oclock/\nhttps://www.youtube.com/watch?v=OJU7BxCqdVQ\nhttps://www.youtube.com/watch?v=eGHl9JFSxZM\nhttps://www.youtube.com/watch?v=Ks5twwUGvR4\nhttps://www.youtube.com/watch?v=YEV99b2var0\nhttps://www.youtube.com/watch?v=Vi7EG0O1Owg\nhttps://www.youtube.com/watch?v=ponmV1nl9uY\nhttps://www.youtube.com/watch?v=iGCK_TzwbhU\n\n# --- FantasyPros ---\nhttps://www.youtube.com/watch?v=pEWchOIaIMU\nhttps://www.youtube.com/watch?v=IQs9rqi0ysc\nhttps://www.youtube.com/watch?v=fR8l8DRVWzA\nhttps://www.youtube.com/watch?v=MSFU8UeMxmY\nhttps://www.youtube.com/watch?v=zL6FhFEuXyE\nhttps://www.youtube.com/watch?v=X15cywBV_x0\nhttps://www.youtube.com/watch?v=EYOoY7m0sw4\nhttps://www.youtube.com/watch?v=pGdGDi98o5g\nhttps://www.youtube.com/watch?v=-CFHNC1yAPY\nhttps://www.youtube.com/watch?v=LCwBnJP088g\nhttps://www.youtube.com/watch?v=DgkbjREL8HA\nhttps://www.youtube.com/watch?v=OCOJLC-rLeI\nhttps://www.youtube.com/watch?v=qUhZN4JfwwI\nhttps://www.youtube.com/watch?v=6cJkQlDe0j4\nhttps://www.youtube.com/watch?v=tO3_kPXzFyo\n\n# --- Harris Fantasy Football ---\nhttps://www.harrisfootball.com/episode-august-25-2023\nhttps://www.harrisfootball.com/episode-august-28-2023\nhttps://www.harrisfootball.com/episode-august-29-2023\nhttps://www.harrisfootball.com/episode-august-30-2023\nhttps://www.harrisfootball.com/episode-september-12-2023\nhttps://www.harrisfootball.com/episode-september-26-2023\nhttps://www.harrisfootball.com/episode-october-3-2023\nhttps://www.harrisfootball.com/episode-october-17-2023\nhttps://www.harrisfootball.com/episode-october-24-2023\n\n# --- Late-Round Fantasy Football ---\nhttps://www.youtube.com/watch?v=9_4PmjpJrpI\n\n# --- theScore ---\nhttps://www.thescore.com/news/2686220/fantasy-podcast-rb-breakouts-busts-and-draft-strategy\nhttps://www.thescore.com/nfl/news/2689308/fantasy-podcast-te-breakouts-busts-and-draft-strategy\nhttps://www.thescore.com/nflfan/news/2712001/fantasy-podcast-week-1-takeaways-for-every-nfc-team-top-waiver-adds\nhttps://www.thescore.com/nfl/news/2712074\nhttps://www.thescore.com/nflfan/news/2721111/fantasy-waiver-wire-week-4\nhttps://www.thescore.com/nfl/news/2728237/fantasy-waiver-wire-week-5\nhttps://www.thescore.com/nflfan/news/2733477/fantasy-waiver-wire-week-6\nhttps://www.thescore.com/nflfan/news/2743678/fantasy-podcast-top-waiver-adds-for-week-8-injury-roundup\nhttps://www.thescore.com/news/2756169/fantasy-waiver-wire-week-10\nhttps://www.thescore.com/nfl/news/2764101/fantasy-waiver-wire-week-11\nhttps://www.thescore.com/nflfan/news/2770306/fantasy-podcast-top-waiver-adds-for-week-12-injury-roundup\nhttps://www.thescore.com/nfl/news/2784295/fantasy-waiver-wire-week-14\n\n# --- Rotoworld ---\nhttps://www.youtube.com/watch?v=47UG8AvzN1A\nhttps://www.youtube.com/watch?v=FgCtzCSTRWE\nhttps://www.youtube.com/watch?v=OaIehWnOw3s\nhttps://www.youtube.com/watch?v=wnQD27tdIBY\n\n# --- Yahoo Fantasy Forecast ---\nhttps://www.youtube.com/watch?v=ZbfejHbyV_s\nhttps://www.youtube.com/watch?v=H84siJfKSPs\n\n# --- Fantasy Life Show ---\nhttps://www.youtube.com/watch?v=DmBnEiV63JQ\nhttps://www.youtube.com/watch?v=g9U6CJ_PTaw\n", "y2024": "# 2024 SOURCES FOR GEMINI NOTEBOOK\n# Paste EVERYTHING below the line into Add sources, Websites. One box, one paste.\n# Notebook accepts multiple URLs separated by a space or a new line.\n# ------------------------------------------------------------------\n\n# --- Establish The Run ---\nhttps://establishtherun.com/waiver-wire-analysis-week-1-6/\nhttps://www.youtube.com/watch?v=AkreY_Zx-Mo\nhttps://establishtherun.com/waiver-wire-analysis-week-4-5/\nhttps://www.youtube.com/watch?v=GGrSC_y2Hl8\nhttps://www.youtube.com/watch?v=fMSN3gbxma8\nhttps://establishtherun.com/waiver-wire-analysis-week-14-7/\nhttps://www.youtube.com/watch?v=53eodTmOC_I\n\n# --- Fantasy Footballers ---\nhttps://www.thefantasyfootballers.com/episodes/week-5-waivers-streamers-the-mark-andrews-discussion/\nhttps://www.youtube.com/watch?v=936wwUq5uXI\nhttps://www.youtube.com/watch?v=XMctEFwnN1Q\nhttps://www.youtube.com/watch?v=5tYw9-UqSaU\nhttps://www.youtube.com/watch?v=K5SIps_rxOo\nhttps://www.youtube.com/watch?v=Z8uWRZjGq4A\nhttps://www.youtube.com/watch?v=Zx3-5mJO7dk\n\n# --- FantasyPros ---\nhttps://www.youtube.com/watch?v=vImEFT62Q0c\nhttps://www.youtube.com/watch?v=OkUbGHE0FXk\nhttps://www.youtube.com/watch?v=GHkw-yv-fas\nhttps://www.youtube.com/watch?v=-OCT8kiJGoQ\nhttps://www.youtube.com/watch?v=X7G56O9ZH8I\nhttps://www.youtube.com/watch?v=dOGoYAdNxAU\nhttps://www.youtube.com/watch?v=sM_a98cGOYk\nhttps://www.youtube.com/watch?v=HnqZU7D6D3s\nhttps://www.youtube.com/watch?v=zEBf5XsX-Lc\nhttps://www.youtube.com/watch?v=Vks_cHZhXJ8\nhttps://www.youtube.com/watch?v=K-j15dZmtB0\nhttps://www.youtube.com/watch?v=0Xzz8bnHb-8\n\n# --- Harris Fantasy Football ---\nhttps://www.harrisfootball.com/episode-august-14-2024\nhttps://www.harrisfootball.com/episode-august-15-2024\nhttps://www.harrisfootball.com/episode-august-16-2024\nhttps://www.harrisfootball.com/episode-august-19-2024\nhttps://www.harrisfootball.com/episode-august-20-2024\nhttps://www.harrisfootball.com/episode-august-22-2024\nhttps://www.harrisfootball.com/episode-august-23-2024\nhttps://www.harrisfootball.com/episode-august-26-2024\nhttps://www.harrisfootball.com/episode-august-27-2024\nhttps://www.harrisfootball.com/episode-august-28-2024\nhttps://www.harrisfootball.com/episode-september-3-2024\nhttps://www.harrisfootball.com/episode-september-10-2024\nhttps://www.harrisfootball.com/episode-september-17-2024\nhttps://www.harrisfootball.com/episode-october-1-2024\nhttps://www.harrisfootball.com/episode-october-15-2024\nhttps://www.harrisfootball.com/episode-november-5-2024\nhttps://www.harrisfootball.com/episode-november-12-2024\nhttps://www.harrisfootball.com/episode-december-3-2024\n\n# --- Late-Round Fantasy Football ---\nhttps://www.youtube.com/watch?v=nPzAXfQMBho\nhttps://www.youtube.com/watch?v=vQdk06ylI2E\nhttps://www.youtube.com/watch?v=Hz3h4Bd05JY\nhttps://www.youtube.com/watch?v=aM5jhknDg4s\nhttps://www.youtube.com/watch?v=-yZlPTr56po\n\n# --- theScore ---\nhttps://www.thescore.com/news/3046199/fantasy-podcast-wr-breakouts-busts-and-draft-strategy\nhttps://www.thescore.com/news/3066350/fantasy-podcast-top-waiver-adds-before-week-1\nhttps://www.thescore.com/nflfan/news/3076165\nhttps://www.thescore.com/nflfan/news/3081981/fantasy-waiver-wire-week-4\nhttps://www.thescore.com/nflfan/news/3087588/fantasy-podcast-top-waiver-adds-for-week-5-injury-roundup\nhttps://www.thescore.com/nflfan/news/3093173/fantasy-podcast-top-waiver-adds-for-week-6-injury-roundup\nhttps://www.thescore.com/nflfan/news/3098904/fantasy-waiver-wire-week-7\nhttps://www.thescore.com/nflfan/news/3110008/fantasy-waiver-wire-week-9\nhttps://www.thescore.com/nflfan/news/3116744/fantasy-podcast-top-waiver-adds-for-week-10-injury-roundup\nhttps://www.thescore.com/news/3124725/fantasy-waiver-wire-week-11\nhttps://www.thescore.com/nflfan/news/3132129\nhttps://www.thescore.com/news/3138557/fantasy-podcast-top-waiver-adds-for-week-13-injury-roundup\n\n# --- The Athletic ---\nhttps://www.youtube.com/watch?v=6yoPXpKXbLc\n\n# --- Rotoworld ---\nhttps://www.youtube.com/watch?v=CtIxJg6Gkg8\nhttps://www.youtube.com/watch?v=--DeiUID_Cg\nhttps://www.youtube.com/watch?v=_-d8CLKu1kE\nhttps://www.youtube.com/watch?v=c9DQNXKjT7I\nhttps://www.youtube.com/watch?v=ZoxRjn54xLk\nhttps://www.youtube.com/watch?v=1NGKL7clTHE\nhttps://www.youtube.com/watch?v=g9FxZ57o-uY\nhttps://www.youtube.com/watch?v=aoalfDl1Igo\n\n# --- Yahoo Fantasy Forecast ---\nhttps://www.youtube.com/watch?v=mvMpGun6ZQo\nhttps://www.youtube.com/watch?v=CC6Pkyoh2pA\nhttps://www.youtube.com/watch?v=tlg0vbkmZQQ\nhttps://www.youtube.com/watch?v=YAA9KqxTALU\nhttps://www.youtube.com/watch?v=eU0uYP8fQ-g\nhttps://www.youtube.com/watch?v=0IUw_BfIS70\nhttps://www.youtube.com/watch?v=G2tYgYSD1e8\nhttps://www.youtube.com/watch?v=zlpMrIModvc\nhttps://www.youtube.com/watch?v=4FXu6srfxpg\nhttps://www.youtube.com/watch?v=3cXx_UFr_ms\nhttps://www.youtube.com/watch?v=7rBvoToVrMY\nhttps://www.youtube.com/watch?v=ypBwdyoZMWY\nhttps://www.youtube.com/watch?v=FN17VdFDvPM\nhttps://www.youtube.com/watch?v=rIcAYN2LZCM\nhttps://www.youtube.com/watch?v=UpUvWRl3HzM\nhttps://www.youtube.com/watch?v=vqF-LiV6vlk\nhttps://www.youtube.com/watch?v=UgP0Icnrswo\nhttps://www.youtube.com/watch?v=Ii29HmizYAo\nhttps://www.youtube.com/watch?v=UE27ZB784OY\n\n# --- Fantasy Life Show ---\n# 17 Sept 2026, supplied by Matt. Nine new here; THREE MORE OF HIS WERE ALREADY IN THIS\n# FILE UNDER \"FantasyPros\", and one of the two labels is wrong:\n#     OkUbGHE0FXk   dOGoYAdNxAU   zEBf5XsX-Lc\n# They are NOT duplicated below -- a URL appears once in this file. The show label on\n# those three rows cannot be trusted for attribution until somebody opens them. The\n# notebook extraction records source_title from the panel, and the YouTube title names\n# the show, so this resolves itself at extraction; it is flagged so nobody scores an\n# analyst off a header instead.\nhttps://www.youtube.com/watch?v=C1nla3-PoKU\nhttps://www.youtube.com/watch?v=1p553H1QHJ0\nhttps://www.youtube.com/watch?v=Hqz0Sh8BFp0\nhttps://www.youtube.com/watch?v=xWZ21SFwsvM\nhttps://www.youtube.com/watch?v=MMkG43xLgQ4\nhttps://www.youtube.com/watch?v=uKhii6lNXPw\nhttps://www.youtube.com/watch?v=wGECnXlPD5M\nhttps://www.youtube.com/watch?v=5uFMu94YRRY\nhttps://www.youtube.com/watch?v=_6b545O4ZG8\n", "y2025": "# 2025 SOURCES FOR GEMINI NOTEBOOK\n# Paste EVERYTHING below the line into Add sources, Websites. One box, one paste.\n# Notebook accepts multiple URLs separated by a space or a new line.\n# ------------------------------------------------------------------\n\n# --- Establish The Run ---\nhttps://establishtherun.com/waiver-wire-analysis-week-1-7/\nhttps://establishtherun.com/waiver-wire-analysis-week-2-7/\nhttps://establishtherun.com/waiver-wire-analysis-week-10-7/\nhttps://establishtherun.com/waiver-wire-analysis-week-11-7/\nhttps://establishtherun.com/waiver-wire-analysis-week-13-7/\nhttps://www.youtube.com/watch?v=PNswzWEdZKI\n\n# --- Fantasy Footballers ---\nhttps://www.youtube.com/watch?v=XBNNZRTKCVY\nhttps://www.youtube.com/watch?v=PTBjm4FPOZ0\nhttps://www.youtube.com/watch?v=LSoK5mqCFLI\nhttps://www.thefantasyfootballers.com/episodes/week-5-waivers-full-stream-ahead-tilting-psa/\nhttps://www.youtube.com/watch?v=cCkxk0AjBEA\nhttps://www.youtube.com/watch?v=3K4v62N1_xU\nhttps://www.youtube.com/watch?v=1cYN-ziq_J0\nhttps://www.youtube.com/watch?v=665KSpjIk64\nhttps://www.youtube.com/watch?v=4E9vkI_kYqo\nhttps://www.youtube.com/watch?v=GRmCyuh5UMU\nhttps://www.youtube.com/watch?v=uymrv3ELpN0\n\n# --- FantasyPros ---\nhttps://www.youtube.com/watch?v=T2lghuaR3Wg\nhttps://www.youtube.com/watch?v=3aD9rDXRL8o\nhttps://www.youtube.com/watch?v=nA--00D6Qrk\nhttps://www.youtube.com/watch?v=gSNI9TU4XLI\nhttps://www.youtube.com/watch?v=m5Uh0uGIF20\nhttps://www.youtube.com/watch?v=aPJdyoK9x2U\nhttps://www.youtube.com/watch?v=ukw_fmVuooM\nhttps://www.youtube.com/watch?v=ELbbTj9L_lQ\n\n# --- Harris Fantasy Football ---\nhttps://www.youtube.com/watch?v=WMHNWsi27YI\nhttps://www.harrisfootball.com/episode-september-2-2025\nhttps://www.harrisfootball.com/episode-september-9-2025\nhttps://www.harrisfootball.com/episode-september-16-2025\nhttps://www.harrisfootball.com/episode-october-7-2025\nhttps://www.harrisfootball.com/episode-october-14-2025\nhttps://www.harrisfootball.com/episode-october-28-2025\nhttps://www.harrisfootball.com/episode-november-18-2025\n\n# --- Late-Round Fantasy Football ---\nhttps://www.youtube.com/watch?v=jgx4WTukKlc\nhttps://www.youtube.com/watch?v=qoqlACxHGHY\nhttps://www.youtube.com/watch?v=JApPYX0Jx5o\nhttps://www.youtube.com/watch?v=7xgG1bmj4Vc\nhttps://www.youtube.com/watch?v=EpY0Md5ijok\nhttps://www.youtube.com/watch?v=6ZQKITSkPag\nhttps://www.youtube.com/watch?v=KnU7UZ8h3Gs\nhttps://www.youtube.com/watch?v=jN_04A3o7zw\nhttps://www.youtube.com/watch?v=-BgeuhGdIU0\n\n# --- Rotoworld ---\nhttps://www.youtube.com/watch?v=3PCL02FcG3E\nhttps://www.youtube.com/watch?v=qeGqru9_e5w\nhttps://www.youtube.com/watch?v=Aqq9Op7AIUE\nhttps://www.youtube.com/watch?v=q0LTnNUs7rM\n\n# --- Yahoo Fantasy Forecast ---\nhttps://www.youtube.com/watch?v=lmK2N4_y6Mk\nhttps://www.youtube.com/watch?v=QRXzTTXdbyE\nhttps://www.youtube.com/watch?v=--NklLqet1s\nhttps://www.youtube.com/watch?v=Po-_V8OlZNI\nhttps://www.youtube.com/watch?v=LKDs4auXPB4\n\n# --- Fantasy Life Show ---\nhttps://www.youtube.com/watch?v=6usosunBBhM\nhttps://www.youtube.com/watch?v=pdmqVaQU4sU\nhttps://www.youtube.com/watch?v=xaLstnY_VP0\n"};
+document.querySelectorAll('.copy').forEach(function(b){
+  b.addEventListener('click', function(){
+    const t = DATA[b.dataset.key];
+    if (t === undefined) return;
+    navigator.clipboard.writeText(t).then(function(){
+      b.textContent = 'copied'; b.classList.add('done');
+      setTimeout(function(){ b.textContent = 'copy'; b.classList.remove('done'); }, 1600);
+    });
+  });
+});
+document.querySelectorAll('.peek').forEach(function(b){
+  b.addEventListener('click', function(){
+    const p = document.getElementById('pre-' + b.dataset.for);
+    p.hidden = !p.hidden;
+    b.textContent = p.hidden ? 'show' : 'hide';
+  });
+});
+document.querySelectorAll('.show input[type=checkbox]').forEach(function(c){
+  c.addEventListener('change', function(){
+    c.closest('.show').classList.toggle('on', c.checked);
+  });
+});
+</script>
+</body>
+</html>

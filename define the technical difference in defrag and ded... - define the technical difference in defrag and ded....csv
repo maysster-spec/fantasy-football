@@ -1,0 +1,5 @@
+Dimension,Defragmentation (Defrag),Deduplication (Dedupe)
+Primary Domain,Hardware memory (VRAM / RAM) and storage layout,"Dataset tokens, embeddings, corpus text, or vector stores"
+Target Problem,Non-contiguous memory allocation causing false Out-Of-Memory (OOM) errors and I/O latency,"Repeated documents/tokens causing model overfitting, memorization, training bias, and wasted compute"
+Data Integrity,Content-preserving; no information or sample count changes,"Content-reducing; removes duplicate samples, tokens, or rows"
+Common Algorithms / Tooling,"PagedAttention (vLLM), torch.cuda.empty_cache(), Arrow/Parquet file compaction","Exact hashing (SHA-256), MinHash LSH, SemDeDup, suffix arrays"

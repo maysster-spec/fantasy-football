@@ -1,0 +1,167 @@
+E-Discovery Keeper League - League Settings Summary
+
+================================================================================
+Basic Settings
+================================================================================
+League Name: E-Discovery Keeper League
+Number of Teams: 12
+Scoring Type: Head to Head Points, 0.5 Points Per Reception (PPR)
+Format: League Manager
+Make League Viewable to Public: No
+Auto Reactivate: No
+Lineup Protection: Off
+
+================================================================================
+Draft Settings
+================================================================================
+Draft Type: Snake
+Draft Date: Draft not scheduled yet
+Time Per Pick: 60 seconds
+Draft Order: Manually Set by League Manager
+Allow Draft Pick Trading: No
+
+================================================================================
+Roster Settings & Position Limits
+================================================================================
+Roster Size: 15
+Total Starters: 9
+Total Bench: 6
+Injured Reserve (IR): 3
+
+Position Limits:
+- Quarterback (QB)                    : 1 Starter  | Max 3
+- Team Quarterback (TQB)              : 0 Starters | No Limit
+- Running Back (RB)                   : 2 Starters | Max 6
+- Running Back/Wide Receiver (RB/WR)  : 0 Starters | N/A
+- Wide Receiver (WR)                  : 2 Starters | Max 6
+- Wide Receiver/Tight End (WR/TE)     : 0 Starters | N/A
+- Tight End (TE)                      : 1 Starter  | Max 3
+- Flex (RB/WR/TE)                     : 1 Starter  | N/A
+- Offensive Player Utility (OP)       : 0 Starters | N/A
+- Team Defense/Special Teams (D/ST)   : 1 Starter  | Max 3
+- Place Kicker (K)                    : 1 Starter  | Max 3
+- Bench (BE)                          : 6 Slots    | N/A
+- Injured Reserve (IR)                : 3 Slots    | N/A
+
+================================================================================
+Scoring Rules
+================================================================================
+Passing:
+- Every 5 passing yards (PY5): 0.2 pts
+- TD Pass (PTD): 6 pts
+- Interceptions Thrown (INT): -2 pts
+- 2pt Passing Conversion (2PC): 2 pts
+
+Rushing:
+- Rushing Yards (RY): 0.1 pts per yard
+- TD Rush (RTD): 6 pts
+- 2pt Rushing Conversion (2PR): 2 pts
+
+Receiving:
+- Receiving Yards (REY): 0.1 pts per yard
+- Each reception (REC): 0.5 pts
+- TD Reception (RETD): 6 pts
+- 2pt Receiving Conversion (2PRE): 2 pts
+
+Kicking:
+- Each PAT Made (PAT): 1 pt
+- Total FG Missed (FGM): -1 pt
+- FG Made (0-39 yards) (FG0): 3 pts
+- FG Made (40-49 yards) (FG40): 4 pts
+- FG Made (50-59 yards) (FG50): 5 pts
+- FG Made (60+ yards) (FG60): 5 pts
+
+Defense / Special Teams & Misc:
+- Kickoff Return TD (KRTD): 6 pts
+- Punt Return TD (PRTD): 6 pts
+- Interception Return TD (INTTD): 6 pts
+- Fumble Return TD (FRTD): 6 pts
+- Blocked Punt or FG return for TD (BLKKRTD): 6 pts
+- Each Sack (SK): 1 pt
+- Blocked Punt, PAT or FG (BLKK): 2 pts
+- Each Interception (INT): 2 pts
+- Each Fumble Recovered (FR): 2 pts
+- Each Safety (SF): 4 pts
+- Total Fumbles Lost (FUML): -2 pts
+
+Points Allowed (Defense):
+- 0 points allowed (PA0): 10 pts
+- 1-6 points allowed (PA1): 7 pts
+- 7-13 points allowed (PA7): 4 pts
+- 14-17 points allowed (PA14): 1 pt
+- 22-27 points allowed (PA22): -1 pt
+- 28-34 points allowed (PA28): -4 pts
+- 35-45 points allowed (PA35): -7 pts
+- 46+ points allowed (PA46): -10 pts
+
+================================================================================
+Teams and Divisions
+================================================================================
+Division 1:
+- The Kunning Stunts
+- Multiple Scorgasms
+- Send'em Packin
+- Window is Always Open
+- Jaxson Bates
+- Bloodied Castaways
+- Sentinel Sea Stallions
+- The Poetry of Junkyard Juggers
+- Breece up those Tets
+- NickCannonFanClub
+- ChatCTE
+- We Got This Shit
+
+================================================================================
+Player Rules & Waiver Rules
+================================================================================
+Player Rules:
+- Observe ESPN's Undroppable Players List: Yes
+- Player Universe: NFL
+
+Acquisition and Waiver Rules:
+- Lineup Changes: Lock individually at Scheduled Gametime
+- Player Acquisition System: Waivers
+- Season Acquisition Limit: No Limit
+- Waiver Period: 2 Days
+- Waiver Order: Reset Each Week to Inverse Order of Standings
+- Lock Transactions for Eliminated Teams During Playoffs: No
+
+================================================================================
+Trade & Keeper Rules
+================================================================================
+Trade Rules:
+- Trade Limit: No Limit
+- Trade Deadline: No deadline
+- Trade Review Period: 2 Days
+- Votes Required to Veto Trade: 4
+
+Keeper Rules:
+- Use Keepers for 2026 Season: Yes
+- 2026 Keepers Per Team: 1
+- 2026 Keeper Lock Date: Lock One Hour Before Draft
+- 2026 Keeper Designated Round: End of Draft
+- Use Keepers for 2027 Season: Yes
+- 2027 Keepers Per Team: 1
+- 2027 Keeper Lock Date: Lock One Hour Before Draft
+
+================================================================================
+Regular Season & Playoff Setup
+================================================================================
+Regular Season:
+- Start of Regular Season: NFL Week 1
+- Weeks Per Matchup: 1
+- Regular Season Matchups: 14
+- Matchup Tie Breaker: No tie breakers
+- Home Field Advantage: None
+- Bonus Wins and Losses: No
+
+Playoffs:
+- Playoff Teams: 6
+- Weeks In Round 1 Playoff Matchup: 1
+- Weeks In Round 2 Playoff Matchup: 1
+- Weeks In Championship Round: 1
+- Playoff Seeding Tie Breaker: Head to Head Record
+- Playoff Home Field Advantage: None
+- Allow for Playoff Bracket Reseeding: Off
+- Lock Transactions for Eliminated Teams During Playoffs: No
+- Consolation Ladder: Yes

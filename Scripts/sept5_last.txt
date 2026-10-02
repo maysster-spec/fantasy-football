@@ -1,0 +1,61 @@
+board : G:\My Drive\_Fantasy\2026\Scripts\live_draft\board_v8_fixed.csv  (480 rows)
+pull  : G:\My Drive\_Fantasy\2026\Scripts\..\Source\espn_projections_2026_20260907_1258.csv
+
+  pull integrity: 499 live projections (>= 400 required)  OK
+
+  drift vs espn_projections_2026_20260905_1040.csv: 0 of 700 projections changed
+  !! ESPN HAS NOT RE-FORECAST since that pull. Everything below is arithmetic on
+     IDENTICAL numbers -- a FREEZE here proves the pipeline works, NOT that the
+     board was re-validated against anything new. The real work today is the
+     news sweep, not this verdict.
+
+  !! 66 board players are absent from the new pull -- they keep their old projection for this test.
+     1 of them are INSIDE the top 161 and their rank is therefore unretested:
+       rank 121  Tank Dell (WR)
+==================================================================
+  BOARD-ORDER TEST (doc 64)          top 161 compared
+==================================================================
+  identical rank             45 / 161
+  within 2 slots             97 / 161      <- the threshold is 150
+  moved more than 5 slots    19
+  dropped out of the 161      4
+
+  replacement levels, recomputed on the FULL new pull:
+    RB30   164.084   shipped  168.589   delta  -4.505   <-- MOVED, 4.1b says +/-1.5 VBD matters
+    WR30   163.389   shipped  163.540   delta  -0.151
+    QB12   340.728   shipped  341.603   delta  -0.875
+    TE12   138.226   shipped  140.295   delta  -2.069   <-- MOVED, 4.1b says +/-1.5 VBD matters
+
+  your picks, +/-2 window still intact?
+    pick   8   5/5 unchanged
+    pick  17   5/5 unchanged
+    pick  32   5/5 unchanged
+    pick  41   5/5 unchanged
+    pick  56   4/5 unchanged
+    pick  65   4/5 unchanged
+    pick  80   3/5 unchanged
+    pick  89   3/5 unchanged
+
+  projections that moved more than 25 points (16):
+    Deshaun Watson           QB    140.4 ->    88.7 ( -51.6)   board rank 441 -> 444
+    Isiah Pacheco            RB    114.9 ->    66.6 ( -48.3)   board rank 143 -> 209
+    J.J. McCarthy            QB     46.3 ->    12.0 ( -34.4)   board rank 446 -> 456
+    Emari Demercado          RB     55.9 ->    22.5 ( -33.4)   board rank 228 -> 344
+    De'Zhaun Stribling       WR    109.0 ->   134.1 ( +25.1)   board rank 145 -> 116
+    Najee Harris             RB     45.9 ->    72.4 ( +26.5)   board rank 252 -> 199
+    Kevin Coleman Jr.        WR     26.1 ->    53.4 ( +27.3)   board rank 313 -> 232
+    Chris Brooks             RB     30.1 ->    61.2 ( +31.1)   board rank 317 -> 221
+    Kyler Murray             QB    289.3 ->   327.2 ( +37.9)   board rank 141 -> 90
+    Kayshon Boutte           WR     72.3 ->   113.4 ( +41.1)   board rank 188 -> 144
+    Jacob Saylors            RB      0.3 ->    45.8 ( +45.5)   board rank 432 -> 259
+    MarShawn Lloyd           RB     78.2 ->   124.4 ( +46.2)   board rank 184 -> 132
+    Shedeur Sanders          QB    112.6 ->   162.7 ( +50.1)   board rank 444 -> 441
+    Brashard Smith           RB      1.0 ->    51.5 ( +50.5)   board rank 427 -> 242
+    Malik Davis              RB      0.0 ->    53.5 ( +53.5)   board rank 437 -> 240
+    Josh Jacobs              RB      0.0 ->   152.5 (+152.5)   board rank 435 -> 93
+    ^ CHECK THE NEWS ON EACH. A move this size has a reason.
+
+==================================================================
+  VERDICT: REBUILD.  Only 97/161 held within 2 slots.
+  doc 62 section 5 is now live -- read it before doing anything else.
+==================================================================

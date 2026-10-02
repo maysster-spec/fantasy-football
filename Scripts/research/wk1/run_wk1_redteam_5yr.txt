@@ -1,0 +1,118 @@
+seasons used: [2021, 2022, 2023, 2024, 2025]
+population: 143 team-seasons
+
+A. DOC 300 AS PUBLISHED   n=143
+  RB2 share of week-1 RB work      n  wks 2-14 ppg  reached 9.92
+  under 20%                       44          4.99           7%
+  20 to 30%                       35          5.22          11%
+  30 to 40%                       36          8.35          39%
+  40% or more                     28         10.28          50%
+  ALL                            143          6.93          24%
+  35% or more (n=45) minus under 35% (n=98): ppg +3.89 p=0.0000 | startable +29% p=0.0000
+
+B. IS 35% A CHOSEN CUT? every split, and a cut-free rank correlation
+   15% or more (n=110) minus under 15% (n=33): ppg +2.51 p=0.0010 | startable +24% p=0.0015
+   20% or more (n=99) minus under 20% (n=44): ppg +2.80 p=0.0005 | startable +26% p=0.0005
+   25% or more (n=80) minus under 25% (n=63): ppg +3.52 p=0.0000 | startable +27% p=0.0000
+   30% or more (n=64) minus under 30% (n=79): ppg +4.10 p=0.0000 | startable +35% p=0.0000
+   35% or more (n=45) minus under 35% (n=98): ppg +3.89 p=0.0000 | startable +29% p=0.0000
+   40% or more (n=28) minus under 40% (n=115): ppg +4.17 p=0.0000 | startable +32% p=0.0005
+   45% or more (n=11) minus under 45% (n=132): ppg +3.65 p=0.0035 | startable +33% p=0.0222
+   cut-free Spearman(share, ppg) = +0.473
+
+C1. LEAD BACK PLAYED EVERY WEEK 2-14 (the confound removed)   n=63
+  RB2 share of week-1 RB work      n  wks 2-14 ppg  reached 9.92
+  under 20%                       21          3.65           0%
+  20 to 30%                       18          3.95           0%
+  30 to 40%                       15          7.45          20%
+  40% or more                      9         10.15          44%
+  ALL                             63          5.57          11%
+  35% or more (n=17) minus under 35% (n=46): ppg +5.08 p=0.0000 | startable +33% p=0.0008
+
+C2. LEAD BACK MISSED AT LEAST ONE WEEK 2-14   n=80
+  RB2 share of week-1 RB work      n  wks 2-14 ppg  reached 9.92
+  under 20%                       23          6.20          13%
+  20 to 30%                       17          6.56          24%
+  30 to 40%                       21          8.99          52%
+  40% or more                     19         10.34          53%
+  ALL                             80          7.99          35%
+
+C3. ALL TEAMS, RB2 SCORED ONLY IN WEEKS THE LEAD BACK PLAYED   n=141
+  RB2 share of week-1 RB work      n  wks 2-14 ppg  reached 9.92
+  under 20%                       43          4.82           7%
+  20 to 30%                       34          4.86           6%
+  30 to 40%                       36          7.99          33%
+  40% or more                     28         10.14          43%
+  ALL                            141          6.70          21%
+
+   is the predictor correlated with the confound?
+   under 20%      n= 44  lead missed a game  23/44  (52%)  mean weeks missed 1.89
+   20 to 30%      n= 35  lead missed a game  17/35  (49%)  mean weeks missed 1.54
+   30 to 40%      n= 36  lead missed a game  21/36  (58%)  mean weeks missed 1.67
+   40% or more    n= 28  lead missed a game  19/28  (68%)  mean weeks missed 2.36
+
+D. CLAIMABLE? RB2 startable the PRIOR season = already rostered everywhere.
+   29 of 143 team-seasons were not claims at all.
+   under 20%        4 of 44  (9%) Antonio Gibson, D'Andre Swift, Rachaad White, Ronald Jones
+   20 to 30%        5 of 35  (14%) Austin Ekeler, Brian Robinson, Devin Singletary, Raheem Mostert, Rico Dowdle
+   30 to 40%        6 of 36  (17%) Aaron Jones, Aaron Jones, Breece Hall, Clyde Edwards-Helaire, Kareem Hunt
+   40% or more     14 of 28  (50%) Aaron Jones, David Montgomery, Ezekiel Elliott, Gus Edwards, Jahmyr Gibbs
+
+D1. CLAIMABLE ONLY   n=114
+  RB2 share of week-1 RB work      n  wks 2-14 ppg  reached 9.92
+  under 20%                       40          4.67           5%
+  20 to 30%                       30          4.70           7%
+  30 to 40%                       30          8.05          37%
+  40% or more                     14         11.04          64%
+  ALL                            114          6.35          21%
+  35% or more (n=27) minus under 35% (n=87): ppg +4.24 p=0.0000 | startable +36% p=0.0008
+
+D2. CLAIMABLE AND THE LEAD BACK NEVER MISSED A WEEK   n=46
+  RB2 share of week-1 RB work      n  wks 2-14 ppg  reached 9.92
+  under 20%                       19          3.43           0%
+  20 to 30%                       16          3.85           0%
+  30 to 40%                       10          6.48          10%
+  40% or more                      1         12.64         100%
+  ALL                             46          4.44           4%
+  35% or more (n=5) minus under 35% (n=41): ppg +3.94 p=0.0135 | startable +18% p=0.2087
+
+D3. CLAIMABLE AND THE LEAD BACK MISSED TIME  <-- the cell Kaelon Black is in   n=68
+  RB2 share of week-1 RB work      n  wks 2-14 ppg  reached 9.92
+  under 20%                       21          5.80          10%
+  20 to 30%                       14          5.66          14%
+  30 to 40%                       20          8.84          50%
+  40% or more                     13         10.91          62%
+  ALL                             68          7.64          32%
+  35% or more (n=22) minus under 35% (n=46): ppg +3.43 p=0.0010 | startable +33% p=0.0092
+
+E. WAS THE MAN CALLED "THE LEAD BACK" ACTUALLY THE LEAD BACK?
+   (did he lead his own team in weeks 2-14 carries plus targets)
+   under 20%      n= 44  labelled RB1 did NOT keep the lead:  11 (25%)
+   20 to 30%      n= 35  labelled RB1 did NOT keep the lead:   9 (26%)
+   30 to 40%      n= 36  labelled RB1 did NOT keep the lead:  15 (42%)
+   40% or more    n= 28  labelled RB1 did NOT keep the lead:  13 (46%)
+   overall 48 of 143 (34%)
+
+   the 40%+ rows where the labels were the wrong way round:
+    2021 ARI James Conner           50% behind Chase Edmonds         ->  16.8 ppg STARTABLE  (that "lead back" kept 30% of the work)
+    2025 KC  Kareem Hunt            50% behind Isiah Pacheco         ->  10.1 ppg STARTABLE  (that "lead back" kept 32% of the work)
+    2024 DET Jahmyr Gibbs           49% behind David Montgomery      ->  17.0 ppg STARTABLE  (that "lead back" kept 47% of the work)
+    2023 ATL Bijan Robinson         47% behind Tyler Allgeier        ->  12.6 ppg STARTABLE  (that "lead back" kept 37% of the work)
+    2022 NE  Rhamondre Stevenson    45% behind Damien Harris         ->  14.0 ppg STARTABLE  (that "lead back" kept 26% of the work)
+    2023 LA  Kyren Williams         44% behind Cam Akers             ->  19.3 ppg STARTABLE  (that "lead back" kept 0% of the work)
+    2022 BUF Devin Singletary       43% behind Zack Moss             ->  10.2 ppg STARTABLE  (that "lead back" kept 4% of the work)
+    2024 LV  Alexander Mattison     42% behind Zamir White           ->   8.8 ppg           (that "lead back" kept 21% of the work)
+    2023 PIT Najee Harris           42% behind Jaylen Warren         ->   9.6 ppg           (that "lead back" kept 44% of the work)
+    2022 DET Jamaal Williams        42% behind D'Andre Swift         ->  12.9 ppg STARTABLE  (that "lead back" kept 25% of the work)
+    2022 DEN Melvin Gordon          41% behind Javonte Williams      ->   7.6 ppg           (that "lead back" kept 15% of the work)
+    2023 CLE Jerome Ford            41% behind Nick Chubb            ->  11.9 ppg STARTABLE  (that "lead back" kept 3% of the work)
+    2022 DAL Tony Pollard           40% behind Ezekiel Elliott       ->  16.7 ppg STARTABLE  (that "lead back" kept 45% of the work)
+
+E1. ONLY ROWS WHERE THE LABELLED LEAD BACK KEPT THE JOB   n=95
+  RB2 share of week-1 RB work      n  wks 2-14 ppg  reached 9.92
+  under 20%                       33          4.51           3%
+  20 to 30%                       26          4.64           8%
+  30 to 40%                       21          6.25          19%
+  40% or more                     15          8.01          27%
+  ALL                             95          5.48          12%
+  35% or more (n=23) minus under 35% (n=72): ppg +2.46 p=0.0015 | startable +8% p=0.2560

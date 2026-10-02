@@ -1,0 +1,161 @@
+red zone: 12273 player-weeks with a red-zone touch, 2663 team-weeks; league carries inside the 20 per team-game 4.66, targets 4.31
+id join check: 0 player-weeks where red-zone carries or targets exceed the official weekly count (0 is the pass mark; a handful is nflverse reconciling its own feeds); team-weeks with no pbp row 1.94%
+
+POPULATION n=9999  WR 4666  RB 2735  TE 2598  (xfp_backtest.py reported 9999: WR 4666 RB 2735 TE 2598)
+base rates: spike 4.3%  startable w+1 20.5%  startable next four 17.4% (n=9393)  next-four mean 5.48
+red zone in the pool: rz2 mean 8.3%, zero in both games 36.0%, ez2 mean 0.32, zero 75.7%;  corr(rz2, xfp2) 0.592, corr(ez2, xfp2) 0.368, corr(rz2, snap_pct) 0.121
+
+==== (a) Spearman rho with NEXT4 (2+ games ahead), and with w+1, by position and pooled ====
+ALL n= 9393  rho with NEXT4: xfp2 0.497  snap 0.390  RZ2 0.281  EZ2 0.118  rz week w only 0.221   |  rho with w+1: RZ2 0.214  EZ2 0.079
+      partial (rank-residualised on xfp2): RZ2 -0.013  EZ2 -0.067
+RB  n= 2566  rho with NEXT4: xfp2 0.526  snap 0.516  RZ2 0.380  EZ2 0.020  rz week w only 0.306   |  rho with w+1: RZ2 0.321  EZ2 0.016
+      partial (rank-residualised on xfp2): RZ2 -0.022  EZ2 -0.043
+WR  n= 4401  rho with NEXT4: xfp2 0.473  snap 0.447  RZ2 0.247  EZ2 0.200  rz week w only 0.188   |  rho with w+1: RZ2 0.175  EZ2 0.125
+      partial (rank-residualised on xfp2): RZ2 -0.011  EZ2 -0.033
+TE  n= 2426  rho with NEXT4: xfp2 0.493  snap 0.461  RZ2 0.225  EZ2 0.120  rz week w only 0.153   |  rho with w+1: RZ2 0.164  EZ2 0.088
+      partial (rank-residualised on xfp2): RZ2 -0.077  EZ2 -0.127
+
+==== (b) OLS of NEXT4 (2+ games ahead) and of start4 (0/1, linear probability) on xfp2 + snap_pct + red zone ====
+     share in PERCENT, so the RZ2 coefficient x 10 is points of NEXT4 per 10 points of share (the falsifier bar is +0.10)
+  ALL NEXT4  n= 9393  base R2 0.240 -> +rz2 0.242 / +ez2 0.249 / +both 0.252
+        rz2 RAW (nothing held): +1.190 per 10 pts share (se 0.047)
+        + rz2:  xfp2 +0.447 (se 0.018)  snap +0.282/10pts (se 0.018)  RZ2 +0.246 per 10 pts share (se 0.054, t +4.6)
+        + ez2:  xfp2 +0.540 (se 0.016)  EZ2 -0.662 per end-zone target (se 0.065, t -10.2)
+        + both: RZ2 +0.280/10pts (se 0.054)  EZ2 -0.685/tgt (se 0.065)
+  ALL start4 n= 9393  base R2 0.117 -> +rz2 0.118 / +ez2 0.121 / +both 0.121
+        rz2 RAW (nothing held): +7.561 per 10 pts share (se 0.459)
+        + rz2:  xfp2 +3.076 (se 0.191)  snap +1.560/10pts (se 0.176)  RZ2 +1.177 per 10 pts share (se 0.554, t +2.1)
+        + ez2:  xfp2 +3.558 (se 0.159)  EZ2 -3.827 per end-zone target (se 0.693, t -5.5)
+        + both: RZ2 +1.374/10pts (se 0.557)  EZ2 -3.942/tgt (se 0.696)
+  ALL NEXT4  POSITION HELD (RB and TE dummies), n=9393:  RZ2 +0.000 per 10 pts share (se 0.056, t +0.0);  EZ2 -0.389 per end-zone target (se 0.066);  isRB +1.59  isTE -0.09
+  ALL start4 POSITION HELD (RB and TE dummies), n=9393:  RZ2 -0.332 per 10 pts share (se 0.578, t -0.6);  EZ2 -2.758 per end-zone target (se 0.716);  isRB +9.38  isTE +5.44
+  RB  NEXT4  n= 2566  base R2 0.273 -> +rz2 0.273 / +ez2 0.274 / +both 0.274
+        rz2 RAW (nothing held): +1.203 per 10 pts share (se 0.067)
+        + rz2:  xfp2 +0.370 (se 0.044)  snap +0.708/10pts (se 0.067)  RZ2 -0.081 per 10 pts share (se 0.093, t -0.9)
+        + ez2:  xfp2 +0.353 (se 0.035)  EZ2 -0.673 per end-zone target (se 0.371, t -1.8)
+        + both: RZ2 -0.075/10pts (se 0.093)  EZ2 -0.658/tgt (se 0.373)
+  RB  start4 n= 2566  base R2 0.167 -> +rz2 0.168 / +ez2 0.167 / +both 0.168
+        rz2 RAW (nothing held): +7.815 per 10 pts share (se 0.642)
+        + rz2:  xfp2 +2.897 (se 0.415)  snap +4.356/10pts (se 0.591)  RZ2 -1.333 per 10 pts share (se 0.916, t -1.5)
+        + ez2:  xfp2 +2.557 (se 0.326)  EZ2 -3.361 per end-zone target (se 4.028, t -0.8)
+        + both: RZ2 -1.306/10pts (se 0.917)  EZ2 -3.113/tgt (se 4.035)
+  WR  NEXT4  n= 4401  base R2 0.240 -> +rz2 0.240 / +ez2 0.242 / +both 0.243
+        rz2 RAW (nothing held): +1.416 per 10 pts share (se 0.097)
+        + rz2:  xfp2 +0.395 (se 0.025)  snap +0.380/10pts (se 0.026)  RZ2 +0.092 per 10 pts share (se 0.100, t +0.9)
+        + ez2:  xfp2 +0.440 (se 0.026)  EZ2 -0.256 per end-zone target (se 0.091, t -2.8)
+        + both: RZ2 +0.271/10pts (se 0.113)  EZ2 -0.369/tgt (se 0.104)
+  WR  start4 n= 4401  base R2 0.107 -> +rz2 0.107 / +ez2 0.107 / +both 0.108
+        rz2 RAW (nothing held): +9.059 per 10 pts share (se 0.911)
+        + rz2:  xfp2 +2.945 (se 0.262)  snap +1.409/10pts (se 0.240)  RZ2 +0.604 per 10 pts share (se 1.012, t +0.6)
+        + ez2:  xfp2 +3.173 (se 0.260)  EZ2 -1.164 per end-zone target (se 0.940, t -1.2)
+        + both: RZ2 +1.464/10pts (se 1.129)  EZ2 -1.772/tgt (se 1.047)
+  TE  NEXT4  n= 2426  base R2 0.260 -> +rz2 0.262 / +ez2 0.271 / +both 0.271
+        rz2 RAW (nothing held): +0.999 per 10 pts share (se 0.106)
+        + rz2:  xfp2 +0.445 (se 0.031)  snap +0.442/10pts (se 0.035)  RZ2 -0.238 per 10 pts share (se 0.104, t -2.3)
+        + ez2:  xfp2 +0.491 (se 0.031)  EZ2 -0.615 per end-zone target (se 0.105, t -5.9)
+        + both: RZ2 -0.014/10pts (se 0.113)  EZ2 -0.610/tgt (se 0.115)
+  TE  start4 n= 2426  base R2 0.115 -> +rz2 0.116 / +ez2 0.123 / +both 0.123
+        rz2 RAW (nothing held): +7.256 per 10 pts share (se 1.217)
+        + rz2:  xfp2 +3.428 (se 0.412)  snap +2.932/10pts (se 0.414)  RZ2 -1.946 per 10 pts share (se 1.338, t -1.5)
+        + ez2:  xfp2 +3.897 (se 0.392)  EZ2 -5.755 per end-zone target (se 1.296, t -4.4)
+        + both: RZ2 +0.199/10pts (se 1.431)  EZ2 -5.828/tgt (se 1.385)
+
+==== (c) top-fifth cells: red zone top fifth vs not, inside and outside the xfp2 top fifth ====
+
+  ALL RZ2 share: top fifth is >= 14.3 (21% of the pool clears it, ties included); xfp2 top fifth >= 8.02
+    xfp2 top fifth AND RZ2 share top fifth                   n= 1088  spike  12.1%  start w+1  39.2%  start next4  42.1%  next4  8.98
+    xfp2 top fifth, RZ2 share NOT top fifth                  n=  912  spike   7.7%  start w+1  33.4%  start next4  35.0%  next4  8.07
+    xfp2 NOT top fifth, RZ2 share top fifth                  n=  998  spike   3.6%  start w+1  20.6%  start next4  15.9%  next4  5.82
+    neither                                                  n= 7001  spike   2.7%  start w+1  15.8%  start next4  11.4%  next4  4.55
+    INSIDE the xfp2 top fifth, RZ2 share top fifth minus the rest: start4 +7.0 points (se 2.2, permutation p=0.002); next4 +0.91 (se 0.20); spike +4.5 points   [falsifier bar +3 on start4]
+
+  ALL EZ2 end-zone targets: top fifth is >= 1.0 (24% of the pool clears it, ties included); xfp2 top fifth >= 8.02
+    xfp2 top fifth AND EZ2 end-zone targets top fifth        n=  892  spike   9.3%  start w+1  34.6%  start next4  35.7%  next4  8.10
+    xfp2 top fifth, EZ2 end-zone targets NOT top fifth       n= 1108  spike  10.7%  start w+1  38.2%  start next4  41.4%  next4  8.95
+    xfp2 NOT top fifth, EZ2 end-zone targets top fifth       n= 1542  spike   3.2%  start w+1  19.7%  start next4  14.0%  next4  5.04
+    neither                                                  n= 6457  spike   2.8%  start w+1  15.6%  start next4  11.4%  next4  4.63
+    INSIDE the xfp2 top fifth, EZ2 end-zone targets top fifth minus the rest: start4 -5.7 points (se 2.2, permutation p=0.015); next4 -0.85 (se 0.20); spike -1.4 points   [falsifier bar +3 on start4]
+
+  RB  RZ2 share: top fifth is >= 25.0 (21% of the pool clears it, ties included); xfp2 top fifth >= 8.91
+    xfp2 top fifth AND RZ2 share top fifth                   n=  363  spike  15.2%  start w+1  41.6%  start next4  47.3%  next4  9.63
+    xfp2 top fifth, RZ2 share NOT top fifth                  n=  184  spike  12.5%  start w+1  38.6%  start next4  44.3%  next4  9.46
+    xfp2 NOT top fifth, RZ2 share top fifth                  n=  212  spike   7.1%  start w+1  23.6%  start next4  21.8%  next4  6.83
+    neither                                                  n= 1976  spike   3.2%  start w+1  15.1%  start next4  12.5%  next4  4.95
+    INSIDE the xfp2 top fifth, RZ2 share top fifth minus the rest: start4 +3.0 points (se 4.6, permutation p=0.593); next4 +0.17 (se 0.45); spike +2.7 points   [falsifier bar +3 on start4]
+
+  RB  EZ2 end-zone targets: top fifth is >= 0.0 (100% of the pool clears it, ties included); xfp2 top fifth >= 8.91
+    xfp2 top fifth AND EZ2 end-zone targets top fifth        n=  547  spike  14.3%  start w+1  40.6%  start next4  46.3%  next4  9.57
+    xfp2 top fifth, EZ2 end-zone targets NOT top fifth       n=    0
+    xfp2 NOT top fifth, EZ2 end-zone targets top fifth       n= 2188  spike   3.6%  start w+1  16.0%  start next4  13.4%  next4  5.13
+    neither                                                  n=    0
+
+  WR  RZ2 share: top fifth is >= 11.1 (20% of the pool clears it, ties included); xfp2 top fifth >= 8.23
+    xfp2 top fifth AND RZ2 share top fifth                   n=  476  spike   9.7%  start w+1  35.7%  start next4  37.1%  next4  8.58
+    xfp2 top fifth, RZ2 share NOT top fifth                  n=  458  spike   8.3%  start w+1  35.4%  start next4  33.5%  next4  8.17
+    xfp2 NOT top fifth, RZ2 share top fifth                  n=  469  spike   2.6%  start w+1  20.5%  start next4  14.1%  next4  5.55
+    neither                                                  n= 3263  spike   3.2%  start w+1  16.0%  start next4  10.4%  next4  4.69
+    INSIDE the xfp2 top fifth, RZ2 share top fifth minus the rest: start4 +3.6 points (se 3.2, permutation p=0.270); next4 +0.41 (se 0.29); spike +1.4 points   [falsifier bar +3 on start4]
+
+  WR  EZ2 end-zone targets: top fifth is >= 1.0 (33% of the pool clears it, ties included); xfp2 top fifth >= 8.23
+    xfp2 top fifth AND EZ2 end-zone targets top fifth        n=  618  spike   9.9%  start w+1  34.3%  start next4  35.3%  next4  8.38
+    xfp2 top fifth, EZ2 end-zone targets NOT top fifth       n=  316  spike   7.3%  start w+1  38.0%  start next4  35.4%  next4  8.38
+    xfp2 NOT top fifth, EZ2 end-zone targets top fifth       n=  925  spike   3.5%  start w+1  19.6%  start next4  13.5%  next4  5.32
+    neither                                                  n= 2807  spike   3.0%  start w+1  15.5%  start next4  10.0%  next4  4.63
+    INSIDE the xfp2 top fifth, EZ2 end-zone targets top fifth minus the rest: start4 -0.1 points (se 3.4, permutation p=1.000); next4 +0.00 (se 0.31); spike +2.6 points   [falsifier bar +3 on start4]
+
+  TE  RZ2 share: top fifth is >= 11.1 (20% of the pool clears it, ties included); xfp2 top fifth >= 6.78
+    xfp2 top fifth AND RZ2 share top fifth                   n=  266  spike   5.3%  start w+1  30.5%  start next4  31.5%  next4  6.91
+    xfp2 top fifth, RZ2 share NOT top fifth                  n=  254  spike   3.9%  start w+1  30.7%  start next4  32.5%  next4  7.05
+    xfp2 NOT top fifth, RZ2 share top fifth                  n=  265  spike   2.6%  start w+1  22.6%  start next4  20.0%  next4  5.30
+    neither                                                  n= 1813  spike   2.2%  start w+1  16.9%  start next4  12.8%  next4  4.18
+    INSIDE the xfp2 top fifth, RZ2 share top fifth minus the rest: start4 -1.0 points (se 4.2, permutation p=0.848); next4 -0.15 (se 0.31); spike +1.3 points   [falsifier bar +3 on start4]
+
+  TE  EZ2 end-zone targets: top fifth is >= 1.0 (31% of the pool clears it, ties included); xfp2 top fifth >= 6.78
+    xfp2 top fifth AND EZ2 end-zone targets top fifth        n=  310  spike   6.8%  start w+1  32.9%  start next4  31.3%  next4  6.80
+    xfp2 top fifth, EZ2 end-zone targets NOT top fifth       n=  210  spike   1.4%  start w+1  27.1%  start next4  33.0%  next4  7.25
+    xfp2 NOT top fifth, EZ2 end-zone targets top fifth       n=  493  spike   2.8%  start w+1  19.5%  start next4  14.6%  next4  4.50
+    neither                                                  n= 1585  spike   2.1%  start w+1  17.1%  start next4  13.4%  next4  4.27
+    INSIDE the xfp2 top fifth, EZ2 end-zone targets top fifth minus the rest: start4 -1.7 points (se 4.3, permutation p=0.779); next4 -0.45 (se 0.32); spike +5.3 points   [falsifier bar +3 on start4]
+
+  ALL, POSITION HELD: each position cut at its own top fifths, then stacked
+    xfp2 top fifth AND RZ2 share top fifth (own cuts)        n= 1105  spike  10.4%  start w+1  36.4%  start next4  39.1%  next4  8.52
+    xfp2 top fifth, RZ2 share NOT top fifth (own cuts)       n=  896  spike   7.9%  start w+1  34.7%  start next4  35.4%  next4  8.12
+    INSIDE the xfp2 top fifth, RZ2 share top fifth minus the rest, position held: start4 +3.7 points (se 2.2, within-position permutation p=0.179); next4 +0.40; spike +2.5 points
+    xfp2 top fifth AND EZ2 end-zone targets top fifth (own cuts) n= 1475  spike  10.8%  start w+1  36.3%  start next4  38.5%  next4  8.49
+    xfp2 top fifth, EZ2 end-zone targets NOT top fifth (own cuts) n=  526  spike   4.9%  start w+1  33.7%  start next4  34.5%  next4  7.93
+    INSIDE the xfp2 top fifth, EZ2 end-zone targets top fifth minus the rest, position held: start4 +4.1 points (se 2.5, within-position permutation p=0.617); next4 +0.56; spike +5.9 points
+
+==== by season: RZ2 coefficient net of xfp2 and snap_pct, NEXT4, pooled positions, position held ====
+  2021: RZ2 +0.033 per 10 pts (se 0.130) position held; +0.250 (se 0.129) not held;  xfp2 +0.332  n=1801
+  2022: RZ2 +0.120 per 10 pts (se 0.133) position held; +0.446 (se 0.130) not held;  xfp2 +0.367  n=1871
+  2023: RZ2 -0.056 per 10 pts (se 0.107) position held; +0.080 (se 0.103) not held;  xfp2 +0.481  n=1911
+  2024: RZ2 -0.152 per 10 pts (se 0.135) position held; +0.052 (se 0.126) not held;  xfp2 +0.449  n=1901
+  2025: RZ2 +0.029 per 10 pts (se 0.122) position held; +0.370 (se 0.115) not held;  xfp2 +0.405  n=1909
+
+==== the finer cuts, week w only, pooled: does inside-the-10 or inside-the-5 carry anything net of xfp2 + snaps? ====
+  rz_car20  mean 0.31  NEXT4 per one +0.356 (se 0.059, t +6.0)
+  rz_car10  mean 0.15  NEXT4 per one +0.418 (se 0.093, t +4.5)
+  rz_car5   mean 0.08  NEXT4 per one +0.461 (se 0.133, t +3.5)
+  rz_tgt20  mean 0.42  NEXT4 per one -0.340 (se 0.059, t -5.8)
+  rz_tgt10  mean 0.18  NEXT4 per one -0.441 (se 0.088, t -5.0)
+  ez_tgt    mean 0.17  NEXT4 per one -0.722 (se 0.088, t -8.2)
+
+==== VERDICT ====
+  the falsifier, fixed in advance: RZ2 net of xfp2 and snap share under +0.10 points of NEXT4 per 10 points of share, AND the
+  RZ2-top-fifth cell inside the xfp2 top fifth under +3 points of start4 over the rest of that fifth  ->  display column only.
+  ALL                  coefficient +0.246 per 10 pts (se 0.054)   cell +7.0 points of start4 (se 2.2, p=0.002)   BOTH OVER the bar
+  ALL, position held   coefficient +0.000 per 10 pts (se 0.056)   cell +3.7 points of start4 (se 2.2, p=0.179)   split
+  RB                   coefficient -0.081 per 10 pts (se 0.093)   cell +3.0 points of start4 (se 4.6, p=0.593)   both under
+  WR                   coefficient +0.092 per 10 pts (se 0.100)   cell +3.6 points of start4 (se 3.2, p=0.270)   split
+  TE                   coefficient -0.238 per 10 pts (se 0.104)   cell -1.0 points of start4 (se 4.2, p=0.848)   both under
+  THE POOLED ROW CROSSES BOTH BARS AND THE SAME POOL WITH POSITION HELD DOES NOT. That is position mix, not red zone:
+  a back runs twice a receiver's red-zone share and scores more over the next four at the same xfp2, so a pooled
+  red-zone cut is mostly a cut on being a running back (0.6, the population is the first thing that is wrong).
+  The pooled row is not the answer; the position-held row and the three positions are.
+  SPLIT with position held, strictly: the coefficient arm is dead (+0.000, bar +0.10) and the cell arm is +3.7 against a
+  bar of +3, which is inside its own se (2.2, p=0.179) and under the bar at two of the three positions. The falsifier
+  as written needs both arms under to retire the signal, so this is not a clean kill; but nothing here is a measured
+  gain either, and a +0.7 over a bar with a 2.2 se is not a reason to change a screen. RECOMMENDATION: DISPLAY column;
+  it does not enter the screen. Say the cell arm is unresolved when quoting this.
+
+pool pickled beside the script as redzone_pool.pkl

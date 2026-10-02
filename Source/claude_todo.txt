@@ -1,0 +1,313 @@
+# CLAUDE_TODO -- what I said in a REPLY that I would do, and have not done yet.
+# One line each. [ ] open   [x] done.   Renders in OPEN_THREADS.md under "WHAT I SAID I WOULD DO".
+#
+# WHY THIS FILE EXISTS (doc 430). Section 0.5(e) sent anything I am waiting on Matt for to
+# matt_todo.txt the moment I say it, and left the mirror image with no home: a thing I said I
+# would do MYSELF, in a reply, went into no doc, so open_threads.py could not see it and nothing
+# held it. It cost six days of a stale published page. Matt found it, not a guard.
+#
+# THE RULE: if I say I will do something and the turn ends without it done, it goes here BEFORE
+# the reply is sent. Not the ledger, not a doc, not a promise in prose.
+#
+# Reconciled 28 Sept by doc 435: eight items closed with their answer, four corrected, six added.
+# Reconciled 29 Sept by doc 443: eleven items closed with their answer, two corrected; batch four and the
+# scheduled-run checks stay open.
+# Doc 444 closed batch four as a proposal; applying it waits on Matt (his list).
+# Doc 445 closed the two measurements (batch five); one dated follow-up added (the status pairs).
+# Docs 446 to 450: v9.35 applied, v9.36 proposed, the wire fix and two guards, the page trim. Every open line
+# below now waits on a date, an event, or Matt.
+# Docs 453 and 454: the young-receiver screen read on this season (finding 4.43, v9.37), the inherit file's stand-in
+# holder closed, the projection pulled once a day with a report and a prune. Two dated follow-ups added.
+# Doc 452: v9.36 applied on his go; the paste is his.
+# Doc 455 (30 Sept): the red-team catalog on Matt's question 5; the crowd table and P4; the open job under the cut named;
+# the harness's NO EFFECT row. The catalog's next batches are dated items below, in working order.
+# Doc 456 (30 Sept, late): three measurements (the reach gate on screened men, the same-team pair, the job slope), the
+# payload audit, standings off mTeam, the parked-man-due-back line. B1 and C2 closed below; v9.38 is tomorrow's first item.
+# Doc 457 (1 Oct, 01:00): the man ahead on the workload lane (Mayer behind Bowers; measured, a second tight end never
+# cleared the screen), a bye-hole bet is a calendar claim, the D/ST divisor tested and standing.
+# Doc 460 (1 Oct, 09:00): the tail measured (which week-4 bench ticket wins a month): lead back under the bar 28%, committee
+# partner 14%, handcuff 6%, third string 0 of 249; Wilson and Allgeier recommended, Dobbins held. The lane and 4.48 added below.
+# Doc 466 (1 Oct, 11:40): the fixture roster for the harness; the handcuff against the starter's history, underpowered.
+# Doc 467 (1 Oct, 17:40): a defense or kicker enters the picks only to fill a hole; P8 and P9; the harness pool carries kickers and defenses.
+# Doc 468 (1 Oct, 19:30): the matchup term measured (RB and TE a point, WR nothing); audit_directive.py clean in season; the scheduled runs seen.
+# Doc 469 (1 Oct, 20:45): v9.39 (the odds trigger, 4.49); the card; the live playoff number; P6b and P10; Bigsby priced; the Tuesday prompt cut.
+# Doc 473 (2 Oct, 02:20): the five stragglers out of the store; P12 and P13 for doc 457.
+# Doc 472 (2 Oct, 02:00): the matchup column on the roster rows and the drop ladder (RB and TE), P11 and its four controls; nflverse week 4 not posted.
+# Doc 471 (2 Oct, 01:30): the store move, docs 200 to 299 out (68% after); 290 stays (a classifier blocks the copy); five stragglers; a Drive duplicate.
+# Doc 470 (1 Oct, 21:40): a lane cell under ten men prints no rate and sorts last; a hole fill at kicker or defense reaches THE CALL and the card; P8b.
+# Doc 465 (1 Oct, 10:55): seat_weeks.py, the seat's own unit; a baseline at three weeks.
+# Doc 464 (1 Oct, 10:30): the schedule writer in wire.py, playoff_odds.py (backtest, convexity), the level reading null.
+# Doc 463 (1 Oct, 09:45): P5 to P7 in check_page_logic, the two --check modes, the claim-by-rank curve on the waterfall, v9.38 shipped.
+# Doc 462 (1 Oct, 09:10): the waterfall under THE CALL and the same-position drop that never starts; his Wilson challenge tested
+# (efficiency is noise at week 4); his 08:14 moves read off the waiver report; the IR-cap question answered by his own add.
+# Doc 451: the open job reaches THE CALL (Matt's catch: Gordon on no page he reads first), the projection gate in
+# ff.bat, P3 in check_page_logic. One low item added (the inherit file's stand-in holder).
+
+## OPEN
+
+[x] THE LONG-SHOT LANE ON THE WEEK SHEET (doc 460 section 4): done, doc 461, same morning. Open: its P-check (below). under-the-bar free backs and receivers, each with his shape
+                 (lead under the bar / committee partner / handcuff by job rank / third string / WR marks) and the two big-hit
+                 odds from tail_tickets.py, ranked by the month column; leads the seat list when the standings line says
+                 behind in points, follows it otherwise. `tail_tickets` block in sheet_constants.json. Guards re-run, re-pin.
+[x] THE IR-CAP LINE INTO v9.38 (doc 462): done, v9.38 shipped (doc 463). "whether an IR man counts against a position cap" leaves NOT ESTABLISHED; one
+                 observation, 1 Oct, ESPN accepted a fifth active back with two on IR (seven against a cap of six).
+[x] FINDING 4.48 INTO v9.38 (doc 460): done, v9.38 shipped (doc 463). the tail by ticket shape at week 4, n per cell, population header ("could be held",
+                 not "was free"); the posture rule (behind in points, rank by the big-hit odds); index row; changelog.
+[x] RUN `py research\audit_directive.py`: done, doc 468, the kit staged into the sandbox; 51 of 51 after two auditor fixes (the keeper table
+                 on the list and freeze it names; 4.14's count corrected to the shipped board). Pinned.
+[x] THE SCHEDULE OFF ESPN'S MATCHUP VIEW: wire.py writes schedule_2026.csv every run (doc 464); playoff_odds.py built, backtested and its convexity
+                 test run. BLOCKED on the first run that writes the file (the 07:30 run of 2 Oct); then:
+[x] THE LIVE PLAYOFF NUMBER AND v9.39: done, doc 469. The schedule file had landed with the 17:30 run of 1 Oct and nobody looked until Matt
+                 asked "why do we wait on this?"; 39% to make the top six, 58% with +5 a week; the standings line prints it; v9.39 shipped.
+[x] WHEN MATT PASTES v9.39: pasted, confirmed 2 Oct 01:00 (the project instructions carry the v9.39 header).
+[x] SEAT-WEEKS PER STARTABLE WEEK: done, doc 465 (`seat_weeks.py`; added men 4.0 per startable week, drafted 3.2, three weeks).
+[ ] RE-READ `py research\seat_weeks.py` AT WEEK 8 (doc 465): the added men's ratio against the drafted men's is the churn verdict.
+[x] THE FIXTURE ROSTER FOR THE HARNESS (catalog A5): done, doc 466 (`check_guards.py --fixture`, `Source\fixture\`); the three
+                 targeted mutations are caught on it. Still NO EFFECT on both rosters: an emptied starting slot, a man replacing himself,
+                 the negative drop cost; and the two rate mutations (the divisor, the weekly positions) still have no guard of their own.
+[x] A guard for the two rate mutations: done, doc 467 (P8 the weekly positions, P9 the divisor; both caught on the live roster).
+[ ] A SECOND FIXTURE or re-aimed mutations for the TWO mutations no roster reaches (an emptied starting slot, a man replacing himself);
+                 the negative drop cost is caught on the live roster by P10 since doc 469.
+[x] THE CHIEFS D/ST ROW ON THE PRIORITY PICKUPS (told Matt to ignore it at 08:50, never filed here, still on the 12:04 page):
+                 done, doc 467. The lesson is the reason this file exists; the row should have been here at 08:50.
+[x] CHECK `project_info` knowledge_size: done, doc 471. It was over the line (81% on Matt's screen); docs 200 to 299 moved to
+                 `_archive\store_20261001\claude\`, hash-verified, deleted; 1,359,582 (68%) after. Next trigger about 10 Oct.
+[ ] DOC 290 OUT OF THE STORE (doc 471): a content classifier stops every subagent that copies it; finish it from a session where
+                 `project_read` hands back a file path, hash against `Source\290_the_in_season_catalog.md`, then `project_delete`.
+[x] THE FIVE STRAGGLERS OUTSIDE claude/: done, doc 473; in `_archive\store_20261002\`, hashed, deleted from the store. Only the
+                 FantasyPros page had a drive copy; the other four have no copy but that folder now.
+[ ] 9 RULE 5 GAINS A LINE at the next directive version (doc 471): a banner applied to a doc in Source\ is pushed to the store
+                 in the same turn; doc 255's store copy sat three days without its banner.
+[x] The handcuff cell against the starter's prior-season games missed: done, doc 466, underpowered (36.8% starter-down at four-plus
+                 missed, n=19, p=0.084), no page term. The level reading: done and null (doc 464).
+
+[x] THE PRACTICE REPORT'S OUT AS THE STEP-PAST TRIGGER. Done, doc 445 (finding 4.42): on the final report a Doubtful
+                 man plays 0.4% of the time and a did-not-practice with no designation 75%; the IN DOUBT lane now skips a
+                 Doubtful cover, the stash lane keeps him, DNP is a printed line only. The report against ESPN's live status
+                 has no history: wire.py logs the pair every run (status_pairs_2026.csv); see the line below.
+[ ] MEASURE status_pairs_2026.csv once it holds three or four weeks (from about 20 Oct): does the report's
+                 designation ever lead or lag ESPN's live injuryStatus by a day, and on which men? One script, doc 445's
+                 BLOCKED half. Nothing acts on it until then.
+[x] WIRE THE OPPONENT IMPLIED TOTAL INTO THE D/ST LANE. Done, doc 442: build_lines.py in ff.bat, wire.py's defense
+                 run and look-ahead on the line, the rule sentence and the totals on the page, QB total beside the rule.
+[x] SHIP THE D/ST BAR. Done, doc 441: build_dst.py emits every team-week with blk and fuml, the file is rebuilt
+                 (2,718 rows), sheet_constants streamer D/ST and dst_k_supply DST_BAR are 5.51; 5.99 and 5.46 go to the
+                 DO-NOT-QUOTE table at v9.34.
+[x] WIRE depth_daily.csv AND practice_2026.csv INTO THE SEAT LANE. Done, doc 442: wire.py load_depth() and
+                 build_inherit.py (in ff.bat now). Open rule line: a seat whose starter is out is priced at the stand-in's job.
+[x] redzone_te_2025.csv is a checked display-only exception in check_inputs.py, doc 442. The check passes.
+[x] THE RISE ON A LONGER HORIZON. Done, doc 445: net of the levels minus 7.7 on eight weeks, minus 8.8 on the rest of
+                 the season, minus 10.5 on the best four inside eight; every season and position; falsifier held four times.
+                 4.38's caveat is struck in the findings file; its index row rides with v9.35.
+[x] FOUR LIVE FINDINGS WITH NO PAGE TERM. Done, doc 443 section 4: 4.13d a prohibition (stays uncited on purpose),
+                 4.25b and 4.26(b) already implemented and now cited where the code is, 4.34 cannot run before week 10 with
+                 its two missing inputs named (the weeks 1-5 baseline, the 2026 draft round).
+[x] CHECK THE FIRST ff.bat RUN AFTER doc 440. Done, doc 443: the 29 Sept 18:16 BY HAND run logged logic 0 and the
+                 check_page_logic block naming Coleman, Nacua and Dowdle; every other RESULT term 0.
+[x] DIRECTIVE v9.34. Shipped 29 Sept (doc 441/442) and pasted: the project holds v9.34 (checked 29 Sept 18:50).
+[x] A check_page_logic CONTROL for the long-shot lane (doc 461): done, P6 (doc 463), with P5 and P7. no third-string back and no already-startable man on it; the
+                 lane above the seat list only when the standings file puts him outside the top six. With the two below.
+[x] A check_page_logic CONTROL for doc 457: done, doc 473 (P12 and P13, five controls, 72 of 72).
+[x] DIRECTIVE v9.38 shipped 1 Oct 09:45 (doc 463): 4.44 to 4.48, the open-job rule, the tail posture rule, the crowd line, the IR-cap line; the paste is on Matt's list. DIRECTIVE v9.38, FIRST THING 1 OCT (docs 456 to 460; 4.48 is the tail doc): the open-job rule of doc 451 amended (the absent man must have held
+                 the job and the free man must inherit it, doc 459); also 4.47 (a defense's own season-to-date scoring adds nothing
+                 beside the opponent's implied total: minus 0.02 against minus 2.12 a sd, n=2,238; the matchup wins 60% head to
+                 head at a 2-to-3-point gap) and 4.46 (the workload screen's rate is a leader's rate: 46.3%
+                 for the man who led his team at the position, 22.7% for a second receiver, never a second tight end; the
+                 man ahead is read off the newest game). Then: findings 4.44 (the reach gate holds on the broad population, 7.6% against
+                 22.2%, and not on the screened men, 1 of 3; a screened man is priced with the gate as a caution) and 4.45 (a
+                 same-team receiver pair neither busts together nor cannibalises, within-pair +0.005, n=148 pairs; the job's
+                 size does not move the relief rate, slope minus 0.08, n=30, the flat 12.1 stands); the crowd check as a
+                 standing line in 0.5(c)6; the index rows; check_citations; one paste on Matt's list.
+[ ] THE CATALOG'S NEXT BATCH (doc 455, in this order, each one evening): A3 the run-to-run decision diff (THE CALL, the
+                 picks and the open-job lines against the previous build, names in and out, on the log and the page); A2 blank
+                 by population (every screen's blank share on the decision set, by subgroup); A5 a fixture roster for
+                 check_guards; A6 check_call.py for the four uncaught mutations; B3 the bench-rule sentence on a
+                 same-position-forced row. B1 and C2 are done (doc 456).
+[ ] FROM THE PAYLOAD AUDIT (doc 456 section 3): wire ESPN's week blurb (outlooksByWeek, with lastNewsDate) and `droppable`
+                 onto the wire rows and the drop ladder; read `injured` as the IR-eligible set; one look at `rankings` against
+                 the crowd table. The D/ST divisor is TESTED and stands (doc 457: rest-of-season for every position on the
+                 7 Sept to 30 Sept pair; ESPN's 17-game average on the D/ST row is the odd one out).
+[x] THE WEEKLY MATCHUP TERM: done, doc 468 (`research\matchup_term.py`): RB +1.2 a week between quartiles (5 of 5 seasons), TE +0.9
+                 (4 of 5), WR +0.4 with the sign flipping; net of the own rate and the line. A tiebreak within a point at RB and TE, never at WR.
+[ ] RE-FIT THE LANE'S CELLS AFTER THE SEASON WITH 2026 ADDED (doc 470): the lead-under-12 cell is nine men; until it clears ten the
+                 lane prints "too few" for it. tail_tickets.py --check guards the cells.
+[x] WIRE THE MATCHUP COLUMN: done, doc 472 (`matchup vs OPP +x` on the roster rows and the drop ladder, RB and TE; P11 holds it to
+                 the files). It prints nothing until a defense has four finished weeks, and nflverse still held weeks 1 to 3 at 01:40 on 2 Oct.
+[ ] WATCH THE FIRST FOUR-WEEK BUILD (doc 472): on a synthetic fourth week THE CALL chained Gesicki in for Bryant and then named LaPorta,
+                 the displaced slot starter, as Bigsby's drop, and P5 fired. If it fires on the real build, decide whether a man displaced
+                 earlier in the same card may be a later drop (doc 462 says never a man who starts; the slot file is P5's authority).
+[ ] INDEX ROW 4.49 at the next directive version: "the page column is NOT YET RUN" becomes "the page column prints from the first
+                 four-week build (doc 472)"; with the 9 rule 5 banner line, one paste.
+[x] FINDING 4.49 into DIRECTIVE_FINDINGS.md and the index: done, v9.39 (doc 469).
+[ ] ROOKIE PEDIGREE, THE FINER GRAIN (doc 456 section 4): pick number (on file), the nflverse combine file (free, no key),
+                 college production (collegefootballdata, free key). Testable form: 4.43's population with the three columns
+                 added, same outcome. NOT YET RUN. The cards section moves under the bet lane and the wire marks a card whose
+                 man is gone.
+[ ] THE LEGIBILITY TEST (4.31's open list, Matt's point 8): of the free-and-usable pool in week W, what share is claimed
+                 within two weeks; one evening on the waiver reports. NOT YET RUN.
+[ ] AT EVERY WEEK CLOSE (Matt's point 6): the crowd rows priced under the consensus, one line each on the attribute the page
+                 cannot see. First one in doc 456 section 4.
+[x] THE DIRECTIVE LINE FOR THE CROWD CHECK: in v9.38 (0.5(c)6), pasted 1 Oct evening.
+[ ] READ THE +/- COLUMN'S CADENCE off three weeks of wire files (doc 455 C3): near zero Monday and Tuesday, 48 on Wednesday
+                 the week of 28 Sept. Say which day it moves and put the day in the crowd table's caption.
+[x] CHECK THE 30 SEPT 07:30 RUN. Seen, doc 455: projections 0 under the new gate (6.0 days old, pulled), the first report
+                 line (434 in both, 427 moved: Gordon 22.8 to 142.3, Wright 24.0 to 103.5), prune nothing, Gordon first on
+                 THE CALL at +27.8, logic 1: P3 fired on Kendre Miller under the cut, fixed the same morning.
+[x] CHECK THE FIRST RUNS OF THE NEW ff.bat (doc 439): seen, doc 468. Wed 30 Sept 07:30 DAILY logged RESULT in the new shape (projections 0,
+                 pulled under the gate; logic 1 was P3 on Kendre Miller, doc 455); Thu 1 Oct 07:30 DAILY (projections skipped) and 17:30 THU
+                 (projections 0, pulled) all zeros, the 17:30 run on doc 467's engine.
+[ ] CHECK TUE 6 OCT 06:00: must log projections 0 and a new espn_projections_2026_*.csv (doc 439).
+[ ] CHECK THE TUESDAY WIRE READ OF 6 OCT 08:00 on the lean prompt (doc 469): it should finish in well under the 33 minutes the
+                 29 Sept run failed at, and its read should agree with the card or say why not.
+                 The 21:26 BY HAND run on 29 Sept logged wire 0, locals 0, rules 0 and THE CALL rows with "this season
+                 (N g)" (doc 448 to 450, seen). STILL TO SEE (doc 451): Wed 30 Sept 07:30 must log projections 0 (the
+                 gate pulls, the file is 5.6 days old by then) and a new espn_projections_2026_*.csv, logic 0 with P3,
+                 and a WEEK_SHEET.html whose first CALL row is Ollie Gordon II on the new projection. SEEN 30 Sept (the item
+                 above). STILL TO SEE: Thu 1 Oct 07:30, logic 0 with P3 and P4 and the crowd table on the live build.
+[x] THE SAME TRIM FOR THE OTHER PAGES (doc 439). Done, doc 449: the wire page a third shorter with every number kept,
+                 its routine now says Wednesday night and a drop on every claim; the to-do frame and the lineup note trimmed.
+[x] A GUARD THAT READS A PAGE'S STANDING-RULE SENTENCES AGAINST THE DIRECTIVE. Done, doc 450: check_page_rules.py,
+                 twelve dead phrases and numbers, four live sentences on the wire page; fired on the drive's page, quiet on the
+                 trimmed one; in ff.bat after the logic check (rules on the RESULT line); pinned from birth.
+[x] build_inherit.py's stand-in holder. Done, doc 453: the absent starter holds the job in the row with his projection
+                 and a tag read from the live roster, the wire and the injuries feed before the pull; the seat list cuts the
+                 Miami row by name ("Achane is already out, so this is not a seat").
+[ ] RE-FIT THE IN-SEASON SCREEN CELL at week 6 (from Tue 13 Oct) and after the season: py research\wk1\rookie_screen.py;
+                 the falsifier is the under-the-bar 3-of-3 cell (26.7%, n=15) falling to the field. Doc 453, finding 4.43.
+[ ] READ ESPN'S IN-SEASON CADENCE off the proj_due --report lines after two or three weeks of daily pulls (doc 454):
+                 on which days does the rest-of-season projection move, and by how much. Nothing acts on it until then.
+[ ] build_form.py's bye fix (doc 439) first meets a real bye week on Tue 6 Oct (week 5, CAR and KC).
+                 Check the log line reads "week 5: 30 of 30 clubs" and week 5 is in the cumulative row.
+[x] NO GUARD CATCHES A PARKED MAN IN THE CALL (doc 436). Done, doc 440: two mutations in check_guards.py
+                 and the new check_page_logic.py (17 controls) fire on the mutated engine and pass on the real one;
+                 ff.bat runs it after the page check.
+[ ] THE WIRING LIST FROM THE OUTSIDE CHECK, doc 437 section 6, in this order:
+                 1. DONE, doc 438, finding 4.37: the two-game expected beats the two-game actual at
+                    every position and in every season (rho .50 vs .42, n=9,999); as a fourth signal
+                    it adds 0.0 points of spike rate, so it stays display. act2/xfp2 are on the form's
+                    cumulative row and every wire row; box-score-mirage and quiet-volume flags print.
+                 2. DONE, doc 440: cuts WOPR 0.461 and air-yards share 25.2% (n=1,744 of 8,718); as a
+                    fourth signal +0.1 and +0.8 points of spike rate, under the +2 falsifier. Display only.
+                 3. DONE, doc 441, finding 4.41: red zone is inside expected points (+0.000 per 10 points
+                    of share net of xfp2 and snaps; end-zone targets minus 0.39 a target). Display only,
+                    no 2026 builder.
+                 4. BUILT, doc 441: build_depth_daily.py writes Source\depth_daily.csv and practice_2026.csv
+                    every ff.bat run. WIRING into wire.py load_depth() and build_inherit.py (join on
+                    espn_id) is batch three; see the line below.
+                 5. DONE, doc 441, finding 4.40: dropback participation beats snap share on 2023 to 2025
+                    (route +0.091 net of snap, snap minus 0.02) and adds +1.9 as a fourth signal, under
+                    the bar. Buy nothing; the purchase is on Matt's list with the one use it would serve.
+                 6. DONE, doc 441, finding 4.39: D/ST lowest opponent implied total +3.16 over random
+                    (t 4.4), equal to the season rule; QB own implied total +4.5 over random, a second
+                    read beside doc 427; K nothing. WIRING the D/ST lane is batch three; see below.
+                 7. RB opportunity share as one column; team pass rate and plays; the efficiency
+                    tiebreaks (NGS, PFR advstats, FTN charting). Low. Not started.
+[x] PUT xfp AND fp_oe ON A PAGE AS COLUMNS. Done for the numbers that carry signal, doc 443: the two-game act2/xfp2
+                 print as "last 2: actual / expected" on every sheet row that has them (19 tonight) with the flag word. The
+                 season xfp and fp_oe stay in the CSV and on spot.py: finding 4.37 measured points over expected at almost
+                 nothing, so a season column would be a number with no use on the page.
+[x] THE DELTA IN EXPECTED POINTS, w-1 to w. Done, doc 440, finding 4.37(g): level +0.60, delta +0.03; falsified.
+[x] THE DELTA, NOT THE LEVEL, AND ON THE RIGHT POPULATION. Done, doc 440, finding 4.38: a rise in both snaps
+                 and targets is +1.4 points raw and MINUS 6.7 net of the week-w levels (n=9,393, every season,
+                 every position); the level is the signal. Four-week horizon; the eight-week one is below.
+[x] THE BLEND IS THE LINEUP DEFECT. Done, doc 443: section 5 and the drop table print "blend · this season (N g)";
+                 the lineup page prints no rate of any vintage, so the fix went where the blend is printed.
+[x] WHAT THE SNAP COUNT IS STILL FOR: a freshness source. Done, doc 443: the inputs box prints "snaps through week N".
+[x] THE 12 UNCITED FINDINGS. Done, doc 440: 5 draft-era, 3 nulls, 4 used-uncited (now cited), 0 forgotten.
+[x] WIRE THE RED ZONE INTO sheet_engine.py. Closed by the measurement, doc 441 (finding 4.41): red zone adds
+                 nothing net of expected points; the only remaining action is the check_inputs row above.
+[x] WIRE inherit_2026.csv's UNREAD COLUMNS. Done, doc 443: the seat lane prints the holder's games last season and
+                 today's tag (at_risk, starter_g25) and the next man's best two weeks; printed, never sorted on (doc 276).
+[x] BUILD THE SPOT-CHECK CARD. Done, doc 442: Scripts\spot.py, pinned. Its first run found the Joshua/Josh Palmer
+                 join miss, fixed the same day in wire.py.
+[ ] MINE THE PRIOR OPUS RESEARCH CHAT for signals we do not carry. BLOCKED on Matt supplying
+                 it (on his list). The moment it lands, diff what it names against check_inputs.py.
+[x] check_pages.py C6, doc 443: THE CALL's first row must print a vintage word, the man ahead for a back and one held
+                 input; a warning until 6 Oct, a failure after; the page passes tonight because the engine prints them.
+[x] PAIR MATT'S CLAIM ORDER WITH THE OUTCOME. Done, doc 442: claim_order_log.py --pair; the first real pairing
+                 needs his Wednesday and Thursday runs (matt_todo).
+[x] Port the five-week look-ahead onto the week sheet. Done, doc 443: lookahead_box.py, one guarded call under THE CALL.
+[x] THE POCKET SHEET HAS NO LOCAL BUILDER. Decided, doc 443: keep the snapshot practice and say so on the page (a
+                 dated note, 27 Sept), make_online.py reports its age every run, check_pages.py C7 warns past seven days.
+[x] BATCH D OF THE AUDIT, THE DIRECTIVE DIET. Done as a proposal, doc 444: Source\diet_v935\ holds the v9.35
+                 directive and changelog, the two diffs and diet_check.py (word-multiset proof, two negative controls);
+                 99,049 to 86,935 bytes, about 3,000 tokens a turn. Not applied; his go is on matt_todo.
+[x] APPLY v9.35. Done, doc 446: archived, copied over the live files, store pushed, check_citations and check_inputs
+                 green on the new index, diet_check.py green against the live v9.34 copy in _archive. The paste is on Matt's list.
+[x] THE SECOND DIET BATCH, v9.36. Done as a proposal, doc 447: Source\diet_v936\, thirty-three passages, 87,461 to
+                 79,906 bytes, diet_check.py generalised (base and new version from proposed_meta.json). His go is on matt_todo.
+[x] ON MATT'S GO: apply v9.36. Done, doc 452: "yes, go" 29 Sept 22:10; archived, copied, diet_check on the live base,
+                 check_citations and check_inputs clean, store pushed, the paste on his list.
+[x] te_pair.py fixed, doc 440: ex-ante generosity, --in-sample reproduces the retracted rows, --selftest.
+                 Doc 428 corrected from the run; ledger row 191 closed.
+[x] dst_k_supply.py's missed-PAT deduction removed (0.086 a week, immaterial), doc 440. The D/ST terms are
+                 priced (blocked kicks +0.146, fumbles lost minus 0.125, net +0.02) and the ship is the item below.
+[x] adp_registry_from_fp.py AVG guard shipped, doc 440; MANIFEST rewritten from the check (2021 not derivable,
+                 2025 excludes Real-Time). 2024's registry file keeps its D/ST spellings; ADPs identical.
+[x] check_guards.py reports a missing guard by name and fails the run (exit 3), doc 440.
+[x] sheet_engine.py's form join is wire.py's key (name + pos + team, then the first-name variant). Done, doc 443:
+                 182 of 191 page rows and 330 of 443 priced men join; the nine unjoined are named in the doc.
+
+## CLOSED BY DOC 437
+
+[x] RUN THE OUTSIDE CHECK BATCH, 0.5(c)6. Doc 437: nine sources loaded with dates, fourteen free
+                 files probed by fetch. Two signals wired the same day (air yards and expected points,
+                 both free and live); routes are the one thing published practice uses that is not
+                 free live (FTN participation lands after the season; PFF and Fantasy Points Data
+                 sell it). Wiring list in doc 437 section 6, above.
+[x] Doc 375's open question, should build_form carry a league-scored column: yes, xfp is league-
+                 scored (full PPR and 4-point passing TD converted); half_ppr stays rushing and
+                 receiving, so fp_oe is blank at QB.
+
+## CLOSED BY DOC 435, with the answer
+
+[x] CHECK THE TUE 29 SEPT 06:00 BUILD (doc 436). Closed 29 Sept by doc 439: the TUE and DAILY runs both
+                 logged every check 0, THE CALL named Samaje Perine, and all three IR men carry the
+                 no-seat note in the drop table.
+
+[x] ADOT AND AIR YARDS SHARE ARE NOT IN THE PIPELINE. Done 29 Sept: research\wk1\build_form.py
+                 writes air_yards, adot, ay_share and wopr per week and on the cumulative row
+                 (the feed it already fetched carried receiving_air_yards all along); wire.py
+                 carries the three onto every wire row and free row, so they are in WIRE_*.csv.
+                 form_2026.csv rebuilt through week 3 with them. Not yet on a page.
+
+[x] THE NFLVERSE RELEASE PATH CHANGED and "nothing in the kit fetches 2026 at all". WRONG:
+                 research\wk1\build_form.py already fetches releases/download/stats_player/
+                 stats_player_week_2026.csv, the new path, and always re-fetches. The 2021 to
+                 2025 cache under research\ is historical by design. No guard needed.
+[x] NO SCHEDULE OR OPPONENT DATA IS LOADED. Wrong: Source\sched_2026.csv is on the drive and
+                 was staged. The note came from a container that had not staged it.
+[x] ADD snaps_2026.py TO ff.bat. Closed differently: it needs the internet, and ff.bat leaves
+                 internet writers out on purpose (build_form.py is excluded for the same reason).
+                 It is on Matt's Monday-night line beside build_form.py instead.
+[x] MEASURED, doc 434: snap PERCENTAGE beats snap COUNT at predicting the next four weeks, at
+                 every position (all .2896 vs .2719, WR .3686 vs .3438, TE .3306 vs .3185, RB
+                 .4600 vs .4304, n=18,382 player-weeks 2021-2025). Adding team plays to the
+                 percentage adds NOTHING. DO NOT swap the screen to counts. Stub doc 434 carries
+                 this line; the script was not retained, so re-run before building on it.
+[x] THE PODCAST LANE, stated: I can process transcripts or audio he supplies and search published
+                 show notes and articles; I cannot fetch podcast audio myself. On his list.
+[x] THE IR BOX: it decides "no one can be moved" from the STATUS string, with slot occupancy
+                 (slot_id 21 against 3) only choosing the wording. Today it is right: Nacua,
+                 Dowdle and Coleman are all in slot 21. The plural sentence is fixed ("are already
+                 parked"), and the healthy-man-in-the-slot case now says claims will not process.
+[x] Coleman's IR status: he is IN the slot (slot_id 21), not merely eligible. Settled.
+[x] Sunday and Thursday rebuilds refreshing form_2026.csv: they never do, by design. ff.bat
+                 prints the file's date and leaves the fetch to Matt's Monday-night run, because
+                 a half-write on a schedule would poison the page. Settled; not a defect.
+[x] KILLED, recorded so nobody rebuilds it: a "has he ever produced at the hit rate" gate.
+                 It fires on all 15 current candidates, because 12.71 is a 6.4-WEEK STRETCH and a
+                 career best is a SEASON. Comparing them is 0.5(a5).
+[x] Extend check_citations.py to cover "doc N" references. Done, selftest fires on the 999 sentinel;
+                 fourteen dangling numbers found and filed.
+[x] Refresh 00_START_HERE.md. Version 14, directive v9.32, newest doc 435.
+[x] The published week sheet's IR box headline with three men named. Same answer as the IR box
+                 item: three seats occupied, headline true, plural fixed.
+
+## DONE EARLIER
+
+[x] Ship the REACH gate on the bet lane, doc 432. Five of nine candidates killed.
+[x] Price a QB2 held from week W to 17. Doc 431: misses pile up late. (96% retracted, doc 435: 66%.)
+[x] Run the defense and kicker supply curve. Doc 431: defenses flat all year, kickers mild.
+[x] Wire make_online.py into ff.bat so the publish-ready copy is built every run.
+[x] Set up the daily task that publishes the week sheet, since ff.bat cannot upload.

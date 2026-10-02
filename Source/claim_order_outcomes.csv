@@ -1,0 +1,5 @@
+week,order,player_id,player,drop_id,drop,contested,outcome,winner,rivals,logged_at,settled_at
+4,1790838000000,4711533,Ollie Gordon II,4569559,Devaughn Vele,yes,outbid,Tets Out For The Boys,4,2026-09-30 23:27,2026-10-01 03:24
+4,1790838000000,-16003,CHI D/ST,-16012,KC D/ST,no,canceled before the run,nobody,0,2026-09-30 23:27,
+4,1790838000000,2973405,Kalif Raymond,4428718,Tre Tucker,yes,executed,you,1,2026-09-30 23:27,2026-10-01 03:24
+4,3,-16009,Packers D/ST,-16012,KC D/ST,no,executed,you,0,2026-10-01 08:15,2026-10-01 03:24

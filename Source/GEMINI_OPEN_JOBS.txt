@@ -1,0 +1,74 @@
+# GEMINI DEEP RESEARCH — OPEN JOBS, 2026 NFL SEASON
+# Retargeted from "opportunity environment" after measurement. Read the WHY before the ASK.
+# Capture date required on every claim. Return the CSV block only.
+
+## WHY THIS PROMPT IS NOT ABOUT OFFENSIVE ENVIRONMENT
+
+I measured the environment idea before writing this. Across three season transitions
+(n=221 WR/TE, n=113 RB), the change in a pass-catcher's target count breaks down as:
+
+  team pass VOLUME .......  7.5% of the variance  (RB: 5.7%)
+  his own target SHARE ... 93.4% of the variance  (RB: 95.9%)
+
+Perfect foreknowledge of a team's pass-volume change is worth about +2 fantasy points
+across a season. So do NOT research pace, no-huddle rate, 11-vs-12 personnel, or
+"this coordinator throws more." That is the 7.5%, it is already inside the projections,
+and it cannot move a draft pick.
+
+Research the 93%: WHO WINS THE JOB.
+
+## THE ASK
+
+For each team listed below, a meaningful share of 2025 targets or touches belongs to
+somebody no longer on the roster. For each one, tell me who absorbs it.
+
+TEAMS, ranked by share of 2025 targets now vacated (my computation, from nflverse
+2025 regular-season targets against the ESPN 2026 board, 08-30 pull):
+
+  MIA 56%  ·  WAS 53%  ·  PIT 46%  ·  GB 38%  ·  NE 37%  ·  PHI 37%
+  NO  36%  ·  NYG 35%  ·  ATL 32%  ·  KC 32%  ·  TEN 31%  ·  HOU 31%
+
+For CONTRAST — these teams return essentially everyone, so an "opportunity" claim about
+them needs an unusually specific reason: LA 0% · DEN 1% · CIN 7% · DAL 7% · SEA 9%.
+
+## WHAT COUNTS AS AN ANSWER
+
+For each open job, name the players competing for it and rank them. I need, per player:
+
+1. WHAT THE JOB IS — slot, boundary X/Z, move TE, third-down back, goal-line back.
+   Say which. "More involved" is not a job.
+2. EVIDENCE FROM 2026 CAMP AND PRESEASON, dated — first-team reps, snap counts in
+   preseason games, beat-writer depth-chart reporting, coach quotes about role.
+   Training-camp hype without a snap count behind it is worth nothing to me; say so
+   rather than padding.
+3. WHO ELSE IS IN THE WAY, including anyone drafted or signed in the 2026 offseason.
+4. YOUR CONFIDENCE that this player holds the job in Week 1: HIGH / MED / LOW.
+
+## HARD RULES
+
+- Every factual claim carries a source and a date. Undated = omit it.
+- If you cannot find 2026 camp reporting on a job, write UNKNOWN. Do not reason from
+  2025 usage and present it as news. An honest UNKNOWN is more useful than a guess.
+- Do not tell me a player is undervalued, a sleeper, a breakout, or a buy. I have a
+  projection and an ADP; I do not need your price opinion and I will not use it.
+  Tell me who gets the snaps.
+- Do not rank players across teams. One job at a time.
+- Ignore kickers and defenses entirely.
+
+## OUTPUT — this CSV block and nothing else
+
+team,job,player,rank_for_job,confidence,camp_evidence,evidence_date,who_else,source_url
+
+  team ............ 2026 team abbreviation
+  job ............. slot WR | boundary WR | move TE | inline TE | early-down RB |
+                    passing-down RB | goal-line RB
+  player .......... full name as it appears on ESPN
+  rank_for_job .... 1 = most likely to hold it Week 1
+  confidence ...... HIGH | MED | LOW | UNKNOWN
+  camp_evidence ... one sentence, factual, no adjectives
+  evidence_date ... YYYY-MM-DD of the reporting
+  who_else ........ semicolon-separated competitors
+  source_url ...... one URL
+
+One row per player per job. If a job has no 2026 reporting, emit a single row with
+confidence UNKNOWN and leave camp_evidence blank.

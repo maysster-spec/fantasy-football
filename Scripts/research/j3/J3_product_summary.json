@@ -1,0 +1,171 @@
+{
+ "n_seats": 157,
+ "n_with_t5": 156,
+ "step1": {
+  "rho": 0.3304,
+  "p": 0.0002,
+  "n": 156
+ },
+ "quartile_cuts": [
+  0.621,
+  0.9129,
+  1.0
+ ],
+ "cells": {
+  "<20|Q1": {
+   "n": 19,
+   "p_open": 0.579,
+   "relief_ppg": 7.75,
+   "relief_pts": 11.4
+  },
+  "<20|Q2": {
+   "n": 14,
+   "p_open": 0.5,
+   "relief_ppg": 10.76,
+   "relief_pts": 21.8
+  },
+  "<20|Q3": {
+   "n": 2,
+   "p_open": 0.5,
+   "relief_ppg": null,
+   "relief_pts": 0.0
+  },
+  "<20|Q4": {
+   "n": 15,
+   "p_open": 0.467,
+   "relief_ppg": 11.53,
+   "relief_pts": 9.6
+  },
+  "20-30|Q1": {
+   "n": 12,
+   "p_open": 0.5,
+   "relief_ppg": 9.76,
+   "relief_pts": 20.1
+  },
+  "20-30|Q2": {
+   "n": 8,
+   "p_open": 0.5,
+   "relief_ppg": 10.8,
+   "relief_pts": 11.7
+  },
+  "20-30|Q3": {
+   "n": 7,
+   "p_open": 0.571,
+   "relief_ppg": 10.22,
+   "relief_pts": 12.1
+  },
+  "20-30|Q4": {
+   "n": 11,
+   "p_open": 0.364,
+   "relief_ppg": 10.89,
+   "relief_pts": 8.8
+  },
+  "30-40|Q1": {
+   "n": 8,
+   "p_open": 0.625,
+   "relief_ppg": 9.02,
+   "relief_pts": 6.8
+  },
+  "30-40|Q2": {
+   "n": 12,
+   "p_open": 0.417,
+   "relief_ppg": 11.84,
+   "relief_pts": 10.2
+  },
+  "30-40|Q3": {
+   "n": 4,
+   "p_open": 0.5,
+   "relief_ppg": 8.37,
+   "relief_pts": 21.0
+  },
+  "30-40|Q4": {
+   "n": 15,
+   "p_open": 0.667,
+   "relief_ppg": 12.6,
+   "relief_pts": 23.0
+  },
+  "40+|Q1": {
+   "n": 0,
+   "p_open": null,
+   "relief_ppg": null,
+   "relief_pts": null
+  },
+  "40+|Q2": {
+   "n": 5,
+   "p_open": 0.4,
+   "relief_ppg": 8.09,
+   "relief_pts": 17.8
+  },
+  "40+|Q3": {
+   "n": 5,
+   "p_open": 0.6,
+   "relief_ppg": 14.39,
+   "relief_pts": 25.1
+  },
+  "40+|Q4": {
+   "n": 19,
+   "p_open": 0.684,
+   "relief_ppg": 14.63,
+   "relief_pts": 30.1
+  }
+ },
+ "step3": {
+  "score_odds": {
+   "rho": 0.1618,
+   "p": 0.0392
+  },
+  "score_rate": {
+   "rho": 0.0408,
+   "p": 0.6047
+  },
+  "score_product": {
+   "rho": 0.1391,
+   "p": 0.087
+  },
+  "score_rate_insample": {
+   "rho": 0.0975,
+   "p": 0.2281
+  },
+  "score_product_insample": {
+   "rho": 0.1544,
+   "p": 0.0528
+  },
+  "score_odds_opened_ppg": {
+   "rho": 0.1941,
+   "p": 0.0885
+  },
+  "score_rate_opened_ppg": {
+   "rho": 0.1639,
+   "p": 0.1593
+  },
+  "score_product_opened_ppg": {
+   "rho": 0.2341,
+   "p": 0.0382
+  }
+ },
+ "gap": -0.0227,
+ "gap_ci": [
+  -0.1093,
+  0.0437
+ ],
+ "verdict": "DECORATION: rank by odds alone, print the rate as its own column",
+ "odds": {
+  "<20": 0.51,
+  "20-30": 0.474,
+  "30-40": 0.564,
+  "40+": 0.621
+ },
+ "rate_t5": {
+  "<50": 8.91,
+  "50-70": 12.55,
+  "70-85": 14.69,
+  "85+": 12.98
+ },
+ "rate_insample": {
+  "Q1": 8.66,
+  "Q2": 10.77,
+  "Q3": 11.2,
+  "Q4": 12.9
+ },
+ "seed": 20260918
+}

@@ -1,0 +1,149 @@
+date,week,espn_id,player,pos,tm,espn_status,report_status,practice_status,report_week
+2026-09-29,4,4361529,Isiah Pacheco,RB,DET,INJURY_RESERVE,,,
+2026-09-29,4,4241474,Brian Robinson Jr.,RB,ATL,ACTIVE,,Full Participation in Practice,3
+2026-09-29,4,3117251,Christian McCaffrey,RB,SF,ACTIVE,,Full Participation in Practice,3
+2026-09-29,4,4372561,Isaac Guerendo,RB,SF,OUT,,,
+2026-09-29,4,4242335,Jonathan Taylor,RB,IND,ACTIVE,,Full Participation in Practice,3
+2026-09-29,4,4685526,Adam Randall,RB,BAL,INJURY_RESERVE,,,
+2026-09-29,4,3915411,Ty Johnson,RB,BUF,ACTIVE,,Full Participation in Practice,3
+2026-09-29,4,4429160,De'Von Achane,RB,MIA,INJURY_RESERVE,,,
+2026-09-29,4,4682745,Jaylen Wright,RB,MIA,QUESTIONABLE,Doubtful,Did Not Participate In Practice,3
+2026-09-29,4,3929630,Saquon Barkley,RB,PHI,ACTIVE,,Full Participation in Practice,3
+2026-09-29,4,4429013,Tank Bigsby,RB,PHI,ACTIVE,,Full Participation in Practice,3
+2026-09-29,4,4431545,Will Shipley,RB,PHI,ACTIVE,,Limited Participation in Practice,3
+2026-09-29,4,4427366,Breece Hall,RB,NYJ,QUESTIONABLE,,,
+2026-09-29,4,4035537,Kene Nwangwu,RB,NYJ,QUESTIONABLE,Doubtful,Did Not Participate In Practice,3
+2026-09-29,4,3045147,James Conner,RB,ARI,INJURY_RESERVE,,,
+2026-09-29,4,4429275,Trey Benson,RB,ARI,INJURY_RESERVE,,,
+2026-09-29,4,4047365,Josh Jacobs,RB,GB,DAY_TO_DAY,,,
+2026-09-29,4,4240603,Malik Davis,RB,DAL,INJURY_RESERVE,,,
+2026-09-29,4,4599739,Kendre Miller,RB,NO,ACTIVE,,Full Participation in Practice,3
+2026-09-29,4,4239996,Travis Etienne Jr.,RB,NO,OUT,,Full Participation in Practice,3
+2026-09-29,4,4243003,Ronnie Rivers,RB,LAR,INJURY_RESERVE,,,
+2026-09-29,4,4685702,Quinshon Judkins,RB,CLE,ACTIVE,,Full Participation in Practice,3
+2026-09-29,4,5081397,Dylan Sampson,RB,CLE,INJURY_RESERVE,,,
+2026-09-29,4,4608686,Kyle Monangai,RB,CHI,ACTIVE,,Full Participation in Practice,3
+2026-09-29,4,4036032,Brittain Brown,RB,CHI,INJURY_RESERVE,,,
+2026-09-29,4,4911851,LeQuint Allen Jr.,RB,JAX,ACTIVE,,Limited Participation in Practice,3
+2026-09-29,4,4039505,Reggie Gilliam,RB,NE,ACTIVE,,Limited Participation in Practice,3
+2026-09-29,4,4685512,Jadarian Price,RB,SEA,ACTIVE,,Full Participation in Practice,3
+2026-09-29,4,4426385,Zach Charbonnet,RB,SEA,OUT,,,
+2026-09-29,4,4429835,George Holani,RB,SEA,ACTIVE,,Full Participation in Practice,3
+2026-09-29,4,4038815,Rico Dowdle,RB,PIT,QUESTIONABLE,Out,Did Not Participate In Practice,3
+2026-09-29,4,4569987,Jaylen Warren,RB,PIT,ACTIVE,Questionable,Limited Participation in Practice,3
+2026-09-29,4,3916148,Tony Pollard,RB,TEN,ACTIVE,,Limited Participation in Practice,3
+2026-09-29,4,4428557,Tyjae Spears,RB,TEN,ACTIVE,Questionable,Limited Participation in Practice,3
+2026-09-29,4,4241985,J.K. Dobbins,RB,DEN,ACTIVE,,Full Participation in Practice,3
+2026-09-29,4,4568490,RJ Harvey,RB,DEN,ACTIVE,,Full Participation in Practice,3
+2026-09-29,4,4702555,Jonah Coleman,RB,DEN,INJURY_RESERVE,Out,Did Not Participate In Practice,3
+2026-09-29,4,4678008,Jonathon Brooks,RB,CAR,INJURY_RESERVE,,,
+2026-09-29,4,4685350,Trevor Etienne,RB,CAR,INJURY_RESERVE,,,
+2026-09-29,4,3042519,Aaron Jones Sr.,RB,MIN,ACTIVE,,Full Participation in Practice,3
+2026-09-29,4,4360569,Jordan Mason,RB,MIN,INJURY_RESERVE,,,
+2026-09-29,4,4240631,DeeJay Dallas,RB,MIN,ACTIVE,,Full Participation in Practice,3
+2026-09-29,4,4685246,Kaytron Allen,RB,WAS,ACTIVE,,Full Participation in Practice,3
+2026-09-30,4,4361529,Isiah Pacheco,RB,DET,INJURY_RESERVE,,,
+2026-09-30,4,4372561,Isaac Guerendo,RB,SF,OUT,,,
+2026-09-30,4,4685526,Adam Randall,RB,BAL,INJURY_RESERVE,,,
+2026-09-30,4,4429160,De'Von Achane,RB,MIA,INJURY_RESERVE,,,
+2026-09-30,4,4682745,Jaylen Wright,RB,MIA,QUESTIONABLE,,,
+2026-09-30,4,4427366,Breece Hall,RB,NYJ,QUESTIONABLE,,,
+2026-09-30,4,4035537,Kene Nwangwu,RB,NYJ,QUESTIONABLE,,,
+2026-09-30,4,3045147,James Conner,RB,ARI,INJURY_RESERVE,,,
+2026-09-30,4,4429275,Trey Benson,RB,ARI,INJURY_RESERVE,,,
+2026-09-30,4,4047365,Josh Jacobs,RB,GB,DAY_TO_DAY,,,
+2026-09-30,4,4240603,Malik Davis,RB,DAL,INJURY_RESERVE,,,
+2026-09-30,4,4239996,Travis Etienne Jr.,RB,NO,OUT,,,
+2026-09-30,4,4243003,Ronnie Rivers,RB,LAR,INJURY_RESERVE,,,
+2026-09-30,4,5081397,Dylan Sampson,RB,CLE,INJURY_RESERVE,,,
+2026-09-30,4,4036032,Brittain Brown,RB,CHI,INJURY_RESERVE,,,
+2026-09-30,4,4426385,Zach Charbonnet,RB,SEA,OUT,,,
+2026-09-30,4,4038815,Rico Dowdle,RB,PIT,QUESTIONABLE,,Did Not Participate In Practice,4
+2026-09-30,4,4702555,Jonah Coleman,RB,DEN,INJURY_RESERVE,,,
+2026-09-30,4,4678008,Jonathon Brooks,RB,CAR,INJURY_RESERVE,,,
+2026-09-30,4,4685350,Trevor Etienne,RB,CAR,INJURY_RESERVE,,,
+2026-09-30,4,4360569,Jordan Mason,RB,MIN,INJURY_RESERVE,,,
+2026-10-01,4,4361529,Isiah Pacheco,RB,DET,INJURY_RESERVE,,,
+2026-10-01,4,3117251,Christian McCaffrey,RB,SF,ACTIVE,,Did Not Participate In Practice,4
+2026-10-01,4,4372561,Isaac Guerendo,RB,SF,OUT,,,
+2026-10-01,4,4242335,Jonathan Taylor,RB,IND,ACTIVE,,Limited Participation in Practice,4
+2026-10-01,4,4685526,Adam Randall,RB,BAL,INJURY_RESERVE,,,
+2026-10-01,4,4429160,De'Von Achane,RB,MIA,INJURY_RESERVE,,,
+2026-10-01,4,4682745,Jaylen Wright,RB,MIA,QUESTIONABLE,,Limited Participation in Practice,4
+2026-10-01,4,4431545,Will Shipley,RB,PHI,QUESTIONABLE,,,
+2026-10-01,4,4427366,Breece Hall,RB,NYJ,DOUBTFUL,,Did Not Participate In Practice,4
+2026-10-01,4,4035537,Kene Nwangwu,RB,NYJ,ACTIVE,,Full Participation in Practice,4
+2026-10-01,4,4890973,Ashton Jeanty,RB,LV,ACTIVE,,Full Participation in Practice,4
+2026-10-01,4,3045147,James Conner,RB,ARI,INJURY_RESERVE,,,
+2026-10-01,4,4429275,Trey Benson,RB,ARI,INJURY_RESERVE,,,
+2026-10-01,4,4047365,Josh Jacobs,RB,GB,DAY_TO_DAY,,,
+2026-10-01,4,4240603,Malik Davis,RB,DAL,INJURY_RESERVE,,,
+2026-10-01,4,4596334,Keaton Mitchell,RB,LAC,QUESTIONABLE,,,
+2026-10-01,4,4239996,Travis Etienne Jr.,RB,NO,OUT,,,
+2026-10-01,4,4243003,Ronnie Rivers,RB,LAR,INJURY_RESERVE,,,
+2026-10-01,4,5081397,Dylan Sampson,RB,CLE,INJURY_RESERVE,,,
+2026-10-01,4,4360516,Tyrone Tracy Jr.,RB,NYG,QUESTIONABLE,,Did Not Participate In Practice,4
+2026-10-01,4,2975417,Patrick Ricard,RB,NYG,ACTIVE,,Full Participation in Practice,4
+2026-10-01,4,4036032,Brittain Brown,RB,CHI,INJURY_RESERVE,,,
+2026-10-01,4,4596448,Bucky Irving,RB,TB,QUESTIONABLE,,Limited Participation in Practice,4
+2026-10-01,4,4911851,LeQuint Allen Jr.,RB,JAX,QUESTIONABLE,,Limited Participation in Practice,4
+2026-10-01,4,4373273,British Brooks,RB,HOU,QUESTIONABLE,,Did Not Participate In Practice,4
+2026-10-01,4,4039505,Reggie Gilliam,RB,NE,QUESTIONABLE,,Limited Participation in Practice,4
+2026-10-01,4,4685512,Jadarian Price,RB,SEA,QUESTIONABLE,,,
+2026-10-01,4,4426385,Zach Charbonnet,RB,SEA,OUT,,,
+2026-10-01,4,4429835,George Holani,RB,SEA,QUESTIONABLE,,,
+2026-10-01,4,4038815,Rico Dowdle,RB,PIT,OUT,,Did Not Participate In Practice,4
+2026-10-01,4,3916148,Tony Pollard,RB,TEN,QUESTIONABLE,,Did Not Participate In Practice,4
+2026-10-01,4,4428557,Tyjae Spears,RB,TEN,QUESTIONABLE,,Did Not Participate In Practice,4
+2026-10-01,4,4241985,J.K. Dobbins,RB,DEN,ACTIVE,,Full Participation in Practice,4
+2026-10-01,4,4702555,Jonah Coleman,RB,DEN,INJURY_RESERVE,,,
+2026-10-01,4,4678008,Jonathon Brooks,RB,CAR,INJURY_RESERVE,,,
+2026-10-01,4,4241416,Chuba Hubbard,RB,CAR,ACTIVE,,Did Not Participate In Practice,4
+2026-10-01,4,4685350,Trevor Etienne,RB,CAR,INJURY_RESERVE,,,
+2026-10-01,4,3042519,Aaron Jones Sr.,RB,MIN,ACTIVE,,Limited Participation in Practice,4
+2026-10-01,4,4360569,Jordan Mason,RB,MIN,INJURY_RESERVE,,,
+2026-10-01,4,4697815,Rachaad White,RB,WAS,QUESTIONABLE,,Did Not Participate In Practice,4
+2026-10-02,4,4361529,Isiah Pacheco,RB,DET,INJURY_RESERVE,,,
+2026-10-02,4,3117251,Christian McCaffrey,RB,SF,ACTIVE,,Did Not Participate In Practice,4
+2026-10-02,4,4372561,Isaac Guerendo,RB,SF,OUT,,,
+2026-10-02,4,4242335,Jonathan Taylor,RB,IND,ACTIVE,,Full Participation in Practice,4
+2026-10-02,4,4685526,Adam Randall,RB,BAL,INJURY_RESERVE,,,
+2026-10-02,4,4429501,Ray Davis,RB,BUF,ACTIVE,,Full Participation in Practice,4
+2026-10-02,4,4429160,De'Von Achane,RB,MIA,INJURY_RESERVE,,,
+2026-10-02,4,4682745,Jaylen Wright,RB,MIA,ACTIVE,,Full Participation in Practice,4
+2026-10-02,4,4429013,Tank Bigsby,RB,PHI,ACTIVE,,Full Participation in Practice,4
+2026-10-02,4,4431545,Will Shipley,RB,PHI,QUESTIONABLE,,Limited Participation in Practice,4
+2026-10-02,4,4427366,Breece Hall,RB,NYJ,DOUBTFUL,,Did Not Participate In Practice,4
+2026-10-02,4,4035537,Kene Nwangwu,RB,NYJ,ACTIVE,,Full Participation in Practice,4
+2026-10-02,4,4890973,Ashton Jeanty,RB,LV,ACTIVE,,Full Participation in Practice,4
+2026-10-02,4,3045147,James Conner,RB,ARI,INJURY_RESERVE,,,
+2026-10-02,4,4429275,Trey Benson,RB,ARI,INJURY_RESERVE,,,
+2026-10-02,4,4047365,Josh Jacobs,RB,GB,DAY_TO_DAY,,,
+2026-10-02,4,4240603,Malik Davis,RB,DAL,INJURY_RESERVE,,,
+2026-10-02,4,4596334,Keaton Mitchell,RB,LAC,QUESTIONABLE,,Limited Participation in Practice,4
+2026-10-02,4,4239996,Travis Etienne Jr.,RB,NO,INJURY_RESERVE,,,
+2026-10-02,4,4243003,Ronnie Rivers,RB,LAR,INJURY_RESERVE,,,
+2026-10-02,4,5081397,Dylan Sampson,RB,CLE,INJURY_RESERVE,,,
+2026-10-02,4,4360516,Tyrone Tracy Jr.,RB,NYG,QUESTIONABLE,,Limited Participation in Practice,4
+2026-10-02,4,2975417,Patrick Ricard,RB,NYG,ACTIVE,,Full Participation in Practice,4
+2026-10-02,4,4259545,D'Andre Swift,RB,CHI,QUESTIONABLE,,Did Not Participate In Practice,4
+2026-10-02,4,4036032,Brittain Brown,RB,CHI,INJURY_RESERVE,,,
+2026-10-02,4,4596448,Bucky Irving,RB,TB,QUESTIONABLE,,Limited Participation in Practice,4
+2026-10-02,4,4911851,LeQuint Allen Jr.,RB,JAX,QUESTIONABLE,,Limited Participation in Practice,4
+2026-10-02,4,4373273,British Brooks,RB,HOU,QUESTIONABLE,,Did Not Participate In Practice,4
+2026-10-02,4,4039505,Reggie Gilliam,RB,NE,QUESTIONABLE,,Did Not Participate In Practice,4
+2026-10-02,4,4685512,Jadarian Price,RB,SEA,QUESTIONABLE,,Limited Participation in Practice,4
+2026-10-02,4,4426385,Zach Charbonnet,RB,SEA,OUT,,,
+2026-10-02,4,4429835,George Holani,RB,SEA,QUESTIONABLE,,Limited Participation in Practice,4
+2026-10-02,4,4038815,Rico Dowdle,RB,PIT,OUT,Out,Did Not Participate In Practice,4
+2026-10-02,4,5081508,Eli Heidenreich,RB,PIT,OUT,,,
+2026-10-02,4,3916148,Tony Pollard,RB,TEN,ACTIVE,,Full Participation in Practice,4
+2026-10-02,4,4428557,Tyjae Spears,RB,TEN,QUESTIONABLE,,Limited Participation in Practice,4
+2026-10-02,4,4241985,J.K. Dobbins,RB,DEN,ACTIVE,,Full Participation in Practice,4
+2026-10-02,4,4702555,Jonah Coleman,RB,DEN,INJURY_RESERVE,,,
+2026-10-02,4,4678008,Jonathon Brooks,RB,CAR,INJURY_RESERVE,,,
+2026-10-02,4,4241416,Chuba Hubbard,RB,CAR,ACTIVE,,Full Participation in Practice,4
+2026-10-02,4,4685350,Trevor Etienne,RB,CAR,INJURY_RESERVE,,,
+2026-10-02,4,3042519,Aaron Jones Sr.,RB,MIN,ACTIVE,,Limited Participation in Practice,4
+2026-10-02,4,4360569,Jordan Mason,RB,MIN,INJURY_RESERVE,,,
+2026-10-02,4,4697815,Rachaad White,RB,WAS,QUESTIONABLE,,Did Not Participate In Practice,4

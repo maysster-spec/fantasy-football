@@ -1,0 +1,58 @@
+ESPN DRAFT BRIDGE -- INSTALL (5 minutes, once)
+==============================================================================
+WHAT THIS IS
+  ESPN's read API publishes a draft only AFTER it finishes (doc 136), so it is useless during
+  the draft.  But the picks are in your BROWSER the whole time -- which is exactly why the
+  FantasyPros extension can show them.  You were right: an extension is the answer.
+
+  This is a tiny extension that listens to the ESPN draft room and forwards what it hears to
+  live_draft.py.  It talks ONLY to 127.0.0.1 on your own machine.  Nothing leaves your computer.
+
+------------------------------------------------------------------------------
+STEP 1 -- LOAD THE EXTENSION  (Chrome still allows this, no store, no signing)
+
+  1. Chrome -> address bar -> chrome://extensions
+  2. Turn ON "Developer mode" (top-right toggle)
+  3. Click "Load unpacked"
+  4. Select this folder:
+        G:\My Drive\_Fantasy\2026\Scripts\live_draft\espn_bridge
+  5. It appears as "ESPN Draft Bridge (JUG)".  Leave it enabled.
+
+  It only runs on fantasy.espn.com.  To remove it later, click Remove on that card.
+
+------------------------------------------------------------------------------
+STEP 2 -- START THE LISTENER  (a PowerShell window, leave it open)
+
+     cd "G:\My Drive\_Fantasy\2026\Scripts\live_draft"
+     py bridge_server.py --recon
+
+  It prints "listening on http://127.0.0.1:8787".
+
+------------------------------------------------------------------------------
+STEP 3 -- OPEN THE DRAFT ROOM
+
+  Open the ESPN draft.  Within a second or two the listener window should print:
+
+     [hh:mm:ss] page hooked: https://fantasy.espn.com/football/draft?...
+     [hh:mm:ss] WEBSOCKET OPENED -> wss://...            <-- if ESPN uses one
+     [hh:mm:ss]   1 picks known (latest overall 1, +1 this message)  via ws-msg
+
+  If the pick counter climbs WHILE THE ROOM IS DRAFTING, this is solved.
+
+------------------------------------------------------------------------------
+STEP 4 -- RUN THE BOARD OFF THE BRIDGE  (a second PowerShell window)
+
+     py live_draft.py --bridge
+
+  Same board, same recommendations, same everything.  Only the pick source changed.
+  Add --url "..." if you also want it to know which team is yours.
+
+------------------------------------------------------------------------------
+IF THE COUNTER DOES NOT MOVE
+  Ctrl+C the listener.  With --recon it prints every message shape it saw.  Send me that, plus
+  bridge_raw.jsonl -- that file is the complete record of everything the page said, and the
+  parser lives in bridge_server.py where I can fix it without you touching the extension.
+
+WHY THE EXTENSION PARSES NOTHING
+  On purpose.  Every guess about ESPN's message format is in the Python file.  Changing a guess
+  means editing a .py -- no extension reload, no browser restart, nothing to redo on Monday night.

@@ -1,0 +1,49 @@
+TASK B -- seats rebuilt: 157 (doc 348 had 157); matched 157; largest share gap 0.0000; opens agree on 157 of 157
+  opened 84 of 157 (0.535); realised relief points, all seats, mean 16.4, median 0.0; among opened seats with a line (n=77) ppg 11.24
+  T5 joined on 156 of 157 (blank: 2025 CIN Samaje Perine)
+
+STEP 1 -- rho(week-one work share, T5) inside the seat population: rho +0.330, p=0.0002, n=156
+  Pearson +0.362; share of variance shared 0.131
+
+STEP 2 -- share bands x T5 quartiles (quartile cuts 0.621 / 0.913 / 1.000; T5 is 1.00 on 60 rows, so the top quartiles tie)
+  band   T5 q     n  P(open)  relief ppg n ppg  relief pts
+  <20    Q1      19    0.579        7.75     8        11.4
+  <20    Q2      14    0.500       10.76     7        21.8
+  <20    Q3       2    0.500         nan     0         0.0  (n<8, no conclusion)
+  <20    Q4      15    0.467       11.53     7         9.6
+  20-30  Q1      12    0.500        9.76     5        20.1
+  20-30  Q2       8    0.500       10.80     3        11.7
+  20-30  Q3       7    0.571       10.22     4        12.1  (n<8, no conclusion)
+  20-30  Q4      11    0.364       10.89     4         8.8
+  30-40  Q1       8    0.625        9.02     5         6.8
+  30-40  Q2      12    0.417       11.84     5        10.2
+  30-40  Q3       4    0.500        8.37     2        21.0  (n<8, no conclusion)
+  30-40  Q4      15    0.667       12.60    10        23.0
+  40+    Q1       0      nan         nan     0         nan
+  40+    Q2       5    0.400        8.09     2        17.8  (n<8, no conclusion)
+  40+    Q3       5    0.600       14.39     3        25.1  (n<8, no conclusion)
+  40+    Q4      19    0.684       14.63    12        30.1
+  margins by T5 quartile:
+    Q1  n= 39  T5 0.20-0.62  P(open) 0.564  relief ppg 8.66 (n=18)  relief pts 13.1
+    Q2  n= 39  T5 0.62-0.91  P(open) 0.462  relief ppg 10.77 (n=17)  relief pts 15.6
+    Q3  n= 18  T5 0.92-0.97  P(open) 0.556  relief ppg 11.20 (n=9)  relief pts 16.3
+    Q4  n= 60  T5 1.00-1.00  P(open) 0.567  relief ppg 12.90 (n=33)  relief pts 19.3
+  margins by share band:
+    <20    n= 50  P(open) 0.520  relief ppg 9.91 (n=22)  relief pts 13.3
+    20-30  n= 38  P(open) 0.474  relief ppg 10.35 (n=16)  relief pts 13.6
+    30-40  n= 39  P(open) 0.564  relief ppg 11.23 (n=22)  relief pts 15.5
+    40+    n= 29  P(open) 0.621  relief ppg 13.82 (n=17)  relief pts 27.1
+
+STEP 3 -- Spearman rho of each score against REALISED relief points (zero when the seat never opened), n=156
+  odds alone (doc 348 bands)                                 rho +0.162  p=0.0392
+  rate alone (doc 348 T5 bands, measured on the 114 events)  rho +0.041  p=0.6047
+  odds x rate                                                rho +0.139  p=0.0870
+  rate alone, IN-SAMPLE quartile means                       rho +0.098  p=0.2281
+  odds x rate, in-sample rate                                rho +0.154  p=0.0528
+  among the 77 opened seats with a line, against realised relief PPG:
+    odds alone           rho +0.194  p=0.0885
+    rate alone           rho +0.164  p=0.1593
+    odds x rate          rho +0.234  p=0.0382
+
+  product minus the better half: -0.023 (bootstrap 95% [-0.109, +0.044], 2,000 draws)
+  KILL CONDITION (product beats the better single instrument by >= 0.05 rho): DECORATION: rank by odds alone, print the rate as its own column

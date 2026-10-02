@@ -1,0 +1,551 @@
+
+======================================================================
+SEASONS REQUESTED: [2026]    (draft season is 2026)
+======================================================================
+Output Destination: G:\My Drive\_Fantasy\2026\Source
+
+======================================================================
+PROCESSING SEASON: 2026 (sort: draft)
+======================================================================
+Requesting top 700 players for 2026...
+Requesting top 700 players for 2025 to populate prior-year columns...
+Raw JSON backup saved -> G:\My Drive\_Fantasy\2026\Source\espn_raw_2026_20260829_1748.json
+
+[2026] Parsed 700 players
+  2026 PROJ      : 523  non-null, 523  non-zero
+  2026 ACTUAL    : 0    non-null, 0    non-zero
+  2025 PROJ      : 468  non-null, 467  non-zero
+  2025 ACTUAL    : 504  non-null, 485  non-zero
+  Empty proj_2026 recorded : 30
+
+  !! SCORING RECONCILIATION MISMATCH: 49 proj, 0 actual
+      ('Bijan Robinson', 316.08, 314.8, 1.28)
+      ("Ja'Marr Chase", 278.64, 277.61, 1.03)
+      ('Christian McCaffrey', 304.59, 303.19, 1.39)
+      ('Jonathan Taylor', 292.46, 291.09, 1.37)
+      ('James Cook III', 262.87, 261.56, 1.31)
+      ('Ashton Jeanty', 249.22, 248.17, 1.06)
+      ('Breece Hall', 250.22, 247.85, 2.38)
+      ('Chase Brown', 241.15, 239.88, 1.27)
+      ('Emeka Egbuka', 195.52, 194.21, 1.31)
+      ('Josh Allen', 427.37, 421.94, 5.44)
+      ('Bucky Irving', 189.89, 188.62, 1.27)
+      ('Garrett Wilson', 200.62, 199.32, 1.29)
+      ('Rome Odunze', 184.07, 182.95, 1.12)
+      ('DJ Moore', 177.07, 175.91, 1.16)
+      ('Jayden Daniels', 367.01, 362.88, 4.13)
+      ('Lamar Jackson', 376.64, 374.66, 1.99)
+      ('Drake Maye', 375.48, 373.09, 2.39)
+      ('Jalen Hurts', 369.76, 366.96, 2.8)
+      ("D'Andre Swift", 197.52, 196.41, 1.11)
+      ('David Montgomery', 177.86, 176.76, 1.1)
+CSV exported successfully -> G:\My Drive\_Fantasy\2026\Source\espn_projections_2026_20260829_1748.csv
+Exit code 0 
+
+======================================================================
+SEASONS REQUESTED: [2026]    (draft season is 2026)
+======================================================================
+Output Destination: G:\My Drive\_Fantasy\2026\Source
+
+======================================================================
+PROCESSING SEASON: 2026 (sort: draft)
+======================================================================
+Requesting top 700 players for 2026...
+Requesting top 700 players for 2025 to populate prior-year columns...
+Raw JSON backup saved -> G:\My Drive\_Fantasy\2026\Source\espn_raw_2026_20260830_0142.json
+
+[2026] Parsed 700 players
+  2026 PROJ      : 523  non-null, 523  non-zero
+  2026 ACTUAL    : 0    non-null, 0    non-zero
+  2025 PROJ      : 468  non-null, 467  non-zero
+  2025 ACTUAL    : 504  non-null, 485  non-zero
+  Empty proj_2026 recorded : 30
+
+  !! SCORING RECONCILIATION MISMATCH: 49 proj, 0 actual
+      ('Bijan Robinson', 316.08, 314.8, 1.28)
+      ("Ja'Marr Chase", 278.64, 277.61, 1.03)
+      ('Christian McCaffrey', 304.59, 303.19, 1.39)
+      ('Jonathan Taylor', 292.46, 291.09, 1.37)
+      ('James Cook III', 262.87, 261.56, 1.31)
+      ('Ashton Jeanty', 249.22, 248.17, 1.06)
+      ('Breece Hall', 250.22, 247.85, 2.38)
+      ('Chase Brown', 241.15, 239.88, 1.27)
+      ('Emeka Egbuka', 195.52, 194.21, 1.31)
+      ('Josh Allen', 427.37, 421.94, 5.44)
+      ('Bucky Irving', 189.89, 188.62, 1.27)
+      ('Garrett Wilson', 200.62, 199.32, 1.29)
+      ('Rome Odunze', 184.07, 182.95, 1.12)
+      ('DJ Moore', 177.07, 175.91, 1.16)
+      ('Jayden Daniels', 367.01, 362.88, 4.13)
+      ('Lamar Jackson', 376.64, 374.66, 1.99)
+      ('Drake Maye', 375.48, 373.09, 2.39)
+      ('Jalen Hurts', 369.76, 366.96, 2.8)
+      ("D'Andre Swift", 197.52, 196.41, 1.11)
+      ('David Montgomery', 177.86, 176.76, 1.1)
+CSV exported successfully -> G:\My Drive\_Fantasy\2026\Source\espn_projections_2026_20260830_0142.csv
+Exit code 0 
+ 
+==== BOARD-ORDER TEST ==== 
+board : G:\My Drive\_Fantasy\2026\Scripts\live_draft\board_v8_fixed.csv  (480 rows)
+pull  : G:\My Drive\_Fantasy\2026\Scripts\..\Source\espn_projections_2026_20260830_0142.csv
+
+  pull integrity: 523 live projections (>= 400 required)  OK
+
+  !! 34 board players are absent from the new pull -- they keep their old projection for this test.
+     none of them are inside the top 161 -- the tested region is complete.
+==================================================================
+  BOARD-ORDER TEST (doc 64)          top 161 compared
+==================================================================
+  identical rank            102 / 161
+  within 2 slots            151 / 161      <- the threshold is 150
+  moved more than 5 slots     5
+  dropped out of the 161      2
+
+  replacement levels, recomputed on the FULL new pull:
+    RB30   168.586   shipped  168.589   delta  -0.003
+    WR30   163.533   shipped  163.540   delta  -0.007
+    QB12   341.099   shipped  341.603   delta  -0.504
+    TE12   140.289   shipped  140.295   delta  -0.006
+
+  your picks, +/-2 window still intact?
+    pick   8   5/5 unchanged
+    pick  17   5/5 unchanged
+    pick  32   5/5 unchanged
+    pick  41   5/5 unchanged
+    pick  56   4/5 unchanged
+    pick  65   4/5 unchanged
+    pick  80   4/5 unchanged
+    pick  89   5/5 unchanged
+
+  projections that moved more than 25 points (5):
+    Deshaun Watson           QB    140.4 ->    89.2 ( -51.2)   board rank 441 -> 444
+    Tank Dell                WR    125.1 ->    78.6 ( -46.5)   board rank 122 -> 180
+    Malik Davis              RB      0.0 ->    25.4 ( +25.4)   board rank 437 -> 337
+    Najee Harris             RB     45.9 ->    72.2 ( +26.3)   board rank 253 -> 198
+    Shedeur Sanders          QB    112.6 ->   163.4 ( +50.8)   board rank 444 -> 441
+    ^ CHECK THE NEWS ON EACH. A move this size has a reason.
+
+==================================================================
+  VERDICT: FREEZE.  The board stands. No rebuild.
+  Handle any large mover above as a verbal override at the pick.
+==================================================================
+
+======================================================================
+SEASONS REQUESTED: [2026]    (draft season is 2026)
+======================================================================
+Output Destination: G:\My Drive\_Fantasy\2026\Source
+
+======================================================================
+PROCESSING SEASON: 2026 (sort: draft)
+======================================================================
+Requesting top 700 players for 2026...
+Requesting top 700 players for 2025 to populate prior-year columns...
+Raw JSON backup saved -> G:\My Drive\_Fantasy\2026\Source\espn_raw_2026_20260903_0902.json
+
+[2026] Parsed 700 players
+  2026 PROJ      : 499  non-null, 499  non-zero
+  2026 ACTUAL    : 0    non-null, 0    non-zero
+  2025 PROJ      : 463  non-null, 462  non-zero
+  2025 ACTUAL    : 505  non-null, 479  non-zero
+  Empty proj_2026 recorded : 43
+
+  !! SCORING RECONCILIATION MISMATCH: 48 proj, 0 actual
+      ('Bijan Robinson', 316.1, 314.82, 1.28)
+      ("Ja'Marr Chase", 278.02, 277.0, 1.02)
+      ('Christian McCaffrey', 303.76, 302.37, 1.39)
+      ('Jonathan Taylor', 292.36, 291.0, 1.37)
+      ('James Cook III', 263.56, 262.25, 1.31)
+      ('Ashton Jeanty', 247.57, 246.52, 1.05)
+      ('Breece Hall', 250.65, 248.26, 2.39)
+      ('Chase Brown', 240.64, 239.38, 1.26)
+      ('Emeka Egbuka', 195.46, 194.15, 1.31)
+      ('Josh Allen', 428.46, 422.89, 5.57)
+      ('Bucky Irving', 189.93, 188.65, 1.27)
+      ("D'Andre Swift", 196.17, 195.06, 1.11)
+      ('Garrett Wilson', 201.38, 200.07, 1.3)
+      ('Rome Odunze', 184.7, 183.59, 1.12)
+      ('DJ Moore', 177.28, 176.11, 1.16)
+      ('Jayden Daniels', 365.87, 361.73, 4.14)
+      ('Lamar Jackson', 376.1, 374.18, 1.92)
+      ('Drake Maye', 376.52, 373.97, 2.54)
+      ('Jalen Hurts', 369.19, 366.48, 2.72)
+      ('David Montgomery', 184.98, 183.84, 1.14)
+CSV exported successfully -> G:\My Drive\_Fantasy\2026\Source\espn_projections_2026_20260903_0902.csv
+Exit code 0 
+ 
+==== BOARD-ORDER TEST ==== 
+board : G:\My Drive\_Fantasy\2026\Scripts\live_draft\board_v8_fixed.csv  (480 rows)
+pull  : G:\My Drive\_Fantasy\2026\Scripts\..\Source\espn_projections_2026_20260903_0902.csv
+
+  pull integrity: 499 live projections (>= 400 required)  OK
+
+  drift vs espn_projections_2026_20260830_0142.csv: 498 of 591 projections changed
+
+  !! 66 board players are absent from the new pull -- they keep their old projection for this test.
+     1 of them are INSIDE the top 161 and their rank is therefore unretested:
+       rank 121  Tank Dell (WR)
+==================================================================
+  BOARD-ORDER TEST (doc 64)          top 161 compared
+==================================================================
+  identical rank             45 / 161
+  within 2 slots             97 / 161      <- the threshold is 150
+  moved more than 5 slots    19
+  dropped out of the 161      4
+
+  replacement levels, recomputed on the FULL new pull:
+    RB30   164.084   shipped  168.589   delta  -4.505   <-- MOVED, 4.1b says +/-1.5 VBD matters
+    WR30   163.389   shipped  163.540   delta  -0.151
+    QB12   340.728   shipped  341.603   delta  -0.875
+    TE12   138.226   shipped  140.295   delta  -2.069   <-- MOVED, 4.1b says +/-1.5 VBD matters
+
+  your picks, +/-2 window still intact?
+    pick   8   5/5 unchanged
+    pick  17   5/5 unchanged
+    pick  32   5/5 unchanged
+    pick  41   5/5 unchanged
+    pick  56   4/5 unchanged
+    pick  65   4/5 unchanged
+    pick  80   3/5 unchanged
+    pick  89   3/5 unchanged
+
+  projections that moved more than 25 points (16):
+    Deshaun Watson           QB    140.4 ->    88.7 ( -51.6)   board rank 441 -> 444
+    Isiah Pacheco            RB    114.9 ->    66.6 ( -48.3)   board rank 143 -> 209
+    J.J. McCarthy            QB     46.3 ->    12.0 ( -34.4)   board rank 446 -> 456
+    Emari Demercado          RB     55.9 ->    22.5 ( -33.4)   board rank 228 -> 344
+    De'Zhaun Stribling       WR    109.0 ->   134.1 ( +25.1)   board rank 145 -> 116
+    Najee Harris             RB     45.9 ->    72.4 ( +26.5)   board rank 252 -> 199
+    Kevin Coleman Jr.        WR     26.1 ->    53.4 ( +27.3)   board rank 313 -> 232
+    Chris Brooks             RB     30.1 ->    61.2 ( +31.1)   board rank 317 -> 221
+    Kyler Murray             QB    289.3 ->   327.2 ( +37.9)   board rank 141 -> 90
+    Kayshon Boutte           WR     72.3 ->   113.4 ( +41.1)   board rank 188 -> 144
+    Jacob Saylors            RB      0.3 ->    45.8 ( +45.5)   board rank 432 -> 259
+    MarShawn Lloyd           RB     78.2 ->   124.4 ( +46.2)   board rank 184 -> 132
+    Shedeur Sanders          QB    112.6 ->   162.7 ( +50.1)   board rank 444 -> 441
+    Brashard Smith           RB      1.0 ->    51.5 ( +50.5)   board rank 427 -> 242
+    Malik Davis              RB      0.0 ->    53.5 ( +53.5)   board rank 437 -> 240
+    Josh Jacobs              RB      0.0 ->   152.5 (+152.5)   board rank 435 -> 93
+    ^ CHECK THE NEWS ON EACH. A move this size has a reason.
+
+==================================================================
+  VERDICT: REBUILD.  Only 97/161 held within 2 slots.
+  doc 62 section 5 is now live -- read it before doing anything else.
+==================================================================
+
+======================================================================
+SEASONS REQUESTED: [2026]    (draft season is 2026)
+======================================================================
+Output Destination: G:\My Drive\_Fantasy\2026\Source
+
+======================================================================
+PROCESSING SEASON: 2026 (sort: draft)
+======================================================================
+Requesting top 700 players for 2026...
+Requesting top 700 players for 2025 to populate prior-year columns...
+Raw JSON backup saved -> G:\My Drive\_Fantasy\2026\Source\espn_raw_2026_20260905_0800.json
+
+[2026] Parsed 700 players
+  2026 PROJ      : 499  non-null, 499  non-zero
+  2026 ACTUAL    : 0    non-null, 0    non-zero
+  2025 PROJ      : 463  non-null, 462  non-zero
+  2025 ACTUAL    : 505  non-null, 479  non-zero
+  Empty proj_2026 recorded : 43
+
+  !! SCORING RECONCILIATION MISMATCH: 48 proj, 0 actual
+      ('Bijan Robinson', 316.1, 314.82, 1.28)
+      ("Ja'Marr Chase", 278.02, 277.0, 1.02)
+      ('Christian McCaffrey', 303.76, 302.37, 1.39)
+      ('Jonathan Taylor', 292.36, 291.0, 1.37)
+      ('James Cook III', 263.56, 262.25, 1.31)
+      ('Ashton Jeanty', 247.57, 246.52, 1.05)
+      ('Breece Hall', 250.65, 248.26, 2.39)
+      ('Chase Brown', 240.64, 239.38, 1.26)
+      ('Emeka Egbuka', 195.46, 194.15, 1.31)
+      ('Josh Allen', 428.46, 422.89, 5.57)
+      ('Bucky Irving', 189.93, 188.65, 1.27)
+      ("D'Andre Swift", 196.17, 195.06, 1.11)
+      ('Garrett Wilson', 201.38, 200.07, 1.3)
+      ('Rome Odunze', 184.7, 183.59, 1.12)
+      ('DJ Moore', 177.28, 176.11, 1.16)
+      ('Jayden Daniels', 365.87, 361.73, 4.14)
+      ('Lamar Jackson', 376.1, 374.18, 1.92)
+      ('Drake Maye', 376.52, 373.97, 2.54)
+      ('Jalen Hurts', 369.19, 366.48, 2.72)
+      ('David Montgomery', 184.98, 183.84, 1.14)
+CSV exported successfully -> G:\My Drive\_Fantasy\2026\Source\espn_projections_2026_20260905_0800.csv
+Exit code 0 
+ 
+==== BOARD-ORDER TEST ==== 
+board : G:\My Drive\_Fantasy\2026\Scripts\live_draft\board_v8_fixed.csv  (480 rows)
+pull  : G:\My Drive\_Fantasy\2026\Scripts\..\Source\espn_projections_2026_20260905_0800.csv
+
+  pull integrity: 499 live projections (>= 400 required)  OK
+
+  drift vs espn_projections_2026_20260903_0902.csv: 0 of 700 projections changed
+  !! ESPN HAS NOT RE-FORECAST since that pull. Everything below is arithmetic on
+     IDENTICAL numbers -- a FREEZE here proves the pipeline works, NOT that the
+     board was re-validated against anything new. The real work today is the
+     news sweep, not this verdict.
+
+  !! 66 board players are absent from the new pull -- they keep their old projection for this test.
+     1 of them are INSIDE the top 161 and their rank is therefore unretested:
+       rank 121  Tank Dell (WR)
+==================================================================
+  BOARD-ORDER TEST (doc 64)          top 161 compared
+==================================================================
+  identical rank             45 / 161
+  within 2 slots             97 / 161      <- the threshold is 150
+  moved more than 5 slots    19
+  dropped out of the 161      4
+
+  replacement levels, recomputed on the FULL new pull:
+    RB30   164.084   shipped  168.589   delta  -4.505   <-- MOVED, 4.1b says +/-1.5 VBD matters
+    WR30   163.389   shipped  163.540   delta  -0.151
+    QB12   340.728   shipped  341.603   delta  -0.875
+    TE12   138.226   shipped  140.295   delta  -2.069   <-- MOVED, 4.1b says +/-1.5 VBD matters
+
+  your picks, +/-2 window still intact?
+    pick   8   5/5 unchanged
+    pick  17   5/5 unchanged
+    pick  32   5/5 unchanged
+    pick  41   5/5 unchanged
+    pick  56   4/5 unchanged
+    pick  65   4/5 unchanged
+    pick  80   3/5 unchanged
+    pick  89   3/5 unchanged
+
+  projections that moved more than 25 points (16):
+    Deshaun Watson           QB    140.4 ->    88.7 ( -51.6)   board rank 441 -> 444
+    Isiah Pacheco            RB    114.9 ->    66.6 ( -48.3)   board rank 143 -> 209
+    J.J. McCarthy            QB     46.3 ->    12.0 ( -34.4)   board rank 446 -> 456
+    Emari Demercado          RB     55.9 ->    22.5 ( -33.4)   board rank 228 -> 344
+    De'Zhaun Stribling       WR    109.0 ->   134.1 ( +25.1)   board rank 145 -> 116
+    Najee Harris             RB     45.9 ->    72.4 ( +26.5)   board rank 252 -> 199
+    Kevin Coleman Jr.        WR     26.1 ->    53.4 ( +27.3)   board rank 313 -> 232
+    Chris Brooks             RB     30.1 ->    61.2 ( +31.1)   board rank 317 -> 221
+    Kyler Murray             QB    289.3 ->   327.2 ( +37.9)   board rank 141 -> 90
+    Kayshon Boutte           WR     72.3 ->   113.4 ( +41.1)   board rank 188 -> 144
+    Jacob Saylors            RB      0.3 ->    45.8 ( +45.5)   board rank 432 -> 259
+    MarShawn Lloyd           RB     78.2 ->   124.4 ( +46.2)   board rank 184 -> 132
+    Shedeur Sanders          QB    112.6 ->   162.7 ( +50.1)   board rank 444 -> 441
+    Brashard Smith           RB      1.0 ->    51.5 ( +50.5)   board rank 427 -> 242
+    Malik Davis              RB      0.0 ->    53.5 ( +53.5)   board rank 437 -> 240
+    Josh Jacobs              RB      0.0 ->   152.5 (+152.5)   board rank 435 -> 93
+    ^ CHECK THE NEWS ON EACH. A move this size has a reason.
+
+==================================================================
+  VERDICT: REBUILD.  Only 97/161 held within 2 slots.
+  doc 62 section 5 is now live -- read it before doing anything else.
+==================================================================
+
+======================================================================
+SEASONS REQUESTED: [2026]    (draft season is 2026)
+======================================================================
+Output Destination: G:\My Drive\_Fantasy\2026\Source
+
+======================================================================
+PROCESSING SEASON: 2026 (sort: draft)
+======================================================================
+Requesting top 700 players for 2026...
+Requesting top 700 players for 2025 to populate prior-year columns...
+Raw JSON backup saved -> G:\My Drive\_Fantasy\2026\Source\espn_raw_2026_20260905_1040.json
+
+[2026] Parsed 700 players
+  2026 PROJ      : 499  non-null, 499  non-zero
+  2026 ACTUAL    : 0    non-null, 0    non-zero
+  2025 PROJ      : 463  non-null, 462  non-zero
+  2025 ACTUAL    : 505  non-null, 479  non-zero
+  Empty proj_2026 recorded : 43
+
+  !! SCORING RECONCILIATION MISMATCH: 48 proj, 0 actual
+      ('Bijan Robinson', 316.1, 314.82, 1.28)
+      ("Ja'Marr Chase", 278.02, 277.0, 1.02)
+      ('Christian McCaffrey', 303.76, 302.37, 1.39)
+      ('Jonathan Taylor', 292.36, 291.0, 1.37)
+      ('James Cook III', 263.56, 262.25, 1.31)
+      ('Ashton Jeanty', 247.57, 246.52, 1.05)
+      ('Breece Hall', 250.65, 248.26, 2.39)
+      ('Chase Brown', 240.64, 239.38, 1.26)
+      ('Emeka Egbuka', 195.46, 194.15, 1.31)
+      ('Josh Allen', 428.46, 422.89, 5.57)
+      ('Bucky Irving', 189.93, 188.65, 1.27)
+      ("D'Andre Swift", 196.17, 195.06, 1.11)
+      ('Garrett Wilson', 201.38, 200.07, 1.3)
+      ('Rome Odunze', 184.7, 183.59, 1.12)
+      ('DJ Moore', 177.28, 176.11, 1.16)
+      ('Jayden Daniels', 365.87, 361.73, 4.14)
+      ('Lamar Jackson', 376.1, 374.18, 1.92)
+      ('Drake Maye', 376.52, 373.97, 2.54)
+      ('Jalen Hurts', 369.19, 366.48, 2.72)
+      ('David Montgomery', 184.98, 183.84, 1.14)
+CSV exported successfully -> G:\My Drive\_Fantasy\2026\Source\espn_projections_2026_20260905_1040.csv
+Exit code 0 
+ 
+==== BOARD-ORDER TEST ==== 
+board : G:\My Drive\_Fantasy\2026\Scripts\live_draft\board_v8_fixed.csv  (480 rows)
+pull  : G:\My Drive\_Fantasy\2026\Scripts\..\Source\espn_projections_2026_20260905_1040.csv
+
+  pull integrity: 499 live projections (>= 400 required)  OK
+
+  drift vs espn_projections_2026_20260905_0800.csv: 0 of 700 projections changed
+  !! ESPN HAS NOT RE-FORECAST since that pull. Everything below is arithmetic on
+     IDENTICAL numbers -- a FREEZE here proves the pipeline works, NOT that the
+     board was re-validated against anything new. The real work today is the
+     news sweep, not this verdict.
+
+  !! 66 board players are absent from the new pull -- they keep their old projection for this test.
+     1 of them are INSIDE the top 161 and their rank is therefore unretested:
+       rank 121  Tank Dell (WR)
+==================================================================
+  BOARD-ORDER TEST (doc 64)          top 161 compared
+==================================================================
+  identical rank             45 / 161
+  within 2 slots             97 / 161      <- the threshold is 150
+  moved more than 5 slots    19
+  dropped out of the 161      4
+
+  replacement levels, recomputed on the FULL new pull:
+    RB30   164.084   shipped  168.589   delta  -4.505   <-- MOVED, 4.1b says +/-1.5 VBD matters
+    WR30   163.389   shipped  163.540   delta  -0.151
+    QB12   340.728   shipped  341.603   delta  -0.875
+    TE12   138.226   shipped  140.295   delta  -2.069   <-- MOVED, 4.1b says +/-1.5 VBD matters
+
+  your picks, +/-2 window still intact?
+    pick   8   5/5 unchanged
+    pick  17   5/5 unchanged
+    pick  32   5/5 unchanged
+    pick  41   5/5 unchanged
+    pick  56   4/5 unchanged
+    pick  65   4/5 unchanged
+    pick  80   3/5 unchanged
+    pick  89   3/5 unchanged
+
+  projections that moved more than 25 points (16):
+    Deshaun Watson           QB    140.4 ->    88.7 ( -51.6)   board rank 441 -> 444
+    Isiah Pacheco            RB    114.9 ->    66.6 ( -48.3)   board rank 143 -> 209
+    J.J. McCarthy            QB     46.3 ->    12.0 ( -34.4)   board rank 446 -> 456
+    Emari Demercado          RB     55.9 ->    22.5 ( -33.4)   board rank 228 -> 344
+    De'Zhaun Stribling       WR    109.0 ->   134.1 ( +25.1)   board rank 145 -> 116
+    Najee Harris             RB     45.9 ->    72.4 ( +26.5)   board rank 252 -> 199
+    Kevin Coleman Jr.        WR     26.1 ->    53.4 ( +27.3)   board rank 313 -> 232
+    Chris Brooks             RB     30.1 ->    61.2 ( +31.1)   board rank 317 -> 221
+    Kyler Murray             QB    289.3 ->   327.2 ( +37.9)   board rank 141 -> 90
+    Kayshon Boutte           WR     72.3 ->   113.4 ( +41.1)   board rank 188 -> 144
+    Jacob Saylors            RB      0.3 ->    45.8 ( +45.5)   board rank 432 -> 259
+    MarShawn Lloyd           RB     78.2 ->   124.4 ( +46.2)   board rank 184 -> 132
+    Shedeur Sanders          QB    112.6 ->   162.7 ( +50.1)   board rank 444 -> 441
+    Brashard Smith           RB      1.0 ->    51.5 ( +50.5)   board rank 427 -> 242
+    Malik Davis              RB      0.0 ->    53.5 ( +53.5)   board rank 437 -> 240
+    Josh Jacobs              RB      0.0 ->   152.5 (+152.5)   board rank 435 -> 93
+    ^ CHECK THE NEWS ON EACH. A move this size has a reason.
+
+==================================================================
+  VERDICT: REBUILD.  Only 97/161 held within 2 slots.
+  doc 62 section 5 is now live -- read it before doing anything else.
+==================================================================
+
+======================================================================
+SEASONS REQUESTED: [2026]    (draft season is 2026)
+======================================================================
+Output Destination: G:\My Drive\_Fantasy\2026\Source
+
+======================================================================
+PROCESSING SEASON: 2026 (sort: draft)
+======================================================================
+Requesting top 700 players for 2026...
+Requesting top 700 players for 2025 to populate prior-year columns...
+Raw JSON backup saved -> G:\My Drive\_Fantasy\2026\Source\espn_raw_2026_20260907_1258.json
+
+[2026] Parsed 700 players
+  2026 PROJ      : 499  non-null, 499  non-zero
+  2026 ACTUAL    : 0    non-null, 0    non-zero
+  2025 PROJ      : 463  non-null, 462  non-zero
+  2025 ACTUAL    : 505  non-null, 479  non-zero
+  Empty proj_2026 recorded : 43
+
+  !! SCORING RECONCILIATION MISMATCH: 48 proj, 0 actual
+      ('Bijan Robinson', 316.1, 314.82, 1.28)
+      ("Ja'Marr Chase", 278.02, 277.0, 1.02)
+      ('Christian McCaffrey', 303.76, 302.37, 1.39)
+      ('Jonathan Taylor', 292.36, 291.0, 1.37)
+      ('James Cook III', 263.56, 262.25, 1.31)
+      ('Ashton Jeanty', 247.57, 246.52, 1.05)
+      ('Breece Hall', 250.65, 248.26, 2.39)
+      ('Chase Brown', 240.64, 239.38, 1.26)
+      ('Emeka Egbuka', 195.46, 194.15, 1.31)
+      ('Josh Allen', 428.46, 422.89, 5.57)
+      ('Bucky Irving', 189.93, 188.65, 1.27)
+      ("D'Andre Swift", 196.17, 195.06, 1.11)
+      ('Garrett Wilson', 201.38, 200.07, 1.3)
+      ('Rome Odunze', 184.7, 183.59, 1.12)
+      ('DJ Moore', 177.28, 176.11, 1.16)
+      ('Jayden Daniels', 365.87, 361.73, 4.14)
+      ('Lamar Jackson', 376.1, 374.18, 1.92)
+      ('Drake Maye', 376.52, 373.97, 2.54)
+      ('Jalen Hurts', 369.19, 366.48, 2.72)
+      ('David Montgomery', 184.98, 183.84, 1.14)
+CSV exported successfully -> G:\My Drive\_Fantasy\2026\Source\espn_projections_2026_20260907_1258.csv
+Exit code 0 
+ 
+==== BOARD-ORDER TEST ==== 
+board : G:\My Drive\_Fantasy\2026\Scripts\live_draft\board_v8_fixed.csv  (480 rows)
+pull  : G:\My Drive\_Fantasy\2026\Scripts\..\Source\espn_projections_2026_20260907_1258.csv
+
+  pull integrity: 499 live projections (>= 400 required)  OK
+
+  drift vs espn_projections_2026_20260905_1040.csv: 0 of 700 projections changed
+  !! ESPN HAS NOT RE-FORECAST since that pull. Everything below is arithmetic on
+     IDENTICAL numbers -- a FREEZE here proves the pipeline works, NOT that the
+     board was re-validated against anything new. The real work today is the
+     news sweep, not this verdict.
+
+  !! 66 board players are absent from the new pull -- they keep their old projection for this test.
+     1 of them are INSIDE the top 161 and their rank is therefore unretested:
+       rank 121  Tank Dell (WR)
+==================================================================
+  BOARD-ORDER TEST (doc 64)          top 161 compared
+==================================================================
+  identical rank             45 / 161
+  within 2 slots             97 / 161      <- the threshold is 150
+  moved more than 5 slots    19
+  dropped out of the 161      4
+
+  replacement levels, recomputed on the FULL new pull:
+    RB30   164.084   shipped  168.589   delta  -4.505   <-- MOVED, 4.1b says +/-1.5 VBD matters
+    WR30   163.389   shipped  163.540   delta  -0.151
+    QB12   340.728   shipped  341.603   delta  -0.875
+    TE12   138.226   shipped  140.295   delta  -2.069   <-- MOVED, 4.1b says +/-1.5 VBD matters
+
+  your picks, +/-2 window still intact?
+    pick   8   5/5 unchanged
+    pick  17   5/5 unchanged
+    pick  32   5/5 unchanged
+    pick  41   5/5 unchanged
+    pick  56   4/5 unchanged
+    pick  65   4/5 unchanged
+    pick  80   3/5 unchanged
+    pick  89   3/5 unchanged
+
+  projections that moved more than 25 points (16):
+    Deshaun Watson           QB    140.4 ->    88.7 ( -51.6)   board rank 441 -> 444
+    Isiah Pacheco            RB    114.9 ->    66.6 ( -48.3)   board rank 143 -> 209
+    J.J. McCarthy            QB     46.3 ->    12.0 ( -34.4)   board rank 446 -> 456
+    Emari Demercado          RB     55.9 ->    22.5 ( -33.4)   board rank 228 -> 344
+    De'Zhaun Stribling       WR    109.0 ->   134.1 ( +25.1)   board rank 145 -> 116
+    Najee Harris             RB     45.9 ->    72.4 ( +26.5)   board rank 252 -> 199
+    Kevin Coleman Jr.        WR     26.1 ->    53.4 ( +27.3)   board rank 313 -> 232
+    Chris Brooks             RB     30.1 ->    61.2 ( +31.1)   board rank 317 -> 221
+    Kyler Murray             QB    289.3 ->   327.2 ( +37.9)   board rank 141 -> 90
+    Kayshon Boutte           WR     72.3 ->   113.4 ( +41.1)   board rank 188 -> 144
+    Jacob Saylors            RB      0.3 ->    45.8 ( +45.5)   board rank 432 -> 259
+    MarShawn Lloyd           RB     78.2 ->   124.4 ( +46.2)   board rank 184 -> 132
+    Shedeur Sanders          QB    112.6 ->   162.7 ( +50.1)   board rank 444 -> 441
+    Brashard Smith           RB      1.0 ->    51.5 ( +50.5)   board rank 427 -> 242
+    Malik Davis              RB      0.0 ->    53.5 ( +53.5)   board rank 437 -> 240
+    Josh Jacobs              RB      0.0 ->   152.5 (+152.5)   board rank 435 -> 93
+    ^ CHECK THE NEWS ON EACH. A move this size has a reason.
+
+==================================================================
+  VERDICT: REBUILD.  Only 97/161 held within 2 slots.
+  doc 62 section 5 is now live -- read it before doing anything else.
+==================================================================

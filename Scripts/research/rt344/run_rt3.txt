@@ -1,0 +1,59 @@
+rates: 
+roster priced: 15 of 15: Ashton Jeanty RB 14.5 bye 13, Chiefs D/ST D/ST 5.9 bye 5, Chris Brooks RB 3.6 bye 11, Davante Adams WR 11.7 bye 11, Devaughn Vele WR 5.8 bye 8, Eddy Pineiro K 9.1 bye 8, George Pickens WR 11.7 bye 14, J.K. Dobbins RB 9.7 bye 10, Jalen Hurts QB 21.6 bye 10, Mike Washington Jr. RB 3.7 bye 13, Puka Nacua WR 17.2 bye 11, Quinshon Judkins RB 12.4 bye 11, Rico Dowdle RB 10.2 bye 9, Sam LaPorta TE 8.8 bye 6, Xavier Worthy WR 8.5 bye 5
+free pool = rates() minus LEAGUE_ROSTERS.csv: 297 men at a position with a streamer rate; by position {'TE': 75, 'RB': 55, 'WR': 107, 'QB': 44, 'D/ST': 16}
+
+weeks where 0 < bar < streamer (mechanism 2 can bite):
+  QB    streamer 16.65  bars: 21.6 21.6 21.6 21.6 21.6 21.6 21.6 21.6 21.6 0.0 21.6 21.6 21.6 21.6 
+  RB    streamer  5.43  bars: 11.7 11.7 11.7 11.7 11.7 11.7 11.7 11.7 11.7 11.7 9.7 11.7 10.2 10.2 
+  WR    streamer  6.54  bars: 11.7 11.7 11.7 11.7 11.7 11.7 11.7 11.7 11.7 11.7 8.5 11.7 11.7 10.2 
+  TE    streamer  5.53  bars: 8.8 8.8 8.8 8.8 8.8 0.0 8.8 8.8 8.8 8.8 8.8 8.8 8.8 8.8 
+  D/ST  streamer  5.99  bars: 5.9 5.9 5.9 5.9 0.0 5.9 5.9 5.9 5.9 5.9 5.9 5.9 5.9 5.9   <-- weeks [1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+
+simulated 1500 paired draws for 297 men in 84s
+CONTROL arm A vs price(): largest gap 0.523 over 297 men (FAIL)
+
+men whose printed alt EXCEEDS arm C by >2 SE: 1 of 297; among the 120 bye-week fills (the rows the sentence is printed for): 1
+men whose printed alt EXCEEDS the one-currency arm U by >2 SE: 1 of 297
+
+player                  pos   a gm    tot    alt emp       C   seC       U   alt-C   alt-U
+Browns D/ST             D/ST   6.1   8.50   2.51   1    1.99  0.00    1.48    0.52    1.03
+Colts D/ST              D/ST   5.0   5.00   0.05   1    0.00  0.00    0.00    0.05    0.05
+Michael Penix Jr.       QB     7.8   7.80   0.05   1    0.00  0.00    0.00    0.05    0.05
+Falcons D/ST            D/ST   4.0   4.00   0.05   1    0.00  0.00    0.00    0.05    0.05
+Raiders D/ST            D/ST   3.6   3.70   0.05   1    0.00  0.00    0.00    0.05    0.05
+Tyrod Taylor            QB     0.7   0.70   0.05   1    0.00  0.00    0.00    0.05    0.05
+Drew Lock               QB     0.6   0.60   0.05   1    0.00  0.00    0.00    0.05    0.05
+Saints D/ST             D/ST   5.6   5.60   0.04   1    0.00  0.00    0.00    0.04    0.04
+Joe Flacco              QB     0.8   0.80   0.04   1    0.00  0.00    0.00    0.04    0.04
+Drew Allar              QB     0.7   0.70   0.04   1    0.00  0.00    0.00    0.04    0.04
+Trey Lance              QB     0.7   0.70   0.04   1    0.00  0.00    0.00    0.04    0.04
+Quinn Ewers             QB     0.7   0.70   0.04   1    0.00  0.00    0.00    0.04    0.04
+Austin Hooper           TE     1.9   2.00   0.05   1    0.01  0.01    0.00    0.04    0.05
+Shedeur Sanders         QB     9.6   9.60   0.03   1    0.00  0.00    0.00    0.03    0.03
+Kirk Cousins            QB     3.2   3.20   0.03   1    0.00  0.00    0.00    0.03    0.03
+Sam Howell              QB     0.7   0.70   0.03   1    0.00  0.00    0.00    0.03    0.03
+Giants D/ST             D/ST   4.6   4.60   0.03   1    0.00  0.00    0.00    0.03    0.03
+Commanders D/ST         D/ST   4.2   4.20   0.03   1    0.00  0.00    0.00    0.03    0.03
+Cade Klubnik            QB     0.6   0.60   0.03   1    0.00  0.00    0.00    0.03    0.03
+Max Klare               TE     0.5   0.50   0.03   1    0.00  0.00    0.00    0.03    0.03
+Charlie Woerner         TE     0.4   0.40   0.03   1    0.00  0.00    0.00    0.03    0.03
+Carsen Ryan             TE     0.4   0.40   0.03   1    0.00  0.00    0.00    0.03    0.03
+Josh Whyle              TE     0.5   0.50   0.03   1    0.00  0.00    0.00    0.03    0.03
+Fernando Mendoza        QB    12.7  12.70   0.02   1    0.00  0.00    0.00    0.02    0.02
+Eli Raridon             TE     2.2   2.20   0.04   1    0.02  0.01    0.00    0.02    0.04
+
+... and the bye-week fills the page prints the sentence for:
+Daniel Jones            QB    18.0  18.00   1.35   1    3.00  0.04    3.00   -1.65   -1.65
+Tyler Shough            QB    18.0  18.00   1.35   1    3.10  0.04    3.10   -1.75   -1.75
+Sam Darnold             QB    17.1  17.10   0.45   1    0.98  0.01    0.98   -0.53   -0.53
+Geno Smith              QB    16.1  16.10  -0.01   1    0.00  0.00    0.00   -0.01   -0.01
+Malik Willis            QB    15.6  15.60  -0.04   1    0.00  0.00    0.00   -0.04   -0.04
+Aaron Rodgers           QB    15.2  15.20  -0.03   1    0.00  0.00    0.00   -0.03   -0.03
+Cam Ward                QB    14.8  14.80  -0.04   1    0.00  0.00    0.00   -0.04   -0.04
+Jacoby Brissett         QB    13.4  13.40  -0.01   1    0.00  0.00    0.00   -0.01   -0.01
+Fernando Mendoza        QB    12.7  12.70   0.02   1    0.00  0.00    0.00    0.02    0.02
+Shedeur Sanders         QB     9.6   9.60   0.03   1    0.00  0.00    0.00    0.03    0.03
+Browns D/ST             D/ST   6.1   8.50   2.51   1    1.99  0.00    1.48    0.52    1.03
+Tua Tagovailoa          QB     8.0   8.00   0.00   1    0.00  0.00    0.00    0.00    0.00
+
+wrote /home/claude/rt/out/item3/RT3_floor_vs_sim.csv and RT3_summary.json

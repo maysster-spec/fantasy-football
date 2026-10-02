@@ -1,0 +1,499 @@
+<title>Juggers Pocket Sheet</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<style>:root{
+--ground:#EEF1F4;--surface:#FFFFFF;--sunk:#E3E8ED;--ink:#12171C;--ink2:#36424C;
+--muted:#5C6872;--rule:#D8DFE5;--accent:#2F5AA8;--accentbg:#E4EAF5;
+--over:#1C7A52;--overbg:#E0F0E8;--under:#AE4528;--underbg:#F7E5DE;--warn:#8A6210;--warnbg:#F6EEDA;
+--disp:"Archivo Narrow",Helvetica Neue,Arial,sans-serif;
+--body:"Source Serif 4",Georgia,serif;
+--mono:"IBM Plex Mono",Consolas,ui-monospace,monospace;}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+color-scheme:dark;
+--ground:#0D1114;--surface:#161C21;--sunk:#1F272D;--ink:#E8ECEF;--ink2:#C0C9D0;
+--muted:#8695A0;--rule:#283138;--accent:#6E9EE0;--accentbg:#16243A;
+--over:#43B183;--overbg:#0F2A20;--under:#DE8663;--underbg:#331B13;--warn:#CFA23F;--warnbg:#2C2413;}}
+:root[data-theme="dark"]{
+color-scheme:dark;
+--ground:#0D1114;--surface:#161C21;--sunk:#1F272D;--ink:#E8ECEF;--ink2:#C0C9D0;
+--muted:#8695A0;--rule:#283138;--accent:#6E9EE0;--accentbg:#16243A;
+--over:#43B183;--overbg:#0F2A20;--under:#DE8663;--underbg:#331B13;--warn:#CFA23F;--warnbg:#2C2413;}
+*{box-sizing:border-box}
+body{background:var(--ground);color:var(--ink);font-family:var(--body);font-size:16px;
+line-height:1.5;margin:0;padding-inline:16px;padding-block:0 56px}
+.wrap{max-width:720px;margin:0 auto}
+header{padding-block:26px 16px;border-bottom:3px solid var(--ink)}
+.kickr{font-family:var(--disp);text-transform:uppercase;letter-spacing:.15em;font-size:11px;
+font-weight:600;color:var(--accent);margin:0 0 6px}
+h1{font-family:var(--disp);font-weight:700;font-size:clamp(28px,8vw,42px);line-height:.98;
+margin:0;text-transform:uppercase;letter-spacing:-.01em;text-wrap:balance}
+.dek{color:var(--ink2);margin:10px 0 0;font-size:15px;max-width:62ch}
+.stamp{margin:12px 0 0;font-family:var(--mono);font-size:11.5px;color:var(--muted);
+background:var(--sunk);border-left:3px solid var(--warn);padding:8px 11px}
+h2{font-family:var(--disp);text-transform:uppercase;letter-spacing:.06em;font-size:19px;
+font-weight:700;margin:34px 0 4px;padding-top:8px;border-top:1px solid var(--rule)}
+h3.grp{font-family:var(--disp);text-transform:uppercase;letter-spacing:.1em;font-size:12px;
+font-weight:600;color:var(--muted);margin:16px 0 0}
+.lede{color:var(--muted);font-size:14px;margin:0 0 14px;max-width:62ch}
+.list{display:grid;gap:10px}
+.man,.free{background:var(--surface);border:1px solid var(--rule);border-left:4px solid var(--muted);
+padding:12px 14px;display:grid;gap:7px}
+.man.over{border-left-color:var(--over)}
+.man.under{border-left-color:var(--under)}
+.man.park{border-left-color:var(--warn)}
+.free.sig3{border-left-color:var(--over)}
+.free.sig2{border-left-color:var(--warn)}
+.mhead h3{font-family:var(--disp);font-size:19px;margin:0;line-height:1.15;font-weight:700}
+.meta{font-family:var(--mono);font-size:11px;color:var(--muted);margin:2px 0 0;
+text-transform:uppercase;letter-spacing:.04em}
+.kick{color:var(--accent);font-weight:600}
+.nums{display:flex;gap:18px;flex-wrap:wrap}
+.n{display:flex;flex-direction:column}
+.lab{font-family:var(--disp);text-transform:uppercase;letter-spacing:.08em;font-size:10px;
+color:var(--muted)}
+.v{font-family:var(--mono);font-variant-numeric:tabular-nums;font-size:21px;font-weight:600;
+line-height:1.15}
+.v.proj{color:var(--muted)}
+.v.act{color:var(--ink)}
+.v.barv{color:var(--accent)}
+.v.none{font-size:14px;font-weight:400;color:var(--muted);padding-top:5px}
+.d{font-family:var(--disp);text-transform:uppercase;letter-spacing:.06em;font-size:12px;
+font-weight:600}
+.d.over{color:var(--over)}
+.d.under{color:var(--under)}
+.d.na{color:var(--muted)}
+.chip{display:inline-block;font-family:var(--disp);text-transform:uppercase;letter-spacing:.06em;
+font-size:10.5px;font-weight:600;padding:3px 8px;margin:0 6px 0 0;border-radius:2px}
+.chip.ok,.chip.sig3{background:var(--overbg);color:var(--over)}
+.chip.low,.chip.sig0{background:var(--sunk);color:var(--muted)}
+.chip.warn,.chip.sig2{background:var(--warnbg);color:var(--warn)}
+.chip.bad{background:var(--underbg);color:var(--under)}
+.usage{margin:0;font-size:13.5px;color:var(--ink2)}
+.usage b{font-family:var(--mono);font-size:13px}
+.cost{margin:0;font-size:12.5px;color:var(--muted)}
+.cost b{font-family:var(--mono)}
+.alert{margin:0;background:var(--underbg);color:var(--under);font-size:13px;padding:7px 10px;
+border-radius:2px}
+.lock{margin:12px 0 0;background:var(--warnbg);color:var(--warn);font-size:13.5px;
+padding:10px 12px;border-left:3px solid var(--warn);border-radius:2px}
+.lock b{font-family:var(--disp);text-transform:uppercase;letter-spacing:.06em;font-size:12.5px}
+.barbox{background:var(--surface);border:1px solid var(--rule);padding:12px 14px;margin:0 0 6px}
+.bartab{display:grid;grid-template-columns:repeat(auto-fit,minmax(74px,1fr));gap:10px;margin:0}
+.bartab div{display:flex;flex-direction:column}
+.jump{margin:6px 0 0}
+.pagebar{margin:16px 0 0;display:flex;flex-wrap:wrap;align-items:baseline;gap:0 4px}
+.pagebar .pbl{font-family:var(--disp);text-transform:uppercase;letter-spacing:.14em;
+font-size:11px;color:var(--muted);margin-right:8px}
+.todolink{display:inline-block;margin:0 14px 0 0;font-family:var(--disp);
+text-transform:uppercase;letter-spacing:.07em;font-size:11.5px;color:var(--accent);
+border-bottom:1px solid var(--accent);text-decoration:none;padding-bottom:1px}
+.todolink.home{font-weight:700}
+.todolink.here{color:var(--muted);border-bottom:none;cursor:default}
+footer{margin-top:36px;padding-top:14px;border-top:1px solid var(--rule);color:var(--muted);
+font-size:12.5px}
+footer p{margin:0 0 6px;max-width:62ch}
+</style>
+<div class="wrap">
+<header>
+<p class="snapshot" data-snapshot="2026-09-27" style="margin:0 0 10px;font-family:var(--mono);font-size:11.5px;color:var(--muted);background:var(--warnbg);border-left:3px solid var(--warn);padding:6px 11px">Hand-built snapshot from the week sheet of Sunday 27 September 2026; <a href="https://claude.ai/artifact/1eaMAtyCzdqMcSdh96w4SK">the week sheet is the live page</a>. No script builds this one, so its date is the whole of its warranty.</p>
+<p class="kickr">The Poetry of Junkyard Juggers &middot; week 3</p>
+<h1>Juggers Pocket Sheet</h1>
+<p class="dek">Every man you own, with what the sheet <em>says</em> beside what he has
+<em>actually averaged</em> in the games played so far, and the <em>bar</em> he has to beat to change
+your starting nine. Where the first two disagree, the row says so.</p>
+<p class="jump pagebar"><span class="pbl">online</span><a class="todolink home" href="https://claude.ai/artifact/1eaMAtyCzdqMcSdh96w4SK">&larr; week sheet</a><span class="todolink here">pocket sheet</span><a class="todolink" href="https://claude.ai/artifact/BwUBENtMAZzTdjfgq7kqCJ">the takes</a></p>
+<p class="stamp">Rebuilt from the Sunday 27 September 11:45 ET pull your scheduled rebuild wrote this morning: roster, statuses, free pool, drop costs and the bars all read from it. THE USAGE FEED IS OLDER THAN THE REST: it was written Tuesday 22 September at 06:43 ET and still holds weeks 1 and 2 only. That costs nothing this week, because no man you own played in Thursday's Falcons and Packers game, so weeks 1 and 2 is still every game your men have played. Injury designations checked Sunday 27 September at 12:50 ET against the league's official week 3 report at nfl.com/injuries, loaded from the page itself: that page carries no publication date, and it is the full week 3 report with final game statuses set. It does NOT include today's inactive list, which posts 90 minutes before each kickoff. Kickoff days and times come from the week 3 schedule on the same page, which also carries no date. NOTHING ON THIS PAGE UPDATES BY ITSELF. It is a photograph, not a feed. Check the date above before you trust a status, and re-run the rebuild if anything here matters to a lineup.</p>
+<p class="lock"><b>Locks at 1:00, and it is the only choice still open: your defence.</b> The sheet's rest-of-season projections put the Bengals at 6.1 and the Chiefs at 5.7, and the week 3 bar is 6.1. On the sheet's own number the Bengals clear it and the Chiefs do not. Both kick at 1:00 and the Chiefs are the one in your lineup. The sheet will not settle it: a defence is worth its matchup, and neither this page nor the week sheet can see this week's matchup numbers, so look at ESPN's weekly defence projections before you move one. Everything else at 1:00 is already where it belongs. Judkins and LaPorta start; Perine and Malik Washington are both well under the bar on the bench.</p>
+</header>
+<h2>Your fifteen, and the three on IR</h2>
+<p class="lede">Sorted by position, then by what he has actually scored a game. One thing to know
+before you read a gap: for everyone except the quarterback, the two defences and the kicker, the
+sheet's number ALREADY contains this season, a bit over a third of it, with the rest still the
+preseason projection. So the gap you see here is smaller than the gap between the raw preseason
+number and the games. Two games is a short season either way. Read a gap as a direction, not a
+verdict.</p>
+<h3 class="grp">Quarterback</h3>
+<div class="list">
+<article class="man over">
+<div class="mhead"><h3>Jalen Hurts</h3>
+<p class="meta">QB &middot; PHI &middot; bye 10 &middot; <span class="kick">Mon 8:15</span> &middot; starting</p></div>
+<div class="nums">
+<div class="n"><span class="lab">sheet says</span><span class="v proj">22.1</span></div>
+<div class="n"><span class="lab">per game so far</span><span class="v act">25.4</span></div>
+<div class="n"><span class="lab">bar to start</span><span class="v barv">22.1</span></div>
+</div>
+<span class="d over">+3.3 vs the sheet</span>
+<span class="chip ok">clears the bar</span>
+<span class="chip low">2 games played</span>
+<p class="usage">week 1: <b>30.7</b> &middot; week 2: <b>20.2</b></p>
+<p class="usage">week 2 usage: <b>100%</b> of snaps &middot; <b>5</b> carries</p>
+<p class="usage">THE SHEET AND THE GAMES DISAGREE: the sheet says 22.1 a week, he has scored 25.4 a game, 3.3 points above it. His is one of the four numbers here the sheet leaves as a pure projection, so this gap is the honest one and is not softened by the games.</p>
+<p class="cost">Not on the Eagles' week 3 report at all, so no designation. Scored by hand from his published game logs under your rules: 203 and 264 passing yards, 5 passing touchdowns, 2 interceptions, 62 rushing yards. The usage feed counts his rushing only, which is why it shows 4.6 and 1.6. Two-point conversions are not in that log.</p>
+<p class="cost">dropping him costs <b>13.4</b> over fourteen weeks, and Kyler Murray at 21.6 is the man who would replace him</p>
+</article>
+</div>
+<h3 class="grp">Running back</h3>
+<div class="list">
+<article class="man over">
+<div class="mhead"><h3>Ashton Jeanty</h3>
+<p class="meta">RB &middot; LV &middot; bye 13 &middot; <span class="kick">Sun 4:25</span> &middot; starting</p></div>
+<div class="nums">
+<div class="n"><span class="lab">sheet says</span><span class="v proj">17.0</span></div>
+<div class="n"><span class="lab">per game so far</span><span class="v act">19.0</span></div>
+<div class="n"><span class="lab">bar to start</span><span class="v barv">9.4</span></div>
+</div>
+<span class="d over">+2.0 vs the sheet</span>
+<span class="chip ok">clears the bar</span>
+<span class="chip low">2 games played</span>
+<p class="usage">week 1: <b>29.7</b> &middot; week 2: <b>8.3</b></p>
+<p class="usage">week 2 usage: <b>81%</b> of snaps &middot; <b>7</b> targets &middot; <b>24.1%</b> of the team's &middot; <b>21</b> carries</p>
+<p class="usage">THE SHEET AND THE GAMES DISAGREE: the sheet says 17.0 a week, he has scored 19.0 a game, 2.0 points above it.</p>
+<p class="cost">Not on the Raiders' week 3 report, so no designation. Your most expensive man by a wide margin.</p>
+<p class="cost">dropping him costs <b>122.0</b> over fourteen weeks</p>
+</article>
+<article class="man under">
+<div class="mhead"><h3>Quinshon Judkins</h3>
+<p class="meta">RB &middot; CLE &middot; bye 11 &middot; <span class="kick">Sun 1:00</span> &middot; starting</p></div>
+<div class="nums">
+<div class="n"><span class="lab">sheet says</span><span class="v proj">9.6</span></div>
+<div class="n"><span class="lab">per game so far</span><span class="v act">6.7</span></div>
+<div class="n"><span class="lab">bar to start</span><span class="v barv">9.4</span></div>
+</div>
+<span class="d under">-2.9 vs the sheet</span>
+<span class="chip warn">sheet clears the bar, the games do not</span>
+<span class="chip low">2 games played</span>
+<p class="usage">week 1: <b>6.0</b> &middot; week 2: <b>7.3</b></p>
+<p class="usage">week 2 usage: <b>67%</b> of snaps &middot; <b>5</b> targets &middot; <b>16.7%</b> of the team's &middot; <b>12</b> carries</p>
+<p class="usage">THE SHEET AND THE GAMES DISAGREE: the sheet says 9.6 a week, he has scored 6.7 a game, 2.9 points below it. He is the clearest case on the page of the sheet carrying a man his games have not: two-thirds of that 9.6 is still the preseason number.</p>
+<p class="cost">Full participation in practice on the Browns' week 3 report with no designation, so he plays. Nothing behind him is on your roster.</p>
+<p class="cost">dropping him costs <b>26.8</b> over fourteen weeks</p>
+</article>
+<article class="man over">
+<div class="mhead"><h3>Samaje Perine</h3>
+<p class="meta">RB &middot; CIN &middot; bye 6 &middot; <span class="kick">Sun 1:00</span> &middot; bench</p></div>
+<div class="nums">
+<div class="n"><span class="lab">sheet says</span><span class="v proj">4.4</span></div>
+<div class="n"><span class="lab">per game so far</span><span class="v act">4.6</span></div>
+<div class="n"><span class="lab">bar to start</span><span class="v barv">9.4</span></div>
+</div>
+<span class="d over">+0.2 vs the sheet</span>
+<span class="chip low">under the bar</span>
+<span class="chip low">2 games played</span>
+<p class="usage">week 1: <b>6.5</b> &middot; week 2: <b>2.7</b></p>
+<p class="usage">week 2 usage: <b>40%</b> of snaps &middot; <b>1</b> target &middot; <b>3.2%</b> of the team's &middot; <b>2</b> carries</p>
+<p class="cost">New since the last version of this page. Not on the Bengals' week 3 report, so no designation. The sheet reads him as the seat behind Chase Brown, which is the only reason to hold him: his own rate is less than half the bar.</p>
+<p class="cost">dropping him costs <b>0.0</b> over fourteen weeks</p>
+</article>
+<article class="man under">
+<div class="mhead"><h3>J.K. Dobbins</h3>
+<p class="meta">RB &middot; DEN &middot; bye 10 &middot; <span class="kick">Sun 8:20</span> &middot; bench</p></div>
+<div class="nums">
+<div class="n"><span class="lab">sheet says</span><span class="v proj">8.1</span></div>
+<div class="n"><span class="lab">per game so far</span><span class="v act">3.6</span></div>
+<div class="n"><span class="lab">bar to start</span><span class="v barv">9.4</span></div>
+</div>
+<span class="d under">-4.5 vs the sheet</span>
+<span class="chip low">under the bar</span>
+<span class="chip low">2 games played</span>
+<p class="usage">week 1: <b>3.6</b> &middot; week 2: <b>3.6</b></p>
+<p class="usage">week 2 usage: <b>34%</b> of snaps &middot; <b>0</b> targets &middot; <b>0.0%</b> of the team's &middot; <b>10</b> carries</p>
+<p class="usage">THE SHEET AND THE GAMES DISAGREE: the sheet says 8.1 a week, he has scored 3.6 a game, 4.5 points below it. Of the 8.1, 5.0 is the weeks it expects him to miss rather than the weeks it expects him to play.</p>
+<p class="alert">THE BACKFIELD AHEAD OF HIM GOT MORE CROWDED, NOT LESS. RJ Harvey is back to full participation with no designation on the Broncos' week 3 report. Jonah Coleman, who took 40% of the snaps in week 2, is Out with an ankle. So the week 2 opening that made Dobbins interesting has closed from the top rather than the bottom.</p>
+<p class="cost">dropping him costs <b>7.1</b> over fourteen weeks, and Woody Marks at 6.7 is the man who would replace him</p>
+</article>
+<article class="man under">
+<div class="mhead"><h3>Mike Washington Jr.</h3>
+<p class="meta">RB &middot; LV &middot; bye 13 &middot; <span class="kick">Sun 4:25</span> &middot; bench</p></div>
+<div class="nums">
+<div class="n"><span class="lab">sheet says</span><span class="v proj">3.0</span></div>
+<div class="n"><span class="lab">per game so far</span><span class="v act">2.4</span></div>
+<div class="n"><span class="lab">bar to start</span><span class="v barv">9.4</span></div>
+</div>
+<span class="d under">-0.6 vs the sheet</span>
+<span class="chip low">under the bar</span>
+<span class="chip low">2 games played</span>
+<p class="usage">week 1: <b>4.1</b> &middot; week 2: <b>0.7</b></p>
+<p class="usage">week 2 usage: <b>19%</b> of snaps &middot; <b>1</b> target &middot; <b>3.4%</b> of the team's &middot; <b>3</b> carries</p>
+<p class="cost">Not on the Raiders' week 3 report, so no designation. The sheet holds him only as the handcuff to Ashton Jeanty, and it notes you have already ruled this one out.</p>
+<p class="cost">dropping him costs <b>0.0</b> over fourteen weeks</p>
+</article>
+</div>
+<h3 class="grp">Receiver</h3>
+<div class="list">
+<article class="man over">
+<div class="mhead"><h3>Davante Adams</h3>
+<p class="meta">WR &middot; LAR &middot; bye 11 &middot; <span class="kick">Sun 8:20</span> &middot; starting</p></div>
+<div class="nums">
+<div class="n"><span class="lab">sheet says</span><span class="v proj">15.0</span></div>
+<div class="n"><span class="lab">per game so far</span><span class="v act">19.8</span></div>
+<div class="n"><span class="lab">bar to start</span><span class="v barv">9.4</span></div>
+</div>
+<span class="d over">+4.8 vs the sheet</span>
+<span class="chip ok">clears the bar</span>
+<span class="chip low">2 games played</span>
+<p class="usage">week 1: <b>4.1</b> &middot; week 2: <b>35.5</b></p>
+<p class="usage">week 2 usage: snaps still not posted &middot; <b>10</b> targets &middot; <b>33.3%</b> of the team's</p>
+<p class="usage">THE SHEET AND THE GAMES DISAGREE: the sheet says 15.0 a week, he has scored 19.8 a game, 4.8 points above it.</p>
+<p class="cost">Not on the Rams' week 3 report, so no designation. His two games are a 4.1 with Nacua playing and a 35.5 with Nacua out. Nacua is Doubtful again this week, which is the state the 35.5 came from.</p>
+<p class="cost">dropping him costs <b>78.3</b> over fourteen weeks</p>
+</article>
+<article class="man over">
+<div class="mhead"><h3>Devaughn Vele</h3>
+<p class="meta">WR &middot; NO &middot; bye 8 &middot; <span class="kick">Sun 4:25</span> &middot; starting in the flex</p></div>
+<div class="nums">
+<div class="n"><span class="lab">sheet says</span><span class="v proj">8.6</span></div>
+<div class="n"><span class="lab">per game so far</span><span class="v act">12.6</span></div>
+<div class="n"><span class="lab">bar to start</span><span class="v barv">9.4</span></div>
+</div>
+<span class="d over">+4.0 vs the sheet</span>
+<span class="chip warn">the games clear the bar, the sheet does not</span>
+<span class="chip low">2 games played</span>
+<p class="usage">week 1: <b>16.4</b> &middot; week 2: <b>8.9</b></p>
+<p class="usage">week 2 usage: <b>96%</b> of snaps &middot; <b>7</b> targets &middot; <b>21.9%</b> of the team's</p>
+<p class="usage">THE SHEET AND THE GAMES DISAGREE: the sheet says 8.6 a week, he has scored 12.6 a game, 4.0 points above it. The disagreement runs the other way from Judkins: the games say start him, the sheet says he is under the bar, and 3.5 of the sheet's 8.6 is weeks it expects him to miss.</p>
+<p class="cost">Not on the Saints' week 3 report, so no designation. He has played 96% of the snaps, which is the part of this that is not noise.</p>
+<p class="cost">dropping him costs <b>4.9</b> over fourteen weeks</p>
+</article>
+<article class="man over">
+<div class="mhead"><h3>Tre Tucker</h3>
+<p class="meta">WR &middot; LV &middot; bye 13 &middot; <span class="kick">Sun 4:25</span> &middot; bench</p></div>
+<div class="nums">
+<div class="n"><span class="lab">sheet says</span><span class="v proj">9.3</span></div>
+<div class="n"><span class="lab">per game so far</span><span class="v act">12.0</span></div>
+<div class="n"><span class="lab">bar to start</span><span class="v barv">9.4</span></div>
+</div>
+<span class="d over">+2.7 vs the sheet</span>
+<span class="chip warn">the games clear the bar, the sheet misses it by 0.1</span>
+<span class="chip low">2 games played</span>
+<p class="usage">week 1: <b>3.7</b> &middot; week 2: <b>20.4</b></p>
+<p class="usage">week 2 usage: <b>59%</b> of snaps &middot; <b>7</b> targets &middot; <b>24.1%</b> of the team's</p>
+<p class="usage">THE SHEET AND THE GAMES DISAGREE: the sheet says 9.3 a week, he has scored 12.0 a game, 2.7 points above it.</p>
+<p class="alert">HE IS ON YOUR BENCH AND HE OUTSCORES THE RECEIVER STARTING AHEAD OF HIM. Tucker has averaged 12.0 a game, George Pickens 5.7, and the sheet has them 0.1 apart. Both kick at 4:25, so this one is NOT locked at 1:00 and you have until then. Read it with the next note in mind: Brock Bowers is Questionable with a knee and did not practise, which is 11 targets a game that could move inside the Raiders' offence, and Tucker and Jeanty are both in it.</p>
+<p class="cost">New since the last version of this page. You took him off the wire, where he sat at one of three marks.</p>
+<p class="cost">dropping him costs <b>7.2</b> over fourteen weeks, and Kalif Raymond at 7.2 is the man who would replace him</p>
+</article>
+<article class="man under">
+<div class="mhead"><h3>Malik Washington</h3>
+<p class="meta">WR &middot; MIA &middot; bye 6 &middot; <span class="kick">Sun 1:00</span> &middot; bench</p></div>
+<div class="nums">
+<div class="n"><span class="lab">sheet says</span><span class="v proj">7.1</span></div>
+<div class="n"><span class="lab">per game so far</span><span class="v act">5.8</span></div>
+<div class="n"><span class="lab">bar to start</span><span class="v barv">9.4</span></div>
+</div>
+<span class="d under">-1.3 vs the sheet</span>
+<span class="chip low">under the bar</span>
+<span class="chip low">2 games played</span>
+<p class="usage">week 1: <b>4.8</b> &middot; week 2: <b>6.7</b></p>
+<p class="usage">week 2 usage: <b>73%</b> of snaps &middot; <b>5</b> targets &middot; <b>21.7%</b> of the team's</p>
+<p class="cost">New since the last version of this page: he was the one man at three of three workload marks on last week's wire and you took him. Not on the Dolphins' week 3 report, so no designation. The workload has held up, the points have not yet.</p>
+<p class="cost">dropping him costs <b>0.9</b> over fourteen weeks</p>
+</article>
+<article class="man under">
+<div class="mhead"><h3>George Pickens</h3>
+<p class="meta">WR &middot; DAL &middot; bye 14 &middot; <span class="kick">Sun 4:25</span> &middot; starting &middot; your keeper</p></div>
+<div class="nums">
+<div class="n"><span class="lab">sheet says</span><span class="v proj">9.4</span></div>
+<div class="n"><span class="lab">per game so far</span><span class="v act">5.7</span></div>
+<div class="n"><span class="lab">bar to start</span><span class="v barv">9.4</span></div>
+</div>
+<span class="d under">-3.7 vs the sheet</span>
+<span class="chip warn">sheet sits exactly on the bar, the games are well under</span>
+<span class="chip low">2 games played</span>
+<p class="usage">week 1: <b>4.3</b> &middot; week 2: <b>7.0</b></p>
+<p class="usage">week 2 usage: <b>76%</b> of snaps &middot; <b>8</b> targets &middot; <b>25.8%</b> of the team's</p>
+<p class="usage">THE SHEET AND THE GAMES DISAGREE: the sheet says 9.4 a week, he has scored 5.7 a game, 3.7 points below it.</p>
+<p class="cost">Not on the Cowboys' week 3 report, so no designation. A quarter of the Dallas throws is a real job, so the workload argues for patience even while the points do not. The sheet notes you have already ruled a drop out, and he is your keeper, so the live question is whether he starts over Tucker and not whether he stays.</p>
+<p class="cost">dropping him costs <b>9.1</b> over fourteen weeks</p>
+</article>
+</div>
+<h3 class="grp">Tight end</h3>
+<div class="list">
+<article class="man over">
+<div class="mhead"><h3>Sam LaPorta</h3>
+<p class="meta">TE &middot; DET &middot; bye 6 &middot; <span class="kick">Sun 1:00</span> &middot; starting</p></div>
+<div class="nums">
+<div class="n"><span class="lab">sheet says</span><span class="v proj">9.8</span></div>
+<div class="n"><span class="lab">per game so far</span><span class="v act">10.8</span></div>
+<div class="n"><span class="lab">bar to start</span><span class="v barv">9.4</span></div>
+</div>
+<span class="d over">+1.0 vs the sheet</span>
+<span class="chip ok">clears the bar</span>
+<span class="chip low">2 games played</span>
+<p class="usage">week 1: <b>7.3</b> &middot; week 2: <b>14.2</b></p>
+<p class="usage">week 2 usage: <b>98%</b> of snaps &middot; <b>7</b> targets &middot; <b>18.4%</b> of the team's</p>
+<p class="cost">Not on the Lions' week 3 report, so no designation. 98% of the snaps, and he is the only tight end you own.</p>
+<p class="cost">dropping him costs <b>10.4</b> over fourteen weeks, and Mike Gesicki at 9.4 is the man who would replace him</p>
+</article>
+</div>
+<h3 class="grp">Defence and kicker</h3>
+<div class="list">
+<article class="man under">
+<div class="mhead"><h3>Chiefs D/ST</h3>
+<p class="meta">D/ST &middot; KC &middot; bye 5 &middot; <span class="kick">Sun 1:00</span> &middot; starting</p></div>
+<div class="nums">
+<div class="n"><span class="lab">sheet says</span><span class="v proj">5.7</span></div>
+<div class="n"><span class="lab">per game so far</span><span class="v act">5.0</span></div>
+<div class="n"><span class="lab">bar to start</span><span class="v barv">6.1</span></div>
+</div>
+<span class="d under">-0.7 vs the sheet</span>
+<span class="chip bad">under the bar on both numbers</span>
+<span class="chip low">2 games played</span>
+<p class="usage">week 1: <b>12.0</b> &middot; week 2: <b>-2.0</b></p>
+<p class="alert">THIS IS THE ONE DECISION THAT LOCKS AT 1:00. He is your starter and he is under the bar on the sheet's number and on his games. The Bengals on your bench project higher. A defence is worth its matchup rather than its average, and this page cannot see the matchups, so check ESPN's weekly defence projections before you swap. Do not swap on the strength of this row alone.</p>
+<p class="cost">Scored by hand from the published box scores under your league's defence rules. Week 1 against Denver: 4 sacks, 1 interception, 1 fumble recovered, 10 allowed, 12 points. Week 2 against the Colts: 1 interception, 30 allowed, minus 2. Blocked kicks are not in the box score and are not counted.</p>
+<p class="cost">The sheet does not price a defence. A replacement defence, the twelfth best, averages <b>5.99</b> a week measured across five seasons, so the Chiefs at 5.7 are already at or a touch below what the wire would hand you. That is a reason to look, not a reason to drop.</p>
+</article>
+<article class="man under">
+<div class="mhead"><h3>Bengals D/ST</h3>
+<p class="meta">D/ST &middot; CIN &middot; bye 6 &middot; <span class="kick">Sun 1:00</span> &middot; bench</p></div>
+<div class="nums">
+<div class="n"><span class="lab">sheet says</span><span class="v proj">6.1</span></div>
+<div class="n"><span class="lab">per game so far</span><span class="v none">not scored here</span></div>
+<div class="n"><span class="lab">bar to start</span><span class="v barv">6.1</span></div>
+</div>
+<span class="d na">no gap to report</span>
+<span class="chip warn">the sheet's number meets the bar exactly</span>
+<p class="cost">New since the last version of this page. The middle number is missing on purpose and not by accident: the usage feed scores no defence, and a defence's season average is not what decides whether to start him. His matchup is. Scoring his first two weeks by hand would answer a question that does not choose your lineup, so it is not on the page.</p>
+<p class="cost">He is the higher of your two defences on the sheet and the one on your bench. Both kick at 1:00.</p>
+</article>
+<article class="man under">
+<div class="mhead"><h3>Eddy Pineiro</h3>
+<p class="meta">K &middot; SF &middot; bye 8 &middot; <span class="kick">Sun 4:05</span> &middot; starting</p></div>
+<div class="nums">
+<div class="n"><span class="lab">sheet says</span><span class="v proj">9.2</span></div>
+<div class="n"><span class="lab">per game so far</span><span class="v act">7.5</span></div>
+<div class="n"><span class="lab">bar to start</span><span class="v barv">9.2</span></div>
+</div>
+<span class="d under">-1.7 vs the sheet</span>
+<span class="chip low">under the bar on his games</span>
+<span class="chip low">2 games played</span>
+<p class="usage">week 1: <b>10.0</b> &middot; week 2: <b>5.0</b></p>
+<p class="cost">Not on the 49ers' week 3 report, so no designation. He was Questionable with an illness last week and played. Scored by hand from the published game log by kick distance. Week 1: field goals from 20 to 29 and from 50-plus, a missed 50-plus, 3 extra points, 10 points. Week 2: 5 extra points and no field goal attempt, 5 points.</p>
+<p class="cost">The sheet does not price kickers, which reads as free and is not. What replaces a kicker is another kicker: a replacement kicker averages <b>8.26</b> a week measured across five seasons, so dropping him is worth about <b>0.9</b> a week against his own projection, and the whole spread from the best kicker in the league to a replacement is about 2 to 4 points a week.</p>
+</article>
+</div>
+<h3 class="grp">On IR, and all three seats are full</h3>
+<div class="list">
+<article class="man park">
+<div class="mhead"><h3>Puka Nacua</h3>
+<p class="meta">WR &middot; LAR &middot; bye 11 &middot; <span class="kick">Sun 8:20</span> &middot; IR seat</p></div>
+<div class="nums">
+<div class="n"><span class="lab">sheet says</span><span class="v proj">14.7</span></div>
+<div class="n"><span class="lab">week 1 only</span><span class="v act">9.9</span></div>
+<div class="n"><span class="lab">bar to start</span><span class="v barv">9.4</span></div>
+</div>
+<span class="d under">-4.8 vs the sheet</span>
+<span class="chip warn">1 game played</span>
+<p class="usage">week 1: <b>9.9</b></p>
+<p class="usage">week 1 usage: <b>70%</b> of snaps &middot; <b>9</b> targets &middot; <b>33.3%</b> of the team's</p>
+<p class="usage">THE SHEET AND THE GAME DISAGREE: the sheet says 14.7 a week, his one game was 9.9, 4.8 points below it. On one game that is barely evidence, and 13.5 of the sheet's 14.7 is the weeks it expects him to miss.</p>
+<p class="alert">DOUBTFUL with a hip on the Rams' official week 3 report, and he did not practise. That is an UPGRADE from last week, when he was inactive. It does not break anything: a man in the IR seat who moves to Questionable or Doubtful keeps the seat, your claims still process and your lineup still moves. The seat only goes invalid if he loses his designation entirely without playing, and THAT is the thing to watch, because it freezes your lineup until you cut somebody.</p>
+<p class="cost">dropping him costs <b>74.5</b> over fourteen weeks, the most expensive drop you own after Jeanty and Adams</p>
+</article>
+<article class="man park">
+<div class="mhead"><h3>Rico Dowdle</h3>
+<p class="meta">RB &middot; PIT &middot; bye 9 &middot; <span class="kick">Sun 1:00</span> &middot; IR seat</p></div>
+<div class="nums">
+<div class="n"><span class="lab">sheet says</span><span class="v proj">7.0</span></div>
+<div class="n"><span class="lab">per game so far</span><span class="v act">4.2</span></div>
+<div class="n"><span class="lab">bar to start</span><span class="v barv">9.4</span></div>
+</div>
+<span class="d under">-2.8 vs the sheet</span>
+<span class="chip low">under the bar</span>
+<span class="chip low">2 games played</span>
+<p class="usage">week 1: <b>3.1</b> &middot; week 2: <b>5.4</b></p>
+<p class="usage">week 2 usage: <b>26%</b> of snaps &middot; <b>2</b> targets &middot; <b>5.4%</b> of the team's &middot; <b>7</b> carries</p>
+<p class="usage">THE SHEET AND THE GAMES DISAGREE: the sheet says 7.0 a week, he has scored 4.2 a game, 2.8 points below it, and 3.0 of the sheet's 7.0 is the weeks it expects him to miss.</p>
+<p class="alert">OUT with a toe on the Steelers' official week 3 report, and the sheet has him back on 1 October. His snaps had already fallen from 58% in week 1 to 26% in week 2. One thing does cut his way: Jaylen Warren, the man he sits behind, is Questionable with a shoulder.</p>
+<p class="cost">dropping him costs <b>3.0</b> over fourteen weeks, and the sheet notes you have already ruled it out</p>
+</article>
+<article class="man park">
+<div class="mhead"><h3>Jonah Coleman</h3>
+<p class="meta">RB &middot; DEN &middot; bye 10 &middot; <span class="kick">Sun 8:20</span> &middot; IR seat</p></div>
+<div class="nums">
+<div class="n"><span class="lab">sheet says</span><span class="v proj">3.4</span></div>
+<div class="n"><span class="lab">per game so far</span><span class="v act">6.7</span></div>
+<div class="n"><span class="lab">bar to start</span><span class="v barv">9.4</span></div>
+</div>
+<span class="d over">+3.3 vs the sheet</span>
+<span class="chip low">under the bar</span>
+<span class="chip low">2 games played</span>
+<p class="usage">week 1: <b>0.0</b> &middot; week 2: <b>13.3</b></p>
+<p class="usage">week 2 usage: <b>40%</b> of snaps &middot; <b>3</b> targets &middot; <b>10.3%</b> of the team's &middot; <b>10</b> carries</p>
+<p class="cost">OUT with an ankle sprain on the Broncos' official week 3 report, and ESPN has him on Injured Reserve with a return flagged for 25 October. His week 2 was 13.3 on 40% of the snaps with RJ Harvey absent; Harvey is back to full participation this week, so the opening that produced it is gone.</p>
+<p class="cost">dropping him costs <b>0.0</b> over fourteen weeks, the cheapest man you own, and he is the obvious seat to free if you ever need an IR slot</p>
+</article>
+</div>
+<h2>The bar, by position</h2>
+<p class="lede">Week 3 numbers, and they MOVED since the last version of this page. This is what a body
+has to beat to change your starting nine that week. Below it he sits on the bench and is worth
+nothing to you, however good he looks elsewhere.</p>
+<div class="barbox"><div class="bartab">
+<div><span class="lab">QB</span><span class="v barv">22.1</span></div><div><span class="lab">RB</span><span class="v barv">9.4</span></div><div><span class="lab">WR</span><span class="v barv">9.4</span></div><div><span class="lab">TE</span><span class="v barv">9.4</span></div><div><span class="lab">D/ST</span><span class="v barv">6.1</span></div><div><span class="lab">K</span><span class="v barv">9.2</span></div>
+</div></div>
+<p class="lede">Running back and receiver both FELL, from 11.7 to 9.4, and that is the single biggest
+change on this page: it is easier to crack your lineup this week than it was last week. Tight end rose
+from 8.8 to 9.4, quarterback from 21.6 to 22.1, defence from 5.9 to 6.1, kicker from 9.1 to 9.2.</p>
+<h2>Free, and worth a look</h2>
+<p class="lede">THE POOL FLIPPED THIS WEEK. Last week every free man sat on waivers and cost you a
+claim. Today only 15 of 277 do, and all 15 are Falcons and Packers dropped after Thursday night; they
+clear at 3am on Thursday 1 October. Everything else is a straight add that costs you no waiver
+priority at all, so the men below are yours for the taking rather than the claiming. Nobody in the
+pool clears all three workload marks this week. These four clear two, which is a weaker population
+than last week's three of three, so read the marks and not the name.</p>
+<div class="list">
+<article class="free sig2">
+<div class="mhead"><h3>Kalif Raymond</h3>
+<p class="meta">WR &middot; CHI &middot; bye 10 &middot; 10.0% rostered &middot; <span class="kick">Mon 8:15</span></p></div>
+<p class="usage"><b>61.0%</b> of snaps &middot; <b>14</b> targets &middot; <b>25.0%</b> of the team's &middot; averaging <b>9.4</b> a game, 2 games</p>
+<p><span class="chip sig2">two of three</span><span class="chip ok">free add, no priority spent</span></p>
+<p class="cost">The best man in the pool on the marks AND the man the sheet already uses to price any receiver you drop, at 7.2. He is averaging 9.4 a game, which is essentially the 9.4 receiver bar, and he is free. Not on the Bears' week 3 report. He plays Monday, so he is addable after every Sunday result is in.</p>
+</article>
+<article class="free sig2">
+<div class="mhead"><h3>Michael Mayer</h3>
+<p class="meta">TE &middot; LV &middot; bye 13 &middot; 16.6% rostered &middot; <span class="kick">Sun 4:25</span></p></div>
+<p class="usage"><b>82.5%</b> of snaps &middot; <b>11</b> targets &middot; <b>19.0%</b> of the team's &middot; averaging <b>5.0</b> a game, 2 games</p>
+<p><span class="chip sig2">two of three</span><span class="chip ok">free add, no priority spent</span></p>
+<p class="cost">Read him through the man ahead of him and not through his own 5.0: Brock Bowers is Questionable with a knee and did not practise this week. Mayer at 82.5% of the snaps is the seat behind 11 targets a game. Ownership is falling, down 0.73 on the week.</p>
+</article>
+<article class="free sig2">
+<div class="mhead"><h3>Cade Otton</h3>
+<p class="meta">TE &middot; TB &middot; bye 10 &middot; 2.8% rostered &middot; <span class="kick">Sun 4:05</span></p></div>
+<p class="usage"><b>93.5%</b> of snaps &middot; <b>11</b> targets &middot; <b>18.3%</b> of the team's &middot; averaging <b>5.2</b> a game, 2 games</p>
+<p><span class="chip sig2">two of three</span><span class="chip ok">free add, no priority spent</span></p>
+<p class="cost">93.5% of the snaps is the highest workload in the pool and 2.8% rostered is the least competition. The points have not come yet. Not on the Buccaneers' week 3 report.</p>
+</article>
+<article class="free sig2">
+<div class="mhead"><h3>Germie Bernard</h3>
+<p class="meta">WR &middot; PIT &middot; bye 9 &middot; 3.8% rostered &middot; <span class="kick">Sun 1:00</span></p></div>
+<p class="usage"><b>79.0%</b> of snaps &middot; <b>8</b> targets &middot; <b>21.6%</b> of the team's &middot; averaging <b>5.5</b> a game, week 2 only</p>
+<p><span class="chip sig2">two of three</span><span class="chip ok">free add, no priority spent</span></p>
+<p class="cost">One game, so the thinnest evidence on this list. Not on the Steelers' week 3 report.</p>
+</article>
+</div>
+<p class="lede">Four more the sheet or the marks point at, each clearing one of three and each a free
+add: <b>Mike Gesicki</b>, the tight end the sheet uses to price LaPorta at 9.4, who scored 16.3 in his
+one game on 33% of the snaps; <b>Pat Freiermuth</b>, 9.2 a game on 10 targets and the most rostered of
+the group at 21.7%; <b>Xavier Hutchinson</b>, 15 targets and the fastest-rising ownership in the pool at
+plus 1.16 on the week, with Nico Collins Out ahead of him; and <b>Kendrick Bourne</b>, 11 targets and
+17.5% of the Arizona throws at 2.4% rostered.</p>
+<footer>
+<p><b>Three numbers, and they are not all the same kind of number.</b> "Sheet says" is what the week
+sheet carries for him per week. For a quarterback, a defence and a kicker that is a pure rest-of-season
+projection. For everyone else it is a BLEND: a bit over a third of it is what he has actually done this
+season and the rest is still the preseason projection, which is why those gaps look small. The middle
+number is what he has actually averaged in the games he has played, and nothing else. At running back,
+receiver and tight end it comes from the usage feed; at quarterback, kicker and defence the feed scores
+none of it, so those are scored by hand off the published game logs and box scores under your league's
+own rules, and the row says which log it came from. The third is the bar for week 3.</p>
+<p>The drop costs are the week sheet's own, over fourteen weeks, and several of them are mostly the
+weeks the sheet expects a man to MISS rather than the weeks it expects him to play; where that is the
+larger part, the row says so. The two defences and the kicker are not priced by the sheet at all, so
+those rows carry the measured replacement level instead, because "not priced" is not the same as free.</p>
+<p>Ownership and availability are from this morning's 11:45 pull and move faster than anything else
+here. Fifteen men in the pool are on waivers until 3am Thursday 1 October; everybody else is a free
+add today.</p>
+<p>This page is a read-only snapshot. IT DOES NOT UPDATE ITSELF. It cannot file a claim, it cannot drop
+anybody, it does not touch your league, and it knows nothing that happened after the stamp at the top,
+including today's inactive lists.</p>
+</footer>
+</div>

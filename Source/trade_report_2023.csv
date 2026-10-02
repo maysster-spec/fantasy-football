@@ -1,0 +1,38 @@
+Week,Date,Team,TeamB,Type,Status,Transaction
+1,2023-09-05 22:15,Olave Garden,,TRADE_DECLINE,EXECUTED,
+2,2023-09-14 21:33,Brown VS Browns,,TRADE_VETO,EXECUTED,
+2,2023-09-14 21:40,Trevor's Tremors,,TRADE_VETO,EXECUTED,
+2,2023-09-14 19:14,Multiple Scorgasms,,TRADE_VETO,EXECUTED,
+2,2023-09-14 19:14,Bloodied Castaways,,TRADE_ACCEPT,,DROP Player ID 4040761 [Bloodied Castaways -> 0]
+2,2023-09-14 22:40,Brown VS Browns,,TRADE_UPHOLD,EXECUTED,
+2,2023-09-12 11:23,Rick James B!tch!,,TRADE_DECLINE,EXECUTED,None Player ID 3930066 | None Player ID 2576623 | None Player ID 2980453 | None Player ID 15818
+2,2023-09-14 19:02,Long Arm of the Lamar,Bloodied Castaways,TRADE_PROPOSAL,PENDING,TRADE Player ID 4429205 [Long Arm of the Lamar -> Bloodied Castaways] | TRADE Player ID 4426386 [Long Arm of the Lamar -> Bloodied Castaways] | TRADE Player ID 4360438 [Bloodied Castaways -> Long Arm of the Lamar]
+3,2023-09-19 03:02,Long Arm of the Lamar,Bloodied Castaways,TRADE_ACCEPT,EXECUTED,TRADE Player ID 4429205 [Long Arm of the Lamar -> Bloodied Castaways] | TRADE Player ID 4426386 [Long Arm of the Lamar -> Bloodied Castaways] | TRADE Player ID 4360438 [Bloodied Castaways -> Long Arm of the Lamar] | DROP Player ID 4040761 [Bloodied Castaways -> 0]
+4,2023-10-02 08:16,Allen Fantasy Team*,,TRADE_DECLINE,EXECUTED,
+4,2023-10-02 17:16,Long Arm of the Lamar,Allen Fantasy Team*,TRADE_PROPOSAL,PENDING,TRADE Player ID 4242335 [Allen Fantasy Team* -> Long Arm of the Lamar] | TRADE Player ID 4035886 [Long Arm of the Lamar -> Allen Fantasy Team*] | TRADE Player ID 4569987 [Long Arm of the Lamar -> Allen Fantasy Team*]
+4,2023-09-28 20:17,sLambin Juwanna Mann ,,TRADE_DECLINE,EXECUTED,
+4,2023-10-04 17:16,Long Arm of the Lamar,Allen Fantasy Team*,TRADE_PROPOSAL,CANCELED,TRADE Player ID 4242335 [Allen Fantasy Team* -> Long Arm of the Lamar] | TRADE Player ID 4035886 [Long Arm of the Lamar -> Allen Fantasy Team*] | TRADE Player ID 4569987 [Long Arm of the Lamar -> Allen Fantasy Team*]
+5,2023-10-04 13:58,Olave Garden,Long Arm of the Lamar,TRADE_PROPOSAL,PENDING,TRADE Player ID 4361411 [Olave Garden -> Long Arm of the Lamar] | TRADE Player ID 4429795 [Long Arm of the Lamar -> Olave Garden]
+5,2023-10-05 11:52,Bloodied Castaways,,TRADE_ACCEPT,,
+5,2023-10-04 15:12,Olave Garden,Long Arm of the Lamar,TRADE_PROPOSAL,CANCELED,TRADE Player ID 4361411 [Olave Garden -> Long Arm of the Lamar] | TRADE Player ID 4429795 [Long Arm of the Lamar -> Olave Garden]
+6,2023-10-14 19:51,Olave Garden,Long Arm of the Lamar,TRADE_PROPOSAL,CANCELED,TRADE Player ID 4426386 [Olave Garden -> Long Arm of the Lamar] | TRADE Player ID 4569987 [Long Arm of the Lamar -> Olave Garden]
+6,2023-10-12 06:16,Von down by the river,Long Arm of the Lamar,TRADE_PROPOSAL,PENDING,TRADE Player ID 4429160 [Long Arm of the Lamar -> Von down by the river] | TRADE Player ID 15795 [Von down by the river -> Long Arm of the Lamar]
+6,2023-10-14 11:18,Olave Garden,Long Arm of the Lamar,TRADE_PROPOSAL,PENDING,TRADE Player ID 4426386 [Olave Garden -> Long Arm of the Lamar] | TRADE Player ID 4569987 [Long Arm of the Lamar -> Olave Garden]
+6,2023-10-14 06:17,Von down by the river,Long Arm of the Lamar,TRADE_PROPOSAL,CANCELED,TRADE Player ID 4429160 [Long Arm of the Lamar -> Von down by the river] | TRADE Player ID 15795 [Von down by the river -> Long Arm of the Lamar]
+7,2023-10-20 08:33,Trevor's Tremors,,TRADE_VETO,EXECUTED,
+7,2023-10-20 15:21,sLambin Juwanna Mann ,,TRADE_VETO,EXECUTED,
+7,2023-10-20 07:39,Rick James B!tch!,,TRADE_VETO,EXECUTED,
+7,2023-10-20 07:38,Kannapolis Bushmen,,TRADE_ACCEPT,,DROP Player ID 3120348 [Kannapolis Bushmen -> 0] | DROP Player ID 4373626 [Kannapolis Bushmen -> 0] | DROP Player ID 15835 [Kannapolis Bushmen -> 0]
+7,2023-10-20 09:39,Bloodied Castaways,,TRADE_UPHOLD,EXECUTED,
+7,2023-10-20 07:40,Long Arm of the Lamar,,TRADE_VETO,EXECUTED,
+11,2023-11-16 10:30,Rick James B!tch!,,TRADE_VETO,EXECUTED,
+11,2023-11-15 20:11,Long Arm of the Lamar,Kannapolis Bushmen,TRADE_PROPOSAL,PENDING,TRADE Player ID 4241479 [Kannapolis Bushmen -> Long Arm of the Lamar] | TRADE Player ID 4258595 [Long Arm of the Lamar -> Kannapolis Bushmen] | TRADE Player ID 4048244 [Long Arm of the Lamar -> Kannapolis Bushmen]
+11,2023-11-16 10:13,Kannapolis Bushmen,,TRADE_ACCEPT,,DROP Player ID 3121023 [Kannapolis Bushmen -> 0]
+11,2023-11-16 12:02,Trevor's Tremors,,TRADE_VETO,EXECUTED,
+11,2023-11-16 17:27,sLambin Juwanna Mann ,,TRADE_UPHOLD,EXECUTED,
+11,2023-11-16 17:19,Multiple Scorgasms,,TRADE_VETO,EXECUTED,
+11,2023-11-18 10:13,Long Arm of the Lamar,Kannapolis Bushmen,TRADE_ACCEPT,EXECUTED,TRADE Player ID 4241479 [Kannapolis Bushmen -> Long Arm of the Lamar] | TRADE Player ID 4258595 [Long Arm of the Lamar -> Kannapolis Bushmen] | TRADE Player ID 4048244 [Long Arm of the Lamar -> Kannapolis Bushmen] | DROP Player ID 3121023 [Kannapolis Bushmen -> 0]
+12,2023-11-21 09:48,Olave Garden,Rick James B!tch!,TRADE_PROPOSAL,CANCELED,TRADE Player ID 2577327 [Olave Garden -> Rick James B!tch!] | TRADE Player ID 4035538 [Rick James B!tch! -> Olave Garden] | TRADE Player ID 4373626 [Olave Garden -> Rick James B!tch!]
+12,2023-11-21 20:22,Von down by the river,,TRADE_DECLINE,EXECUTED,
+16,2023-12-24 12:22,Olave Garden,Long Arm of the Lamar,TRADE_PROPOSAL,PENDING,TRADE Player ID -16003 [Olave Garden -> Long Arm of the Lamar] | TRADE Player ID 4038524 [Olave Garden -> Long Arm of the Lamar] | TRADE Player ID 3121023 [Olave Garden -> Long Arm of the Lamar] | TRADE Player ID 2577327 [Olave Garden -> Long Arm of the Lamar] | TRADE Player ID 4429795 [Long Arm of the Lamar -> Olave Garden] | TRADE Player ID 4262921 [Long Arm of the Lamar -> Olave Garden] | TRADE Player ID 3915416 [Long Arm of the Lamar -> Olave Garden] | TRADE Player ID 4430027 [Long Arm of the Lamar -> Olave Garden]
+16,2023-12-24 15:11,Olave Garden,Long Arm of the Lamar,TRADE_PROPOSAL,CANCELED,TRADE Player ID -16003 [Olave Garden -> Long Arm of the Lamar] | TRADE Player ID 4038524 [Olave Garden -> Long Arm of the Lamar] | TRADE Player ID 3121023 [Olave Garden -> Long Arm of the Lamar] | TRADE Player ID 2577327 [Olave Garden -> Long Arm of the Lamar] | TRADE Player ID 4429795 [Long Arm of the Lamar -> Olave Garden] | TRADE Player ID 4262921 [Long Arm of the Lamar -> Olave Garden] | TRADE Player ID 3915416 [Long Arm of the Lamar -> Olave Garden] | TRADE Player ID 4430027 [Long Arm of the Lamar -> Olave Garden]

@@ -1,0 +1,33 @@
+<meta charset="utf-8"><style>@page{margin:10mm 9mm}
+body{font:11.5px/1.35 "Segoe UI",Arial,sans-serif;color:#111;margin:0}
+h1{font-size:17px;margin:0 0 2px}.sub{font-size:10.2px;color:#555;margin:0 0 9px}
+.warn{background:#fdeceb;border-left:4px solid #c0392b;padding:7px 10px;margin:0 0 10px;font-size:10.5px}
+table{border-collapse:collapse;width:100%}
+th{text-align:left;font:700 8.4px/1 Arial;letter-spacing:.5px;text-transform:uppercase;
+   color:#8b93a0;border-bottom:1px solid #ccd2da;padding:2px 5px}
+th.r{text-align:right}
+td{padding:4px 5px;border-bottom:1px solid #eef0f3;font-size:11px;vertical-align:top}
+.n{text-align:right;font-variant-numeric:tabular-nums}
+.pl{font-weight:600;white-space:nowrap}.tm{font-size:9.4px;color:#667;font-family:Consolas,monospace}
+.up{color:#12734f;font-weight:700}.dn{color:#c0392b;font-weight:700}
+.hold{background:#fff6e5}
+.note{font-size:9px;color:#8a4b12}
+.foot{font-size:9px;color:#777;text-align:center;padding-top:10px}</style>
+<h1>OVERRIDE CARD &mdash; what the board says vs what ESPN now says</h1>
+<p class="sub">JUG, slot 8 &middot; built Sep 07 2026, 12:59 &middot;
+board = the shipped <b>board_v8_fixed.csv</b> &middot; pull = <b>espn_projections_2026_20260907_1258.csv</b></p>
+<div class="warn"><b>Why this sheet exists.</b> The Sept board-order test returned <b>REBUILD</b>,
+and <b>there is nothing to run</b>: doc 62 confirmed the shipped board has <b>no builder</b> &mdash;
+no script produces it, and the one called "the board builder" is hardcoded to an August pull and
+writes a file that was deleted as a trap. Doc 62's standing answer is <b>Option A: draft off the
+verified board and handle the news as overrides at the pick.</b> This is that list.<br>
+<b>How to use it:</b> the board is still the one list you draft from. If a name below comes up,
+read the NEW rank, not the board's. <b>Amber rows are the exception</b> &mdash; a news override is
+already on the board and the pull is trying to undo it. Ignore the pull on those.<br>
+<b>VBD baseline:</b> &sect;4.1 replacement (QB 341.6 &middot; RB 168.6 &middot; WR 163.5 &middot;
+TE 140.3), recomputed from the new projection so both ranks sit on one scale. The board's own ADP
+is already current &mdash; only the projections below are stale.</div>
+<table><tr><th>player</th><th>tm</th><th>pos</th><th class="r">adp</th>
+<th class="r">board rank</th><th class="r">now</th>
+<th class="r">board proj</th><th class="r">now</th><th class="r">move</th></tr><tr class="hold"><td class="pl">Josh Jacobs<div class="note">NFL Commissioner&#x27;s Exempt List, out indefinitely (NBC Sports / DraftSharks, Aug 30 2026). Consensus guidance is to draft as if he does not play i</div></td><td class="tm">GB</td><td>RB</td><td class="n">100</td><td class="n">435</td><td class="n">93</td><td class="n">0</td><td class="n">152</td><td class="n up">+152</td></tr><tr><td class="pl">Isiah Pacheco</td><td class="tm">DET</td><td>RB</td><td class="n">166</td><td class="n">143</td><td class="n">208</td><td class="n">115</td><td class="n">67</td><td class="n dn">-48</td></tr><tr><td class="pl">MarShawn Lloyd</td><td class="tm">GB</td><td>RB</td><td class="n">102</td><td class="n">184</td><td class="n">131</td><td class="n">78</td><td class="n">124</td><td class="n up">+46</td></tr><tr><td class="pl">Kayshon Boutte</td><td class="tm">NE</td><td>WR</td><td class="n">171</td><td class="n">188</td><td class="n">143</td><td class="n">72</td><td class="n">113</td><td class="n up">+41</td></tr><tr><td class="pl">Kyler Murray</td><td class="tm">MIN</td><td>QB</td><td class="n">137</td><td class="n">141</td><td class="n">90</td><td class="n">289</td><td class="n">327</td><td class="n up">+38</td></tr><tr><td class="pl">De&#x27;Zhaun Stribling</td><td class="tm">SF</td><td>WR</td><td class="n">138</td><td class="n">145</td><td class="n">116</td><td class="n">109</td><td class="n">134</td><td class="n up">+25</td></tr></table>
+<p class="foot">mkoverride.py &middot; doc 62 &sect;5 Option A &middot; board_v8_fixed.csv + the newest pull</p>

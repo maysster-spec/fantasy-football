@@ -1,0 +1,56 @@
+depth_diff: 8 August chart (depth_map.csv) against today's (depth_daily.csv, as_of 2026-09-29T06:02:44Z)
+
+CHANGED (the man at the slot on 8 August is not the man there today; WR: today's man was not
+among the 8 August starting three)
+  RB1: 3 of 32 teams
+     GB   8 Aug Josh Jacobs                              today Kaleb Johnson
+     MIA  8 Aug De'Von Achane                            today Jaylen Wright
+     SEA  8 Aug Zach Charbonnet                          today Jadarian Price
+  RB2: 11 of 32 teams
+     CAR  8 Aug Jonathon Brooks                          today AJ Dillon
+     CLE  8 Aug Dylan Sampson                            today Raheim Sanders
+     DAL  8 Aug Jaydon Blue                              today Tyler Goodson
+     DET  8 Aug Isiah Pacheco                            today Sione Vaki
+     GB   8 Aug Chris Brooks                             today MarShawn Lloyd
+     IND  8 Aug DJ Giddens                               today Seth McGowan
+     KC   8 Aug Emari Demercado                          today Emmett Johnson
+     MIN  8 Aug Jordan Mason                             today DeeJay Dallas
+     NYG  8 Aug Tyrone Tracy Jr.                         today Najee Harris
+     SEA  8 Aug Jadarian Price                           today Emanuel Wilson
+     SF   8 Aug Jordan James                             today Kaelon Black
+  WR1: 0 of 32 teams
+  WR2: 3 of 32 teams
+     IND  8 Aug Alec Pierce / Josh Downs / Ashton Dulin  today Keenan Allen
+     MIA  8 Aug Malik Washington / Jalen Tolbert / Tutu Atwell today Caleb Douglas
+     NYG  8 Aug Malik Nabers / Darius Slayton / Calvin Austin III today Malachi Fields
+  WR3: 12 of 32 teams
+     BUF  8 Aug DJ Moore / Khalil Shakir / Joshua Palmer today Keon Coleman
+     CIN  8 Aug Ja'Marr Chase / Tee Higgins / Andrei Iosivas today Colbie Young
+     DEN  8 Aug Jaylen Waddle / Courtland Sutton / Troy Franklin today Marvin Mims Jr.
+     IND  8 Aug Alec Pierce / Josh Downs / Ashton Dulin  today Darius Slayton
+     LV   8 Aug Tre Tucker / Jalen Nailor / Jack Bech    today Malik Benson
+     MIA  8 Aug Malik Washington / Jalen Tolbert / Tutu Atwell today Chris Bell
+     NE   8 Aug A.J. Brown / Romeo Doubs / DeMario Douglas today Mack Hollins
+     NYG  8 Aug Malik Nabers / Darius Slayton / Calvin Austin III today Darnell Mooney
+     NYJ  8 Aug Garrett Wilson / Adonai Mitchell / Omar Cooper Jr. today Isaiah Williams
+     SF   8 Aug Mike Evans / Deebo Samuel Sr. / Christian Kirk today Jacob Cowing
+     TB   8 Aug Emeka Egbuka / Chris Godwin Jr. / Jalen McMillan today Ted Hurst III
+     WSH  8 Aug Terry McLaurin / Stefon Diggs / Luke McCaffrey today Antonio Williams
+  TE1: 5 of 32 teams
+     CIN  8 Aug Drew Sample                              today Mike Gesicki
+     DEN  8 Aug Adam Trautman                            today Evan Engram
+     LAC  8 Aug Oronde Gadsden                           today Charlie Kolar
+     NYJ  8 Aug Mason Taylor                             today Kenyon Sadiq
+     PIT  8 Aug Darnell Washington                       today Pat Freiermuth
+
+UNKNOWN on 8 August (no row in depth_map.csv at that slot: the keeper-removed board, an
+off-board man, or two named starting receivers). Not counted above.
+  RB1: 3: NE today Rhamondre Stevenson; NO today Travis Etienne Jr.; NYG today Cam Skattebo
+  WR1: 4: BAL today Zay Flowers (8 Aug named only 2 starters); CAR today Tetairoa McMillan (8 Aug named only 2 starters); KC today Rashee Rice (8 Aug named only 2 starters); NO today Chris Olave (8 Aug named only 2 starters)
+  WR2: 2: DAL today George Pickens (8 Aug named only 2 starters); HOU today Xavier Hutchinson (8 Aug named only 2 starters)
+  WR3: 2: HOU today Kayshon Boutte (8 Aug named only 2 starters); NO today Bryce Lance (8 Aug named only 2 starters)
+  TE1: 1: CHI today Colston Loveland
+
+BACKFIELDS where the 8 August chart is stale at RB1 or RB2: 12 (CAR, CLE, DAL, DET, GB, IND, KC, MIA, MIN, NYG, SEA, SF)
+RECEIVER ROOMS with a starter today who was not one on 8 August: 12 (BUF, CIN, DEN, IND, LV, MIA, NE, NYG, NYJ, SF, TB, WSH)
+TIGHT END rooms changed at TE1: 5 (CIN, DEN, LAC, NYJ, PIT)

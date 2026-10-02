@@ -1,0 +1,196 @@
+--- DIRECTIVE_CHANGELOG.md	2026-09-29 20:16:57.019892169 -0400
++++ proposed/DIRECTIVE_CHANGELOG.md	2026-09-29 20:19:34.085147154 -0400
+@@ -19,6 +19,18 @@
+ 
+ ---
+ 
++# SYSTEM DIRECTIVE: E-DISCOVERY KEEPER LEAGUE DRAFT STRATEGIST (v9.36)
++
++*[v9.36], Sep 29, doc 447: **THE SECOND DIET, the v9.12-and-earlier story.** Thirty-three passages moved out of the directive
++verbatim into the section CASE HISTORIES MOVED OUT AT v9.36 at the foot of this file, each under the rule it belongs to;
++every rule sentence and every canonical example (Matt's quoted words beside a rule) stayed; the v9.35 header paragraph
++moved here as §9 rule 7 requires. Two rule sentences corrected in WHERE THINGS LIVE: the proof standard for a move is the
++word multiset with the rewrites reversed (doc 444), and the findings count is 50. Two short deletions listed as rewrites (a stale to-do inside 0.5(a2), a v5.3
++correction note in the §9 table), ten markup repairs (a full stop, a closing bold, leading spaces) and nothing else. Proof: `diet_v936\diet_check.py` (doc 447).*
++
++**The v9.35 header paragraph, moved here:**
++*v9.35, 29 Sept 2026, doc 444, batch four of the to-do list (doc 435 batch D): **the directive diet.** Thirty story passages tagged v9.13 to v9.32 moved verbatim to `Source\DIRECTIVE_CHANGELOG.md` under the rule each belongs to; every rule sentence stayed; the 4.35 and 4.36 index rows were rewritten to carry no numbers, as the index says it does, with every number they held already in `DIRECTIVE_FINDINGS.md`; the 4.38 row carries doc 445's long horizons and 4.42 (the injury report's designation, doc 445) is the fiftieth. §2's claim-order line is no longer BLOCKED: `claim_order_log.py --pair` records the input it named (doc 442). No rule changed.*
++
+ # SYSTEM DIRECTIVE: E-DISCOVERY KEEPER LEAGUE DRAFT STRATEGIST (v9.35)
+ 
+ *[v9.35], Sep 29, doc 444: **THE DIRECTIVE DIET (doc 435 batch D).** Thirty story passages tagged v9.13 to v9.32 moved
+@@ -1298,3 +1310,174 @@
+ | **4.35** | The spike week cannot be called: the best week-before signal lifts a claimable receiver from 4% to 10%; targets alone is the weak half of the screen and air-yards share is the missing half (weakened at v9.32, doc 435: the 6.7% "targets alone" cell was targets-not-WOPR; on the true targets x air-yards cross it is 8.0%, so the both-cell gain is about 2.8 points, not 4.1); the absence discount is underpowered; ~~the injuries feed lands after the Tuesday run~~ retracted, there is no Tuesday run, see 4.36 | live | season | 389, 391 |
+ | **4.36** | ~~The waiver period is 2 days: PLACE CLAIMS SUNDAY NIGHT~~ retracted at v9.26 (doc 405): claims execute THURSDAY 03:00 to 06:00, place WEDNESDAY night. ~~92% of Out designations are filed Thursday or later~~ RETRACTED. "Ruled Out" is eight states. The IR seat is a two-week loan, measured. **THE IR RULES ARE SOURCED (doc 394, ESPN's FOOTBALL pages, read as page text): the slot takes Out or IR only, SSPD never, an upgrade to Questionable or Doubtful is explicitly SAFE and breaks nothing, and only losing the designation entirely invalidates the roster and freezes the lineup. The two ESPN pages do NOT contradict; one of them was Women's Basketball and that was my error. The measured risk is the MISSING DROP: 0 of 502 waiver claims fail with a drop, 16.2% without (v9.32, doc 435; ~~6.1%~~ counted free-agent adds). RANK THE CONTESTED MAN FIRST stands as a dominance argument only (~~61% / 29% / 11%~~ retracted at v9.24, doc 401)** | live; IR rules sourced, claim order a dominance argument | season | 390, 391, 392, 393, 394, 395, 396 |
+ | **4.38** | A rise in snaps and targets from the previous game is +1.4 points of startable-next-four over the pool raw and minus 6.7 net of the week's levels, every season and position: the level is the signal, a rise at a given reading is a caution; four-week horizon, eight weeks not yet run | live | season | 440 |
++
++
++# CASE HISTORIES MOVED OUT AT v9.36 (29 Sept 2026, doc 447)
++
++*Each block below is verbatim from v9.35. The directive keeps the rule; this file keeps the story that earned it.
++The label above each block names the rule it belongs to and the version that wrote it.*
++
++**From §the naming rule's story.**
++The old
++> `00_PROJECT_DIRECTIVE_v4.md` / `_v5.md` names produced exactly the ambiguity this project keeps
++> paying for — Matt had to identify the current directive by its *modified date*, which is not a
++> version-control system.
++
++**From §0.1, the scope rule's guard [v5].**
++and **it caught a live
++one on its first run** — `DRAFT_BOARD` still said "sorted by VBD" where the paper says VOR.
++
++**From §0.1, the list is decisions [v7.8].**
++doc 200's answer — *if Nacua is there at 8, take Nacua* —
++went out as the headline only after Matt asked the same question twice.
++
++**From §0.1(g), proceed [v9.3].**
++**(f) said name the one thing and start it. In practice I kept naming it and stopping** — "say the
++word and I'll do it", "on your word" — which is (f) obeyed in letter and abandoned in substance,
++and it cost him a round trip every single time.
++
++**From §0.1(g), the count of corrections [v9.3].**
++That is a project that has corrected itself in public 265 times.
++
++**From §0.1(h), the take contract [v9.9].**
++Every one of the four takes that retired the last chat failed on a line above, and the one that reached no
++file at all is the reason this is a rule and not only `check_pages.py`.**
++
++**From §0.2, a test must exercise the object production builds [v5.5].**
++The Aug-29 D/ST fix was "proved" by running the filter on a DataFrame read straight from the CSV.
++Production reads that CSV through `Engine`, which merges it — so the test and the live path
++operated on differently-shaped objects. The test passed, the fix was a regression, and the filter
++it claimed to repair was left broken.
++
++**From §0.2, a performance diagnosis is a claim [v6.6].**
++Matt's
++"the draft clock couldn't keep up" had an obvious cause (a 3-second poll against a fast mock) and
++it was wrong. One profiler run found the real one: `_lineup()` was called ~13,000 times per
++on-clock recommendation on 15-element numpy arrays, costing **16–20 seconds per render**. The poll
++interval was never the bottleneck. Rewritten in pure Python: **10x faster, 18,728 production calls
++byte-identical.**
++
++**From §0.2, an exit code is not a result [v6.9].**
++Three separate steps in this project reported
++success while doing nothing: a PDF builder that `return`s 0 when the PDF program is missing, a desk
++sync that copies a stale file and prints its byte count, and a draft-night batch that starts a board
++against a feed that will be empty all night. None would have raised anything on Sept 7.
++
++**From §0.2, an exit code is not a result, the two guards [v6.9].**
++Both new guards (`to_pdf.py`, and the refusal inside
++`sync_desk_copies.py`) were built with their negative controls run FIRST: no renderer at all, and a
++renderer that exists but writes nothing.
++
++**From §0.2, the folder-listing rule [v6.9].**
++`after_pull.bat` was
++shipped on Sep 3 as a near-duplicate of `sept5_after.bat`, which had existed since Aug 30 and did
++the job better. One `device_list_dir` would have killed it.
++
++**From §0.2, the next free number [v6.6].**
++Two agents wrote a doc 138 the same night. The naming rule covers one FILE with two versions; it
++said nothing about two files claiming one NUMBER, and five draft-path scripts had to have their
++comments and hashes rewritten.
++
++**From §0.2, a diagnosis is a claim [v5.5].**
++The same
++episode began by asserting "the column is missing so the filter never runs" without checking where
++the column came from. One `print(Engine(...).kdst.columns)` would have killed it.
++
++**From §0.4, a script that runs in your container [v6.8].**
++Three
++shipped in one session and all three died on Matt's machine: `scipy` (not installed), `pdftotext`
++(not installed), and a `SyntaxWarning` his **Python 3.12** raises on escape sequences my **3.11**
++ignored. He then has to debug my code, which is the §0.4 failure in its most expensive form.
++
++**From §0.5(a), the first version [v7.4].**
++[v7.4 — the first version of this got the line in the
++wrong place and Matt corrected it the same night. Keeping both so the mistake is legible.]**
++
++**From §0.5(a), the struck bar [v7.4].**
++~~The bar is: would being wrong about this change a pick, a file, or a number someone will act
++on?~~ **Too narrow, and wrong for the reason that matters.**
++
++**From §0.5(a2), the retracted mechanism line and its story [v8.7].**
++~~**A causal MECHANISM he proposes is a HYPOTHESIS.** The offensive line, opportunity environment,
++  the year-two bounce-back, "our league is RB-heavy" — all tested null. Test them; report the death.~~
++  **[v8.7 — RETRACTED, doc 243. This was written when those four were the only mechanisms on the
++  board and it was never updated. It told every session to expect his ideas to die, and it is the
++  measured cause of the stubbornness Matt named on 2026-09-09.]
++
++**From §0.5(a3), the corrections of 2026-09-06 [v8.1].**
++Every correction he made on 2026-09-06
++was of that shape — the tail not the mean (196/198), the projection not the price (202), the veteran
++not the pool (204), the state where Nacua survives (200).
++
++**From §0.5(a3), the struck instruction [v8.8].**
++~~**So: always look for the interaction; expect substitution, not amplification; and say which of the
++two the number showed.**~~
++**[v8.8 — HALF OF THAT IS NOW WRONG, doc 248. AT RECEIVER THE SIGNALS COMPOUND.**
++
++**From §0.5(a3), the vindication sentence [v8.8].**
++**Matt's frame — "the factors play
++off of each other" — is vindicated in the compounding direction for the first time, and the previous
++wording told every session to expect the opposite.]**
++
++**From §0.5(c)4, the standing collision example.**
++*(Standing example: `Source\` holds both
++   `150_pick17_in_dollars.md` and `150_the_board_does_have_a_builder.md`, and both `94_picks_17_and_32.md`
++   and `94_picks_17_and_32_2322.md`. Live collisions, still there.)*
++
++**From §0.5(c)6, the outside check's record [v9.6].**
++It is the cheapest batch in the catalog and it has the best
++   record here: the receiver composite (§4.30) came off a 2020 PlayerProfiler article, the handover
++   rewrite came off Bouchard and Garg, and this section's own fix came off ekline.
++
++**From §0.5(d), the dead calendar row [v9.6].**
++Its only time-shaped
++row was *"T-7 / T-2 / T-1 / lock / draft"*; all five passed on 7 Sept and the row went silently dead,
++so for eleven days the table had nothing that could fire and said nothing about it.
++
++**From §0.5(d), the table: nine stale articles.**
++Nine stale articles were caught this way on 09-05 alone
++
++**From §0.5(d), the table: the row Matt caught.**
++**This is the row whose absence Matt caught on 18 Sept**
++
++**From §0.5(d), the table: four were live.**
++**Four were live when it was written**, including one that had already been misread as a MISSING FINDING during a reconcile.
++
++**From §0.5(d), the table: the replay entry.**
++And re-read the entry that claims it is done — §8 carried "the replay is untested" for two days after it passed
++
++**From §0.6, the two population errors [v8.3].**
++Twice on
++   2026-09-08 the arithmetic was right and the rows were wrong (§0.5(a2) for the object, this for
++   the population).
++
++**From §2, the D/ST scoring's omission [v9.3].**
++Three separate claims died on that omission (§4.31's "blocked", and docs 262/263's
++siblings), so it goes here where the fixed environment lives:
++
++**From §3, the merge collision's case [v5.5].**
++`code_live_engine` name-joined `ESPN_ID` onto the streamer file; when that file later
++gained its own `ESPN_ID`, pandas suffixed both to `_x`/`_y`, the consumer's `if 'ESPN_ID' in k`
++went False, and the already-drafted filter silently stopped running.
++
++**From §6, the Spears arithmetic [v8.6].**
++**THE SIXTH RUNNING BACK NEVER ENTERED THE LINEUP IN ANY OF THE FOURTEEN WEEKS — including week 11
++with three starters off.** Best legal nine, computed for all 14 weeks on the shipped projections:
++Spears is behind Dowdle (10.85 a game), Dobbins (10.26) and the FLEX in every single week, and his
++own rate is 8.09. **§4.17b's "the sixth body plays only when three are out at once" is too generous
++— three WERE out in week 11 and he still did not play, because the three were WR/WR/RB and the
++FLEX absorbed it.**
++**AND THE SPOT HAS AN OPPORTUNITY COST THIS PROJECT HAD NEVER PRICED.** Spears' whole value was the
++option on Tony Pollard: Pollard played **33 of 34** games across 2024–25, Tennessee's `job_ceil` is
++**171 — the smallest of any backfield we have looked at** (doc 221: the 30th-ranked scoring offence),
++so the option is worth **roughly +2 points**. The same spot used on the best identified alternative
++— the tight end that fixes the week-6 hole — measured **+7.1** (doc 234). **Net of the alternative,
++holding him was about −5. "Zero to the lineup" understated it, and that was my number.**
++
++**From §9, the four rules' preamble [v9.6].**
++§0.2 says an exit code is not a result. None of that had ever been written down for the one channel
++every session uses.
++
++**From §9 rule 3, the collision of 18 Sept [v9.6].**
++On 18 Sept
++   two sessions collided on a doc number twice in one afternoon.

@@ -1,0 +1,76 @@
+{
+ "control": [
+  {
+   "band": "under 5",
+   "n": 75,
+   "filers": 1.2,
+   "p_ge1": 1.0,
+   "p_ge2": 0.16,
+   "contested_given_filed": 0.16
+  },
+  {
+   "band": "5 to 9",
+   "n": 154,
+   "filers": 1.539,
+   "p_ge1": 1.0,
+   "p_ge2": 0.318,
+   "contested_given_filed": 0.318
+  },
+  {
+   "band": "10 to 14",
+   "n": 86,
+   "filers": 1.837,
+   "p_ge1": 1.0,
+   "p_ge2": 0.419,
+   "contested_given_filed": 0.419
+  },
+  {
+   "band": "15 or more",
+   "n": 35,
+   "filers": 2.4,
+   "p_ge1": 1.0,
+   "p_ge2": 0.571,
+   "contested_given_filed": 0.571
+  }
+ ],
+ "full": [
+  {
+   "band": "under 5",
+   "n": 12442,
+   "filers": 0.007,
+   "p_ge1": 0.006,
+   "p_ge2": 0.001,
+   "contested_given_filed": 0.16
+  },
+  {
+   "band": "5 to 9",
+   "n": 1938,
+   "filers": 0.122,
+   "p_ge1": 0.079,
+   "p_ge2": 0.025,
+   "contested_given_filed": 0.318
+  },
+  {
+   "band": "10 to 14",
+   "n": 334,
+   "filers": 0.473,
+   "p_ge1": 0.257,
+   "p_ge2": 0.108,
+   "contested_given_filed": 0.419
+  },
+  {
+   "band": "15 or more",
+   "n": 75,
+   "filers": 1.12,
+   "p_ge1": 0.467,
+   "p_ge2": 0.267,
+   "contested_given_filed": 0.571
+  }
+ ],
+ "r_claimed": 0.297,
+ "r_full": 0.316,
+ "n_claimed": 350,
+ "n_full": 14789,
+ "claimed_missing_from_pool": 234,
+ "claimed_seen": 350
+}

@@ -1,0 +1,163 @@
+B2 -- usage order against the preseason chart, first week of every lead-back absence
+POPULATION: usage leader to date, played last week, no line this week, team played; weeks 2-14, 2021-2025. n=114
+
+ALL EVENTS WITH A PRESEASON CHART: n=111 events
+  chart   names the inheritor  62.2%   (no stepping:  54.1%)
+  usage   names the inheritor  72.1%   (no stepping:  63.1%)
+  last3   names the inheritor  70.3%   (no stepping:  69.4%)
+  last1   names the inheritor  71.2%   (no stepping:  68.5%)
+  weekly  names the inheritor  69.4%   (no stepping:  65.8%)
+  usage minus chart: +9.9 points; chart only 7, usage only 18; McNemar p=0.0433
+  weekly minus chart: +7.2 points; chart only 6, weekly only 14; McNemar p=0.1153
+  weekly minus usage: -2.7 points; usage only 11, weekly only 8; McNemar p=0.6476
+  last3 minus chart: +8.1 points; chart only 12, last3 only 21; McNemar p=0.1628
+  last3 minus usage: -1.8 points; usage only 5, last3 only 3; McNemar p=0.7266
+  last1 minus usage: -0.9 points; usage only 7, last1 only 6; McNemar p=1.0000
+
+FALSIFIER (usage ahead by 5+ points, McNemar p<0.05): gain +9.9, p=0.0433 -> USAGE WINS
+
+BAND wk 2-4: n=26 events
+  chart   names the inheritor  61.5%   (no stepping:  53.8%)
+  usage   names the inheritor  73.1%   (no stepping:  73.1%)
+  last3   names the inheritor  73.1%   (no stepping:  73.1%)
+  last1   names the inheritor  73.1%   (no stepping:  73.1%)
+  weekly  names the inheritor  65.4%   (no stepping:  65.4%)
+  usage minus chart: +11.5 points; chart only 2, usage only 5; McNemar p=0.4531
+  weekly minus chart: +3.8 points; chart only 1, weekly only 2; McNemar p=1.0000
+  weekly minus usage: -7.7 points; usage only 4, weekly only 2; McNemar p=0.6875
+  last3 minus chart: +11.5 points; chart only 2, last3 only 5; McNemar p=0.4531
+  last3 minus usage: +0.0 points; usage only 0, last3 only 0; McNemar p=1.0000
+  last1 minus usage: +0.0 points; usage only 0, last1 only 0; McNemar p=1.0000
+
+BAND wk 5-9: n=50 events
+  chart   names the inheritor  66.0%   (no stepping:  60.0%)
+  usage   names the inheritor  70.0%   (no stepping:  66.0%)
+  last3   names the inheritor  62.0%   (no stepping:  62.0%)
+  last1   names the inheritor  64.0%   (no stepping:  62.0%)
+  weekly  names the inheritor  68.0%   (no stepping:  66.0%)
+  usage minus chart: +4.0 points; chart only 3, usage only 5; McNemar p=0.7266
+  weekly minus chart: +2.0 points; chart only 2, weekly only 3; McNemar p=1.0000
+  weekly minus usage: -2.0 points; usage only 3, weekly only 2; McNemar p=1.0000
+  last3 minus chart: -4.0 points; chart only 7, last3 only 5; McNemar p=0.7744
+  last3 minus usage: -8.0 points; usage only 4, last3 only 0; McNemar p=0.1250
+  last1 minus usage: -6.0 points; usage only 5, last1 only 2; McNemar p=0.4531
+
+BAND wk 10-14: n=35 events
+  chart   names the inheritor  57.1%   (no stepping:  45.7%)
+  usage   names the inheritor  74.3%   (no stepping:  51.4%)
+  last3   names the inheritor  80.0%   (no stepping:  77.1%)
+  last1   names the inheritor  80.0%   (no stepping:  74.3%)
+  weekly  names the inheritor  74.3%   (no stepping:  65.7%)
+  usage minus chart: +17.1 points; chart only 2, usage only 8; McNemar p=0.1094
+  weekly minus chart: +17.1 points; chart only 3, weekly only 9; McNemar p=0.1460
+  weekly minus usage: +0.0 points; usage only 4, weekly only 4; McNemar p=1.0000
+  last3 minus chart: +22.9 points; chart only 3, last3 only 11; McNemar p=0.0574
+  last3 minus usage: +5.7 points; usage only 1, last3 only 3; McNemar p=0.6250
+  last1 minus usage: +5.7 points; usage only 2, last1 only 4; McNemar p=0.6875
+
+SEASON 2021: n=31 events
+  chart   names the inheritor  58.1%   (no stepping:  51.6%)
+  usage   names the inheritor  64.5%   (no stepping:  54.8%)
+  last3   names the inheritor  67.7%   (no stepping:  67.7%)
+  last1   names the inheritor  74.2%   (no stepping:  74.2%)
+  weekly  names the inheritor  74.2%   (no stepping:  71.0%)
+  usage minus chart: +6.5 points; chart only 3, usage only 5; McNemar p=0.7266
+  weekly minus chart: +16.1 points; chart only 2, weekly only 7; McNemar p=0.1797
+  weekly minus usage: +9.7 points; usage only 2, weekly only 5; McNemar p=0.4531
+  last3 minus chart: +9.7 points; chart only 3, last3 only 6; McNemar p=0.5078
+  last3 minus usage: +3.2 points; usage only 0, last3 only 1; McNemar p=1.0000
+  last1 minus usage: +9.7 points; usage only 1, last1 only 4; McNemar p=0.3750
+
+SEASON 2022: n=24 events
+  chart   names the inheritor  62.5%   (no stepping:  54.2%)
+  usage   names the inheritor  75.0%   (no stepping:  62.5%)
+  last3   names the inheritor  75.0%   (no stepping:  75.0%)
+  last1   names the inheritor  70.8%   (no stepping:  66.7%)
+  weekly  names the inheritor  66.7%   (no stepping:  62.5%)
+  usage minus chart: +12.5 points; chart only 1, usage only 4; McNemar p=0.3750
+  weekly minus chart: +4.2 points; chart only 2, weekly only 3; McNemar p=1.0000
+  weekly minus usage: -8.3 points; usage only 2, weekly only 0; McNemar p=0.5000
+  last3 minus chart: +12.5 points; chart only 2, last3 only 5; McNemar p=0.4531
+  last3 minus usage: +0.0 points; usage only 1, last3 only 1; McNemar p=1.0000
+  last1 minus usage: -4.2 points; usage only 2, last1 only 1; McNemar p=1.0000
+
+SEASON 2023: n=20 events
+  chart   names the inheritor  55.0%   (no stepping:  55.0%)
+  usage   names the inheritor  65.0%   (no stepping:  60.0%)
+  last3   names the inheritor  60.0%   (no stepping:  60.0%)
+  last1   names the inheritor  60.0%   (no stepping:  60.0%)
+  weekly  names the inheritor  65.0%   (no stepping:  65.0%)
+  usage minus chart: +10.0 points; chart only 2, usage only 4; McNemar p=0.6875
+  weekly minus chart: +10.0 points; chart only 0, weekly only 2; McNemar p=0.5000
+  weekly minus usage: +0.0 points; usage only 3, weekly only 3; McNemar p=1.0000
+  last3 minus chart: +5.0 points; chart only 4, last3 only 5; McNemar p=1.0000
+  last3 minus usage: -5.0 points; usage only 2, last3 only 1; McNemar p=1.0000
+  last1 minus usage: -5.0 points; usage only 2, last1 only 1; McNemar p=1.0000
+
+SEASON 2024: n=20 events
+  chart   names the inheritor  70.0%   (no stepping:  60.0%)
+  usage   names the inheritor  90.0%   (no stepping:  80.0%)
+  last3   names the inheritor  85.0%   (no stepping:  80.0%)
+  last1   names the inheritor  80.0%   (no stepping:  70.0%)
+  weekly  names the inheritor  70.0%   (no stepping:  60.0%)
+  usage minus chart: +20.0 points; chart only 0, usage only 4; McNemar p=0.1250
+  weekly minus chart: +0.0 points; chart only 1, weekly only 1; McNemar p=1.0000
+  weekly minus usage: -20.0 points; usage only 4, weekly only 0; McNemar p=0.1250
+  last3 minus chart: +15.0 points; chart only 1, last3 only 4; McNemar p=0.3750
+  last3 minus usage: -5.0 points; usage only 1, last3 only 0; McNemar p=1.0000
+  last1 minus usage: -10.0 points; usage only 2, last1 only 0; McNemar p=0.5000
+
+SEASON 2025: n=16 events
+  chart   names the inheritor  68.8%   (no stepping:  50.0%)
+  usage   names the inheritor  68.8%   (no stepping:  62.5%)
+  last3   names the inheritor  62.5%   (no stepping:  62.5%)
+  last1   names the inheritor  68.8%   (no stepping:  68.8%)
+  weekly  names the inheritor  68.8%   (no stepping:  68.8%)
+  usage minus chart: +0.0 points; chart only 1, usage only 1; McNemar p=1.0000
+  weekly minus chart: +0.0 points; chart only 1, weekly only 1; McNemar p=1.0000
+  weekly minus usage: +0.0 points; usage only 0, weekly only 0; McNemar p=1.0000
+  last3 minus chart: -6.2 points; chart only 2, last3 only 1; McNemar p=1.0000
+  last3 minus usage: -6.2 points; usage only 1, last3 only 0; McNemar p=1.0000
+  last1 minus usage: +0.0 points; usage only 0, last1 only 0; McNemar p=1.0000
+
+LEAD WAS NOT THE CHART'S #1: n=31 events
+  chart   names the inheritor  45.2%   (no stepping:  32.3%)
+  usage   names the inheritor  38.7%   (no stepping:  25.8%)
+  last3   names the inheritor  41.9%   (no stepping:  38.7%)
+  last1   names the inheritor  45.2%   (no stepping:  38.7%)
+  weekly  names the inheritor  54.8%   (no stepping:  45.2%)
+  usage minus chart: -6.5 points; chart only 6, usage only 4; McNemar p=0.7539
+  weekly minus chart: +9.7 points; chart only 3, weekly only 6; McNemar p=0.5078
+  weekly minus usage: +16.1 points; usage only 2, weekly only 7; McNemar p=0.1797
+  last3 minus chart: -3.2 points; chart only 7, last3 only 6; McNemar p=1.0000
+  last3 minus usage: +3.2 points; usage only 1, last3 only 2; McNemar p=1.0000
+  last1 minus usage: +6.5 points; usage only 2, last1 only 4; McNemar p=0.6875
+
+LEAD WAS THE CHART'S #1: n=80 events
+  chart   names the inheritor  68.8%   (no stepping:  62.5%)
+  usage   names the inheritor  85.0%   (no stepping:  77.5%)
+  last3   names the inheritor  81.2%   (no stepping:  81.2%)
+  last1   names the inheritor  81.2%   (no stepping:  80.0%)
+  weekly  names the inheritor  75.0%   (no stepping:  73.8%)
+  usage minus chart: +16.2 points; chart only 1, usage only 14; McNemar p=0.0010
+  weekly minus chart: +6.2 points; chart only 3, weekly only 8; McNemar p=0.2266
+  weekly minus usage: -10.0 points; usage only 9, weekly only 1; McNemar p=0.0215
+  last3 minus chart: +12.5 points; chart only 5, last3 only 15; McNemar p=0.0414
+  last3 minus usage: -3.7 points; usage only 4, last3 only 1; McNemar p=0.3750
+  last1 minus usage: -3.7 points; usage only 5, last1 only 2; McNemar p=0.4531
+
+AGREEMENT: chart and usage name the same man in 71.2% of events (79 of 111). When they DISAGREE (n=32): chart right 21.9%, usage right 56.2%, neither 21.9%
+inheritor's share of the backfield touches that week: median 68%
+
+WEEK 2 ONLY (one game of usage, the live situation this week): n=8 events
+  chart   names the inheritor  62.5%   (no stepping:  62.5%)
+  usage   names the inheritor  62.5%   (no stepping:  62.5%)
+  last3   names the inheritor  62.5%   (no stepping:  62.5%)
+  last1   names the inheritor  62.5%   (no stepping:  62.5%)
+  weekly  names the inheritor  62.5%   (no stepping:  62.5%)
+  usage minus chart: +0.0 points; chart only 1, usage only 1; McNemar p=1.0000
+  weekly minus chart: +0.0 points; chart only 0, weekly only 0; McNemar p=1.0000
+  weekly minus usage: +0.0 points; usage only 1, weekly only 1; McNemar p=1.0000
+  last3 minus chart: +0.0 points; chart only 1, last3 only 1; McNemar p=1.0000
+  last3 minus usage: +0.0 points; usage only 0, last3 only 0; McNemar p=1.0000
+  last1 minus usage: +0.0 points; usage only 0, last1 only 0; McNemar p=1.0000

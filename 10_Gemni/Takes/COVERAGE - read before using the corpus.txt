@@ -1,0 +1,40 @@
+TAKES_2021_2025.csv -- what is in it, and what is NOT
+Built 17 Sept 2026 from the Gemini Notebook exports in this folder.
+
+1,136 takes, 472 unique players, 46 analysts, 14 columns plus a `season` column.
+De-duplicated on the full 14-column row.
+
+COVERAGE, and this is the thing to state every time the corpus is used:
+
+  season   rows   sources in the file   sources in the notebook   coverage
+  2021      418            19                    65                 29%
+  2022      197            53                    55                 96%
+  2023      170            61                    62                 98%
+  2024      107            47                    89                 53%
+  2025      244            51                    51                100%
+  TOTAL    1136           231                   322                 72%
+
+2022, 2023 and 2025 are effectively complete. 2021 and 2024 are not, and any
+per-season comparison that uses them is comparing different fractions of the
+same kind of thing.
+
+WHY 2021 IS THE WORST DESPITE NINE EXPORTS. Each 2021 export carried only 4 to 9
+sources and the union across all nine is 19. Merging worked: it took 5 sources to
+19 and 219 rows to 418. It could not reach the other 46, because the notebook never
+processed them. That is a different problem from partial exports and it needs the
+2021 notebook re-run with the current prompt, not more downloads.
+
+THE LATER YEARS DO NOT NEED MERGING. One 2023 export already holds 61 of 62
+sources and one 2025 export holds 51 of 51, so the multiple same-named exports
+sitting in the notebook for those years are re-exports, not batches.
+
+DUPLICATE IN THIS FOLDER: `ff_takes_2022_scored.csv` and
+`ff_takes_2022_scored (1).csv` are byte-identical (sha256 90d543710b85). One is a
+double download. Either can be deleted.
+
+SOURCE FILES USED:
+  2021  2021_MERGED_USE_THIS.csv       (itself a merge of nine exports)
+  2022  ff_takes_2022_scored.csv
+  2023  ff_takes_2023.csv
+  2024  ff_takes_2024.csv
+  2025  fantasy_football_takes_2025.csv

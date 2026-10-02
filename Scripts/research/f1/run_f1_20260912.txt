@@ -1,0 +1,39 @@
+F1 -- does a veteran arrival squeeze the room below the incumbent?
+population: team-seasons 2021-2025 with a returning 60+-target incumbent.
+  with an arrival : 43 team-seasons
+  without one     : 68 team-seasons
+  player-seasons dropped by the 4-game minimum: 15
+
+                             incumbent     3rd+4th   vacated
+arrival                         -0.022      -0.017     32.3%
+no arrival                      +0.003      +0.027     22.1%
+
+  arrival minus no arrival:  incumbent -0.025   3rd+4th -0.044
+  HIS DIRECTION NEEDS 3rd+4th TO LOSE MORE THAN THE INCUMBENT: yes
+
+  in proportion to the share held (3rd+4th): arrival -0.07   no arrival +0.16
+
+  permutation on the 3rd+4th difference, shuffled WITHIN team (4000 draws): p = 0.005  [one-sided, his direction]
+
+  SPLIT BY VACATED SHARE (the control that could hide a squeeze):
+    vacated under 20%    arrival -0.011 (n=13)   no arrival +0.012 (n=33)   diff -0.022
+    20-35%               arrival -0.077 (n=10)   no arrival +0.038 (n=18)   diff -0.116
+    35%+                 arrival +0.008 (n=20)   no arrival +0.045 (n=17)   diff -0.037
+
+  WITHIN each team-season, (3rd+4th) minus incumbent:
+    arrival    +0.005  (n=43)
+    no arrival +0.024  (n=68)
+    difference -0.019
+    permutation within team, 4000 draws: p = 0.101  [one-sided]
+
+  the ten largest squeezes with an arrival:
+    2021 MIA  below -0.187  incumbent +0.009 (DeVante Parker)  arrived: Will Fuller
+    2024 CHI  below -0.160  incumbent -0.187 (DJ Moore)  arrived: Keenan Allen
+    2022 NO   below -0.149  incumbent -0.115 (Marquez Callaway)  arrived: Jarvis Landry
+    2023 CHI  below -0.145  incumbent -0.230 (Darnell Mooney)  arrived: DJ Moore
+    2024 HOU  below -0.141  incumbent +0.079 (Nico Collins)  arrived: Stefon Diggs
+    2023 LV   below -0.120  incumbent -0.031 (Davante Adams)  arrived: DeAndre Carter, Jakobi Meyers
+    2025 WAS  below -0.119  incumbent +0.002 (Terry McLaurin)  arrived: Deebo Samuel Sr.
+    2024 NYJ  below -0.109  incumbent -0.210 (Garrett Wilson)  arrived: Davante Adams
+    2025 LA   below -0.088  incumbent +0.074 (Puka Nacua)  arrived: Davante Adams
+    2022 JAX  below -0.082  incumbent -0.082 (Marvin Jones)  arrived: Zay Jones, Christian Kirk

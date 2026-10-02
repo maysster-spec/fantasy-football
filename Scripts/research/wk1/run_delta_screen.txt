@@ -1,0 +1,302 @@
+cache: /tmp/claude-0/-home-claude/3a831c26-fa57-5432-80c5-df34542892d6/scratchpad/work5/Scripts/research/_nflverse_cache
+join: 100.0% of 23097 touch-weeks carry an expected row; actual vs ffverse actual corr 0.9993 (fumbles differ)
+
+XFP_BACKTEST POPULATION n=9999  WR 4666  RB 2735  TE 2598
+base rates: spike 4.3%  startable w+1 20.5%  startable next four 17.4% (n=9393)  next-four mean 5.48
+previous game row is the calendar week before (w-1 exactly): 82.5% of the pool; the rest have a bye or a missed week between the two games
+
+==============================================================================================================
+TEST 1: WOPR / air-yards share (top fifth) as a FOURTH signal on the 2-of-3 workload screen
+==============================================================================================================
+TESTABLE FORM: population = WR and TE player-weeks, REG 2021-2025, weeks 1-17, not startable on the season-to-date bar (WR 9.62 / TE 8.25), 1+ target in w, played in w+1 (doc 389); predictor = the wire's three-signal count in w (targets 8+, snaps 80%+, target share 20%+), operative bar 2 of 3, plus a fourth flag "wopr >= its top-fifth cut" (then air_yards_share >= its cut); outcome = spike in w+1 (18+ half-PPR), also startable w+1, startable next four, next4 mean; direction = the fourth flag lifts the spike rate inside the 2+ bar; FALSIFIER = a lift under +2.0 points of spike rate keeps it display only.
+POPULATION NOTE: doc 389's script (wopr_spike.py) is not on hand. Of seven definitions tried, the one that reproduces its base 4.3% / WOPR top fifth 10.1% / targets 9.6% / air-yards 9.2% and its n within 70 rows is: season-to-date average through w-1 below the bar (a week-1 row counts as not startable), 1+ target in w, 1+ target in w+1. The base script's own definition (average through w, a game row in w+1) gives n=9,053, base 3.6%, WOPR top fifth 8.1%, and is run as a sensitivity at the end of this test.
+
+--- doc 389 population, matched (average through w-1, 1+ target in w and in w+1); doc 389 printed 8,651, cold audit 8,671: n=8718  WR 5622  TE 3096
+base rates: spike 4.3%  start w+1 21.9%  start next4 18.0% (n=7696)  next4 5.54
+rows with no snap line (the snap signal cannot be scored for them): 1 of 8718; the screen tables run on the 8717 with a snap line; the cuts are taken on the full population
+
+(a) top-fifth cut values on the full population:
+    wopr             cut 0.4612   n at or above 1744 of 8718  (strict above 1744)
+      top fifth by wopr                        n= 1744  spike  10.1%  start w+1  37.8%  start next4  36.6% (n= 1578)  next4  8.27
+    air_yards_share  cut 0.2523   n at or above 1744 of 8718  (strict above 1744)
+      top fifth by air_yards_share             n= 1744  spike   9.0%  start w+1  34.5%  start next4  32.5% (n= 1580)  next4  7.82
+    targets          cut 6.0000   n at or above 2276 of 8718  (strict above 1583)
+      top fifth by targets                     n= 2276  spike   9.2%  start w+1  36.0%  start next4  34.3% (n= 2069)  next4  7.98
+    target_share     cut 0.1944   n at or above 1761 of 8718  (strict above 1735)
+      top fifth by target_share                n= 1761  spike  10.6%  start w+1  39.4%  start next4  37.9% (n= 1594)  next4  8.43
+
+(b) the screen on the 8717 with a snap line (WR 5621, TE 3096):
+  0 of 3 signals                                       n= 5766  spike   1.9%  start w+1  14.8%  start next4   9.7% (n= 5019)  next4  4.35
+  1 of 3 signals                                       n= 1601  spike   6.2%  start w+1  29.9%  start next4  25.9% (n= 1451)  next4  6.97
+  2 of 3 signals                                       n=  801  spike  10.9%  start w+1  42.7%  start next4  38.5% (n=  719)  next4  8.49
+  3 of 3 signals                                       n=  549  spike  13.8%  start w+1  43.2%  start next4  48.0% (n=  506)  next4  9.51
+  2+ of 3 (the operative bar)                          n= 1350  spike  12.1%  start w+1  42.9%  start next4  42.4% (n= 1225)  next4  8.91
+
+  fourth signal = wopr >= 0.4612 (top fifth of the population)
+   2+ of 3                                              n= 1350  spike  12.1%  start w+1  42.9%  start next4  42.4% (n= 1225)  next4  8.91
+   2+ of 3 AND fourth                                   n= 1143  spike  12.2%  start w+1  42.2%  start next4  43.4% (n= 1035)  next4  9.01
+   2+ of 3 and NOT fourth                               n=  207  spike  11.6%  start w+1  46.9%  start next4  37.4% (n=  190)  next4  8.33
+   fourth alone, fewer than 2 of 3                      n=  601  spike   6.3%  start w+1  29.5%  start next4  23.8% (n=  543)  next4  6.85
+   GAIN in spike rate, (2+ AND fourth) minus (2+ bar): +0.1 points; (2+ AND fourth) minus (2+ NOT fourth): +0.6 points (se 2.4); start w+1 -0.7; start next4 +0.9; next4 +0.10
+   permutation p (2000 shuffles of the fourth flag inside the 2+ bar, spike, with minus without): +0.6 points, p=0.903
+   VERDICT (wopr): FAILS the +2 bar: stays display only
+     0 of 4                                               n= 5604  spike   1.9%  start w+1  14.4%  start next4   9.5% (n= 4872)  next4  4.29
+     1 of 4                                               n= 1324  spike   5.8%  start w+1  29.8%  start next4  24.9% (n= 1202)  next4  6.85
+     2 of 4                                               n=  606  spike   8.1%  start w+1  34.0%  start next4  29.1% (n=  550)  next4  7.43
+     3 of 4                                               n=  674  spike  10.8%  start w+1  42.6%  start next4  38.9% (n=  601)  next4  8.49
+     4 of 4                                               n=  509  spike  13.9%  start w+1  42.4%  start next4  48.7% (n=  470)  next4  9.63
+     WR: 2+ of 3                n= 1047  spike  12.8%  start w+1  42.4%  start next4  42.2% (n=  952)  next4  9.15
+     WR: 2+ of 3 AND fourth     n=  943  spike  12.9%  start w+1  42.0%  start next4  42.9% (n=  858)  next4  9.18
+     WR: 2+ of 3 NOT fourth     n=  104  spike  11.5%  start w+1  46.2%  start next4  36.2% (n=   94)  next4  8.88
+     TE: 2+ of 3                n=  303  spike   9.6%  start w+1  44.6%  start next4  43.2% (n=  273)  next4  8.06
+     TE: 2+ of 3 AND fourth     n=  200  spike   8.5%  start w+1  43.0%  start next4  45.8% (n=  177)  next4  8.21
+     TE: 2+ of 3 NOT fourth     n=  103  spike  11.7%  start w+1  47.6%  start next4  38.5% (n=   96)  next4  7.78
+
+  fourth signal = air_yards_share >= 0.2523 (top fifth of the population)
+   2+ of 3                                              n= 1350  spike  12.1%  start w+1  42.9%  start next4  42.4% (n= 1225)  next4  8.91
+   2+ of 3 AND fourth                                   n=  869  spike  12.9%  start w+1  42.7%  start next4  45.0% (n=  791)  next4  9.22
+   2+ of 3 and NOT fourth                               n=  481  spike  10.6%  start w+1  43.2%  start next4  37.8% (n=  434)  next4  8.35
+   fourth alone, fewer than 2 of 3                      n=  875  spike   5.1%  start w+1  26.4%  start next4  19.9% (n=  789)  next4  6.43
+   GAIN in spike rate, (2+ AND fourth) minus (2+ bar): +0.8 points; (2+ AND fourth) minus (2+ NOT fourth): +2.3 points (se 1.8); start w+1 -0.2; start next4 +2.6; next4 +0.31
+   permutation p (2000 shuffles of the fourth flag inside the 2+ bar, spike, with minus without): +2.3 points, p=0.209
+   VERDICT (air_yards_share): FAILS the +2 bar: stays display only
+     0 of 4                                               n= 5352  spike   1.8%  start w+1  14.3%  start next4   9.4% (n= 4650)  next4  4.26
+     1 of 4                                               n= 1554  spike   5.3%  start w+1  27.3%  start next4  22.8% (n= 1400)  next4  6.51
+     2 of 4                                               n=  794  spike   8.1%  start w+1  35.5%  start next4  29.6% (n=  717)  next4  7.62
+     3 of 4                                               n=  616  spike  11.7%  start w+1  43.8%  start next4  41.3% (n=  559)  next4  8.73
+     4 of 4                                               n=  401  spike  14.5%  start w+1  42.1%  start next4  49.9% (n=  369)  next4  9.79
+     WR: 2+ of 3                n= 1047  spike  12.8%  start w+1  42.4%  start next4  42.2% (n=  952)  next4  9.15
+     WR: 2+ of 3 AND fourth     n=  770  spike  13.5%  start w+1  42.7%  start next4  44.4% (n=  700)  next4  9.29
+     WR: 2+ of 3 NOT fourth     n=  277  spike  10.8%  start w+1  41.5%  start next4  36.1% (n=  252)  next4  8.75
+     TE: 2+ of 3                n=  303  spike   9.6%  start w+1  44.6%  start next4  43.2% (n=  273)  next4  8.06
+     TE: 2+ of 3 AND fourth     n=   99  spike   8.1%  start w+1  42.4%  start next4  49.5% (n=   91)  next4  8.61
+     TE: 2+ of 3 NOT fourth     n=  204  spike  10.3%  start w+1  45.6%  start next4  40.1% (n=  182)  next4  7.80
+
+--- SENSITIVITY, the base script's definition (average through w, a game row in w+1): n=9053  WR 5811  TE 3242
+base rates: spike 3.6%  start w+1 19.4%  start next4 15.7% (n=7940)  next4 5.11
+rows with no snap line (the snap signal cannot be scored for them): 2 of 9053; the screen tables run on the 9051 with a snap line; the cuts are taken on the full population
+
+(a) top-fifth cut values on the full population:
+    wopr             cut 0.4240   n at or above 1811 of 9053  (strict above 1811)
+      top fifth by wopr                        n= 1811  spike   8.1%  start w+1  33.4%  start next4  31.1% (n= 1617)  next4  7.63
+    air_yards_share  cut 0.2285   n at or above 1811 of 9053  (strict above 1811)
+      top fifth by air_yards_share             n= 1811  spike   7.5%  start w+1  30.5%  start next4  26.9% (n= 1615)  next4  7.13
+
+(b) the screen on the 9051 with a snap line (WR 5809, TE 3242):
+  0 of 3 signals                                       n= 6353  spike   1.7%  start w+1  13.7%  start next4   9.0% (n= 5515)  next4  4.09
+  1 of 3 signals                                       n= 1639  spike   6.5%  start w+1  29.7%  start next4  26.2% (n= 1482)  next4  6.95
+  2 of 3 signals                                       n=  681  spike  10.3%  start w+1  38.2%  start next4  33.9% (n=  599)  next4  7.99
+  3 of 3 signals                                       n=  378  spike  10.3%  start w+1  37.3%  start next4  45.0% (n=  342)  next4  8.98
+  2+ of 3 (the operative bar)                          n= 1059  spike  10.3%  start w+1  37.9%  start next4  37.9% (n=  941)  next4  8.34
+
+  fourth signal = wopr >= 0.4240 (top fifth of the population)
+   2+ of 3                                              n= 1059  spike  10.3%  start w+1  37.9%  start next4  37.9% (n=  941)  next4  8.34
+   2+ of 3 AND fourth                                   n=  958  spike  10.1%  start w+1  37.5%  start next4  38.2% (n=  851)  next4  8.38
+   2+ of 3 and NOT fourth                               n=  101  spike  11.9%  start w+1  41.6%  start next4  35.6% (n=   90)  next4  7.98
+   fourth alone, fewer than 2 of 3                      n=  853  spike   5.7%  start w+1  28.7%  start next4  23.2% (n=  766)  next4  6.78
+   GAIN in spike rate, (2+ AND fourth) minus (2+ bar): -0.2 points; (2+ AND fourth) minus (2+ NOT fourth): -1.8 points (se 3.4); start w+1 -0.4; start next4 +0.3; next4 +0.04
+   permutation p (2000 shuffles of the fourth flag inside the 2+ bar, spike, with minus without): -1.8 points, p=0.618
+   VERDICT (wopr): FAILS the +2 bar: stays display only
+
+  fourth signal = air_yards_share >= 0.2285 (top fifth of the population)
+   2+ of 3                                              n= 1059  spike  10.3%  start w+1  37.9%  start next4  37.9% (n=  941)  next4  8.34
+   2+ of 3 AND fourth                                   n=  709  spike  10.3%  start w+1  37.9%  start next4  38.9% (n=  630)  next4  8.47
+   2+ of 3 and NOT fourth                               n=  350  spike  10.3%  start w+1  37.7%  start next4  36.0% (n=  311)  next4  8.10
+   fourth alone, fewer than 2 of 3                      n= 1102  spike   5.7%  start w+1  25.8%  start next4  19.3% (n=  985)  next4  6.27
+   GAIN in spike rate, (2+ AND fourth) minus (2+ bar): +0.0 points; (2+ AND fourth) minus (2+ NOT fourth): +0.0 points (se 2.0); start w+1 +0.1; start next4 +1.0; next4 +0.12
+   permutation p (2000 shuffles of the fourth flag inside the 2+ bar, spike, with minus without): +0.0 points, p=1.000
+   VERDICT (air_yards_share): FAILS the +2 bar: stays display only
+
+==============================================================================================================
+TEST 2: dxfp = xfp in week w minus xfp in the previous game, over and above the two-game level xfp2
+==============================================================================================================
+TESTABLE FORM: population = the xfp_backtest pool (RB/WR/TE, REG 2021-2025, weeks 2-16, not startable in w, 1+ touch, a previous game row, snap line, played in w+1; doc 438); predictors = xfp2 (mean expected half-PPR over the last two games) and dxfp (xfp_w minus xfp of the previous game); outcomes = next4 mean (2+ games), spike w+1, startable w+1, startable next four; direction = a rise adds over the level; FALSIFIER = the dxfp coefficient in OLS of next4 on xfp2 and dxfp is under +0.10 a point, or the delta-only top-fifth cell is under +2 points of startable-next-four over the pool.
+
+n=9999  dxfp mean +0.13, sd 4.43; xfp2 mean 5.41, sd 3.23; corr(xfp2, dxfp) +0.011
+
+(a) OLS of next4 on xfp2 and dxfp (2+ games ahead), HC1 se:
+  ALL xfp2 +0.601 (se 0.013)  dxfp +0.027 (se 0.009)   [n=9393]
+      as the two games separately: xfp_w +0.327 (se 0.011)  xfp_prev +0.273 (se 0.011)   [n=9393]
+  RB  xfp2 +0.617 (se 0.024)  dxfp +0.058 (se 0.018)   [n=2566]
+      as the two games separately: xfp_w +0.366 (se 0.021)  xfp_prev +0.251 (se 0.022)   [n=2566]
+  WR  xfp2 +0.582 (se 0.018)  dxfp +0.022 (se 0.013)   [n=4401]
+      as the two games separately: xfp_w +0.313 (se 0.016)  xfp_prev +0.269 (se 0.016)   [n=4401]
+  TE  xfp2 +0.590 (se 0.024)  dxfp -0.015 (se 0.018)   [n=2426]
+      as the two games separately: xfp_w +0.281 (se 0.022)  xfp_prev +0.310 (se 0.022)   [n=2426]
+  (dxfp coefficient under +0.10 = falsified on the regression half)
+
+(a2) the same with start4 as 0/1 (linear probability, coefficients in percentage points per point of xfp):
+  ALL xfp2 +3.892 (se 0.130)  dxfp +0.179 (se 0.097)   [n=9393 pts]
+  RB  xfp2 +4.187 (se 0.226)  dxfp +0.477 (se 0.174)   [n=2566 pts]
+  WR  xfp2 +3.669 (se 0.189)  dxfp +0.136 (se 0.137)   [n=4401 pts]
+  TE  xfp2 +4.342 (se 0.299)  dxfp -0.245 (se 0.225)   [n=2426 pts]
+
+(b) top fifth by dxfp against top fifth by xfp2, and (c) the cross, by position and pooled:
+  ALL n= 9999  cuts: xfp2 8.02  dxfp +3.30
+    the pool                                     n= 9999  spike   4.3%  start w+1  20.5%  start next4  17.4% (n= 9393)  next4  5.48
+    top fifth by xfp2 (level)                    n= 2000  spike  10.1%  start w+1  36.6%  start next4  38.9% (n= 1915)  next4  8.57
+    top fifth by dxfp (delta)                    n= 2000  spike   7.5%  start w+1  25.2%  start next4  24.2% (n= 1904)  next4  6.61
+    both top fifths                              n=  649  spike  12.0%  start w+1  35.6%  start next4  38.9% (n=  620)  next4  8.59
+    level only                                   n= 1351  spike   9.2%  start w+1  37.1%  start next4  38.8% (n= 1295)  next4  8.55
+    delta only                                   n= 1351  spike   5.4%  start w+1  20.3%  start next4  17.1% (n= 1284)  next4  5.65
+    neither                                      n= 6648  spike   2.3%  start w+1  15.6%  start next4  10.8% (n= 6194)  next4  4.52
+    delta-only minus pool, start next4: -0.3 points; level-only minus pool +21.4; both minus pool +21.5; interaction (both - level - delta + neither) -6.3 points
+    inside the level top fifth: rising (dxfp > 0) start next4 40.1% (n=939) vs falling 37.6% (n=976)
+  RB  n= 2735  cuts: xfp2 8.91  dxfp +3.61
+    the pool                                     n= 2735  spike   5.7%  start w+1  20.9%  start next4  20.1% (n= 2566)  next4  6.02
+    top fifth by xfp2 (level)                    n=  547  spike  14.3%  start w+1  40.6%  start next4  46.3% (n=  525)  next4  9.57
+    top fifth by dxfp (delta)                    n=  547  spike  10.4%  start w+1  28.9%  start next4  31.2% (n=  523)  next4  7.68
+    both top fifths                              n=  191  spike  14.7%  start w+1  38.7%  start next4  48.9% (n=  184)  next4  9.75
+    level only                                   n=  356  spike  14.0%  start w+1  41.6%  start next4  44.9% (n=  341)  next4  9.48
+    delta only                                   n=  356  spike   8.1%  start w+1  23.6%  start next4  21.5% (n=  339)  next4  6.57
+    neither                                      n= 1832  spike   2.7%  start w+1  14.5%  start next4  11.8% (n= 1702)  next4  4.85
+    delta-only minus pool, start next4: +1.4 points; level-only minus pool +24.8; both minus pool +28.8; interaction (both - level - delta + neither) -5.7 points
+    inside the level top fifth: rising (dxfp > 0) start next4 50.0% (n=262) vs falling 42.6% (n=263)
+  WR  n= 4666  cuts: xfp2 8.23  dxfp +3.39
+    the pool                                     n= 4666  spike   4.3%  start w+1  20.3%  start next4  15.8% (n= 4401)  next4  5.51
+    top fifth by xfp2 (level)                    n=  934  spike   9.0%  start w+1  35.5%  start next4  35.3% (n=  894)  next4  8.38
+    top fifth by dxfp (delta)                    n=  934  spike   6.5%  start w+1  23.7%  start next4  21.1% (n=  890)  next4  6.47
+    both top fifths                              n=  285  spike  10.5%  start w+1  34.4%  start next4  32.3% (n=  269)  next4  8.21
+    level only                                   n=  649  spike   8.3%  start w+1  36.1%  start next4  36.6% (n=  625)  next4  8.46
+    delta only                                   n=  649  spike   4.8%  start w+1  19.0%  start next4  16.3% (n=  621)  next4  5.70
+    neither                                      n= 3083  spike   2.8%  start w+1  16.0%  start next4   9.7% (n= 2886)  next4  4.61
+    delta-only minus pool, start next4: +0.4 points; level-only minus pool +20.8; both minus pool +16.5; interaction (both - level - delta + neither) -10.9 points
+    inside the level top fifth: rising (dxfp > 0) start next4 35.9% (n=426) vs falling 34.8% (n=468)
+  TE  n= 2598  cuts: xfp2 6.78  dxfp +2.91
+    the pool                                     n= 2598  spike   2.7%  start w+1  20.2%  start next4  17.5% (n= 2426)  next4  4.86
+    top fifth by xfp2 (level)                    n=  520  spike   4.6%  start w+1  30.6%  start next4  32.0% (n=  500)  next4  6.98
+    top fifth by dxfp (delta)                    n=  520  spike   6.2%  start w+1  24.2%  start next4  21.7% (n=  494)  next4  5.62
+    both top fifths                              n=  170  spike   8.2%  start w+1  27.6%  start next4  29.2% (n=  161)  next4  6.63
+    level only                                   n=  350  spike   2.9%  start w+1  32.0%  start next4  33.3% (n=  339)  next4  7.15
+    delta only                                   n=  350  spike   5.1%  start w+1  22.6%  start next4  18.0% (n=  333)  next4  5.12
+    neither                                      n= 1728  spike   1.7%  start w+1  16.7%  start next4  12.8% (n= 1593)  next4  4.16
+    delta-only minus pool, start next4: +0.5 points; level-only minus pool +15.9; both minus pool +11.7; interaction (both - level - delta + neither) -9.4 points
+    inside the level top fifth: rising (dxfp > 0) start next4 30.6% (n=258) vs falling 33.5% (n=242)
+  (delta-only cell under +2 points of start next4 over the pool = falsified on the cell half)
+
+==============================================================================================================
+TEST 3: a week-over-week RISE in BOTH snap share and targets, net of the level of either
+==============================================================================================================
+TESTABLE FORM: population = the same xfp_backtest pool restricted to rows whose previous game carries a snap line (RB/WR/TE, not startable in w); predictors = d_snap = snap_pct_w minus snap_pct of the previous game, d_tgt = targets_w minus targets of the previous game, and the indicator both_rose = (d_snap > 0 and d_tgt > 0), entered alongside the LEVELS snap_pct_w and targets_w; outcome = startable over the next four weeks (0/1, 2+ games), also spike w+1, startable w+1, next4 mean; direction = both rising adds over the levels; FALSIFIER = the both_rose coefficient net of levels is under +3.0 points of start4, in which case the level alone is the signal. Matt's words: "counts on the field and targets combined are a signal for a player whose role could expand... we are picking from the bottom of the bottom."
+
+n=9999 of 9999 (dropped 0 whose previous game has no snap line)  WR 4666  RB 2735  TE 2598
+d_snap mean +1.4 sd 17.6; d_tgt mean +0.08 sd 2.70; corr(d_snap, d_tgt) +0.327; corr(snap_pct, d_snap) +0.335; corr(targets, d_tgt) +0.535
+calendar-adjacent (previous game was week w-1 exactly): 82.5%
+
+(a) the four cells, pooled and by position:
+  ALL n=9999
+    the pool                       n= 9999  spike   4.3%  start w+1  20.5%  start next4  17.4% (n= 9393)  next4  5.48
+    both rose                      n= 2523  spike   5.4%  start w+1  22.0%  start next4  18.8% (n= 2383)  next4  5.79
+    only snaps rose                n= 2606  spike   4.5%  start w+1  21.5%  start next4  17.4% (n= 2452)  next4  5.45
+    only targets rose              n= 1505  spike   4.3%  start w+1  21.3%  start next4  19.5% (n= 1416)  next4  5.71
+    neither rose                   n= 3365  spike   3.3%  start w+1  18.2%  start next4  15.5% (n= 3142)  next4  5.17
+  RB n=2735
+    the pool                       n= 2735  spike   5.7%  start w+1  20.9%  start next4  20.1% (n= 2566)  next4  6.02
+    both rose                      n=  663  spike   8.0%  start w+1  23.8%  start next4  22.8% (n=  627)  next4  6.47
+    only snaps rose                n=  703  spike   5.8%  start w+1  21.6%  start next4  20.5% (n=  663)  next4  6.08
+    only targets rose              n=  386  spike   5.7%  start w+1  21.8%  start next4  22.7% (n=  361)  next4  6.13
+    neither rose                   n=  983  spike   4.2%  start w+1  18.0%  start next4  16.9% (n=  915)  next4  5.63
+  WR n=4666
+    the pool                       n= 4666  spike   4.3%  start w+1  20.3%  start next4  15.8% (n= 4401)  next4  5.51
+    both rose                      n= 1265  spike   4.8%  start w+1  20.6%  start next4  16.3% (n= 1206)  next4  5.74
+    only snaps rose                n= 1160  spike   4.7%  start w+1  21.6%  start next4  15.0% (n= 1092)  next4  5.48
+    only targets rose              n=  673  spike   4.8%  start w+1  22.4%  start next4  20.3% (n=  636)  next4  6.03
+    neither rose                   n= 1568  spike   3.4%  start w+1  18.2%  start next4  14.1% (n= 1467)  next4  5.14
+  TE n=2598
+    the pool                       n= 2598  spike   2.7%  start w+1  20.2%  start next4  17.5% (n= 2426)  next4  4.86
+    both rose                      n=  595  spike   3.7%  start w+1  22.7%  start next4  19.8% (n=  550)  next4  5.14
+    only snaps rose                n=  743  spike   3.1%  start w+1  21.0%  start next4  18.1% (n=  697)  next4  4.80
+    only targets rose              n=  446  spike   2.2%  start w+1  19.1%  start next4  15.5% (n=  419)  next4  4.86
+    neither rose                   n=  814  spike   2.0%  start w+1  18.4%  start next4  16.3% (n=  760)  next4  4.70
+
+(b) OLS, levels and deltas, HC1 se. Outcome start4 (0/1, 2+ games ahead) in percentage points; then next4 in points.
+    spec A: levels + both_rose (the falsifier's object: the indicator net of the LEVELS)
+    spec B: levels + d_snap + d_tgt + both_rose (the indicator net of levels AND the single rises)
+  ALL start4, spec A: snap_pct +0.374 (se 0.020)  targets +2.285 (se 0.224)  both_rose -6.701 (se 0.949)  WR -18.439 (se 1.009)  TE -14.816 (se 1.125)   [n=9393 pts]
+  ALL start4, spec B: snap_pct +0.353 (se 0.023)  targets +3.109 (se 0.276)  d_snap -0.102 (se 0.027)  d_tgt -1.531 (se 0.231)  both_rose -0.717 (se 1.161)  WR -19.751 (se 1.013)  TE -15.374 (se 1.126)   [n=9393 pts]
+  ALL next4,  spec A: snap_pct +0.064 (se 0.002)  targets +0.326 (se 0.021)  both_rose -0.961 (se 0.095)  WR -2.862 (se 0.110)  TE -3.183 (se 0.115)   [n=9393]
+  ALL next4,  spec B: snap_pct +0.062 (se 0.002)  targets +0.431 (se 0.026)  d_snap -0.018 (se 0.003)  d_tgt -0.208 (se 0.022)  both_rose -0.067 (se 0.116)  WR -3.056 (se 0.109)  TE -3.273 (se 0.114)   [n=9393]
+  ALL start4, levels only: snap_pct +0.373 (se 0.020)  targets +1.834 (se 0.214)  WR -17.651 (se 1.007)  TE -14.007 (se 1.122)   [n=9393 pts]
+  RB start4, spec A: snap_pct +0.815 (se 0.049)  targets +0.126 (se 0.568)  both_rose -6.206 (se 1.980)   [n=2566 pts]
+  RB start4, spec B: snap_pct +0.936 (se 0.058)  targets -0.895 (se 0.695)  d_snap -0.307 (se 0.065)  d_tgt +0.696 (se 0.553)  both_rose -1.753 (se 2.314)   [n=2566 pts]
+  RB next4,  spec A: snap_pct +0.121 (se 0.006)  targets +0.059 (se 0.060)  both_rose -0.910 (se 0.210)   [n=2566]
+  RB next4,  spec B: snap_pct +0.137 (se 0.007)  targets -0.048 (se 0.071)  d_snap -0.046 (se 0.007)  d_tgt +0.031 (se 0.062)  both_rose -0.092 (se 0.256)   [n=2566]
+  RB start4, levels only: snap_pct +0.808 (se 0.049)  targets -0.471 (se 0.524)   [n=2566 pts]
+  WR start4, spec A: snap_pct +0.205 (se 0.025)  targets +3.042 (se 0.287)  both_rose -7.879 (se 1.275)   [n=4401 pts]
+  WR start4, spec B: snap_pct +0.150 (se 0.028)  targets +4.237 (se 0.355)  d_snap -0.053 (se 0.033)  d_tgt -1.885 (se 0.303)  both_rose -1.283 (se 1.605)   [n=4401 pts]
+  WR next4,  spec A: snap_pct +0.047 (se 0.003)  targets +0.404 (se 0.028)  both_rose -1.105 (se 0.133)   [n=4401]
+  WR next4,  spec B: snap_pct +0.041 (se 0.003)  targets +0.552 (se 0.035)  d_snap -0.013 (se 0.004)  d_tgt -0.248 (se 0.029)  both_rose -0.103 (se 0.165)   [n=4401]
+  WR start4, levels only: snap_pct +0.208 (se 0.025)  targets +2.570 (se 0.277)   [n=4401 pts]
+  TE start4, spec A: snap_pct +0.381 (se 0.042)  targets +2.506 (se 0.442)  both_rose -6.401 (se 1.955)   [n=2426 pts]
+  TE start4, spec B: snap_pct +0.323 (se 0.047)  targets +3.944 (se 0.533)  d_snap -0.077 (se 0.056)  d_tgt -2.639 (se 0.465)  both_rose +1.227 (se 2.345)   [n=2426 pts]
+  TE next4,  spec A: snap_pct +0.053 (se 0.004)  targets +0.383 (se 0.035)  both_rose -0.913 (se 0.161)   [n=2426]
+  TE next4,  spec B: snap_pct +0.046 (se 0.004)  targets +0.559 (se 0.041)  d_snap -0.009 (se 0.005)  d_tgt -0.322 (se 0.036)  both_rose +0.018 (se 0.190)   [n=2426]
+  TE start4, levels only: snap_pct +0.379 (se 0.042)  targets +2.069 (se 0.419)   [n=2426 pts]
+
+(b2) the other reading of "net of the level": net of the PREVIOUS game's levels (snap_prev, tgt_prev), where a rise carries the current level with it; and net of BOTH games' levels, where it is the shape of the two-game path only
+  ALL start4, spec C (previous game's levels): snap_prev +0.330 (se 0.020)  tgt_prev +2.298 (se 0.219)  both_rose +8.537 (se 0.902)  WR -17.521 (se 1.008)  TE -13.373 (se 1.119)   [n=9393 pts]
+  ALL start4, spec D (both games' levels):     snap_pct +0.251 (se 0.027)  targets +1.578 (se 0.241)  snap_prev +0.102 (se 0.027)  tgt_prev +1.531 (se 0.231)  both_rose -0.717 (se 1.161)  WR -19.751 (se 1.013)  TE -15.374 (se 1.126)   [n=9393 pts]
+  RB start4, spec C (previous game's levels): snap_prev +0.730 (se 0.051)  tgt_prev -0.251 (se 0.539)  both_rose +9.101 (se 1.824)   [n=2566 pts]
+  RB start4, spec D (both games' levels):     snap_pct +0.630 (se 0.064)  targets -0.199 (se 0.593)  snap_prev +0.307 (se 0.065)  tgt_prev -0.696 (se 0.553)  both_rose -1.753 (se 2.314)   [n=2566 pts]
+  WR start4, spec C (previous game's levels): snap_prev +0.208 (se 0.025)  tgt_prev +2.714 (se 0.287)  both_rose +7.954 (se 1.235)   [n=4401 pts]
+  WR start4, spec D (both games' levels):     snap_pct +0.097 (se 0.033)  targets +2.352 (se 0.309)  snap_prev +0.053 (se 0.033)  tgt_prev +1.885 (se 0.303)  both_rose -1.283 (se 1.605)   [n=4401 pts]
+  TE start4, spec C (previous game's levels): snap_prev +0.291 (se 0.040)  tgt_prev +3.345 (se 0.432)  both_rose +9.096 (se 1.827)   [n=2426 pts]
+  TE start4, spec D (both games' levels):     snap_pct +0.247 (se 0.058)  targets +1.305 (se 0.487)  snap_prev +0.077 (se 0.056)  tgt_prev +2.639 (se 0.465)  both_rose +1.227 (se 2.345)   [n=2426 pts]
+
+(c) the interaction on the raw cells (start4, 2+ games): gain of each cell over "neither rose", and both minus the sum
+  ALL snaps-only +1.9  targets-only +4.0  both +3.3  sum of singles +5.9  interaction -2.6 (se 1.7)  -> SUBSTITUTION (both is less than the sum), inside two se, call it null
+      next4: snaps-only +0.25  targets-only +0.56  both +0.60  sum +0.82  interaction -0.21 (se 0.18)
+  RB  snaps-only +3.6  targets-only +5.8  both +5.9  sum of singles +9.3  interaction -3.5 (se 3.4)  -> SUBSTITUTION (both is less than the sum), inside two se, call it null
+      next4: snaps-only +0.39  targets-only +0.54  both +0.85  sum +0.92  interaction -0.07 (se 0.40)
+  WR  snaps-only +0.9  targets-only +6.2  both +2.1  sum of singles +7.1  interaction -4.9 (se 2.4)  -> SUBSTITUTION (both is less than the sum)
+      next4: snaps-only +0.30  targets-only +0.91  both +0.51  sum +1.21  interaction -0.70 (se 0.26)
+  TE  snaps-only +1.8  targets-only -0.8  both +3.5  sum of singles +1.0  interaction +2.5 (se 3.2)  -> AMPLIFICATION (both beats the sum), inside two se, call it null
+      next4: snaps-only +0.17  targets-only +0.21  both +0.58  sum +0.38  interaction +0.20 (se 0.29)
+
+(d) the stricter version: d_snap >= 10 points AND d_tgt >= 3 targets
+  ALL n=9999
+    the pool                                     n= 9999  spike   4.3%  start w+1  20.5%  start next4  17.4% (n= 9393)  next4  5.48
+    strict both (snaps +10, targets +3)          n=  715  spike   7.0%  start w+1  23.6%  start next4  20.9% (n=  675)  next4  6.32
+    not strict                                   n= 9284  spike   4.1%  start w+1  20.2%  start next4  17.1% (n= 8718)  next4  5.42
+    start4 spec A: snap_pct +0.371 (se 0.020)  targets +2.181 (se 0.225)  strict -8.882 (se 1.681)  WR -18.117 (se 1.008)  TE -14.492 (se 1.124)   [n=9393 pts]
+    start4 spec B: snap_pct +0.352 (se 0.023)  targets +3.131 (se 0.278)  d_snap -0.101 (se 0.026)  d_tgt -1.536 (se 0.223)  strict -1.678 (se 1.838)  WR -19.753 (se 1.012)  TE -15.375 (se 1.125)   [n=9393 pts]
+    next4  spec A: snap_pct +0.063 (se 0.002)  targets +0.306 (se 0.021)  strict -1.142 (se 0.162)  WR -2.809 (se 0.110)  TE -3.129 (se 0.115)   [n=9393]
+    strict cell minus pool, start next4: +3.5 points (n strict 675)
+  RB n=2735
+    the pool                                     n= 2735  spike   5.7%  start w+1  20.9%  start next4  20.1% (n= 2566)  next4  6.02
+    strict both (snaps +10, targets +3)          n=  163  spike   8.0%  start w+1  26.4%  start next4  28.8% (n=  153)  next4  7.32
+    not strict                                   n= 2572  spike   5.6%  start w+1  20.5%  start next4  19.6% (n= 2413)  next4  5.94
+    start4 spec A: snap_pct +0.816 (se 0.050)  targets -0.019 (se 0.559)  strict -8.995 (se 3.940)   [n=2566 pts]
+    start4 spec B: snap_pct +0.938 (se 0.058)  targets -0.856 (se 0.697)  d_snap -0.311 (se 0.062)  d_tgt +0.663 (se 0.539)  strict -3.590 (se 4.132)   [n=2566 pts]
+    next4  spec A: snap_pct +0.121 (se 0.006)  targets +0.042 (se 0.059)  strict -1.403 (se 0.380)   [n=2566]
+    strict cell minus pool, start next4: +8.6 points (n strict 153)
+  WR n=4666
+    the pool                                     n= 4666  spike   4.3%  start w+1  20.3%  start next4  15.8% (n= 4401)  next4  5.51
+    strict both (snaps +10, targets +3)          n=  404  spike   6.4%  start w+1  22.5%  start next4  17.4% (n=  379)  next4  6.10
+    not strict                                   n= 4262  spike   4.1%  start w+1  20.1%  start next4  15.7% (n= 4022)  next4  5.46
+    start4 spec A: snap_pct +0.201 (se 0.025)  targets +2.967 (se 0.290)  strict -10.300 (se 2.103)   [n=4401 pts]
+    start4 spec B: snap_pct +0.147 (se 0.028)  targets +4.280 (se 0.359)  d_snap -0.050 (se 0.032)  d_tgt -1.896 (se 0.289)  strict -2.859 (se 2.323)   [n=4401 pts]
+    next4  spec A: snap_pct +0.047 (se 0.003)  targets +0.388 (se 0.029)  strict -1.291 (se 0.211)   [n=4401]
+    strict cell minus pool, start next4: +1.6 points (n strict 379)
+  TE n=2598
+    the pool                                     n= 2598  spike   2.7%  start w+1  20.2%  start next4  17.5% (n= 2426)  next4  4.86
+    strict both (snaps +10, targets +3)          n=  148  spike   7.4%  start w+1  23.6%  start next4  21.7% (n=  143)  next4  5.79
+    not strict                                   n= 2450  spike   2.4%  start w+1  20.0%  start next4  17.2% (n= 2283)  next4  4.80
+    start4 spec A: snap_pct +0.378 (se 0.042)  targets +2.409 (se 0.437)  strict -9.650 (se 3.646)   [n=2426 pts]
+    start4 spec B: snap_pct +0.322 (se 0.047)  targets +3.998 (se 0.533)  d_snap -0.061 (se 0.053)  d_tgt -2.545 (se 0.452)  strict -1.002 (se 3.949)   [n=2426 pts]
+    next4  spec A: snap_pct +0.052 (se 0.004)  targets +0.358 (se 0.034)  strict -1.051 (se 0.320)   [n=2426]
+    strict cell minus pool, start next4: +4.2 points (n strict 143)
+
+(e) sensitivity: calendar-adjacent rows only (previous game was week w-1), pooled, start4 spec A and B
+  spec A: snap_pct +0.396 (se 0.022)  targets +2.229 (se 0.244)  both_rose -6.452 (se 1.061)  WR -19.546 (se 1.126)  TE -15.239 (se 1.276)   [n=7799 pts]
+  spec B: snap_pct +0.375 (se 0.026)  targets +3.019 (se 0.301)  d_snap -0.104 (se 0.032)  d_tgt -1.453 (se 0.251)  both_rose -0.707 (se 1.299)  WR -20.858 (se 1.130)  TE -15.921 (se 1.280)   [n=7799 pts]
+  strict, spec A: snap_pct +0.393 (se 0.022)  targets +2.120 (se 0.244)  strict -8.453 (se 1.875)  WR -19.222 (se 1.123)  TE -14.911 (se 1.272)   [n=7799 pts]
+
+(f) by season, pooled: both_rose coefficient on start4 net of levels (spec A), percentage points
+  2021: both_rose -6.8 (se 2.2)  n=1801
+  2022: both_rose -6.2 (se 2.2)  n=1871
+  2023: both_rose -5.2 (se 2.0)  n=1911
+  2024: both_rose -8.2 (se 2.1)  n=1901
+  2025: both_rose -6.9 (se 2.1)  n=1909
+
+done

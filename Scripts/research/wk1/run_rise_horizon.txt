@@ -1,0 +1,44 @@
+cache: /tmp/claude-0/-home-claude/3a831c26-fa57-5432-80c5-df34542892d6/scratchpad/work5/Scripts/research/_nflverse_cache
+join: 100.0% of 23097 touch-weeks carry an expected row; actual vs ffverse actual corr 0.9993 (fumbles differ)
+
+XFP_BACKTEST POPULATION n=9999  WR 4666  RB 2735  TE 2598
+base rates: spike 4.3%  startable w+1 20.5%  startable next four 17.4% (n=9393)  next-four mean 5.48
+previous game row is the calendar week before (w-1 exactly): 82.5% of the pool; the rest have a bye or a missed week between the two games
+
+TEST 3 POPULATION n=9999  WR 4666  RB 2735  TE 2598
+
+TESTABLE FORM: the doc 440 TEST 3 population and predictors (both_rose = snap share AND targets rose from the previous game, entered beside the LEVELS snap_pct and targets); OUTCOMES = start4 (2+ rows), start8 (4+ rows), startROS (4+ rows), peak8 (best four-game stretch inside the next eight clears the bar); DIRECTION = a rise adds over the levels on the longer horizons where it did not on four weeks; FALSIFIER = the both_rose coefficient net of levels is under +3.0 points on every horizon, in which case the rise is not a role-expansion signal either.
+
+(a) the both_rose coefficient net of the levels (spec A, HC1 se; the pooled row carries WR and TE dummies as doc 440 did), percentage points, by horizon:
+                        start4                start8              startROS                 peak8
+  ALL     -6.7 (se  0.9) n= 9393  -7.7 (se  1.0) n= 7308  -8.8 (se  1.0) n= 7527 -10.5 (se  1.2) n= 7308
+  RB      -6.2 (se  2.0) n= 2566  -9.2 (se  2.2) n= 2009 -11.4 (se  2.1) n= 2066 -10.3 (se  2.5) n= 2009
+  WR      -7.9 (se  1.3) n= 4401  -7.6 (se  1.4) n= 3416  -8.2 (se  1.4) n= 3517 -10.9 (se  1.6) n= 3416
+  TE      -6.4 (se  2.0) n= 2426  -8.2 (se  2.2) n= 1883  -9.1 (se  2.1) n= 1944 -10.8 (se  2.5) n= 1883
+
+(b) raw cells, pooled: both rose vs neither rose, each horizon (rate in %, n)
+  start4    pool  17.4% (n=9393)   both rose  18.8% (n=2383)   neither/one  16.9% (n=7010)   raw gap +1.9
+  start8    pool  16.4% (n=7308)   both rose  17.0% (n=1848)   neither/one  16.2% (n=5460)   raw gap +0.8
+  startROS  pool  16.1% (n=7527)   both rose  16.2% (n=1897)   neither/one  16.1% (n=5630)   raw gap +0.1
+  peak8     pool  25.7% (n=7308)   both rose  26.0% (n=1848)   neither/one  25.7% (n=5460)   raw gap +0.3
+
+(c) the strict rise (snaps +10 points, targets +3), pooled, net of levels:
+  start4    strict   -8.9 (se  1.7)  n=9393  strict cell rate  20.9% (n=675) vs pool  17.4%
+  start8    strict   -7.4 (se  1.9)  n=7308  strict cell rate  20.8% (n=544) vs pool  16.4%
+  startROS  strict   -8.6 (se  1.8)  n=7527  strict cell rate  19.9% (n=557) vs pool  16.1%
+  peak8     strict  -11.2 (se  2.1)  n=7308  strict cell rate  29.6% (n=544) vs pool  25.7%
+
+(d) by season, pooled, both_rose net of levels on start8 and peak8:
+  2021: start8  -7.9 (se 2.4) n=1388   peak8 -11.7 (se 2.8) n=1388
+  2022: start8  -7.6 (se 2.4) n=1442   peak8 -11.0 (se 2.8) n=1442
+  2023: start8  -8.4 (se 2.3) n=1474   peak8 -11.2 (se 2.6) n=1474
+  2024: start8  -7.4 (se 2.3) n=1513   peak8 -10.4 (se 2.6) n=1513
+  2025: start8  -7.3 (se 2.3) n=1491   peak8  -8.0 (se 2.6) n=1491
+
+(e) the level, for scale: startable-next-eight by targets-in-week-w band, pooled (the signal 4.38 says to use)
+  targets 0-2: start8   9.8%  peak8  17.2%  n=3328
+  targets 3-4: start8  17.1%  peak8  26.3%  n=1899
+  targets 5-7: start8  24.5%  peak8  36.1%  n=1521
+  targets 8-+: start8  31.8%  peak8  46.2%  n=560
+
+done

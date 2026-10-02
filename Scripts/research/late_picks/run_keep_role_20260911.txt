@@ -1,0 +1,583 @@
+doc 294 run log, 11 Sept 2026, Scripts\research\late_picks\ on nflverse files (weekly.pkl from build_weekly.py)
+
+####################################################################################################
+# keep_role_variants.py (2021-2025; which reading of doc 244 reproduces it)
+####################################################################################################
+target (doc 244): RB 40, WR/TE 48, RB avg +4.2, WR/TE -0.9, median 11.2, above +12.4, below -4.1, diff +16.6 p=0.006
+snaps after_incl=True  before=all   maxwk=18 pooled=False | RB 41 WR/TE  73 | RB avg  +8.4 WR/TE  +3.2 | med 12.6 above +11.7 below  +5.2 diff  +6.4 p=0.374
+snaps after_incl=True  before=all   maxwk=18 pooled=True  | RB 41 WR/TE  24 | RB avg  +8.4 WR/TE  -0.5 | med 12.6 above +11.7 below  +5.2 diff  +6.4 p=0.368
+snaps after_incl=True  before=all   maxwk=17 pooled=False | RB 37 WR/TE  71 | RB avg +10.8 WR/TE  +3.1 | med 12.6 above +15.9 below  +6.0 diff  +9.9 p=0.171
+snaps after_incl=True  before=all   maxwk=17 pooled=True  | RB 37 WR/TE  24 | RB avg +10.8 WR/TE  +0.2 | med 12.6 above +15.9 below  +6.0 diff  +9.9 p=0.170
+snaps after_incl=True  before=early maxwk=18 pooled=False | RB 41 WR/TE  73 | RB avg +10.8 WR/TE  +4.7 | med 12.6 above +16.3 below  +5.4 diff +10.9 p=0.135
+snaps after_incl=True  before=early maxwk=18 pooled=True  | RB 41 WR/TE  24 | RB avg +10.8 WR/TE  +1.9 | med 12.6 above +16.3 below  +5.4 diff +10.9 p=0.134
+snaps after_incl=True  before=early maxwk=17 pooled=False | RB 37 WR/TE  71 | RB avg +13.0 WR/TE  +4.6 | med 12.6 above +19.3 below  +7.0 diff +12.2 p=0.113
+snaps after_incl=True  before=early maxwk=17 pooled=True  | RB 37 WR/TE  24 | RB avg +13.0 WR/TE  +2.7 | med 12.6 above +19.3 below  +7.0 diff +12.2 p=0.105
+snaps after_incl=False before=all   maxwk=18 pooled=False | RB 37 WR/TE  71 | RB avg  +9.4 WR/TE  +3.0 | med 12.6 above +13.9 below  +5.1 diff  +8.8 p=0.218
+snaps after_incl=False before=all   maxwk=18 pooled=True  | RB 37 WR/TE  24 | RB avg  +9.4 WR/TE  -0.7 | med 12.6 above +13.9 below  +5.1 diff  +8.8 p=0.204
+snaps after_incl=False before=all   maxwk=17 pooled=False | RB 34 WR/TE  66 | RB avg +10.4 WR/TE  +3.3 | med 12.6 above +14.5 below  +6.3 diff  +8.3 p=0.262
+snaps after_incl=False before=all   maxwk=17 pooled=True  | RB 34 WR/TE  22 | RB avg +10.4 WR/TE  +0.6 | med 12.6 above +14.5 below  +6.3 diff  +8.3 p=0.246
+snaps after_incl=False before=early maxwk=18 pooled=False | RB 37 WR/TE  71 | RB avg +11.5 WR/TE  +4.4 | med 12.6 above +17.2 below  +6.1 diff +11.1 p=0.146
+snaps after_incl=False before=early maxwk=18 pooled=True  | RB 37 WR/TE  24 | RB avg +11.5 WR/TE  +1.7 | med 12.6 above +17.2 below  +6.1 diff +11.1 p=0.154
+snaps after_incl=False before=early maxwk=17 pooled=False | RB 34 WR/TE  66 | RB avg +12.9 WR/TE  +4.8 | med 12.6 above +18.1 below  +7.8 diff +10.3 p=0.187
+snaps after_incl=False before=early maxwk=17 pooled=True  | RB 34 WR/TE  22 | RB avg +12.9 WR/TE  +3.4 | med 12.6 above +18.1 below  +7.8 diff +10.3 p=0.175
+use   after_incl=True  before=all   maxwk=18 pooled=False | RB 37 WR/TE  66 | RB avg  +7.9 WR/TE  +1.3 | med 12.8 above +11.9 below  +4.1 diff  +7.8 p=0.292
+use   after_incl=True  before=all   maxwk=18 pooled=True  | RB 37 WR/TE  25 | RB avg  +7.9 WR/TE  -0.9 | med 12.8 above +11.9 below  +4.1 diff  +7.8 p=0.300
+use   after_incl=True  before=all   maxwk=17 pooled=False | RB 34 WR/TE  65 | RB avg +10.5 WR/TE  +2.0 | med 12.8 above +15.9 below  +5.0 diff +10.9 p=0.160
+use   after_incl=True  before=all   maxwk=17 pooled=True  | RB 34 WR/TE  25 | RB avg +10.5 WR/TE  -0.2 | med 12.8 above +15.9 below  +5.0 diff +10.9 p=0.148
+use   after_incl=True  before=early maxwk=18 pooled=False | RB 37 WR/TE  66 | RB avg +10.5 WR/TE  +2.6 | med 12.8 above +15.9 below  +5.4 diff +10.5 p=0.189
+use   after_incl=True  before=early maxwk=18 pooled=True  | RB 37 WR/TE  25 | RB avg +10.5 WR/TE  +1.3 | med 12.8 above +15.9 below  +5.4 diff +10.5 p=0.178
+use   after_incl=True  before=early maxwk=17 pooled=False | RB 34 WR/TE  65 | RB avg +12.6 WR/TE  +3.3 | med 12.8 above +19.1 below  +6.2 diff +12.9 p=0.106
+use   after_incl=True  before=early maxwk=17 pooled=True  | RB 34 WR/TE  25 | RB avg +12.6 WR/TE  +2.0 | med 12.8 above +19.1 below  +6.2 diff +12.9 p=0.104
+use   after_incl=False before=all   maxwk=18 pooled=False | RB 34 WR/TE  65 | RB avg  +9.1 WR/TE  +2.2 | med 12.8 above +14.2 below  +4.1 diff +10.2 p=0.175
+use   after_incl=False before=all   maxwk=18 pooled=True  | RB 34 WR/TE  25 | RB avg  +9.1 WR/TE  -1.2 | med 12.8 above +14.2 below  +4.1 diff +10.2 p=0.168
+use   after_incl=False before=all   maxwk=17 pooled=False | RB 32 WR/TE  61 | RB avg  +9.6 WR/TE  +2.8 | med 12.8 above +14.9 below  +4.3 diff +10.7 p=0.148
+use   after_incl=False before=all   maxwk=17 pooled=True  | RB 32 WR/TE  23 | RB avg  +9.6 WR/TE  -0.1 | med 12.8 above +14.9 below  +4.3 diff +10.7 p=0.147
+use   after_incl=False before=early maxwk=18 pooled=False | RB 34 WR/TE  65 | RB avg +11.3 WR/TE  +3.6 | med 12.8 above +17.4 below  +5.2 diff +12.2 p=0.145
+use   after_incl=False before=early maxwk=18 pooled=True  | RB 34 WR/TE  25 | RB avg +11.3 WR/TE  +1.1 | med 12.8 above +17.4 below  +5.2 diff +12.2 p=0.128
+use   after_incl=False before=early maxwk=17 pooled=False | RB 32 WR/TE  61 | RB avg +12.3 WR/TE  +4.2 | med 12.8 above +18.3 below  +6.3 diff +12.0 p=0.138
+use   after_incl=False before=early maxwk=17 pooled=True  | RB 32 WR/TE  23 | RB avg +12.3 WR/TE  +2.5 | med 12.8 above +18.3 below  +6.3 diff +12.0 p=0.145
+
+variant G: the replacement is the number two by weeks 1-4 usage (the designated backup), not the man who got the absence snaps
+snaps after_incl=True  maxwk=18 need_relief=True  | RB 35 WR/TE  58 | RB avg  +4.5 WR/TE  -1.8 | med 11.9 above +16.0 below  -6.3 diff +22.4 p=0.001
+snaps after_incl=True  maxwk=18 need_relief=False | RB 41 WR/TE  65 | RB avg  +2.2 WR/TE  -1.4 | med 10.1 above +10.7 below  -5.8 diff +16.5 p=0.012
+snaps after_incl=True  maxwk=17 need_relief=True  | RB 34 WR/TE  54 | RB avg  +5.2 WR/TE  -0.6 | med 12.0 above +16.3 below  -5.8 diff +22.1 p=0.001
+snaps after_incl=True  maxwk=17 need_relief=False | RB 37 WR/TE  61 | RB avg  +3.9 WR/TE  -0.3 | med 10.1 above +13.8 below  -5.5 diff +19.4 p=0.003
+snaps after_incl=False maxwk=18 need_relief=True  | RB 34 WR/TE  54 | RB avg  +4.6 WR/TE  +0.3 | med 12.0 above +14.7 below  -5.5 diff +20.2 p=0.002
+snaps after_incl=False maxwk=18 need_relief=False | RB 37 WR/TE  61 | RB avg  +3.3 WR/TE  +0.3 | med 10.1 above +12.0 below  -5.0 diff +17.0 p=0.013
+snaps after_incl=False maxwk=17 need_relief=True  | RB 32 WR/TE  53 | RB avg  +4.5 WR/TE  +0.2 | med 12.1 above +14.4 below  -5.3 diff +19.7 p=0.010
+snaps after_incl=False maxwk=17 need_relief=False | RB 34 WR/TE  58 | RB avg  +3.6 WR/TE  +0.3 | med 12.0 above +14.4 below  -7.2 diff +21.6 p=0.002
+use   after_incl=True  maxwk=18 need_relief=True  | RB 35 WR/TE  54 | RB avg  +4.5 WR/TE  -2.9 | med 11.9 above +16.0 below  -6.3 diff +22.3 p=0.001
+use   after_incl=True  maxwk=18 need_relief=False | RB 41 WR/TE  68 | RB avg  +2.2 WR/TE  -3.1 | med 10.1 above +10.7 below  -5.8 diff +16.5 p=0.009
+use   after_incl=True  maxwk=17 need_relief=True  | RB 34 WR/TE  51 | RB avg  +5.2 WR/TE  -1.6 | med 12.0 above +16.3 below  -5.8 diff +22.1 p=0.002
+use   after_incl=True  maxwk=17 need_relief=False | RB 37 WR/TE  64 | RB avg  +3.9 WR/TE  -2.1 | med 10.1 above +13.8 below  -5.5 diff +19.3 p=0.004
+use   after_incl=False maxwk=18 need_relief=True  | RB 34 WR/TE  51 | RB avg  +4.6 WR/TE  -1.4 | med 12.0 above +14.7 below  -5.5 diff +20.2 p=0.003
+use   after_incl=False maxwk=18 need_relief=False | RB 37 WR/TE  64 | RB avg  +3.3 WR/TE  -1.7 | med 10.1 above +12.0 below  -5.0 diff +17.0 p=0.011
+use   after_incl=False maxwk=17 need_relief=True  | RB 32 WR/TE  50 | RB avg  +4.5 WR/TE  -1.1 | med 12.1 above +14.3 below  -5.3 diff +19.6 p=0.009
+use   after_incl=False maxwk=17 need_relief=False | RB 34 WR/TE  61 | RB avg  +3.6 WR/TE  -1.7 | med 12.0 above +14.3 below  -7.2 diff +21.6 p=0.002
+
+####################################################################################################
+# keep_role.py --years 2021-2025 --maxwk 14 (the doc 244 control, its own window)
+####################################################################################################
+== keep_role.py, seasons 2021-2025, weeks 1-14 ==
+==== replacement = backup ====
+events before the guard: 143 (RB 53, WR/TE 90); after: 77 (RB 30, WR/TE 47)
+RB: average share change +4.1 pp [-2.8, +11.4], n=30
+WR/TE: average share change -0.3 pp [-4.0, +3.7], n=47
+RB median relief ppg 12.0; above median +16.4 pp (n=15), at or below -8.1 pp (n=15), difference +24.5, p=0.001
+RB replacements who did not produce: 8 of 14 were not the man who got the most work in the missed games (2 played none of them)
+RB at the fixed 11.2: produced +13.6 pp (n=16), did not -6.7 pp (n=14), difference +20.3, p=0.004
+
+--- RB: replacement pedigree x relief production (produced = 11.2 half-PPR a game or more) ---
+  produced / rounds 1-3                        n=  6  change  +20.8 pp [+9.2, +30.2]  took  50.0%  startable after  33.3%
+  produced / late pick                         n= 10  change   +9.3 pp [-3.5, +22.8]  took  40.0%  startable after  30.0%
+  did not / rounds 1-3                         n=  6  change  -11.1 pp [-20.7, -3.2]  took   0.0%  startable after   0.0%
+  did not / late pick                          n=  8  change   -3.4 pp [-13.6, +6.6]  took   0.0%  startable after  12.5%
+  produced: late minus early -11.5 pp [-28.2, +5.4], p=0.279, smallest gap this could see at 80% power about 26 pp; took 4/10 vs 3/6 p=1.000; startable after 3/10 vs 2/6 p=1.000
+  did not: late minus early +7.6 pp [-4.8, +21.6], p=0.339, smallest gap this could see at 80% power about 21 pp; took 0/8 vs 0/6 p=1.000; startable after 1/8 vs 0/6 p=1.000
+  production effect, late picks minus rounds 1-3 (difference in differences): -19.1 pp [-42.7, +4.2]
+
+--- WR/TE: replacement pedigree x relief production (produced = 11.2 half-PPR a game or more) ---
+  produced / rounds 1-3                        n=  5  change   +9.7 pp [-1.6, +21.3]  took   0.0%  startable after  60.0%
+  produced / late pick                         n=  4  change   -2.1 pp [-10.0, +5.8]  took   0.0%  startable after   0.0%
+  did not / rounds 1-3                         n= 11  change   -0.2 pp [-7.3, +6.8]  took  18.2%  startable after  18.2%
+  did not / late pick                          n= 27  change   -1.9 pp [-6.9, +3.8]  took   0.0%  startable after   0.0%
+  produced: late minus early -11.8 pp [-25.5, +1.3], p=0.177, smallest gap this could see at 80% power about 22 pp; took 0/4 vs 0/5 p=1.000; startable after 0/4 vs 3/5 p=0.167
+  did not: late minus early -1.7 pp [-10.5, +7.2], p=0.735, smallest gap this could see at 80% power about 13 pp; took 0/27 vs 2/11 p=0.078; startable after 0/27 vs 2/11 p=0.078
+  production effect, late picks minus rounds 1-3 (difference in differences): -10.1 pp [-27.9, +7.3]
+
+--- RB, replacement produced: the returning lead man's pedigree (the sunk-cost cut) ---
+  lead man rounds 1-3                          n= 12  change   +7.9 pp [-2.8, +19.0]  took  25.0%  startable after  25.0%
+  lead man late pick                           n=  4  change  +30.8 pp [+26.0, +35.1]  took 100.0%  startable after  50.0%
+  lead late minus lead early +22.9 pp [+10.8, +34.6], p=0.044
+--- RB, replacement produced: absence length ---
+  1-2 games / rounds 1-3                       n=  5  change  +20.2 pp [+6.1, +31.5]  took  40.0%  startable after  40.0%
+  1-2 games / late pick                        n=  7  change  +17.3 pp [+3.4, +31.7]  took  57.1%  startable after  42.9%
+  3+ games / rounds 1-3                        n=  1  change  +23.6 pp [+nan, +nan]  took 100.0%  startable after   0.0%
+  3+ games / late pick                         n=  3  change   -9.5 pp [-28.2, +3.4]  took   0.0%  startable after   0.0%
+
+==== replacement = work ====
+events before the guard: 143 (RB 53, WR/TE 90); after: 83 (RB 29, WR/TE 54)
+RB: average share change +11.6 pp [+4.6, +19.1], n=29
+WR/TE: average share change +1.9 pp [-1.5, +5.5], n=54
+RB median relief ppg 12.7; above median +12.9 pp (n=14), at or below +10.4 pp (n=15), difference +2.5, p=0.744
+RB replacements who did not produce: 0 of 7 were not the man who got the most work in the missed games (0 played none of them)
+RB at the fixed 11.2: produced +15.5 pp (n=22), did not -0.5 pp (n=7), difference +16.0, p=0.068
+
+--- RB: replacement pedigree x relief production (produced = 11.2 half-PPR a game or more) ---
+  produced / rounds 1-3                        n=  6  change  +20.8 pp [+9.8, +30.0]  took  50.0%  startable after  33.3%
+  produced / late pick                         n= 16  change  +13.5 pp [+3.2, +24.9]  took  31.2%  startable after  25.0%
+  did not / rounds 1-3                         n=  4  change   -4.8 pp [-11.7, +0.6]  took   0.0%  startable after   0.0%
+  did not / late pick                          n=  3  change   +5.1 pp [-16.9, +19.3]  took   0.0%  startable after  33.3%
+  produced: late minus early -7.2 pp [-21.4, +8.2], p=0.479, smallest gap this could see at 80% power about 23 pp; took 5/16 vs 3/6 p=0.624; startable after 4/16 vs 2/6 p=1.000
+  did not: late minus early +9.8 pp [-11.8, +26.1], p=0.400, smallest gap this could see at 80% power about 33 pp; took 0/3 vs 0/4 p=1.000; startable after 1/3 vs 0/4 p=0.429
+  production effect, late picks minus rounds 1-3 (difference in differences): -17.1 pp [-42.6, +11.9]
+
+--- WR/TE: replacement pedigree x relief production (produced = 11.2 half-PPR a game or more) ---
+  produced / rounds 1-3                        n=  6  change  +12.6 pp [+2.5, +21.3]  took  16.7%  startable after  33.3%
+  produced / late pick                         n=  8  change   -1.8 pp [-9.4, +6.3]  took   0.0%  startable after   0.0%
+  did not / rounds 1-3                         n= 13  change   +5.0 pp [-0.7, +11.5]  took  15.4%  startable after  15.4%
+  did not / late pick                          n= 27  change   -0.8 pp [-5.3, +4.7]  took   0.0%  startable after   0.0%
+  produced: late minus early -14.4 pp [-26.0, -1.6], p=0.049, smallest gap this could see at 80% power about 19 pp; took 0/8 vs 1/6 p=0.429; startable after 0/8 vs 2/6 p=0.165
+  did not: late minus early -5.9 pp [-13.9, +1.8], p=0.198, smallest gap this could see at 80% power about 12 pp; took 0/27 vs 2/13 p=0.100; startable after 0/27 vs 2/13 p=0.100
+  production effect, late picks minus rounds 1-3 (difference in differences): -8.6 pp [-22.9, +7.7]
+
+--- RB, replacement produced: the returning lead man's pedigree (the sunk-cost cut) ---
+  lead man rounds 1-3                          n= 17  change   +9.4 pp [+0.7, +18.0]  took  17.6%  startable after  17.6%
+  lead man late pick                           n=  5  change  +36.3 pp [+27.8, +48.2]  took 100.0%  startable after  60.0%
+  lead late minus lead early +26.9 pp [+13.9, +40.9], p=0.008
+--- RB, replacement produced: absence length ---
+  1-2 games / rounds 1-3                       n=  5  change  +20.2 pp [+6.8, +31.5]  took  40.0%  startable after  40.0%
+  1-2 games / late pick                        n= 11  change  +15.9 pp [+5.4, +27.3]  took  36.4%  startable after  27.3%
+  3+ games / rounds 1-3                        n=  1  change  +23.6 pp [+nan, +nan]  took 100.0%  startable after   0.0%
+  3+ games / late pick                         n=  5  change   +8.4 pp [-13.8, +36.3]  took  20.0%  startable after  20.0%
+
+####################################################################################################
+# keep_role.py --years 2021-2025
+####################################################################################################
+== keep_role.py, seasons 2021-2025, weeks 1-18 ==
+==== replacement = backup ====
+events before the guard: 196 (RB 71, WR/TE 125); after: 106 (RB 41, WR/TE 65)
+RB: average share change +2.2 pp [-4.2, +8.7], n=41
+WR/TE: average share change -1.4 pp [-4.6, +2.0], n=65
+RB median relief ppg 10.1; above median +10.7 pp (n=20), at or below -5.8 pp (n=21), difference +16.5, p=0.011
+RB replacements who did not produce: 13 of 22 were not the man who got the most work in the missed games (6 played none of them)
+RB at the fixed 11.2: produced +11.7 pp (n=19), did not -5.9 pp (n=22), difference +17.5, p=0.007
+
+--- RB: replacement pedigree x relief production (produced = 11.2 half-PPR a game or more) ---
+  produced / rounds 1-3                        n=  8  change   +8.9 pp [-3.9, +23.3]  took  37.5%  startable after  37.5%
+  produced / late pick                         n= 11  change  +13.7 pp [+0.7, +27.2]  took  45.5%  startable after  27.3%
+  did not / rounds 1-3                         n=  7  change   -9.4 pp [-18.8, -1.3]  took   0.0%  startable after   0.0%
+  did not / late pick                          n= 15  change   -4.2 pp [-12.7, +5.5]  took   6.7%  startable after  13.3%
+  produced: late minus early +4.8 pp [-14.2, +23.6], p=0.659, smallest gap this could see at 80% power about 29 pp; took 5/11 vs 3/8 p=1.000; startable after 3/11 vs 3/8 p=1.000
+  did not: late minus early +5.1 pp [-6.5, +18.4], p=0.535, smallest gap this could see at 80% power about 19 pp; took 1/15 vs 0/7 p=1.000; startable after 2/15 vs 0/7 p=1.000
+  production effect, late picks minus rounds 1-3 (difference in differences): -0.3 pp [-25.4, +22.6]
+
+--- WR/TE: replacement pedigree x relief production (produced = 11.2 half-PPR a game or more) ---
+  produced / rounds 1-3                        n=  6  change   +4.7 pp [-8.5, +17.5]  took   0.0%  startable after  50.0%
+  produced / late pick                         n=  4  change   -2.1 pp [-10.0, +5.8]  took   0.0%  startable after   0.0%
+  did not / rounds 1-3                         n= 16  change   -3.4 pp [-8.8, +2.3]  took  12.5%  startable after  18.8%
+  did not / late pick                          n= 39  change   -1.4 pp [-5.5, +3.0]  took   0.0%  startable after   0.0%
+  produced: late minus early -6.8 pp [-22.3, +9.4], p=0.509, smallest gap this could see at 80% power about 25 pp; took 0/4 vs 0/6 p=1.000; startable after 0/4 vs 3/6 p=0.200
+  did not: late minus early +2.0 pp [-5.1, +8.9], p=0.611, smallest gap this could see at 80% power about 10 pp; took 0/39 vs 2/16 p=0.081; startable after 0/39 vs 3/16 p=0.021
+  production effect, late picks minus rounds 1-3 (difference in differences): -8.8 pp [-27.7, +10.2]
+
+--- RB, replacement produced: the returning lead man's pedigree (the sunk-cost cut) ---
+  lead man rounds 1-3                          n= 13  change   +9.6 pp [-1.6, +21.3]  took  30.8%  startable after  23.1%
+  lead man late pick                           n=  6  change  +16.0 pp [-2.4, +32.3]  took  66.7%  startable after  50.0%
+  lead late minus lead early +6.4 pp [-15.9, +26.0], p=0.571
+--- RB, replacement produced: absence length ---
+  1-2 games / rounds 1-3                       n=  7  change   +5.1 pp [-8.0, +18.6]  took  28.6%  startable after  28.6%
+  1-2 games / late pick                        n=  8  change  +22.2 pp [+8.8, +36.7]  took  62.5%  startable after  37.5%
+  3+ games / rounds 1-3                        n=  1  change  +35.7 pp [+nan, +nan]  took 100.0%  startable after 100.0%
+  3+ games / late pick                         n=  3  change   -9.2 pp [-28.2, +3.4]  took   0.0%  startable after   0.0%
+
+==== replacement = work ====
+events before the guard: 196 (RB 71, WR/TE 125); after: 114 (RB 41, WR/TE 73)
+RB: average share change +8.4 pp [+1.9, +15.4], n=41
+WR/TE: average share change +3.2 pp [-0.1, +6.6], n=73
+RB median relief ppg 12.6; above median +11.7 pp (n=20), at or below +5.2 pp (n=21), difference +6.4, p=0.377
+RB replacements who did not produce: 0 of 12 were not the man who got the most work in the missed games (0 played none of them)
+RB at the fixed 11.2: produced +10.9 pp (n=29), did not +2.3 pp (n=12), difference +8.5, p=0.276
+
+--- RB: replacement pedigree x relief production (produced = 11.2 half-PPR a game or more) ---
+  produced / rounds 1-3                        n=  8  change   +8.9 pp [-3.8, +22.3]  took  37.5%  startable after  37.5%
+  produced / late pick                         n= 21  change  +11.7 pp [+1.1, +22.0]  took  28.6%  startable after  19.0%
+  did not / rounds 1-3                         n=  5  change   -1.8 pp [-10.0, +7.9]  took   0.0%  startable after   0.0%
+  did not / late pick                          n=  7  change   +5.3 pp [-10.4, +22.0]  took  14.3%  startable after  28.6%
+  produced: late minus early +2.8 pp [-14.5, +19.7], p=0.790, smallest gap this could see at 80% power about 26 pp; took 6/21 vs 3/8 p=0.675; startable after 4/21 vs 3/8 p=0.357
+  did not: late minus early +7.2 pp [-10.6, +26.1], p=0.547, smallest gap this could see at 80% power about 28 pp; took 1/7 vs 0/5 p=1.000; startable after 2/7 vs 0/5 p=0.470
+  production effect, late picks minus rounds 1-3 (difference in differences): -4.4 pp [-31.7, +22.7]
+
+--- WR/TE: replacement pedigree x relief production (produced = 11.2 half-PPR a game or more) ---
+  produced / rounds 1-3                        n=  9  change  +11.9 pp [+0.2, +21.8]  took  22.2%  startable after  33.3%
+  produced / late pick                         n= 10  change   +1.9 pp [-4.9, +8.9]  took  10.0%  startable after  10.0%
+  did not / rounds 1-3                         n= 18  change   +4.1 pp [-2.2, +13.0]  took  11.1%  startable after  11.1%
+  did not / late pick                          n= 36  change   +1.0 pp [-2.9, +5.3]  took   0.0%  startable after   0.0%
+  produced: late minus early -10.0 pp [-22.6, +4.0], p=0.160, smallest gap this could see at 80% power about 20 pp; took 1/10 vs 2/9 p=0.582; startable after 1/10 vs 3/9 p=0.303
+  did not: late minus early -3.2 pp [-12.7, +4.5], p=0.466, smallest gap this could see at 80% power about 13 pp; took 0/36 vs 2/18 p=0.107; startable after 0/36 vs 2/18 p=0.107
+  production effect, late picks minus rounds 1-3 (difference in differences): -6.9 pp [-23.2, +9.4]
+
+--- RB, replacement produced: the returning lead man's pedigree (the sunk-cost cut) ---
+  lead man rounds 1-3                          n= 20  change   +9.5 pp [+1.3, +18.1]  took  20.0%  startable after  15.0%
+  lead man late pick                           n=  9  change  +14.1 pp [-6.1, +33.4]  took  55.6%  startable after  44.4%
+  lead late minus lead early +4.6 pp [-17.1, +25.0], p=0.626
+--- RB, replacement produced: absence length ---
+  1-2 games / rounds 1-3                       n=  7  change   +5.1 pp [-8.1, +18.6]  took  28.6%  startable after  28.6%
+  1-2 games / late pick                        n= 16  change  +12.6 pp [+1.2, +24.3]  took  31.2%  startable after  18.8%
+  3+ games / rounds 1-3                        n=  1  change  +35.7 pp [+nan, +nan]  took 100.0%  startable after 100.0%
+  3+ games / late pick                         n=  5  change   +8.5 pp [-15.1, +35.0]  took  20.0%  startable after  20.0%
+
+####################################################################################################
+# keep_role.py --years 2015-2020 (seasons doc 244 never saw)
+####################################################################################################
+== keep_role.py, seasons 2015-2020, weeks 1-18 ==
+==== replacement = backup ====
+events before the guard: 194 (RB 76, WR/TE 118); after: 97 (RB 47, WR/TE 50)
+RB: average share change +0.1 pp [-3.8, +3.9], n=47
+WR/TE: average share change +0.5 pp [-4.2, +5.7], n=50
+RB median relief ppg 9.2; above median +5.5 pp (n=23), at or below -5.2 pp (n=24), difference +10.7, p=0.006
+RB replacements who did not produce: 16 of 30 were not the man who got the most work in the missed games (5 played none of them)
+RB at the fixed 11.2: produced +9.0 pp (n=17), did not -5.0 pp (n=30), difference +14.0, p=0.001
+
+--- RB: replacement pedigree x relief production (produced = 11.2 half-PPR a game or more) ---
+  produced / rounds 1-3                        n=  4  change  +17.3 pp [+9.4, +30.2]  took  25.0%  startable after  50.0%
+  produced / late pick                         n= 13  change   +6.4 pp [+2.0, +12.7]  took   7.7%  startable after  23.1%
+  did not / rounds 1-3                         n=  9  change   -7.3 pp [-12.1, -1.8]  took  11.1%  startable after   0.0%
+  did not / late pick                          n= 21  change   -4.0 pp [-9.6, +1.9]  took  14.3%  startable after   4.8%
+  produced: late minus early -10.8 pp [-24.2, +0.4], p=0.064, smallest gap this could see at 80% power about 20 pp; took 1/13 vs 1/4 p=0.426; startable after 3/13 vs 2/4 p=0.538
+  did not: late minus early +3.3 pp [-4.5, +11.0], p=0.527, smallest gap this could see at 80% power about 12 pp; took 3/21 vs 1/9 p=1.000; startable after 1/21 vs 0/9 p=1.000
+  production effect, late picks minus rounds 1-3 (difference in differences): -14.2 pp [-31.1, +0.5]
+
+--- WR/TE: replacement pedigree x relief production (produced = 11.2 half-PPR a game or more) ---
+  produced / rounds 1-3                        n=  2  change  +10.3 pp [+nan, +nan]  took   0.0%  startable after  50.0%
+  produced / late pick                         n=  3  change   +1.0 pp [-22.7, +28.0]  took  33.3%  startable after  33.3%
+  did not / rounds 1-3                         n= 12  change   -3.9 pp [-9.3, +1.8]  took   8.3%  startable after   0.0%
+  did not / late pick                          n= 33  change   +1.5 pp [-4.7, +8.5]  took   6.1%  startable after   6.1%
+  produced: late minus early -9.3 pp [+nan, +nan], p=0.702, smallest gap this could see at 80% power about 41 pp; took 1/3 vs 0/2 p=1.000; startable after 1/3 vs 1/2 p=1.000
+  did not: late minus early +5.4 pp [-3.5, +14.2], p=0.393, smallest gap this could see at 80% power about 13 pp; took 2/33 vs 1/12 p=1.000; startable after 2/33 vs 0/12 p=1.000
+  production effect, late picks minus rounds 1-3 (difference in differences): -14.7 pp [-41.0, +14.1]
+
+--- RB, replacement produced: the returning lead man's pedigree (the sunk-cost cut) ---
+  lead man rounds 1-3                          n= 13  change   +9.3 pp [+3.2, +16.7]  took   7.7%  startable after  30.8%
+  lead man late pick                           n=  4  change   +7.9 pp [+3.5, +12.2]  took  25.0%  startable after  25.0%
+  lead late minus lead early -1.5 pp [-10.4, +6.2], p=0.928
+--- RB, replacement produced: absence length ---
+  1-2 games / rounds 1-3                       n=  3  change  +18.7 pp [+8.2, +36.5]  took  33.3%  startable after  66.7%
+  1-2 games / late pick                        n= 12  change   +6.9 pp [+2.2, +13.5]  took   8.3%  startable after  25.0%
+  3+ games / rounds 1-3                        n=  1  change  +13.0 pp [+nan, +nan]  took   0.0%  startable after   0.0%
+  3+ games / late pick                         n=  1  change   +0.6 pp [+nan, +nan]  took   0.0%  startable after   0.0%
+
+==== replacement = work ====
+events before the guard: 191 (RB 76, WR/TE 115); after: 94 (RB 41, WR/TE 53)
+RB: average share change +5.2 pp [+0.6, +10.3], n=41
+WR/TE: average share change +4.9 pp [+1.0, +9.1], n=53
+RB median relief ppg 11.7; above median +13.1 pp (n=20), at or below -2.3 pp (n=21), difference +15.4, p=0.001
+RB replacements who did not produce: 0 of 20 were not the man who got the most work in the missed games (0 played none of them)
+RB at the fixed 11.2: produced +13.6 pp (n=21), did not -3.6 pp (n=20), difference +17.1, p=0.000
+
+--- RB: replacement pedigree x relief production (produced = 11.2 half-PPR a game or more) ---
+  produced / rounds 1-3                        n=  3  change  +18.7 pp [+8.2, +36.5]  took  33.3%  startable after  66.7%
+  produced / late pick                         n= 18  change  +12.7 pp [+5.3, +20.4]  took  16.7%  startable after  22.2%
+  did not / rounds 1-3                         n=  5  change   -4.7 pp [-13.2, +3.9]  took  20.0%  startable after  20.0%
+  did not / late pick                          n= 15  change   -3.2 pp [-8.1, +1.8]  took   6.7%  startable after   0.0%
+  produced: late minus early -6.0 pp [-22.9, +8.6], p=0.591, smallest gap this could see at 80% power about 27 pp; took 3/18 vs 1/3 p=0.489; startable after 4/18 vs 2/3 p=0.184
+  did not: late minus early +1.5 pp [-9.2, +11.9], p=0.790, smallest gap this could see at 80% power about 16 pp; took 1/15 vs 1/5 p=0.447; startable after 0/15 vs 1/5 p=0.250
+  production effect, late picks minus rounds 1-3 (difference in differences): -7.5 pp [-30.4, +11.4]
+
+--- WR/TE: replacement pedigree x relief production (produced = 11.2 half-PPR a game or more) ---
+  produced / rounds 1-3                        n=  6  change   +1.8 pp [-5.6, +9.0]  took  16.7%  startable after  16.7%
+  produced / late pick                         n=  6  change   +1.3 pp [-11.0, +14.3]  took  33.3%  startable after  33.3%
+  did not / rounds 1-3                         n=  6  change   +5.6 pp [-4.2, +17.3]  took  16.7%  startable after  33.3%
+  did not / late pick                          n= 35  change   +6.0 pp [+0.9, +11.2]  took   5.7%  startable after   5.7%
+  produced: late minus early -0.5 pp [-15.1, +15.1], p=0.954, smallest gap this could see at 80% power about 24 pp; took 2/6 vs 1/6 p=1.000; startable after 2/6 vs 1/6 p=1.000
+  did not: late minus early +0.4 pp [-12.2, +11.6], p=0.958, smallest gap this could see at 80% power about 19 pp; took 2/35 vs 1/6 p=0.386; startable after 2/35 vs 2/6 p=0.095
+  production effect, late picks minus rounds 1-3 (difference in differences): -0.8 pp [-21.1, +22.6]
+
+--- RB, replacement produced: the returning lead man's pedigree (the sunk-cost cut) ---
+  lead man rounds 1-3                          n= 15  change  +14.1 pp [+7.5, +21.4]  took  13.3%  startable after  26.7%
+  lead man late pick                           n=  6  change  +12.2 pp [-2.9, +29.5]  took  33.3%  startable after  33.3%
+  lead late minus lead early -1.9 pp [-18.8, +16.5], p=0.818
+--- RB, replacement produced: absence length ---
+  1-2 games / rounds 1-3                       n=  3  change  +18.7 pp [+8.2, +36.5]  took  33.3%  startable after  66.7%
+  1-2 games / late pick                        n= 13  change   +8.3 pp [+1.2, +16.6]  took  15.4%  startable after  23.1%
+  3+ games / rounds 1-3                        n=0
+  3+ games / late pick                         n=  5  change  +24.2 pp [+10.1, +39.3]  took  20.0%  startable after  20.0%
+
+####################################################################################################
+# keep_role.py --years 2015-2025 --names (R2c, primary)
+####################################################################################################
+== keep_role.py, seasons 2015-2025, weeks 1-18 ==
+==== replacement = backup ====
+events before the guard: 390 (RB 147, WR/TE 243); after: 203 (RB 88, WR/TE 115)
+RB: average share change +1.1 pp [-2.3, +4.8], n=88
+WR/TE: average share change -0.6 pp [-3.3, +2.3], n=115
+RB median relief ppg 9.2; above median +7.6 pp (n=44), at or below -5.4 pp (n=44), difference +13.0, p=0.000
+RB replacements who did not produce: 29 of 52 were not the man who got the most work in the missed games (11 played none of them)
+RB at the fixed 11.2: produced +10.4 pp (n=36), did not -5.4 pp (n=52), difference +15.8, p=0.000
+
+--- RB: replacement pedigree x relief production (produced = 11.2 half-PPR a game or more) ---
+  produced / rounds 1-3                        n= 12  change  +11.7 pp [+1.6, +21.3]  took  33.3%  startable after  41.7%
+  produced / late pick                         n= 24  change   +9.8 pp [+3.1, +17.3]  took  25.0%  startable after  25.0%
+  did not / rounds 1-3                         n= 16  change   -8.2 pp [-13.2, -3.7]  took   6.2%  startable after   0.0%
+  did not / late pick                          n= 36  change   -4.1 pp [-9.1, +1.3]  took  11.1%  startable after   8.3%
+  produced: late minus early -1.9 pp [-14.6, +10.2], p=0.764, smallest gap this could see at 80% power about 18 pp; took 6/24 vs 4/12 p=0.700; startable after 6/24 vs 5/12 p=0.446
+  did not: late minus early +4.1 pp [-2.7, +11.5], p=0.347, smallest gap this could see at 80% power about 10 pp; took 4/36 vs 1/16 p=1.000; startable after 3/36 vs 0/16 p=0.544
+  production effect, late picks minus rounds 1-3 (difference in differences): -6.1 pp [-20.9, +8.6]
+
+--- WR/TE: replacement pedigree x relief production (produced = 11.2 half-PPR a game or more) ---
+  produced / rounds 1-3                        n=  8  change   +6.1 pp [-4.3, +15.8]  took   0.0%  startable after  50.0%
+  produced / late pick                         n=  7  change   -0.8 pp [-11.3, +11.0]  took  14.3%  startable after  14.3%
+  did not / rounds 1-3                         n= 28  change   -3.6 pp [-7.4, +0.4]  took  10.7%  startable after  10.7%
+  did not / late pick                          n= 72  change   -0.1 pp [-3.9, +3.9]  took   2.8%  startable after   2.8%
+  produced: late minus early -6.9 pp [-21.4, +8.6], p=0.413, smallest gap this could see at 80% power about 23 pp; took 1/7 vs 0/8 p=0.467; startable after 1/7 vs 4/8 p=0.282
+  did not: late minus early +3.5 pp [-1.9, +9.1], p=0.313, smallest gap this could see at 80% power about 8 pp; took 2/72 vs 3/28 p=0.132; startable after 2/72 vs 3/28 p=0.132
+  production effect, late picks minus rounds 1-3 (difference in differences): -10.4 pp [-26.8, +8.2]
+
+--- RB, replacement produced: the returning lead man's pedigree (the sunk-cost cut) ---
+  lead man rounds 1-3                          n= 26  change   +9.5 pp [+3.1, +16.7]  took  19.2%  startable after  26.9%
+  lead man late pick                           n= 10  change  +12.8 pp [+1.5, +23.6]  took  50.0%  startable after  40.0%
+  lead late minus lead early +3.3 pp [-9.6, +15.7], p=0.631
+--- RB, replacement produced: absence length ---
+  1-2 games / rounds 1-3                       n= 10  change   +9.2 pp [-1.5, +20.2]  took  30.0%  startable after  40.0%
+  1-2 games / late pick                        n= 20  change  +13.1 pp [+6.5, +20.8]  took  30.0%  startable after  30.0%
+  3+ games / rounds 1-3                        n=  2  change  +24.3 pp [+nan, +nan]  took  50.0%  startable after  50.0%
+  3+ games / late pick                         n=  4  change   -6.8 pp [-21.0, +2.0]  took   0.0%  startable after   0.0%
+
+--- RB late picks who produced (backup), by share change ---
+ season team                rep  rep_tier                  lead lead_tier  missed  relief_ppg  before  after  change  took  after_g  after_ppg
+   2023  MIN        Ty Chandler       4-7    Alexander Mattison       2-3       1      23.200   0.193  0.706   0.513  True        3      8.500
+   2024  NYG   Tyrone Tracy Jr.       4-7      Devin Singletary       2-3       2      16.600   0.200  0.697   0.497  True        4     12.250
+   2019  OAK DeAndre Washington       4-7           Josh Jacobs         1       1      18.600   0.185  0.575   0.391 False        3     12.667
+   2025  CAR        Rico Dowdle undrafted         Chuba Hubbard       4-7       2      31.400   0.301  0.633   0.332  True        4     14.100
+   2023  CAR      Chuba Hubbard       4-7         Miles Sanders       2-3       1      15.500   0.366  0.614   0.248  True        4      6.875
+   2025  CHI      Kyle Monangai       4-7         D'Andre Swift       2-3       1      21.300   0.288  0.434   0.146  True        4     12.200
+   2016  BUF     Mike Gillislee       4-7          LeSean McCoy       2-3       1      16.900   0.145  0.262   0.117 False        3     11.567
+   2020  DAL       Tony Pollard       4-7       Ezekiel Elliott         1       1      28.200   0.263  0.339   0.075 False        2      3.700
+   2022  CIN      Samaje Perine       4-7             Joe Mixon       2-3       2      17.900   0.222  0.296   0.074 False        4      4.550
+   2017  DET       Theo Riddick       4-7        Ameer Abdullah       2-3       2      19.500   0.301  0.370   0.069  True        3      4.733
+   2018  HOU        Alfred Blue       4-7          Lamar Miller       4-7       1      15.900   0.324  0.378   0.054 False        4      4.050
+   2020  WAS      J.D. McKissic undrafted        Antonio Gibson       2-3       2      15.400   0.328  0.381   0.053 False        2     12.350
+   2020  PHI       Boston Scott       4-7         Miles Sanders       2-3       2      12.800   0.217  0.264   0.047 False        4      7.125
+   2019   NO    Latavius Murray       4-7          Alvin Kamara       2-3       2      30.850   0.251  0.290   0.038 False        4      4.925
+   2020  IND       Nyheim Hines       4-7       Jonathan Taylor       2-3       1      13.500   0.278  0.315   0.037 False        4      8.750
+   2021  NYG    Devontae Booker       4-7        Saquon Barkley         1       4      12.800   0.270  0.304   0.034 False        4      5.875
+   2020   GB    Jamaal Williams       4-7           Aaron Jones       4-7       2      17.300   0.272  0.288   0.016 False        3      9.467
+   2018  MIN    Latavius Murray       4-7           Dalvin Cook       2-3       4      17.050   0.341  0.348   0.006 False        4      4.350
+   2025   GB     Emanuel Wilson undrafted           Josh Jacobs         1       1      25.500   0.234  0.230  -0.004 False        4      2.725
+   2017  OAK DeAndre Washington       4-7        Marshawn Lynch         1       1      16.800   0.233  0.210  -0.023 False        4      4.625
+   2024  BUF          Ray Davis       4-7            James Cook       2-3       1      16.700   0.238  0.212  -0.026 False        4      7.675
+   2021   KC    Darrel Williams undrafted Clyde Edwards-Helaire         1       5      15.400   0.313  0.284  -0.029 False        4      6.300
+   2016   SF      Shaun Draughn undrafted           Carlos Hyde       2-3       2      13.800   0.194  0.151  -0.043 False        3      7.233
+   2022  ARI       Eno Benjamin       4-7          James Conner       2-3       3      11.933   0.333  0.051  -0.282 False        2      1.600
+
+--- RB rounds 1-3 who produced (backup), by share change ---
+ season team                   rep rep_tier               lead lead_tier  missed  relief_ppg  before  after  change  took  after_g  after_ppg
+   2024   LV    Alexander Mattison      2-3        Zamir White       4-7       2       12.05   0.297  0.667   0.370  True        4      8.175
+   2017  CIN       Giovani Bernard      2-3          Joe Mixon       2-3       2       13.90   0.255  0.620   0.365 False        2     18.150
+   2023  HOU      Devin Singletary      2-3      Dameon Pierce       4-7       3       15.00   0.307  0.663   0.357  True        4     11.550
+   2021   GB             AJ Dillon      2-3        Aaron Jones       4-7       1       12.70   0.385  0.536   0.151  True        4     10.425
+   2022   TB         Rachaad White      2-3  Leonard Fournette         1       1       15.40   0.308  0.447   0.139 False        4     10.050
+   2020  SEA           Carlos Hyde      2-3       Chris Carson       4-7       4       16.50   0.241  0.371   0.130 False        4      6.600
+   2017  NYJ            Matt Forte      2-3       Bilal Powell       4-7       1       12.10   0.220  0.333   0.113  True        3     14.167
+   2020   TB     Leonard Fournette        1    Ronald Jones II       2-3       2       17.05   0.286  0.368   0.082 False        1      3.700
+   2023  SEA       Zach Charbonnet      2-3 Kenneth Walker III       2-3       2       12.10   0.292  0.280  -0.013 False        4      3.400
+   2023   KC Clyde Edwards-Helaire        1      Isiah Pacheco       4-7       2       12.95   0.161  0.145  -0.016 False        2      3.900
+   2024  JAX           Tank Bigsby      2-3     Travis Etienne         1       2       16.70   0.294  0.250  -0.044 False        3      2.200
+   2024  TEN          Tyjae Spears      2-3       Tony Pollard       4-7       1       11.80   0.232  0.000  -0.232 False        0        NaN
+
+==== replacement = work ====
+events before the guard: 387 (RB 147, WR/TE 240); after: 208 (RB 82, WR/TE 126)
+RB: average share change +6.8 pp [+2.7, +10.9], n=82
+WR/TE: average share change +4.0 pp [+1.5, +6.6], n=126
+RB median relief ppg 12.2; above median +13.1 pp (n=41), at or below +0.5 pp (n=41), difference +12.7, p=0.002
+RB replacements who did not produce: 0 of 32 were not the man who got the most work in the missed games (0 played none of them)
+RB at the fixed 11.2: produced +12.0 pp (n=50), did not -1.4 pp (n=32), difference +13.4, p=0.002
+
+--- RB: replacement pedigree x relief production (produced = 11.2 half-PPR a game or more) ---
+  produced / rounds 1-3                        n= 11  change  +11.6 pp [+0.8, +22.2]  took  36.4%  startable after  45.5%
+  produced / late pick                         n= 39  change  +12.1 pp [+5.4, +18.7]  took  23.1%  startable after  20.5%
+  did not / rounds 1-3                         n= 10  change   -3.3 pp [-9.5, +3.2]  took  10.0%  startable after  10.0%
+  did not / late pick                          n= 22  change   -0.5 pp [-6.7, +6.5]  took   9.1%  startable after   9.1%
+  produced: late minus early +0.6 pp [-12.1, +13.3], p=0.941, smallest gap this could see at 80% power about 19 pp; took 9/39 vs 4/11 p=0.445; startable after 8/39 vs 5/11 p=0.126
+  did not: late minus early +2.8 pp [-6.3, +11.7], p=0.628, smallest gap this could see at 80% power about 13 pp; took 2/22 vs 1/10 p=1.000; startable after 2/22 vs 1/10 p=1.000
+  production effect, late picks minus rounds 1-3 (difference in differences): -2.2 pp [-19.4, +13.6]
+
+--- WR/TE: replacement pedigree x relief production (produced = 11.2 half-PPR a game or more) ---
+  produced / rounds 1-3                        n= 15  change   +7.9 pp [+0.0, +15.5]  took  20.0%  startable after  26.7%
+  produced / late pick                         n= 16  change   +1.7 pp [-4.9, +8.4]  took  18.8%  startable after  18.8%
+  did not / rounds 1-3                         n= 24  change   +4.5 pp [-1.0, +11.4]  took  12.5%  startable after  16.7%
+  did not / late pick                          n= 71  change   +3.5 pp [+0.1, +6.9]  took   2.8%  startable after   2.8%
+  produced: late minus early -6.2 pp [-16.4, +4.1], p=0.245, smallest gap this could see at 80% power about 15 pp; took 3/16 vs 3/15 p=1.000; startable after 3/16 vs 4/15 p=0.685
+  did not: late minus early -1.1 pp [-8.9, +5.7], p=0.764, smallest gap this could see at 80% power about 10 pp; took 2/71 vs 3/24 p=0.101; startable after 2/71 vs 4/24 p=0.034
+  production effect, late picks minus rounds 1-3 (difference in differences): -5.1 pp [-17.5, +7.8]
+
+--- RB, replacement produced: the returning lead man's pedigree (the sunk-cost cut) ---
+  lead man rounds 1-3                          n= 35  change  +11.4 pp [+5.8, +17.3]  took  17.1%  startable after  20.0%
+  lead man late pick                           n= 15  change  +13.3 pp [-0.5, +26.8]  took  46.7%  startable after  40.0%
+  lead late minus lead early +1.9 pp [-12.9, +16.1], p=0.771
+--- RB, replacement produced: absence length ---
+  1-2 games / rounds 1-3                       n= 10  change   +9.2 pp [-1.5, +20.1]  took  30.0%  startable after  40.0%
+  1-2 games / late pick                        n= 29  change  +10.7 pp [+3.6, +17.8]  took  24.1%  startable after  20.7%
+  3+ games / rounds 1-3                        n=  1  change  +35.7 pp [+nan, +nan]  took 100.0%  startable after 100.0%
+  3+ games / late pick                         n= 10  change  +16.4 pp [+1.4, +31.4]  took  20.0%  startable after  20.0%
+
+--- RB late picks who produced (work), by share change ---
+ season team                rep  rep_tier                  lead lead_tier  missed  relief_ppg  before  after  change  took  after_g  after_ppg
+   2021  BAL    Devonta Freeman       4-7       Latavius Murray       4-7       3      11.333   0.156  0.738   0.582  True        4     12.850
+   2023  MIN        Ty Chandler       4-7    Alexander Mattison       2-3       1      23.200   0.193  0.706   0.513  True        3      8.500
+   2024  NYG   Tyrone Tracy Jr.       4-7      Devin Singletary       2-3       2      16.600   0.200  0.697   0.497  True        4     12.250
+   2017   NE         Dion Lewis       4-7        Mike Gillislee       4-7       6      13.167   0.245  0.738   0.493 False        2     29.050
+   2021  CLE   D'Ernest Johnson undrafted            Nick Chubb       2-3       2      12.600   0.011  0.427   0.416 False        4      8.200
+   2019  OAK DeAndre Washington       4-7           Josh Jacobs         1       1      18.600   0.185  0.575   0.391 False        3     12.667
+   2020  ATL          Ito Smith       4-7           Todd Gurley         1       1      15.500   0.078  0.447   0.369  True        4      4.700
+   2025  CAR        Rico Dowdle undrafted         Chuba Hubbard       4-7       2      31.400   0.301  0.633   0.332  True        4     14.100
+   2015  CHI    Jeremy Langford       4-7            Matt Forte       2-3       3      23.033   0.145  0.449   0.304 False        4      8.425
+   2023  CAR      Chuba Hubbard       4-7         Miles Sanders       2-3       1      15.500   0.366  0.614   0.248  True        4      6.875
+   2017  NYG     Orleans Darkwa undrafted          Paul Perkins       4-7       6      11.700   0.162  0.385   0.224  True        4      6.875
+   2016   TB   Jacquizz Rodgers       4-7          Charles Sims       2-3       8      13.000   0.156  0.339   0.183 False        3      7.733
+   2025  CHI      Kyle Monangai       4-7         D'Andre Swift       2-3       1      21.300   0.288  0.434   0.146  True        4     12.200
+   2021  LAC     Justin Jackson       4-7         Austin Ekeler undrafted       1      30.200   0.143  0.284   0.141 False        2      4.800
+   2021  CHI     Khalil Herbert       4-7      David Montgomery       2-3       4      12.325   0.028  0.149   0.121 False        4      1.350
+   2016  BUF     Mike Gillislee       4-7          LeSean McCoy       2-3       1      16.900   0.145  0.262   0.117 False        3     11.567
+   2024   TB        Sean Tucker undrafted         Rachaad White       2-3       1      32.700   0.024  0.118   0.094 False        3      2.833
+   2021  WAS    Jaret Patterson undrafted        Antonio Gibson       2-3       1      18.300   0.119  0.205   0.086 False        1      4.500
+   2020  DAL       Tony Pollard       4-7       Ezekiel Elliott         1       1      28.200   0.263  0.339   0.075 False        2      3.700
+   2022  CIN      Samaje Perine       4-7             Joe Mixon       2-3       2      17.900   0.222  0.296   0.074 False        4      4.550
+   2017  DET       Theo Riddick       4-7        Ameer Abdullah       2-3       2      19.500   0.301  0.370   0.069  True        3      4.733
+   2023  DEN  Jaleel McLaughlin undrafted      Javonte Williams       2-3       1      16.400   0.168  0.233   0.064 False        4      4.350
+   2018  HOU        Alfred Blue       4-7          Lamar Miller       4-7       1      15.900   0.324  0.378   0.054 False        4      4.050
+   2020  WAS      J.D. McKissic undrafted        Antonio Gibson       2-3       2      15.400   0.328  0.381   0.053 False        2     12.350
+   2020  PHI       Boston Scott       4-7         Miles Sanders       2-3       2      12.800   0.217  0.264   0.047 False        4      7.125
+   2019   NO    Latavius Murray       4-7          Alvin Kamara       2-3       2      30.850   0.251  0.290   0.038 False        4      4.925
+   2020  IND       Nyheim Hines       4-7       Jonathan Taylor       2-3       1      13.500   0.278  0.315   0.037 False        4      8.750
+   2021  NYG    Devontae Booker       4-7        Saquon Barkley         1       4      12.800   0.270  0.304   0.034 False        4      5.875
+   2020   GB    Jamaal Williams       4-7           Aaron Jones       4-7       2      17.300   0.272  0.288   0.016 False        3      9.467
+   2018  MIN    Latavius Murray       4-7           Dalvin Cook       2-3       4      17.050   0.341  0.348   0.006 False        4      4.350
+   2025   GB     Emanuel Wilson undrafted           Josh Jacobs         1       1      25.500   0.234  0.230  -0.004 False        4      2.725
+   2017  OAK DeAndre Washington       4-7        Marshawn Lynch         1       1      16.800   0.233  0.210  -0.023 False        4      4.625
+   2024  BUF          Ray Davis       4-7            James Cook       2-3       1      16.700   0.238  0.212  -0.026 False        4      7.675
+   2021   KC    Darrel Williams undrafted Clyde Edwards-Helaire         1       5      15.400   0.313  0.284  -0.029 False        4      6.300
+   2024  HOU    Dare Ogunbowale undrafted             Joe Mixon       2-3       1      11.700   0.121  0.079  -0.042 False        4      0.425
+   2023  WAS    Chris Rodriguez       4-7    Brian Robinson Jr.       2-3       2      11.250   0.099  0.000  -0.099 False        0        NaN
+   2018  SEA         Mike Davis       4-7          Chris Carson       4-7       1      16.000   0.327  0.158  -0.169 False        4      2.900
+   2022  ARI       Eno Benjamin       4-7          James Conner       2-3       3      11.933   0.333  0.051  -0.282 False        2      1.600
+   2025  MIN        Aaron Jones       4-7          Jordan Mason undrafted       1      13.800   0.417  0.000  -0.417 False        0        NaN
+
+--- RB rounds 1-3 who produced (work), by share change ---
+ season team                   rep rep_tier               lead lead_tier  missed  relief_ppg  before  after  change  took  after_g  after_ppg
+   2024   LV    Alexander Mattison      2-3        Zamir White       4-7       2       12.05   0.297  0.667   0.370  True        4      8.175
+   2017  CIN       Giovani Bernard      2-3          Joe Mixon       2-3       2       13.90   0.255  0.620   0.365 False        2     18.150
+   2023  HOU      Devin Singletary      2-3      Dameon Pierce       4-7       3       15.00   0.307  0.663   0.357  True        4     11.550
+   2021   GB             AJ Dillon      2-3        Aaron Jones       4-7       1       12.70   0.385  0.536   0.151  True        4     10.425
+   2022   TB         Rachaad White      2-3  Leonard Fournette         1       1       15.40   0.308  0.447   0.139 False        4     10.050
+   2017  NYJ            Matt Forte      2-3       Bilal Powell       4-7       1       12.10   0.220  0.333   0.113  True        3     14.167
+   2020   TB     Leonard Fournette        1    Ronald Jones II       2-3       2       17.05   0.286  0.368   0.082 False        1      3.700
+   2023  SEA       Zach Charbonnet      2-3 Kenneth Walker III       2-3       2       12.10   0.292  0.280  -0.013 False        4      3.400
+   2023   KC Clyde Edwards-Helaire        1      Isiah Pacheco       4-7       2       12.95   0.161  0.145  -0.016 False        2      3.900
+   2024  JAX           Tank Bigsby      2-3     Travis Etienne         1       2       16.70   0.294  0.250  -0.044 False        3      2.200
+   2024  TEN          Tyjae Spears      2-3       Tony Pollard       4-7       1       11.80   0.232  0.000  -0.232 False        0        NaN
+
+####################################################################################################
+# keep_role.py --years 2015-2025 --maxwk 14 (window sensitivity)
+####################################################################################################
+== keep_role.py, seasons 2015-2025, weeks 1-14 ==
+==== replacement = backup ====
+events before the guard: 307 (RB 114, WR/TE 193); after: 153 (RB 65, WR/TE 88)
+RB: average share change +1.6 pp [-2.6, +6.1], n=65
+WR/TE: average share change -0.6 pp [-3.5, +2.5], n=88
+RB median relief ppg 9.3; above median +8.8 pp (n=32), at or below -5.4 pp (n=33), difference +14.3, p=0.001
+RB replacements who did not produce: 21 of 38 were not the man who got the most work in the missed games (7 played none of them)
+RB at the fixed 11.2: produced +10.0 pp (n=27), did not -4.4 pp (n=38), difference +14.3, p=0.001
+
+--- RB: replacement pedigree x relief production (produced = 11.2 half-PPR a game or more) ---
+  produced / rounds 1-3                        n=  8  change  +19.2 pp [+10.4, +26.8]  took  50.0%  startable after  37.5%
+  produced / late pick                         n= 19  change   +6.1 pp [-0.9, +13.5]  took  21.1%  startable after  26.3%
+  did not / rounds 1-3                         n= 13  change   -4.9 pp [-13.5, +5.1]  took   0.0%  startable after   0.0%
+  did not / late pick                          n= 25  change   -4.1 pp [-10.2, +2.0]  took   8.0%  startable after   8.0%
+  produced: late minus early -13.1 pp [-23.4, -1.9], p=0.056, smallest gap this could see at 80% power about 16 pp; took 4/19 vs 4/8 p=0.183; startable after 5/19 vs 3/8 p=0.658
+  did not: late minus early +0.8 pp [-11.1, +11.6], p=0.897, smallest gap this could see at 80% power about 17 pp; took 2/25 vs 0/13 p=0.538; startable after 2/25 vs 0/13 p=0.538
+  production effect, late picks minus rounds 1-3 (difference in differences): -13.9 pp [-29.5, +2.4]
+
+--- WR/TE: replacement pedigree x relief production (produced = 11.2 half-PPR a game or more) ---
+  produced / rounds 1-3                        n=  6  change  +10.1 pp [+0.9, +19.7]  took   0.0%  startable after  66.7%
+  produced / late pick                         n=  7  change   +0.0 pp [-12.6, +13.5]  took  14.3%  startable after   0.0%
+  did not / rounds 1-3                         n= 20  change   -1.2 pp [-6.3, +4.3]  took  15.0%  startable after  10.0%
+  did not / late pick                          n= 55  change   -1.6 pp [-5.2, +2.5]  took   3.6%  startable after   3.6%
+  produced: late minus early -10.1 pp [-26.0, +6.3], p=0.298, smallest gap this could see at 80% power about 25 pp; took 1/7 vs 0/6 p=1.000; startable after 0/7 vs 4/6 p=0.021
+  did not: late minus early -0.4 pp [-6.9, +6.2], p=0.917, smallest gap this could see at 80% power about 10 pp; took 2/55 vs 3/20 p=0.114; startable after 2/55 vs 2/20 p=0.288
+  production effect, late picks minus rounds 1-3 (difference in differences): -9.7 pp [-27.6, +9.7]
+
+--- RB, replacement produced: the returning lead man's pedigree (the sunk-cost cut) ---
+  lead man rounds 1-3                          n= 19  change   +5.8 pp [-1.2, +13.2]  took  15.8%  startable after  26.3%
+  lead man late pick                           n=  8  change  +19.9 pp [+11.7, +28.1]  took  62.5%  startable after  37.5%
+  lead late minus lead early +14.1 pp [+3.0, +24.8], p=0.041
+--- RB, replacement produced: absence length ---
+  1-2 games / rounds 1-3                       n=  6  change  +18.7 pp [+7.1, +29.1]  took  50.0%  startable after  50.0%
+  1-2 games / late pick                        n= 15  change   +9.6 pp [+2.6, +17.5]  took  26.7%  startable after  33.3%
+  3+ games / rounds 1-3                        n=  2  change  +20.7 pp [+nan, +nan]  took  50.0%  startable after   0.0%
+  3+ games / late pick                         n=  4  change   -7.0 pp [-21.0, +2.0]  took   0.0%  startable after   0.0%
+
+==== replacement = work ====
+events before the guard: 305 (RB 114, WR/TE 191); after: 159 (RB 60, WR/TE 99)
+RB: average share change +7.2 pp [+2.8, +11.7], n=60
+WR/TE: average share change +2.4 pp [-0.4, +5.3], n=99
+RB median relief ppg 12.1; above median +11.5 pp (n=29), at or below +3.1 pp (n=31), difference +8.4, p=0.061
+RB replacements who did not produce: 0 of 24 were not the man who got the most work in the missed games (0 played none of them)
+RB at the fixed 11.2: produced +12.4 pp (n=36), did not -0.7 pp (n=24), difference +13.1, p=0.003
+
+--- RB: replacement pedigree x relief production (produced = 11.2 half-PPR a game or more) ---
+  produced / rounds 1-3                        n=  7  change  +19.4 pp [+9.4, +28.1]  took  57.1%  startable after  42.9%
+  produced / late pick                         n= 29  change  +10.7 pp [+3.8, +18.0]  took  24.1%  startable after  20.7%
+  did not / rounds 1-3                         n=  9  change   -1.9 pp [-8.3, +4.5]  took  11.1%  startable after  11.1%
+  did not / late pick                          n= 15  change   +0.1 pp [-5.7, +6.2]  took   6.7%  startable after   6.7%
+  produced: late minus early -8.7 pp [-19.8, +3.2], p=0.293, smallest gap this could see at 80% power about 18 pp; took 7/29 vs 4/7 p=0.167; startable after 6/29 vs 3/7 p=0.333
+  did not: late minus early +2.0 pp [-6.7, +11.0], p=0.688, smallest gap this could see at 80% power about 13 pp; took 1/15 vs 1/9 p=1.000; startable after 1/15 vs 1/9 p=1.000
+  production effect, late picks minus rounds 1-3 (difference in differences): -10.7 pp [-25.8, +5.5]
+
+--- WR/TE: replacement pedigree x relief production (produced = 11.2 half-PPR a game or more) ---
+  produced / rounds 1-3                        n= 10  change   +7.6 pp [-0.9, +15.4]  took  20.0%  startable after  30.0%
+  produced / late pick                         n= 13  change   +0.9 pp [-7.8, +10.8]  took   7.7%  startable after   0.0%
+  did not / rounds 1-3                         n= 18  change   +3.9 pp [-2.4, +10.4]  took  16.7%  startable after  22.2%
+  did not / late pick                          n= 58  change   +1.4 pp [-2.1, +5.0]  took   3.4%  startable after   3.4%
+  produced: late minus early -6.8 pp [-18.8, +5.6], p=0.330, smallest gap this could see at 80% power about 18 pp; took 1/13 vs 2/10 p=0.560; startable after 0/13 vs 3/10 p=0.068
+  did not: late minus early -2.5 pp [-9.7, +4.9], p=0.506, smallest gap this could see at 80% power about 11 pp; took 2/58 vs 3/18 p=0.083; startable after 2/58 vs 4/18 p=0.025
+  production effect, late picks minus rounds 1-3 (difference in differences): -4.3 pp [-18.9, +11.6]
+
+--- RB, replacement produced: the returning lead man's pedigree (the sunk-cost cut) ---
+  lead man rounds 1-3                          n= 26  change   +9.2 pp [+2.9, +16.1]  took  15.4%  startable after  19.2%
+  lead man late pick                           n= 10  change  +20.8 pp [+8.3, +33.3]  took  70.0%  startable after  40.0%
+  lead late minus lead early +11.6 pp [-2.4, +25.4], p=0.108
+--- RB, replacement produced: absence length ---
+  1-2 games / rounds 1-3                       n=  6  change  +18.7 pp [+7.8, +29.4]  took  50.0%  startable after  50.0%
+  1-2 games / late pick                        n= 20  change  +11.2 pp [+3.6, +19.1]  took  25.0%  startable after  25.0%
+  3+ games / rounds 1-3                        n=  1  change  +23.6 pp [+nan, +nan]  took 100.0%  startable after   0.0%
+  3+ games / late pick                         n=  9  change   +9.7 pp [-4.9, +26.2]  took  22.2%  startable after  11.1%
+
+####################################################################################################
+# keep_role_checks.py
+####################################################################################################
+==== replacement = backup, RB, 2015-2025, n=88 ====
+(a) replacements who missed all the after games: 15; without them n=73
+    produced: late +9.8 (n=24) early +14.9 (n=11), late minus early -5.1 [-16.4, +5.6] p=0.425
+    production effect: produced +11.4 (n=35) did not -1.7 (n=38) p=0.001
+(b) all guarded RB events: 3+ games missed -3.6 (n=21) against 1-2 +2.6 (n=67): -6.2 [-13.5, +1.5] p=0.160
+    2021-2025: 3+ -4.9 (n=12) against 1-2 +5.2 (n=29) p=0.162
+    2015-2020: 3+ -1.9 (n=9) against 1-2 +0.5 (n=38) p=0.631
+(c) produced, rounds 1-3: n=12 share before 27% after 39% | took 4/12 | startable after 5/12 | after ppg median 8.2
+(c) produced, late pick : n=24 share before 26% after 36% | took 6/24 | startable after 6/24 | after ppg median 7.0
+    all producers startable after 11/36 = 31%; late against early Fisher p=0.446
+(d) produced, TOOK by the lead man's pedigree: lead late pick 5/10, lead rounds 1-3 5/26, Fisher p=0.100
+
+==== replacement = work, RB, 2015-2025, n=82 ====
+(a) replacements who missed all the after games: 4; without them n=78
+    produced: late +14.2 (n=37) early +15.0 (n=10), late minus early -0.9 [-11.9, +10.0] p=0.902
+    production effect: produced +14.4 (n=47) did not -0.7 (n=31) p=0.000
+(b) all guarded RB events: 3+ games missed +8.9 (n=19) against 1-2 +6.2 (n=63): +2.8 [-8.4, +14.1] p=0.601
+    2021-2025: 3+ +5.0 (n=12) against 1-2 +9.8 (n=29) p=0.540
+    2015-2020: 3+ +15.7 (n=7) against 1-2 +3.0 (n=34) p=0.061
+(c) produced, rounds 1-3: n=11 share before 28% after 39% | took 4/11 | startable after 5/11 | after ppg median 9.1
+(c) produced, late pick : n=39 share before 22% after 34% | took 9/39 | startable after 8/39 | after ppg median 6.3
+    all producers startable after 13/50 = 26%; late against early Fisher p=0.126
+(d) produced, TOOK by the lead man's pedigree: lead late pick 7/15, lead rounds 1-3 6/35, Fisher p=0.040
+
+####################################################################################################
+# keep_role_window.py
+####################################################################################################
+==== replacement = work: RB backs who produced, 2015-2025 ====
+  the REPLACEMENT's pedigree, all weeks                 late  +12.1 (n=39)  early  +11.6 (n=11)  late minus early   +0.6 [-12.4, +13.2] p=0.935 | took 9/39 vs 4/11 p=0.445 | startable after 8/39 vs 5/11 p=0.126 | median after ppg 6.3 vs 9.1
+  the REPLACEMENT's pedigree, return by week 14         late  +11.8 (n=29)  early  +15.3 (n= 7)  late minus early   -3.5 [-16.9, +8.8] p=0.659 | took 7/29 vs 4/7 p=0.167 | startable after 5/29 vs 4/7 p=0.050 | median after ppg 6.3 vs 10.1
+  the REPLACEMENT's pedigree, return week 15+           late  +13.0 (n=10)  early   +5.0 (n= 4)  late minus early   +8.1 [-18.8, +34.0] p=0.613 | took 2/10 vs 0/4 p=1.000 | startable after 3/10 vs 1/4 p=1.000 | median after ppg 6.7 vs 3.9
+  the REPLACEMENT's pedigree, window capped at week 14  late  +10.7 (n=29)  early  +19.4 (n= 7)  late minus early   -8.7 [-20.3, +3.4] p=0.285 | took 7/29 vs 4/7 p=0.167 | startable after 6/29 vs 3/7 p=0.333 | median after ppg 6.5 vs 9.1
+  the RETURNING STARTER's pedigree, all weeks                 late  +13.3 (n=15)  early  +11.4 (n=35)  late minus early   +1.9 [-13.0, +15.6] p=0.770 | took 7/15 vs 6/35 p=0.040 | startable after 6/15 vs 7/35 p=0.170 | median after ppg 9.5 vs 5.4
+  the RETURNING STARTER's pedigree, return by week 14         late  +20.3 (n=10)  early   +9.5 (n=26)  late minus early  +10.8 [-3.2, +25.2] p=0.112 | took 7/10 vs 4/26 p=0.003 | startable after 5/10 vs 4/26 p=0.079 | median after ppg 9.9 vs 5.4
+  the RETURNING STARTER's pedigree, window capped at week 14  late  +20.8 (n=10)  early   +9.2 (n=26)  late minus early  +11.6 [-2.3, +26.1] p=0.106 | took 7/10 vs 4/26 p=0.003 | startable after 4/10 vs 5/26 p=0.226 | median after ppg 9.3 vs 5.6
+
+==== replacement = backup: RB backs who produced, 2015-2025 ====
+  the REPLACEMENT's pedigree, all weeks                 late   +9.8 (n=24)  early  +11.7 (n=12)  late minus early   -1.9 [-13.8, +10.3] p=0.766 | took 6/24 vs 4/12 p=0.700 | startable after 6/24 vs 5/12 p=0.446 | median after ppg 7.0 vs 8.2
+  the REPLACEMENT's pedigree, return by week 14         late   +6.5 (n=19)  early  +15.0 (n= 8)  late minus early   -8.5 [-20.0, +3.3] p=0.207 | took 4/19 vs 4/8 p=0.183 | startable after 4/19 vs 4/8 p=0.183 | median after ppg 6.9 vs 9.1
+  the REPLACEMENT's pedigree, return week 15+           late  +22.0 (n= 5)  early   +5.0 (n= 4)  late minus early  +17.1 [-9.5, +43.5] p=0.299 | took 2/5 vs 0/4 p=0.444 | startable after 2/5 vs 1/4 p=1.000 | median after ppg 8.5 vs 3.9
+  the REPLACEMENT's pedigree, window capped at week 14  late   +6.1 (n=19)  early  +19.2 (n= 8)  late minus early  -13.1 [-23.8, -1.9] p=0.054 | took 4/19 vs 4/8 p=0.183 | startable after 5/19 vs 3/8 p=0.658 | median after ppg 7.2 vs 8.6
+  the RETURNING STARTER's pedigree, all weeks                 late  +12.8 (n=10)  early   +9.5 (n=26)  late minus early   +3.3 [-9.8, +15.8] p=0.629 | took 5/10 vs 5/26 p=0.100 | startable after 4/10 vs 7/26 p=0.454 | median after ppg 9.5 vs 6.6
+  the RETURNING STARTER's pedigree, return by week 14         late  +19.1 (n= 8)  early   +4.8 (n=19)  late minus early  +14.2 [+2.8, +25.3] p=0.026 | took 5/8 vs 3/19 p=0.027 | startable after 4/8 vs 4/19 p=0.183 | median after ppg 9.9 vs 6.3
+  the RETURNING STARTER's pedigree, window capped at week 14  late  +19.9 (n= 8)  early   +5.8 (n=19)  late minus early  +14.1 [+3.1, +25.0] p=0.039 | took 5/8 vs 3/19 p=0.027 | startable after 3/8 vs 5/19 p=0.658 | median after ppg 9.3 vs 7.1
+

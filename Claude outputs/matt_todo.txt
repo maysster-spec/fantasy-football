@@ -1,0 +1,16 @@
+# MATT_TODO -- the things that are HIS, and the only file in this project he has to look at.
+#
+# WHY IT EXISTS. Matt, 2026-09-09: "If you are waiting on me to run something then put it on my
+# to-do list." open_threads.py reads the DOCS, so it only ever saw items I had written into a doc.
+# Anything I asked him for in a REPLY lived in the chat and scrolled away -- which is the exact
+# defect the tracker was built to fix, reappearing one level up. Every "you run this" now lands
+# here the moment I say it.
+#
+# FORMAT: one item a line.  [ ] open   [x] done.  Anything after # is a comment.
+# I add and tick these; he never has to edit the file. `py open_threads.py` renders it at the top
+# of OPEN_THREADS.md, and the count in the header is the count of open ones.
+
+[ ] Paste Source\00_PROJECT_DIRECTIVE.md into the project instructions box -- only he can save it. v9.3.
+[ ] py wire.py   -- gives me the free D/ST pool, which finishes doc 264's live half
+[ ] py waivers.py --check   -- one second, proves the ESPN cookies still work after the PFF extension
+[ ] Check the PFF ESPN-sync extension is read-only (no set-lineup / add-drop scope)   # he says it is; confirm once

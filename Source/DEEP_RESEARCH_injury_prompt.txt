@@ -1,0 +1,125 @@
+═══════════════════════════════════════════════════════════════════════════
+DEEP RESEARCH TASK — FANTASY FOOTBALL INJURY BASE RATES AND PLAYER DOSSIERS
+Paste whole. Self-contained. Nothing else is needed.
+═══════════════════════════════════════════════════════════════════════════
+
+ROLE
+You are doing sports-medicine and injury-history research for a single fantasy
+football draft on Monday Sept 7, 2026. You are NOT ranking players and NOT giving
+draft advice — a calibrated valuation model already exists and does that. Your job
+is to supply NUMBERS that model cannot get anywhere else: recurrence rates,
+expected games available, and expected production on return.
+
+If you find yourself writing "he'd be a good value in round 5," you have drifted
+out of scope. Delete it.
+
+HARD RULES
+1. Every number carries a source and a date. No source, no number — write "NO DATA".
+2. Distinguish a published rate from your estimate. Tag each as [LIT] (peer-reviewed
+   or published study), [BEAT] (current reporting), or [EST] (your inference).
+3. An honest "unknown" beats a plausible invention. This is used to make money
+   decisions and a wrong confident number is worse than a blank.
+4. Ranges, not false precision. "12-15 games" is better than "13.4 games".
+5. US NFL context, 17-game regular season, and note that only WEEKS 1-14 matter
+   (this league's regular season ends week 14 — games missed in weeks 15-17 are
+   irrelevant, and a player returning in week 15 is worth ZERO).
+
+───────────────────────────────────────────────────────────────────────────
+DELIVERABLE 1 — INJURY CLASS BASE-RATE TABLE (general, reusable every season)
+───────────────────────────────────────────────────────────────────────────
+
+For EACH class below, fill every column. This table is the reusable asset; spend
+real effort here.
+
+CLASSES (use these exact tokens):
+  ACL-<12mo · ACL-12-24mo · ACHILLES-<12mo · ACHILLES-12-24mo · HAMSTRING-1st ·
+  HAMSTRING-recur · HIGH-ANKLE · ANKLE-other · KNEE-scope · KNEE-other · LISFRANC ·
+  SHOULDER · BACK · CONCUSSION-recur · GROIN-recur · FOOT
+
+| CLASS | typical games missed (first occurrence) | same-season recurrence % | production on return, as % of pre-injury per-game, and for how many weeks | weeks to full form | position modifiers (RB vs WR vs TE) | age/usage modifiers | source + tag |
+
+Specific things known to matter, include them explicitly:
+  - Hamstring strain recurrence is commonly cited at roughly 30-38%. CONFIRM OR
+    CORRECT that with a source, and split it by first-occurrence vs recurrent.
+  - High-ankle sprains are widely reported to suppress production for the REST of
+    the season even after return (2023 Tony Pollard and Austin Ekeler are the
+    canonical examples). Quantify the suppression if any study does.
+  - ACL year-one-back is widely believed to cap the ceiling rather than the floor
+    (2021 Saquon Barkley). Quantify: is it games, efficiency, or both?
+  - Achilles at age 30+ versus under 27 — is the gap real and how large?
+  - Soft-tissue recurrence with multiple priors (Curtis Samuel groin, Mike Evans
+    hamstring, Julio Jones 2020-21, Darren Waller 2021-22). Does prior count
+    multiply the base rate, and by how much per prior?
+
+───────────────────────────────────────────────────────────────────────────
+DELIVERABLE 2 — PLAYER DOSSIERS, exactly these 16, in this order
+───────────────────────────────────────────────────────────────────────────
+
+One row each. Same columns for every player. NO PROSE except the WHY field.
+
+| field | format |
+|---|---|
+| CLASS | one token from the list above (or NONE) |
+| RE-INJ% | recurrence probability THIS season, with [LIT]/[BEAT]/[EST] tag |
+| PRIORS | integer — how many prior injuries of the SAME class in his career |
+| GP | expected games available in weeks 1-14, as `best (low-high)` out of 14 |
+| FORM% | expected per-game production vs his own healthy baseline, and over which weeks — e.g. `85% wks1-5, then 100%` |
+| HEDGE | the single player who most directly gains if he misses time (the handcuff / next man up) |
+| VERDICT | AVOID / DISCOUNT / NEUTRAL / TARGET-LATE |
+| WHY | 12 words maximum |
+| SRC | source + date |
+
+THE 16 PLAYERS — ESPN's own preseason blurb is quoted so you know what is already
+known. Your job is what it does NOT say. ADP is where he is being drafted; this
+league drafts 12 teams, and the user picks at 8, 17, 32, 41, 56, 65, 80, 89, 104,
+113, 128, 137, 152, 161.
+
+ ADP  PLAYER              POS  bye   what ESPN already says
+  35  Malik Nabers        WR   8     torn ACL, limited to four appearances last season
+  36  Josh Jacobs         RB  11     a potential suspension makes him less valuable
+  55  Quinshon Judkins    RB  11     season-ending leg injury late in his rookie year
+  69  Sam LaPorta         TE   6     2025 cut short by a back injury
+  78  Jadarian Price      RB  11     may defer work to Zach Charbonnet (ACL recovery)
+  91  Tucker Kraft        TE  11     torn ACL in Week 9
+  98  George Kittle       TE   8     tore an Achilles in the wild-card game; missed six games before that
+ 101  Alec Pierce         WR  13     ESPN lists him OUT with no explanatory text — find out why
+ 107  Patrick Mahomes     QB   5     no injury named; elite start then a weak finish to 2025 — was he hurt?
+ 119  Jonathon Brooks     RB   5     spent most of his rookie year recovering from a college ACL tear
+ 133  T.J. Hockenson      TE   6     tore an ACL, limited on return in 10 games
+ 145  Chris Godwin Jr.    WR  10     severe ankle injury in 2024 — WAS IT A HIGH ANKLE? this matters
+ 154  Jordyn Tyson        WR   8     hamstring injury in August, will miss a month or two
+ 157  Zach Charbonnet     RB  11     torn ACL in the playoff game, 2026 in jeopardy
+ 158  Daniel Jones        QB  13     tore an Achilles in Week 14
+ 159  Tank Dell           WR   8     knee injury late 2024 that cost him ALL of 2025
+
+Flagged for extra care:
+  - GODWIN: whether that 2024 ankle was a HIGH ankle changes the class and the
+    recurrence rate. Settle it.
+  - PIERCE: ESPN marks him genuinely injured but supplies no text. Find the injury.
+  - MAHOMES: no injury is named. If he was playing hurt late in 2025, say so; if he
+    was healthy, write NONE and move on. Do not manufacture an injury.
+  - TYSON: "a month or two" is the difference between 10 games and 6 in a 14-week
+    season. Narrow it.
+  - CHARBONNET and BROOKS are late-round dart candidates, not starters. For them the
+    question is not "is he safe" but "when does he return and could he inherit a
+    starting role" — that is the only reason to draft either.
+
+───────────────────────────────────────────────────────────────────────────
+DELIVERABLE 3 — ANYTHING I DID NOT ASK FOR
+───────────────────────────────────────────────────────────────────────────
+
+At most 10 lines. Injury-related factors that materially change a draft decision
+and are not covered above. Examples of the KIND of thing (do not assume these are
+true): whether a team's medical staff has a measurable track record; whether an
+injury class has a known "second season back" rebound; whether preseason practice
+participation predicts week-1 availability better than the injury report.
+
+If nothing qualifies, write "nothing to add" — do not pad.
+
+───────────────────────────────────────────────────────────────────────────
+OUTPUT FORMAT
+───────────────────────────────────────────────────────────────────────────
+
+Two markdown tables (Deliverable 1, Deliverable 2) plus a short Deliverable 3 list.
+No executive summary. No introduction. No player rankings. No draft advice.
+Every cell filled or marked NO DATA.

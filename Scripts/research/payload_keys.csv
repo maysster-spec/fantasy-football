@@ -1,0 +1,104 @@
+path,read_by,count
+draftAuctionValue,UNREAD,700
+droppedByEliminatedTeam,UNREAD,700
+id,UNREAD,700
+keeperValue,UNREAD,700
+keeperValueFuture,UNREAD,700
+lineupLocked,UNREAD,700
+onTeamId,wire (branch has no effect),700
+player,pull;wire;sheet_engine(via CSV),700
+player.active,UNREAD,700
+player.defaultPositionId,pull;wire;sheet_engine(via CSV),700
+player.draftRanksByRankType,"pull (CSV, no consumer)",698
+player.draftRanksByRankType.ELIMINATION,UNREAD,690
+player.draftRanksByRankType.ELIMINATION.auctionValue,UNREAD,690
+player.draftRanksByRankType.ELIMINATION.published,UNREAD,690
+player.draftRanksByRankType.ELIMINATION.rank,UNREAD,690
+player.draftRanksByRankType.ELIMINATION.rankSourceId,UNREAD,690
+player.draftRanksByRankType.ELIMINATION.rankType,UNREAD,690
+player.draftRanksByRankType.ELIMINATION.slotId,UNREAD,690
+player.draftRanksByRankType.PPR,"pull (CSV, no consumer)",698
+player.draftRanksByRankType.PPR.auctionValue,UNREAD,698
+player.draftRanksByRankType.PPR.published,UNREAD,698
+player.draftRanksByRankType.PPR.rank,"pull (CSV rank_ppr, no consumer)",698
+player.draftRanksByRankType.PPR.rankSourceId,UNREAD,698
+player.draftRanksByRankType.PPR.rankType,UNREAD,698
+player.draftRanksByRankType.PPR.slotId,UNREAD,698
+player.draftRanksByRankType.STANDARD,"pull (CSV, no consumer)",698
+player.draftRanksByRankType.STANDARD.auctionValue,UNREAD,698
+player.draftRanksByRankType.STANDARD.published,UNREAD,698
+player.draftRanksByRankType.STANDARD.rank,"pull (CSV rank_std, no consumer)",698
+player.draftRanksByRankType.STANDARD.rankSourceId,UNREAD,698
+player.draftRanksByRankType.STANDARD.rankType,UNREAD,698
+player.draftRanksByRankType.STANDARD.slotId,UNREAD,698
+player.draftRanksByRankType.SUPERFLEX,UNREAD,698
+player.draftRanksByRankType.SUPERFLEX.auctionValue,UNREAD,698
+player.draftRanksByRankType.SUPERFLEX.published,UNREAD,698
+player.draftRanksByRankType.SUPERFLEX.rank,UNREAD,698
+player.draftRanksByRankType.SUPERFLEX.rankSourceId,UNREAD,698
+player.draftRanksByRankType.SUPERFLEX.rankType,UNREAD,698
+player.draftRanksByRankType.SUPERFLEX.slotId,UNREAD,698
+player.droppable,UNREAD,700
+player.eligibleSlots,UNREAD,700
+player.eligibleSlots[],UNREAD,700
+player.firstName,UNREAD,700
+player.fullName,pull;wire;sheet_engine(via CSV),700
+player.id,pull;wire;sheet_engine(via CSV),700
+player.injured,UNREAD,700
+player.injuryStatus,pull;wire,663
+player.jersey,UNREAD,667
+player.lastName,UNREAD,700
+player.lastNewsDate,UNREAD,662
+player.lastVideoDate,UNREAD,277
+player.outlooks,UNREAD,349
+player.outlooks.outlooksByWeek,UNREAD,349
+player.outlooks.outlooksByWeek.<week>,UNREAD,349
+player.ownership,pull;wire,700
+player.ownership.activityLevel,UNREAD,700
+player.ownership.auctionValueAverage,UNREAD,700
+player.ownership.auctionValueAverageChange,UNREAD,700
+player.ownership.averageDraftPosition,"pull (CSV espn_adp, no consumer)",700
+player.ownership.averageDraftPositionPercentChange,UNREAD,700
+player.ownership.date,wire,700
+player.ownership.leagueType,UNREAD,700
+player.ownership.percentChange,wire,700
+player.ownership.percentOwned,pull;wire,700
+player.ownership.percentStarted,wire,700
+player.proTeamId,pull;wire;sheet_engine(via CSV),700
+player.rankings,UNREAD,571
+player.rankings.<rankKey>,UNREAD,571
+player.rankings.<rankKey>[],UNREAD,571
+player.rankings.<rankKey>[].auctionValue,UNREAD,566
+player.rankings.<rankKey>[].averageRank,UNREAD,307
+player.rankings.<rankKey>[].published,UNREAD,566
+player.rankings.<rankKey>[].rank,UNREAD,566
+player.rankings.<rankKey>[].rankSourceId,UNREAD,566
+player.rankings.<rankKey>[].rankType,UNREAD,566
+player.rankings.<rankKey>[].slotId,UNREAD,566
+player.seasonOutlook,UNREAD,337
+player.stats,pull,700
+player.stats[],pull,700
+player.stats[].appliedAverage,UNREAD,700
+player.stats[].appliedTotal,pull;sheet_engine(via CSV proj_2026/actual_2026),700
+player.stats[].externalId,UNREAD,700
+player.stats[].id,pull,700
+player.stats[].proTeamId,UNREAD,700
+player.stats[].scoringPeriodId,UNREAD,700
+player.stats[].seasonId,UNREAD,700
+player.stats[].statSourceId,UNREAD,700
+player.stats[].statSplitTypeId,UNREAD,700
+player.stats[].stats,pull,700
+player.stats[].stats.<statId>,"pull (SCORING map, stat 210 stub test, raw_stats columns)",643
+ratings,UNREAD,700
+ratings.0,UNREAD,700
+ratings.0.positionalRanking,UNREAD,700
+ratings.0.totalRanking,UNREAD,700
+ratings.0.totalRating,UNREAD,700
+rosterLocked,UNREAD,700
+status,wire,700
+tradeLocked,UNREAD,700
+waiverProcessDate,wire,505
+(top-level) positionAgainstOpponent,UNREAD,1
+(top-level) positionAgainstOpponent.positionalRatings.<positionId>.average,UNREAD,1
+(top-level) positionAgainstOpponent.positionalRatings.<positionId>.ratingsByOpponent.<proTeamId>.average,UNREAD,1
+(top-level) positionAgainstOpponent.positionalRatings.<positionId>.ratingsByOpponent.<proTeamId>.rank,UNREAD,1

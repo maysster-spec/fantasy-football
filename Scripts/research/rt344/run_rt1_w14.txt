@@ -1,0 +1,73 @@
+transaction rows: 2201
+  by (Type, Status): {('FREEAGENT', 'EXECUTED'): 616, ('WAIVER', 'EXECUTED'): 614, ('WAIVER', 'FAILED_INVALIDPLAYERSOURCE'): 364, ('WAIVER', 'PENDING'): 322, ('WAIVER', 'FAILED_PLAYERALREADYDROPPED'): 101, ('WAIVER', 'CANCELED'): 152, ('WAIVER', 'FAILED_ROSTERLIMIT'): 24, ('WAIVER', 'FAILED_POSITIONLIMIT'): 6, ('WAIVER', 'FAILED_ROSTERLOCK'): 2}
+waiver player-weeks filed on: 787; contested: 225
+drafted skill players matched to a gsis id per season: {2022: 150, 2023: 151, 2024: 153, 2025: 152}  unmatched: {2022: 2, 2023: 1, 2024: 1, 2025: 1}
+
+claimed RB/WR/TE player-weeks (weeks 2-14, with a prior line): 350; of them my rebuilt pool says ROSTERED: 234 (66.9%)
+
+=== CONTROL: doc 314 reproduced on claimed-only rows from THIS join ===
+  r(touches, filers) = +0.297   (doc 314: +0.296, n=403)
+
+  claimed only (doc 314 population): n=350
+  touches last game      n  filers  P(>=1)  P(>=2)  P(>=2|>=1)
+  under 5               75    1.20  100.0%   16.0%         16%
+  5 to 9               154    1.54  100.0%   31.8%         32%
+  10 to 14              86    1.84  100.0%   41.9%         42%
+  15 or more            35    2.40  100.0%   57.1%         57%
+
+=== THE TEST: the whole free pool, zero filers included ===
+  r(touches, filers) = +0.316   n=14789
+  permutation p = 0.00020 (N=5000)
+
+  free pool, zero filers included: n=14789
+  touches last game      n  filers  P(>=1)  P(>=2)  P(>=2|>=1)
+  under 5            12442    0.01    0.6%    0.1%         16%
+  5 to 9              1938    0.12    7.9%    2.5%         32%
+  10 to 14             334    0.47   25.7%   10.8%         42%
+  15 or more            75    1.12   46.7%   26.7%         57%
+
+  by position (free pool):
+   RB: r=+0.342 n=3600
+
+  RB: n=3600
+  touches last game      n  filers  P(>=1)  P(>=2)  P(>=2|>=1)
+  under 5             2621    0.01    0.7%    0.2%         22%
+  5 to 9               694    0.08    5.5%    1.4%         26%
+  10 to 14             215    0.43   23.3%    9.8%         42%
+  15 or more            70    1.11   47.1%   25.7%         55%
+   WR: r=+0.249 n=6836
+
+  WR: n=6836
+  touches last game      n  filers  P(>=1)  P(>=2)  P(>=2|>=1)
+  under 5             5827    0.01    0.5%    0.1%         23%
+  5 to 9               910    0.12    7.6%    2.5%         33%
+  10 to 14              94    0.38   23.4%    9.6%         41%
+  15 or more             5    1.20   40.0%   40.0%        100%
+   TE: r=+0.352 n=4353
+
+  TE: n=4353
+  touches last game      n  filers  P(>=1)  P(>=2)  P(>=2|>=1)
+  under 5             3994    0.01    0.7%    0.0%          4%
+  5 to 9               334    0.22   14.1%    4.8%         34%
+  10 to 14              25    1.20   56.0%   24.0%         43%
+
+=== SELECTION CHECKS not named in doc 314 ===
+  waiver-claim rows by status: {'EXECUTED': 614, 'FAILED_INVALIDPLAYERSOURCE': 364, 'PENDING': 322, 'FAILED_PLAYERALREADYDROPPED': 101, 'CANCELED': 152, 'FAILED_ROSTERLIMIT': 24, 'FAILED_POSITIONLIMIT': 6, 'FAILED_ROSTERLOCK': 2}
+  player-weeks where CANCELED/PENDING rows change the filer count: 80 of 787
+
+  claimed only, CANCELED and PENDING claims not counted: n=325
+  touches last game      n  filers  P(>=1)  P(>=2)  P(>=2|>=1)
+  under 5               67    1.22  100.0%   17.9%         18%
+  5 to 9               142    1.57  100.0%   33.1%         33%
+  10 to 14              82    1.82  100.0%   39.0%         39%
+  15 or more            34    2.35  100.0%   55.9%         56%
+
+  from the claimant's seat (one row per CLAIM, n=569): P(at least one other team also filed)
+   under 5            n=  90  30%
+   5 to 9             n= 237  56%
+   10 to 14           n= 158  68%
+   15 or more         n=  84  82%
+
+  size of the free pool per week (RB/WR/TE with a prior game): 284.4 men a week
+
+wrote /home/claude/rt/out/w14/RT1_summary.json and RT1_free_pool_rows.csv

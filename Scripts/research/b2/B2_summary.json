@@ -1,0 +1,103 @@
+{
+ "n_all": 114,
+ "n_with_chart": 111,
+ "all": {
+  "chart": 0.6216,
+  "usage": 0.7207,
+  "last3": 0.7027,
+  "last1": 0.7117,
+  "weekly": 0.6937
+ },
+ "usage_minus_chart_points": 9.9,
+ "mcnemar_p": 0.04329,
+ "falsifier_passed": true,
+ "by_band": {
+  "wk 2-4": {
+   "chart": 0.6154,
+   "usage": 0.7308,
+   "last3": 0.7308,
+   "last1": 0.7308,
+   "weekly": 0.6538
+  },
+  "wk 5-9": {
+   "chart": 0.66,
+   "usage": 0.7,
+   "last3": 0.62,
+   "last1": 0.64,
+   "weekly": 0.68
+  },
+  "wk 10-14": {
+   "chart": 0.5714,
+   "usage": 0.7429,
+   "last3": 0.8,
+   "last1": 0.8,
+   "weekly": 0.7429
+  }
+ },
+ "by_season": {
+  "2021": {
+   "chart": 0.5806,
+   "usage": 0.6452,
+   "last3": 0.6774,
+   "last1": 0.7419,
+   "weekly": 0.7419
+  },
+  "2022": {
+   "chart": 0.625,
+   "usage": 0.75,
+   "last3": 0.75,
+   "last1": 0.7083,
+   "weekly": 0.6667
+  },
+  "2023": {
+   "chart": 0.55,
+   "usage": 0.65,
+   "last3": 0.6,
+   "last1": 0.6,
+   "weekly": 0.65
+  },
+  "2024": {
+   "chart": 0.7,
+   "usage": 0.9,
+   "last3": 0.85,
+   "last1": 0.8,
+   "weekly": 0.7
+  },
+  "2025": {
+   "chart": 0.6875,
+   "usage": 0.6875,
+   "last3": 0.625,
+   "last1": 0.6875,
+   "weekly": 0.6875
+  }
+ },
+ "lead_was_chart_top": {
+  "0": {
+   "chart": 0.4516,
+   "usage": 0.3871,
+   "last3": 0.4194,
+   "last1": 0.4516,
+   "weekly": 0.5484
+  },
+  "1": {
+   "chart": 0.6875,
+   "usage": 0.85,
+   "last3": 0.8125,
+   "last1": 0.8125,
+   "weekly": 0.75
+  }
+ },
+ "agree_share": 0.7117,
+ "disagree": {
+  "n": 32,
+  "chart_right": 0.2188,
+  "usage_right": 0.5625
+ },
+ "week2": {
+  "chart": 0.625,
+  "usage": 0.625,
+  "last3": 0.625,
+  "last1": 0.625,
+  "weekly": 0.625
+ }
+}

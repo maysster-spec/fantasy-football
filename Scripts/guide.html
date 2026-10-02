@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Draft Day Guide</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Draft Day Guide</h1>
+</header>
+<h1 id="draft-day-guide">Draft Day Guide</h1>
+<blockquote>
+<p><strong>This file is the master.</strong>
+<code>DRAFT_DAY_GUIDE.pdf</code> is a build artifact regenerated from
+this source — don’t hand-edit the PDF. Corrections go here first, then
+the PDF is rebuilt from this file and re-shared. Folds in doc 77’s
+corrections (2026-08-29), the same-evening §2 fixes, and <strong>doc
+79’s doc-vs-code drift pass (2026-08-30)</strong> — §3, §4, §9 and §10
+below were describing a version of the tool that no longer exists.</p>
+</blockquote>
+<p><strong>Read this once, straight through, before draft
+night.</strong> It explains what the tool does, how to launch it, what
+its numbers mean, and the full 7:00–8:00 PM sequence. Keep the
+DRAFT_CARD beside you <em>during</em> the draft instead — this document
+is for understanding, not for glancing at under a 60-second clock.</p>
+<hr />
+<h2 id="what-this-system-is">1. What this system is</h2>
+<p>You have two things: a <strong>board</strong>
+(<code>board_v8_fixed.csv</code>) — every draftable player ranked by
+value-based points for this league’s scoring — and a <strong>live
+tool</strong> (<code>live_draft.py</code>) that polls ESPN’s own draft
+feed on your machine roughly every 3 seconds and recommends the best
+available pick, computed by simulating the rest of your draft thousands
+of times against a model of your eleven opponents.</p>
+<p><strong>It is advisory only.</strong> It never clicks, types, or
+submits anything into ESPN. You make every pick yourself, in ESPN’s own
+draft room, on your own screen. The tool watches, recomputes, and tells
+you what it would do — nothing more. If you let your 60-second clock run
+out, ESPN autodrafts from a list you inject beforehand (the “prerank”).
+That’s a safety net for a missed clock, not a plan to rely on.</p>
+<hr />
+<h2 id="before-you-trust-it-the-pre-launch-timeline">2. Before you trust
+it: the pre-launch timeline</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>when</th>
+<th>what</th>
+<th>notes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Today</strong></td>
+<td><code>py check_kit.py</code></td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td><strong>This weekend (Sat–Sun)</strong></td>
+<td>The four-test kit — §6 below. ~20 minutes. Includes
+<code>py fetch_keepers.py --dry</code> — untested until now, and
+testable today since keepers are already selected; the 7:00 PM lock only
+freezes them.</td>
+<td>Do this by Sunday night, not in the last 48 hours.</td>
+</tr>
+<tr class="odd">
+<td><strong>Sat Sept 5 (T-48h)</strong> — <strong>[AUTO]</strong></td>
+<td>Injury/news sweep posts itself to
+<code>claude/66_sep5_news_pass.md</code> at 9 AM ET — push + email.
+<strong>This one step happens on its own — nothing to launch, nothing to
+run.</strong></td>
+<td>Heads-up only.</td>
+</tr>
+<tr class="even">
+<td><strong>Sat Sept 5 (T-48h)</strong> — <strong>[MATT]</strong></td>
+<td><code>refresh_pull.bat</code> fires at 8:00 AM on its own — it runs
+the pull AND then <code>sept5_check.py</code>, which IS doc 64 §1’s
+board-order test (it swaps the new projections into the board,
+recomputes VBD on the shipped replacement levels, re-ranks the top 161,
+and prints <strong>FREEZE</strong> or <strong>REBUILD</strong>). It also
+re-derives the four replacement levels from the full pull and lists
+every projection that moved more than 25 points. <strong>You
+do:</strong> read the VERDICT line, then run
+<code>py check_kit.py</code>. That is the whole job. <strong>The
+FantasyPros ADP re-download is OPTIONAL</strong> — tested doc 79: no
+script in the draft path reads it. But <strong>ESPN’s own ADP is NOT
+optional and is now a separate step (doc 109).</strong>
+<code>sept5_check.py</code> compares projections only, so the
+FREEZE/REBUILD verdict says nothing about the market. Measured Aug 23 →
+Aug 30: projections moved on 47 of the top 161; <strong>ADP moved on 160
+of 161</strong>, and only 104 stayed within 2 slots of their old order.
+ADP drives every <code>eff_pick</code>, every “take at 104” on the paper
+sheets and every <code>p(next)</code> on the live board. <strong>So
+after the verdict, whatever it says, run
+<code>.\sept5_after.bat</code></strong> — five gated steps in the
+required order (re-freeze the market → prove the board → rebuild the
+depth map → rebuild the three sheets → rebuild the paper board), then
+reprint. The individual commands are on COMMANDS.html section 4b if the
+batch stops on a gate.</td>
+<td><strong>~10 minutes.</strong></td>
+</tr>
+<tr class="odd">
+<td><strong>Before Sunday Sept 6 night</strong></td>
+<td>Right-click <strong><code>Scripts\</code></strong> in Google Drive →
+<strong>“Available offline.”</strong> Mark
+<strong><code>Source\</code></strong> too.</td>
+<td>Cheap insurance against a Drive hiccup stalling a 60-second pick.
+<strong>The kit folder alone is not enough</strong> (doc 79):
+<code>draft_night.bat</code>, <code>check_kit.py</code>,
+<code>fetch_keepers.py</code> and <code>keeper_swap.py</code> all live
+in <code>Scripts\</code>, and <code>keeper_swap.py</code> reads two
+files out of <code>Source\</code> (<code>code_universe_v5.csv</code>,
+<code>espn_projections_2026_20260823.csv</code>). An unhydrated
+<code>Source\</code> fails the 7:00 PM keeper swap, not the 8:00 PM
+board.</td>
+</tr>
+<tr class="even">
+<td><strong>Mon Sept 7</strong></td>
+<td>See §7, the full runbook.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="launching-a-mock-or-sandbox-draft">3. Launching a mock or
+sandbox draft</h2>
+<p>Two modes, both in <code>live_draft.py</code>. (The script’s
+top-of-file comment used to show a <code>--mock LEAGUE</code> form that
+does not run; the comment was corrected in the file itself, doc 79.)</p>
+<p><strong>A. Sandbox replay — no ESPN needed, replays last year’s
+finished draft as if live:</strong></p>
+<pre><code>cd &quot;G:\My Drive\_Fantasy\2026\Scripts\live_draft&quot;
+py live_draft.py --replay 2025
+py live_draft.py --replay 2025 --speed 0.2      # faster</code></pre>
+<p>Touches nothing real. <strong>The browser does NOT open by itself in
+replay mode</strong> — the replay branch returns before the
+<code>webbrowser.open()</code> call. (Re-verified doc 79. The line
+numbers this guide used to quote were four rewrites out of date;
+behaviour is the durable claim, line numbers are not.) When it finishes,
+open <code>live_draft\live_board.html</code> yourself to see the final
+state. (In a real draft, the browser <em>does</em> open automatically —
+this only applies to <code>--replay</code>.)</p>
+<p><strong>B. Live ESPN mock draft — join a real mock room, point the
+tool at it:</strong></p>
+<pre><code>py live_draft.py --mock --league 123456 --slot N --teams N</code></pre>
+<p>Get the league id from the browser URL after joining.
+<code>--slot</code>/<code>--teams</code> auto-detect if omitted.</p>
+<p><strong>What a mock can and can’t tell you.</strong> A public mock
+does not reproduce this league — it has no keeper depletion (the single
+biggest structural feature of your real draft) and the opponents are
+generic, not your eleven managers. Expect survival numbers from a public
+mock to run too pessimistic early. What mocks <em>do</em> buy: an
+ADP-drift check against the current board, and reflex practice on the
+pick-8 decision, which sits inside a narrow edge and shouldn’t be made
+cold under a clock. An ESPN-hosted mock specifically is the better test
+for where RJ Harvey goes, since it samples the same market your
+opponents see.</p>
+<p><strong>Log this per mock</strong> (about a minute): who was gone at
+8/17/32/41, what you took, what you wish you’d taken, WRs taken in picks
+1–7, TEs gone by 32 (and where Bowers/McBride went), RJ Harvey’s pick
+number. Four or five mocks is plenty.</p>
+<hr />
+<h2 id="reading-the-recommendation">4. Reading the recommendation</h2>
+<p><strong>These are the column names actually on the screen.</strong>
+An earlier version of this guide named <code>roll</code>,
+<code>mv</code> and <code>hold</code> — the internal variable names.
+They have not been on the page for several rewrites, and the board
+carries a plain-English glossary under it that says the same thing.</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>column</th>
+<th>meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>VBD</strong></td>
+<td>season points above a replacement starter at his position. The pure
+“how good is he”, comparable across positions.</td>
+</tr>
+<tr class="even">
+<td><strong>adds now</strong></td>
+<td>points he adds to your <em>starting lineup</em> if you take him now.
+Lower than VBD when that slot is already filled.</td>
+</tr>
+<tr class="odd">
+<td><strong>if I wait</strong></td>
+<td>what the best player at the <em>same position</em> is expected to
+add if you skip him and take that position at your next turn.</td>
+</tr>
+<tr class="even">
+<td><strong>Δ</strong></td>
+<td>adds now − if I wait. <strong>A tempo number: how fast that position
+is falling. It is NOT the ranking.</strong></td>
+</tr>
+<tr class="odd">
+<td><strong>cost vs #1</strong></td>
+<td><strong>this is what orders the list.</strong> Every row is scored
+by simulating your whole remaining draft after taking him; this column
+is that score minus row 1’s. <code>free</code> = row 1 = the
+recommendation.</td>
+</tr>
+<tr class="even">
+<td><strong>p(next)</strong></td>
+<td>chance he survives to your next turn.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>The big amber number in the TAKE panel is the margin over the
+row below it</strong> — how much better row 1 is than row 2, in rollout
+points. It used to show Δ, which is a different quantity and could read
+<code>+2.0</code> while a row further down showed <code>+13.0</code>
+(doc 79). If that number is under ~1.5, the top two are a coin flip and
+your own read is free.</p>
+<p><strong>Override is free.</strong> Pick whoever you want in ESPN’s
+room — the next poll sees your real roster and re-plans everything after
+it around what you actually have. <code>cost vs #1</code> is what any
+gut call is worth giving up, priced in points, before you make it.</p>
+<p>The engine takes 3.6–12.7 seconds to compute depending on lookahead
+depth, and it recomputes during <em>other</em> managers’ turns, not
+yours — so a recommendation should already be sitting there by the time
+your clock starts.</p>
+<hr />
+<h2 id="draft-night-runbook">5. Draft night runbook</h2>
+<p><strong>This is now scripted, not a manual sequence you run step by
+step.</strong> Three things were built after this guide was first
+written: <code>fetch_keepers.py</code> (reads the actual 12 keepers off
+ESPN), <code>draft_night.bat</code> (runs the whole 7:00 PM sequence in
+order, pausing at each step for you), and <code>setup_tasks.ps1</code>
+(registers the scheduled tasks below, one time, in one run).</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>time</th>
+<th>action</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>6:45 PM</strong></td>
+<td>Calendar alert. Be at the desk.</td>
+</tr>
+<tr class="even">
+<td><strong>6:55 PM</strong></td>
+<td>Scheduled task <strong>FF2026 - DRAFT NIGHT</strong> opens
+<code>draft_night.bat</code> by itself. <strong>It pauses at every step
+— you are the gate, not a spectator.</strong> It runs:
+<code>check_kit.py</code> → <code>fetch_keepers.py --dry</code> (review
+the 12 names) → <code>--write</code> →
+<code>keeper_swap.py --check</code> → <code>--write</code> only if
+changed → injector → live board.</td>
+</tr>
+<tr class="odd">
+<td><strong>7:55 PM</strong></td>
+<td>Live board is up. <strong>Two lines to eyeball, both printed for
+you:</strong> <code>team 9 = JUG "..."  &lt;- IS THIS YOU?</code> and
+the first poll line reporting <strong>12 keeper rows.</strong></td>
+</tr>
+<tr class="even">
+<td><strong>8:00 PM</strong></td>
+<td>Draft. 60 sec/pick. Your picks: <strong>8, 17, 32, 41, 56, 65, 80,
+89, 104, 113, 128, 137, 152, 161.</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>If the batch file fails at any step, every command above
+still runs by hand, in that same order.</strong> An automation with no
+documented manual fallback is a single point of failure, so here it is:
+<code>check_kit.py</code>, then <code>fetch_keepers.py --dry</code> then
+<code>--write</code>, then <code>keeper_swap.py --check</code> then
+<code>--write</code> if it says anything other than IDENTICAL, then the
+injector, then
+<code>cd live_draft &amp;&amp; py live_draft.py</code>.</p>
+<p><strong>You still don’t need to rebuild the board from scratch at
+7:00 PM</strong> — availability comes straight off ESPN’s live feed by
+<code>espn_id</code>, not from the board file, so a wrongly-predicted
+keeper never shows as available by mistake. <strong>One exception, and
+it’s the reason <code>keeper_swap.py</code> exists:</strong> if a team
+keeps someone we did <em>not</em> predict, the player we wrongly
+<em>removed</em> from the board is genuinely draftable this year but was
+never put back — invisible to the engine all night unless something
+re-adds him. <code>keeper_swap.py</code> is that something: it re-adds
+him and re-ranks. If <code>--check</code> reports IDENTICAL, all 12
+predictions were right and there’s nothing to do. <strong>This also
+means <code>board_v8_fixed.csv</code> has a real, working builder again
+for this one purpose</strong> — see §8.</p>
+<hr />
+<h2 id="the-test-kit-verify-before-you-rely-on-it">6. The test kit —
+verify before you rely on it</h2>
+<p><strong>Test 1 — Injector, two runs:</strong></p>
+<pre><code>py espn_draft_injector_Gemini.py</code></pre>
+<p>Must show both lines:</p>
+<pre><code>ESPN reports 544 players stored (sent 544).
+count matches. first stored id = 4429795 (expect 4429795).</code></pre>
+<p>Run it again immediately — second run must also say
+<strong>544</strong> (confirms it replaces, not appends).</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>you see</th>
+<th>meaning</th>
+<th>do</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>512 stored</code></td>
+<td>all 32 D/ST rejected (negative ids)</td>
+<td>not fatal, but note it</td>
+</tr>
+<tr class="even">
+<td>any other count</td>
+<td>list truncated</td>
+<td>note the number</td>
+</tr>
+<tr class="odd">
+<td><code>Update Failed</code>, 401/403</td>
+<td>cookies expired</td>
+<td><code>py set_cookies.py</code> — see §12</td>
+</tr>
+<tr class="even">
+<td><code>(read-back failed)</code></td>
+<td>unverified — re-run once; repeat = treat as fail</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>“Pre-draft rankings updated.” with <strong>no</strong> “ESPN
+reports…” line above it</td>
+<td>the write was never verified — this is the silent-success trap</td>
+<td>treat as fail</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Test 2 — Live board replay:</strong></p>
+<pre><code>cd live_draft
+py live_draft.py --replay 2025 --speed 0.2</code></pre>
+<p>Must print near the top:
+<code>replay: 180 rows fetched (12 flagged keeper).</code>
+<code>(0 flagged keeper)</code> or <code>168 rows</code> means the
+keeper filter is broken — the board would run 12 picks ahead of reality
+all night. Stop and fix before Sept 7.</p>
+<p><strong>Test 3 — ESPN-side confirmation:</strong> Draft → Pre-Draft
+Rankings on ESPN shows #1 = Jahmyr Gibbs, defenses present somewhere in
+the list, and the list ends at Chad Ryland (K).</p>
+<p><strong>Test 4 — Keeper fetch, dry run:</strong></p>
+<pre><code>py fetch_keepers.py --dry</code></pre>
+<p>Pass = 12 rows, matching the names on your actual ESPN league page.
+<code>0 rows</code> = ESPN doesn’t expose keepers before lock — fall
+back to typing them in by hand on draft night. <code>401/403</code> =
+cookies stale — run <code>py set_cookies.py</code> (§12). Better to find
+that out this weekend than at 7:02 PM.</p>
+<p>All four pass = the stack is verified end to end.</p>
+<hr />
+<h2 id="nuances-that-only-surface-on-draft-night">7. Nuances that only
+surface on draft night</h2>
+<ul>
+<li><strong>ESPN cookie expiration (401/403).</strong>
+<strong>FOUR</strong> files carry cookies, not two, and as of Aug 30
+<code>Espn_pull_projections.py</code> was carrying a <em>different</em>
+<code>espn_s2</code> from the other three. Do not hand-edit them. Run
+<code>py set_cookies.py</code> — §12 has the whole procedure. It tests
+the new values against ESPN <strong>before</strong> it writes anything,
+and fixes all four at once.</li>
+<li><strong>The keeper-row count at 7:55 PM is the single most
+consequential thing to eyeball.</strong> If it isn’t 12, stop and use
+DRAFT_BOARD rather than trust the live recommendations.</li>
+<li><strong>A Google Drive hydration stall on the board CSV mid-draft is
+untested</strong> — mitigated, not eliminated, by “Available offline”
+(§2). If the board ever seems to freeze or lag mid-pick, don’t wait it
+out past your clock — go to DRAFT_BOARD.</li>
+<li><strong>Team ID is confirmed as 9</strong> (matches your ESPN team
+URL, verified Aug 28). As of Aug 30 the tool no longer asks you to take
+that on faith: at startup it reads your team from ESPN and prints
+<code>team 9 = JUG "..."  &lt;- IS THIS YOU?</code>. If that name is not
+yours, stop — every roster panel, position cap and bye check would be
+running against someone else’s team all night. The fix is
+<code>py live_draft.py --team N</code>.</li>
+<li><strong>A late injury still has no automated <em>detector</em>, but
+it now has a one-command <em>fix</em>.</strong> When you hear something
+— a suspension, a season-ending injury, a trade — add a row to
+<code>Scripts\news_overrides.csv</code> and run
+<code>py apply_news.py --write</code>. It sinks the player to the bottom
+of the board <em>and</em> the prerank, archives the originals, and
+re-pins check_kit. Then <code>py make_board.py</code> reprints the paper
+board (it names the removed player in red at the top), and
+<code>py weekend_check.py --inject</code> pushes the corrected prerank
+to ESPN — <strong>that last step is not optional; until you re-inject,
+ESPN’s queue still rates him where he was.</strong>
+<code>board_audit.py</code> fails loudly if a rebuild ever wipes an
+override. This was built on Aug 30 because Josh Jacobs went on the
+Commissioner’s Exempt List at board rank 20, with an effective pick of
+32.4 — your pick 32 almost exactly. The Sept 5 news sweep is still the
+only automated check, and it only runs once. Anything that happens
+between Sept 5 and the draft — including during the draft itself — isn’t
+watched by anything in this system. The board being “frozen” doesn’t
+mean news is being ignored; it means the <em>rankings</em> don’t get
+rebuilt. New information is always meant to be a manual override at the
+pick, same as Tank Dell in §8 — but for a real injury, you have to be
+the one who catches it. ESPN’s own draft room shows a live injury tag
+next to each name; that tag, not this board, is your actual safety net
+for anything that surfaces after Sept 5.</li>
+</ul>
+<hr />
+<h2 id="settled-do-not-re-litigate-these-on-draft-night">8. Settled — do
+not re-litigate these on draft night</h2>
+<ul>
+<li>The injector’s file path points at
+<code>Scripts\live_draft\ESPN_prerank_with_ids.csv</code>, confirmed by
+a direct read of the file that actually runs, Aug 28.</li>
+<li><code>Source\live_draft\</code> no longer exists — it was verified
+byte-for-byte against <code>Scripts\live_draft\</code> and trashed Aug
+28. Any document still describing it is out of date.</li>
+<li>The pull script’s completed-season guard
+(<code>confirm_seasons()</code>) is real and active.</li>
+<li>Team ID = 9.</li>
+<li>No board rebuild is required at keeper lock (§5).</li>
+<li><strong>The board passed its freeze test on Aug 28</strong> (doc
+64): rebuilt from that day’s pull and compared to
+<code>board_v8_fixed.csv</code>, replacement levels matched to 3
+decimals and the top 161 matched within 2 slots for 150 of 161 players —
+including full agreement at picks 8, 17, 32, and
+<ol start="89" type="1">
+<li>No rebuild was triggered; the file stands as-is. <strong>Update, doc
+77: <code>board_v8_fixed.csv</code> now <em>does</em> have a builder,
+but only for one specific job</strong> — <code>keeper_swap.py</code>
+reproduces the shipped 480-row board exactly from the 12 keeper
+predictions, so it can correctly re-add a player who was wrongly
+predicted as kept (§5). That is not the same as doc 62’s original
+question — rebuilding the whole board from a <em>fresh projection
+pull</em> — which still has no script. The Sept 5 re-check in §2 is
+still mandatory, not a formality, because ESPN appears to re-forecast in
+irregular batches rather than continuously.</li>
+</ol></li>
+<li><strong>Tank Dell (WR) still carries a pre-injury projection on the
+board, but he is now marked.</strong> He went on IR on Aug 30, out at
+least four weeks (ESPN). The board shows him AVOID with the reason on
+his row, so the number is stale and the row is not. <strong>He is not a
+pick; he is a free IR stash at 152 or 161</strong> — the three IR slots
+make that cost nothing (directive §6).</li>
+</ul>
+<hr />
+<h2 id="if-something-breaks-the-failure-procedure">9. If something
+breaks: the failure procedure</h2>
+<p>Every serious defect this project has found so far has been
+<strong>silent</strong> — no error message, no warning, just a
+plausible-looking number. Assume the tool can fail quietly, and know the
+response before you need it:</p>
+<ul>
+<li><strong>Tool prints nothing, or hangs</strong> → switch to
+DRAFT_BOARD. Take the highest VBD player who fits your roster caps and
+doesn’t stack a bye you’re already carrying.</li>
+<li><strong>The pick number on screen disagrees with ESPN’s</strong> →
+trust ESPN. If the gap is exactly 12, the keeper filter has failed — use
+DRAFT_BOARD.</li>
+<li><strong>The engine recommends a K or D/ST before pick 152</strong> →
+can no longer happen: kickers and defenses are not on
+<code>board_v8_fixed.csv</code> at all, they live in a separate streamer
+file the tool only opens at picks 152 and 161. If you somehow see one
+early, the tool has loaded the wrong board — stop and run
+<code>py check_kit.py</code>.</li>
+<li><strong>At 152 or 161 the streamer page offers someone already
+drafted</strong> → this failed silently until Aug 29 (the filter needed
+an <code>ESPN_ID</code> column the file didn’t carry). It is fixed and
+the filter is proven to fire, but it is a quiet failure mode:
+cross-check the top name against ESPN’s room before you click.</li>
+<li><strong>The engine recommends a player ESPN already shows as
+drafted</strong> → the feed is stale. Refresh. If it repeats, use
+DRAFT_BOARD.</li>
+<li><strong>Anything else unexpected</strong> → take the best available
+player by VBD, respecting roster caps and byes. The board is worth
+roughly six times more than any pick rule — losing the rule for a pick
+or two is survivable; losing the board is not.</li>
+</ul>
+<hr />
+<h2 id="injury-tags-what-the-red-word-actually-means">10. Injury tags —
+what the red word actually means</h2>
+<p>ESPN carries two injury fields, and the board’s <code>flag</code>
+column uses the weaker one. In your top 180, <strong>only three players
+are genuinely injured</strong> (ESPN’s own boolean
+<code>injured = True</code>): George Kittle, Alec Pierce, Zach
+Charbonnet. Thirty-three more are tagged <code>QUESTIONABLE</code> while
+that same boolean says they’re healthy — McCaffrey, Nacua, Breece Hall,
+Jeremiyah Love, and Malik Nabers among them. <strong>On the live board
+this now renders as a small red <code>Q</code></strong> (hover for the
+full word; <code>D</code> = doubtful, <code>OUT</code>,
+<code>IR</code>). <strong>A red <code>Q</code> is a roster-status
+marker, not an injury. Don’t flinch at it</strong> (doc 74).</p>
+<p><strong>The flag is display-only.</strong> It never enters
+<code>vbd</code>, the rollout, or any recommendation, and it’s frozen as
+of whenever the board was built.</p>
+<p><strong>Print <code>INJURY_CONTEXT_SHEET.xlsx</code> and keep it
+beside the card.</strong> Sixteen players in ADP order, with expected
+games in weeks 1-14, form on return, recurrence rate, and how far each
+moves on your board once that’s priced in. Four rows change a pick:
+<strong>Josh Jacobs, down to 89</strong> (a possible six-game suspension
+the board knows nothing about), <strong>Kittle down to 60</strong>,
+<strong>Kraft down to 53</strong>, <strong>Tyson down to
+57</strong>.</p>
+<p><strong>CORRECTION, 2026-08-30 — the Mahomes row was wrongly
+dismissed, and this guide is what dismissed it.</strong> Earlier
+versions said the row looked fabricated and told you not to act on it.
+<strong>That instruction is retracted.</strong> The ACL tear is real and
+well sourced (torn against the Chargers, late 2025), and as of Aug 20–26
+Schefter and the team both have him <strong>on track to start Week
+1</strong>. The only live question is the sheet’s 90% form haircut, not
+whether the injury happened. The one thing that was genuinely
+unverifiable — Carson Wentz as the named hedge — has been blanked on the
+sheet.</p>
+<p>The general lesson stands and is worth more than the row: <strong>a
+flag saying “this might be made up” is a claim like any other, and it
+has to be checked before it changes a decision.</strong> This one was
+never checked, and for two days it told you to ignore accurate
+information about a quarterback.</p>
+<hr />
+<h2 id="off-field-risk-the-board-has-no-field-for-it-at-all">11.
+Off-field risk — the board has no field for it at all</h2>
+<p>The injury flag is weak (§10). For <strong>suspensions, legal matters
+and holdouts there is no field whatsoever</strong> — not in
+<code>proj_2026</code>, not in <code>vbd</code>, not on the board. The
+only trace is ESPN’s analyst blurb, and that is not carried onto the
+board either.</p>
+<p>Searching those blurbs across your top 180 turns up <strong>exactly
+two</strong>:</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>ADP</th>
+<th>player</th>
+<th>what ESPN’s own outlook says</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>36</strong></td>
+<td><strong>Josh Jacobs</strong></td>
+<td><em>“a potential suspension makes him less valuable on draft
+day”</em> — and the projection does not discount him for it. He is still
+the 20th-highest VBD on the board. On the injury sheet he falls
+<strong>89 ranks</strong> if the suspension holds.</td>
+</tr>
+<tr class="even">
+<td><strong>55</strong></td>
+<td><strong>Quinshon Judkins</strong></td>
+<td>rookie year <em>“bookended by missed time early because of an
+<strong>off-field issue</strong> and late because of a season-ending leg
+injury”</em> — two independent absence risks, only one of which the
+injury sheet prices.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Judkins is the quieter problem.</strong> He reads clean on
+the board and appears on the injury sheet at only ↓9, because that
+adjustment covers the leg injury alone. Nothing anywhere accounts for
+the off-field absence repeating.</p>
+<p><strong>Both are “potential”, neither is confirmed. Checked
+2026-08-30: Jacobs’ suspension is STILL UNRULED, and the Packers are
+publicly bracing for it (Schefter).</strong> So the risk is live and, if
+anything, firmer than when this was written — but there is still nothing
+to price against. The Sept 5 sweep carries the same question, plus
+Judkins. Until then, treat both as unpriced risk rather than as ruled
+out: if Jacobs’ suspension evaporates he is a legitimate RB1 at pick 36,
+and passing on him costs real value.</p>
+<p><strong>Two limits on the search above.</strong> It reads ESPN’s
+blurbs, so it finds what ESPN chose to write up — a quiet legal matter
+ESPN has not covered will not appear. And it ran against the Aug-20
+pull, so anything that surfaced since is invisible to it. Same shape as
+§7’s late-injury gap: the system does not watch for this, you do.</p>
+<h3 id="a-third-unpriced-class-concussion-history">A third unpriced
+class: concussion history</h3>
+<p>The injury sheet’s taxonomy is <strong>ACL · Achilles · ankle ·
+high-ankle · back · hamstring · knee · suspension</strong>. There is
+<strong>no concussion category</strong>, and that is not an oversight in
+the sheet so much as the same hole one level down. Every other class on
+that sheet is a <em>current condition</em> — ESPN flags it, or a search
+finds it, and the sheet prices it. <strong>Concussion risk is a property
+of a player’s history, not of his status today.</strong> A player with
+three documented concussions who is fully healthy right now reads as:
+ESPN <code>injured</code> = False, <code>injuryStatus</code> = ACTIVE,
+board <code>flag</code> blank, projection undiscounted, injury sheet
+absent. Nothing in this system has a field for it.</p>
+<p><strong>Checked for you: Tua Tagovailoa is board rank 442 of 480, VBD
+−206, effective ADP ~158.</strong> He is not a decision you will face.
+No other concussion-history name could be sourced inside your draftable
+range, and the Sept 5 sweep now carries the question explicitly — but
+treat “nothing found” as “not looked for very hard”, not as “nobody
+qualifies”.</p>
+<p><strong>QBs and TEs are on the sheet</strong> — 5 WR, 5 RB, <strong>4
+TE</strong>, <strong>2 QB</strong>. Position coverage is not the gap;
+the missing risk <em>class</em> is.</p>
+<hr />
+<h2 id="cookies-the-one-manual-repair-you-may-actually-need">12. Cookies
+— the one manual repair you may actually need</h2>
+<p>Every script that talks to ESPN authenticates with two cookies copied
+out of your browser: <strong><code>SWID</code></strong> and
+<strong><code>espn_s2</code></strong>. They expire. When they do,
+everything fails the same way — <strong>HTTP 401 or 403</strong>, or the
+injector printing <code>Update Failed</code> — and nothing else fixes
+it.</p>
+<p><strong>Four files carry them</strong>, which is the part that used
+to be wrong in this guide (it said two):</p>
+<pre><code>Scripts\Espn_pull_projections.py
+Scripts\espn_draft_injector_Gemini.py
+Scripts\fetch_keepers.py
+Scripts\live_draft\live_draft.py</code></pre>
+<h3 id="the-procedure">The procedure</h3>
+<p><strong>1. Get the values.</strong> In Chrome, signed in at
+<code>fantasy.espn.com</code>:</p>
+<blockquote>
+<p><strong>F12</strong> → <strong>Application</strong> tab → left
+sidebar <strong>Storage → Cookies →
+<code>https://fantasy.espn.com</code></strong> Find the two rows and
+copy the <strong>Value</strong> column: -
+<strong><code>SWID</code></strong> — copy it <em>including</em> the
+curly braces: <code>{A7217088-1F36-…}</code> -
+<strong><code>espn_s2</code></strong> — long, 300+ characters, ends in
+<code>%3D%3D</code></p>
+</blockquote>
+<p>Copy both <strong>verbatim</strong>. Do not decode <code>%2F</code>
+back to <code>/</code>, do not trim, do not “clean up”. The
+percent-escapes are part of the value.</p>
+<p><strong>2. Run the tool.</strong></p>
+<pre><code>cd &quot;G:\My Drive\_Fantasy\2026\Scripts&quot;
+py set_cookies.py</code></pre>
+<p>It prints which file holds which cookie, prompts for both values,
+<strong>tests them against your league before touching
+anything</strong>, then updates all four and backs up the originals to
+<code>2026\_archive\</code>.</p>
+<p><strong>If the test fails it writes nothing and says so.</strong>
+That is the whole point — four files full of bad cookies at 7:02 PM is
+worse than one 401. Re-copy from Chrome and run it again.</p>
+<p><strong>3. Re-run whatever failed.</strong> Nothing else needs
+restarting except the live tool, if it was up.</p>
+<h3 id="two-things-to-expect-afterwards">Two things to expect
+afterwards</h3>
+<ul>
+<li><strong><code>check_kit.py</code> will report all four files
+STALE.</strong> That is correct — their bytes changed. Re-pin the
+manifest when things are calm, <strong>not</strong> during the 7:00 PM
+sequence.</li>
+<li>To check the cookies <em>without</em> changing anything:
+<code>py set_cookies.py --check</code>.</li>
+</ul>
+<p><strong>Do this once this weekend even if nothing is broken</strong>
+— <code>--check</code> costs ten seconds and tells you whether you will
+be doing this under a clock.</p>
+<hr />
+<h2 id="appendix-source-documents">Appendix — source documents</h2>
+<p><code>00_PROJECT_DIRECTIVE.md</code> (v5.4) ·
+<code>00_CALENDAR_TO_DRAFT.md</code> · <code>00_HOW_TO_RUN_IT.md</code>
+· <code>00_HANDOVER_READ_ME_FIRST.md</code> ·
+<code>SCRATCHPAD_INIT.txt</code> · <code>71_weekend_test_kit.md</code> ·
+<code>72_ops_brief_corrections.md</code> ·
+<code>73_injury_and_keepers_plain.md</code> ·
+<code>74_the_flag_is_not_injury.md</code> ·
+<code>75_injury_sheet_design.md</code> ·
+<code>76_automation_plan.md</code> ·
+<code>77_guide_corrections.md</code> ·
+<code>54_live_draft_engine.md</code> ·
+<code>47_espn_prerank_injection_contract.md</code> ·
+<code>37_pre_draft_runbook.md</code> · <code>04_mock_draft_log.md</code>
+· <code>62_board_has_no_builder.md</code> ·
+<code>espn_draft_injector_Gemini.py</code> and
+<code>live_draft.py</code> (read directly, including a live Google Drive
+check against the actual files, Aug 28-29).</p>
+</body>
+</html>
