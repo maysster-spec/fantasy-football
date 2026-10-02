@@ -1,0 +1,76 @@
+A1 -- the drop cost when the page can see an absence
+
+rates used (share of non-bye weeks missed):
+  measured : D/ST 0.0% K 21.3% QB 13.8% RB 17.1% TE 13.8% WR 15.0%
+  doc 111  : D/ST 0.0% K 35.4% QB 22.9% RB 28.5% TE 22.9% WR 24.9%
+
+byes only, hole unfilled (the page today): season total 1536.6
+   Mike Washington Jr.        0.00  +/- 0.00
+   T.J. Hockenson             0.00  +/- 0.00
+   J.K. Dobbins               2.60  +/- 0.00
+   Rico Dowdle                4.29  +/- 0.00
+   Xavier Worthy              8.54  +/- 0.00
+   Tyler Shough              18.01  +/- 0.00
+   Davante Adams             21.72  +/- 0.00
+   Sam LaPorta               22.81  +/- 0.00
+
+byes only, hole streamed: season total 1555.6
+   Mike Washington Jr.        0.00  +/- 0.00
+   T.J. Hockenson             0.00  +/- 0.00
+   Tyler Shough               1.36  +/- 0.00
+   Browns D/ST                1.48  +/- 0.00
+   Xavier Worthy              2.00  +/- 0.00
+   J.K. Dobbins               2.60  +/- 0.00
+   Rico Dowdle                4.29  +/- 0.00
+   Eddy Pineiro              21.20  +/- 0.00
+
+measured, hole unfilled: season total 1440.7
+   Mike Washington Jr.        1.72  +/- 0.03
+   T.J. Hockenson            13.57  +/- 0.11
+   Xavier Worthy             16.03  +/- 0.11
+   J.K. Dobbins              16.44  +/- 0.11
+   Rico Dowdle               20.53  +/- 0.11
+   Sam LaPorta               33.30  +/- 0.12
+   Davante Adams             37.14  +/- 0.13
+   Tyler Shough              40.38  +/- 0.27
+
+measured, hole streamed: season total 1495.4
+   Mike Washington Jr.       -0.98  +/- 0.02
+   Browns D/ST                1.48  +/- 0.00
+   Tyler Shough               3.05  +/- 0.02
+   T.J. Hockenson             3.73  +/- 0.03
+   Xavier Worthy              4.86  +/- 0.03
+   J.K. Dobbins              12.59  +/- 0.08
+   Rico Dowdle               16.65  +/- 0.08
+   Eddy Pineiro              16.66  +/- 0.03
+
+doc 111 scaled, hole streamed: season total 1443.3
+   Mike Washington Jr.       -2.92  +/- 0.03
+   Browns D/ST                1.48  +/- 0.00
+   Tyler Shough               3.89  +/- 0.02
+   T.J. Hockenson             5.83  +/- 0.04
+   Xavier Worthy              8.30  +/- 0.05
+   Eddy Pineiro              13.71  +/- 0.04
+   J.K. Dobbins              19.17  +/- 0.10
+   Sam LaPorta               23.40  +/- 0.06
+
+WHAT MOVED, cheapest eight, byes-only order on the left:
+   byes only                 measured, streamed        
+    1. Mike Washington Jr.    1. Mike Washington Jr.      0.00 ->   -0.98
+    2. T.J. Hockenson         2. Browns D/ST              0.00 ->    1.48
+    3. J.K. Dobbins           3. Tyler Shough             2.60 ->    3.05
+    4. Rico Dowdle            4. T.J. Hockenson           4.29 ->    3.73
+    5. Xavier Worthy          5. Xavier Worthy            8.54 ->    4.86
+    6. Tyler Shough           6. J.K. Dobbins            18.01 ->   12.59
+    7. Davante Adams          7. Rico Dowdle             21.72 ->   16.65
+    8. Sam LaPorta            8. Eddy Pineiro            22.81 ->   16.66
+
+THE HANDCUFF, PRICED THREE WAYS (measured rates, hole streamed).
+  what Washington scores in the weeks Jeanty is out ->  his drop cost
+   his own projection, 3.68 (what the page assumes)  -0.98  +/- 0.02
+   doc 244's median relief rate, 11.2               3.84  +/- 0.05
+   the job itself, 248/17 = 14.6                   10.02  +/- 0.10
+
+  cheapest man, byes only : Mike Washington Jr. (0.00)
+  cheapest man, measured  : Mike Washington Jr. (-0.98 +/- 0.02)
+  ORDER OF THE CHEAPEST FOUR CHANGES: True

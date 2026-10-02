@@ -1,0 +1,18 @@
+playoff-probability gain in points at the end of week 3, equal expected points, all teams, four seasons:
+     band    p  n  base  steady_gain  ticket_gain
+under 30% 0.09 11  0.12         1.31         1.81
+under 30% 0.19 11  0.12         3.10         4.04
+under 30% 0.30 11  0.12         5.09         6.37
+30 to 60% 0.09 19  0.43         2.68         2.56
+30 to 60% 0.19 19  0.43         6.02         5.73
+30 to 60% 0.30 19  0.43         9.50         9.04
+ over 60% 0.09 18  0.81         1.71         1.18
+ over 60% 0.19 18  0.81         3.63         2.64
+ over 60% 0.30 18  0.81         5.47         4.17
+p = the ticket's chance of a +15 flex for six weeks (doc 460's committee, lead-back and a notional 30% cell).
+pooled within-team weekly spread, 2022 to 2025: 21.2 points
+  2022: Brier 0.240 (naive current-top-six 0.333); the model's top six by odds had 4 of 6 right; Bloodied Casta 93%, dolla dolla Bi 93%, Rick James B!t 88%*, Herb Your Enth 72%*, Brown VS Brown 71%*, Multiple Scorg 63%*, Hurts So Good 61%*, Ekeler's  Edge 21%*, Send'em Packin 21%, Kannapolis Bus 9%, Allen Fantasy  4%, sLamb'n Kittle 3%
+  2023: Brier 0.286 (naive current-top-six 0.500); the model's top six by odds had 3 of 6 right; Brown VS Brown 95%, Send'em Packin 94%*, Olave Garden 79%*, Long Arm of th 64%*, Von down by th 60%, Bloodied Casta 57%, sLambin Juwann 55%*, Rick James B!t 49%, Multiple Scorg 26%*, Trevor's Tremo 17%*, Kannapolis Bus 2%, Allen Fantasy  0%
+  2024: Brier 0.160 (naive current-top-six 0.333); the model's top six by odds had 4 of 6 right; Sentinel Sea S 97%*, Ja'Marracle Wh 79%*, Moore Chubb fo 76%*, Von down by th 64%, Multiple Scorg 60%*, Window is Alwa 47%, Bloodied Casta 43%*, Send'em Packin 35%*, NickCannonFanC 33%, Injury Prone 32%, Below Mendoza  22%, Professional S 12%
+  2025: Brier 0.240 (naive current-top-six 0.333); the model's top six by odds had 4 of 6 right; Bloodied Casta 93%, Breece up thos 74%*, Multiple Scorg 70%*, Sentinel Sea S 66%, Send'em Packin 64%*, The Poetry of  64%*, Window is Alwa 59%, The Kunning St 50%*, Jaxson Bates 29%*, NickCannonFanC 26%, ChatCTE 4%, We Got This Sh 2%
+  mean Brier 0.231 against naive 0.375 (lower is better; 0.25 is a coin flip on each team). * marks the teams that made it.

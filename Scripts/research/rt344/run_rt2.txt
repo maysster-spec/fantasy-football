@@ -1,0 +1,27 @@
+best free body by position: {'TE': 'Hunter Henry 7.2', 'RB': 'Tyjae Spears 7.6', 'WR': 'Rashid Shaheed 7.2', 'QB': 'Tyler Shough 18.0', 'D/ST': 'Browns D/ST 6.1', 'K': 'Trey Smack 8.5'}
+second free body: {'RB': 'Woody Marks 7.0', 'WR': 'Jerry Jeudy 6.7', 'QB': 'Daniel Jones 18.0', 'TE': 'T.J. Hockenson 7.0', 'K': 'Chris Boswell 8.4', 'D/ST': 'Saints D/ST 5.6'}
+
+man                   pos      wk A nobody  B net   abs  B page  C strm  C+abs D after add  replaced by / then
+Chiefs D/ST           D/ST    6.0     77.3   -2.0   0.0    -2.0    -6.5   -6.5         0.4  Browns D/ST 6.1 / Saints D/ST 5.6
+Chris Brooks          RB      3.6      0.0    0.0   0.0     0.0     0.0    0.0         0.0  Tyjae Spears 7.6 / Woody Marks 7.0
+Devaughn Vele         WR      5.8      0.0    0.0   0.0     0.0     0.0    0.0         0.0  Rashid Shaheed 7.2 / Jerry Jeudy 6.7
+Mike Washington Jr.   RB      3.7      0.0    0.0   0.0     0.0     0.0    0.0         0.0  Tyjae Spears 7.6 / Woody Marks 7.0
+Xavier Worthy         WR      8.5      2.7    2.7   3.9     6.6     2.0    5.9         2.7  Rashid Shaheed 7.2 / Jerry Jeudy 6.7
+Eddy Pineiro          K       9.1    118.7    8.4   0.0     8.4     n/p    n/p         8.5  Trey Smack 8.5 / Chris Boswell 8.4
+J.K. Dobbins          RB      9.7      3.8    2.0   9.4    11.4     3.8   13.2         2.0  Tyjae Spears 7.6 / Woody Marks 7.0
+Rico Dowdle           RB     10.2      5.5    3.7  10.6    14.4     5.5   16.2         3.7  Tyjae Spears 7.6 / Woody Marks 7.0
+Sam LaPorta           TE      8.8    114.4   20.8   5.8    26.6    37.0   42.8        21.0  Hunter Henry 7.2 / T.J. Hockenson 7.0
+Davante Adams         WR     11.7     21.7   21.7  10.0    31.7    21.7   31.7        21.7  Rashid Shaheed 7.2 / Jerry Jeudy 6.7
+George Pickens        WR     11.7     25.1   25.1  10.1    35.2    24.4   34.5        25.1  Rashid Shaheed 7.2 / Jerry Jeudy 6.7
+Quinshon Judkins      RB     12.4     30.0   30.0  15.5    45.5    30.0   45.5        30.0  Tyjae Spears 7.6 / Woody Marks 7.0
+Jalen Hurts           QB     21.6    280.2   46.1   8.7    54.9    47.1   55.9        46.2  Tyler Shough 18.0 / Daniel Jones 18.0
+Ashton Jeanty         RB     14.5     61.3   59.4  20.2    79.6    61.3   81.4        59.4  Tyjae Spears 7.6 / Woody Marks 7.0
+Puka Nacua            WR     17.2     93.3   93.3  20.7   114.0    93.3  114.0        93.3  Rashid Shaheed 7.2 / Jerry Jeudy 6.7
+
+THE DOUBLE COUNT: the page shows an add row (price against the bar) and a drop row (netted against the best free body). Adding that same best free body and dropping the man:
+  TE    add Hunter Henry (page add value   7.2) and drop Sam LaPorta (page drop cost  26.6): reader nets -19.4; the actual swap is -20.8
+  RB    add Tyjae Spears (page add value   0.0) and drop Chris Brooks (page drop cost   0.0): reader nets  +0.0; the actual swap is  +0.0
+  WR    add Rashid Shaheed (page add value   0.0) and drop Devaughn Vele (page drop cost   0.0): reader nets  +0.0; the actual swap is  +0.0
+  QB    add Tyler Shough (page add value  18.0) and drop Jalen Hurts (page drop cost  54.9): reader nets -36.9; the actual swap is -46.1
+  D/ST  add Browns D/ST (page add value   8.5) and drop Chiefs D/ST (page drop cost  -2.0): reader nets +10.5; the actual swap is  +2.0
+  K     add Trey Smack (page add value   8.5) and drop Eddy Pineiro (page drop cost   8.4): reader nets  +0.1; the actual swap is  -8.4

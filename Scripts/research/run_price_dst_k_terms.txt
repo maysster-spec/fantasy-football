@@ -1,0 +1,59 @@
+================================================================================================
+ITEM 1: dst_k_supply.py deducts missed PATs; the league does not score them
+================================================================================================
+defect line: dst_k_supply.py line 56:  pts = g('pat_made') * 1 - g('fg_missed') * 1 - g('pat_missed') * 1
+k12_replacement.py week_points() has NO pat_missed term, so 8.26 and the K1 range were computed correctly.
+
+population: kicker-seasons, REG weeks 1-14, 8+ games, 2021-2025: n = 151 (30, 31, 31, 30, 29 by season)
+missed PATs per kicker-season: mean 1.05, max 5; 39% of kicker-seasons missed none
+per-week difference (deducting minus league rules): mean -0.086, median -0.077, worst -0.385 (Greg Joseph 2022), 9 of 151 kicker-seasons move by 0.25 or more
+
+  league rules (no PAT deduction), as k12_replacement.py:
+    K1 by season  [11.08, 9.85, 11.31, 12.54, 11.85]  range 9.85 to 12.54
+    K12 by season [8.46, 8.08, 8.38, 8.08, 8.31]  REPLACEMENT = 8.26 a week, sd 0.16, n=5 seasons ([30, 31, 31, 30, 29] rosterable kickers)
+  WITH the deduction, as dst_k_supply.py line 56:
+    K1 by season  [10.77, 9.77, 11.08, 12.54, 11.85]  range 9.77 to 12.54
+    K12 by season [8.23, 7.92, 8.38, 8.0, 8.23]  REPLACEMENT = 8.15 a week, sd 0.17, n=5 seasons ([30, 31, 31, 30, 29] rosterable kickers)
+
+dst_k_supply.py kicker curve (weeks 1-17 rows n = 2557, bar 8.26, window W to W+3):
+  as shipped (deducting)     weeks 1-5 15.4 usable (3.4 free)   weeks 10-14 14.2 usable (2.2 free)   week by week [16.8, 15.8, 14.6, 14.4, 15.4, 13.0, 13.2, 12.2, 13.6, 14.8, 14.6, 12.6, 14.2, 14.8]
+  corrected (league rules)   weeks 1-5 15.8 usable (3.8 free)   weeks 10-14 14.6 usable (2.6 free)   week by week [17.2, 16.2, 15.0, 15.0, 15.8, 13.4, 13.4, 12.8, 14.6, 15.4, 15.4, 13.0, 14.2, 15.2]
+
+aside, NOT ESTABLISHED: nflverse fg_missed EXCLUDES blocked field goals (fg_blocked is a separate column); whether ESPN's "Total FG Missed" counts a block is not in the settings file. Size if it does: 0.041 a week per kicker (76 blocks over 1863 kicker-weeks).
+
+================================================================================================
+ITEM 2: dst_weekly_2021_2025.csv has no blocked-kick term and no fumble-lost term
+================================================================================================
+defect: build_dst.py lines 31-41 count sack, int, fr, saf, dtd only; line 66 sums those plus the band.
+BLKK  = field_goal_result == 'blocked' | extra_point_result == 'blocked' | punt_blocked == 1, +2 to defteam
+FUML  = fumble_lost == 1 by the return/defense side (kickoff: posteam; punt: defteam; else: defteam), -2
+
+rebuild check: 2576 shipped rows, 0 whose dst_pts differs from the rebuilt base points (must be 0), and 2718 team-weeks exist in play-by-play, so 142 team-weeks are ABSENT from the shipped file (every one has had_event = 0: 142 absent, 0 of them with an event)
+
+--- ON THE SHIPPED 2,576 ROWS (the published population): n = 2576 D/ST-weeks ---
+  blocked kicks: 188 total, 0.0730 per D/ST-week, = +0.146 points a week; 7.1% of weeks have one
+  fumbles lost by the unit: 161 total, 0.0625 per D/ST-week, = -0.125 points a week; 6.1% of weeks have one (kicking-side own fumbles, not charged: 1)
+  net of both terms: +0.021 points a week
+  week mean / sd  base 5.46 / 6.28   with both terms 5.48 / 6.36
+  D/ST12 (weeks 1-14, ranked by per-game mean, mean of 5 seasons)  base 5.99 [6.17, 5.67, 7.0, 5.62, 5.5]   with terms 6.00 [6.33, 5.67, 6.85, 5.5, 5.67]
+  D/ST12 (weeks 1-14, ranked by per-game sum, mean of 5 seasons)  base 6.04 [6.33, 5.67, 7.33, 5.62, 5.23]   with terms 6.09 [6.33, 6.27, 6.69, 5.46, 5.67]
+  dst_k_supply.py DEFENSES curve, base, bar 5.99                   weeks 1-5 13.5 usable (1.5 free)   weeks 10-14 13.6 usable (1.6 free)
+  dst_k_supply.py DEFENSES curve, with terms, bar 5.99             weeks 1-5 13.8 usable (1.8 free)   weeks 10-14 13.4 usable (1.4 free)
+  dst_k_supply.py DEFENSES curve, with terms, its own D/ST12 bar   weeks 1-5 13.8 usable (1.8 free)   weeks 10-14 13.4 usable (1.4 free)
+  asides, outside the two terms: kickoff-return TDs build_dst.py misses: 29 (+0.068 a week); punt-coverage recoveries it misses: 107 (+0.083 a week)
+
+--- ON EVERY TEAM-WEEK IN PLAY-BY-PLAY (adds the event-less weeks build_dst.py drops): n = 2718 D/ST-weeks ---
+  blocked kicks: 195 total, 0.0717 per D/ST-week, = +0.143 points a week; 7.0% of weeks have one
+  fumbles lost by the unit: 171 total, 0.0629 per D/ST-week, = -0.126 points a week; 6.2% of weeks have one (kicking-side own fumbles, not charged: 1)
+  net of both terms: +0.018 points a week
+  week mean / sd  base 4.97 / 6.51   with both terms 4.99 / 6.59
+  D/ST12 (weeks 1-14, ranked by per-game mean, mean of 5 seasons)  base 5.57 [5.77, 5.08, 6.69, 5.08, 5.23]   with terms 5.51 [5.62, 5.08, 6.62, 5.15, 5.08]
+  D/ST12 (weeks 1-14, ranked by per-game sum, mean of 5 seasons)  base 5.57 [5.77, 5.08, 6.69, 5.08, 5.23]   with terms 5.51 [5.62, 5.08, 6.62, 5.15, 5.08]
+  dst_k_supply.py DEFENSES curve, base, bar 5.99                   weeks 1-5 12.5 usable (0.5 free)   weeks 10-14 12.4 usable (0.4 free)
+  dst_k_supply.py DEFENSES curve, with terms, bar 5.99             weeks 1-5 12.8 usable (0.8 free)   weeks 10-14 12.0 usable (0.0 free)
+  dst_k_supply.py DEFENSES curve, with terms, its own D/ST12 bar   weeks 1-5 13.6 usable (1.6 free)   weeks 10-14 13.4 usable (1.4 free)
+  asides, outside the two terms: kickoff-return TDs build_dst.py misses: 32 (+0.071 a week); punt-coverage recoveries it misses: 113 (+0.083 a week)
+
+the absent team-weeks: n = 142, mean base points -3.88 (all are the points-allowed band alone), by season {2021: 24, 2022: 28, 2023: 23, 2024: 38, 2025: 29}
+2022 has 542 team-weeks, not 544: BUF at CIN week 17 was cancelled.
+

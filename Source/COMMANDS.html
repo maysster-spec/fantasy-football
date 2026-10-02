@@ -1,0 +1,84 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Commands &mdash; this copy moved</title><style>
+:root{--ground:#EFF2F1;--surface:#FCFCFB;--sunk:#E4E9E7;--ink:#15181B;--ink2:#39424A;
+--muted:#66717A;--rule:#D2D9D7;--struct:#3A63A8;--structbg:#E3E9F5;--hole:#C24E1E;
+--disp:"Archivo Narrow",Helvetica Neue,Arial,sans-serif;--body:Georgia,"Source Serif 4",serif;
+--mono:"IBM Plex Mono",Consolas,ui-monospace,monospace}
+@media (prefers-color-scheme:dark){:root{--ground:#0F1213;--surface:#181C1E;--sunk:#22282A;
+--ink:#E7EBEC;--ink2:#BFC7CB;--muted:#8E999F;--rule:#2C3336;--struct:#5E94DC;--structbg:#16233A;
+--hole:#D9773F}}
+*{box-sizing:border-box}
+body{background:var(--ground);color:var(--ink);font-family:var(--body);font-size:16px;
+line-height:1.55;margin:0;padding:0 20px 64px}
+.wrap{max-width:760px;margin:0 auto}
+header{padding:36px 0 18px;border-bottom:3px solid var(--ink)}
+.kick{font-family:var(--disp);text-transform:uppercase;letter-spacing:.14em;font-size:12px;
+font-weight:600;color:var(--struct);margin:0 0 8px}
+h1{font-family:var(--disp);font-weight:700;font-size:clamp(30px,5vw,46px);line-height:.98;
+margin:0;text-transform:uppercase;letter-spacing:-.015em}
+.dek{font-size:17px;color:var(--ink2);margin:14px 0 0}
+a.big{display:block;background:var(--surface);border:1px solid var(--rule);
+border-left:4px solid var(--struct);padding:16px 18px;margin:18px 0 0;text-decoration:none;
+color:var(--ink)}
+a.big:hover{background:var(--structbg)}
+a.big .lbl{display:block;font-family:var(--disp);text-transform:uppercase;letter-spacing:.08em;
+font-size:12px;color:var(--struct);margin-bottom:4px}
+a.big .nm{font-family:var(--disp);font-size:24px;font-weight:700;line-height:1.15}
+a.big .why{display:block;color:var(--muted);font-size:14px;margin-top:5px}
+a.small{color:var(--struct)}
+h2{font-family:var(--disp);text-transform:uppercase;letter-spacing:.05em;font-size:15px;
+margin:32px 0 6px;padding-top:8px;border-top:1px solid var(--rule);color:var(--ink2)}
+p{max-width:66ch;color:var(--ink2)}
+code{font-family:var(--mono);font-size:13.5px;background:var(--sunk);padding:2px 6px;
+border-radius:3px}
+ul.pages{list-style:none;margin:10px 0 0;padding:0}
+ul.pages li{margin:0 0 7px}
+ul.pages a{font-family:var(--disp);text-transform:uppercase;letter-spacing:.07em;font-size:12.5px;
+color:var(--struct);text-decoration:none;border-bottom:1px solid var(--struct)}
+ul.pages span{color:var(--muted);font-size:13.5px;margin-left:10px}
+footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--rule);color:var(--muted);
+font-size:13px}
+</style></head><body><div class="wrap">
+
+<header>
+<p class="kick">The Poetry of Junkyard Juggers</p>
+<h1>The commands moved one folder up</h1>
+<p class="dek">You opened the copy in <code>Source\</code>. It is not the live page and has not been
+since the draft. The live one is below, and so is the old one if that is what you wanted.</p>
+</header>
+
+<a class="big" href="../COMMANDS.html">
+<span class="lbl">go here &rarr;</span>
+<span class="nm">The commands page</span>
+<span class="why">Every command, what it does, and a copy button on each one. Rebuilt by
+ff.bat, so it cannot go stale.</span>
+</a>
+
+<a class="big" href="../_archive/COMMANDS_Source_20260918_predraft.html">
+<span class="lbl">or here</span>
+<span class="nm">Archived draft commands</span>
+<span class="why">The pre-draft console as it stood on 3 September: draft_night.bat,
+sept5_after.bat and live_draft.py. The draft was 7 September, so every command on it is finished.
+Kept so a question about what ran that night has an answer.</span>
+</a>
+
+<h2>the other pages</h2>
+<ul class="pages">
+<li><a href="WEEK_SHEET.html">the week sheet</a><span>the bar, every free body priced, what to do</span></li>
+<li><a href="MY_TODO.html">your to-do list</a><span>everything that is yours, and the commands</span></li>
+<li><a href="THE_WEEKLY_WIRE.html">the wire</a><span>who is available, the stash list, weeks ahead</span></li>
+<li><a href="LINEUP_CHECK.html">lineup check</a><span>anyone in your nine who is out, doubtful or on bye</span></li>
+</ul>
+
+<h2>why this page exists at all</h2>
+<p>Two links used to point here by accident. A link written as <code>COMMANDS.html</code> on a page
+that lives in <code>Source\</code> resolves to <code>Source\COMMANDS.html</code>, which is this file,
+not the real one at the folder root. Both links were fixed on 19 September. This page stays as a net
+for an old bookmark, and now it takes you where you were going instead of describing a path at you.</p>
+
+<footer>Static signpost, not generated. The live page is built by
+<code>py make_commands.py</code>, which writes the folder root and only the folder root.
+Doc 369.</footer>
+
+</div></body></html>

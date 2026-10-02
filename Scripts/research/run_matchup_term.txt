@@ -1,0 +1,24 @@
+population: 17,799 player-weeks, 2021, 2022, 2023, 2024, 2025, weeks 5 to 18, 3+ games played, defense with 4+ weeks of record
+
+pos seasons         n   rho(own,next)   rho(soft,next)   rho(soft,resid)   b_soft/pt      se  top-bottom quartile gain
+WR  all         8,444           0.559            0.002             0.017       0.022   0.014                     +0.37
+WR  2021        1,679           0.562            0.002             0.006       0.008   0.033                     -0.03
+WR  2022        1,624           0.543           -0.016            -0.003      -0.005   0.033                     +0.10
+WR  2023        1,748           0.579            0.030             0.071       0.083   0.028                     +1.16
+WR  2024        1,676           0.554           -0.031            -0.030      -0.043   0.035                     -0.60
+WR  2025        1,717           0.551            0.024             0.033       0.044   0.032                     +0.47
+TE  all         4,114           0.499            0.047             0.066       0.118   0.028                     +0.89
+TE  2021          790           0.497            0.081             0.113       0.177   0.056                     +1.74
+TE  2022          810           0.448            0.070             0.087       0.150   0.060                     +0.87
+TE  2023          811           0.505           -0.011             0.003       0.007   0.073                     -0.03
+TE  2024          836           0.546            0.054             0.070       0.143   0.071                     +1.02
+TE  2025          867           0.504            0.030             0.044       0.075   0.059                     +0.50
+RB  all         5,241           0.595            0.054             0.069       0.113   0.023                     +1.24
+RB  2021        1,011           0.544            0.044             0.055       0.093   0.054                     +0.74
+RB  2022        1,076           0.565            0.085             0.088       0.163   0.056                     +1.56
+RB  2023        1,006           0.612            0.050             0.081       0.105   0.040                     +1.24
+RB  2024        1,065           0.636            0.064             0.081       0.134   0.050                     +1.26
+RB  2025        1,083           0.616            0.036             0.047       0.084   0.054                     +0.53
+
+read: b_soft/pt is the coefficient on the defense term (points the man gains per point the defense allows above
+the league average to his position, net of his own rate); the last column is the decision, in points a week.

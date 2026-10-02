@@ -1,0 +1,81 @@
+{
+ "N": 1500,
+ "seed": 20260916,
+ "week": 2,
+ "wire": "WIRE_20260916.csv",
+ "n_free": 316,
+ "top5_page": [
+  "Dalton Schultz",
+  "Malik Washington",
+  "Devaughn Vele",
+  "Caleb Douglas",
+  "Kalif Raymond"
+ ],
+ "top5_gross": [
+  "Dalton Schultz",
+  "Malik Washington",
+  "Caleb Douglas",
+  "Devaughn Vele",
+  "Kalif Raymond"
+ ],
+ "top5_net": [
+  "Dalton Schultz",
+  "Malik Washington",
+  "Caleb Douglas",
+  "Devaughn Vele",
+  "Kalif Raymond"
+ ],
+ "first_by_lane_page": {
+  "fill": null,
+  "bet": "Dalton Schultz",
+  "seat": "Kaelon Black"
+ },
+ "first_by_lane_net": {
+  "fill": "Daniel Jones",
+  "bet": "Dalton Schultz",
+  "seat": "Samaje Perine"
+ },
+ "null": false,
+ "largest_change": {
+  "player": "Chiefs D/ST",
+  "pos": "D/ST",
+  "team": "KC",
+  "lane": "fill",
+  "label": "",
+  "status": "ACTIVE",
+  "ruled_out": 0,
+  "calendar_week": 11,
+  "page_worth": 5.9,
+  "page_rank": 20,
+  "u_gross": 0.0,
+  "u_gross_rank": 23,
+  "u_net": -2.68,
+  "u_net_se": 0.046,
+  "u_net_rank": 23,
+  "best_drop": "T.J. Hockenson",
+  "u_net_any_drop": -1.48,
+  "best_drop_any": "Browns D/ST",
+  "u_net_vs_cheapest_drop": -1.48,
+  "change": -8.58,
+  "drop Ashton Jeanty": -31.79,
+  "drop Browns D/ST": -1.48,
+  "drop Davante Adams": -28.84,
+  "drop Eddy Pineiro": -118.7,
+  "drop George Pickens": -31.18,
+  "drop J.K. Dobbins": -8.56,
+  "drop Jalen Hurts": -43.18,
+  "drop Mike Washington Jr.": -6.13,
+  "drop Puka Nacua": -89.96,
+  "drop Quinshon Judkins": -34.34,
+  "drop Rico Dowdle": -12.27,
+  "drop Sam LaPorta": -22.28,
+  "drop T.J. Hockenson": -2.68,
+  "drop Tyler Shough": -3.06,
+  "drop Xavier Worthy": -5.6,
+  "drop no drop": 0.0
+ },
+ "bare_roster": {
+  "A": 1536.5741355664707,
+  "U": 1498.9442213194022
+ }
+}

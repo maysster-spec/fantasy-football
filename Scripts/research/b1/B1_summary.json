@@ -1,0 +1,79 @@
+{
+ "N": 3000,
+ "seed": 20260916,
+ "wire": "WIRE_20260915.csv",
+ "n_priced": 252,
+ "n_unpriced": 28,
+ "top5_A": [
+  "Juwan Johnson",
+  "Brenton Strange",
+  "Pat Freiermuth",
+  "Dalton Schultz",
+  "Gunnar Helm"
+ ],
+ "top5_C": [
+  "Tyjae Spears",
+  "Juwan Johnson",
+  "Brenton Strange",
+  "Pat Freiermuth",
+  "Dalton Schultz"
+ ],
+ "first_A": {
+  "QB": "Aaron Rodgers",
+  "RB": "Alec Ingold",
+  "WR": "Adonai Mitchell",
+  "TE": "Juwan Johnson"
+ },
+ "first_C": {
+  "QB": "Daniel Jones",
+  "RB": "Tyjae Spears",
+  "WR": "Kayshon Boutte",
+  "TE": "Juwan Johnson"
+ },
+ "null": false,
+ "n_moved": 195,
+ "by_position": {
+  "QB": {
+   "n": 42,
+   "mean_page": 0.0,
+   "mean_C": 0.02,
+   "zero_on_page": 42,
+   "zero_under_C": 39
+  },
+  "RB": {
+   "n": 51,
+   "mean_page": 0.0,
+   "mean_C": 0.17,
+   "zero_on_page": 51,
+   "zero_under_C": 3
+  },
+  "WR": {
+   "n": 98,
+   "mean_page": 0.0,
+   "mean_C": 0.16,
+   "zero_on_page": 98,
+   "zero_under_C": 4
+  },
+  "TE": {
+   "n": 61,
+   "mean_page": 2.03,
+   "mean_C": 0.23,
+   "zero_on_page": 8,
+   "zero_under_C": 0
+  }
+ },
+ "bare_roster": {
+  "A": 1536.6,
+  "B": 1465.2,
+  "C": 1491.1,
+  "D": 1497.8,
+  "E": 1439.2
+ },
+ "arms": {
+  "A": "byes only, hole at zero (the page)",
+  "B": "measured absences, hole at zero",
+  "C": "measured absences, hole streamed",
+  "D": "C plus handcuff relief 12.13",
+  "E": "doc 111 rates, hole streamed"
+ }
+}

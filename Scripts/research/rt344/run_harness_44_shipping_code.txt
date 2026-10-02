@@ -1,0 +1,46 @@
+  [PASS] C0: sheet written
+  [PASS] C0: no team-code problem on the wire page
+  [PASS] C0: Pearsall (on IR) not on the sheet
+  [PASS] C0: Cooper's card on the sheet
+  [PASS] C1: byes code that resolves to nothing: sheet refused
+  [PASS] C1: console names XXX
+  [PASS] C1: wire page says the sheet was not rebuilt
+  [PASS] C1b: byes spelled WAS still resolve (alias)
+  [PASS] C1c: one pull row with a bad code: sheet refused
+  [PASS] C1c: console names XXX (1 players)
+  [PASS] C2: team_2025.csv: wire page names XXX
+  [PASS] C2: team_2025.csv: console prints the problem
+  [PASS] C3: sched_2026.csv: wire page names XXX
+  [PASS] C3: sched_2026.csv: console prints the problem
+  [PASS] C4: pos_allowed_2025.csv: wire page names XXX
+  [PASS] C4: pos_allowed_2025.csv: console prints the problem
+  [PASS] C5: team_shape guard fires and shows on the wire page
+  [PASS] C6: Pearsall shown when ESPN lists him active
+  [PASS] C7: Bryant (active, no projection) named in the missing-row box
+  [PASS] C7b: Bryant (OUT, no projection) left to ESPN
+  [PASS] C8: a claimed carded player's card is off the sheet
+  [PASS] C8: the console names him
+  [PASS] C9: a card with a blank id and a messy team code still shows
+  [PASS] C10: the defence run renders (week read from the roster payload)
+  [PASS] C10: no run without a bye sits below a run with one
+  [PASS] C11: a single tight-end bye reads as one pickup, not a trade
+  [PASS] C12: week 11 (three starters, two positions) keeps the trade headline
+  [PASS] C13: Washington priced as the handcuff
+  [PASS] C13: holder spelled 'Ashton Jeanty Jr.': same handcuff price
+  [PASS] C14: wrong next_man_id: same handcuff price
+  [PASS] C14: console names the id that matches nobody
+  [PASS] C15: a card with a wrong id still shows
+  [PASS] C15: console names the id mismatch
+  [PASS] C17: the stash block exists at all
+  [PASS] C17: a back ESPN lists OUT is not named as the man who inherits
+  [PASS] C17: the healthy man one row deeper is named instead
+  [PASS] C17: and the page says whom it stepped over, and why
+  [PASS] C17: the base run still names somebody at SF
+  [PASS] C16: base run writes FREE_UNRANKED_<date>.csv (header, nobody off the board in the recorded pool)
+  [PASS] C16: a planted off-board free back is in the file with position, team and ownership
+  [PASS] C16: the sheet still finds the newest WIRE file (no glob collision)
+  [PASS] C16: the wire page still names him in the not-on-our-board list
+  [PASS] C16: an off-board player with no ownership number is written at 0.0 and the run finishes
+  [PASS] C16: a board player with no ownership number: both pages still build
+
+  44 of 44 checks pass

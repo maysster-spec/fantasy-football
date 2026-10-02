@@ -1,0 +1,25 @@
+seasons used: [2021, 2022, 2023, 2024, 2025]   (p-values one-sided, in his direction)
+
+DESIGN 1 -- DOC 299 AS PUBLISHED: share of ALL team WR targets
+  147 team-seasons, treatment 70, control 77
+  slot                     arrival      none      diff   p by team  p by season   n
+  1st, the incumbent       -0.0302   -0.0015   -0.0287      0.2365       0.0115   69/76
+  2nd  <-- PLACEBO         -0.0238   +0.0126   -0.0364      0.0085       0.0010   61/72
+  3rd alone                -0.0061   +0.0176   -0.0237      0.0360       0.0267   45/62
+  4th alone                +0.0055   +0.0168   -0.0114      0.1062       0.1960   30/40
+  3rd + 4th (doc 299)      -0.0015   +0.0173   -0.0188      0.0232       0.0243   75/102
+
+DESIGN 2 -- HOLDOVER POOL: the arrival is out of the denominator, so
+            only a real reallocation between the men already here can show
+  127 team-seasons, treatment 54, control 73
+  slot                     arrival      none      diff   p by team  p by season   n
+  1st, the incumbent       +0.0019   -0.0150   +0.0169      0.8685       0.8423   54/72
+  2nd  <-- PLACEBO         -0.0246   +0.0068   -0.0313      0.0780       0.0200   51/69
+  3rd alone                +0.0074   +0.0208   -0.0133      0.1767       0.1905   45/62
+  4th alone                +0.0219   +0.0228   -0.0009      0.3222       0.5360   30/40
+  3rd + 4th (doc 299)      +0.0132   +0.0216   -0.0083      0.1583       0.2625   75/102
+
+READ IT LIKE THIS. Design 1 answers "did his slice of the pie shrink",
+and adding a man who eats guarantees that for everyone. Design 2 answers
+"did the arrival take more from the bottom than from the top", which is
+the claim. Where the two disagree, design 2 is the one about the mechanism.

@@ -1,0 +1,45 @@
+TASK A -- events rebuilt: 114 (JOB 2 had 114); spells capped at week 14
+
+===== BACKUP = the usage order's man (the page's man) =====
+  start 114
+  has a named man: 112
+  spell of at least one week inside the horizon: 112
+  starter has pre-absence games (a per-game rate exists): 112
+  backup touched the ball before the absence (breadth defined): 112  <- the analysis rows
+  outcome capped at 1.0 on 53 of 112 rows (raw mean 0.979, capped mean 0.793)
+
+  M1  captured ~ share_pre                 n=112  R2=0.091  teams=32
+      share_pre  coef +0.761  se 0.229 (p=0.0012)   team-clustered se 0.221 (p=0.0017)
+  M2  captured ~ share_pre + breadth       n=112  R2=0.094  increment in R2 +0.0023
+      share_pre  coef +0.755  se 0.230 (p=0.0014)   team-clustered se 0.228 (p=0.0023)
+      breadth    coef -0.054  se 0.102 (p=0.5962)   team-clustered se 0.106 (p=0.6121)
+  KILL CONDITION: breadth adds -5.4 points of captured share per 1.0 of breadth, p=0.5962 -> DEAD
+  M3  captured ~ share_pre + target_ratio  R2=0.111: target_ratio coef -0.263 se 0.168 (p=0.1214; clustered p=0.2009)
+  by end: carry-specialist (target ratio < 0.15) n=31 captured 0.768 share_pre 0.268 | mixed (0.15-0.50) n=74 captured 0.829 share_pre 0.292 | target-specialist (> 0.50) n=7 captured 0.523 share_pre 0.175
+  breadth low   n= 36  breadth 0.18  share_pre 0.265  captured 0.775  pre work 35.5
+  breadth mid   n= 38  breadth 0.46  share_pre 0.317  captured 0.833  pre work 61.1
+  breadth high  n= 38  breadth 0.76  share_pre 0.250  captured 0.771  pre work 41.1
+  sensitivity, uncapped outcome: breadth coef -0.219 se 0.167 (p=0.1913)
+  sensitivity, 10+ pre-absence touches (n=100): breadth coef -0.173 se 0.105 (p=0.1031; clustered p=0.0929)
+
+===== BACKUP = the ACTUAL first-week inheritor (sensitivity) =====
+  start 114
+  has a named man: 114
+  spell of at least one week inside the horizon: 114
+  starter has pre-absence games (a per-game rate exists): 114
+  backup touched the ball before the absence (breadth defined): 102  <- the analysis rows
+  outcome capped at 1.0 on 53 of 102 rows (raw mean 1.066, capped mean 0.857)
+
+  M1  captured ~ share_pre                 n=102  R2=0.004  teams=31
+      share_pre  coef +0.102  se 0.166 (p=0.5382)   team-clustered se 0.146 (p=0.4899)
+  M2  captured ~ share_pre + breadth       n=102  R2=0.020  increment in R2 +0.0158
+      share_pre  coef +0.078  se 0.166 (p=0.6418)   team-clustered se 0.148 (p=0.6036)
+      breadth    coef +0.109  se 0.086 (p=0.2092)   team-clustered se 0.067 (p=0.1126)
+  KILL CONDITION: breadth adds +10.9 points of captured share per 1.0 of breadth, p=0.2092 -> DEAD
+  M3  captured ~ share_pre + target_ratio  R2=0.017: target_ratio coef +0.182 se 0.156 (p=0.2465; clustered p=0.1344)
+  by end: carry-specialist (target ratio < 0.15) n=31 captured 0.777 share_pre 0.217 | mixed (0.15-0.50) n=67 captured 0.900 share_pre 0.273 | target-specialist (> 0.50) n=4 captured 0.764 share_pre 0.181
+  breadth low   n= 34  breadth 0.15  share_pre 0.225  captured 0.796  pre work 29.9
+  breadth mid   n= 34  breadth 0.44  share_pre 0.290  captured 0.898  pre work 56.7
+  breadth high  n= 34  breadth 0.70  share_pre 0.242  captured 0.878  pre work 42.6
+  sensitivity, uncapped outcome: breadth coef +0.008 se 0.169 (p=0.9601)
+  sensitivity, 10+ pre-absence touches (n=88): breadth coef -0.009 se 0.097 (p=0.9298; clustered p=0.9248)

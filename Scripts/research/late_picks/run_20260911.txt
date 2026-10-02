@@ -1,0 +1,312 @@
+==================== build_weekly.py (run 11 Sept 2026, cloud, nflverse releases) ====================
+rows 69934 | join: id 62336 name 7066 none 532
+unjoined share by season: {2014: 0.028, 2015: 0.012, 2016: 0.01, 2017: 0.004, 2018: 0.006, 2019: 0.004, 2020: 0.009, 2021: 0.008, 2022: 0.003, 2023: 0.004, 2024: 0.002, 2025: 0.002}
+snap-weighted unjoined by tier (tier from PFR where no gsis):
+{'1': 0.0, '2-3': 0.0, '4-7': 0.0, 'undrafted': 0.015}
+
+==================== risers.py (run 11 Sept 2026, cloud, nflverse releases) ====================
+RISERS 2015-2025: 794 | low pedigree (rounds 4-7 + undrafted) 404 | high 390
+low                         high    low  n low  n high
+mech                                                  
+already led                0.572  0.418    169     223
+absent: injury             0.067  0.121     49      26
+absent: injured in game    0.021  0.050     20       8
+absent: gone               0.010  0.017      7       4
+absent: benched            0.010  0.020      8       4
+absent: other              0.005  0.012      5       2
+absent during the stretch  0.108  0.163     66      42
+overtook                   0.074  0.072     29      29
+grew beside                0.131  0.126     51      51
+season start               0.003  0.000      0       1
+
+RB (n=274)
+mech  already led  absent: injury  absent: injured in game  absent: gone  absent: benched  absent: other  absent during the stretch  overtook  grew beside  season start
+low                                                                                                                                                                     
+high           27               5                        4             3                1              0                         22        17           31             0
+low            20              22                       11             3                3              2                         49        18           36             0
+
+WR (n=346)
+mech  already led  absent: injury  absent: injured in game  absent: gone  absent: benched  absent: other  absent during the stretch  overtook  grew beside  season start
+low                                                                                                                                                                     
+high          141              17                        3             1                2              1                          8         6            6             1
+low           101              21                        5             4                5              2                         11         6            5             0
+
+TE (n=174)
+mech  already led  absent: injury  absent: injured in game  absent: gone  absent: benched  absent: other  absent during the stretch  overtook  grew beside  season start
+low                                                                                                                                                                     
+high           55               4                        1             0                1              1                         12         6           14             0
+low            48               6                        4             0                0              1                          6         5           10             0
+
+chi-square, mechanism mix low vs high: p=0.0006
+
+median years in the league at the stretch: low 2.5 | high 2.0
+low-pedigree risers by years of experience: {0.0: 70, 1.0: 79, 2.0: 53, 3.0: 56, 4.0: 42, 5.0: 40, 6.0: 25, 7.0: 18, 8.0: 7, 9.0: 5, 10.0: 6, 11.0: 1, 13.0: 2}
+
+LOW-PEDIGREE RISERS, top 30 by the four-game stretch (of 404):
+ season  week team pos            player      tier  years_exp                      mech  pre_share  stretch_ppg
+   2015     2  ATL  RB   Devonta Freeman       4-7        1.0   absent: injured in game       0.37        29.58
+   2023     2  CAR  WR      Adam Thielen undrafted       10.0               already led       0.88        19.20
+   2020     2  CAR  RB        Mike Davis       4-7        5.0 absent during the stretch       0.04        18.90
+   2018     2  IND  RB       Marlon Mack       4-7        1.0               grew beside        NaN        18.17
+   2015     6  CHI  RB   Jeremy Langford       4-7        0.0 absent during the stretch       0.07        17.80
+   2024     2  CAR  RB     Chuba Hubbard       4-7        3.0               already led       0.54        17.65
+   2019    14  PHI  RB      Boston Scott       4-7        1.0               grew beside       0.08        17.62
+   2017     2   NE  WR       Chris Hogan undrafted        6.0               already led       0.90        17.25
+   2020     2  JAX  RB    James Robinson undrafted        0.0               already led       0.68        16.90
+   2019     4  ARI  RB     Chase Edmonds       4-7        1.0               grew beside       0.21        16.88
+   2015     4  MIN  WR      Stefon Diggs       4-7        0.0            absent: injury        NaN        16.82
+   2022     2  HOU  RB     Dameon Pierce       4-7        0.0                  overtook       0.29        16.75
+   2015     2  JAX  WR       Allen Hurns undrafted        1.0               already led       0.96        16.50
+   2020     4  PHI  WR    Travis Fulgham       4-7        1.0            absent: injury        NaN        16.30
+   2021     4  NYJ  RB    Michael Carter       4-7        0.0                  overtook       0.38        15.82
+   2015    10  BAL  RB    Javorius Allen       4-7        0.0 absent during the stretch       0.15        15.55
+   2015     2  CLE  TE     Gary Barnidge       4-7        7.0               already led       0.85        15.52
+   2017    12  JAX  WR       Keelan Cole undrafted        0.0               already led       0.58        15.48
+   2024     2  ATL  WR    Darnell Mooney       4-7        4.0               already led       0.95        15.25
+   2025     2  DAL  TE     Jake Ferguson       4-7        3.0               already led       0.77        15.22
+   2019     2  SEA  TE       Will Dissly       4-7        1.0               already led       0.51        15.18
+   2023     5  BAL  RB       Gus Edwards undrafted        5.0               already led       0.45        14.98
+   2023     2   KC  RB     Isiah Pacheco       4-7        1.0               already led       0.48        14.62
+   2015     2   NE  RB LeGarrette Blount undrafted        5.0               grew beside        NaN        14.60
+   2023     2  CLE  RB       Jerome Ford       4-7        1.0   absent: injured in game       0.41        14.45
+   2018     2  CHI  RB       Tarik Cohen       4-7        1.0               grew beside       0.40        14.45
+   2016     3  MIA  RB         Jay Ajayi       4-7        1.0            absent: injury       0.56        14.45
+   2018     2   SF  RB       Matt Breida undrafted        1.0               grew beside       0.45        14.45
+   2024     2   SF  WR    Jauan Jennings       4-7        4.0               already led       0.49        14.45
+   2020     2   GB  TE     Robert Tonyan undrafted        3.0               already led       0.62        14.45
+
+RELEVANT FROM WEEK 1 (not established last season, first four games from week 1 at the bar): 342 | low 125 | high 217
+ season team pos          player      tier  share_w1  ppg4
+   2015  ATL  RB Devonta Freeman       4-7      0.37 23.82
+   2023  MIA  RB  Raheem Mostert undrafted      0.73 20.72
+   2015  NYJ  RB     Chris Ivory undrafted      0.53 19.80
+   2023   LA  RB  Kyren Williams       4-7      0.65 19.02
+   2023   LA  WR      Puka Nacua       4-7      0.78 19.00
+   2016  DET  WR    Marvin Jones       4-7      0.94 17.92
+   2024   SF  RB    Jordan Mason undrafted      0.81 17.85
+   2015  CLE  WR Travis Benjamin       4-7      0.66 17.70
+   2020  JAX  RB  James Robinson undrafted      0.68 17.40
+   2015   NE  RB      Dion Lewis       4-7      0.75 17.32
+   2022  DET  RB Jamaal Williams       4-7      0.33 17.27
+   2017  WAS  RB  Chris Thompson       4-7      0.48 17.18
+   2016  CLE  RB  Isaiah Crowell undrafted      0.58 16.42
+   2018   NE  RB     James White       4-7      0.48 16.32
+   2024   SF  WR  Jauan Jennings       4-7      0.49 16.23
+
+==================== openings.py (run 11 Sept 2026, cloud, nflverse releases) ====================
+OPENINGS 826 (first game of an absence, one per candidate-season) | risers 115 (13.9%) | low pedigree 554 (10.8%) | high 272 (20.2%)
+           size   mean
+pos low               
+RB  False    60  0.383
+    True    127  0.291
+TE  False    59  0.254
+    True    128  0.062
+WR  False   153  0.111
+    True    299  0.050
+
+ABOVE vs AT-OR-BELOW the median INSIDE EACH POSITION, within each group (rate above / rate below, n, Fisher p)
+  snap share before                  | low: 0.122 / 0.097 (n 245/309, p=0.409) | high: 0.251 / 0.124 (n 167/105, p=0.013)
+  snap share, last two games         | low: 0.153 / 0.070 (n 255/299, p=0.002) | high: 0.263 / 0.125 (n 152/120, p=0.006)
+  share of the backup snaps (RB/TE)  | low: 0.211 / 0.142 (n 128/127, p=0.189) | high: 0.397 / 0.246 (n 58/61, p=0.115)
+  EPA per play, this season + last   | low: 0.147 / 0.096 (n 217/188, p=0.131) | high: 0.226 / 0.194 (n 93/124, p=0.613)
+  yards per play                     | low: 0.127 / 0.120 (n 205/200, p=0.881) | high: 0.276 / 0.143 (n 105/112, p=0.019)
+  EPA gap over the leader            | low: 0.140 / 0.143 (n 179/168, p=1.000) | high: 0.221 / 0.173 (n 86/98, p=0.460)
+  the leader's EPA per play          | low: 0.116 / 0.139 (n 233/223, p=0.485) | high: 0.219 / 0.172 (n 105/116, p=0.400)
+  special-teams share                | low: 0.094 / 0.132 (n 342/212, p=0.162) | high: 0.171 / 0.213 (n 70/202, p=0.495)
+  years in the league                | low: 0.087 / 0.128 (n 263/288, p=0.133) | high: 0.151 / 0.247 (n 126/146, p=0.069)
+  relief game already on record, low: 0.126 (n 215) vs 0.097 (n 339), p=0.327
+  relief game already on record, high: 0.250 (n 132) vs 0.157 (n 140), p=0.070
+
+INTERACTION (pooled logistic: signal z-scored, low, signal x low, position dummies)
+  snap share before                  n=826  signal in high +0.40 (z +2.76) | extra in low -0.29 (z -1.38) | signal in low +0.11
+  snap share, last two games         n=826  signal in high +0.36 (z +2.47) | extra in low +0.17 (z +0.81) | signal in low +0.54
+  share of the backup snaps (RB/TE)  n=374  signal in high +0.39 (z +1.79) | extra in low -0.13 (z -0.47) | signal in low +0.26
+  EPA per play, this season + last   n=622  signal in high +0.25 (z +1.20) | extra in low -0.10 (z -0.41) | signal in low +0.14
+  yards per play                     n=622  signal in high +0.39 (z +1.94) | extra in low -0.24 (z -0.95) | signal in low +0.16
+  EPA gap over the leader            n=531  signal in high +0.24 (z +1.22) | extra in low -0.24 (z -0.93) | signal in low +0.00
+  the leader's EPA per play          n=677  signal in high -0.13 (z -0.78) | extra in low +0.17 (z +0.75) | signal in low +0.04
+  special-teams share                n=826  signal in high -0.30 (z -1.38) | extra in low +0.14 (z +0.55) | signal in low -0.15
+  years in the league                n=823  signal in high -0.29 (z -1.95) | extra in low -0.06 (z -0.25) | signal in low -0.34
+  relief game on record              n=826  signal in high +0.33 (z +1.00) | extra in low -0.25 (z -0.57) | signal in low +0.08
+
+==================== flips.py (run 11 Sept 2026, cloud, nflverse releases) ====================
+ALL ROTATION BACKUPS 1780: took the role 16.9% (low 13.9%, high 23.7%); rose 13.0% (low 10.3%, high 19.2%)
+ROTATION BACKUPS 1131 (clean: no leader absence in the next four games; 649 dropped for one) | rose 126 (11.1%) | low 787 (7.0%) | high 344 (20.6%)
+           size   mean
+pos low               
+RB  False   118  0.356
+    True    287  0.143
+TE  False   158  0.127
+    True    376  0.019
+WR  False    68  0.132
+    True    124  0.056
+
+===== OUTCOME: rose (four games at the bar) | low 7.0% (n 787), high 20.6% (n 344)
+ABOVE vs AT-OR-BELOW the median inside each position (rate above / below, n, Fisher p)
+  snap share, last two games       | low: 0.082 / 0.060 (n 352/435, p=0.261) | high: 0.263 / 0.119 (n 209/135, p=0.001)
+  snap share, season               | low: 0.093 / 0.052 (n 343/444, p=0.034) | high: 0.271 / 0.095 (n 218/126, p=0.000)
+  snap trend (last two - earlier)  | low: 0.055 / 0.079 (n 361/317, p=0.279) | high: 0.149 / 0.237 (n 121/173, p=0.076)
+  EPA per play, this season + last | low: 0.112 / 0.072 (n 259/251, p=0.127) | high: 0.256 / 0.246 (n 125/134, p=0.887)
+  yards per play                   | low: 0.102 / 0.081 (n 264/246, p=0.446) | high: 0.300 / 0.209 (n 120/139, p=0.114)
+  the leader's EPA per play        | low: 0.058 / 0.086 (n 325/302, p=0.216) | high: 0.195 / 0.232 (n 118/142, p=0.545)
+  EPA gap over the leader          | low: 0.113 / 0.071 (n 212/210, p=0.178) | high: 0.316 / 0.206 (n 98/102, p=0.079)
+  points per snap                  | low: 0.104 / 0.040 (n 365/422, p=0.001) | high: 0.260 / 0.132 (n 200/144, p=0.004)
+  years in the league              | low: 0.058 / 0.079 (n 327/456, p=0.321) | high: 0.140 / 0.258 (n 150/194, p=0.007)
+  special-teams share              | low: 0.045 / 0.108 (n 471/316, p=0.001) | high: 0.118 / 0.239 (n 93/251, p=0.016)
+
+INTERACTION (pooled logistic: within-position z signal, low, signal x low, position dummies)
+  snap share, last two games       n=1131  signal in high +0.52 (z +3.92) | extra in low -0.26 (z -1.32) | signal in low +0.26
+  snap share, season               n=1131  signal in high +0.70 (z +4.83) | extra in low -0.29 (z -1.40) | signal in low +0.40
+  snap trend (last two - earlier)  n=972   signal in high -0.49 (z -3.50) | extra in low +0.23 (z +1.07) | signal in low -0.27
+  EPA per play, this season + last n=769   signal in high +0.31 (z +1.93) | extra in low -0.19 (z -0.83) | signal in low +0.13
+  yards per play                   n=769   signal in high +0.38 (z +2.38) | extra in low -0.30 (z -1.35) | signal in low +0.07
+  the leader's EPA per play        n=887   signal in high -0.22 (z -1.44) | extra in low +0.15 (z +0.66) | signal in low -0.07
+  EPA gap over the leader          n=622   signal in high +0.49 (z +2.72) | extra in low -0.30 (z -1.21) | signal in low +0.19
+  points per snap                  n=1131  signal in high +0.66 (z +4.70) | extra in low -0.36 (z -2.02) | signal in low +0.30
+  years in the league              n=1127  signal in high -0.32 (z -2.36) | extra in low +0.27 (z +1.27) | signal in low -0.05
+  special-teams share              n=1131  signal in high -0.72 (z -3.12) | extra in low +0.04 (z +0.16) | signal in low -0.68
+
+===== OUTCOME: took the role (out-snapped the leader in 2 of the next 4) | low 15.1% (n 787), high 27.3% (n 344)
+ABOVE vs AT-OR-BELOW the median inside each position (rate above / below, n, Fisher p)
+  snap share, last two games       | low: 0.219 / 0.097 (n 352/435, p=0.000) | high: 0.354 / 0.148 (n 209/135, p=0.000)
+  snap share, season               | low: 0.230 / 0.090 (n 343/444, p=0.000) | high: 0.367 / 0.111 (n 218/126, p=0.000)
+  snap trend (last two - earlier)  | low: 0.125 / 0.151 (n 361/317, p=0.317) | high: 0.149 / 0.312 (n 121/173, p=0.001)
+  EPA per play, this season + last | low: 0.197 / 0.151 (n 259/251, p=0.200) | high: 0.320 / 0.291 (n 125/134, p=0.686)
+  yards per play                   | low: 0.208 / 0.138 (n 264/246, p=0.047) | high: 0.325 / 0.288 (n 120/139, p=0.589)
+  the leader's EPA per play        | low: 0.114 / 0.169 (n 325/302, p=0.051) | high: 0.220 / 0.303 (n 118/142, p=0.159)
+  EPA gap over the leader          | low: 0.198 / 0.133 (n 212/210, p=0.089) | high: 0.316 / 0.284 (n 98/102, p=0.646)
+  points per snap                  | low: 0.192 / 0.116 (n 365/422, p=0.004) | high: 0.280 / 0.264 (n 200/144, p=0.807)
+  years in the league              | low: 0.156 / 0.147 (n 327/456, p=0.762) | high: 0.267 / 0.278 (n 150/194, p=0.903)
+  special-teams share              | low: 0.104 / 0.222 (n 471/316, p=0.000) | high: 0.140 / 0.323 (n 93/251, p=0.001)
+
+INTERACTION (pooled logistic: within-position z signal, low, signal x low, position dummies)
+  snap share, last two games       n=1131  signal in high +0.57 (z +4.75) | extra in low +0.05 (z +0.29) | signal in low +0.61
+  snap share, season               n=1131  signal in high +0.84 (z +6.24) | extra in low -0.21 (z -1.19) | signal in low +0.64
+  snap trend (last two - earlier)  n=972   signal in high -0.57 (z -4.35) | extra in low +0.40 (z +2.27) | signal in low -0.17
+  EPA per play, this season + last n=769   signal in high +0.06 (z +0.43) | extra in low +0.08 (z +0.41) | signal in low +0.14
+  yards per play                   n=769   signal in high +0.08 (z +0.62) | extra in low +0.05 (z +0.27) | signal in low +0.13
+  the leader's EPA per play        n=887   signal in high -0.28 (z -1.96) | extra in low +0.19 (z +1.04) | signal in low -0.09
+  EPA gap over the leader          n=622   signal in high +0.30 (z +1.77) | extra in low -0.08 (z -0.38) | signal in low +0.22
+  points per snap                  n=1131  signal in high +0.10 (z +0.83) | extra in low +0.09 (z +0.60) | signal in low +0.18
+  years in the league              n=1127  signal in high -0.12 (z -1.19) | extra in low +0.21 (z +1.37) | signal in low +0.09
+  special-teams share              n=1131  signal in high -0.73 (z -3.80) | extra in low +0.16 (z +0.71) | signal in low -0.57
+
+==================== combo.py (run 11 Sept 2026, cloud, nflverse releases) ====================
+
+PART B, all seasons (in-sample for low pedigree)
+  low pedigree   0 signals: 2/150 = 0.013 | 1 signals: 20/322 = 0.062 | 2 signals: 18/234 = 0.077 | 3 signals: 15/81 = 0.185   (all vs fewer p=0.0002)
+  high pedigree  0 signals: 0/24 = 0.000 | 1 signals: 10/92 = 0.109 | 2 signals: 26/116 = 0.224 | 3 signals: 35/112 = 0.312   (all vs fewer p=0.0010)
+
+PART B, 2015-2019
+  low pedigree   0 signals: 2/67 = 0.030 | 1 signals: 10/150 = 0.067 | 2 signals: 8/103 = 0.078 | 3 signals: 8/39 = 0.205   (all vs fewer p=0.0058)
+  high pedigree  0 signals: 1/9 = 0.111 | 1 signals: 3/30 = 0.100 | 2 signals: 13/54 = 0.241 | 3 signals: 14/43 = 0.326   (all vs fewer p=0.0798)
+
+PART B, 2020-2025
+  low pedigree   0 signals: 0/79 = 0.000 | 1 signals: 10/181 = 0.055 | 2 signals: 11/124 = 0.089 | 3 signals: 6/44 = 0.136   (all vs fewer p=0.0469)
+  high pedigree  0 signals: 0/16 = 0.000 | 1 signals: 6/61 = 0.098 | 2 signals: 15/65 = 0.231 | 3 signals: 19/66 = 0.288   (all vs fewer p=0.0230)
+
+PART A, absence openings (not chosen on), two signals
+  low pedigree   0 signals: 12/202 = 0.059 | 1 signals: 29/237 = 0.122 | 2 signals: 19/115 = 0.165   (all vs fewer p=0.0415)
+  high pedigree  0 signals: 5/41 = 0.122 | 1 signals: 17/108 = 0.157 | 2 signals: 33/123 = 0.268   (all vs fewer p=0.0155)
+
+BY POSITION, part B, low pedigree, all three signals vs fewer:
+  RB: all three 7/27 = 0.259 | fewer 34/260 = 0.131
+  WR: all three 2/11 = 0.182 | fewer 5/113 = 0.044
+  TE: all three 6/43 = 0.140 | fewer 1/333 = 0.003
+
+LOW-PEDIGREE ROTATION BACKUPS WITH ALL THREE WHO ROSE (15):
+ season  week team pos            player      tier  years_exp  share_last2   pps  st_share
+   2015     4  CHI  TE       Zach Miller       4-7        6.0        0.380 0.096     0.153
+   2015     5  ATL  TE       Jacob Tamme       4-7        7.0        0.470 0.119     0.143
+   2017     4  DEN  TE        A.J. Derby       4-7        2.0        0.395 0.068     0.110
+   2018     4  NYJ  RB    Isaiah Crowell undrafted        4.0        0.470 0.538     0.000
+   2018     5   GB  RB       Aaron Jones       4-7        1.0        0.315 0.433     0.140
+   2018     7   NE  WR       Josh Gordon undrafted        6.0        0.535 0.185     0.000
+   2018     7  IND  RB       Marlon Mack       4-7        1.0        0.325 0.331     0.000
+   2018    11  SEA  RB      Chris Carson       4-7        1.0        0.395 0.343     0.046
+   2020    11   TB  WR     Antonio Brown       4-7       10.0        0.635 0.188     0.080
+   2021     4  WAS  RB     J.D. McKissic undrafted        5.0        0.450 0.308     0.000
+   2021     6  JAX  TE        Dan Arnold undrafted        4.0        0.525 0.153     0.008
+   2022     4  DAL  RB      Tony Pollard       4-7        3.0        0.415 0.350     0.037
+   2023     4  PIT  RB     Jaylen Warren undrafted        1.0        0.440 0.284     0.177
+   2024     4   NO  TE       Taysom Hill undrafted        7.0        0.395 0.133     0.245
+   2025     5  LAC  TE Oronde Gadsden II       4-7        0.0        0.370 0.187     0.145
+
+TOOK THE ROLE: low against high pedigree at each signal count (part B, clean rows)
+  all three low 29/81 = 0.358 | high 43/112 = 0.384 | p=0.764
+  two       low 50/234 = 0.214 | high 35/116 = 0.302 | p=0.085
+  one       low 30/322 = 0.093 | high 12/92 = 0.130 | p=0.327
+  none      low 10/150 = 0.067 | high 4/24 = 0.167 | p=0.107
+  0-1       low 40/472 = 0.085 | high 16/116 = 0.138 | p=0.1100
+
+ROSE: low against high pedigree at each signal count (part B, clean rows)
+  all three low 15/81 = 0.185 | high 35/112 = 0.312 | p=0.066
+  two       low 18/234 = 0.077 | high 26/116 = 0.224 | p=0.000
+  one       low 20/322 = 0.062 | high 10/92 = 0.109 | p=0.168
+  none      low 2/150 = 0.013 | high 0/24 = 0.000 | p=1.000
+  0-1       low 22/472 = 0.047 | high 10/116 = 0.086 | p=0.1084
+  took the role, low pedigree, 2015-2019: all three 18/37 = 0.486 vs fewer 46/322 = 0.143, p=0.0000
+  took the role, low pedigree, 2020-2025: all three 11/44 = 0.250 vs fewer 44/384 = 0.115, p=0.0169
+
+position medians the three signals use (rotation backups):
+     share_last2    pps  st_share
+pos                              
+RB         0.280  0.254     0.183
+TE         0.358  0.055     0.267
+WR         0.380  0.122     0.127
+
+==================== hubbard.py (run 11 Sept 2026, cloud, nflverse releases) ====================
+ season  round  pick team      college
+   2021      4   126  CAR Oklahoma St.
+
+2021 Carolina RB snap % by week
+week                 1   2   3   4   5   6   7   8   9   10  11  12  14  15  16  17  18
+player                                                                                 
+Ameer Abdullah        0   0   0   0   0   0   0  30  37  21  16  49  59  53  33  48  56
+Christian McCaffrey  89  71  30   0   0   0   0   0  49  59  90  36   0   0   0   0   0
+Chuba Hubbard        11  25  55  47  65  65  53  55  17  21   2  20  39  47  49  52  44
+Rodney Smith          0   0   0  37  15   0   0   0   0   0   0   0   0   0   0   0   0
+Royce Freeman         0   4  15  17  20  31  45  15   0   0   0   0   0   0   0   0   0
+
+2022 Carolina RB snap % by week
+week                 1   2   3   4   5   6   7   8   9   10  11  12  14  15  16  17  18
+player                                                                                 
+Christian McCaffrey  81  91  80  87  86  86   0   0   0   0   0   0   0   0   0   0   0
+Chuba Hubbard         6   3  11   6  16   9  46   0   0  18  40  42  32  63  46  53  69
+D'Onta Foreman       13   5   7   8   4  23  54  68  43  68  39  53  47  30  44  38  25
+Raheem Blackshear     0   0   0   0   0   0  10   9  35  12  19   5  19   4   9   5   5
+Spencer Brown         0   0   0   0   0   0   0  23  27   0   0   0   0   0   0   0   0
+
+2023 Carolina RB snap % by week
+week           1   2   3   4   5   6   8   9   10  11  12  13  14  15  16  17  18
+player                                                                           
+Chuba Hubbard  36  37  34  54  48  77  67  65  50  49  64  65  78  73  64  70  81
+Miles Sanders  57  62  65  43  46   0  18  25  38  46  36  32  21  27  36  26  13
+
+2024 Carolina RB snap % by week
+week               1   2   3   4   5   6   7   8   9   10  12  13  14  15  16  17  18
+player                                                                               
+Chuba Hubbard      54  58  58  74  65  82  84  74  79  88  89  79  97  95  84   0   0
+Mike Boone          8   0   0   0   0   0   0   0   0   0   0   0   0   5   6  23  30
+Miles Sanders      37  42  42  31  38  23  26  34  23  10   0   0   0   0   0   0  61
+Raheem Blackshear   0   0   3   0   5   0   0   0   4   3   3   1   0   0  10  77   9
+
+2025 Carolina RB snap % by week
+week           1   2   3   4   5   6   7   8   9   10  11  12  13  15  16  17  18
+player                                                                           
+Chuba Hubbard  67  74  62  51   0   0  54  57  22  21  19  35  59  42  41  38  45
+Rico Dowdle    34  29  40  39  67  88  46  36  72  79  82  65  42  60  57  64  53
+
+Chuba Hubbard       2021 wks 3-8: games 6, carries 100, ypc 3.81, EPA/carry -0.121, YACo/att 2.03, half-PPR/g 11.3
+D'Onta Foreman      2022 wks 7-18: games 11, carries 191, ypc 4.59, EPA/carry +0.032, YACo/att 2.05, half-PPR/g 11.3
+Chuba Hubbard       2022 wks 7-18: games 9, carries 89, ypc 4.85, EPA/carry +0.014, YACo/att 1.70, half-PPR/g 8.7
+Miles Sanders       2023 wks 1-5: games 5, carries 61, ypc 3.11, EPA/carry -0.344, YACo/att 1.52, half-PPR/g 7.3
+Chuba Hubbard       2023 wks 1-5: games 5, carries 35, ypc 4.40, EPA/carry +0.024, YACo/att 2.54, half-PPR/g 5.4
+Miles Sanders       2023 wks 7-18: games 11, carries 68, ypc 3.56, EPA/carry -0.140, YACo/att 1.93, half-PPR/g 3.4
+Chuba Hubbard       2023 wks 7-18: games 11, carries 184, ypc 3.59, EPA/carry -0.141, YACo/att 1.72, half-PPR/g 10.9
+Chuba Hubbard       2025 wks 1-4: games 4, carries 53, ypc 4.09, EPA/carry -0.042, YACo/att 2.26, half-PPR/g 12.4
+Rico Dowdle         2025 wks 1-4: games 4, carries 28, ypc 2.96, EPA/carry -0.143, YACo/att 1.46, half-PPR/g 4.7
+Rico Dowdle         2025 wks 5-6: games 2, carries 53, ypc 7.34, EPA/carry +0.290, YACo/att 3.40, half-PPR/g 31.4
+Chuba Hubbard       2025 wks 7-18: games 11, carries 81, ypc 3.63, EPA/carry -0.166, YACo/att 1.51, half-PPR/g 5.5
+Rico Dowdle         2025 wks 7-18: games 11, carries 155, ypc 3.90, EPA/carry -0.088, YACo/att 1.67, half-PPR/g 10.5
+

@@ -1,0 +1,455 @@
+{
+  "built": "2026-09-15",
+  "why": "Fitted numbers, not weekly ones. Rebuilt only when the research behind them changes; everything else on the sheet is recomputed from ESPN every run. Doc 453: potential.in_season.inseason_3of3 added (the young-receiver screen read on this season, week 3).",
+  "rival_shortages": {
+    "1": {},
+    "2": {},
+    "3": {},
+    "4": {},
+    "5": {
+      "TE": 1,
+      "K": 1
+    },
+    "6": {
+      "TE": 1,
+      "K": 1,
+      "D/ST": 2
+    },
+    "7": {
+      "QB": 1,
+      "K": 3,
+      "D/ST": 2
+    },
+    "8": {
+      "TE": 1,
+      "K": 2
+    },
+    "9": {
+      "D/ST": 1
+    },
+    "10": {
+      "QB": 1,
+      "K": 1,
+      "D/ST": 3
+    },
+    "11": {
+      "QB": 1,
+      "TE": 2,
+      "K": 2,
+      "D/ST": 2
+    },
+    "12": {},
+    "13": {
+      "QB": 1,
+      "K": 1
+    },
+    "14": {
+      "TE": 1,
+      "K": 1
+    }
+  },
+  "kicker": {
+    "slope_wk6": 0.222,
+    "slope_wk8": 0.243,
+    "swap_gain_wk6": 1.25,
+    "swap_ci_wk6": [
+      0.28,
+      2.32
+    ],
+    "random_control_wk6": -0.04,
+    "n_swaps": 15
+  },
+  "potential": {
+    "note": "TWO DIFFERENT OBJECTS AND THEY MUST NOT BE SWAPPED (doc 276). 'next_season' is what a screened receiver does the FOLLOWING year and is worth nothing on a waiver add, because a free-agency pickup can never be a keeper. 'in_season' is the one this page uses.",
+    "in_season": {
+      "population": "every EXECUTED add in this league 2022-2025 of a receiver in his first three NFL seasons who played at least one week afterwards, n=108",
+      "baseline": "9.62 half-PPR a game, the WR replacement derived from the preseason board (WR30 season total divided by 17, not a measured rate; catalog B1), from the add week through week 14",
+      "all_young_wr": {
+        "n": 108,
+        "hit": 19,
+        "rate": 0.176,
+        "mean_ppg": 7.12
+      },
+      "three_of_three": {
+        "n": 24,
+        "hit": 8,
+        "rate": 0.333,
+        "hit_ppg": 12.26,
+        "hit_weeks": 6.5,
+        "vs_field": 0.202,
+        "p": 0.0279,
+        "signals": "NFL rounds 1-3 AND yards per target over 7.13 AND targets per game over 3.20, on last season"
+      },
+      "inseason_3of3": {
+        "n": 15,
+        "hit": 4,
+        "rate": 0.267,
+        "population": "WR seasons 2021 to 2025, drafted 2021 on, NFL years 1 to 3, not startable the season before or no season before, read at the end of week 3 on weeks 1 to 3: NFL rounds 1 to 3 AND yards per target over 7.13 on 5+ targets AND targets a game over 3.20, AND still under 9.62 a game through week 3 (the wire population); outcome startable (9.62+) over weeks 4 to 14 on 4+ games. doc 453, finding 4.43",
+        "vs_field": 0.056,
+        "all_3of3": {
+          "n": 39,
+          "hit": 17,
+          "rate": 0.436,
+          "p": 0.0,
+          "why": "every 3 of 3 at week 3, startable already or not; the men the wire prices are the under-the-bar cell above"
+        },
+        "week4_under_bar": {
+          "n": 22,
+          "hit": 8,
+          "rate": 0.364
+        },
+        "why": "the 4.30 screen read on this season, for the rookie the preseason screen cannot see. Thin: 15 rows at week 3. Re-fit at week 6 and after the season (Scripts\\research\\wk1\\rookie_screen.py); the falsifier is the under-the-bar cell falling to the field."
+      },
+      "under_three": {
+        "n": 48,
+        "hit": 4,
+        "rate": 0.083
+      },
+      "rookie_r2_3": {
+        "n": 21,
+        "hit": 6,
+        "rate": 0.286,
+        "hit_ppg": 14.75
+      },
+      "round1_rookie_inseason": {
+        "n": 6,
+        "hit": 0,
+        "rate": null,
+        "why": "0 for 6 and far too small to resolve. A first-rounder sitting on a mid-season wire is one the market has already given up on, which is a different population from the rostered-all-year rookie behind the 38.5%. Odds print as not measured."
+      },
+      "by_third": {
+        "1-4": [
+          0.4,
+          0.091
+        ],
+        "5-9": [
+          0.286,
+          0.08
+        ],
+        "10-14": [
+          0.4,
+          0.083
+        ]
+      },
+      "hit_size": {
+        "n": 19,
+        "ppg": 12.71,
+        "median_ppg": 11.11,
+        "weeks": 6.4,
+        "why": "ONE hit size for every screen row. How big a hit is, is a property of 'a young receiver who became startable', not of the archetype -- splitting it by archetype invented a difference the 19 hits cannot support. Only the ODDS differ between rows."
+      },
+      "workload_note": "doc 308. A DIFFERENT POPULATION FROM every other rate in this block and it must never be compared with them (0.6). Those come from this league's own executed adds, n=108. This one is NFL-wide: every WR and TE, 2022-2025, who played week 1 with at least one target, averaged BELOW his position's replacement rate the PRIOR season (so he is a man you could have had off a wire), and played 4+ of weeks 2-14. n=517, base rate 13.9%. OUTCOME: half-PPR ppg over weeks 2-14 reaching WR 9.62 / TE 8.25. THE THREE SIGNALS: 8+ targets, 80%+ of his team's offensive snaps, 20%+ of his team's targets. Bands 0/1/2/3 = 6% / 19% / 38% / 42%, permutation p=0.0002. THE JUMP IS 1 -> 2, NOT 2 -> 3, so the bar is TWO, which is the OPPOSITE shape to three_of_three's composite and that rule must not be ported across. Rebuild: Scripts\\\\research\\\\wk1\\\\wk1_wr_composite.py",
+      "workload_2of3": {
+        "n": 45,
+        "hit": 17,
+        "rate": 0.38,
+        "base": 0.139,
+        "p": 0.0002
+      },
+      "workload_3of3": {
+        "n": 31,
+        "hit": 13,
+        "rate": 0.42,
+        "base": 0.139,
+        "p": 0.0002
+      },
+      "workload_second_man": {
+        "population": "the workload screen's own population (doc 308, n=517), men who cleared 2 or 3 of 3 (n=76), split by whether he was the top man at his position on his team by week-1 targets",
+        "top_n": 54,
+        "top_hit": 25,
+        "top_rate": 0.463,
+        "wr_n": 22,
+        "wr_hit": 5,
+        "wr_rate": 0.227,
+        "te_n": 15,
+        "te_second_n": 0,
+        "why": "1 Oct, doc 457 (te2_split.py): Michael Mayer cleared the screen as the Raiders' top tight end while Bowers was out and stayed priced at 38% after Bowers returned with 13 targets to his 3. A second tight end has never cleared the screen in four seasons, so he gets no rate; a second receiver gets 22.7%. Re-fit after the season."
+      }
+    },
+    "next_season": {
+      "warning": "NOT an in-season rate. Do not put these on the weekly sheet.",
+      "three_of_three": {
+        "n": 43,
+        "mean_next_ppg": 7.34,
+        "startable_rate": 0.302,
+        "population": "NOT directive 4.30's cell. 4.30 measures WR seasons 2021-2024, years 1-3, NOT startable, 4+ games, who played 4+ games again the next season: n=33, 39.4%. This row is a wider cell, n=43, 30.2%. Both are real; they are different populations and neither supersedes the other. State which you mean (directive 0.6; doc 302)."
+      },
+      "round1_rookie": {
+        "n": 26,
+        "mean_rookie_ppg": 8.62,
+        "startable_rate": 0.385
+      }
+    }
+  },
+  "dst_partners_free_2026": {
+    "CHI": 9.42,
+    "BUF": 8.67,
+    "KC": 7.27,
+    "CAR": 6.53,
+    "SF": 6.4,
+    "IND": 5.95,
+    "DAL": 5.5
+  },
+  "rules": [
+    {
+      "h": "FA is not WA",
+      "p": "A player marked <strong>FA</strong> is added with the green plus: no claim, no priority spent. <strong>Do not ration what costs nothing.</strong>"
+    },
+    {
+      "h": "Week one is the worst week to claim",
+      "p": "A week-1 add became startable <strong>9.4%</strong> of the time, against <strong>34.6%</strong> in week 2."
+    },
+    {
+      "h": "Filling an empty slot is a different decision",
+      "p": "When a slot is <strong>empty</strong>, almost any body beats zero."
+    },
+    {
+      "h": "The hot kicker",
+      "p": "From week 6, if a free kicker is 4&ndash;5 points a week ahead of yours, take him and keep him (<strong>+1.25 a week</strong>)."
+    },
+    {
+      "h": "Marry the defense from week 9",
+      "p": "A second defense is worth about <strong>+0.7 a week</strong>. Hold one from week 9, on a schedule that complements yours."
+    },
+    {
+      "h": "Nothing off the wire can be a keeper",
+      "p": "Free-agent pickups are never keeper-eligible."
+    },
+    {
+      "h": "The wire cannot upgrade a working slot",
+      "p": "A row of zeros means your own man is above the bar every week."
+    }
+  ],
+  "seat": {
+    "note": "Prices a backfield seat in the SAME currency as everything else on the page -- points above the bar -- so a job's season total is never printed next to a gain (doc 276).",
+    "relief_ppg": 12.13,
+    "relief_n": 51,
+    "relief_population": "NFL team-seasons 2022-2025 where the weeks-1-4 RB usage leader missed a week between 5 and 14 and the direct backup had a line; his half-PPR per game in those weeks",
+    "weeks_played": 3.02,
+    "p_opens": 0.46,
+    "p_opens_n": 115,
+    "p_opens_note": "the share of lead backs who miss a week-1-to-14 game, byes excluded. It does NOT vary by history: 45.9% for a back who missed a game last season against 46.3% for one who played all 17, p=0.60. So it prices every seat the same and cannot rank them. UNDER RE-CHECK, catalog B4 (AUDIT_LEDGER row 2): doc 276's population held only backs who were healthy through week 4, so the null may be a selection artefact. Do not quote it as settled.",
+    "relief_supersedes": "12.13 (n=51, mean) is canonical and SUPERSEDES doc 244's 11.2 (n=40, MEDIAN) for this quantity. Doc 297's handcuff bracket used 11.2 and is therefore about 8% low. One quantity, one number (directive 0.5c4; doc 302).",
+    "p_opens_by_band": {
+      "<20": 0.51,
+      "20-30": 0.474,
+      "30-40": 0.564,
+      "40+": 0.621
+    },
+    "p_opens_by_band_n": {
+      "<20": 51,
+      "20-30": 38,
+      "30-40": 39,
+      "40+": 29
+    },
+    "p_opens_by_band_note": "doc 348 (18 Sept): FIVE SEASONS, 2021-2025, n=157, the same script (job_opens.py) with 2021 added; replaces doc 343's four-season 0.476 / 0.438 / 0.533 / 0.636 on n = 42 / 32 / 30 / 22, which reproduced exactly first as the control. Direction unchanged, spread narrower (top minus bottom 0.11 against 0.16); seats-only permutation at a 35% split +0.34, p=0.019. 2021 alone 0.645 on n=31. VINTAGE: the four-season numbers were computed on the cache's 2022-2024 files, which are NOT the release nflverse serves today (150 columns against 114; 2022 holds 36 more RB rows); on the current release two team-seasons cross the 30/40 edge and the five-season bands read 0.510 / 0.474 / 0.553 / 0.633 on n = 51 / 38 / 38 / 30. T5 (doc 292, non-leader week-1 snaps) does NOT order these odds (0.556 / 0.536 / 0.474 / 0.549) -- it orders the relief RATE instead, which is doc 348's finding. The four-season text follows. doc 343. POPULATION: every NFL team-season 2022-2025 whose week-1 RB usage leader and second back both played in week 1 with combined RB work (carries + targets) of 10 or more; n=126. PREDICTOR: the second back's share of his team's week-1 RB carries plus targets, the leader IN the denominator -- doc 300's measure, NOT doc 292's T5, which excludes the leader and runs on snaps and is roughly double on a clean two-man room. OUTCOME: the week-1 leader misses a game in weeks 2-14, byes excluded. THIS REPLACES THE FLAT 0.46 as the ordering term: the flat rate is the population average and is why every seat priced the same and the table could only rank the job. On the SEATS-ONLY cut (dropping men who already led the room before any absence) the top band is 1.000 on n=6; the unfiltered 0.636 on n=22 is shipped instead because it is the larger sample and the conservative direction. An association, not a mechanism: a room that splits work in week 1 may be a room whose starter is already limited, which is knowable and is the point. Permutation at a 35% split, seats only: +0.36, p=0.023.",
+    "weeks_played_note": "3.02 STANDS AND WAS NOT CHANGED, and doc 343 is where I tried to change it and failed. The raw gradient looked like 1.24 / 1.91 / 4.20 / 6.00 weeks by band, which would have doubled the top band's price. Recounted from the FIRST ABSENCE ONWARD -- the only weeks that are actually an inheritance -- it is 2.05 / 3.21 / 3.12 / 4.71, permutation +1.15 at p=0.081; and after dropping the men who were already leading the room before any absence it is +0.75 at p=0.286. The gradient was mostly co-leadership, not takeover. UNDERPOWERED, NOT DISPROVED: n=6 in the top band. Do not quote 6.00 weeks."
+  },
+  "absence": {
+    "note": "How often a starter-quality player misses a week that is NOT a bye, so the page can price a bench body instead of printing 0.0 for him. Doc 297: prior-season top-24 RB / top-24 WR / top-12 QB / top-12 TE, measured the following season, nflverse stats_player_week; SELECTORS 2021-2024, OUTCOMES 2022-2025, four transitions, n=318 player-seasons, team bye removed from the denominator. A team defense plays unless it is on bye, so its rate is zero by construction. THE KICKER CELL IS DELETED, NOT ZEROED (doc 302): it previously held 0.137, which is the QB and TE rate, not a kicker number, and doc 297 measured kickers at 21.3% while saying in terms that the row should not be quoted because 14 of 48 prior-year top-12 kickers were out of the league the next season. With the key absent a lookup returns None and the page declines to price a kicker.",
+    "rate": {
+      "QB": 0.137,
+      "RB": 0.171,
+      "WR": 0.15,
+      "TE": 0.137,
+      "D/ST": 0.0
+    },
+    "streamer": {
+      "QB": 16.65,
+      "RB": 5.43,
+      "WR": 6.54,
+      "TE": 5.53,
+      "D/ST": 5.51
+    },
+    "streamer_note": "What a waiver body at that position actually returns per played week, so an empty slot is not charged at zero. QB 16.65 from doc 92, re-derived from the raw waiver files. RB 5.43 / WR 6.54 / TE 5.53 are [INHERITED from doc 12, n irreproducible per directive 4.17] -- doc 92 step 1 could not reproduce doc 12's sample sizes and only the QB number was re-derived, so treat these three as the weakest inputs on the page. D/ST 5.51 from doc 441: D/ST12 on all 2,718 team-weeks 2021-2025 with blocked kicks and fumbles lost scored (doc 265 measured 5.99 on a file missing 142 event-less weeks). The kicker key is deleted: 7.5 had no source anywhere (doc 302, directive 3 [NO SOURCE])."
+  },
+  "contest": {
+    "note": "HOW MANY RIVALS FILE ON THE SAME MAN, AND IT IS THE JOB THEY BUY, NOT THE BOX SCORE (doc 314). This is section 4.32's term 4, which doc 254 logged as NOT YET RUN. It is a lookup on ONE number: targets plus carries in the man's most recent game. It is NOT a probability that a claim lands -- doc 224's win rates are the other half of that.",
+    "population": "every WAIVER-type filing in this league 2022-2025 grouped by (week, player): 787 player-weeks, 225 of them contested. This table is the 403 of them that are RB, WR or TE with a prior game on file. EXCLUDES D/ST (193 player-weeks) and kickers (70), which is 263 of 787 and by far the most churned lane, and excludes week-1 claims (19) because there is no prior game to read.",
+    "predictor": "targets + carries in the most recent completed game before the claim",
+    "r": 0.296,
+    "p": 5e-05,
+    "n": 403,
+    "bands": [
+      {
+        "lo": 0,
+        "hi": 5,
+        "label": "under 5",
+        "n": 88,
+        "filers": 1.17,
+        "contested": 0.14
+      },
+      {
+        "lo": 5,
+        "hi": 10,
+        "label": "5 to 9",
+        "n": 180,
+        "filers": 1.49,
+        "contested": 0.29
+      },
+      {
+        "lo": 10,
+        "hi": 15,
+        "label": "10 to 14",
+        "n": 94,
+        "filers": 1.83,
+        "contested": 0.4
+      },
+      {
+        "lo": 15,
+        "hi": 999,
+        "label": "15 or more",
+        "n": 41,
+        "filers": 2.27,
+        "contested": 0.56
+      }
+    ],
+    "points_add_nothing": "12+ half-PPR on 10+ touches draws 2.03 filers; UNDER 12 on 10+ touches draws 1.90; 12+ on fewer than 10 touches draws 1.62. Scoring adds nothing once the workload is known, and scoring well on few touches draws FEWER claims than scoring badly on many.",
+    "rival_need_is_dead": "Doc 254 fixed the bar before the test: a positional-hole flag had to add 0.30 expected filers over player popularity. It adds 0.20, and held out by season it makes the prediction WORSE (MAE 0.716 against 0.693 on workload alone). The version tested used REVEALED need -- how often that team had filed at that position in the prior three weeks -- which is measured from the same object as the outcome and so was rigged in the model's favour. It still failed. Do not build a rival-need model.",
+    "the_room_is_late": "56 men had a 10+ touch game while provably undrafted and never rostered. 18 of them, 32%, went at least one more full week before anybody filed. Guerendo: 10+ touches from week 6, unclaimed until week 14, then 7 filers at once. So 'a valuable man always draws a claim' is true of the SEASON and false of the WEEK, and that gap is the lane. The join to the draft list is BY NAME, which biases this count UP, not down.",
+    "source": "doc 314; Scripts/research/rival_need.py",
+    "r_points": 0.233,
+    "r_touch_net_of_points": 0.231,
+    "r_points_net_of_touch": 0.137,
+    "sig_line": 0.098
+  },
+  "tail_tickets": {
+    "note": "doc 460, 1 Oct. Among men UNDER the bar on weeks 1 to 4 (RB 9.92, WR 9.62 half-PPR a game), by the shape of the ticket read off his own team's touches a game on those weeks: the share who then gave six or more startable weeks of weeks 5 to 14 (big), a four-week window at 15 or more a game (month), and four or more startable weeks (four). nflverse 2021 to 2025 REG, Scripts/research/wk1/tail_tickets.py. The population is 'could be held on a bench', NOT 'was free in a 12-team league': a lead back with 12+ touches is almost never on the wire. A shape's rate, never a man's forecast. Re-fit after the season.",
+    "week": 4,
+    "bars": {
+      "RB": 9.92,
+      "WR": 9.62
+    },
+    "cells": {
+      "lead_12": {
+        "label": "lead back under the bar, 12+ touches a game",
+        "n": 32,
+        "big": 0.188,
+        "month": 0.281,
+        "four": 0.469,
+        "mean_pts": 77.2
+      },
+      "lead_u12": {
+        "label": "lead back under the bar, under 12 a game",
+        "n": 9,
+        "big": 0.0,
+        "month": 0.222,
+        "four": 0.556,
+        "mean_pts": 72.5
+      },
+      "committee": {
+        "label": "committee partner: the second back with 8 to 14 touches a game",
+        "n": 59,
+        "big": 0.085,
+        "month": 0.136,
+        "four": 0.237,
+        "mean_pts": 56.3
+      },
+      "handcuff_top12": {
+        "label": "handcuff (second back, under 8 a game) behind a top-12 job",
+        "n": 35,
+        "big": 0.0,
+        "month": 0.057,
+        "four": 0.057,
+        "mean_pts": 32.4
+      },
+      "handcuff_other": {
+        "label": "handcuff behind any other job at 12+ a game",
+        "n": 36,
+        "big": 0.056,
+        "month": 0.056,
+        "four": 0.194,
+        "mean_pts": 44.2
+      },
+      "third": {
+        "label": "third string or lower, under 8 a game",
+        "n": 249,
+        "big": 0.0,
+        "month": 0.0,
+        "four": 0.012,
+        "mean_pts": 14.3
+      },
+      "wr_3of3": {
+        "label": "young receiver (NFL years 1-3), 3 of 3 on the in-season screen at week 4",
+        "n": 22,
+        "big": 0.045,
+        "month": 0.045,
+        "four": 0.364,
+        "mean_pts": 67.5
+      },
+      "wr_2of3": {
+        "label": "young receiver, 2 of 3",
+        "n": 42,
+        "big": 0.048,
+        "month": 0.095,
+        "four": 0.143,
+        "mean_pts": 43.1
+      },
+      "wr_01": {
+        "label": "young receiver, 0 or 1 of 3",
+        "n": 68,
+        "big": 0.0,
+        "month": 0.0,
+        "four": 0.029,
+        "mean_pts": 24.8
+      },
+      "wr_other": {
+        "label": "veteran receiver (year 4+), 2+ targets a game; the page uses this cell for any receiver without the three marks",
+        "n": 285,
+        "big": 0.014,
+        "month": 0.025,
+        "four": 0.109,
+        "mean_pts": 36.8
+      }
+    },
+    "handcuff_if_starter_down": {
+      "note": "the handcuff cells split by whether his lead back played fewer than 7 of weeks 5 to 14 (3+ touches); 23.9% of 71 handcuffs saw that",
+      "n": 17,
+      "big": 0.118,
+      "month": 0.059,
+      "four": 0.353,
+      "mean_pts": 52.3
+    },
+    "already_startable_share": {
+      "note": "of every back / receiver with 6+ startable weeks over weeks 5 to 14, the share already startable on weeks 1 to 4",
+      "RB": 0.78,
+      "RB_n": 67,
+      "WR": 0.82,
+      "WR_n": 66
+    }
+  },
+  "claims": {
+    "note": "doc 462, 1 Oct. The league's own claim mechanics, for the waterfall under THE CALL. uncontested_share and uncontested_land: doc 396, every WAIVER-type event that reached a decision in waiver_report_2022..2026, 745 player-runs; 532 (71.4%) had one claimant and 415 of those 532 landed (78.0%). contested_per_claim: 211 of 575 claims on contested men (36.7%), all ranks pooled. his_contested: doc 224, Matt's own win rate on contested men over his seasons (16%). by_rank_band (doc 463) replaces the judgement floor the first version carried for the bottom half of the order. The per-man contested share by his last game's carries plus targets is the `contest` block (doc 314). The 61.1 / 29.1 / 11.2 ladder by prior wins is RETRACTED (doc 401) and is not here on purpose.",
+    "uncontested_share": 0.714,
+    "uncontested_land": 0.78,
+    "contested_per_claim": 0.367,
+    "his_contested": 0.16,
+    "by_rank_band": {
+      "note": "doc 463: the share of claims on a CONTESTED man that landed, by the claimant's waiver rank that week, the rank rebuilt as inverse standings after the previous week (fewest wins, then fewest points) from historical_scoreboard_2022_2025.csv; every WAIVER claim that reached a decision, weeks 2 to 14, 2022 to 2025, 875 claims of which 455 contested (claim-weighted; doc 396's 28.6% is run-weighted). Uncontested claims land 74 to 85% in every band. Scripts/research/claim_rank.py.",
+      "bands": [
+        {
+          "lo": 1,
+          "hi": 4,
+          "n": 105,
+          "land": 0.533
+        },
+        {
+          "lo": 5,
+          "hi": 8,
+          "n": 169,
+          "land": 0.355
+        },
+        {
+          "lo": 9,
+          "hi": 12,
+          "n": 181,
+          "land": 0.238
+        }
+      ],
+      "rank_11": {
+        "n": 55,
+        "land": 0.13
+      }
+    }
+  }
+}

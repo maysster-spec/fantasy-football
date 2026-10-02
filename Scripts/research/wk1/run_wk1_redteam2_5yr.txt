@@ -1,0 +1,80 @@
+seasons used: [2021, 2022, 2023, 2024, 2025]
+CONTROL: build2() default reproduces wk1_redteam.build() exactly: YES  (143 vs 143 rows)
+
+F. THE CUT NEITHER DOC RAN
+
+F0. everything (doc 300 as published)   n=143
+  RB2 share of week-1 RB work      n  wks 2-14 ppg  reached 9.92
+  under 20%                       44          4.99           7%
+  20 to 30%                       35          5.22          11%
+  30 to 40%                       36          8.35          39%
+  40% or more                     28         10.28          50%
+  ALL                            143          6.93          24%
+  35% or more (n=45) minus under 35% (n=98): ppg +3.89 p=0.0000 | startable +29% p=0.0000
+
+F1. claimable only (doc 302 D1) -- preseason-knowable filter   n=114
+  RB2 share of week-1 RB work      n  wks 2-14 ppg  reached 9.92
+  under 20%                       40          4.67           5%
+  20 to 30%                       30          4.70           7%
+  30 to 40%                       30          8.05          37%
+  40% or more                     14         11.04          64%
+  ALL                            114          6.35          21%
+  35% or more (n=27) minus under 35% (n=87): ppg +4.24 p=0.0000 | startable +36% p=0.0008
+
+F2. labels held only (doc 302 E1) -- conditions on a weeks 2-14 outcome   n=95
+  RB2 share of week-1 RB work      n  wks 2-14 ppg  reached 9.92
+  under 20%                       33          4.51           3%
+  20 to 30%                       26          4.64           8%
+  30 to 40%                       21          6.25          19%
+  40% or more                     15          8.01          27%
+  ALL                             95          5.48          12%
+  35% or more (n=23) minus under 35% (n=72): ppg +2.46 p=0.0015 | startable +8% p=0.2560
+
+F3. CLAIMABLE **AND** LABELS HELD -- the intersection   n=77
+  RB2 share of week-1 RB work      n  wks 2-14 ppg  reached 9.92
+  under 20%                       31          4.43           3%
+  20 to 30%                       23          4.38           4%
+  30 to 40%                       17          5.79          18%
+  40% or more                      6          8.03          33%
+  ALL                             77          5.00           9%
+  35% or more (n=12) minus under 35% (n=65): ppg +2.35 p=0.0130 | startable +9% p=0.3050
+
+   of the 143 rows: 114 claimable, 95 labels held, 77 both.
+   claimable rows at 35%+ that E1 deletes: 15, of which startable 11
+   2023 ATL Bijan Robinson 47% 12.6ppg; 2022 NE Rhamondre Stevenson 45% 14.0ppg; 2023 LA Kyren Williams 44% 19.3ppg; 2022 BUF Devin Singletary 43% 10.2ppg; 2024 LV Alexander Mattison 42% 8.8ppg; 2022 DET Jamaal Williams 42% 12.9ppg; 2023 CLE Jerome Ford 41% 11.9ppg; 2022 DAL Tony Pollard 40% 16.7ppg; 2022 JAX Travis Etienne 38% 10.7ppg; 2024 DAL Rico Dowdle 38% 11.7ppg; 2024 DEN Javonte Williams 37% 8.9ppg; 2024 TB Bucky Irving 36% 12.2ppg; 2021 BAL Latavius Murray 36% 6.4ppg; 2023 CHI Roschon Johnson 35% 4.0ppg; 2024 CAR Chuba Hubbard 35% 14.9ppg
+
+G. THE TIE-BREAK, SIZED
+   rows decided by the player-id string (EXACT week-1 tie): 3 of 143
+     2021 JAX Carlos Hyde            vs James Robinson           3.3 ppg  
+     2021 ARI James Conner           vs Chase Edmonds           16.8 ppg  STARTABLE
+     2025 KC  Kareem Hunt            vs Isiah Pacheco           10.1 ppg  STARTABLE
+
+G1. THE WHOLE TABLE WITH EXACT TIES BROKEN THE OTHER WAY   n=143
+  RB2 share of week-1 RB work      n  wks 2-14 ppg  reached 9.92
+  under 20%                       44          4.99           7%
+  20 to 30%                       35          5.22          11%
+  30 to 40%                       36          8.35          39%
+  40% or more                     28         10.18          46%
+  ALL                            143          6.91          24%
+  35% or more (n=45) minus under 35% (n=98): ppg +3.83 p=0.0000 | startable +27% p=0.0000
+
+H. OUTCOME KEYED ON (team, player_id), so a traded RB2 does not carry new-team points
+   rows: 140 against 143; rows whose outcome changed: n/a (row count differs)
+
+H1. TEAM-KEYED OUTCOME   n=140
+  RB2 share of week-1 RB work      n  wks 2-14 ppg  reached 9.92
+  under 20%                       41          5.14           7%
+  20 to 30%                       35          5.21          11%
+  30 to 40%                       36          8.37          39%
+  40% or more                     28         10.28          50%
+  ALL                            140          7.02          25%
+  35% or more (n=45) minus under 35% (n=95): ppg +3.79 p=0.0000 | startable +29% p=0.0008
+
+H2. TEAM-KEYED **AND** CLAIMABLE -- the strictest honest decision population   n=111
+  RB2 share of week-1 RB work      n  wks 2-14 ppg  reached 9.92
+  under 20%                       37          4.82           5%
+  20 to 30%                       30          4.69           7%
+  30 to 40%                       30          8.08          37%
+  40% or more                     14         11.04          64%
+  ALL                            111          6.45          22%
+  35% or more (n=27) minus under 35% (n=84): ppg +4.15 p=0.0000 | startable +35% p=0.0003

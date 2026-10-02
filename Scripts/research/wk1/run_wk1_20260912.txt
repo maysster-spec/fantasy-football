@@ -1,0 +1,25 @@
+week-1 share of a HEALTHY starter's backfield, and what the backup did afterwards
+population: 143 team-seasons, 2021-2025, lead back played in week 1
+
+RB2 share of week-1 RB work      n  wks 2-14 ppg  reached 9.92
+under 20%                       44          4.99           7%
+20 to 30%                       35          5.22          11%
+30 to 40%                       36          8.35          39%
+40% or more                     28         10.28          50%
+
+  35% or more (n=45) minus under 35% (n=98): ppg +3.89, startable rate +29.1%
+  permutation, 4000 draws, one-sided: ppg p=0.0000   startable p=0.0003
+
+  the ten biggest week-1 shares, and what happened next:
+    2021 JAX  Carlos Hyde            50% of the work behind James Robinson       ->   3.3 ppg over 10 games
+    2021 ARI  James Conner           50% of the work behind Chase Edmonds        ->  16.8 ppg over 12 games   STARTABLE
+    2025 KC   Kareem Hunt            50% of the work behind Isiah Pacheco        ->  10.1 ppg over 12 games   STARTABLE
+    2024 DET  Jahmyr Gibbs           49% of the work behind David Montgomery     ->  17.0 ppg over 12 games   STARTABLE
+    2021 DEN  Melvin Gordon          48% of the work behind Javonte Williams     ->  11.8 ppg over 11 games   STARTABLE
+    2024 LAC  Gus Edwards            48% of the work behind J.K. Dobbins         ->   4.7 ppg over  8 games
+    2025 SEA  Zach Charbonnet        48% of the work behind Kenneth Walker III   ->   9.1 ppg over 11 games
+    2021 LV   Kenyan Drake           48% of the work behind Josh Jacobs          ->   7.1 ppg over 11 games
+    2023 ATL  Bijan Robinson         47% of the work behind Tyler Allgeier       ->  12.6 ppg over 12 games   STARTABLE
+    2022 NE   Rhamondre Stevenson    45% of the work behind Damien Harris        ->  14.0 ppg over 12 games   STARTABLE
+
+  base rate across the whole population: 24% startable, 6.93 ppg

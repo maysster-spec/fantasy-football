@@ -1,0 +1,33 @@
+(a) bench tickets at the end of week 4, 2021 to 2025, outcomes over weeks 5 to 14 (10 weeks):
+  RB lead back under the bar, 12+ a game        n=  32  mean pts  77.2  4+ wks 46.9%  6+ wks 18.8%  150+  6.2%  15+ month 28.1%
+  RB lead back under the bar, under 12 a game   n=   9  mean pts  72.5  4+ wks 55.6%  6+ wks  0.0%  150+  0.0%  15+ month 22.2%
+  RB committee partner (8-14 a game)            n=  59  mean pts  56.3  4+ wks 23.7%  6+ wks  8.5%  150+  3.4%  15+ month 13.6%
+  RB handcuff, top-12 job                       n=  35  mean pts  32.4  4+ wks  5.7%  6+ wks  0.0%  150+  0.0%  15+ month  5.7%
+  RB handcuff, other job                        n=  36  mean pts  44.2  4+ wks 19.4%  6+ wks  5.6%  150+  0.0%  15+ month  5.6%
+  RB third or lower                             n= 249  mean pts  14.3  4+ wks  1.2%  6+ wks  0.0%  150+  0.0%  15+ month  0.0%
+  WR young, 3 of 3                              n=  22  mean pts  67.5  4+ wks 36.4%  6+ wks  4.5%  150+  0.0%  15+ month  4.5%
+  WR young, 2 of 3                              n=  42  mean pts  43.1  4+ wks 14.3%  6+ wks  4.8%  150+  0.0%  15+ month  9.5%
+  WR young, 0 or 1 of 3                         n=  68  mean pts  24.8  4+ wks  2.9%  6+ wks  0.0%  150+  0.0%  15+ month  0.0%
+  WR veteran (year 4+), 2+ targets a game       n= 285  mean pts  36.8  4+ wks 10.9%  6+ wks  1.4%  150+  0.0%  15+ month  2.5%
+  the non-lead back tickets that hit 6+ startable weeks: Tony Pollard 2022 (committee partner (8-14 a game), 7 wks, 171 pts); Rico Dowdle 2025 (committee partner (8-14 a game), 6 wks, 150 pts); Chase Brown 2024 (committee partner (8-14 a game), 8 wks, 141 pts); Kenneth Walker III 2022 (handcuff, 7 wks, 130 pts); Bucky Irving 2024 (committee partner (8-14 a game), 6 wks, 123 pts); Javonte Williams 2021 (committee partner (8-14 a game), 6 wks, 122 pts); Tyrone Tracy Jr. 2024 (handcuff, 6 wks, 120 pts)
+  the 3-of-3 receivers that hit 6+: Tetairoa McMillan 2025 (6 wks, 110)
+
+(b) the handcuff, split by whether his lead back played 7+ of weeks 5 to 14 (3+ touches a game):
+  starter missed 3+ of the 10                   n=  17  mean pts  52.3  4+ wks 35.3%  6+ wks 11.8%  150+  0.0%  15+ month  5.9%
+  starter played 7+                             n=  54  mean pts  34.0  4+ wks  5.6%  6+ wks  0.0%  150+  0.0%  15+ month  5.6%
+  share of handcuffs whose starter missed 3+: 23.9% of 71
+
+(c) every back and receiver with 6+ startable weeks over weeks 5 to 14, by where he was at the end of week 4:
+  RB: n=67
+     already startable on weeks 1-4                  52  (78%)
+     RB lead back under the bar, 12+ a game           6  (9%)
+     RB committee partner (8-14 a game)               5  (7%)
+     under the bar, no ticket shape                   2  (3%)
+     RB handcuff, other job                           2  (3%)
+  WR: n=66
+     already startable on weeks 1-4                  54  (82%)
+     WR veteran (year 4+), 2+ targets a game          4  (6%)
+     under the bar, no ticket shape                   4  (6%)
+     WR young, 2 of 3                                 2  (3%)
+     did not play weeks 1-4 (returning man)           1  (2%)
+     WR young, 3 of 3                                 1  (2%)

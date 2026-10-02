@@ -1,0 +1,1328 @@
+Delivered-To: maysster@gmail.com
+Received: by 2002:a9a:740c:0:b0:341:391d:471c with SMTP id p12csp11978308lkh;
+        Mon, 7 Sep 2026 17:56:41 -0700 (PDT)
+X-Received: by 2002:a17:902:d4c9:b0:2da:dcc8:748d with SMTP id d9443c01a7336-2db1263235bmr312319445ad.7.1788829000660;
+        Mon, 07 Sep 2026 17:56:40 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1788829000; cv=none;
+        d=google.com; s=arc-20260327;
+        b=G4UyykhCFphTBsjlZCgk4ZqYPnIwAC/2egFDJduw/FKIGvECRMdKqF1SwTF71deB2q
+         Cv0iawZebTLiLxWLYVwn3x5QAGHtORm2AVkjBsMxzHQ06a0dJO0MD4SBBMnLKLuitEjT
+         yMjQhBM8gdCAcvoL+S+4KxJR6L4pX8Fb/GsHdPQqcdfmY2j8pfAlfQGEGecpRHLOf6K+
+         rwvMyms/whAaV9SPwDvTmx8kGmdedxoBsXML9RGIZqd7fIv3ybG/59isv3G8fP0bo8Ct
+         X+sMaoJ6u505pcLXICOxRgEwHCyxjap8pOzWFr5uGELrAatG4OKH8uhS3emrDaTC3QLn
+         U5YA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327;
+        h=list-id:list-unsubscribe-post:list-unsubscribe:reply-to:from
+         :subject:mime-version:date:message-id:to:content-transfer-encoding
+         :dkim-signature;
+        bh=s4hSkBR15ZMTB7n4c7ukDvRD73G7KcpAzaJD/0RRvM8=;
+        fh=t2zMUHYm9fAgxnqLNoTGbtff6lBVMrdm6a8/cZ+gZVs=;
+        b=sRCxVmZ4w77ErkEVCznorxyu8leuvUAnWy2cQDRQXZBqPv6lXeKPCciAi7u4iQBz3K
+         UDVoDuORrrilzDs+whJWe6DuoTgaf5hylrJbyHD+wtos+Dv9vw5stXj/fCizbbPkmISk
+         vreFstt/ofGXg0kD9scuwVFmq7eh50TndFuV00e3frvREHvD7qkLJj14Ns6HacaWtbzn
+         hH6fgvTRv9AnXqZlNmn2pTDL4xiJeFoMk54Uv/0I7RUJyQv/rM4iVcut1bhItTzqfX04
+         4BXPpkXpmwWvlvfXymPUdThXfv4Aw9ynTs9GYQWxKUx3jH43dJ2do6PaP6M+v7VXCQSo
+         Zy+A==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@espnmail.com header.s=scph1018 header.b=qf9420R7;
+       spf=pass (google.com: domain of msprvs1=20711yfc1qkch=bounces-1-11@bounces.disneyonline.com designates 147.253.209.219 as permitted sender) smtp.mailfrom="msprvs1=20711YfC1qKCh=bounces-1-11@bounces.disneyonline.com"
+Return-Path: <msprvs1=20711YfC1qKCh=bounces-1-11@bounces.disneyonline.com>
+Received: from mta-209-219.sparkpostmail.com (mta-209-219.sparkpostmail.com. [147.253.209.219])
+        by mx.google.com with ESMTPS id 5a478bee46e88-33398c530b4si52302615eec.6.2026.09.07.17.56.40
+        for <maysster@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 07 Sep 2026 17:56:40 -0700 (PDT)
+Received-SPF: pass (google.com: domain of msprvs1=20711yfc1qkch=bounces-1-11@bounces.disneyonline.com designates 147.253.209.219 as permitted sender) client-ip=147.253.209.219;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@espnmail.com header.s=scph1018 header.b=qf9420R7;
+       spf=pass (google.com: domain of msprvs1=20711yfc1qkch=bounces-1-11@bounces.disneyonline.com designates 147.253.209.219 as permitted sender) smtp.mailfrom="msprvs1=20711YfC1qKCh=bounces-1-11@bounces.disneyonline.com"
+X-MSFBL: jUpmXj9gMKBm3vxVuDHrx0Z9GbUPwQ3gWJW+w4b0Ao8=|eyJjdXN0b21lcl9pZCI
+	6IjEiLCJzdWJhY2NvdW50X2lkIjoiMTEiLCJ0ZW5hbnRfaWQiOiJkaXNuZXkiLCJ
+	tZXNzYWdlX2lkIjoiNmE5YjQ3NWQ5ZjZhODIzYTI5NmUiLCJyIjoibWF5c3N0ZXJ
+	AZ21haWwuY29tIn0=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=espnmail.com;
+	s=scph1018; t=1788828999; i=@espnmail.com;
+	bh=s4hSkBR15ZMTB7n4c7ukDvRD73G7KcpAzaJD/0RRvM8=;
+	h=Content-Type:To:Message-ID:Date:Subject:From:List-Unsubscribe:
+	 List-Unsubscribe-Post:From:To:Cc:Subject:Feedback-Id;
+	b=qf9420R7uoXNj7fznObp/EnKEBUU4ncIKF1KBJ2Yo8CEyKPcewG/zhET8iKZ20IwQ
+	 5GGlDxA3dajOCMbavi9guGQWwPVyitBRbvJizWPfweiNAPps2zHZI5vZMDhzqlTs20
+	 yRFgvvlltiuWR7kIaN34OmE65jKoEltmIR4aGOMw=
+Received: from [10.90.8.190] ([10.90.8.190])
+	by i-0c61d218973dfed4f.mta2vrest.sd.prd.sparkpost (ecelerity 5.3.0.76404 r(msys-ecelerity:tags/5.3.0.10)) with REST
+	id E6/92-01557-74D5F9A6; Tue, 08 Sep 2026 00:56:39 +0000
+Content-Transfer-Encoding: 7bit
+Content-Type: text/html; charset="UTF-8"
+To: maysster@gmail.com
+Message-ID: <E6.92.01557.74D5F9A6@i-0c61d218973dfed4f.mta2vrest.sd.prd.sparkpost>
+Date: Tue, 08 Sep 2026 00:56:39 +0000
+MIME-Version: 1.0
+X-MatchID: TWDC8440564872
+X-GuestId: OBlzyrxNvdv0HuNTZlTdBeFUuoM3AKtBjp6MmuA0IoQ5/rWm4+9vtw64NRTeTHIX
+X-BcastId: 8440564872
+X-UserId: {A7217088-1F36-4F1F-AE73-67262BF763EF}
+X-EmailedTo: maysster@gmail.com
+Subject: ESPN Fantasy Football Draft Results
+From: "ESPN Fantasy Games" <fantasy@espnmail.com>
+Reply-To: noresponse@espnmail.com
+List-Unsubscribe: <mailto:unsubscribe@disney.mail.e.sparkpost.com?subject=unsubscribe%3AvdwoKhs_7_7xjwgF_ANgFVQKtu-OWdQAsGc9tV0sO5E~%7CeyAicmNwdF90byI6ICJtYXlzc3RlckBnbWFpbC5jb20iLCAidGVuYW50X2lkIjogImRpc25leSIsICJjdXN0b21lcl9pZCI6ICIxIiwgInN1YmFjY291bnRfaWQiOiAiMTEiLCAibWVzc2FnZV9pZCI6ICI2YTliNDc1ZDlmNmE4MjNhMjk2ZSIgfQ~~>,<https://unsubscribe.spmta.com/u/HoWkI86hvavesq3iU3fu2g~~/AAAAARA~/Y_dhD8ZJlxPA1ehbsKzienBPx3eowBwaAhJrr8NnsuvhO6Qu6QhMOrX4zQrzOu5a22A_p0_GwgRoRmH_S2FaCQ~~>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+List-Id: <disney.1.11.sparkpostmail.com>
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ESPN Fantasy Draft Results</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <style type="text/css">
+            body, table, td, a{ -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+            table, td{ mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+            img{ -ms-interpolation-mode: bicubic; }
+            img{ border: 0; height: auto; line-height: 100%; outline: none; text-decoration: none; }
+            table{ border-collapse: collapse !important; }
+            body {
+                color: #121213;
+                font-family: -apple-system, "Roboto", Helvetica, Arial, sans-serif;
+                height: 100% !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                width: 100% !important;
+            }
+
+            a[x-apple-data-detectors] {
+                color: inherit !important;
+                font-family: inherit !important;
+                font-size: inherit !important;
+                font-weight: inherit !important;
+                line-height: inherit !important;
+                text-decoration: none !important;
+            }
+        </style>
+    </head>
+
+    <body style="margin: 0 !important; padding: 0 !important; background-color: #eeeeee;">
+<div style="color:transparent;visibility:hidden;opacity:0;font-size:0px;border:0;max-height:1px;width:1px;margin:0px;padding:0px;border-width:0px!important;display:none!important;line-height:0px!important;"><img border="0" width="1" height="1" src="http://disney.et.e.sparkpost.com/q/WEq-_rqvWRvXHzOKbqPAHA~~/AAAAARA~/rVYzga4rGKNrFGHagIuQvdmtKY2qJFSoH19yTysNhs8ebDIKFR4Kv2LnWVXUMp6cV7bF8kWYaOg3y4ohrY94lA~~" alt=""/></div>
+
+        
+        <table align="center" border="0" cellpadding="0" cellspacing="0" style="background-color:#F1F2F3; width:600px;" width="600">
+            <tbody>
+                <tr>
+                    <td align="center">
+                        <table align="center" border="0" cellpadding="0" cellspacing="0" style="width:600px;" width="600">
+                            <tbody>
+                                <tr>
+                                    <td align="center" style="border-radius:10px 10px 0 0; overflow:hidden;">
+                                        <a href="http://www.espn.com/fantasy/football/" rel="noreferrer" style="outline:0;text-decoration:none;" target="_blank">
+                                            <img alt="ESPN Fantasy" src="https://g.espncdn.com/lm-static/ffl/images/email/header-nfl.png" style="width:100%;">
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center" style="background-color:#FFFFFF;color:#121213;font-size:60px;font-weight:900;line-height:55px;padding-top:38px;">MY DRAFT<br>REPORT CARD</td>
+                                </tr>
+                                <tr>
+                                    <td align="center" style="background-color:#FFFFFF;color:#121213;font-size:25px;font-weight:700;padding-top:38px;">The Poetry of Junkyard Juggers</td>
+                                </tr>
+                                <tr>
+                                    <td align="center" style="background-color:#FFFFFF;color:#5A5B5C;font-size:17px;font-weight:500;line-height:20px;padding:16px 0 10px;">
+                                        Your draft grade for
+                                        
+                                            <span style="color:#121213; font-weight: bold;">E-Discovery Keeper League</span>
+                                        
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <!--[if gte mso 9]>
+                                            <img src="http://g.espncdn.com/lm-static/images/email/draft-recap/draftGradeA.png" />
+                                            <style>
+                                                .gradeTable {
+                                                    display: none;
+                                                }
+                                            </style>
+                                        <![endif]-->
+                                        <table class="gradeTable" border="0" cellpadding="0" cellspacing="0" height="200" background="https://g.espncdn.com/lm-static/images/email/draft-recap/draftGradeA.png" style="background-color:#FFFFFF;background-image:url(https://g.espncdn.com/lm-static/images/email/draft-recap/draftGradeA.png);background-position:bottom;background-repeat:no-repeat no-repeat;background-size:100% 150px;height:200px;display:block; width:600px;" width="600">
+                                            <tbody style="display:block;width:100%;">
+                                                <tr style="display:flex;">
+                                                    <td align="center" valign="top" width="33%" style="background-image:url(https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4426515.png);background-position:center top;background-repeat:no-repeat no-repeat;background-size:188px 136.6px;width:33%;text-align:center;" valign="top">
+                                                        <div style="background:linear-gradient(180deg, rgba(13, 131, 15, 0) 52.72%, #0d830f 108.39%);height:136px;width:100%;"></div>
+                                                    </td>
+                                                    <td width="34%"></td>
+                                                    <td align="center" valign="top" width="33%" style="background-image:url(https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4890973.png);background-position:center  top;background-repeat:no-repeat no-repeat;background-size:188px 136.6px;width:33%;text-align:center;" valign="top">
+                                                        <div style="background:linear-gradient(180deg, rgba(13, 131, 15, 0) 52.72%, #0d830f 108.39%);height:136px;width:100%;"></div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+
+                                
+                                    <tr>
+                                        <td align="center" style="background-color:#FFFFFF;color:#6C6E6F;font-size:17px;font-weight:500;line-height:20px;padding:36px 48px 0">
+                                            Your team could finish <b style="color:#121213">1st</b>. Keep an eye out on injuries because that could affect your finish throughout the season.
+                                        </td>
+                                    </tr>
+                                
+                                <tr>
+                                    <td align="center" style="background-color:#FFFFFF;border-radius:0 0 10px 10px;padding-bottom:48px">
+                                        <table align="center" border="0" cellpadding="0" cellspacing="0" style="width:600px;" width="600">
+                                            <tbody>
+                                                <tr>
+                                                    <td align="center" style="height: 48px; padding-top: 10px; text-align: center; width: 400px;">
+                                                        
+                                                            <a href="http://fantasy.espn.com/football/league/draftrecap?leagueId=21985" rel="noreferrer" style="background-color:#3772DF; border: 2px solid #3772df; border-radius: 100px; color: #fff; font-size:13px; font-weight:500; margin-right: 10px; padding: 10px 20px; text-decoration: none; white-space:nowrap; width: 100%;" target="_blank">View Draft Results</a>
+                                                            <a href="http://fantasy.espn.com/football/team?leagueId=21985&teamId=9" rel="noreferrer" style="background: #fff; border: 2px solid #3772df; border-radius: 100px; color: #3772df; font-size:13px; font-weight:500; padding: 10px 20px; text-decoration: none; white-space:nowrap; width: 100%;" target="_blank">View League Home</a>
+                                                        
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                
+                                
+                                    
+                                        <tr>
+                                            <td align="center" style="padding: 12px 0;">
+                                                <table border="0" cellpadding="0" cellspacing="0" width="100%" style="width:100%;">
+                                                    <tr>
+                                                        <td align="center" style="font-size:0; line-height:0;">
+                                                            <a href="http://www.millerlite.com/fantasyfootball" rel="noreferrer" target="_blank" style="outline:0; text-decoration:none;">
+                                                                <img alt="Miller Lite" src="https://g.espncdn.com/lm-static/images/email/sponsors/miller-lite-2026.png" style="display:block; width:100%; height:auto;">
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <!-- The gradient and -webkit-text-fill-color are image/paint layers that survive dark-mode recoloring, unlike bgcolor and color. -->
+                                                        <td bgcolor="#000F3C" align="center" style="background-color:#000F3C; background-image:linear-gradient(#000F3C, #000F3C); border-radius:0 0 9px 9px; padding:5px 24px 12px;">
+                                                            <table border="0" cellpadding="0" cellspacing="0" align="center" style="max-width:402px;">
+                                                                <tr>
+                                                                    <td align="center" style="color:#CCCCCC; -webkit-text-fill-color:#CCCCCC; font-family:-apple-system, 'Benton Sans', 'Roboto', Helvetica, Arial, sans-serif; font-size:10px; font-weight:400; line-height:12px; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; text-size-adjust:100%;">
+                                                                        NO PURCHASE NECESSARY. Promotion ends on 1/10/27 at 11:59 PM CT. Open only to legal residents of 50 U.S. (D.C) who are 21 years or older. <a href="https://www.espn.com/fantasy/football/story/_/id/49546960" rel="noreferrer" target="_blank" style="color:#5990F6; -webkit-text-fill-color:#5990F6; text-decoration:none;">Click Here</a> for Official Rules, including how to enter, odds, prize details, and restrictions. Void where prohibited.
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    
+
+                                    
+                                        <tr>
+                                            <td align="center" style="padding: 0 0 12px;">
+                                                <table border="0" cellpadding="0" cellspacing="0" width="100%" style="width:100%;">
+                                                    <tr>
+                                                        <td align="center" style="font-size:0; line-height:0;">
+                                                            <a href="https://www.v.org/splash/fantasy-football/?utm_source=espn&utm_medium=email&utm_campaign=26ffb" rel="noreferrer" target="_blank" style="outline:0; text-decoration:none;">
+                                                                <img alt="V Foundation" src="https://g.espncdn.com/lm-static/images/email/v_foundation_promo.png" style="display:block; width:100%; height:auto;">
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    
+                                
+                                
+                                
+                                        <tr>
+                                            <td align="center" style="background-color:#FFFFFF;border-radius:10px 10px 0 0;font-size:20px;font-weight:700;padding:48px 0 16px;text-align:center;">Positional Breakdown</td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" style="background-color:#FFFFFF;padding:0 10px;">
+                                                <table align="center" border="0" cellpadding="0" cellspacing="0" style="width:100%;" width="100%">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style="border-bottom:1px solid #cecfcf;"></td>
+                                                            <td style="border-bottom:1px solid #cecfcf;"></td>
+                                                        </tr>
+                                                        
+                                                        
+                                                        
+                                                                <tr>
+                                                                    <td style="border-bottom:1px solid #cecfcf;font-size:14px;font-weight:700;padding:8px;">Strengths:</td>
+                                                                    <td align="right" style="border-bottom:1px solid #cecfcf;font-size:14px;font-weight:500;padding:16px 8px;">
+                                                                        
+                                                                        
+                                                                        
+                                                                                <span style="padding:4px;"></span>
+                                                                                <span style="background-color:#01C7F2;padding:4px;">WR</span>
+                                                                        
+                                                                        
+                                                                        
+                                                                    </td>
+                                                                </tr>
+                                                        
+                                                        
+                                                        
+                                                        
+                                                        
+                                                        
+                                                                <tr style="border-bottom:1px solid #cecfcf;">
+                                                                    <td style="font-size:14px;font-weight:700;padding:8px;">Weaknesses:</td>
+                                                                    <td align="right" style="font-size:14px;font-weight:500;padding:16px 8px;">
+                                                                        
+                                                                        
+                                                                        
+                                                                                <span style="padding:4px;"></span>
+                                                                                <span style="background-color:#30EFDD;padding:4px;">TE</span>
+                                                                        
+                                                                        
+                                                                        
+                                                                    </td>
+                                                                </tr>
+                                                        
+                                                        
+                                                        
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                
+                                
+                                
+                                <tr>
+                                    <td align="center" style="background-color:#FFFFFF;font-size:20px;font-weight:700;padding:48px 0 16px;text-align:center;">My Roster</td>
+                                </tr>
+                                <tr>
+                                    <td align="center" style="background-color:#FFFFFF;padding:0 10px;">
+                                        <table align="center" border="0" cellpadding="0" cellspacing="0" style="width:100%;" width="100%">
+                                            <tbody>
+                                                
+                                                
+                                                
+                                                                <tr>
+                                                                    <td style="border-top:1px solid #cecfcf;padding:8px;width:60px;">
+                                                                        <table >
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        
+                                                                                            <img alt="Puka Nacua" src="https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4426515.png&h=120&w=120&scale=crop" style="height:60px;width:60px;">
+                                                                                        
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                    <td style="border-top:1px solid #cecfcf;width:270px;">
+                                                                        <table border="0" cellpadding="0" cellspacing="0">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <span style="color:#000;font-size:14px;font-style:normal;font-weight:700;line-height:normal;">Puka Nacua</span>
+                                                                                        <span style="color:#6c6e6f;font-size:11px;font-style:normal;font-weight:500;line-height:13px;padding-left:4px;">WR</span>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <img alt="Los Angeles Rams" src="https://a.espncdn.com/combiner/i?site=fantasy&scale=border&img=/i/teamlogos/nfl/500/14.png&h=40&w=40" style="padding-right:3px;vertical-align:middle;width:20px;">
+                                                                                        <span style="color:#6c6e6f;font-size:11px;font-style:normal;font-weight:400;line-height:13px;vertical-align:middle;">Los Angeles Rams</span>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                    <td style="border-top:1px solid #cecfcf;width:80px;">
+                                                                        
+                                                                            <span style="color:#6c6e6f;font-size:11px;font-style:normal;font-weight:400;line-height:13px;vertical-align:middle;">
+                                                                                Round 1
+                                                                            </span>
+                                                                            <br>
+                                                                            <span style="color:#6c6e6f;font-size:11px;font-style:normal;font-weight:400;line-height:13px;vertical-align:middle;">
+                                                                                Pick 8
+                                                                            </span>
+                                                                        
+                                                                        
+                                                                            <br>
+                                                                            <span style="color:#6c6e6f;font-size:11px;font-style:normal;font-weight:400;line-height:13px;vertical-align:middle;">
+                                                                                Bye 11
+                                                                            </span>
+                                                                        
+                                                                    </td>
+                                                                </tr>
+                                                
+                                                
+                                                
+                                                                <tr>
+                                                                    <td style="border-top:1px solid #cecfcf;padding:8px;width:60px;">
+                                                                        <table >
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        
+                                                                                            <img alt="Ashton Jeanty" src="https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4890973.png&h=120&w=120&scale=crop" style="height:60px;width:60px;">
+                                                                                        
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                    <td style="border-top:1px solid #cecfcf;width:270px;">
+                                                                        <table border="0" cellpadding="0" cellspacing="0">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <span style="color:#000;font-size:14px;font-style:normal;font-weight:700;line-height:normal;">Ashton Jeanty</span>
+                                                                                        <span style="color:#6c6e6f;font-size:11px;font-style:normal;font-weight:500;line-height:13px;padding-left:4px;">RB</span>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <img alt="Las Vegas Raiders" src="https://a.espncdn.com/combiner/i?site=fantasy&scale=border&img=/i/teamlogos/nfl/500/13.png&h=40&w=40" style="padding-right:3px;vertical-align:middle;width:20px;">
+                                                                                        <span style="color:#6c6e6f;font-size:11px;font-style:normal;font-weight:400;line-height:13px;vertical-align:middle;">Las Vegas Raiders</span>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                    <td style="border-top:1px solid #cecfcf;width:80px;">
+                                                                        
+                                                                            <span style="color:#6c6e6f;font-size:11px;font-style:normal;font-weight:400;line-height:13px;vertical-align:middle;">
+                                                                                Round 2
+                                                                            </span>
+                                                                            <br>
+                                                                            <span style="color:#6c6e6f;font-size:11px;font-style:normal;font-weight:400;line-height:13px;vertical-align:middle;">
+                                                                                Pick 5
+                                                                            </span>
+                                                                        
+                                                                        
+                                                                            <br>
+                                                                            <span style="color:#6c6e6f;font-size:11px;font-style:normal;font-weight:400;line-height:13px;vertical-align:middle;">
+                                                                                Bye 13
+                                                                            </span>
+                                                                        
+                                                                    </td>
+                                                                </tr>
+                                                
+                                                
+                                                
+                                                                <tr>
+                                                                    <td style="border-top:1px solid #cecfcf;padding:8px;width:60px;">
+                                                                        <table >
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        
+                                                                                            <img alt="Quinshon Judkins" src="https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4685702.png&h=120&w=120&scale=crop" style="height:60px;width:60px;">
+                                                                                        
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                    <td style="border-top:1px solid #cecfcf;width:270px;">
+                                                                        <table border="0" cellpadding="0" cellspacing="0">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <span style="color:#000;font-size:14px;font-style:normal;font-weight:700;line-height:normal;">Quinshon Judkins</span>
+                                                                                        <span style="color:#6c6e6f;font-size:11px;font-style:normal;font-weight:500;line-height:13px;padding-left:4px;">RB</span>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <img alt="Cleveland Browns" src="https://a.espncdn.com/combiner/i?site=fantasy&scale=border&img=/i/teamlogos/nfl/500/5.png&h=40&w=40" style="padding-right:3px;vertical-align:middle;width:20px;">
+                                                                                        <span style="color:#6c6e6f;font-size:11px;font-style:normal;font-weight:400;line-height:13px;vertical-align:middle;">Cleveland Browns</span>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                    <td style="border-top:1px solid #cecfcf;width:80px;">
+                                                                        
+                                                                            <span style="color:#6c6e6f;font-size:11px;font-style:normal;font-weight:400;line-height:13px;vertical-align:middle;">
+                                                                                Round 3
+                                                                            </span>
+                                                                            <br>
+                                                                            <span style="color:#6c6e6f;font-size:11px;font-style:normal;font-weight:400;line-height:13px;vertical-align:middle;">
+                                                                                Pick 8
+                                                                            </span>
+                                                                        
+                                                                        
+                                                                            <br>
+                                                                            <span style="color:#6c6e6f;font-size:11px;font-style:normal;font-weight:400;line-height:13px;vertical-align:middle;">
+                                                                                Bye 11
+                                                                            </span>
+                                                                        
+                                                                    </td>
+                                                                </tr>
+                                                
+                                                
+                                                
+                                                                <tr>
+                                                                    <td style="border-top:1px solid #cecfcf;padding:8px;width:60px;">
+                                                                        <table >
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        
+                                                                                            <img alt="Davante Adams" src="https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/16800.png&h=120&w=120&scale=crop" style="height:60px;width:60px;">
+                                                                                        
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                    <td style="border-top:1px solid #cecfcf;width:270px;">
+                                                                        <table border="0" cellpadding="0" cellspacing="0">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <span style="color:#000;font-size:14px;font-style:normal;font-weight:700;line-height:normal;">Davante Adams</span>
+                                                                                        <span style="color:#6c6e6f;font-size:11px;font-style:normal;font-weight:500;line-height:13px;padding-left:4px;">WR</span>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <img alt="Los Angeles Rams" src="https://a.espncdn.com/combiner/i?site=fantasy&scale=border&img=/i/teamlogos/nfl/500/14.png&h=40&w=40" style="padding-right:3px;vertical-align:middle;width:20px;">
+                                                                                        <span style="color:#6c6e6f;font-size:11px;font-style:normal;font-weight:400;line-height:13px;vertical-align:middle;">Los Angeles Rams</span>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                    <td style="border-top:1px solid #cecfcf;width:80px;">
+                                                                        
+                                                                            <span style="color:#6c6e6f;font-size:11px;font-style:normal;font-weight:400;line-height:13px;vertical-align:middle;">
+                                                                                Round 4
+                                                                            </span>
+                                                                            <br>
+                                                                            <span style="color:#6c6e6f;font-size:11px;font-style:normal;font-weight:400;line-height:13px;vertical-align:middle;">
+                                                                                Pick 5
+                                                                            </span>
+                                                                        
+                                                                        
+                                                                            <br>
+                                                                            <span style="color:#6c6e6f;font-size:11px;font-style:normal;font-weight:400;line-height:13px;vertical-align:middle;">
+                                                                                Bye 11
+                                                                            </span>
+                                                                        
+                                                                    </td>
+                                                                </tr>
+                                                
+                                                
+                                                
+                                                                <tr>
+                                                                    <td style="border-top:1px solid #cecfcf;padding:8px;width:60px;">
+                                                                        <table >
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        
+                                                                                            <img alt="Jalen Hurts" src="https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4040715.png&h=120&w=120&scale=crop" style="height:60px;width:60px;">
+                                                                                        
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                    <td style="border-top:1px solid #cecfcf;width:270px;">
+                                                                        <table border="0" cellpadding="0" cellspacing="0">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <span style="color:#000;font-size:14px;font-style:normal;font-weight:700;line-height:normal;">Jalen Hurts</span>
+                                                                                        <span style="color:#6c6e6f;font-size:11px;font-style:normal;font-weight:500;line-height:13px;padding-left:4px;">QB</span>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <img alt="Philadelphia Eagles" src="https://a.espncdn.com/combiner/i?site=fantasy&scale=border&img=/i/teamlogos/nfl/500/21.png&h=40&w=40" style="padding-right:3px;vertical-align:middle;width:20px;">
+                                                                                        <span style="color:#6c6e6f;font-size:11px;font-style:normal;font-weight:400;line-height:13px;vertical-align:middle;">Philadelphia Eagles</span>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                    <td style="border-top:1px solid #cecfcf;width:80px;">
+                                                                        
+                                                                            <span style="color:#6c6e6f;font-size:11px;font-style:normal;font-weight:400;line-height:13px;vertical-align:middle;">
+                                                                                Round 5
+                                                                            </span>
+                                                                            <br>
+                                                                            <span style="color:#6c6e6f;font-size:11px;font-style:normal;font-weight:400;line-height:13px;vertical-align:middle;">
+                                                                                Pick 8
+                                                                            </span>
+                                                                        
+                                                                        
+                                                                            <br>
+                                                                            <span style="color:#6c6e6f;font-size:11px;font-style:normal;font-weight:400;line-height:13px;vertical-align:middle;">
+                                                                                Bye 10
+                                                                            </span>
+                                                                        
+                                                                    </td>
+                                                                </tr>
+                                                
+                                                
+                                                
+                                                                <tr>
+                                                                    <td style="border-top:1px solid #cecfcf;padding:8px;width:60px;">
+                                                                        <table >
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        
+                                                                                            <img alt="Sam LaPorta" src="https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4430027.png&h=120&w=120&scale=crop" style="height:60px;width:60px;">
+                                                                                        
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                    <td style="border-top:1px solid #cecfcf;width:270px;">
+                                                                        <table border="0" cellpadding="0" cellspacing="0">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <span style="color:#000;font-size:14px;font-style:normal;font-weight:700;line-height:normal;">Sam LaPorta</span>
+                                                                                        <span style="color:#6c6e6f;font-size:11px;font-style:normal;font-weight:500;line-height:13px;padding-left:4px;">TE</span>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <img alt="Detroit Lions" src="https://a.espncdn.com/combiner/i?site=fantasy&scale=border&img=/i/teamlogos/nfl/500/8.png&h=40&w=40" style="padding-right:3px;vertical-align:middle;width:20px;">
+                                                                                        <span style="color:#6c6e6f;font-size:11px;font-style:normal;font-weight:400;line-height:13px;vertical-align:middle;">Detroit Lions</span>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                    <td style="border-top:1px solid #cecfcf;width:80px;">
+                                                                        
+                                                                            <span style="color:#6c6e6f;font-size:11px;font-style:normal;font-weight:400;line-height:13px;vertical-align:middle;">
+                                                                                Round 6
+                                                                            </span>
+                                                                            <br>
+                                                                            <span style="color:#6c6e6f;font-size:11px;font-style:normal;font-weight:400;line-height:13px;vertical-align:middle;">
+                                                                                Pick 5
+                                                                            </span>
+                                                                        
+                                                                        
+                                                                            <br>
+                                                                            <span style="color:#6c6e6f;font-size:11px;font-style:normal;font-weight:400;line-height:13px;vertical-align:middle;">
+                                                                                Bye 6
+                                                                            </span>
+                                                                        
+                                                                    </td>
+                                                                </tr>
+                                                
+                                                
+                                                
+                                                                <tr>
+                                                                    <td style="border-top:1px solid #cecfcf;padding:8px;width:60px;">
+                                                                        <table >
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        
+                                                                                            <img alt="Rico Dowdle" src="https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4038815.png&h=120&w=120&scale=crop" style="height:60px;width:60px;">
+                                                                                        
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                    <td style="border-top:1px solid #cecfcf;width:270px;">
+                                                                        <table border="0" cellpadding="0" cellspacing="0">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <span style="color:#000;font-size:14px;font-style:normal;font-weight:700;line-height:normal;">Rico Dowdle</span>
+                                                                                        <span style="color:#6c6e6f;font-size:11px;font-style:normal;font-weight:500;line-height:13px;padding-left:4px;">RB</span>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <img alt="Pittsburgh Steelers" src="https://a.espncdn.com/combiner/i?site=fantasy&scale=border&img=/i/teamlogos/nfl/500/23.png&h=40&w=40" style="padding-right:3px;vertical-align:middle;width:20px;">
+                                                                                        <span style="color:#6c6e6f;font-size:11px;font-style:normal;font-weight:400;line-height:13px;vertical-align:middle;">Pittsburgh Steelers</span>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                    <td style="border-top:1px solid #cecfcf;width:80px;">
+                                                                        
+                                                                            <span style="color:#6c6e6f;font-size:11px;font-style:normal;font-weight:400;line-height:13px;vertical-align:middle;">
+                                                                                Round 7
+                                                                            </span>
+                                                                            <br>
+                                                                            <span style="color:#6c6e6f;font-size:11px;font-style:normal;font-weight:400;line-height:13px;vertical-align:middle;">
+                                                                                Pick 8
+                                                                            </span>
+                                                                        
+                                                                        
+                                                                            <br>
+                                                                            <span style="color:#6c6e6f;font-size:11px;font-style:normal;font-weight:400;line-height:13px;vertical-align:middle;">
+                                                                                Bye 9
+                                                                            </span>
+                                                                        
+                                                                    </td>
+                                                                </tr>
+                                                
+                                                
+                                                
+                                                                <tr>
+                                                                    <td style="border-top:1px solid #cecfcf;padding:8px;width:60px;">
+                                                                        <table >
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        
+                                                                                            <img alt="J.K. Dobbins" src="https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4241985.png&h=120&w=120&scale=crop" style="height:60px;width:60px;">
+                                                                                        
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                    <td style="border-top:1px solid #cecfcf;width:270px;">
+                                                                        <table border="0" cellpadding="0" cellspacing="0">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <span style="color:#000;font-size:14px;font-style:normal;font-weight:700;line-height:normal;">J.K. Dobbins</span>
+                                                                                        <span style="color:#6c6e6f;font-size:11px;font-style:normal;font-weight:500;line-height:13px;padding-left:4px;">RB</span>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <img alt="Denver Broncos" src="https://a.espncdn.com/combiner/i?site=fantasy&scale=border&img=/i/teamlogos/nfl/500/7.png&h=40&w=40" style="padding-right:3px;vertical-align:middle;width:20px;">
+                                                                                        <span style="color:#6c6e6f;font-size:11px;font-style:normal;font-weight:400;line-height:13px;vertical-align:middle;">Denver Broncos</span>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                    <td style="border-top:1px solid #cecfcf;width:80px;">
+                                                                        
+                                                                            <span style="color:#6c6e6f;font-size:11px;font-style:normal;font-weight:400;line-height:13px;vertical-align:middle;">
+                                                                                Round 8
+                                                                            </span>
+                                                                            <br>
+                                                                            <span style="color:#6c6e6f;font-size:11px;font-style:normal;font-weight:400;line-height:13px;vertical-align:middle;">
+                                                                                Pick 5
+                                                                            </span>
+                                                                        
+                                                                        
+                                                                            <br>
+                                                                            <span style="color:#6c6e6f;font-size:11px;font-style:normal;font-weight:400;line-height:13px;vertical-align:middle;">
+                                                                                Bye 10
+                                                                            </span>
+                                                                        
+                                                                    </td>
+                                                                </tr>
+                                                
+                                                
+                                                
+                                                                <tr>
+                                                                    <td style="border-top:1px solid #cecfcf;padding:8px;width:60px;">
+                                                                        <table >
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        
+                                                                                            <img alt="Tyjae Spears" src="https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4428557.png&h=120&w=120&scale=crop" style="height:60px;width:60px;">
+                                                                                        
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                    <td style="border-top:1px solid #cecfcf;width:270px;">
+                                                                        <table border="0" cellpadding="0" cellspacing="0">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <span style="color:#000;font-size:14px;font-style:normal;font-weight:700;line-height:normal;">Tyjae Spears</span>
+                                                                                        <span style="color:#6c6e6f;font-size:11px;font-style:normal;font-weight:500;line-height:13px;padding-left:4px;">RB</span>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <img alt="Tennessee Titans" src="https://a.espncdn.com/combiner/i?site=fantasy&scale=border&img=/i/teamlogos/nfl/500/10.png&h=40&w=40" style="padding-right:3px;vertical-align:middle;width:20px;">
+                                                                                        <span style="color:#6c6e6f;font-size:11px;font-style:normal;font-weight:400;line-height:13px;vertical-align:middle;">Tennessee Titans</span>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                    <td style="border-top:1px solid #cecfcf;width:80px;">
+                                                                        
+                                                                            <span style="color:#6c6e6f;font-size:11px;font-style:normal;font-weight:400;line-height:13px;vertical-align:middle;">
+                                                                                Round 9
+                                                                            </span>
+                                                                            <br>
+                                                                            <span style="color:#6c6e6f;font-size:11px;font-style:normal;font-weight:400;line-height:13px;vertical-align:middle;">
+                                                                                Pick 8
+                                                                            </span>
+                                                                        
+                                                                        
+                                                                            <br>
+                                                                            <span style="color:#6c6e6f;font-size:11px;font-style:normal;font-weight:400;line-height:13px;vertical-align:middle;">
+                                                                                Bye 9
+                                                                            </span>
+                                                                        
+                                                                    </td>
+                                                                </tr>
+                                                
+                                                
+                                                
+                                                                <tr>
+                                                                    <td style="border-top:1px solid #cecfcf;padding:8px;width:60px;">
+                                                                        <table >
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        
+                                                                                            <img alt="Xavier Worthy" src="https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4683062.png&h=120&w=120&scale=crop" style="height:60px;width:60px;">
+                                                                                        
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                    <td style="border-top:1px solid #cecfcf;width:270px;">
+                                                                        <table border="0" cellpadding="0" cellspacing="0">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <span style="color:#000;font-size:14px;font-style:normal;font-weight:700;line-height:normal;">Xavier Worthy</span>
+                                                                                        <span style="color:#6c6e6f;font-size:11px;font-style:normal;font-weight:500;line-height:13px;padding-left:4px;">WR</span>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <img alt="Kansas City Chiefs" src="https://a.espncdn.com/combiner/i?site=fantasy&scale=border&img=/i/teamlogos/nfl/500/12.png&h=40&w=40" style="padding-right:3px;vertical-align:middle;width:20px;">
+                                                                                        <span style="color:#6c6e6f;font-size:11px;font-style:normal;font-weight:400;line-height:13px;vertical-align:middle;">Kansas City Chiefs</span>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                    <td style="border-top:1px solid #cecfcf;width:80px;">
+                                                                        
+                                                                            <span style="color:#6c6e6f;font-size:11px;font-style:normal;font-weight:400;line-height:13px;vertical-align:middle;">
+                                                                                Round 10
+                                                                            </span>
+                                                                            <br>
+                                                                            <span style="color:#6c6e6f;font-size:11px;font-style:normal;font-weight:400;line-height:13px;vertical-align:middle;">
+                                                                                Pick 5
+                                                                            </span>
+                                                                        
+                                                                        
+                                                                            <br>
+                                                                            <span style="color:#6c6e6f;font-size:11px;font-style:normal;font-weight:400;line-height:13px;vertical-align:middle;">
+                                                                                Bye 5
+                                                                            </span>
+                                                                        
+                                                                    </td>
+                                                                </tr>
+                                                
+                                                
+                                                
+                                                                <tr>
+                                                                    <td style="border-top:1px solid #cecfcf;padding:8px;width:60px;">
+                                                                        <table >
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        
+                                                                                            <img alt="Mike Washington Jr." src="https://g.espncdn.com/lm-static/ffl/images/nomug-darkMode.png" style="height:45px;width:62px;">
+                                                                                        
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                    <td style="border-top:1px solid #cecfcf;width:270px;">
+                                                                        <table border="0" cellpadding="0" cellspacing="0">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <span style="color:#000;font-size:14px;font-style:normal;font-weight:700;line-height:normal;">Mike Washington Jr.</span>
+                                                                                        <span style="color:#6c6e6f;font-size:11px;font-style:normal;font-weight:500;line-height:13px;padding-left:4px;">RB</span>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <img alt="Las Vegas Raiders" src="https://a.espncdn.com/combiner/i?site=fantasy&scale=border&img=/i/teamlogos/nfl/500/13.png&h=40&w=40" style="padding-right:3px;vertical-align:middle;width:20px;">
+                                                                                        <span style="color:#6c6e6f;font-size:11px;font-style:normal;font-weight:400;line-height:13px;vertical-align:middle;">Las Vegas Raiders</span>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                    <td style="border-top:1px solid #cecfcf;width:80px;">
+                                                                        
+                                                                            <span style="color:#6c6e6f;font-size:11px;font-style:normal;font-weight:400;line-height:13px;vertical-align:middle;">
+                                                                                Round 11
+                                                                            </span>
+                                                                            <br>
+                                                                            <span style="color:#6c6e6f;font-size:11px;font-style:normal;font-weight:400;line-height:13px;vertical-align:middle;">
+                                                                                Pick 8
+                                                                            </span>
+                                                                        
+                                                                        
+                                                                            <br>
+                                                                            <span style="color:#6c6e6f;font-size:11px;font-style:normal;font-weight:400;line-height:13px;vertical-align:middle;">
+                                                                                Bye 13
+                                                                            </span>
+                                                                        
+                                                                    </td>
+                                                                </tr>
+                                                
+                                                
+                                                
+                                                                <tr>
+                                                                    <td style="border-top:1px solid #cecfcf;padding:8px;width:60px;">
+                                                                        <table >
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        
+                                                                                            <img alt="Tyler Shough" src="https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4360689.png&h=120&w=120&scale=crop" style="height:60px;width:60px;">
+                                                                                        
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                    <td style="border-top:1px solid #cecfcf;width:270px;">
+                                                                        <table border="0" cellpadding="0" cellspacing="0">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <span style="color:#000;font-size:14px;font-style:normal;font-weight:700;line-height:normal;">Tyler Shough</span>
+                                                                                        <span style="color:#6c6e6f;font-size:11px;font-style:normal;font-weight:500;line-height:13px;padding-left:4px;">QB</span>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <img alt="New Orleans Saints" src="https://a.espncdn.com/combiner/i?site=fantasy&scale=border&img=/i/teamlogos/nfl/500/18.png&h=40&w=40" style="padding-right:3px;vertical-align:middle;width:20px;">
+                                                                                        <span style="color:#6c6e6f;font-size:11px;font-style:normal;font-weight:400;line-height:13px;vertical-align:middle;">New Orleans Saints</span>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                    <td style="border-top:1px solid #cecfcf;width:80px;">
+                                                                        
+                                                                            <span style="color:#6c6e6f;font-size:11px;font-style:normal;font-weight:400;line-height:13px;vertical-align:middle;">
+                                                                                Round 12
+                                                                            </span>
+                                                                            <br>
+                                                                            <span style="color:#6c6e6f;font-size:11px;font-style:normal;font-weight:400;line-height:13px;vertical-align:middle;">
+                                                                                Pick 5
+                                                                            </span>
+                                                                        
+                                                                        
+                                                                            <br>
+                                                                            <span style="color:#6c6e6f;font-size:11px;font-style:normal;font-weight:400;line-height:13px;vertical-align:middle;">
+                                                                                Bye 8
+                                                                            </span>
+                                                                        
+                                                                    </td>
+                                                                </tr>
+                                                
+                                                
+                                                
+                                                                <tr>
+                                                                    <td style="border-top:1px solid #cecfcf;padding:8px;width:60px;">
+                                                                        <table >
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        
+                                                                                            <img alt="Browns D/ST" src="https://a.espncdn.com/combiner/i?site=fantasy&scale=border&img=/i/teamlogos/nfl/500/5.png&h=120&w=120" style="height:60px;width:60px;">
+                                                                                        
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                    <td style="border-top:1px solid #cecfcf;width:270px;">
+                                                                        <table border="0" cellpadding="0" cellspacing="0">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <span style="color:#000;font-size:14px;font-style:normal;font-weight:700;line-height:normal;">Browns D/ST</span>
+                                                                                        <span style="color:#6c6e6f;font-size:11px;font-style:normal;font-weight:500;line-height:13px;padding-left:4px;">D/ST</span>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <img alt="Cleveland Browns" src="https://a.espncdn.com/combiner/i?site=fantasy&scale=border&img=/i/teamlogos/nfl/500/5.png&h=40&w=40" style="padding-right:3px;vertical-align:middle;width:20px;">
+                                                                                        <span style="color:#6c6e6f;font-size:11px;font-style:normal;font-weight:400;line-height:13px;vertical-align:middle;">Cleveland Browns</span>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                    <td style="border-top:1px solid #cecfcf;width:80px;">
+                                                                        
+                                                                            <span style="color:#6c6e6f;font-size:11px;font-style:normal;font-weight:400;line-height:13px;vertical-align:middle;">
+                                                                                Round 13
+                                                                            </span>
+                                                                            <br>
+                                                                            <span style="color:#6c6e6f;font-size:11px;font-style:normal;font-weight:400;line-height:13px;vertical-align:middle;">
+                                                                                Pick 8
+                                                                            </span>
+                                                                        
+                                                                        
+                                                                            <br>
+                                                                            <span style="color:#6c6e6f;font-size:11px;font-style:normal;font-weight:400;line-height:13px;vertical-align:middle;">
+                                                                                Bye 11
+                                                                            </span>
+                                                                        
+                                                                    </td>
+                                                                </tr>
+                                                
+                                                
+                                                
+                                                                <tr>
+                                                                    <td style="border-top:1px solid #cecfcf;padding:8px;width:60px;">
+                                                                        <table >
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        
+                                                                                            <img alt="Eddy Pineiro" src="https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4034949.png&h=120&w=120&scale=crop" style="height:60px;width:60px;">
+                                                                                        
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                    <td style="border-top:1px solid #cecfcf;width:270px;">
+                                                                        <table border="0" cellpadding="0" cellspacing="0">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <span style="color:#000;font-size:14px;font-style:normal;font-weight:700;line-height:normal;">Eddy Pineiro</span>
+                                                                                        <span style="color:#6c6e6f;font-size:11px;font-style:normal;font-weight:500;line-height:13px;padding-left:4px;">K</span>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <img alt="San Francisco 49ers" src="https://a.espncdn.com/combiner/i?site=fantasy&scale=border&img=/i/teamlogos/nfl/500/25.png&h=40&w=40" style="padding-right:3px;vertical-align:middle;width:20px;">
+                                                                                        <span style="color:#6c6e6f;font-size:11px;font-style:normal;font-weight:400;line-height:13px;vertical-align:middle;">San Francisco 49ers</span>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                    <td style="border-top:1px solid #cecfcf;width:80px;">
+                                                                        
+                                                                            <span style="color:#6c6e6f;font-size:11px;font-style:normal;font-weight:400;line-height:13px;vertical-align:middle;">
+                                                                                Round 14
+                                                                            </span>
+                                                                            <br>
+                                                                            <span style="color:#6c6e6f;font-size:11px;font-style:normal;font-weight:400;line-height:13px;vertical-align:middle;">
+                                                                                Pick 5
+                                                                            </span>
+                                                                        
+                                                                        
+                                                                            <br>
+                                                                            <span style="color:#6c6e6f;font-size:11px;font-style:normal;font-weight:400;line-height:13px;vertical-align:middle;">
+                                                                                Bye 8
+                                                                            </span>
+                                                                        
+                                                                    </td>
+                                                                </tr>
+                                                
+                                                
+                                                
+                                                                <tr>
+                                                                    <td style="border-top:1px solid #cecfcf;padding:8px;width:60px;">
+                                                                        <table >
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        
+                                                                                            <img alt="George Pickens" src="https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/4426354.png&h=120&w=120&scale=crop" style="height:60px;width:60px;">
+                                                                                        
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                    <td style="border-top:1px solid #cecfcf;width:270px;">
+                                                                        <table border="0" cellpadding="0" cellspacing="0">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <span style="color:#000;font-size:14px;font-style:normal;font-weight:700;line-height:normal;">George Pickens</span>
+                                                                                        <span style="color:#6c6e6f;font-size:11px;font-style:normal;font-weight:500;line-height:13px;padding-left:4px;">WR</span>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <img alt="Dallas Cowboys" src="https://a.espncdn.com/combiner/i?site=fantasy&scale=border&img=/i/teamlogos/nfl/500/6.png&h=40&w=40" style="padding-right:3px;vertical-align:middle;width:20px;">
+                                                                                        <span style="color:#6c6e6f;font-size:11px;font-style:normal;font-weight:400;line-height:13px;vertical-align:middle;">Dallas Cowboys</span>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                    <td style="border-top:1px solid #cecfcf;width:80px;">
+                                                                        
+                                                                            <span style="color:#6c6e6f;font-size:11px;font-style:normal;font-weight:400;line-height:13px;vertical-align:middle;">
+                                                                                Round 15
+                                                                            </span>
+                                                                            <br>
+                                                                            <span style="color:#6c6e6f;font-size:11px;font-style:normal;font-weight:400;line-height:13px;vertical-align:middle;">
+                                                                                Pick 8
+                                                                            </span>
+                                                                        
+                                                                        
+                                                                            <br>
+                                                                            <span style="color:#6c6e6f;font-size:11px;font-style:normal;font-weight:400;line-height:13px;vertical-align:middle;">
+                                                                                Bye 14
+                                                                            </span>
+                                                                        
+                                                                    </td>
+                                                                </tr>
+                                                
+                                                
+                                                
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center" style="background-color:#FFFFFF;font-size:20px;font-weight:700;padding:48px 0 16px;text-align:center;">League Grades</td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color:#FFFFFF;border-radius:0 0 10px 10px;padding:0 10px;">
+                                        <table align="center" border="0" cellpadding="0" cellspacing="0" style="width:100%;" width="100%">
+                                            <tbody>
+                                                
+                                                
+                                                
+                                                                    <tr>
+                                                                        <td style="border-top:1px solid #cecfcf;font-size:14px;font-weight:700;padding:8px;">Multiple Scorgasms</td>
+                                                                        <td align="right" style="border-top:1px solid #cecfcf;padding:8px;">
+                                                                            <img alt="A" src="https://g.espncdn.com/lm-static/images/email/draft-recap/leagueGradeA.png" style="height:40px;width:40px;">
+                                                                        </td>
+                                                                    </tr>
+                                                
+                                                
+                                                
+                                                                    <tr>
+                                                                        <td style="border-top:1px solid #cecfcf;font-size:14px;font-weight:700;padding:8px;">The Poetry of Junkyard Juggers</td>
+                                                                        <td align="right" style="border-top:1px solid #cecfcf;padding:8px;">
+                                                                            <img alt="A" src="https://g.espncdn.com/lm-static/images/email/draft-recap/leagueGradeA.png" style="height:40px;width:40px;">
+                                                                        </td>
+                                                                    </tr>
+                                                
+                                                
+                                                
+                                                                    <tr>
+                                                                        <td style="border-top:1px solid #cecfcf;font-size:14px;font-weight:700;padding:8px;">ChatCTE</td>
+                                                                        <td align="right" style="border-top:1px solid #cecfcf;padding:8px;">
+                                                                            <img alt="A" src="https://g.espncdn.com/lm-static/images/email/draft-recap/leagueGradeA.png" style="height:40px;width:40px;">
+                                                                        </td>
+                                                                    </tr>
+                                                
+                                                
+                                                
+                                                                    <tr>
+                                                                        <td style="border-top:1px solid #cecfcf;font-size:14px;font-weight:700;padding:8px;">The Kunning Stunts</td>
+                                                                        <td align="right" style="border-top:1px solid #cecfcf;padding:8px;">
+                                                                            <img alt="B" src="https://g.espncdn.com/lm-static/images/email/draft-recap/leagueGradeB.png" style="height:40px;width:40px;">
+                                                                        </td>
+                                                                    </tr>
+                                                
+                                                
+                                                
+                                                                    <tr>
+                                                                        <td style="border-top:1px solid #cecfcf;font-size:14px;font-weight:700;padding:8px;">Bloodied Castaways</td>
+                                                                        <td align="right" style="border-top:1px solid #cecfcf;padding:8px;">
+                                                                            <img alt="B" src="https://g.espncdn.com/lm-static/images/email/draft-recap/leagueGradeB.png" style="height:40px;width:40px;">
+                                                                        </td>
+                                                                    </tr>
+                                                
+                                                
+                                                
+                                                                    <tr>
+                                                                        <td style="border-top:1px solid #cecfcf;font-size:14px;font-weight:700;padding:8px;">We Got This Sh!t</td>
+                                                                        <td align="right" style="border-top:1px solid #cecfcf;padding:8px;">
+                                                                            <img alt="B" src="https://g.espncdn.com/lm-static/images/email/draft-recap/leagueGradeB.png" style="height:40px;width:40px;">
+                                                                        </td>
+                                                                    </tr>
+                                                
+                                                
+                                                
+                                                                    <tr>
+                                                                        <td style="border-top:1px solid #cecfcf;font-size:14px;font-weight:700;padding:8px;">Send'em Packin</td>
+                                                                        <td align="right" style="border-top:1px solid #cecfcf;padding:8px;">
+                                                                            <img alt="C" src="https://g.espncdn.com/lm-static/images/email/draft-recap/leagueGradeC.png" style="height:40px;width:40px;">
+                                                                        </td>
+                                                                    </tr>
+                                                
+                                                
+                                                
+                                                                    <tr>
+                                                                        <td style="border-top:1px solid #cecfcf;font-size:14px;font-weight:700;padding:8px;">Jaxson Bates</td>
+                                                                        <td align="right" style="border-top:1px solid #cecfcf;padding:8px;">
+                                                                            <img alt="C" src="https://g.espncdn.com/lm-static/images/email/draft-recap/leagueGradeC.png" style="height:40px;width:40px;">
+                                                                        </td>
+                                                                    </tr>
+                                                
+                                                
+                                                
+                                                                    <tr>
+                                                                        <td style="border-top:1px solid #cecfcf;font-size:14px;font-weight:700;padding:8px;">Seasick of Losing </td>
+                                                                        <td align="right" style="border-top:1px solid #cecfcf;padding:8px;">
+                                                                            <img alt="C" src="https://g.espncdn.com/lm-static/images/email/draft-recap/leagueGradeC.png" style="height:40px;width:40px;">
+                                                                        </td>
+                                                                    </tr>
+                                                
+                                                
+                                                
+                                                                    <tr>
+                                                                        <td style="border-top:1px solid #cecfcf;font-size:14px;font-weight:700;padding:8px;">Breece up those Tets </td>
+                                                                        <td align="right" style="border-top:1px solid #cecfcf;padding:8px;">
+                                                                            <img alt="C" src="https://g.espncdn.com/lm-static/images/email/draft-recap/leagueGradeC.png" style="height:40px;width:40px;">
+                                                                        </td>
+                                                                    </tr>
+                                                
+                                                
+                                                
+                                                                    <tr>
+                                                                        <td style="border-top:1px solid #cecfcf;font-size:14px;font-weight:700;padding:8px;">NickCannonFanClub</td>
+                                                                        <td align="right" style="border-top:1px solid #cecfcf;padding:8px;">
+                                                                            <img alt="C" src="https://g.espncdn.com/lm-static/images/email/draft-recap/leagueGradeC.png" style="height:40px;width:40px;">
+                                                                        </td>
+                                                                    </tr>
+                                                
+                                                
+                                                
+                                                                    <tr>
+                                                                        <td style="border-top:1px solid #cecfcf;font-size:14px;font-weight:700;padding:8px;">Window is Always Open</td>
+                                                                        <td align="right" style="border-top:1px solid #cecfcf;padding:8px;">
+                                                                            <img alt="D" src="https://g.espncdn.com/lm-static/images/email/draft-recap/leagueGradeD.png" style="height:40px;width:40px;">
+                                                                        </td>
+                                                                    </tr>
+                                                
+                                                
+                                                
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center" style="padding-top: 12px;">
+                                        <table bgcolor="#ffffff" align="left" border="0" cellpadding="0" cellspacing="0" style="border-radius: 10px; width: 100%;" width="100%">
+                                            <tr>
+                                                <td align="left" valign="top" style="border-bottom: 1px solid #e2e3e5; padding: 20px 15px;">
+    
+                                                        <table border="0" cellpadding="0" cellspacing="0" style="width:100%;" width="100%">
+                                                            <tr>
+                                                                <td align="left" valign="top">
+                                                                    <a href="https://www.espn.com/espn/apps/fantasy" target="_blank" style="outline: 0;">
+                                                                        <img src="https://g.espncdn.com/lm-static/fantasy/espn_tile_default.png" width="56" height="56" style="display: block; width: 56px; height: 56px;" alt="ESPN Fantasy App" border="0">
+                                                                    </a>
+                                                                </td>
+                                                                <td align="left" valign="top" style="font-size: 16px; line-height:20px; font-family: -apple-system, 'Roboto', Helvetica, Arial, sans-serif; font-weight: bold; color: #1a1a1a; padding: 5px 15px 0;">
+                                                                    <a href="https://www.espn.com/espn/apps/fantasy" target="_blank" style="outline: 0; color: #1a1a1a; text-decoration: none;">
+                                                                        ESPN Fantasy App
+                                                                         <span align="left" style="display: block; font-size: 14px; font-family: -apple-system, 'Roboto', Helvetica, Arial, sans-serif; color: #666666; line-height: 18px; font-weight: normal;">
+                                                                            Download the No. 1 fantasy sports app and play fantasy football, basketball, baseball, hockey and much more. All in one place!
+                                                                        </span>
+                                                                    </a>
+                                                                </td>
+                                                                <td align="left" valign="top">
+                                                                    <a href="https://www.espn.com/espn/apps/fantasy" target="_blank" style="outline: 0;">
+                                                                        <img src="http://g.espncdn.com/lm-static/images/email/freeBTN.png" width="70" height="38" style="display: block; width: 70px; height: 38px;" alt="Free" border="0">
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                        </table>      
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center">
+                                        <table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" style="width:100%;" width="100%">
+                                            <tr>
+                                                <td align="center" valign="top" style="border-bottom: 1px solid #e2e3e5; padding: 22px 15px 20px;">
+      
+                                                    <div style="display:inline-block; max-width:100%; min-width:100%; vertical-align:top; width:100%;">
+                                                        <table align="center" border="0" cellpadding="0" cellspacing="0" style="width:100%;" width="100%">
+                                                            <tr>
+                                                                <td align="left" valign="middle" width="150" style="color: #545556; font-family: -apple-system, 'Roboto', Helvetica, Arial, sans-serif; font-size: 14px; padding: 4px 0; text-transform: uppercase; width: 150px;">
+                                                                    Follow us
+                                                                </td>
+                                                                <td>
+                                                                    <table align="center" cellpadding="0" cellspacing="0" border="0" style="width:100%;" width="100%">
+                                                                        <tr>
+                                                                            <td align="right" valign="middle">
+                                                                                <a href="https://twitter.com/espn" target="_blank" style="outline: 0; text-decoration: none;">
+                                                                                    <img src="http://g.espncdn.com/lm-static/images/email/twitter.png" width="25" height="21" style="display: block; width: 25px; height: 21px;" alt="Twitter" border="0">
+                                                                                </a>
+                                                                            </td>
+                                                                            <td align="right" valign="middle">
+                                                                                <a href="https://www.facebook.com/ESPN/" target="_blank" style="outline: 0; text-decoration: none;">
+                                                                                    <img src="http://g.espncdn.com/lm-static/images/email/facebook.png" width="20" height="21" style="display: block; width: 20px; height: 21px;" alt="Facebook" border="0">
+                                                                                </a>
+                                                                            </td>
+                                                                            <td align="right" valign="middle">
+                                                                                <a href="https://www.instagram.com/espn/" target="_blank" style="outline: 0; text-decoration: none;">
+                                                                                    <img src="http://g.espncdn.com/lm-static/images/email/instagram.png" width="20" height="21" style="display: block; width: 20px; height: 21px;" alt="Instagram" border="0">
+                                                                                </a>
+                                                                            </td>
+                                                                            <td align="right" valign="middle">
+                                                                                <a href="https://www.snapchat.com/discover/ESPN/7296089122" target="_blank" style="outline: 0; text-decoration: none;">
+                                                                                    <img src="http://g.espncdn.com/lm-static/images/email/snapChat.png" width="20" height="21" style="display: block; width: 20px; height: 21px;" alt="Snap Chat" border="0">
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+      
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center">
+                                        <table align="center" bgcolor="#eeeeee" border="0" cellpadding="0" cellspacing="0" style="width:600px;" width="600">
+                                            <tr>
+                                                <td align="center" valign="middle" style="color: #717171; font-family: -apple-system, 'Roboto', Helvetica, Arial, sans-serif; font-size: 10px; line-height: 15px; padding: 25px 15px 25px;">
+                                                    This email was sent to: maysster@gmail.com. Please do not reply to this email as this address is not monitored.<br><br>&copy; ESPN Internet Ventures. All Rights Reserved.
+                                                </td>
+                                            </tr>
+                                        </table>
+      
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- hack to force gmail to not show optimized layout -->
+         <div style="display: none; white-space: nowrap; line-height: 2px; color: #eeeeee">
+            - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+        </div>
+
+    <img src="https://clk.messaging.go.com/c/62/bcasts/8440564872/view?YnVSZXBMYmxJZD0xMDAxJnVzZXJJZD0lN0JBNzIxNzA4OC0xRjM2LTRGMUYtQUU3My02NzI2MkJGNzYzRUYlN0QmY2g9RU1BSUwmZWE9bWF5c3N0ZXJAZ21haWwuY29tJnNpZz12M2E2cEo1M2kzRmlBT0ZMU0FXMFV1aFlyS1k"  width="1" height="1"/>
+<img border="0" width="1" height="1" alt="" src="http://disney.et.e.sparkpost.com/q/dm1OSXzBGNte1bZS85R-ig~~/AAAAARA~/L3qIoJwh_W-JOCDDK8Z17wFCWD7ItTI5cZ_MCh-tp0OR_InZThSAkFZT62g1RYUTRhYloUs8IVGqsCgFS_3z9w~~">
+</body>
+</html>

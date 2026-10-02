@@ -1,0 +1,77 @@
+GEMINI — ONE JOB: WHAT CHANGED SINCE AUGUST 23, FOR THESE PLAYERS ONLY
+==============================================================================
+generated 2026-09-03 21:16 from decision_space.csv  (32 players)
+
+WHY THESE PLAYERS AND NOT OTHERS. Twelve draft rooms were simulated under this league's
+own fitted pick-noise. These are the players the engine put within 6 points of its own
+first choice in at least a quarter of those rooms -- i.e. the ones actually in play at one
+of my turns -- AND whose job is unsettled or who has no analyst call on file. Players
+with a settled job and an existing call are deliberately excluded: nothing you find
+about them can move a pick.
+
+WHAT I AM NOT ASKING FOR, AND PLEASE DO NOT SUPPLY IT:
+  - rankings, tiers, grades, ceilings, sleeper calls, or 'who do you like better'.
+    I have a projection and a market and they are measured to beat opinion here.
+  - anything about how good the player is. That question is already answered.
+
+WHAT I AM ASKING FOR -- ONE THING: FACTS DATED AFTER AUGUST 23 2026 THAT A
+PRESEASON PROJECTION FROZEN ON THAT DATE COULD NOT KNOW.
+
+For each player below, answer these four and nothing else. If there is no answer, write
+NONE FOUND. An empty answer is worth more to me than a plausible one.
+  1. JOB: has the depth chart changed since Aug 23? Who is the starter TODAY, and who
+     said so? A coach or beat reporter naming a starter counts. Speculation does not.
+  2. HEALTH: any injury, surgery, PUP/NFI, suspension or holdout since Aug 23. Give the
+     date and the expected games missed if one has been stated.
+  3. ROLE: any reported change in usage -- goal-line work, third down, slot vs outside,
+     snap share -- attributed to a named source.
+  4. SOURCE: a URL and a date for every one of the above. No URL, no answer.
+
+FORMAT: one block per player, exactly as below, no prose around it.
+  PLAYER: <name>
+  JOB: <answer or NONE FOUND>
+  HEALTH: <answer or NONE FOUND>
+  ROLE: <answer or NONE FOUND>
+  SOURCE: <url> | <date>   (repeat the line as needed)
+
+==============================================================================
+THE PLAYERS. 'job' is this project's own read of how open the role is; 'job worth' is
+what the man currently holding it is projected for. 'g25' is games played in 2025 --
+under 13 is a measured warning worth about 16 points, so confirm health there first.
+
+player                    pos  tm      adp  my picks      job         worth  g25  call
+----------------------------------------------------------------------------------------------
+Puka Nacua                WR   LAR     5.3  8             contested     215   16  yes
+Josh Allen                QB   BUF    20.8  17            LEAD BACK     262   16  NO
+Quinshon Judkins          RB   CLE    52.5  41            contested     211   14  yes
+Joe Burrow                QB   CIN    56.5  41            contested     240    8  yes
+D'Andre Swift             RB   CHI    59.2  41            UNSETTLED     196   16  NO
+David Montgomery          RB   HOU    66.7  56            contested     177   17  yes
+Bhayshul Tuten            RB   JAX    68.0  56            contested     188   15  yes
+Jadarian Price            RB   SEA    72.8  56            UNSETTLED     180   -1  yes
+Matthew Stafford          QB   LAR    86.1  56,65         contested     215   17  yes
+Luther Burden III         WR   CHI    76.5  65            UNSETTLED     196   15  yes
+Rico Dowdle               RB   PIT    99.6  65,80,89      UNSETTLED     171   17  yes
+J.K. Dobbins              RB   DEN   114.2  80,89,104     UNSETTLED     164   10  yes
+Kyle Monangai             RB   CHI   125.6  80,89,104,113,128UNSETTLED     196   17  yes
+Tony Pollard              RB   TEN    98.7  89            UNSETTLED     171   17  NO
+Aaron Jones Sr.           RB   MIN   123.6  89,104        UNSETTLED     153   12  yes
+Kenny Gainwell            RB   TB    110.2  104,113       UNSETTLED     189   17  yes
+Jonathon Brooks           RB   CAR   110.6  104           UNSETTLED     154   -1  yes
+Chuba Hubbard             RB   CAR   115.0  104,137       UNSETTLED     154   15  NO
+Jordan Addison            WR   MIN   117.2  104,113,128   UNSETTLED     153   14  yes
+Jakobi Meyers             WR   JAX   118.1  104           contested     188   16  yes
+Isaiah Likely             TE   NYG   125.4  104,113       contested     205   12  yes
+Rachaad White             RB   WAS   130.3  104,113,128   UNSETTLED     151   17  NO
+Dalton Kincaid            TE   BUF   131.2  104           LEAD BACK     262   12  NO
+Jacory Croskey-Merritt    RB   WAS   133.8  104,113,128   UNSETTLED     151   17  yes
+T.J. Hockenson            TE   MIN   141.0  104,113       UNSETTLED     153   15  yes
+Hunter Henry              TE   NE    147.6  104,113,128,137UNSETTLED     182   17  yes
+Jordan Mason              RB   MIN   139.1  113,128       UNSETTLED     153   16  yes
+Brenton Strange           TE   JAX   167.7  113,128       contested     188   12  NO
+Khalil Shakir             WR   BUF   132.5  128           LEAD BACK     262   16  NO
+Baker Mayfield            QB   TB    146.7  128           UNSETTLED     189   17  yes
+Terrance Ferguson         TE   LAR   166.9  128           contested     215   11  yes
+Deebo Samuel Sr.          WR   SF    135.8  137           LEAD BACK     303   16  NO
+
+Return the blocks in this order. Do not add players.

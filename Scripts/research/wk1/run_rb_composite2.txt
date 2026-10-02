@@ -1,0 +1,39 @@
+n=158  base rate 15.2%
+
+THE TWO-SIGNAL COMPOSITE: drop yards-per-touch, which measured BACKWARDS, and keep the two that fired.
+  touches/game cut p40 (4.5):  0 of 2 n= 57  3.5% | 1 of 2 n= 70 17.1% | **2 of 2 n= 31 32.3%**   diff +21.2% p=0.0057
+  touches/game cut p45 (5.3):  0 of 2 n= 65  3.1% | 1 of 2 n= 63 19.0% | **2 of 2 n= 30 33.3%**   diff +22.4% p=0.0042
+  touches/game cut p50 (5.9):  0 of 2 n= 71  4.2% | 1 of 2 n= 58 19.0% | **2 of 2 n= 29 34.5%**   diff +23.6% p=0.0037
+  touches/game cut p55 (6.3):  0 of 2 n= 77  3.9% | 1 of 2 n= 53 22.6% | **2 of 2 n= 28 32.1%**   diff +20.6% p=0.0107
+  touches/game cut p60 (7.2):  0 of 2 n= 84  4.8% | 1 of 2 n= 47 23.4% | **2 of 2 n= 27 33.3%**   diff +21.9% p=0.0073
+
+THE 2-of-2 CELL at the median cut (5.86 touches a game), named:
+   2022 Brian Robinson          rd 3   tpg  17.2  -> STARTABLE
+   2023 Najee Harris            rd 1   tpg  15.0  -> STARTABLE
+   2021 Miles Sanders           rd 2   tpg  13.5  -> STARTABLE
+   2022 D'Onta Foreman          rd 3   tpg  12.7  -> STARTABLE
+   2024 Travis Etienne          rd 1   tpg  11.6  -> STARTABLE
+   2021 Devin Singletary        rd 3   tpg  11.1  -> STARTABLE
+   2022 Rachaad White           rd 3   tpg  10.5  -> STARTABLE
+   2023 Zach Charbonnet         rd 2   tpg  10.0  -> STARTABLE
+   2021 Rashaad Penny           rd 1   tpg   7.5  -> STARTABLE
+   2022 James Cook              rd 2   tpg   6.2  -> STARTABLE
+   2023 Javonte Williams        rd 2   tpg  16.8  -> no
+   2022 Javonte Williams        rd 2   tpg  15.8  -> no
+   2021 Mark Ingram             rd 1   tpg  14.3  -> no
+   2021 AJ Dillon               rd 2   tpg  13.1  -> no
+   2022 AJ Dillon               rd 2   tpg  12.8  -> no
+   2021 D'Onta Foreman          rd 3   tpg  12.2  -> no
+   2022 Damien Harris           rd 3   tpg  10.8  -> no
+   2021 Alexander Mattison      rd 3   tpg  10.8  -> no
+   2022 Cam Akers               rd 2   tpg  10.6  -> no
+   2021 Sony Michel             rd 1   tpg  10.5  -> no
+   2024 Tank Bigsby             rd 3   tpg  10.4  -> no
+   2021 Zack Moss               rd 3   tpg  10.3  -> no
+   2022 Kareem Hunt             rd 3   tpg  10.2  -> no
+   2022 Clyde Edwards-Helaire   rd 1   tpg   8.8  -> no
+   2022 Darrell Henderson       rd 3   tpg   8.7  -> no
+   2023 Tyjae Spears            rd 3   tpg   8.6  -> no
+   2021 Kenyan Drake            rd 3   tpg   7.8  -> no
+   2024 Tyjae Spears            rd 3   tpg   7.6  -> no
+   2022 Jerick McKinnon         rd 3   tpg   7.0  -> no

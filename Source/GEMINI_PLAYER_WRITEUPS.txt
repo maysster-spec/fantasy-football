@@ -1,0 +1,105 @@
+GEMINI TASK — PLAYER WRITE-UPS FOR ONE SPECIFIC LEAGUE
+Generated 2026-09-04.  61 players.
+
+WHO THIS IS FOR
+A 12-team ESPN keeper league.  Scoring: 0.5 PPR, SIX points per passing TD, 0.04/passing yard,
+0.1/rush-rec yard, 6-pt rush/rec TD, -2 INT, -2 fumble lost.  Starters: 1QB 2RB 2WR 1TE 1FLEX
+1D/ST 1K, 6 bench, 3 IR.  Regular season is WEEKS 1-14 ONLY -- weeks 15-17 are playoffs and do
+not count toward the numbers I care about.  I draft from slot 8.
+
+WHAT I WANT, AND WHAT I DO NOT
+For each player below, write ONE PARAGRAPH, 60-110 words, that answers exactly one question:
+**why would this player beat the price the market is charging for him, and what would stop him.**
+Write it the way a good projection-page blurb reads -- specific, concrete, no hedging filler.
+
+  DO write: the role he actually has right now and who he is competing with for it; the volume or
+  usage number that carries the case (targets, carries, snap share, route participation, red-zone
+  work); the one thing that has to happen for him to hit; and the one thing most likely to sink him.
+  DO end with a single sentence starting "BEAR:" giving the strongest case AGAINST him.
+
+  DO NOT write: "he could be a league winner", "sky-high upside", "sleeper", "value", or any
+  sentence that would be true of forty other players.
+  DO NOT rank them, do not compare them to each other, and do not tell me when to draft him --
+  I have a board for that and it is better at it than prose is.
+  DO NOT pad. If there is genuinely nothing to say about a player, write one line saying so. That
+  is a useful answer and I would rather have it than filler.
+
+FORMAT — one block per player, exactly this shape, nothing else between blocks:
+
+  PLAYER: <name exactly as I wrote it below>
+  BULL: <the paragraph>
+  BEAR: <one sentence>
+  SOURCE: <url> | <date>   (one or two, the pages you actually used; date them)
+
+RULES
+- Every factual claim needs a source I can open, with a date.  If you cannot source it, leave it out.
+- If your information is older than 2026-08-20, say so in the block.  Preseason is over; a July
+  depth-chart read is not current.
+- Where a beat writer or coach said something specific, quote up to 15 words verbatim and attribute
+  it.  Do not paraphrase a quote into a claim.
+- If two sources disagree, say which and stop there.  Do not adjudicate.
+
+THE PLAYERS — the number after "my pick" is the turn at which I could realistically take him.
+These are the players where MY BOARD HAS NO OPINION, so your paragraph is the tiebreaker.
+
+Rome Odunze | WR CHI | bye 10 | ESPN proj 183 | ADP 65 | my board has him at rank 43 | my pick 56
+Jadarian Price | RB SEA | bye 11 | ESPN proj 180 | ADP 67 | my board has him at rank 49 | my pick 56
+Harold Fannin Jr. | TE CLE | bye 11 | ESPN proj 146 | ADP 71 | my board has him at rank 56 | my pick 56
+Dak Prescott | QB DAL | bye 14 | ESPN proj 346 | ADP 72 | my board has him at rank 61 | my pick 56
+George Kittle | TE SF | bye 8 | ESPN proj 142 | ADP 74 | my board has him at rank 65 | my pick 56
+Sam LaPorta | TE DET | bye 6 | ESPN proj 149 | ADP 74 | my board has him at rank 52 | my pick 56
+TreVeyon Henderson | RB NE | bye 11 | ESPN proj 178 | ADP 78 | my board has him at rank 51 | my pick 56
+Courtland Sutton | WR DEN | bye 10 | ESPN proj 170 | ADP 81 | my board has him at rank 55 | my pick 56
+Mike Evans | WR SF | bye 8 | ESPN proj 154 | ADP 84 | my board has him at rank 81 | my pick 56
+DK Metcalf | WR PIT | bye 9 | ESPN proj 164 | ADP 85 | my board has him at rank 70 | my pick 56
+Justin Herbert | QB LAC | bye 7 | ESPN proj 334 | ADP 86 | my board has him at rank 78 | my pick 56
+Tony Pollard | RB TEN | bye 9 | ESPN proj 171 | ADP 88 | my board has him at rank 63 | my pick 56
+Christian Watson | WR GB | bye 11 | ESPN proj 158 | ADP 89 | my board has him at rank 77 | my pick 56
+Caleb Williams | QB CHI | bye 10 | ESPN proj 332 | ADP 90 | my board has him at rank 82 | my pick 56
+Parker Washington | WR JAX | bye 7 | ESPN proj 155 | ADP 90 | my board has him at rank 80 | my pick 56
+Tucker Kraft | TE GB | bye 11 | ESPN proj 145 | ADP 91 | my board has him at rank 59 | my pick 56
+Matthew Stafford | QB LAR | bye 11 | ESPN proj 363 | ADP 93 | my board has him at rank 40 | my pick 65
+Travis Kelce | TE KC | bye 5 | ESPN proj 141 | ADP 95 | my board has him at rank 68 | my pick 65
+Rico Dowdle | RB PIT | bye 9 | ESPN proj 171 | ADP 95 | my board has him at rank 62 | my pick 65
+Michael Wilson | WR ARI | bye 14 | ESPN proj 141 | ADP 103 | my board has him at rank 101 | my pick 65
+Jonathon Brooks | RB CAR | bye 5 | ESPN proj 154 | ADP 104 | my board has him at rank 86 | my pick 80
+Chuba Hubbard | RB CAR | bye 5 | ESPN proj 152 | ADP 108 | my board has him at rank 92 | my pick 80
+Jake Ferguson | TE DAL | bye 14 | ESPN proj 130 | ADP 110 | my board has him at rank 83 | my pick 80
+J.K. Dobbins | RB DEN | bye 10 | ESPN proj 164 | ADP 112 | my board has him at rank 75 | my pick 80
+Wan'Dale Robinson | WR TEN | bye 9 | ESPN proj 136 | ADP 113 | my board has him at rank 110 | my pick 80
+Brian Thomas Jr. | WR JAX | bye 7 | ESPN proj 148 | ADP 114 | my board has him at rank 90 | my pick 80
+MarShawn Lloyd | RB GB | bye 11 | ESPN proj 78 | ADP 120 | my board has him at rank 184 | my pick 89
+Jordan Addison | WR MIN | bye 6 | ESPN proj 140 | ADP 121 | my board has him at rank 102 | my pick 89
+Jakobi Meyers | WR JAX | bye 7 | ESPN proj 147 | ADP 123 | my board has him at rank 93 | my pick 89
+Rachaad White | RB WAS | bye 7 | ESPN proj 145 | ADP 125 | my board has him at rank 103 | my pick 89
+Blake Corum | RB LAR | bye 11 | ESPN proj 151 | ADP 126 | my board has him at rank 96 | my pick 89
+Quentin Johnston | WR LAC | bye 7 | ESPN proj 139 | ADP 130 | my board has him at rank 104 | my pick 104
+Dalton Kincaid | TE BUF | bye 7 | ESPN proj 126 | ADP 131 | my board has him at rank 87 | my pick 104
+Josh Downs | WR IND | bye 13 | ESPN proj 122 | ADP 136 | my board has him at rank 126 | my pick 104
+De'Zhaun Stribling | WR SF | bye 8 | ESPN proj 109 | ADP 139 | my board has him at rank 145 | my pick 104
+Jayden Reed | WR GB | bye 11 | ESPN proj 139 | ADP 140 | my board has him at rank 106 | my pick 104
+Khalil Shakir | WR BUF | bye 7 | ESPN proj 136 | ADP 141 | my board has him at rank 108 | my pick 104
+Deebo Samuel Sr. | WR SF | bye 8 | ESPN proj 135 | ADP 143 | my board has him at rank 112 | my pick 113
+Tyjae Spears | RB TEN | bye 9 | ESPN proj 130 | ADP 146 | my board has him at rank 123 | my pick 113
+KC Concepcion | WR CLE | bye 11 | ESPN proj 125 | ADP 147 | my board has him at rank 122 | my pick 113
+Romeo Doubs | WR NE | bye 11 | ESPN proj 124 | ADP 148 | my board has him at rank 124 | my pick 113
+T.J. Hockenson | TE MIN | bye 6 | ESPN proj 119 | ADP 152 | my board has him at rank 100 | my pick 128
+Tyler Shough | QB NO | bye 8 | ESPN proj 307 | ADP 152 | my board has him at rank 116 | my pick 128
+Zach Charbonnet | RB SEA | bye 11 | ESPN proj 124 | ADP 153 | my board has him at rank 130 | my pick 128
+Jalen Coker | WR CAR | bye 5 | ESPN proj 116 | ADP 154 | my board has him at rank 132 | my pick 128
+Jordan Love | QB GB | bye 11 | ESPN proj 309 | ADP 155 | my board has him at rank 114 | my pick 128
+Juwan Johnson | TE NO | bye 8 | ESPN proj 112 | ADP 158 | my board has him at rank 113 | my pick 128
+Isiah Pacheco | RB DET | bye 6 | ESPN proj 115 | ADP 160 | my board has him at rank 143 | my pick 128
+Daniel Jones | QB IND | bye 13 | ESPN proj 306 | ADP 160 | my board has him at rank 118 | my pick 128
+Rashid Shaheed | WR SEA | bye 11 | ESPN proj 123 | ADP 161 | my board has him at rank 125 | my pick 128
+Alvin Kamara | RB NO | bye 8 | ESPN proj 101 | ADP 161 | my board has him at rank 155 | my pick 128
+Sam Darnold | QB SEA | bye 11 | ESPN proj 290 | ADP 162 | my board has him at rank 139 | my pick 128
+Tyler Allgeier | RB ARI | bye 14 | ESPN proj 82 | ADP 163 | my board has him at rank 179 | my pick 128
+Jalen McMillan | WR TB | bye 10 | ESPN proj 109 | ADP 164 | my board has him at rank 144 | my pick 128
+Mike Washington Jr. | RB LV | bye 13 | ESPN proj 61 | ADP 164 | my board has him at rank 211 | my pick 128
+Chris Rodriguez Jr. | RB JAX | bye 7 | ESPN proj 69 | ADP 164 | my board has him at rank 201 | my pick 128
+Keenan Allen | WR IND | bye 13 | ESPN proj 97 | ADP 165 | my board has him at rank 154 | my pick 128
+C.J. Stroud | QB HOU | bye 8 | ESPN proj 289 | ADP 165 | my board has him at rank 140 | my pick 128
+Jonah Coleman | RB DEN | bye 10 | ESPN proj 66 | ADP 167 | my board has him at rank 204 | my pick 128
+Malik Willis | QB MIA | bye 6 | ESPN proj 265 | ADP 168 | my board has him at rank 166 | my pick 128
+Brian Robinson Jr. | RB ATL | bye 11 | ESPN proj 90 | ADP 168 | my board has him at rank 172 | my pick 128

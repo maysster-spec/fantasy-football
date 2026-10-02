@@ -1,0 +1,311 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Commands</title><style>
+:root{--ground:#EFF2F1;--surface:#FCFCFB;--sunk:#E4E9E7;--ink:#15181B;--ink2:#39424A;
+--muted:#66717A;--rule:#D2D9D7;--hole:#C24E1E;--holebg:#F7E4DA;--ok:#2F8F63;--okbg:#E2F0E9;
+--struct:#3A63A8;--structbg:#E3E9F5;
+--disp:"Archivo Narrow",Helvetica Neue,Arial,sans-serif;--body:Georgia,"Source Serif 4",serif;
+--mono:"IBM Plex Mono",Consolas,ui-monospace,monospace}
+@media (prefers-color-scheme:dark){:root{--ground:#0F1213;--surface:#181C1E;--sunk:#22282A;
+--ink:#E7EBEC;--ink2:#BFC7CB;--muted:#8E999F;--rule:#2C3336;--hole:#D9773F;--holebg:#3A2318;
+--ok:#3AA471;--okbg:#12291F;--struct:#5E94DC;--structbg:#16233A}}
+*{box-sizing:border-box}
+body{background:var(--ground);color:var(--ink);font-family:var(--body);font-size:16px;
+line-height:1.55;margin:0;padding:0 20px 64px}
+.wrap{max-width:1180px;margin:0 auto}
+header{padding:36px 0 22px;border-bottom:3px solid var(--ink)}
+.kick{font-family:var(--disp);text-transform:uppercase;letter-spacing:.14em;font-size:12px;
+font-weight:600;color:var(--struct);margin:0 0 8px}
+h1{font-family:var(--disp);font-weight:700;font-size:clamp(34px,6vw,58px);line-height:.95;
+margin:0;text-transform:uppercase;letter-spacing:-.015em}
+.dek{font-size:17px;color:var(--ink2);max-width:64ch;margin:14px 0 0}
+h2{font-family:var(--disp);text-transform:uppercase;letter-spacing:.05em;font-size:22px;
+font-weight:700;margin:40px 0 6px;padding-top:6px;border-top:1px solid var(--rule)}
+h2 .n{color:var(--struct);margin-right:10px}
+h3{font-family:var(--disp);font-size:16px;font-weight:600;text-transform:uppercase;
+letter-spacing:.05em;margin:26px 0 2px}
+p.lede{max-width:66ch;color:var(--ink2);margin:0 0 16px}
+p.sub{max-width:70ch;color:var(--muted);font-size:14.5px;margin:0 0 10px}
+.scroll{overflow-x:auto;border:1px solid var(--rule);background:var(--surface);margin-bottom:10px}
+/* SECTION 0 -- what to do. Matt, 2026-09-11: "I need the hot takes up front." */
+.band{border-bottom:3px solid var(--ink);padding-bottom:20px}
+.bh{margin-top:26px;border-top:none}
+.mv{background:var(--surface);border:1px solid var(--rule);border-left:4px solid var(--struct);
+padding:10px 14px;margin:0 0 8px}
+.mv.big{border-left:4px solid var(--ok);padding:16px 18px}
+.act{margin:0 0 5px;font-family:var(--disp);font-size:19px;line-height:1.25}
+.mv.big .act{font-size:clamp(22px,3.2vw,30px)}
+.verb{color:var(--muted);text-transform:uppercase;letter-spacing:.09em;font-size:.60em;
+margin-right:10px}
+.mmeta{font-family:var(--body);font-size:13px;color:var(--muted);margin-left:10px}
+.pill{float:right;font-family:var(--mono);font-size:15px;background:var(--structbg);
+color:var(--struct);border-radius:3px;padding:4px 10px;white-space:nowrap;line-height:1.05}
+.pill.sure{background:var(--okbg);color:var(--ok)}
+.mv.big .pill{font-size:26px;padding:6px 13px;font-weight:600}
+.ctx{margin:0;font-size:14.5px;color:var(--ink2);max-width:80ch}
+.nws{margin:7px 0 0;font-size:13.5px;color:var(--muted);border-left:2px solid var(--rule);
+padding-left:10px;max-width:80ch}
+.cost{margin:12px 0 2px;font-size:14px;color:var(--ink2)}
+.call{font-family:var(--disp);text-transform:uppercase;letter-spacing:.06em;font-size:15px;
+margin:2px 0 10px}
+.call.yes{color:var(--ok)}
+.call.no{color:var(--hole)}
+.warn{color:var(--hole)}
+/* the cost of a drop, stated before the picks, because it gates all of them */
+.costbox{margin:2px 0 16px;border-left:3px solid var(--hole);background:var(--sunk);
+padding:10px 14px;font-size:15px;color:var(--ink);max-width:86ch}
+h3.sub0{margin:16px 0 8px;font-family:var(--disp);text-transform:uppercase;letter-spacing:.08em;
+font-size:12.5px;color:var(--struct);border-bottom:1px solid var(--rule);padding-bottom:5px}
+.rank{display:inline-block;min-width:1.25em;margin-right:10px;color:var(--muted);
+font-family:var(--disp)}
+.pill em{display:block;font-style:normal;font-size:10px;letter-spacing:.06em;text-transform:uppercase;
+opacity:.75;margin-top:1px;text-align:right}
+table.cal{width:100%;margin-top:4px}
+table.cal th[scope="row"]{white-space:nowrap;font-family:var(--disp);text-transform:uppercase;
+letter-spacing:.05em;font-size:11.5px;color:var(--struct)}
+table.cal td.l,table.cal th.l{text-align:left}
+table.cal td:last-child{font-family:var(--mono);width:3.4em}
+.fine{margin:0 0 8px;font-size:13px;color:var(--muted);max-width:86ch}
+.ruled{margin:12px 0 0;border-left:3px solid var(--hole);background:var(--sunk);
+padding:9px 14px}
+.ruled h4{margin:0 0 4px;font-family:var(--disp);text-transform:uppercase;letter-spacing:.07em;
+font-size:12px;color:var(--hole)}
+.ruled ul{margin:0;padding-left:18px;font-size:13.5px;color:var(--ink2)}
+.ruled li{margin:3px 0;max-width:86ch;white-space:normal}
+.ruled .fine{margin:5px 0 0;font-size:12.5px;color:var(--muted)}
+tr.out th,tr.out td{opacity:.45}
+tr.out th .pl{text-decoration:line-through}
+ul.watch{margin:10px 0 0;padding-left:18px;font-size:14px;color:var(--ink2)}
+ul.watch li{margin:3px 0}
+.todo{margin-top:14px;background:var(--sunk);border:1px solid var(--rule);padding:10px 14px}
+.todo h4{margin:0 0 4px;font-family:var(--disp);text-transform:uppercase;letter-spacing:.07em;
+font-size:12px;color:var(--struct)}
+.todo ul{margin:0;padding-left:18px;font-size:13.5px}
+.todo li{margin:4px 0;max-width:86ch;white-space:normal}
+.todo .more{margin:7px 0 0;font-size:12.5px;color:var(--muted)}
+a.todolink{display:inline-block;margin-left:10px;font-family:var(--disp);text-transform:uppercase;
+letter-spacing:.07em;font-size:11.5px;color:var(--struct);border-bottom:1px solid var(--struct);
+text-decoration:none;padding-bottom:1px}
+p.jump{margin:6px 0 0}
+p.jump a.todolink{margin:0 14px 0 0}
+/* THE PAGE BAR AND THE SECTION NAV. Matt, 2026-09-19: "the hyperlinks on the week sheet are too
+   high on the page, and jump to links are needed for the endless sections", and "if any sheet
+   needs jump to links, it's the damn Week Sheet. It's insufferably long." The page bar now sits
+   UNDER the dek instead of above the title, and the section nav sticks to the top of the window
+   so it is reachable from anywhere in a 76 KB page. Cross-page links open in a new tab so the
+   sheet you came from is never destroyed (his second complaint of the same night). */
+p.pagebar{margin:18px 0 0;display:flex;flex-wrap:wrap;align-items:baseline;gap:0 4px}
+p.pagebar .pbl{font-family:var(--disp);text-transform:uppercase;letter-spacing:.14em;
+font-size:11px;color:var(--muted);margin-right:8px}
+p.pagebar a.todolink,p.pagebar span.todolink{margin:0 14px 0 0}
+p.pagebar a.todolink.home{font-weight:700}
+p.pagebar span.here{color:var(--muted);border-bottom:none;cursor:default}
+.secnav{position:sticky;top:0;z-index:50;display:flex;flex-wrap:wrap;align-items:center;
+gap:2px;margin:0;padding:7px 0;background:var(--ground);border-bottom:1px solid var(--rule)}
+.secnav a{font-family:var(--disp);text-transform:uppercase;letter-spacing:.07em;font-size:11.5px;
+color:var(--ink2);text-decoration:none;padding:5px 9px;border-radius:3px;white-space:nowrap;
+line-height:1.1}
+.secnav a:hover,.secnav a:focus{background:var(--structbg);color:var(--struct);outline:none}
+.secnav a .n{color:var(--struct);font-weight:700;margin-right:5px}
+.secnav a.top{margin-left:auto;color:var(--muted)}
+/* a jumped-to heading must not hide under the sticky bar */
+h2,h3,.bh{scroll-margin-top:56px}
+@media (max-width:640px){.secnav{padding:5px 0}.secnav a{padding:4px 7px;font-size:11px}}
+@media print{.secnav{position:static;border:none}}
+/* a long name clips and keeps its full self on hover, so the number columns get the width */
+th .pl{display:block;max-width:21ch;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+td.ok,td.zero,td.bye,td.hole,td.rate,td.tot{width:2.9em}
+td.why,th.why{max-width:22em;white-space:normal;font-size:11px;color:var(--muted)}
+b.hurt{color:var(--bad,#b3261e);font-weight:600}
+div.holes{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 14px}
+span.hole-chip{border:1px solid var(--hole);background:var(--holebg);color:var(--hole);border-radius:2px;padding:4px 9px;font-size:12.5px;display:inline-flex;gap:7px;align-items:baseline}
+span.hole-chip b{font-family:var(--mono);font-size:11px;letter-spacing:.03em}
+details.poolblk{margin:10px 0;border-top:1px solid var(--rule);padding-top:6px}
+details.poolblk>summary{cursor:pointer;font-family:var(--disp);font-size:15px;letter-spacing:.01em;list-style:revert}
+details.poolblk>summary .meta{margin-left:10px;font-size:11.5px;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-family:var(--mono);font-variant-numeric:tabular-nums;
+font-size:12.5px}
+th,td{border:1px solid var(--rule);padding:5px 6px;text-align:center;white-space:nowrap}
+thead th{background:var(--sunk);font-family:var(--disp);font-weight:600;font-size:12px;
+letter-spacing:.06em;text-transform:uppercase;color:var(--ink2)}
+th[scope=row]{text-align:left;background:var(--sunk);font-family:var(--disp);font-weight:600;
+font-size:13px;position:sticky;left:0;z-index:2;min-width:130px}
+.corner{text-align:left;z-index:3}
+td.hole{background:var(--holebg);color:var(--hole);font-weight:600}
+td.ok{background:var(--okbg);color:var(--ok);font-weight:600}
+td.zero{color:var(--muted);opacity:.55}
+td.bye{background:var(--sunk);color:var(--muted);font-size:11px}
+td.rate,th.rate{background:var(--structbg);color:var(--struct);font-weight:600}
+td.tot,th.tot{background:var(--sunk);font-weight:700;font-size:13.5px}
+td.tot.pos{color:var(--ok)}
+.pl{display:block;font-family:var(--disp);font-size:14px;font-weight:700}
+.meta{display:block;font-family:var(--mono);font-size:10.5px;color:var(--muted);font-weight:400;
+text-transform:none;letter-spacing:0;white-space:normal;max-width:46ch}
+p.cap{max-width:70ch;color:var(--muted);font-size:14px;margin:4px 0 8px}
+td[colspan]{white-space:normal;text-align:left}
+td.meta{display:table-cell;max-width:none}
+details.leftoff{margin:4px 0 16px;max-width:86ch;font-size:14px;color:var(--muted)}
+table.pend{width:100%;margin:6px 0 4px;border-collapse:collapse;font-size:14px;color:var(--ink)}
+table.pend th{font-family:var(--disp);font-size:11px;text-transform:uppercase;letter-spacing:.06em;text-align:center;padding:4px 8px;border-bottom:1px solid var(--rule,#ccc)}
+table.pend th.l,table.pend td.l{text-align:left}
+table.pend td{padding:8px;border-bottom:1px solid var(--rule,#ddd);vertical-align:top;text-align:center;line-height:1.45}
+table.pend td.pri{font-family:var(--mono);font-size:15px;width:4.5em}
+table.pend td.n{font-family:var(--mono);width:5em}
+table.pend .meta{display:block;font-size:12.5px;color:var(--muted)}
+details.leftoff>summary{cursor:pointer}
+table.crowd td.n{text-align:left}
+table.crowd td.p .fine{font-weight:normal;color:var(--muted)}
+.box{background:var(--surface);border:1px solid var(--rule);border-left:4px solid var(--struct);
+padding:16px 18px;margin:14px 0 24px;max-width:74ch}
+#inputs h4{margin:0 0 6px}#inputs ul.inputs{margin:0 0 8px 18px;padding:0}#inputs li{margin:3px 0;font-size:14.5px}
+#inputs.bad{border-left-color:var(--hole)}
+.box h4{font-family:var(--disp);text-transform:uppercase;letter-spacing:.08em;font-size:12px;
+margin:0 0 8px;color:var(--struct)}
+.box p{margin:0 0 8px}
+.eq{font-family:var(--mono);font-size:13px;background:var(--sunk);padding:8px 10px;display:block;
+overflow-x:auto;white-space:nowrap}
+.bad{background:var(--holebg);border-left-color:var(--hole);color:var(--hole)}
+footer{border-top:1px solid var(--rule);margin-top:34px;padding-top:14px;color:var(--muted);
+font-size:13.5px}
+
+.cards{display:grid;gap:14px;margin:14px 0}
+.card{background:var(--surface);border:1px solid var(--rule);border-left:3px solid var(--struct);
+padding:14px 16px;border-radius:2px}
+.card-bad{border-left-color:var(--hole);background:var(--holebg)}
+.card h4{font-family:var(--disp);font-size:15px;margin:0 0 2px;letter-spacing:.01em}
+.card .cmeta{font-family:var(--mono);font-size:10px;color:var(--muted);margin-left:10px;
+letter-spacing:.04em;text-transform:uppercase}
+.card .verdict{font-family:var(--disp);font-size:12px;text-transform:uppercase;letter-spacing:.07em;
+color:var(--struct);margin:0 0 8px}
+.card-bad .verdict{color:var(--hole)}
+.card .sig{font-size:12px;color:var(--ink2);margin:0 0 8px}
+.card .sig b{font-family:var(--mono);font-size:9.5px;text-transform:uppercase;letter-spacing:.06em;
+color:var(--muted);font-weight:400}
+.card ul.news{margin:0 0 10px;padding-left:16px;font-size:12.5px;color:var(--ink2)}
+.card ul.news li{margin:0 0 4px}
+.card .cases{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:4px}
+.card .cases h5{font-family:var(--mono);font-size:9.5px;text-transform:uppercase;letter-spacing:.06em;
+margin:0 0 3px;font-weight:400}
+.card .bull h5{color:var(--ok)}
+.card .bearc h5{color:var(--hole)}
+.card .cases p{margin:0;font-size:12.5px;line-height:1.45}
+.card .cnote{margin:10px 0 0;padding-top:8px;border-top:1px solid var(--rule);font-size:11.5px;
+color:var(--muted);font-style:italic}
+@media (max-width:640px){.card .cases{grid-template-columns:1fr}}
+
+ol.todopage{list-style:none;margin:0;padding:0}
+ol.todopage li{border:1px solid var(--rule);border-left:4px solid var(--struct);
+background:var(--sunk);padding:10px 14px;margin:0 0 10px}
+ol.todopage li.k-read{border-left-color:var(--rule)}
+ol.todopage li.k-later{border-left-color:var(--muted)}
+.hub{background:var(--sunk);border:1px solid var(--rule);padding:12px 16px;margin:22px 0 4px}
+.hub h4{margin:0 0 7px;font-family:var(--disp);text-transform:uppercase;letter-spacing:.07em;
+font-size:11.5px;color:var(--struct)}
+.hub ul{margin:0;padding:0;list-style:none}
+.hub li{margin:5px 0;font-size:13.5px}
+.hub li a{font-weight:600;color:var(--ink);border-bottom:1px solid var(--struct);
+text-decoration:none;margin-right:10px}
+.hub li span{color:var(--muted);font-size:12.5px}
+ol.cmds li code{display:block;font-family:var(--mono);font-size:13px;font-weight:600;
+margin-bottom:3px}
+ol.cmds li.first{border-left-width:6px}
+ol.cmds li .tt{font-weight:400;font-size:13px;color:var(--ink2)}
+details.tn{margin-top:6px}
+details.tn summary{cursor:pointer;font-family:var(--disp);text-transform:uppercase;
+letter-spacing:.07em;font-size:11px;color:var(--struct)}
+details.donewrap{margin-top:26px}
+details.donewrap summary{cursor:pointer;font-family:var(--disp);text-transform:uppercase;
+letter-spacing:.07em;font-size:12px;color:var(--muted);margin-bottom:12px}
+.todopage .tn p{margin:0 0 7px;font-family:var(--body);font-size:13px;color:var(--ink2);
+max-width:92ch}
+.todopage .tn p:last-child{margin-bottom:0}
+ol.todopage li.k-do{border-left-color:var(--hole)}
+ol.todopage li.done{opacity:.5}
+ol.todopage li.done .tt{text-decoration:line-through}
+.todopage .tag{display:inline-block;font-family:var(--disp);text-transform:uppercase;
+letter-spacing:.08em;font-size:10.5px;color:var(--muted);margin-right:9px}
+.todopage .tt{font-weight:600;font-size:14.5px}
+.todopage .tn{margin-top:6px}
+
+table.g{border-collapse:collapse;width:100%;margin:0 0 10px}
+table.g th,table.g td{border:1px solid var(--rule);padding:6px 9px;text-align:left;
+font-size:13.5px;vertical-align:top}
+table.g thead th{background:var(--sunk);font-family:var(--disp);text-transform:uppercase;
+letter-spacing:.06em;font-size:11.5px;color:var(--ink2)}
+tr.lead td{background:var(--sunk)}
+td.cmd{white-space:nowrap;width:1%}
+code{font-family:var(--mono);font-size:13px}
+.why{color:var(--muted);font-size:13px}
+.batbox{border:1px solid var(--rule);border-left:4px solid var(--struct);background:var(--sunk);
+padding:10px 14px;margin:0 0 10px}
+.batbox h4{margin:0 0 3px;font-family:var(--disp);text-transform:uppercase;letter-spacing:.06em;
+font-size:12.5px;color:var(--struct)}
+ol.steps{margin:7px 0 0 18px;padding:0}
+ol.steps li{margin:2px 0;font-size:13px}
+/* THE COPY BUTTON, BACK. Matt, 2026-09-19: "once i finally find the commands page, the copy
+   button was removed". It copies with execCommand as well as the clipboard API, because this
+   page is opened over file:// where the modern call is refused without warning. */
+td.cmd{position:relative}
+button.cp{font-family:var(--disp);text-transform:uppercase;letter-spacing:.07em;font-size:10.5px;
+color:var(--struct);background:var(--structbg);border:1px solid var(--struct);border-radius:3px;
+padding:3px 8px;margin-left:10px;cursor:pointer;vertical-align:middle}
+button.cp:hover{background:var(--struct);color:var(--surface)}
+button.cp.done{background:var(--okbg);color:var(--ok);border-color:var(--ok)}
+</style></head><body id="top"><div class="wrap">
+<header><p class="kick">The Poetry of Junkyard Juggers &middot; built 02 October 2026</p>
+<h1>Commands</h1>
+<p class="dek">Everything you can run, and what each one does. This page is <b>generated</b> from
+the command list the to-do page uses and from the batch files themselves, so it cannot drift from
+what is actually on disk. Open a shell in <code>Scripts</code> and type the line, or press
+<b>copy</b> and paste it.</p>
+<p class="jump pagebar"><span class="pbl">pages</span><a class="todolink home" href="Source/WEEK_SHEET.html">&larr; week sheet</a><a class="todolink" href="Source/MY_TODO.html">to-do list</a><a class="todolink" href="Source/THE_WEEKLY_WIRE.html">the wire</a><a class="todolink" href="Source/LINEUP_CHECK.html">lineup check</a><span class="todolink here">commands</span><a class="todolink" href="https://claude.ai/artifact/NpLWo1xBiWRG4bztW7L5xw">roster clock</a><a class="todolink" href="https://claude.ai/artifact/1iFS2iFyDACxRknmbJiFNT">pocket sheet</a><a class="todolink" href="https://claude.ai/artifact/BwUBENtMAZzTdjfgq7kqCJ">the takes</a></p></header>
+<nav class="secnav" aria-label="sections of this page">
+<a href="#run">run these</a><a href="#bats">what each batch file runs</a>
+<a href="#sched">when it fires</a><a href="#pages">the pages</a>
+<a class="top" href="#top">top &uarr;</a></nav>
+
+<h3 class="sub0" id="run">Run these</h3>
+<p class="why">The first row does everything, in order. The rest are what it runs, for when you
+only want one of them.</p>
+<table class="g"><tbody><tr class="lead"><td class="cmd"><code>ff.bat</code><button class="cp" type="button" data-cmd="ff.bat">copy</button></td><td class="what"><b>everything, in order</b><br><span class="why">Double-click it. Every step in order, then the checks; on the Tuesday task, ESPN’s projections too. It opens the week sheet only if the page changed.</span></td></tr><tr><td class="cmd"><code>py wire.py --html</code><button class="cp" type="button" data-cmd="py wire.py --html">copy</button></td><td class="what"><b>the wire and the week sheet</b><br><span class="why">What ff.bat runs in the middle. Use it when you only want the two pages.</span></td></tr><tr><td class="cmd"><code>py lineup.py --html</code><button class="cp" type="button" data-cmd="py lineup.py --html">copy</button></td><td class="what"><b>is anyone in my nine not playing</b><br><span class="why">Thursday evening and Sunday late morning, after the inactives.</span></td></tr><tr class="lead"><td class="cmd"><code>done &quot;&lt;some words&gt;&quot;</code><button class="cp" type="button" data-cmd="done &quot;&lt;some words&gt;&quot;">copy</button></td><td class="what"><b>tick something off THIS list</b><br><span class="why">Matches the words against the open items (exactly one, or it refuses), ticks it and rebuilds this page. `done --list` numbers them; `done --undo &quot;...&quot;` puts one back.</span></td></tr><tr><td class="cmd"><code>py todo_page.py</code><button class="cp" type="button" data-cmd="py todo_page.py">copy</button></td><td class="what"><b>rebuild this page</b><br><span class="why">No network, no ESPN. Reads Source\matt_todo.txt and rewrites this page and the sheet’s link.</span></td></tr><tr><td class="cmd"><code>py check_kit.py</code><button class="cp" type="button" data-cmd="py check_kit.py">copy</button></td><td class="what"><b>are the shipped files the ones I think</b><br><span class="why">Names, byte counts and hashes for the whole tree. Run it after anything of mine lands.</span></td></tr><tr><td class="cmd"><code>py research\wk1\build_form.py</code><button class="cp" type="button" data-cmd="py research\wk1\build_form.py">copy</button></td><td class="what"><b>refresh the week-by-week usage file</b><br><span class="why">ff.bat runs it at the top of every run. By hand only if the log says FORM FILE NOT REBUILT.</span></td></tr><tr><td class="cmd"><code>py waivers.py --live</code><button class="cp" type="button" data-cmd="py waivers.py --live">copy</button></td><td class="what"><b>pull this season’s transactions</b><br><span class="why">Needs your ESPN cookies. Writes waiver_report_2026.csv.</span></td></tr><tr><td class="cmd"><code>py research\redteam\redteam_controls.py</code><button class="cp" type="button" data-cmd="py research\redteam\redteam_controls.py">copy</button></td><td class="what"><b>the negative controls</b><br><span class="why">Every guard shown failing on the defect it was built for. Optional, and slow.</span></td></tr><tr><td class="cmd"><code>py research\close_check.py</code><button class="cp" type="button" data-cmd="py research\close_check.py">copy</button></td><td class="what"><b>what is actually still open</b><br><span class="why">Sorts every OPEN ledger row into candidate-closed / still-there against the shipping files. It names candidates; it never closes one.</span></td></tr></tbody></table>
+
+<h3 class="sub0" id="bats">What each batch file actually runs</h3>
+<p class="why">Read out of the files, not typed here.</p>
+<div class="batbox"><h4>ff.bat</h4><p class="why">what every scheduled task runs, and the ONE thing to double-click</p><ol class="steps"><li><code>py research\wk1\build_form.py</code></li><li><code>py snaps_2026.py</code></li><li><code>py research\wk1\build_depth_daily.py</code></li><li><code>py research\wk1\build_lines.py</code></li><li><code>py research\build_inherit.py</code></li><li><code>py proj_due.py</code></li><li><code>py Espn_pull_projections.py</code></li><li><code>py proj_due.py --report --prune</code></li><li><code>py lineup.py --html</code></li><li><code>py build_news.py</code></li><li><code>py wire.py --html</code></li><li><code>py todo_page.py</code></li><li><code>py research\open_threads.py --quiet</code></li><li><code>py make_online.py</code></li><li><code>py make_commands.py</code></li><li><code>py check_kit.py</code></li><li><code>py check_locals.py</code></li><li><code>py check_sources.py</code></li><li><code>py check_vintage.py</code></li><li><code>py check_pages.py</code></li><li><code>py check_page_logic.py</code></li><li><code>py check_page_rules.py</code></li></ol></div><div class="batbox"><h4>draft_night.bat</h4><p class="why">the whole 7:00 PM sequence, in order, with gates</p><ol class="steps"><li><code>py check_kit.py</code></li><li><code>py fetch_keepers.py --dry</code></li><li><code>py fetch_keepers.py --write</code></li><li><code>py keeper_swap.py --check</code></li><li><code>py keeper_swap.py --write</code></li><li><code>py board_audit.py</code></li><li><code>py make_prerank.py --write</code></li><li><code>py espn_draft_injector_Gemini.py</code></li><li><code>py verify_prerank.py</code></li><li><code>py bridge_server.py</code></li><li><code>py live_draft.py --bridge</code></li></ol></div><div class="batbox"><h4>sept5_after.bat</h4><p class="why">THE sequence you run after the projections are refreshed</p><ol class="steps"><li><code>py refresh_adp.py</code></li><li><code>py refresh_adp.py --write</code></li><li><code>py board_audit.py</code></li><li><code>py depth_map.py</code></li><li><code>py make_board.py</code></li><li><code>py make_fallback.py</code></li><li><code>py mkoverride.py</code></li><li><code>py parse_ladder.py</code></li><li><code>py mkvalue.py</code></li><li><code>py make_gridboard.py</code></li><li><code>py make_gridboard.py --board</code></li><li><code>py make_howto.py</code></li><li><code>py to_pdf.py</code></li><li><code>py make_tiers.py</code></li><li><code>py check_plain.py --warn</code></li><li><code>py sync_desk_copies.py</code></li></ol></div><div class="batbox"><h4>refresh_pull.bat</h4><p class="why">-------------------------------------------------------------------------</p><ol class="steps"><li><code>py Espn_pull_projections.py --seasons 2026 --sort draft --yes</code></li><li><code>py sept5_check.py</code></li></ol></div><div class="batbox"><h4>setup_tasks.bat</h4><p class="why">THE ONE FILE THAT REGISTERS THE SCHEDULE</p><p class="why">No python steps; it registers or gates.</p></div>
+
+<h3 class="sub0" id="sched">When it fires on its own</h3>
+<p class="why">Four separately-named tasks so Task Scheduler reports a result for each occasion.
+Re-register with <code>setup_tasks.bat</code> from an administrator prompt.</p>
+<table class="g"><thead><tr><th>task</th><th>day</th><th>time</th><th>runs</th></tr></thead><tbody><tr><td>FF2026 - 1 Tue wire</td><td>TUE</td><td>06:00</td><td><code>ff.bat</code></td></tr><tr><td>FF2026 - 2 Thu lineup</td><td>THU</td><td>17:30</td><td><code>ff.bat</code></td></tr><tr><td>FF2026 - 3 Sun early</td><td>SUN</td><td>11:45</td><td><code>ff.bat</code></td></tr><tr><td>FF2026 - 4 Sun late</td><td>SUN</td><td>15:30</td><td><code>ff.bat</code></td></tr><tr><td>FF2026 - 5 daily post-waiver</td><td></td><td>07:30</td><td><code>ff.bat</code></td></tr></tbody></table>
+
+<h3 class="sub0" id="pages">The pages</h3>
+<div class="hub"><ul><li><a href="Source/WEEK_SHEET.html">the week sheet</a> <span class="why">the bar, every free body priced, and what to do</span></li><li><a href="Source/THE_WEEKLY_WIRE.html">the wire</a> <span class="why">who is available, the stash list, the weeks ahead</span></li><li><a href="Source/LINEUP_CHECK.html">lineup check</a> <span class="why">anyone in your nine who is out, doubtful or on bye</span></li><li><a href="Source/../COMMANDS.html">the commands page</a> <span class="why">the same list as below, on its own page, with what each batch file actually runs and when it fires</span></li><li><a href="https://claude.ai/artifact/NpLWo1xBiWRG4bztW7L5xw">the roster clock</a> <span class="why">what is left on the wire week by week, how the fifteen spots should change, and which positions are worth holding two of</span></li></ul></div>
+
+<footer>Generated by <code>make_commands.py</code>. The command list is
+<code>sheet_engine.TODO_CMDS</code>, shared with the to-do page; the steps and the schedule are
+parsed from the batch files. If a script named here is missing from the folder, this page refuses
+to build rather than pointing you at nothing.</footer>
+<script>
+document.addEventListener('click', function (ev) {
+  var b = ev.target.closest ? ev.target.closest('button.cp') : null;
+  if (!b) return;
+  var txt = b.getAttribute('data-cmd') || '';
+  function flag() { b.textContent = 'copied'; b.classList.add('done');
+    setTimeout(function () { b.textContent = 'copy'; b.classList.remove('done'); }, 1400); }
+  // execCommand first: over file:// the async clipboard API is refused silently in some builds,
+  // and a button that reports success without copying is the exit-code defect in a browser.
+  try {
+    var ta = document.createElement('textarea');
+    ta.value = txt; ta.setAttribute('readonly', '');
+    ta.style.position = 'fixed'; ta.style.top = '-1000px';
+    document.body.appendChild(ta); ta.select();
+    var ok = document.execCommand('copy');
+    document.body.removeChild(ta);
+    if (ok) { flag(); return; }
+  } catch (e) { /* fall through */ }
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(txt).then(flag, function () { b.textContent = 'copy failed'; });
+  } else { b.textContent = 'copy failed'; }
+});
+</script>
+</div></body></html>

@@ -1,0 +1,162 @@
+ 
+==== Tue 09/08/2026  7:33:17.16 ==================================== 
+
+  400 available · 277 we can price · 50 one-injury-away backs · roster read: 15 players
+  written: G:\My Drive\_Fantasy\2026\Source\WIRE_20260908.csv
+  written: G:\My Drive\_Fantasy\2026\Source\THE_WEEKLY_WIRE.html
+
+  LANE 2 -- stash before the injury, ranked by what the job pays:
+    Jacob Saylors           DET  behind Jahmyr Gibbs            job pays 332
+    Brian Robinson Jr.      ATL  behind Bijan Robinson          job pays 315
+    Kaelon Black            SF   behind Christian Mccaffrey     job pays 302
+    Jordan James            SF   behind Christian Mccaffrey     job pays 302
+    Isaac Guerendo          SF   behind Christian Mccaffrey     job pays 302
+    DJ Giddens              IND  behind Jonathan Taylor         job pays 291
+    Seth McGowan            IND  behind Jonathan Taylor         job pays 291
+    Adam Randall            BAL  behind Derrick Henry           job pays 267
+
+  LANE 1 -- best available now, ranked by our value:
+    T.J. Hockenson          TE    MIN     -20.9  bye 6.0   owned  60.5%  
+    Brenton Strange         TE    JAX     -27.4  bye 7.0   owned  23.2%  
+    Terrance Ferguson       TE    LAR     -27.5  bye 11.0  owned  26.4%  
+    Pat Freiermuth          TE    PIT     -33.9  bye 9.0   owned  14.1%  
+    Daniel Jones            QB    IND     -35.5  bye 13.0  owned  36.8%  Discount
+    Dalton Schultz          TE    HOU     -36.8  bye 8.0   owned  18.2%  
+    Tank Dell               WR    HOU     -38.4  bye 8.0   owned  34.3%  Avoid
+    Gunnar Helm             TE    TEN     -42.2  bye 9.0   owned   5.7%  
+    Greg Dulcich            TE    MIA     -47.0  bye 6.0   owned   3.3%  
+    Darren Waller           TE    CAR     -47.2  bye 5.0   owned   3.4%  
+    Tre Tucker              WR    LV      -49.8  bye 13.0  owned  26.6%  
+    Calvin Ridley           WR    TEN     -49.8  bye 9.0   owned  24.3%  
+    Jerry Jeudy             WR    CLE     -50.9  bye 11.0  owned  28.0%  
+    Sam Darnold             QB    SEA     -51.3  bye 11.0  owned  26.9%  
+    C.J. Stroud             QB    HOU     -52.2  bye 8.0   owned  24.6%  
+    Jalen McMillan          WR    TB      -54.3  bye 10.0  owned  33.0%  Discount
+    Adonai Mitchell         WR    NYJ     -57.6  bye 13.0  owned  16.1%  
+    Rashod Bateman          WR    BAL     -59.9  bye 13.0  owned   9.3%  
+    Jalen Nailor            WR    LV      -61.5  bye 13.0  owned  13.1%  
+    Bryce Young             QB    CAR     -63.9  bye 5.0   owned  10.7%  
+    Geno Smith              QB    NYJ     -68.7  bye 13.0  owned   3.9%  
+    Malik Willis            QB    MIA     -76.5  bye 6.0   owned  21.4%  
+    Samaje Perine           RB    CIN     -77.5  bye 6.0   owned  11.9%  contested job, worth 239
+    Brian Robinson Jr.      RB    ATL     -79.0  bye 11.0  owned  27.3%  lead back job, worth 315 · back signals 2 of 3 · targets 2.3% BOTTOM
+    Aaron Rodgers           QB    PIT     -82.3  bye 9.0   owned   7.2%  
+    Keaton Mitchell         RB    LAC     -84.7  bye 7.0   owned  21.9%  lead back job, worth 236
+    Cam Ward                QB    TEN     -88.9  bye 9.0   owned   9.3%  
+    Ty Johnson              RB    BUF     -94.7  bye 7.0   owned   1.8%  lead back job, worth 262
+    Dylan Sampson           RB    CLE     -96.5  bye 11.0  owned  19.7%  contested job, worth 211
+    Tank Bigsby             RB    PHI    -106.3  bye 10.0  owned  19.4%  lead back job, worth 252
+    Tyrone Tracy Jr.        RB    NYG    -110.0  bye 8.0   owned   6.9%  contested job, worth 205
+    Kaelon Black            RB    SF     -112.1  bye 8.0   owned  13.2%  lead back job, worth 302
+
+  123 available players are NOT on our board and were left off.
+    Chris Boswell, Chiefs D/ST, Will Reichard, Evan McPherson, Packers D/ST, Chase McLaughlin, Trey Smack, Cowboys D/ST, Bears D/ST, Jake Elliott, 49ers D/ST, Titans D/ST, Wil Lutz, Bills D/ST, Nick Folk, Jayden Higgins, Jets D/ST, Saints D/ST, Spencer Shrader, Tyreek Hill, Andy Borregales, Giants D/ST, Colts D/ST, Bengals D/ST, Dominic Zvada ...
+RESULT: sheet rebuilt OK 
+ 
+==== Tue 09/08/2026  7:33:21.34 ==================================== 
+
+  400 available · 277 we can price · 50 one-injury-away backs · roster read: 15 players
+  written: G:\My Drive\_Fantasy\2026\Source\WIRE_20260908.csv
+  written: G:\My Drive\_Fantasy\2026\Source\THE_WEEKLY_WIRE.html
+
+  LANE 2 -- stash before the injury, ranked by what the job pays:
+    Jacob Saylors           DET  behind Jahmyr Gibbs            job pays 332
+    Brian Robinson Jr.      ATL  behind Bijan Robinson          job pays 315
+    Kaelon Black            SF   behind Christian Mccaffrey     job pays 302
+    Jordan James            SF   behind Christian Mccaffrey     job pays 302
+    Isaac Guerendo          SF   behind Christian Mccaffrey     job pays 302
+    DJ Giddens              IND  behind Jonathan Taylor         job pays 291
+    Seth McGowan            IND  behind Jonathan Taylor         job pays 291
+    Adam Randall            BAL  behind Derrick Henry           job pays 267
+
+  LANE 1 -- best available now, ranked by our value:
+    T.J. Hockenson          TE    MIN     -20.9  bye 6.0   owned  60.5%  
+    Brenton Strange         TE    JAX     -27.4  bye 7.0   owned  23.2%  
+    Terrance Ferguson       TE    LAR     -27.5  bye 11.0  owned  26.4%  
+    Pat Freiermuth          TE    PIT     -33.9  bye 9.0   owned  14.1%  
+    Daniel Jones            QB    IND     -35.5  bye 13.0  owned  36.8%  Discount
+    Dalton Schultz          TE    HOU     -36.8  bye 8.0   owned  18.2%  
+    Tank Dell               WR    HOU     -38.4  bye 8.0   owned  34.3%  Avoid
+    Gunnar Helm             TE    TEN     -42.2  bye 9.0   owned   5.7%  
+    Greg Dulcich            TE    MIA     -47.0  bye 6.0   owned   3.3%  
+    Darren Waller           TE    CAR     -47.2  bye 5.0   owned   3.4%  
+    Tre Tucker              WR    LV      -49.8  bye 13.0  owned  26.6%  
+    Calvin Ridley           WR    TEN     -49.8  bye 9.0   owned  24.3%  
+    Jerry Jeudy             WR    CLE     -50.9  bye 11.0  owned  28.0%  
+    Sam Darnold             QB    SEA     -51.3  bye 11.0  owned  26.9%  
+    C.J. Stroud             QB    HOU     -52.2  bye 8.0   owned  24.6%  
+    Jalen McMillan          WR    TB      -54.3  bye 10.0  owned  33.0%  Discount
+    Adonai Mitchell         WR    NYJ     -57.6  bye 13.0  owned  16.1%  
+    Rashod Bateman          WR    BAL     -59.9  bye 13.0  owned   9.3%  
+    Jalen Nailor            WR    LV      -61.5  bye 13.0  owned  13.1%  
+    Bryce Young             QB    CAR     -63.9  bye 5.0   owned  10.7%  
+    Geno Smith              QB    NYJ     -68.7  bye 13.0  owned   3.9%  
+    Malik Willis            QB    MIA     -76.5  bye 6.0   owned  21.4%  
+    Samaje Perine           RB    CIN     -77.5  bye 6.0   owned  11.9%  contested job, worth 239
+    Brian Robinson Jr.      RB    ATL     -79.0  bye 11.0  owned  27.3%  lead back job, worth 315 · back signals 2 of 3 · targets 2.3% BOTTOM
+    Aaron Rodgers           QB    PIT     -82.3  bye 9.0   owned   7.2%  
+    Keaton Mitchell         RB    LAC     -84.7  bye 7.0   owned  21.9%  lead back job, worth 236
+    Cam Ward                QB    TEN     -88.9  bye 9.0   owned   9.3%  
+    Ty Johnson              RB    BUF     -94.7  bye 7.0   owned   1.8%  lead back job, worth 262
+    Dylan Sampson           RB    CLE     -96.5  bye 11.0  owned  19.7%  contested job, worth 211
+    Tank Bigsby             RB    PHI    -106.3  bye 10.0  owned  19.4%  lead back job, worth 252
+    Tyrone Tracy Jr.        RB    NYG    -110.0  bye 8.0   owned   6.9%  contested job, worth 205
+    Kaelon Black            RB    SF     -112.1  bye 8.0   owned  13.2%  lead back job, worth 302
+
+  123 available players are NOT on our board and were left off.
+    Chris Boswell, Chiefs D/ST, Will Reichard, Evan McPherson, Packers D/ST, Chase McLaughlin, Trey Smack, Cowboys D/ST, Bears D/ST, Jake Elliott, 49ers D/ST, Titans D/ST, Wil Lutz, Bills D/ST, Nick Folk, Jayden Higgins, Jets D/ST, Saints D/ST, Spencer Shrader, Tyreek Hill, Andy Borregales, Giants D/ST, Colts D/ST, Bengals D/ST, Dominic Zvada ...
+RESULT: sheet rebuilt OK 
+ 
+==== Tue 09/08/2026  7:33:29.33 ==================================== 
+
+  400 available · 277 we can price · 50 one-injury-away backs · roster read: 15 players
+  written: G:\My Drive\_Fantasy\2026\Source\WIRE_20260908.csv
+  written: G:\My Drive\_Fantasy\2026\Source\THE_WEEKLY_WIRE.html
+
+  LANE 2 -- stash before the injury, ranked by what the job pays:
+    Jacob Saylors           DET  behind Jahmyr Gibbs            job pays 332
+    Brian Robinson Jr.      ATL  behind Bijan Robinson          job pays 315
+    Kaelon Black            SF   behind Christian Mccaffrey     job pays 302
+    Jordan James            SF   behind Christian Mccaffrey     job pays 302
+    Isaac Guerendo          SF   behind Christian Mccaffrey     job pays 302
+    DJ Giddens              IND  behind Jonathan Taylor         job pays 291
+    Seth McGowan            IND  behind Jonathan Taylor         job pays 291
+    Adam Randall            BAL  behind Derrick Henry           job pays 267
+
+  LANE 1 -- best available now, ranked by our value:
+    T.J. Hockenson          TE    MIN     -20.9  bye 6.0   owned  60.5%  
+    Brenton Strange         TE    JAX     -27.4  bye 7.0   owned  23.2%  
+    Terrance Ferguson       TE    LAR     -27.5  bye 11.0  owned  26.4%  
+    Pat Freiermuth          TE    PIT     -33.9  bye 9.0   owned  14.1%  
+    Daniel Jones            QB    IND     -35.5  bye 13.0  owned  36.8%  Discount
+    Dalton Schultz          TE    HOU     -36.8  bye 8.0   owned  18.2%  
+    Tank Dell               WR    HOU     -38.4  bye 8.0   owned  34.3%  Avoid
+    Gunnar Helm             TE    TEN     -42.2  bye 9.0   owned   5.7%  
+    Greg Dulcich            TE    MIA     -47.0  bye 6.0   owned   3.3%  
+    Darren Waller           TE    CAR     -47.2  bye 5.0   owned   3.4%  
+    Tre Tucker              WR    LV      -49.8  bye 13.0  owned  26.6%  
+    Calvin Ridley           WR    TEN     -49.8  bye 9.0   owned  24.3%  
+    Jerry Jeudy             WR    CLE     -50.9  bye 11.0  owned  28.0%  
+    Sam Darnold             QB    SEA     -51.3  bye 11.0  owned  26.9%  
+    C.J. Stroud             QB    HOU     -52.2  bye 8.0   owned  24.6%  
+    Jalen McMillan          WR    TB      -54.3  bye 10.0  owned  33.0%  Discount
+    Adonai Mitchell         WR    NYJ     -57.6  bye 13.0  owned  16.1%  
+    Rashod Bateman          WR    BAL     -59.9  bye 13.0  owned   9.3%  
+    Jalen Nailor            WR    LV      -61.5  bye 13.0  owned  13.1%  
+    Bryce Young             QB    CAR     -63.9  bye 5.0   owned  10.7%  
+    Geno Smith              QB    NYJ     -68.7  bye 13.0  owned   3.9%  
+    Malik Willis            QB    MIA     -76.5  bye 6.0   owned  21.4%  
+    Samaje Perine           RB    CIN     -77.5  bye 6.0   owned  11.9%  contested job, worth 239
+    Brian Robinson Jr.      RB    ATL     -79.0  bye 11.0  owned  27.3%  lead back job, worth 315 · back signals 2 of 3 · targets 2.3% BOTTOM
+    Aaron Rodgers           QB    PIT     -82.3  bye 9.0   owned   7.2%  
+    Keaton Mitchell         RB    LAC     -84.7  bye 7.0   owned  21.9%  lead back job, worth 236
+    Cam Ward                QB    TEN     -88.9  bye 9.0   owned   9.3%  
+    Ty Johnson              RB    BUF     -94.7  bye 7.0   owned   1.8%  lead back job, worth 262
+    Dylan Sampson           RB    CLE     -96.5  bye 11.0  owned  19.7%  contested job, worth 211
+    Tank Bigsby             RB    PHI    -106.3  bye 10.0  owned  19.4%  lead back job, worth 252
+    Tyrone Tracy Jr.        RB    NYG    -110.0  bye 8.0   owned   6.9%  contested job, worth 205
+    Kaelon Black            RB    SF     -112.1  bye 8.0   owned  13.2%  lead back job, worth 302
+
+  123 available players are NOT on our board and were left off.
+    Chris Boswell, Chiefs D/ST, Will Reichard, Evan McPherson, Packers D/ST, Chase McLaughlin, Trey Smack, Cowboys D/ST, Bears D/ST, Jake Elliott, 49ers D/ST, Titans D/ST, Wil Lutz, Bills D/ST, Nick Folk, Jayden Higgins, Jets D/ST, Saints D/ST, Spencer Shrader, Tyreek Hill, Andy Borregales, Giants D/ST, Colts D/ST, Bengals D/ST, Dominic Zvada ...
+RESULT: sheet rebuilt OK 

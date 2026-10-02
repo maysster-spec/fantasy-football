@@ -1,0 +1,97 @@
+═══════════════════════════════════════════════════════════════════════════════
+FABLE TASK #3 — DOES A KEPT PLAYER'S VALUE PERSIST?
+Written 2026-09-02. Draft is Mon Sept 7, 8:00 PM ET.
+This is the last unmeasured quantity in the directive that changes a pick.
+═══════════════════════════════════════════════════════════════════════════════
+
+Read `00_PROJECT_DIRECTIVE.md` first — §0.2 (test before you claim), §0.3 (the
+objective is DOLLARS against the §2 payout table), §1.1 (the ADP hard rule),
+§3 (tag every claim), §4.18 (the finding this extends). Obey §0.1 in your reply.
+
+───────────────────────────────────────────────────────────────────────────────
+THE QUESTION, IN ONE SENTENCE
+───────────────────────────────────────────────────────────────────────────────
+§4.18 prices a late-round RB dart's keeper option at **≈ +8 expected 2027 points**
+= 10.0% × ~+85 VBD. The 10.0% is measured (n=50 RBs, 4 transitions). **The +85 is
+NOT.** It is the CURRENT board's VBD for an RB who finishes as position rank 5–10,
+assumed to carry into the following season unchanged.
+
+§4.18 says so itself, verbatim: *"Still unmeasured: whether next-year VBD persists
+for a kept player."*
+
+**Measure it.** If a kept player's VBD decays materially, the RB dart's option is
+worth less than +8, and §4.18's draft-night rule at picks 104 and 113 — currently
+"take the better player, because QB2's +11 and the RB's +8 nearly cancel" —
+resolves toward the QB.
+
+───────────────────────────────────────────────────────────────────────────────
+WHY IT IS NOT ALREADY ANSWERED
+───────────────────────────────────────────────────────────────────────────────
+§4.18's table measures how OFTEN a late pick becomes a keeper. It never asks what
+he is WORTH when he does. Those are different questions and only the first was run.
+
+The second is answerable from files this project already holds:
+  • `draft_history_2021_2025.csv`      who was drafted where, and the Keeper flag
+  • `code_adp_guard.load_preseason_adp(season)` for 2021–2025 — **the ONLY
+    sanctioned market. §1.1 is a HARD REFUSAL: never use `espn_adp` from a
+    historical pull.**
+  • nflverse weekly logs, or the ESPN projection pulls for 2022 and 2024
+    (2023's `raw_stats` are empty for 98 of 103 QBs — do not try to use it)
+
+───────────────────────────────────────────────────────────────────────────────
+WHAT TO COMPUTE
+───────────────────────────────────────────────────────────────────────────────
+1. Identify every player KEPT in 2022, 2023, 2024, 2025 (the `Keeper` column).
+2. For each, compute his position-relative value in the season he was kept, and
+   in the season BEFORE. Use §2 scoring, weeks 1–14, against §4.1's replacement
+   levels — or state clearly whichever baseline you use and why.
+3. Report the RETENTION RATIO: value in the keeper season ÷ value in the prior
+   season. Report it BY POSITION and with a confidence interval.
+4. Then the number that matters: **what is the expected VBD of a kept RB in the
+   season he is kept**, given he was a late-round hit the year before?
+5. Re-price §4.18's option: 10.0% × (your measured value), and say whether the
+   draft-night rule at 104/113 changes.
+
+───────────────────────────────────────────────────────────────────────────────
+GUARDS — these are not boilerplate, each one has already cost this project
+───────────────────────────────────────────────────────────────────────────────
+• **State BASELINE, POPULATION and SAMPLE SIZE for every number** (§3). A finding
+  without all three is not portable and will be misapplied.
+• **n is small and you must say so.** There are 12 keepers a season and four
+  transitions. If a positional cut has fewer than ~30 observations the word is
+  **UNDERPOWERED**, not "no effect."
+• **Do not claim corroboration from a source you have just discredited.** Doc 92
+  demolished doc 12's sample sizes in its §1 and then cited doc 12's output as
+  independent agreement in its §2. Doc 93 rejected that and it was the only thing
+  wrong with an otherwise sound document. Do not repeat it.
+• **Survivorship.** A player is kept BECAUSE he was good. Comparing kept players
+  to all players measures selection, not persistence. State how you handle it;
+  the honest comparison is against players with similar prior-season value who
+  were NOT kept, or against the same player's own projection.
+• **Regression to the mean is the null hypothesis, not a finding.** A retention
+  ratio below 1.0 is what you should EXPECT. The question is whether it is below
+  the ratio for a comparable non-kept player.
+• **§1.1 again, because it is the one rule that has bitten hardest:** historical
+  `espn_adp` has drifted toward outcomes and is concentrated in exactly the
+  players a backtest turns on. McCaffrey 2024 reads 16.0 against a true consensus
+  of 1. Use the registry.
+
+───────────────────────────────────────────────────────────────────────────────
+THE FALSIFIER — state it before you compute
+───────────────────────────────────────────────────────────────────────────────
+Say, in advance, what result would make you conclude the option is worth LESS
+than §4.18's +8, and what would make it worth more. A proposal with no falsifier
+does not count (doc 28's method note).
+
+───────────────────────────────────────────────────────────────────────────────
+DELIVER
+───────────────────────────────────────────────────────────────────────────────
+A short document in the house style: numbered do-this list, then the measurement,
+then **top 3 assumptions, what would invalidate each, and which missing input
+would most improve the analysis** (§7). Tag every claim `[TESTED]`,
+`[SOURCED]` or `[HYPOTHESIS]`.
+
+**If the answer is "the sample cannot resolve this," say that plainly and stop.**
+That is a real and useful result — it has been the answer to eighteen candidate
+factors already, and this project would rather have an honest null than a number
+nobody can check.

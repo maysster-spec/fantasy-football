@@ -1,0 +1,47 @@
+The week-1 pass-catcher composite: do the three workload signals COMPOUND (4.30's shape) or
+
+population: 517 player-seasons, 2022-2025 -- 2021 is EXCLUDED because
+no 2020 prior season is on file, so every 2021 man passed the not-startable filter and
+the top cell filled with Kupp, Jefferson, Hill and Diggs (4.23 selection trap).
+base rate: 13.9% startable
+
+signals of three          n    ppg  reached replacement
+               0 of 3  322   3.95                   6%
+               1 of 3  119   6.86                  19%
+               2 of 3   45   8.11                  38%
+               3 of 3   31   8.26                  42%
+
+  3 of 3 (n=31) minus under 3 (n=486): +29.8 points, permutation p=0.0002
+
+  every 3-of-3:
+    2022 Amon-Ra St. Brown         WR  14.5 ppg   STARTABLE
+    2022 Christian Kirk            WR  12.2 ppg   STARTABLE
+    2025 Chris Olave               WR  11.7 ppg   STARTABLE
+    2024 Jerry Jeudy               WR  11.5 ppg   STARTABLE
+    2025 Tetairoa McMillan         WR  11.5 ppg   STARTABLE
+    2024 Trey McBride              TE  11.4 ppg   STARTABLE
+    2025 Michael Pittman           WR  10.8 ppg   STARTABLE
+    2025 Rome Odunze               WR  10.1 ppg   STARTABLE
+    2024 Jameson Williams          WR   9.8 ppg   STARTABLE
+    2023 Zay Flowers               WR   9.6 ppg   STARTABLE
+    2023 Calvin Ridley             WR   9.6 ppg
+    2025 Sam LaPorta               TE   9.5 ppg   STARTABLE
+    2022 Zay Jones                 WR   9.5 ppg
+    2024 Allen Lazard              WR   9.2 ppg
+    2025 Hunter Henry              TE   8.7 ppg   STARTABLE
+    2023 Kendrick Bourne           WR   8.6 ppg
+    2025 Kayshon Boutte            WR   8.5 ppg
+    2022 Pat Freiermuth            TE   8.3 ppg   STARTABLE
+    2022 Donovan Peoples-Jones     WR   8.1 ppg
+    2025 Juwan Johnson             TE   7.9 ppg
+    2025 Marquise Brown            WR   7.1 ppg
+    2023 Logan Thomas              TE   6.6 ppg
+    2022 Tyler Higbee              TE   5.9 ppg
+    2024 Josh Reynolds             WR   5.8 ppg
+    2025 Calvin Ridley             WR   5.7 ppg
+    2022 Noah Brown                WR   5.5 ppg
+    2025 Keon Coleman              WR   5.4 ppg
+    2022 Greg Dortch               WR   4.7 ppg
+    2025 Cedric Tillman            WR   3.4 ppg
+    2023 Allen Robinson            WR   2.5 ppg
+    2022 Robbie Chosen             WR   2.4 ppg

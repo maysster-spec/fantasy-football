@@ -1,0 +1,45 @@
+MODE: EX ANTE (weeks 1 to w-1 only, what a manager sees on Wednesday)
+cache: /mnt/user-data/uploads/2026/Scripts/research/_nflverse_cache
+TE starts (team top TE), 2021-2025 REG wk1-17: n=2552
+
+mid TE1 (ranks 7-12) + streamable TE2, weeks 2-14: n=288 pairs
+  always start TE1         : 9.48 a week
+  start the softer matchup : 8.53 a week
+  difference               : -0.95  se 0.07  t -12.70
+  when it benched TE1      : -2.61 a week, won 35%, n=1003
+  quality gap elite vs streamable: 2.73 pts a week
+
+mid TE1 (ranks 7-12) + streamable TE2, weeks 15-17: n=120 pairs
+  always start TE1         : 11.46 a week
+  start the softer matchup : 10.44 a week
+  difference               : -1.01  se 0.25  t -4.11
+  when it benched TE1      : -3.31 a week, won 37%, n=110
+  quality gap elite vs streamable: 2.73 pts a week
+
+elite TE1 + streamable TE2, weeks 15-17: n=156 pairs
+  always start TE1         : 11.13 a week
+  start the softer matchup : 9.85 a week
+  difference               : -1.29  se 0.23  t -5.50
+  when it benched TE1      : -3.81 a week, won 28%, n=158
+  quality gap elite vs streamable: 5.47 pts a week
+
+streamable + streamable, weeks 15-17: n=209 pairs
+  always start TE1         : 6.91 a week
+  start the softer matchup : 6.80 a week
+  difference               : -0.11  se 0.15  t -0.76
+  when it benched TE1      : -0.34 a week, won 48%, n=210
+  quality gap elite vs streamable: 5.47 pts a week
+
+elite TE1 + streamable TE2, weeks 2-14: n=288 pairs
+  always start TE1         : 12.32 a week
+  start the softer matchup : 10.54 a week
+  difference               : -1.77  se 0.10  t -18.11
+  when it benched TE1      : -4.92 a week, won 26%, n=984
+  quality gap elite vs streamable: 5.47 pts a week
+
+streamable + streamable, weeks 2-14: n=528 pairs
+  always start TE1         : 6.80 a week
+  start the softer matchup : 6.77 a week
+  difference               : -0.03  se 0.06  t -0.50
+  when it benched TE1      : -0.11 a week, won 50%, n=1651
+  quality gap elite vs streamable: 5.47 pts a week

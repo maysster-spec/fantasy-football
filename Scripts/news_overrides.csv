@@ -1,0 +1,2 @@
+espn_id,player,action,dated,note
+4047365,Josh Jacobs,out,2026-08-30,"NFL Commissioner's Exempt List, out indefinitely (NBC Sports / DraftSharks, Aug 30 2026). Consensus guidance is to draft as if he does not play in 2026. Reverse by deleting this row and re-running apply_news.py --write."

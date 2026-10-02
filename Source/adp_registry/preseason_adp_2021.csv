@@ -1,0 +1,496 @@
+player,adp,k
+Christian McCaffrey,1.0,christian mccaffrey
+Dalvin Cook,2.0,dalvin cook
+Derrick Henry,3.3,derrick henry
+Alvin Kamara,3.8,alvin kamara
+Ezekiel Elliott,5.0,ezekiel elliott
+Nick Chubb,6.5,nick chubb
+Aaron Jones Sr.,7.8,aaron jones
+Davante Adams,8.3,davante adams
+Jonathan Taylor,10.0,jonathan taylor
+Saquon Barkley,10.3,saquon barkley
+Tyreek Hill,10.3,tyreek hill
+Travis Kelce,10.8,travis kelce
+Austin Ekeler,12.5,austin ekeler
+Stefon Diggs,14.3,stefon diggs
+Najee Harris,14.8,najee harris
+Antonio Gibson,17.5,antonio gibson
+Patrick Mahomes II,18.3,patrick mahomes
+DeAndre Hopkins,18.3,deandre hopkins
+Joe Mixon,19.0,joe mixon
+Calvin Ridley,19.0,calvin ridley
+DK Metcalf,19.5,dk metcalf
+Clyde Edwards-Helaire,21.5,clyde edwards helaire
+Darren Waller,24.0,darren waller
+Justin Jefferson,24.5,justin jefferson
+A.J. Brown,24.8,aj brown
+George Kittle,27.8,george kittle
+Keenan Allen,28.5,keenan allen
+David Montgomery,28.8,david montgomery
+Chris Carson,29.3,chris carson
+Terry McLaurin,30.3,terry mclaurin
+Josh Allen,31.3,josh allen
+Allen Robinson II,32.8,allen robinson
+Josh Jacobs,33.5,josh jacobs
+CeeDee Lamb,34.3,ceedee lamb
+James Robinson,36.8,james robinson
+Mike Evans,36.8,mike evans
+D'Andre Swift,38.0,dandre swift
+Miles Sanders,38.8,miles sanders
+Kyler Murray,40.3,kyler murray
+Chris Godwin Jr.,41.0,chris godwin
+Robert Woods,41.8,robert woods
+Amari Cooper,41.8,amari cooper
+Lamar Jackson,44.5,lamar jackson
+Cooper Kupp,44.5,cooper kupp
+Julio Jones,46.0,julio jones
+Kyle Pitts Sr.,47.8,kyle pitts
+Tyler Lockett,50.5,tyler lockett
+Darrell Henderson Jr.,50.8,darrell henderson
+Myles Gaskin,51.0,myles gaskin
+Mark Andrews,51.5,mark andrews
+DJ Moore,52.8,dj moore
+Adam Thielen,53.3,adam thielen
+Kareem Hunt,53.8,kareem hunt
+Diontae Johnson,54.0,diontae johnson
+Dak Prescott,57.3,dak prescott
+T.J. Hockenson,58.3,tj hockenson
+Russell Wilson,58.8,russell wilson
+Aaron Rodgers,59.3,aaron rodgers
+Brandon Aiyuk,59.5,brandon aiyuk
+Justin Herbert,62.5,justin herbert
+Raheem Mostert,63.3,raheem mostert
+Damien Harris,64.8,damien harris
+Tee Higgins,65.3,tee higgins
+Chase Edmonds,65.5,chase edmonds
+Javonte Williams,66.3,javonte williams
+Chase Claypool,67.3,chase claypool
+Odell Beckham Jr.,70.3,odell beckham
+Jerry Jeudy,73.3,jerry jeudy
+Tom Brady,73.8,tom brady
+Ja'Marr Chase,74.0,jamarr chase
+Trey Sermon,76.5,trey sermon
+Ronald Jones II,77.0,ronald jones
+Kenny Golladay,77.5,kenny golladay
+Michael Thomas,78.3,michael thomas
+Melvin Gordon III,79.3,melvin gordon
+Logan Thomas,79.5,logan thomas
+Robbie Chosen,81.5,robbie chosen
+JuJu Smith-Schuster,83.3,juju smith schuster
+Noah Fant,85.0,noah fant
+Courtland Sutton,85.5,courtland sutton
+Deebo Samuel Sr.,86.5,deebo samuel
+DeVonta Smith,87.8,devonta smith
+Antonio Brown,88.8,antonio brown
+Robert Tonyan,88.8,robert tonyan
+Leonard Fournette,91.0,leonard fournette
+Matthew Stafford,91.3,matthew stafford
+Tyler Boyd,92.5,tyler boyd
+Michael Carter,94.0,michael carter
+Jalen Hurts,94.5,jalen hurts
+AJ Dillon,94.8,aj dillon
+Ryan Tannehill,96.5,ryan tannehill
+Zack Moss,96.8,zack moss
+Tyler Higbee,97.0,tyler higbee
+Dallas Goedert,97.3,dallas goedert
+James Conner,98.0,james conner
+DJ Chark Jr.,99.5,dj chark
+Los Angeles Rams,100.0,los angeles rams
+Brandin Cooks,100.8,brandin cooks
+Laviska Shenault Jr.,101.5,laviska shenault
+Corey Davis,102.3,corey davis
+Tampa Bay Buccaneers,106.0,tampa bay buccaneers
+Pittsburgh Steelers,106.0,pittsburgh steelers
+Kenyan Drake,108.5,kenyan drake
+Devin Singletary,109.0,devin singletary
+Mike Davis,135.8,mike davis
+Jarvis Landry,110.5,jarvis landry
+Jamaal Williams,110.5,jamaal williams
+Washington Commanders,112.8,washington commanders
+David Johnson,113.3,david johnson
+Joe Burrow,114.5,joe burrow
+Rob Gronkowski,114.5,rob gronkowski
+William Fuller V,115.3,william fuller
+Jaylen Waddle,115.5,jaylen waddle
+Sony Michel,115.5,sony michel
+Mike Gesicki,117.5,mike gesicki
+Michael Pittman Jr.,118.0,michael pittman
+Marquez Callaway,118.0,marquez callaway
+Mike Williams,120.5,mike williams
+Baltimore Ravens,121.3,baltimore ravens
+Justin Tucker,122.0,justin tucker
+Harrison Butker,124.3,harrison butker
+Michael Gallup,127.8,michael gallup
+San Francisco 49ers,129.0,san francisco 49ers
+Tony Pollard,130.5,tony pollard
+Curtis Samuel,131.0,curtis samuel
+Trevor Lawrence,132.5,trevor lawrence
+Mecole Hardman Jr.,133.0,mecole hardman
+Nyheim Miller-Hines,133.0,nyheim miller hines
+Younghoe Koo,134.5,younghoe koo
+Darnell Mooney,135.3,darnell mooney
+Henry Ruggs III,138.0,henry ruggs
+Baker Mayfield,140.5,baker mayfield
+Tyler Bass,141.3,tyler bass
+Marvin Jones Jr.,142.0,marvin jones
+Hollywood Brown,143.0,hollywood brown
+Matt Ryan,145.3,matt ryan
+Justin Fields,147.3,justin fields
+Jakobi Meyers,147.8,jakobi meyers
+Jonnu Smith,149.5,jonnu smith
+Trey Lance,151.5,trey lance
+Alexander Mattison,152.5,alexander mattison
+Cole Beasley,153.0,cole beasley
+Elijah Moore,154.0,elijah moore
+Rhamondre Stevenson,156.0,rhamondre stevenson
+Denver Broncos,157.3,denver broncos
+Greg Zuerlein,158.0,greg zuerlein
+Tevin Coleman,158.0,tevin coleman
+James White,158.5,james white
+Russell Gage Jr.,158.8,russell gage
+J.D. McKissic,159.8,jd mckissic
+Buffalo Bills,160.0,buffalo bills
+Phillip Lindsay,161.3,phillip lindsay
+DeVante Parker,161.5,devante parker
+Hunter Henry,163.8,hunter henry
+Mac Jones,164.5,mac jones
+Jason Sanders,165.0,jason sanders
+Chuba Hubbard,165.5,chuba hubbard
+Latavius Murray,167.0,latavius murray
+Zach Ertz,167.0,zach ertz
+Kirk Cousins,167.3,kirk cousins
+Tua Tagovailoa,169.8,tua tagovailoa
+Ryan Succop,170.3,ryan succop
+Terrace Marshall Jr.,170.3,terrace marshall
+Giovani Bernard,172.5,giovani bernard
+Ben Roethlisberger,173.0,ben roethlisberger
+Jameis Winston,173.0,jameis winston
+Indianapolis Colts,173.3,indianapolis colts
+New England Patriots,174.0,new england patriots
+Gerald Everett,174.3,gerald everett
+Cleveland Browns,175.3,cleveland browns
+Rashaad Penny,175.5,rashaad penny
+Jared Cook,177.8,jared cook
+Evan Engram,178.3,evan engram
+Nelson Agholor,178.3,nelson agholor
+A.J. Green,179.8,aj green
+Rodrigo Blankenship,181.5,rodrigo blankenship
+Tyrell Williams,182.8,tyrell williams
+Marlon Mack,187.8,marlon mack
+Ryan Fitzpatrick,189.8,ryan fitzpatrick
+Zach Wilson,189.8,zach wilson
+Mark Ingram II,193.3,mark ingram
+Bryan Edwards,165.3,bryan edwards
+Kansas City Chiefs,195.0,kansas city chiefs
+Jalen Reagor,172.0,jalen reagor
+Mason Crosby,199.3,mason crosby
+Darrel Williams,200.5,darrel williams
+Sterling Shepard,175.7,sterling shepard
+Randall Cobb,177.7,randall cobb
+Marquez Valdes-Scantling,203.8,marquez valdes scantling
+Kenny Gainwell,178.7,kenny gainwell
+Robbie Gould,208.8,robbie gould
+Miami Dolphins,204.8,miami dolphins
+Gabe Davis,181.0,gabe davis
+Pat Freiermuth,181.7,pat freiermuth
+Emmanuel Sanders,181.7,emmanuel sanders
+Ty'Son Williams,183.3,tyson williams
+Deshaun Watson,208.3,deshaun watson
+Amon-Ra St. Brown,185.7,amon ra st brown
+Derek Carr,187.7,derek carr
+Matt Prater,214.0,matt prater
+Devontae Booker,192.0,devontae booker
+Tony Jones Jr.,192.3,tony jones
+Wil Lutz,193.0,wil lutz
+Rashod Bateman,193.0,rashod bateman
+T.Y. Hilton,193.3,ty hilton
+Ty Johnson,193.7,ty johnson
+Jason Myers,216.0,jason myers
+Daniel Carlson,217.5,daniel carlson
+Cam Akers,246.5,cam akers
+Jamison Crowder,197.3,jamison crowder
+Damien Williams,197.3,damien williams
+Austin Hooper,203.3,austin hooper
+Blake Jarwin,204.7,blake jarwin
+Cole Kmet,208.7,cole kmet
+Adam Trautman,210.0,adam trautman
+Brandon McManus,210.3,brandon mcmanus
+Tennessee Titans,180.0,tennessee titans
+Sam Darnold,215.0,sam darnold
+Malcolm Brown,215.3,malcolm brown
+Chicago Bears,234.5,chicago bears
+Anthony Firkser,220.0,anthony firkser
+Eric Ebron,221.3,eric ebron
+Daniel Jones,220.7,daniel jones
+Tre'Quan Smith,192.5,trequan smith
+Matt Gay,224.3,matt gay
+Seattle Seahawks,195.0,seattle seahawks
+Cam Newton,201.5,cam newton
+Darrynton Evans,228.3,darrynton evans
+Christian Kirk,203.0,christian kirk
+Green Bay Packers,230.0,green bay packers
+Minnesota Vikings,241.3,minnesota vikings
+Teddy Bridgewater,212.0,teddy bridgewater
+New Orleans Saints,237.0,new orleans saints
+Dawson Knox,220.5,dawson knox
+Tarik Cohen,217.5,tarik cohen
+Parris Campbell,217.5,parris campbell
+Nick Folk,246.0,nick folk
+Dallas Cowboys,218.0,dallas cowboys
+Carolina Panthers,243.7,carolina panthers
+Arizona Cardinals,220.5,arizona cardinals
+Allen Lazard,225.5,allen lazard
+Salvon Ahmed,226.0,salvon ahmed
+Carson Wentz,253.7,carson wentz
+Justin Jackson,229.0,justin jackson
+Boston Scott,230.0,boston scott
+Kadarius Toney,231.0,kadarius toney
+Jordan Akins,185.0,jordan akins
+Evan McPherson,234.5,evan mcpherson
+Donovan Peoples-Jones,235.5,donovan peoples jones
+Cordarrelle Patterson,238.0,cordarrelle patterson
+Sam Ficken,198.0,sam ficken
+Joshua Palmer,241.0,joshua palmer
+Carlos Hyde,242.5,carlos hyde
+New York Giants,260.0,new york giants
+Taysom Hill,205.0,taysom hill
+Chris Boswell,257.5,chris boswell
+Anthony McFarland Jr.,206.0,anthony mcfarland
+Los Angeles Chargers,258.0,los angeles chargers
+Nico Collins,209.0,nico collins
+Elijah Mitchell,212.0,elijah mitchell
+Benny Snell Jr.,218.0,benny snell
+Sammy Watkins,249.5,sammy watkins
+Hayden Hurst,223.0,hayden hurst
+Le'Veon Bell,224.0,leveon bell
+Todd Gurley II,225.0,todd gurley
+Dustin Hopkins,272.5,dustin hopkins
+J.J. Taylor,227.0,jj taylor
+O.J. Howard,229.0,oj howard
+Javian Hawkins,232.0,javian hawkins
+Philadelphia Eagles,282.5,philadelphia eagles
+Jerick McKinnon,263.5,jerick mckinnon
+Chase McLaughlin,298.0,chase mclaughlin
+Brian Hill,239.0,brian hill
+Michael Badgley,289.0,michael badgley
+Jaret Patterson,240.0,jaret patterson
+Juwan Johnson,242.0,juwan johnson
+Xavier Jones,356.0,xavier jones
+Amari Rodgers,290.5,amari rodgers
+Detrez Newsome,248.0,detrez newsome
+Darius Slayton,248.0,darius slayton
+Paul McRoberts,249.0,paul mcroberts
+Tim Tebow,250.0,tim tebow
+Jon Brown,250.0,jon brown
+Jeff Wilson Jr.,251.0,jeff wilson
+Nick Tiano,251.0,nick tiano
+Andy Dalton,252.0,andy dalton
+Kent Taylor,252.0,kent taylor
+Stevan Ridley,253.0,stevan ridley
+Jake Funk,253.0,jake funk
+Juwan Green,254.0,juwan green
+Taywan Taylor,255.0,taywan taylor
+Tyler Davis,256.0,tyler davis
+Khalid Hill,257.0,khalid hill
+Jimmy Graham,258.0,jimmy graham
+Austin Traylor,258.0,austin traylor
+Tyler Kroft,259.0,tyler kroft
+Jarvion Franklin,259.0,jarvion franklin
+Jared Goff,260.0,jared goff
+Drew Anderson,260.0,drew anderson
+Darrin Hall,261.0,darrin hall
+Breshad Perriman,262.0,breshad perriman
+Phillip Andersen,262.0,phillip andersen
+Jeremy Kerley,263.0,jeremy kerley
+La'Mical Perine,263.0,lamical perine
+Broc Rutter,264.0,broc rutter
+Royce Freeman,265.0,royce freeman
+Lamar Jordan,265.0,lamar jordan
+Dan Arnold,266.0,dan arnold
+Taylor Russolino,266.0,taylor russolino
+Daniel Crawford,267.0,daniel crawford
+Quinton Flowers,268.0,quinton flowers
+Joshua Kelley,268.0,joshua kelley
+Wayne Gallman Jr.,269.0,wayne gallman
+Isaac Zico,269.0,isaac zico
+Byron Pringle,270.0,byron pringle
+Trenton Irwin,270.0,trenton irwin
+Trevor Moore,271.0,trevor moore
+Kayaune Ross,272.0,kayaune ross
+Qadree Ollison,273.0,qadree ollison
+Cole Hedlund,273.0,cole hedlund
+Elliott Fry,274.0,elliott fry
+Denzel Mims,274.0,denzel mims
+Pooka Williams Jr.,275.0,pooka williams
+Corey Taylor II,276.0,corey taylor
+T.J. Linta,277.0,tj linta
+Tyrod Taylor,278.0,tyrod taylor
+Travis Jonsen,278.0,travis jonsen
+Trenton Cannon,279.0,trenton cannon
+DeSean Jackson,280.0,desean jackson
+Austin Roberts,280.0,austin roberts
+Anthony Sherman,281.0,anthony sherman
+Demarcus Robinson,281.0,demarcus robinson
+Keke Coutee,282.0,keke coutee
+Drew Lock,283.0,drew lock
+Scotty Miller,286.0,scotty miller
+Quez Watkins,287.0,quez watkins
+Chris Herndon IV,290.0,chris herndon
+Hunter Renfrow,291.0,hunter renfrow
+Eno Benjamin,293.0,eno benjamin
+Mo Alie-Cox,295.0,mo alie cox
+Dalton Schultz,296.0,dalton schultz
+Austin MacGinnis,297.0,austin macginnis
+Mike Boone,298.0,mike boone
+Dee Eskridge,300.0,dee eskridge
+Jimmy Garoppolo,301.0,jimmy garoppolo
+Larry Rountree III,302.0,larry rountree
+Jalen Richard,303.0,jalen richard
+Samaje Perine,304.0,samaje perine
+Olamide Zaccheaus,305.0,olamide zaccheaus
+Travis Fulgham,307.0,travis fulgham
+Adam Humphries,311.0,adam humphries
+Ke'Shawn Vaughn,312.0,keshawn vaughn
+Quintez Cephus,313.0,quintez cephus
+Chris Evans,314.0,chris evans
+Anthony Miller,315.0,anthony miller
+Tim Patrick,317.0,tim patrick
+Kalen Ballage,318.0,kalen ballage
+Graham Gano,319.0,graham gano
+David Moore,321.0,david moore
+KJ Hamler,322.0,kj hamler
+Josh Reynolds,323.0,josh reynolds
+De'Angelo Henderson Sr.,324.0,deangelo henderson
+John Brown,325.0,john brown
+Houston Texans,326.0,houston texans
+Deonte Harty,327.0,deonte harty
+Kerryon Johnson,328.0,kerryon johnson
+Cairo Santos,329.0,cairo santos
+D'Onta Foreman,330.0,donta foreman
+C.J. Uzomah,331.0,cj uzomah
+Rashard Higgins,332.0,rashard higgins
+Dyami Brown,334.0,dyami brown
+Ka'imi Fairbairn,335.0,kaimi fairbairn
+Jacksonville Jaguars,336.0,jacksonville jaguars
+New York Jets,340.0,new york jets
+Ameer Abdullah,341.0,ameer abdullah
+Cody Parkey,342.0,cody parkey
+Zach Pascal,343.0,zach pascal
+Van Jefferson,344.0,van jefferson
+Ito Smith,345.0,ito smith
+Jake Elliott,346.0,jake elliott
+Josh Lambo,347.0,josh lambo
+Atlanta Falcons,348.0,atlanta falcons
+Devin Funchess,349.0,devin funchess
+Chris Conley,350.0,chris conley
+Marquise Goodwin,351.0,marquise goodwin
+Jonathan Williams,352.0,jonathan williams
+Matt Breida,353.0,matt breida
+Kendrick Bourne,354.0,kendrick bourne
+Stephen Anderson,355.0,stephen anderson
+Keelan Cole Sr.,356.0,keelan cole
+Terry Godwin,357.0,terry godwin
+Case Cookus,358.0,case cookus
+Marcus Mariota,359.0,marcus mariota
+Joey Slye,360.0,joey slye
+Donald Parham Jr.,361.0,donald parham
+Tylan Wallace,363.0,tylan wallace
+Antonio Gandy-Golden,364.0,antonio gandy golden
+Detroit Lions,365.0,detroit lions
+James Washington,366.0,james washington
+Albert Wilson,367.0,albert wilson
+Tutu Atwell,368.0,tutu atwell
+N'Keal Harry,369.0,nkeal harry
+Tucker McCann,370.0,tucker mccann
+Randy Bullock,371.0,randy bullock
+David Njoku,373.0,david njoku
+Preston Williams,374.0,preston williams
+Jalen Guyton,375.0,jalen guyton
+Cam Sims,376.0,cam sims
+Mohamed Sanu Sr.,377.0,mohamed sanu
+Shi Smith,378.0,shi smith
+Damiere Byrd,379.0,damiere byrd
+Mitchell Trubisky,380.0,mitchell trubisky
+Sam Ehlinger,381.0,sam ehlinger
+Anthony Schwartz,382.0,anthony schwartz
+Antonio Williams,384.0,antonio williams
+Tyler Johnson,385.0,tyler johnson
+Antonio Callaway,386.0,antonio callaway
+Dez Fitzpatrick,387.0,dez fitzpatrick
+Foster Moreau,388.0,foster moreau
+Jack Doyle,389.0,jack doyle
+Matt Jones,390.0,matt jones
+Ty Montgomery II,391.0,ty montgomery
+James O'Shaughnessy,392.0,james oshaughnessy
+Tyron Billy-Johnson,393.0,tyron billy johnson
+Jacob Eason,394.0,jacob eason
+Michael Strachan,395.0,michael strachan
+Jermar Jefferson,396.0,jermar jefferson
+Jalen Hurd,397.0,jalen hurd
+Jaylen Samuels,398.0,jaylen samuels
+Tyler Conklin,399.0,tyler conklin
+Colin Kaepernick,400.0,colin kaepernick
+Johnny Manziel,401.0,johnny manziel
+Albert Okwuegbunam Jr.,402.0,albert okwuegbunam
+Ray Rice,403.0,ray rice
+Kylin Hill,404.0,kylin hill
+Greg Ward,405.0,greg ward
+Jordan Love,406.0,jordan love
+Ryan Santoso,407.0,ryan santoso
+Easop Winston Jr.,408.0,easop winston
+Matt Ammendola,409.0,matt ammendola
+Devin Smith,410.0,devin smith
+Riley Ridley,411.0,riley ridley
+Adrian Peterson,412.0,adrian peterson
+Aldrick Rosas,413.0,aldrick rosas
+Dazz Newsome,414.0,dazz newsome
+Trent Sherfield Sr.,415.0,trent sherfield
+Jody Fortson Jr.,416.0,jody fortson
+Dede Westbrook,417.0,dede westbrook
+Tony Romo,418.0,tony romo
+Andy Isabella,419.0,andy isabella
+Greg Joseph,420.0,greg joseph
+Zay Jones,421.0,zay jones
+Matthew Wright,422.0,matthew wright
+DeeJay Dallas,423.0,deejay dallas
+Corey Clement,424.0,corey clement
+Will Dissly,425.0,will dissly
+Tom Kennedy,426.0,tom kennedy
+Kylen Granson,427.0,kylen granson
+Devin Duvernay,428.0,devin duvernay
+Noah Gray,429.0,noah gray
+Gerrid Doaks,430.0,gerrid doaks
+Simi Fehoko,431.0,simi fehoko
+Damoun Patterson,432.0,damoun patterson
+Charlie Woerner,433.0,charlie woerner
+Pharoh Cooper,434.0,pharoh cooper
+Cincinnati Bengals,435.0,cincinnati bengals
+Kyle Rudolph,436.0,kyle rudolph
+Khalil Herbert,437.0,khalil herbert
+Dezmon Patmon,438.0,dezmon patmon
+Jeremy McNichols,439.0,jeremy mcnichols
+Brandon Dillon,440.0,brandon dillon
+Kyle Juszczyk,441.0,kyle juszczyk
+Chad Beebe,442.0,chad beebe
+Taylor Heinicke,443.0,taylor heinicke
+Demetric Felton Jr.,444.0,demetric felton
+Quinn Nordin,445.0,quinn nordin
+Rodney Adams,446.0,rodney adams
+Davis Mills,447.0,davis mills
+Corey Acosta,448.0,corey acosta
+Eddy Pineiro,449.0,eddy pineiro
+Jesper Horsted,450.0,jesper horsted
+Durham Smythe,451.0,durham smythe
+Peyton Barber,452.0,peyton barber
+Chad Henne,453.0,chad henne
+John Wolford,454.0,john wolford
+Mike Glennon,455.0,mike glennon
+Rex Burkhead,456.0,rex burkhead
+Willie Snead IV,457.0,willie snead
+Drew Sample,458.0,drew sample
+Cornell Powell,459.0,cornell powell
+Joe Flacco,460.0,joe flacco
+Jacoby Brissett,461.0,jacoby brissett
+Harrison Bryant,462.0,harrison bryant
+Gardner Minshew II,463.0,gardner minshew
+Jacob Hollister,464.0,jacob hollister

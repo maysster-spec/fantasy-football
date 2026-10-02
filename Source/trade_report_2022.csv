@@ -1,0 +1,14 @@
+Week,Date,Team,TeamB,Type,Status,Transaction
+2,2022-09-16 22:12,Ekeler's  Edge,Bloodied Castaways,TRADE_PROPOSAL,CANCELED,TRADE Player ID 4361411 [Bloodied Castaways -> Ekeler's  Edge] | TRADE Player ID 4048244 [Ekeler's  Edge -> Bloodied Castaways]
+2,2022-09-16 20:13,Ekeler's  Edge,Bloodied Castaways,TRADE_PROPOSAL,PENDING,TRADE Player ID 4361411 [Bloodied Castaways -> Ekeler's  Edge] | TRADE Player ID 4048244 [Ekeler's  Edge -> Bloodied Castaways]
+2,2022-09-18 16:05,Bloodied Castaways,Hurts So Good,TRADE_PROPOSAL,CANCELED,TRADE Player ID 2977187 [Hurts So Good -> Bloodied Castaways] | TRADE Player ID 15835 [Bloodied Castaways -> Hurts So Good] | TRADE Player ID 3116406 [Bloodied Castaways -> Hurts So Good]
+3,2022-09-20 11:45,Hurts So Good,,TRADE_DECLINE,EXECUTED,
+3,2022-09-21 08:31,Bloodied Castaways,,TRADE_DECLINE,EXECUTED,
+5,2022-10-06 14:03,dolla dolla Bills y'all,,TRADE_VETO,EXECUTED,
+5,2022-10-05 20:21,Rick James B!tch!,,TRADE_VETO,EXECUTED,
+5,2022-10-05 21:13,Multiple Scorgasms,,TRADE_VETO,EXECUTED,
+5,2022-10-06 13:31,Ekeler's  Edge,,TRADE_VETO,EXECUTED,
+5,2022-10-05 20:17,Bloodied Castaways,,TRADE_ACCEPT,,
+6,2022-10-15 01:28,Brown VS Browns,,TRADE_DECLINE,EXECUTED,
+9,2022-11-03 04:21,Ekeler's  Edge,Send'em Packin,TRADE_PROPOSAL,CANCELED,TRADE Player ID 4242433 [Send'em Packin -> Ekeler's  Edge] | TRADE Player ID 4697815 [Ekeler's  Edge -> Send'em Packin]
+9,2022-11-02 21:25,Ekeler's  Edge,Send'em Packin,TRADE_PROPOSAL,PENDING,TRADE Player ID 4242433 [Send'em Packin -> Ekeler's  Edge] | TRADE Player ID 4697815 [Ekeler's  Edge -> Send'em Packin]

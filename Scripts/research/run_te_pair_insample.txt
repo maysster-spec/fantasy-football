@@ -1,0 +1,45 @@
+MODE: IN-SAMPLE (control: weeks 1-14 season mean, includes the scored game in the 2-14 window)
+cache: /mnt/user-data/uploads/2026/Scripts/research/_nflverse_cache
+TE starts (team top TE), 2021-2025 REG wk1-17: n=2552
+
+mid TE1 (ranks 7-12) + streamable TE2, weeks 2-14: n=288 pairs
+  always start TE1         : 9.48 a week
+  start the softer matchup : 9.11 a week
+  difference               : -0.37  se 0.07  t -5.48
+  when it benched TE1      : -1.18 a week, won 42%, n=891
+  quality gap elite vs streamable: 2.73 pts a week
+
+mid TE1 (ranks 7-12) + streamable TE2, weeks 15-17: n=120 pairs
+  always start TE1         : 11.46 a week
+  start the softer matchup : 10.30 a week
+  difference               : -1.16  se 0.26  t -4.45
+  when it benched TE1      : -3.86 a week, won 35%, n=108
+  quality gap elite vs streamable: 2.73 pts a week
+
+elite TE1 + streamable TE2, weeks 15-17: n=156 pairs
+  always start TE1         : 11.13 a week
+  start the softer matchup : 9.88 a week
+  difference               : -1.25  se 0.22  t -5.60
+  when it benched TE1      : -3.91 a week, won 28%, n=150
+  quality gap elite vs streamable: 5.47 pts a week
+
+streamable + streamable, weeks 15-17: n=209 pairs
+  always start TE1         : 6.91 a week
+  start the softer matchup : 6.75 a week
+  difference               : -0.16  se 0.15  t -1.04
+  when it benched TE1      : -0.46 a week, won 46%, n=215
+  quality gap elite vs streamable: 5.47 pts a week
+
+elite TE1 + streamable TE2, weeks 2-14: n=288 pairs
+  always start TE1         : 12.32 a week
+  start the softer matchup : 11.46 a week
+  difference               : -0.86  se 0.09  t -10.09
+  when it benched TE1      : -2.87 a week, won 34%, n=855
+  quality gap elite vs streamable: 5.47 pts a week
+
+streamable + streamable, weeks 2-14: n=528 pairs
+  always start TE1         : 6.80 a week
+  start the softer matchup : 7.30 a week
+  difference               : +0.50  se 0.06  t +9.09
+  when it benched TE1      : +1.48 a week, won 58%, n=1650
+  quality gap elite vs streamable: 5.47 pts a week

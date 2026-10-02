@@ -1,0 +1,40 @@
+{
+ "bands": [
+  {
+   "lo": 0,
+   "hi": 5,
+   "label": "under 5",
+   "n": 88,
+   "filers": 1.17,
+   "contested": 0.14
+  },
+  {
+   "lo": 5,
+   "hi": 10,
+   "label": "5 to 9",
+   "n": 180,
+   "filers": 1.49,
+   "contested": 0.29
+  },
+  {
+   "lo": 10,
+   "hi": 15,
+   "label": "10 to 14",
+   "n": 94,
+   "filers": 1.83,
+   "contested": 0.4
+  },
+  {
+   "lo": 15,
+   "hi": 999,
+   "label": "15 or more",
+   "n": 41,
+   "filers": 2.27,
+   "contested": 0.56
+  }
+ ],
+ "r": 0.296,
+ "n": 403,
+ "need_delta": 0.201,
+ "bar": 0.3
+}

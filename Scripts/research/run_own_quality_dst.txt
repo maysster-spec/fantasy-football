@@ -1,0 +1,16 @@
+  implied_team vs actual points scored, all team-games n=2558: Pearson +0.390; implied_opp vs points allowed +0.390 (a positive check that the formula points the right way)
+unit-weeks with 2+ prior games and a line: n=2238
+  Spearman with this week's D/ST points: own season-to-date average +0.097; opponent implied total -0.325 (n=2238)
+  regression (points per one sd): own average -0.02 (se 0.14), opponent implied total -2.12 (se 0.14); sd of own average 2.92 pts, of implied total 3.82 pts
+  all 32 units: n=75 season-weeks, pool 29.8 men a week, seasons [np.int64(2021), np.int64(2022), np.int64(2023), np.int64(2024), np.int64(2025)]
+    line: lowest opp implied total           9.06 a week, +4.08 over random (se 0.71, t 5.7)
+    own: highest season-to-date average      6.01 a week, +1.03 over random (se 0.83, t 1.2)
+    line minus own: +3.05 a week (se 1.17); line wins 41, own wins 24, ties 10 of 75 weeks
+  streamable pool, rank 13-32: n=75 season-weeks, pool 17.5 men a week, seasons [np.int64(2021), np.int64(2022), np.int64(2023), np.int64(2024), np.int64(2025)]
+    line: lowest opp implied total           7.79 a week, +3.16 over random (se 0.72, t 4.4)
+    own: highest season-to-date average      5.66 a week, +1.04 over random (se 0.76, t 1.4)
+    line minus own: +2.13 a week (se 1.02); line wins 41, own wins 26, ties 8 of 75 weeks
+  head to head, same week: a top-12 unit facing an opponent total at least 2 points HIGHER than a rank-23-or-worse unit's: n=1536 pairs; the good unit scores 3.64, the bad unit with the better matchup 6.58, good unit wins 35% of pairs
+    gap 2 to 3 points: n=364, good unit 4.19 vs bad-unit-better-matchup 5.90, good wins 40%
+    gap 3 to 5 points: n=584, good unit 3.88 vs bad-unit-better-matchup 6.61, good wins 36%
+    gap 5 to 99 points: n=588, good unit 3.06 vs bad-unit-better-matchup 6.96, good wins 31%

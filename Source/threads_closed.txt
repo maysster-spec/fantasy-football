@@ -1,0 +1,75 @@
+# threads_closed.txt -- one distinctive phrase per line, matched case-insensitively against
+# a thread's text. Matched threads move to the CLOSED section of OPEN_THREADS.md. They are
+# NOT deleted: a wrongly-closed thread is worse than an open one, so it stays visible.
+# Blank lines and # comments ignored. Rebuild with:  py open_threads.py
+
+# ---- closed 2026-09-09, doc 262: the trade census came back ----
+The trade record — NOT YET RUN
+Whether the trade sits in a different ESPN view
+
+# ---- closed 2026-09-09, doc 263: the PFF exports were already in Downloads ----
+Slot rate — still a PFF field
+Targets per route run — 4for4's 0.64-stability metric
+
+# ---- closed 2026-09-09, doc 261: the four tasks registered and both leftovers deleted ----
+
+# ---- closed 2026-09-10, doc 269: waivers.py ran and the trade reports exist ----
+trade_report_<year>.csv has never been written
+every trade claim in this project is unmeasured
+confirms whether Omar Cooper Jr
+
+# ---- closed 2026-09-11, doc 294: R2c ran (the in-season half stays open in doc 294) ----
+keep the role after the return, by pedigree. not yet run
+keep the role when the man ahead returns, by pedigree
+
+# ---- closed 2026-09-12, docs 297, 298, 299: batch 1's second half, three items ----
+No injuries anywhere in the pricing
+The three-signal screen on today's free receivers
+A veteran arrival squeezes the room below him
+
+# ---- closed 2026-09-16, docs 319, 320: the two Fable jobs from REDTEAM_TASKING_PROMPT section B ----
+Price every free player against an absence-aware bar
+Re-derive the backfield depth order from weekly usage
+re-derive each team's backfield depth order from realised week-to-date usage
+
+# ---- closed 2026-09-16 08:40, doc 321: both code changes Fable held are shipped and controlled ----
+the `load_depth()` change above with its two controls
+One sentence for the sheet, not shipped tonight
+
+# ---- closed 2026-09-21, doc 381: the next kickoff is on the inputs box ----
+the next kickoff on the inputs box
+the next kickoff on the box
+
+# ---- closed 2026-09-29, doc 440: batch one of the to-do list ----
+The same pair test for TIGHT END
+the expected-points backtest: claimable RB/WR/TE weeks 2021 to 2025
+the air-yards threshold: the WOPR cut for the top fifth
+the same two-game comparison on the DELTA
+does a rise in expected points from w-1 to w predict
+
+# ---- closed 2026-09-29, doc 441: batch two of the to-do list ----
+red-zone usage from nflverse pbp 2026 into form_2026.csv
+the daily nflverse depth chart and practice status
+routes, historically: pass-play participation per receiver-week
+Vegas lines from games.csv into the D/ST, K and QB streaming lanes
+fix the builder, rebuild, republish 5.51
+
+# ---- closed 2026-09-29, doc 442: batch three, first half ----
+his own claim ordering recorded at placement, paired with the outcome
+BUILD THE SPOT-CHECK CARD
+WIRE THE OPPONENT IMPLIED TOTAL INTO THE D/ST LANE
+
+# ---- closed 2026-09-29, doc 443: batch three, second half ----
+print the measured rate beside the blend on the lineup page
+WIRE inherit_2026.csv's UNREAD COLUMNS
+sheet_engine.py's form join
+PUT xfp AND fp_oe ON A PAGE AS COLUMNS
+Wire it as a FRESHNESS source into the sheet
+Port the five-week QB matchup look-ahead from wire.py onto the week sheet
+make check_pages.py refuse a page whose top take
+THE POCKET SHEET HAS NO LOCAL BUILDER
+FOUR LIVE FINDINGS WITH NO PAGE TERM
+
+# ---- closed 2026-09-29, doc 445: batch five, the two measurements ----
+whether the practice report's Out should be
+the eight-week horizon on 4.38

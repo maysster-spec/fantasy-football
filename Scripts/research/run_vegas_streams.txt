@@ -1,0 +1,125 @@
+vegas_streams.py: do pregame lines beat the season-average matchup on the three streaming picks?
+games.csv cached at /tmp/claude-0/-home-claude/3a831c26-fa57-5432-80c5-df34542892d6/scratchpad/work7/tree2/Scripts/research/games.csv; D/ST from /tmp/claude-0/-home-claude/3a831c26-fa57-5432-80c5-df34542892d6/scratchpad/work7/tree2/Source/dst_weekly_2021_2025.csv
+SIGN CONVENTION (games.csv, 2021-2025 REG weeks 1-17, n=1279 games)
+  result == home minus away in 100.0% of games; when the home moneyline is shorter the spread_line is positive in 99.5%; corr(spread_line, result) = +0.450
+  => spread_line = home minus away expected margin, positive = home favoured (matches the nflreadr dictionary text: "a positive number means the home team was favored").
+  implied_team = total_line/2 + spread_team/2, spread_team = the side's own expected margin
+     2021 wk1 DAL at TB: spread +10.0 total 52.5 -> implied home 31.25 away 21.25 (sum 52.5); actual 31-29
+     2021 wk1 PHI at ATL: spread +3.5 total 49.0 -> implied home 26.25 away 22.75 (sum 49.0); actual 6-32
+     2021 wk1 PIT at BUF: spread +6.5 total 48.0 -> implied home 27.25 away 20.75 (sum 48.0); actual 16-23
+  implied_team vs actual points scored, all team-games n=2558: Pearson +0.390; implied_opp vs points allowed +0.390 (a positive check that the formula points the right way)
+
+====================================================================================================
+T1  D/ST.  Testable form: among streamable defences (rank 13-32 by season-to-date mean, 2+ prior
+    games, playing this week), the unit facing the LOWEST opponent implied total scores more D/ST
+    points than the unit facing the lowest opponent season-to-date points scored, and than random.
+    Points = dst_pts from Source/dst_weekly_2021_2025.csv as rebuilt by doc 441 (all 2,718 team-weeks, blocked
+    kicks and fumbles lost included), NOT the shipped Source file that drops 142 event-less weeks.
+====================================================================================================
+  D/ST-weeks after the week filter: n=2558 (512 per season: [512, 510, 512, 512, 512])
+  Spearman with D/ST points, ALL D/ST-weeks n=2558: opponent implied total -0.312; own spread (positive = the defence's team favoured) +0.282; game total -0.131
+  Spearman with D/ST points, weeks with a prior: opponent season-to-date points scored -0.189 (n=2398); opponent season-to-date D/ST points allowed +0.187 (n=2398)
+  streamable pool: rank 13-32 by prior-weeks mean, 2+ prior games -> 1312 candidate-weeks, weeks 3-17
+  Spearman inside the pool n=1312: opponent implied total -0.303; own spread +0.293
+  pick rules: n=75 season-weeks, pool 17.5 men a week, seasons [np.int64(2021), np.int64(2022), np.int64(2023), np.int64(2024), np.int64(2025)]
+  rule                                  mean     se vs random     se
+  line: lowest opp implied total        7.79   0.72     +3.16   0.72
+  season: lowest opp pts scored         8.02   0.85     +3.40   0.81
+  season-b: lowest opp D/ST allowed     2.24   0.75     -2.38   0.73
+  spread: most favoured defence         7.65   0.72     +3.02   0.69
+  random (pool mean)                    4.62   0.16
+  line rule minus season: lowest opp pts scored: -0.23 a week, se 1.10; line wins 27, loses 29, same pick or tie 19 (48% of decided weeks)
+  by season:
+    2021  line: lowest opp implied total 8.73  season: lowest opp pts scored 6.53  season-b: lowest opp D/ST allowed 4.31  spread: most favoured defence 7.53  random 4.46
+    2022  line: lowest opp implied total 6.53  season: lowest opp pts scored 9.60  season-b: lowest opp D/ST allowed 3.73  spread: most favoured defence 8.93  random 5.01
+    2023  line: lowest opp implied total 8.40  season: lowest opp pts scored 9.87  season-b: lowest opp D/ST allowed 0.70  spread: most favoured defence 7.30  random 5.23
+    2024  line: lowest opp implied total 9.60  season: lowest opp pts scored 7.47  season-b: lowest opp D/ST allowed -0.53  spread: most favoured defence 8.60  random 3.99
+    2025  line: lowest opp implied total 5.67  season: lowest opp pts scored 6.63  season-b: lowest opp D/ST allowed 3.00  spread: most favoured defence 5.87  random 4.42
+  line rule minus season-b (D/ST allowed): +5.54 a week, se 1.18
+  week-by-week, line over season rule (wins-losses-ties):
+    w3 5-0-0  w4 3-1-1  w5 2-1-2  w6 2-2-1  w7 1-2-2  w8 0-3-2  w9 1-3-1  w10 0-3-2  w11 2-3-0  w12 1-3-1  w13 1-3-1  w14 1-2-2  w15 3-0-2  w16 2-2-1  w17 3-1-1
+  FALSIFIER: wire needs +1.0 over random with se < 0.5 (literal) or gain >= 2 se (t-reading); replace needs +0.5 over the season rule.  se floor at n=75 with a pick sd of 6.2 is 0.72, so the literal se bar is UNATTAINABLE by any rule at this n.
+    line over random        +3.16 (se 0.72, t +4.4) -> literal fail, t-reading PASS
+    season rule over random +3.40 (se 0.81, t +4.2) -> literal fail, t-reading PASS
+    line over season rule   -0.23 (se 1.10, t -0.2) -> fail
+  VERDICT: KEEP THE SEASON AVERAGE (the season rule clears random on the t-reading and the line does not beat it by 0.5)
+
+====================================================================================================
+T2  QB.  Testable form: among streamable QBs (rank 13-24 by season-to-date mean, 3+ prior games of
+    10+ attempts, playing this week), the man with the HIGHEST own-team implied total scores more than
+    the man with the softest matchup by opponent season-to-date QB points allowed (doc 427 ex ante),
+    and than random; and the rank-sum of both beats either alone.
+====================================================================================================
+  QB games (10+ attempts) weeks 1-17: n=2653; QB-team-weeks with two such men: 100
+  Spearman with QB points, all QB games: own implied total +0.346 (n=2653); opponent season-to-date QB points allowed +0.040 (n=2492); game total +0.232
+  streamable pool: rank 13-24 among QBs with 3+ prior games -> 823 candidate-weeks, weeks 4-17, season-to-date mean of the pool 16.63
+  Spearman inside the pool n=823: own implied total +0.276; opponent QB points allowed +0.047; the two signals with each other +0.241
+  pick rules: n=70 season-weeks, pool 11.8 men a week, seasons [np.int64(2021), np.int64(2022), np.int64(2023), np.int64(2024), np.int64(2025)]
+  rule                                  mean     se vs random     se
+  line: highest own implied total      22.00   1.09     +4.53   0.89
+  season: softest matchup (doc 427)    19.17   1.16     +1.70   1.08
+  both: rank-sum of the two            20.92   1.03     +3.46   0.92
+  total: highest game total            20.16   1.03     +2.70   0.98
+  random (pool mean)                   17.47   0.39
+  line rule minus season: softest matchup (doc 427): +2.84 a week, se 1.41; line wins 34, loses 28, same pick or tie 8 (55% of decided weeks)
+  by season:
+    2021  line: highest own implied total 21.19  season: softest matchup (doc 427) 15.92  both: rank-sum of the two 20.23  total: highest game total 16.28  random 16.23
+    2022  line: highest own implied total 19.67  season: softest matchup (doc 427) 18.79  both: rank-sum of the two 17.71  total: highest game total 22.17  random 17.40
+    2023  line: highest own implied total 24.13  season: softest matchup (doc 427) 18.87  both: rank-sum of the two 19.45  total: highest game total 22.96  random 17.38
+    2024  line: highest own implied total 23.07  season: softest matchup (doc 427) 24.37  both: rank-sum of the two 22.91  total: highest game total 18.33  random 18.11
+    2025  line: highest own implied total 21.94  season: softest matchup (doc 427) 17.88  both: rank-sum of the two 24.31  total: highest game total 21.08  random 18.22
+  both minus [line: highest own implied total]: -1.08 a week, se 1.10
+  both minus [season: softest matchup (doc 427)]: +1.76 a week, se 1.27
+  reconciliation, doc 435 definitions (tier by FULL-season ppg rank 13-24 with 8+ games, an in-sample tier; generosity prior weeks only; pools of 2+):
+    doc-435-style pool: n=80 season-weeks, pool 9.4 men a week, seasons [np.int64(2021), np.int64(2022), np.int64(2023), np.int64(2024), np.int64(2025)]
+  rule                                  mean     se vs random     se
+  line: highest own implied total      20.39   0.95     +2.21   0.87
+  season: softest matchup (doc 427)    20.73   0.92     +2.54   0.82
+  both: rank-sum of the two            19.85   0.79     +1.67   0.73
+  total: highest game total            19.63   0.86     +1.45   0.75
+  random (pool mean)                   18.18   0.35
+  line rule minus season: softest matchup (doc 427): -0.33 a week, se 1.22; line wins 30, loses 34, same pick or tie 16 (47% of decided weeks)
+  by season:
+    2021  line: highest own implied total 18.28  season: softest matchup (doc 427) 18.16  both: rank-sum of the two 20.15  total: highest game total 18.47  random 17.17
+    2022  line: highest own implied total 20.53  season: softest matchup (doc 427) 22.06  both: rank-sum of the two 20.85  total: highest game total 22.18  random 18.16
+    2023  line: highest own implied total 22.28  season: softest matchup (doc 427) 21.44  both: rank-sum of the two 19.95  total: highest game total 19.97  random 18.31
+    2024  line: highest own implied total 19.04  season: softest matchup (doc 427) 21.05  both: rank-sum of the two 17.09  total: highest game total 15.12  random 18.24
+    2025  line: highest own implied total 21.82  season: softest matchup (doc 427) 20.92  both: rank-sum of the two 21.24  total: highest game total 22.42  random 19.03
+  FALSIFIER: wire needs +1.0 over random with se < 0.5 (literal) or gain >= 2 se (t-reading); replace needs +0.5 over the season rule.  se floor at n=70 with a pick sd of 9.1 is 1.09, so the literal se bar is UNATTAINABLE by any rule at this n.
+    line over random        +4.53 (se 0.89, t +5.1) -> literal fail, t-reading PASS
+    season rule over random +1.70 (se 1.08, t +1.6) -> literal fail, t-reading fail
+    line over season rule   +2.84 (se 1.41, t +2.0) -> PASS
+  VERDICT: WIRE THE LINE (t-reading; literal se bar not met)
+
+====================================================================================================
+T3  K.  Testable form: among streamable kickers (rank 13-32 by season-to-date mean, 2+ prior games,
+    kicking this week), the man with the HIGHEST own-team implied total scores more than random.
+    No page rule exists for kickers; the opponent's season-to-date K points allowed is run as the
+    season-average stand-in so the replace test has something to bite on.
+====================================================================================================
+  kicker-weeks (one per team-week, the higher scorer where two kicked) weeks 1-17: n=2553
+  kicker-weeks with a line: n=2553 (0 dropped: no nflverse opponent or team mismatch)
+  Spearman with K points, all kicker-weeks n=2553: own implied total +0.140; game total +0.016; own spread +0.153; opponent season-to-date K points allowed +0.062 (n=2393)
+  streamable pool: rank 13-32 among kickers with 2+ prior games -> 1219 candidate-weeks, weeks 3-17
+  Spearman inside the pool n=1219: own implied total +0.135
+  pick rules: n=75 season-weeks, pool 16.3 men a week, seasons [np.int64(2021), np.int64(2022), np.int64(2023), np.int64(2024), np.int64(2025)]
+  rule                                  mean     se vs random     se
+  line: highest own implied total       8.12   0.43     +0.32   0.41
+  season: most K pts allowed            8.65   0.50     +0.84   0.50
+  both: rank-sum of the two             8.78   0.49     +0.97   0.48
+  total: highest game total             8.25   0.45     +0.45   0.42
+  random (pool mean)                    7.80   0.14
+  line rule minus season: most K pts allowed: -0.53 a week, se 0.64; line wins 32, loses 27, same pick or tie 16 (54% of decided weeks)
+  by season:
+    2021  line: highest own implied total 8.70  season: most K pts allowed 9.17  both: rank-sum of the two 8.87  total: highest game total 9.03  random 7.43
+    2022  line: highest own implied total 6.93  season: most K pts allowed 9.13  both: rank-sum of the two 7.27  total: highest game total 7.40  random 7.91
+    2023  line: highest own implied total 8.10  season: most K pts allowed 8.60  both: rank-sum of the two 8.87  total: highest game total 8.08  random 8.05
+    2024  line: highest own implied total 8.17  season: most K pts allowed 6.27  both: rank-sum of the two 9.58  total: highest game total 8.13  random 7.59
+    2025  line: highest own implied total 8.70  season: most K pts allowed 10.07  both: rank-sum of the two 9.30  total: highest game total 8.62  random 8.03
+  FALSIFIER: wire needs +1.0 over random with se < 0.5 (literal) or gain >= 2 se (t-reading); replace needs +0.5 over the season rule.  se floor at n=75 with a pick sd of 3.7 is 0.43, so the literal se bar is attainable at this n.
+    line over random        +0.32 (se 0.41, t +0.8) -> literal fail, t-reading fail
+    season rule over random +0.84 (se 0.50, t +1.7) -> literal fail, t-reading fail
+    line over season rule   -0.53 (se 0.64, t -0.8) -> fail
+  VERDICT: NEITHER clears random
+
+VERDICTS   D/ST: KEEP THE SEASON AVERAGE (the season rule clears random on the t-reading and the line does not beat it by 0.5)   |   QB: WIRE THE LINE (t-reading; literal se bar not met)   |   K: NEITHER clears random

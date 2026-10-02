@@ -1,0 +1,299 @@
+<!doctype html><html><head><meta charset="utf-8"><meta http-equiv="refresh" content="20">
+<title>JUG live board</title><style>
+:root{--bg:#0e1014;--pnl:#171a21;--pnl2:#1c2029;--ln:#272d38;--tx:#e8eaee;
+      --dim:#98a0ae;--amb:#f0a91b;--gr:#3fb27f;--rd:#e2564d;--bl:#5b9dd9}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);
+     font:16px/1.45 "IBM Plex Sans",system-ui,sans-serif}
+.shell{max-width:1620px;margin:0 auto;padding:12px 14px}
+/* clock, far left, where the eye lands first */
+.clockrow{display:flex;align-items:stretch;gap:14px;margin-bottom:10px}
+.clock{flex:none;width:196px;text-align:center;background:var(--pnl);
+       border:1px solid var(--ln);border-radius:10px;padding:6px 10px 8px}
+.clock .lbl{font:700 9px/1 "Chivo";letter-spacing:.16em;text-transform:uppercase;color:var(--dim)}
+.clock .n{font:700 52px/1 "IBM Plex Mono",monospace;color:var(--tx);margin-top:2px}
+.clock .who{font:600 11px/1.3 "IBM Plex Sans";color:var(--dim);margin-top:4px}
+.clock.mine{border-color:var(--amb);background:#241d0c}
+.clock.mine .n{color:var(--amb)}
+.clock.mine .who{color:var(--amb);font-weight:700}
+.feedwarn{background:#4a1512;border:1px solid #a1372f;color:#ffb3ac;font:700 15px/1.4 "Chivo",
+   system-ui;padding:10px 14px;border-radius:6px;margin:0 0 10px;letter-spacing:.01em}
+.runflag{display:inline-block;background:#3a2a08;border:1px solid #6b4d10;color:var(--amb);
+         font:700 12px/1 "IBM Plex Sans";padding:6px 10px;border-radius:6px;margin-left:14px;
+         vertical-align:middle}
+.board-split{display:grid;grid-template-columns:232px minmax(0,1fr);gap:0;
+             background:var(--pnl);border:1px solid var(--ln);border-radius:8px;overflow:hidden}
+.gonecol{border-right:1px solid var(--ln);padding:11px 10px;background:#14171d}
+/* doc 147.  The legend was ~150px of prose sitting between the board and the two panels
+   that matter on the clock (cliffs, roster), pushing them under the fold on a 1600x1000
+   window.  It is reference material -- it is read once, at the kitchen table, not at 60
+   seconds a pick.  Closed by default, one click, and the guide carries the same words. */
+details.legend{margin-top:10px}
+details.legend summary{cursor:pointer;list-style:none;color:#5b9dd9;font-size:11.5px;
+   padding:4px 0;font-weight:600}
+details.legend summary::-webkit-details-marker{display:none}
+details.legend summary:before{content:"▸  "}
+details.legend[open] summary:before{content:"▾  "}
+.legend{margin-top:10px;font-size:11.5px;color:var(--dim);line-height:1.6}
+.legend b{color:var(--tx)}
+.legend .row{padding:2px 0;border-top:1px solid #1e232c}
+.wrap{max-width:1200px;margin:0 auto;padding:14px}   /* used by render_done / render_streamer */
+
+/* ---------- left rail: the draft going by ---------- */
+.gonecol ol{list-style:none;margin:0;padding:0}
+.gonecol li{display:flex;align-items:center;gap:7px;padding:4px 5px;border-radius:4px;
+            font-size:13px;line-height:1.3;white-space:nowrap}
+.gonecol li:first-child{background:#22262f}
+.gonecol li.gpad{visibility:hidden}          /* doc 147: holds the height, draws nothing */
+.gonecol li.gpad:first-child{background:none}
+.gonecol li .nm{flex:1 1 auto;min-width:0;overflow:hidden;text-overflow:ellipsis;
+                white-space:nowrap}
+.gonecol li.fresh .nm{color:#fff;font-weight:600}
+.gonecol li .agn{color:#5a6270;font-size:10px;font-family:"IBM Plex Mono",monospace;
+                 flex:0 0 auto;padding-left:6px}
+.gonecol li:first-child .agn{color:#fff;font-weight:700}
+
+/* ---------- header ---------- */
+.top{display:flex;align-items:center;gap:16px;margin-bottom:10px}
+.top h1{font:700 17px/1 "Chivo",system-ui;margin:0;flex:none}
+.top .meta{color:var(--dim);font-size:11.5px;line-height:1.4}
+.pickbox{margin-left:auto;flex:none;text-align:center;background:var(--pnl);
+         border:1px solid var(--ln);border-radius:10px;padding:4px 20px 6px}
+.pickbox .lbl{font:700 9px/1 "Chivo";letter-spacing:.16em;text-transform:uppercase;
+              color:var(--dim)}
+.pickbox .n{font:700 46px/1 "IBM Plex Mono",monospace;color:var(--tx)}
+.pickbox.mine{border-color:var(--amb);background:#241d0c}
+.pickbox.mine .n{color:var(--amb)}
+.pickbox .until{font:600 10px/1 "IBM Plex Sans";color:var(--dim);margin-top:3px}
+
+/* ---------- hero ---------- */
+.hero{background:var(--pnl);border:1px solid var(--ln);border-left:4px solid var(--amb);
+      border-radius:8px;padding:12px 16px;margin-bottom:12px}
+.hero .sub{color:var(--dim);font-size:11px;letter-spacing:.1em;text-transform:uppercase}
+.hero .pick{font:700 28px/1.15 "Chivo",system-ui;margin-top:2px}
+.hero .why{color:var(--dim);font-size:12.5px;margin-top:6px}
+.big{font:700 32px/1 "IBM Plex Mono",monospace;color:var(--amb)}
+
+/* ---------- tables ---------- */
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+th{text-align:left;color:var(--dim);font-weight:600;font-size:10px;letter-spacing:.07em;
+   text-transform:uppercase;padding:5px 6px;border-bottom:1px solid var(--ln);white-space:nowrap}
+/* one rhythm for the board: numbers snug to their own header, gaps only where a
+   column boundary actually means something. */
+/* PROPORTIONAL widths, auto layout, no colgroup.
+   - percentages so the table fills the panel instead of packing left and leaving
+     a dead zone on the right (the spacer-column approach did that);
+   - auto layout so no column can inherit a neighbour's width, which is what
+     scrambled TM..VBD when a column was hidden under table-layout:fixed;
+   - they scale together as the window narrows, so nothing crushes selectively. */
+.boardwrap{overflow-x:auto}
+table.board{min-width:860px}
+table.board td,table.board th{padding-left:6px;padding-right:6px;white-space:nowrap}
+table.board th:nth-child(1),table.board td:nth-child(1){width:3%}
+table.board th:nth-child(2),table.board td:nth-child(2){width:19%;white-space:normal}
+table.board th:nth-child(3),table.board td:nth-child(3){width:6%}
+table.board th:nth-child(4),table.board td:nth-child(4){width:6%}
+table.board th:nth-child(5),table.board td:nth-child(5){width:6%}
+table.board th:nth-child(6),table.board td:nth-child(6){width:9%}
+table.board th:nth-child(7),table.board td:nth-child(7){width:11%}
+table.board th:nth-child(8),table.board td:nth-child(8){width:11%}
+table.board th:nth-child(9),table.board td:nth-child(9){width:9%}
+table.board th:nth-child(10),table.board td:nth-child(10){width:11%}
+table.board th:nth-child(11),table.board td:nth-child(11){width:9%}
+table.board td.vbd,table.board th.vbdh{padding-left:14px}   /* gap after bye */
+table.board td.key,table.board th.key{padding-left:14px}    /* gap before delta */
+th.num,th.key,th.vbdh,th.costh{text-align:right}   /* headers sit over their own numbers */
+td{padding:5px 6px;border-bottom:1px solid var(--ln);overflow:hidden;text-overflow:ellipsis}
+tr:hover td{background:var(--pnl2)}
+.mono{font-family:"IBM Plex Mono",monospace}
+.num{text-align:right;font-family:"IBM Plex Mono",monospace}
+.rank{color:#5a6270;font:600 11px/1 "IBM Plex Mono",monospace;width:18px;text-align:right}
+
+/* doc 147.  THE ONLY BAR ON THE PAGE BELONGS TO THE COLUMN THAT ORDERS THE LIST.
+   Two bars used to be drawn and BOTH pointed the wrong way:
+     - `wait cost` was the most saturated element in the table, and directive s7 says in
+       terms that this column is NOT the sort key.  At pick 23 the longest green bar sat on
+       row 5 and at pick 104 on row 12 -- rows the engine ranked LAST.  That is doc 79's
+       defect ("the largest bar on the page belonged to a row the engine did not pick")
+       recurring in a second place after being fixed in the first.
+     - the VBD bar was drawn from abs(vbd), and from roughly pick 89 on EVERY vbd on this
+       board is negative.  At pick 104 the longest blue bar marked Pat Freiermuth at -33.9,
+       the worst player on the screen.
+   Now: one bar, on `cost vs #1`, drawn as DISTANCE BEHIND ROW 1.  Long = worse, which is
+   the only encoding that cannot be read backwards.  Row 1 is `free` and draws nothing. */
+th.costh{color:var(--amb)}
+th.key{color:var(--dim)}
+td.key{font-family:"IBM Plex Mono",monospace;text-align:right;color:#c3c9d4}
+td.vbd{font-family:"IBM Plex Mono",monospace;text-align:right}
+td.cost{font-family:"IBM Plex Mono",monospace;text-align:right;font-weight:700;
+        position:relative}
+td.cost .bar{position:absolute;right:0;top:2px;bottom:2px;border-radius:2px;
+             background:rgba(226,86,77,.20);z-index:0}
+td.cost span.v{position:relative;z-index:1}
+/* doc 139 fixed the words clear / slim / a coin flip at 6 and 1.5 and used them in the
+   headline.  The BOARD never used them, so eleven rows all read as one shade of "worse".
+   `tie` is the same threshold applied per row: inside 1.5 points of the recommendation the
+   engine cannot separate them and Matt's own read is free. */
+.free{color:var(--gr)}.tie{color:#7fd4a4}.cheap{color:var(--dim)}.dear{color:var(--rd)}
+td.cost.tie:after{content:"tie";font:700 8.5px/1 system-ui;color:#5a8f74;margin-left:5px;
+                  letter-spacing:.06em;vertical-align:1px}
+tr.padrow td{color:transparent;background:none}
+tr.padrow:hover td{background:none}
+tr.tier.gh div{border-top-color:transparent}   /* holds the slot, draws nothing */
+tr.tier td{border-bottom:none;padding:0}
+tr.tier div{border-top:2px dashed #3a4150;margin:3px 0;position:relative}
+tr.tier span{position:absolute;top:-8px;left:8px;background:var(--pnl);color:#5a6270;
+             font:700 9px/1 "Chivo";letter-spacing:.1em;padding:0 6px}
+.clash{color:var(--rd);font-weight:700;font-size:10px;margin-left:4px}
+
+.pos{display:inline-block;width:30px;text-align:center;border-radius:3px;font-size:10.5px;
+     font-weight:700;padding:1px 0;flex:none}
+.QB{background:#3a2b4d;color:#c9a7ee}.RB{background:#173a2e;color:#6fd4a4}
+.WR{background:#123246;color:#7cc0ef}.TE{background:#4a3418;color:#f0be6a}
+.DST,.K{background:#333;color:#bbb}
+/* doc 100: injury/context grades. Shown, never scored. */
+.ctxA,.ctxD,.ctxN,.ctxS,.ctxY1,.ctxY2,.ctxY3,.ctxB,.ctxQ,.ctxF,.ctxM{font:700 9.5px/1 system-ui,sans-serif;padding:2px 4px;border-radius:3px;
+  vertical-align:1px;letter-spacing:.03em;cursor:help}
+.ctxA{background:#5c1a17;color:#ffb3ac;border:1px solid #a1372f}
+.ctxD{background:#4a3408;color:#f0be6a;border:1px solid #7d5a12}
+.ctxN{background:#17301f;color:#7fd4a4;border:1px solid #2d5c3e}
+.ctxS{background:#1b2b45;color:#8fb8ee;border:1px solid #35547f}
+/* doc 105: the SAME word at three intensities. One agreeing list is a whisper, three is a shout,
+   and you should be able to tell them apart without counting anything. */
+.ctxY1{background:#10281a;color:#5aa87a;border:1px solid #24523a}
+.ctxY2{background:#12381f;color:#7fe0a4;border:1px solid #2f7a4c}
+.ctxY3{background:#1c6b3d;color:#ecfff3;border:1px solid #46d98b;box-shadow:0 0 0 1px #1c6b3d}
+.ctxB{background:#3a2a08;color:#f0c66a;border:1px solid #6b4d10}
+.ctxQ{background:#2a2e36;color:#9aa3b0;border:1px solid #3a4048}
+.ctxF{background:#3a1c2c;color:#e79ab8;border:1px solid #6e3350}
+.ctxM{background:#6b4a08;color:#ffe6a8;border:1px solid #f0a91b}
+.pip{letter-spacing:1px;margin-left:4px;font-size:8px;vertical-align:1.5px;opacity:.95}
+#hold{display:none;position:fixed;right:14px;bottom:12px;z-index:99;
+  background:#3a2a08;border:1px solid #6b4d10;color:#f0c66a;border-radius:6px;
+  padding:6px 11px;font:600 12px/1.2 system-ui,sans-serif}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.panel{background:var(--pnl);border:1px solid var(--ln);border-radius:8px;padding:11px 13px}
+.panel h2{font:700 10px/1 "Chivo";letter-spacing:.1em;text-transform:uppercase;
+          color:var(--dim);margin:0 0 8px}
+/* doc 154: the starter strip moved out of the roster panel to full width under the hero.
+   It is ALWAYS one line -- the trailing status text changes, the height does not (doc 139). */
+.pos-fill{background:var(--pnl);border:1px solid var(--ln);border-radius:8px;
+          padding:7px 13px;margin:10px 0 0;display:flex;align-items:baseline;gap:14px;
+          line-height:1.35;min-height:19px}
+.pos-fill span{font-family:"IBM Plex Mono",monospace;font-size:12.5px;white-space:nowrap;flex:none}
+.pos-fill span i{font-style:normal;font-size:8.5px;font-weight:700;letter-spacing:.06em;
+                 margin-left:4px;color:#5a6270;vertical-align:1px}
+.pos-fill .sdrift{margin-left:auto;color:#98a0ae;font-family:"IBM Plex Sans",system-ui,sans-serif;
+                  font-size:12px;overflow:hidden;text-overflow:ellipsis;min-width:0;flex:0 1 auto}
+.pos-fill .sdrift b{font-weight:700}
+.ok{color:var(--gr)}.warn{color:var(--amb)}.bad{color:var(--rd)}
+i.gof{font-style:normal;font:700 8.5px/1 system-ui;letter-spacing:.06em;color:var(--amb);
+      margin-left:5px;vertical-align:1px}
+i.rk{font-style:normal;font:700 8.5px/1 system-ui;letter-spacing:.06em;color:#7a828f;
+     border:1px solid #3a4048;border-radius:2px;padding:1px 3px;margin-left:5px;
+     vertical-align:1.5px;cursor:help}
+@media (max-width:900px){
+  .clockrow{flex-direction:column}
+  .clock{width:100%}
+  .board-split{grid-template-columns:1fr}
+  .board-split>div:last-child{order:1}
+  .gonecol{order:2;border-right:none;border-top:1px solid var(--ln);
+           max-height:210px;overflow-y:auto}   /* never pushes the roster off screen */
+  .grid{grid-template-columns:1fr}
+}
+
+tr.pr[data-card]{cursor:pointer}
+tr.pr[data-card]:hover td{background:#1b2330}
+#scrim{display:none;position:fixed;inset:0;background:rgba(8,11,16,.72);z-index:200}
+#card{display:none;position:fixed;z-index:201;top:50%;left:50%;transform:translate(-50%,-50%);
+  width:min(760px,92vw);max-height:86vh;overflow:auto;background:#121926;color:#e8edf5;
+  border:1px solid #35405a;border-radius:10px;padding:18px 22px 20px;
+  box-shadow:0 18px 60px rgba(0,0,0,.6);font-size:15px;line-height:1.45}
+#card h3{margin:0 0 12px;font-size:22px;font-weight:700;color:#fff}
+#card h3 em{font-style:normal;font-size:14px;color:#8b95a8;font-weight:400;margin-left:8px}
+#card .cl{margin:0 0 11px;padding-left:11px;border-left:3px solid #2c3648}
+#card .cl span{display:block;font-size:10.5px;letter-spacing:1.1px;color:#7f8ba0;margin-bottom:2px}
+#card .cl.good{border-color:#1f9d63}
+#card .cl.bad{border-color:#d0453a}
+#card .cl.warn{border-color:#d99b1c}
+#card .cl.quo{border-color:#3b82c4;font-style:italic;color:#bcd4ec}
+#card .x{position:absolute;top:10px;right:14px;color:#7f8ba0;font-size:20px;cursor:pointer}
+#cardhint{margin-top:14px;font-size:11.5px;color:#6f7a8d;border-top:1px solid #2c3648;padding-top:9px}
+</style></head><body><div class="wrap">
+<h1>JUG live draft board</h1><div class="sub">pick 152 — D/ST slot</div>
+<div class="hero"><div class="sub">ON THE CLOCK — PICK 152</div>
+<div class="pick">Jaguars D/ST <span class="pos DST">D/ST</span></div>
+<div class="why">You stream this position all season, so this pick is only worth the first
+few weeks. Take the lowest number in the table and move on.</div></div>
+<div class="panel"><h2>Best D/ST remaining — take the lowest number</h2><table>
+<tr><th>#</th><th>name</th><th>tm</th><th>bye</th><th>week 1</th><th>first 4 wks</th>
+<th>season</th></tr><tr><td class="mono" style="text-align:center"><b style="color:#f0a91b;font-size:17px">2</b></td><td><b>Jaguars D/ST</b></td><td class="mono">JAX</td><td class="mono">7</td><td class="mono">vs CLE</td><td class="mono">23.9</td><td class="mono">80.2</td></tr><tr><td class="mono" style="text-align:center"><b style="color:#f0a91b;font-size:17px">4</b></td><td><b>Bears D/ST</b></td><td class="mono">CHI</td><td class="mono">10</td><td class="mono">@ CAR</td><td class="mono">23.1</td><td class="mono">95.2</td></tr><tr><td class="mono" style="text-align:center"><b style="color:#f0a91b;font-size:17px">5</b></td><td><b>Buccaneers D/ST</b></td><td class="mono">TB</td><td class="mono">10</td><td class="mono">@ CIN</td><td class="mono">23.0</td><td class="mono">94.4</td></tr><tr><td class="mono" style="text-align:center"><b style="color:#f0a91b;font-size:17px">7</b></td><td><b>Saints D/ST</b></td><td class="mono">NO</td><td class="mono">8</td><td class="mono">@ DET</td><td class="mono">22.2</td><td class="mono">94.6</td></tr><tr><td class="mono" style="text-align:center"><b style="color:#f0a91b;font-size:17px">8</b></td><td><b>Chargers D/ST</b></td><td class="mono">LAC</td><td class="mono">7</td><td class="mono">vs ARI</td><td class="mono">22.0</td><td class="mono">95.9</td></tr><tr><td class="mono" style="text-align:center"><b style="color:#f0a91b;font-size:17px">9</b></td><td><b>Browns D/ST</b></td><td class="mono">CLE</td><td class="mono">11</td><td class="mono">@ JAX</td><td class="mono">22.0</td><td class="mono">104.1</td></tr></table>
+<p class="sub" style="margin-top:8px">The amber number ranks all 32 by their FIRST FOUR WEEKS,
+not by the season column. Who a defence plays decides more of its week than who it is, and the
+season projection has no schedule in it.</p></div><div id="scrim"></div><div id="card"><span class="x">&times;</span><div id="cardbody"></div>
+<div id="cardhint">click anywhere, or press Esc, to close &mdash; the board is frozen while this is open</div></div>
+<script>
+/* doc 117. A row with a profile is clickable; the profile is already in the row as data-card,
+   so opening one costs nothing and works with the network down. The board does NOT reload while
+   a card is open -- that was the whole bug behind the tooltips (doc 103) and a card that vanishes
+   mid-sentence is worse than no card. */
+(function(){
+  var card=document.getElementById('card'), scrim=document.getElementById('scrim'),
+      body=document.getElementById('cardbody');
+  function open(html){ body.innerHTML=html; card.style.display='block'; scrim.style.display='block';
+                       window.__cardOpen=true; }
+  function shut(){ card.style.display='none'; scrim.style.display='none'; window.__cardOpen=false; }
+  document.addEventListener('click',function(e){
+    var tr=e.target.closest?e.target.closest('tr.pr[data-card]'):null;
+    if(tr){ open(tr.getAttribute('data-card')); return; }
+    if(card.style.display==='block') shut();
+  },false);
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape') shut(); });
+})();
+</script><div id="hold">holding &mdash; move the mouse off the board to resume</div>
+<script>
+/* doc 103, found by Matt: the page reloaded every 3 seconds, so a tooltip died before you could
+   read it. The badges are useless if you cannot hover them.
+
+   The <meta refresh> above is now a 20-second SAFETY NET for the case where this script does not
+   run at all. If it does run, it cancels the meta and takes over: reload after 3s, but never
+   while the pointer is over the board -- with a 25-second cap so a mouse left on the table can
+   never freeze the night's most important screen. */
+(function(){
+  try{
+    var m=document.querySelector('meta[http-equiv="refresh"]'); if(m) m.parentNode.removeChild(m);
+  }catch(e){}
+  var over=false, due=Date.now()+3000, held=0, chip=document.getElementById('hold');
+  /* target the board table BY ID, not by document order -- adding any table above it would
+     silently move the hold zone somewhere useless. */
+  var zone=document.getElementById('board')||document.querySelector('table')||document.body;
+  zone.addEventListener('mouseenter',function(){over=true;},true);
+  zone.addEventListener('mouseleave',function(){over=false;held=0;if(chip)chip.style.display='none';},true);
+  /* doc 149, findings 2 and 3.  My first version of this held the reload while the legend was
+     open, sharing `held` with the hover branch -- and `mouseleave` resets `held` to 0, so moving
+     the mouse on and off the table (the ordinary motion of reading a glossary that sits directly
+     under it) renewed the hold forever: MEASURED AT ZERO RELOADS IN TWO MINUTES.  The 25s cap at
+     :976 exists precisely so a mouse left on the table can never freeze the night's most
+     important screen, and I defeated it.
+     THE BOARD MUST NEVER STOP REFRESHING.  So there is no hold at all now -- only the open state
+     survives, and the page keeps its 3-second rhythm underneath it.
+     `location.hash` and not `history.replaceState`: the page is opened as a file:// URI, where
+     Chrome refuses replaceState with a URL argument, and the catch(e){} made that failure silent.
+     Setting the fragment is a plain navigation, allowed on every origin, and location.reload()
+     carries it. */
+  var g=document.getElementById('gloss');
+  if(g){
+    if(location.hash==='#gloss') g.open=true;
+    g.addEventListener('toggle',function(){
+      try{ location.hash = g.open ? 'gloss' : ''; }catch(e){}
+    });
+  }
+  setInterval(function(){
+    if(Date.now()<due) return;
+    if(window.__cardOpen){ due=Date.now()+400; return; }   /* doc 117: never reload under a card */
+    if(over && held<25000){ held+=400; due=Date.now()+400;
+      if(chip) chip.style.display='block'; return; }
+    location.reload();
+  },400);
+})();
+</script></div></body></html>

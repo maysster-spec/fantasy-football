@@ -1,0 +1,219 @@
+GEMINI DEEP RESEARCH — 2026 NFL INJURY SWEEP FOR A FANTASY DRAFT
+Prepared 2026-08-31. Draft is Monday 2026-09-07.
+
+=== READ THIS FIRST — TWO HARD RULES ===
+
+RULE 1. THIS TASK NEEDS LIVE WEB SEARCH. USE DEEP RESEARCH.
+
+  If you are running as DEEP RESEARCH (live web): good, that is the right tool. Start a brand-new
+  session with NO documents attached. A previous run of this task carried sources over from an
+  older notebook and returned analyst quotes from the wrong season; if any prior source is
+  attached, the output is unusable.
+
+  If you are running as a NOTEBOOK GROUNDED ONLY IN ATTACHED SOURCES: say so at the top of your
+  answer, in one line, before anything else. You cannot see news you were not given, so you will
+  be confidently blind to anything recent -- which is the exact failure this sweep exists to fix
+  (a running back hyperextended his knee on August 17 and our sheet, built August 30, never
+  mentioned it). In that mode, treat every HEALTHY row as UNKNOWN instead, and leave the
+  CHANGED SINCE AUGUST 30 section empty rather than guessing at it.
+
+RULE 2. RETURN A CSV, NOT AN ESSAY. Exactly one row per player in the list below, in the same
+order, with the exact column names given. A player with nothing to report still gets a row, with
+status_now = HEALTHY and one_line = "no injury news found". SILENCE IS THE FAILURE MODE THIS
+SWEEP EXISTS TO FIX — a player who is quietly missing from the output is worse than a player
+marked HEALTHY in error.
+
+=== WHAT WENT WRONG LAST TIME, SO YOU CAN AVOID IT ===
+
+- A running back hyperextended his knee on August 16-17, 2026 and was reported out multiple weeks.
+  Our sheet, built August 30, did not mention it. It was not contradicted — it was simply absent.
+- A separate report described a star quarterback's ligament injury as possibly fabricated. It was
+  real, and he had already been cleared. Do not editorialise about whether a report is credible;
+  report what the source says and give me the URL and the date so I can judge.
+- Quotes were attributed to analysts who never said them. Every quote must be verbatim from a page
+  you actually retrieved, with that page's URL.
+
+=== WHAT I NEED, PER PLAYER ===
+
+Two different things, and do not blend them:
+
+A) CURRENT STATUS — anything from 2026 offseason, training camp or preseason: injury, surgery,
+   illness, holdout, suspension, legal matter, or a placement on PUP / NFI / IR / the
+   Commissioner's Exempt List. Include the DATE and the URL. If the most recent report says he is
+   cleared or practising in full, say that — a resolved injury is a finding.
+
+B) INJURY HISTORY — the pattern, not the incident. Games missed in each of 2023, 2024 and 2025;
+   any surgery and which body part; any injury that has now happened more than once (a re-tear, a
+   recurring hamstring or ankle, a second concussion). Soft-tissue re-injury and repeat knee
+   surgery are what I am hunting for.
+
+=== OUTPUT COLUMNS — use these names exactly ===
+
+player,team,pos,status_now,injury_current,date_current,source_url_current,expected_games_2026,
+injury_history,surgeries,gm_2023,gm_2024,gm_2025,repeat_injury,risk_grade,one_line,confidence
+
+  status_now      one of: HEALTHY / QUESTIONABLE / OUT_WEEKS / OUT_SEASON / PUP / NFI / IR /
+                  SUSPENDED / EXEMPT_LIST / HOLDOUT
+  date_current    ISO date of the most recent report, YYYY-MM-DD. Blank if status_now is HEALTHY.
+  expected_games_2026  your best integer estimate of games played out of 17. Say 17 if healthy.
+  repeat_injury   YES only if the SAME injury or body part has recurred. Otherwise NO.
+  risk_grade      AVOID    — do not draft him at his price; a real chance he misses significant time
+                  DISCOUNT — draftable, but later than his ADP suggests
+                  NEUTRAL  — cleared, or the history does not argue against him
+  one_line        under 25 words, plain English, what a drafter needs to know
+  confidence      HIGH if you have a dated report from a major outlet or the team; MEDIUM if it is
+                  aggregator or fantasy-site reporting; LOW if you are inferring
+
+Do not add columns. Do not reorder. Do not merge cells. If a fact is unknown, leave the cell empty
+rather than guessing, and drop confidence to LOW.
+
+=== ONE MORE THING ===
+
+At the end, OUTSIDE the CSV, give me a short list titled CHANGED SINCE AUGUST 30 — any player
+whose situation moved in the last two weeks. That is the list I will actually act on.
+
+=== THE PLAYERS (143 of them; player | position | team) ===
+
+Jahmyr Gibbs | RB | DET
+Bijan Robinson | RB | ATL
+Ja'Marr Chase | WR | CIN
+Puka Nacua | WR | LAR
+Jaxon Smith-Njigba | WR | SEA
+Jonathan Taylor | RB | IND
+Christian McCaffrey | RB | SF
+Amon-Ra St. Brown | WR | DET
+CeeDee Lamb | WR | DAL
+James Cook III | RB | BUF
+De'Von Achane | RB | MIA
+Justin Jefferson | WR | MIN
+Saquon Barkley | RB | PHI
+Derrick Henry | RB | BAL
+Drake London | WR | ATL
+Chase Brown | RB | CIN
+Ashton Jeanty | RB | LV
+Josh Allen | QB | BUF
+Trey McBride | TE | ARI
+Omarion Hampton | RB | LAC
+Kenneth Walker III | RB | KC
+A.J. Brown | WR | NE
+Brock Bowers | TE | LV
+Jeremiyah Love | RB | ARI
+Nico Collins | WR | HOU
+Breece Hall | RB | NYJ
+Malik Nabers | WR | NYG
+Garrett Wilson | WR | NYJ
+Lamar Jackson | QB | BAL
+Josh Jacobs | RB | GB
+DeVonta Smith | WR | PHI
+Kyren Williams | RB | LAR
+Davante Adams | WR | LAR
+Emeka Egbuka | WR | TB
+Ladd McConkey | WR | LAC
+Tyler Warren | TE | IND
+Jayden Daniels | QB | WAS
+Quinshon Judkins | RB | CLE
+Jalen Hurts | QB | PHI
+Tee Higgins | WR | CIN
+Jaylen Waddle | WR | DEN
+Bucky Irving | RB | TB
+Joe Burrow | QB | CIN
+D'Andre Swift | RB | CHI
+Terry McLaurin | WR | WAS
+DJ Moore | WR | BUF
+Rome Odunze | WR | CHI
+Jameson Williams | WR | DET
+Kyle Pitts Sr. | TE | ATL
+David Montgomery | RB | HOU
+Bhayshul Tuten | RB | JAX
+Sam LaPorta | TE | DET
+Jadarian Price | RB | SEA
+Harold Fannin Jr. | TE | CLE
+Luther Burden III | WR | CHI
+Carnell Tate | WR | TEN
+TreVeyon Henderson | RB | NE
+Dak Prescott | QB | DAL
+Jaxson Dart | QB | NYG
+Courtland Sutton | WR | DEN
+Marvin Harrison Jr. | WR | ARI
+George Kittle | TE | SF
+DK Metcalf | WR | PIT
+Matthew Stafford | QB | LAR
+Mike Evans | WR | SF
+Tucker Kraft | TE | GB
+Michael Pittman Jr. | WR | PIT
+Parker Washington | WR | JAX
+Caleb Williams | QB | CHI
+Christian Watson | WR | GB
+Bo Nix | QB | DEN
+Jaylen Warren | RB | PIT
+Trevor Lawrence | QB | JAX
+Travis Kelce | TE | KC
+Justin Herbert | QB | LAC
+Tony Pollard | RB | TEN
+Rico Dowdle | RB | PIT
+Dallas Goedert | TE | PHI
+Michael Wilson | WR | ARI
+Alec Pierce | WR | IND
+Brock Purdy | QB | SF
+Matthew Golden | WR | GB
+Patrick Mahomes | QB | KC
+Brian Thomas Jr. | WR | JAX
+Jake Ferguson | TE | DAL
+Kenny Gainwell | RB | TB
+Jonathon Brooks | RB | CAR
+J.K. Dobbins | RB | DEN
+Wan'Dale Robinson | WR | TEN
+Chuba Hubbard | RB | CAR
+Jordan Addison | WR | MIN
+Jakobi Meyers | WR | JAX
+Travis Hunter | WR | JAX
+Mark Andrews | TE | BAL
+Aaron Jones Sr. | RB | MIN
+Isaiah Likely | TE | NYG
+Kyle Monangai | RB | CHI
+Xavier Worthy | WR | KC
+Rachaad White | RB | WAS
+Blake Corum | RB | LAR
+Dalton Kincaid | TE | BUF
+Jayden Reed | WR | GB
+RJ Harvey | RB | DEN
+Khalil Shakir | WR | BUF
+Chris Godwin Jr. | WR | TB
+Quentin Johnston | WR | LAC
+Jacory Croskey-Merritt | RB | WAS
+Deebo Samuel Sr. | WR | SF
+Jared Goff | QB | DET
+Josh Downs | WR | IND
+Makai Lemon | WR | PHI
+Jordan Mason | RB | MIN
+T.J. Hockenson | TE | MIN
+Kyler Murray | QB | MIN
+De'Zhaun Stribling | WR | SF
+KC Concepcion | WR | CLE
+Baker Mayfield | QB | TB
+Hunter Henry | TE | NE
+Romeo Doubs | WR | NE
+Woody Marks | RB | HOU
+Tyjae Spears | RB | TEN
+Tyler Shough | QB | NO
+Zach Charbonnet | RB | SEA
+Kenyon Sadiq | TE | NYJ
+Jordan Love | QB | GB
+Jalen Coker | WR | CAR
+Rashid Shaheed | WR | SEA
+Tank Dell | WR | HOU
+Daniel Jones | QB | IND
+Alvin Kamara | RB | NO
+Isiah Pacheco | RB | DET
+Juwan Johnson | TE | NO
+Sam Darnold | QB | SEA
+Tyler Allgeier | RB | ARI
+Mike Washington Jr. | RB | LV
+Chris Rodriguez Jr. | RB | JAX
+C.J. Stroud | QB | HOU
+MarShawn Lloyd | RB | GB
+Keenan Allen | WR | IND
+Brian Robinson Jr. | RB | ATL
+Jalen McMillan | WR | TB
+Terrance Ferguson | TE | LAR
+Jerry Jeudy | WR | CLE

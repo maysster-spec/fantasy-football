@@ -1,0 +1,235 @@
+espn_id,player,pos,team,status,injury,location,detail,return_date,reported,source
+4428633,Dadrion Taylor-Demerson,S,ARI,Questionable,Back,Torso,,2026-10-04,2026-10-01 00:46,id
+3886633,Hjalte Froholdt,C,ARI,Questionable,Knee,Leg,,2026-10-04,2026-10-01 00:13,id
+4040805,Roy Lopez,DT,ARI,Questionable,Groin,Groin,,2026-10-04,2026-10-01 00:14,id
+4685503,Walter Nolen III,DT,ARI,Questionable,Shoulder,Arm,,2026-10-04,2026-10-01 00:14,id
+4685408,Will Johnson,CB,ARI,Injured Reserve,Neck,Head,,2027-02-15,2026-09-23 22:14,id
+4037626,Divine Deablo,LB,ATL,Questionable,Hamstring,Leg,,2026-10-05,2026-10-01 21:25,id
+3045527,Samson Ebukam,DE,ATL,Questionable,Hamstring,Leg,,2026-10-05,2026-09-29 16:45,id
+2576581,Chris Moore,WR,BAL,Questionable,Ankle,Leg,,2026-10-04,2026-10-02 11:00,id
+3042738,Ethan Pocic,C,BAL,Out,Knee,Leg,,2026-11-01,2026-09-29 01:00,id
+4362845,Jovaughn Gwyn,G,BAL,Out,Lower Leg,Leg,Surgery,2026-12-13,2026-10-01 00:39,id
+2980153,Ronnie Stanley,OT,BAL,Questionable,Toe,Leg,,2026-10-04,2026-09-29 16:45,id
+3052743,Trey Hendrickson,LB,BAL,Questionable,Finger,Arm,Fracture,2026-10-04,2026-09-30 20:32,id
+4379778,Christian Benford,CB,BUF,Questionable,Toe,Leg,,2026-10-04,2026-10-01 23:15,id
+3915416,DJ Moore,WR,BUF,Questionable,Shoulder,Arm,,2026-10-04,2026-10-01 20:47,id
+4036060,Damar Hamlin,S,BUF,Questionable,Ribs,Torso,,2026-10-04,2026-09-30 21:20,id
+4366349,Joe Andreessen,LB,BUF,Questionable,Knee,Leg,,2026-10-04,2026-09-30 21:19,id
+4596480,Jordan Hancock,CB,BUF,Injured Reserve,Hamstring,Leg,,2026-11-01,2026-09-26 01:05,id
+4635008,Keon Coleman,WR,BUF,Questionable,Ankle,Leg,,2026-10-04,2026-10-01 20:49,id
+4044133,Sam Franklin Jr.,S,BUF,Questionable,Personal,Other,,2026-10-04,2026-10-01 20:48,id
+4684527,T.J. Sanders,DT,BUF,Questionable,,Torso,Surgery,2026-10-04,2026-10-01 23:07,id
+4362647,Damien Lewis,G,CAR,Out,Elbow,Arm,Strain,2026-10-18,2026-10-01 01:00,id
+4695883,Jalen Coker,WR,CAR,Questionable,Quadriceps,Leg,Strain,2026-10-04,2026-10-01 19:46,id
+4362847,Jaycee Horn,CB,CAR,Injured Reserve,Quadriceps,Leg,Strain,2026-11-15,2026-09-30 15:25,id
+4431551,Lee Hunter,DT,CAR,Questionable,Foot,Leg,,2026-10-04,2026-10-01 19:36,id
+3917853,Mike Jackson,CB,CAR,Injured Reserve,Groin,Groin,Surgery,2026-11-22,2026-09-30 19:44,id
+4870694,Monroe Freeling,OT,CAR,Questionable,Concussion,Head,Concussion,2026-10-04,2026-10-01 01:05,id
+4430034,Xavier Legette,WR,CAR,Doubtful,Knee,Leg,,2026-10-04,2026-10-01 19:42,id
+4361748,Anthony Johnson Jr.,S,CHI,Injured Reserve,Undisclosed,Other,,2026-10-18,2026-10-02 11:00,id
+4251007,Braxton Jones,OT,CHI,Doubtful,Knee,Leg,,2026-10-04,2026-10-01 01:08,id
+4431611,Caleb Williams,QB,CHI,Doubtful,Hamstring,Leg,Strain,2026-10-04,2026-10-01 20:08,id
+3916577,Cam Lewis,CB,CHI,Questionable,Leg,Leg,,2026-10-04,2026-09-29 03:43,id
+4259545,D'Andre Swift,RB,CHI,Questionable,Knee,Leg,,2026-10-04,2026-10-01 20:09,id
+4361093,Kyler Gordon,CB,CHI,Out,Calf,Leg,,2026-10-11,2026-10-01 00:31,id
+4430822,Noah Sewell,LB,CHI,Out,Achilles,Leg,Surgery,2026-10-11,2026-09-23 22:34,id
+4432804,Shemar Turner,DT,CHI,Out,Knee - ACL,Leg,Surgery,2026-10-11,2026-09-24 00:28,id
+3116748,B.J. Hill,DT,CIN,Questionable,Achilles,Leg,,2026-10-04,2026-09-29 16:45,id
+4247726,Bryan Cook,S,CIN,Questionable,Ankle,Leg,,2026-10-04,2026-09-30 20:19,id
+5092508,Colbie Young,WR,CIN,Out,Knee,Leg,,2026-10-11,2026-09-28 23:37,id
+4572036,DJ Turner II,CB,CIN,Questionable,Ankle,Leg,,2026-10-04,2026-10-01 20:33,id
+3125082,Dalton Risner,G,CIN,Questionable,Knee,Leg,,2026-10-04,2026-09-30 20:19,id
+3125356,Jalen Davis,CB,CIN,Injured Reserve,Hamstring,Leg,,2026-11-08,2026-09-29 23:16,id
+4567098,Jordan Battle,S,CIN,Questionable,Hamstring,Leg,,2026-10-04,2026-09-30 20:18,id
+4401811,Kyle Dugger,S,CIN,Questionable,Quadriceps,Leg,,2026-10-04,2026-09-30 23:19,id
+4570546,Swayze Bozeman,LB,CIN,Questionable,Groin,Groin,,2026-10-04,2026-10-01 20:33,id
+3115485,Elgton Jenkins,C,CLE,Out,Concussion,Head,Concussion,2026-10-11,2026-10-01 01:04,id
+5150249,Justin Jefferson,LB,CLE,Out,Coach's Decision,Other,,2026-10-11,2026-10-01 22:48,id
+4873232,Mason Graham,DT,CLE,Questionable,Knee,Leg,,2026-10-11,2026-10-02 04:10,id
+4431325,Taylen Green,QB,CLE,Out,Coach's Decision,Other,,2026-10-11,2026-10-01 22:55,id
+4038457,Teven Jenkins,G,CLE,Out,Back,Torso,,2026-10-11,2026-10-01 01:08,id
+4241424,Tylan Wallace,WR,CLE,Out,Knee,Leg,,2026-10-11,2026-09-30 23:12,id
+4384549,Cobie Durant,CB,DAL,Doubtful,Hamstring,Leg,Strain,2026-10-04,2026-09-29 23:51,id
+4362088,DeMarvion Overshown,LB,DAL,Questionable,Hamstring,Leg,,2026-10-04,2026-10-01 00:02,id
+4043089,Jalen Thompson,S,DAL,Injured Reserve,Hamstring,Leg,,2026-11-01,2026-09-30 18:33,id
+2980097,Jonathan Bullard,DT,DAL,Injured Reserve,Calf,Leg,,2026-11-01,2026-10-01 00:58,id
+3121415,Malik Hooker,S,DAL,Questionable,Forearm,Arm,Fracture,2026-10-04,2026-10-01 00:11,id
+3929850,P.J. Locke,S,DAL,Injured Reserve,Foot,Leg,Plantar Fasciitis,2026-10-26,2026-09-26 18:27,id
+5095865,Shavon Revel Jr.,CB,DAL,Questionable,Knee,Leg,,2026-10-04,2026-10-02 00:12,id
+4568652,Tyler Smith,G,DAL,Injured Reserve,Thumb,Arm,Surgery,2026-10-08,2026-09-30 02:06,id
+5216101,Dondrea Tillman,LB,DEN,Questionable,Hamstring,Leg,,2026-10-04,2026-10-02 01:34,id
+4702555,Jonah Coleman,RB,DEN,Injured Reserve,Ankle,Leg,Sprain,2026-10-25,2026-09-26 20:36,id
+3123938,Avonte Maddox,CB,DET,Injured Reserve,Foot,Leg,Surgery,2027-02-15,2026-09-23 00:33,id
+4611506,Ben Bartch,G,DET,Questionable,Foot,Leg,,2026-10-04,2026-09-29 16:45,id
+4361788,Cade Mays,C,DET,Injured Reserve,Wrist,Arm,Fracture,2026-10-25,2026-09-29 01:05,id
+3139387,D.J. Reed,CB,DET,Questionable,Ribs,Torso,,2026-10-04,2026-09-30 23:15,id
+4569323,Thomas Harper,S,DET,Injured Reserve,Ankle,Leg,,2026-11-01,2026-09-26 21:03,id
+4242390,Aaron Banks,G,GB,Questionable,Toe,Leg,,2026-10-04,2026-10-02 01:27,id
+4887255,Anthony Campbell,DT,GB,Questionable,Ankle,Leg,,2026-10-04,2026-09-29 16:45,id
+4430438,Edgerrin Cooper,LB,GB,Questionable,Concussion,Head,Concussion,2026-10-04,2026-10-02 00:03,id
+4428037,Jacob Monk,C,GB,Questionable,Quadriceps,Leg,,2026-10-04,2026-09-25 22:59,id
+4569661,Jager Burton,C,GB,Questionable,Groin,Groin,,2026-10-04,2026-10-01 21:35,id
+4362249,Jayden Reed,WR,GB,Injured Reserve,Neck,Head,Surgery,2027-02-15,2026-09-30 15:55,id
+4373423,Karl Brooks,DT,GB,Questionable,Illness,Other,,2026-10-04,2026-09-30 21:11,id
+4686906,Lukas Van Ness,DE,GB,Questionable,Shoulder,Arm,,2026-10-04,2026-10-02 00:11,id
+4361423,Micah Parsons,DE,GB,Out,Knee - ACL,Leg,Surgery,2026-10-18,2026-09-28 18:16,id
+4429136,Warren Brinson,DT,GB,Questionable,Calf,Leg,,2026-10-04,2026-09-29 16:45,id
+4240435,Zach Bako-Bewele,OT,GB,Injured Reserve,Knee,Leg,Surgery,2027-02-15,2026-09-29 00:26,id
+3919117,Azeez Al-Shaair,LB,HOU,Doubtful,Groin,Groin,,2026-10-04,2026-09-30 23:07,id
+4373273,British Brooks,RB,HOU,Questionable,Hamstring,Leg,,2026-10-04,2026-10-01 23:26,id
+4242227,Ed Ingram,G,HOU,Questionable,Groin,Groin,,2026-10-04,2026-09-29 16:45,id
+16734,Jadeveon Clowney,DE,HOU,Questionable,Knee,Leg,Bruise,2026-10-04,2026-09-29 16:45,id
+4033812,Jake Hansen,LB,HOU,Questionable,Calf,Leg,,2026-10-04,2026-09-30 21:55,id
+3116679,M.J. Stewart,S,HOU,Out,Knee,Leg,,2026-10-11,2026-10-02 01:16,id
+2969921,Mario Edwards Jr.,DT,HOU,Injured Reserve,Knee - ACL,Leg,Surgery,2027-02-15,2026-10-01 01:18,id
+4258173,Nico Collins,WR,HOU,Questionable,Hamstring,Leg,Strain,2026-10-04,2026-10-01 21:00,id
+3043109,Trent Brown,OT,HOU,Questionable,Illness,Other,,2026-10-04,2026-09-30 21:55,id
+4360078,Alec Pierce,WR,IND,Injured Reserve,Heel,Leg,,2026-10-25,2026-09-28 18:38,id
+15818,Keenan Allen,WR,IND,Questionable,Groin,Groin,,2026-10-04,2026-10-01 20:04,id
+4240896,Micheal Clemons,DE,IND,Injured Reserve,Toe,Leg,,2026-10-25,2026-09-23 00:30,id
+2998565,Mo Alie-Cox,TE,IND,Questionable,Illness,Other,,2026-10-04,2026-10-01 21:25,id
+4612298,Albert Regis,DT,JAX,Questionable,Elbow,Arm,,2026-10-04,2026-09-29 16:45,id
+4257580,Christian Braswell,CB,JAX,Questionable,Knee,Leg,,2026-10-04,2026-09-30 20:14,id
+4035791,Cole Van Lanen,OT,JAX,Questionable,Knee,Leg,,2026-10-04,2026-09-30 20:15,id
+3915520,DaVon Hamilton,DT,JAX,Questionable,Back,Torso,,2026-10-04,2026-09-30 20:15,id
+3916433,Jakobi Meyers,WR,JAX,Questionable,Thumb,Arm,,2026-10-04,2026-10-01 20:26,id
+4911851,LeQuint Allen Jr.,RB,JAX,Questionable,Hip,Leg,,2026-10-04,2026-10-01 22:19,id
+4242149,Montaric Brown,CB,JAX,Questionable,Hamstring,Leg,,2026-10-04,2026-09-30 20:14,id
+4686248,Nate Boerkircher,TE,JAX,Questionable,Illness,Other,,2026-10-04,2026-10-01 22:12,id
+4569659,Josh Simmons,OT,KC,Questionable,Back,Torso,,2026-10-04,2026-10-01 00:54,id
+4040432,L'Jarius Sneed,CB,KC,Questionable,Knee,Leg,,2026-10-04,2026-09-30 21:05,id
+4685553,Brenen Thompson,WR,LAC,Questionable,Quadriceps,Leg,,2026-10-04,2026-10-02 01:06,id
+4241263,Charlie Kolar,TE,LAC,Doubtful,Forearm,Arm,Surgery,2026-10-04,2026-10-01 22:15,id
+2979860,Dalvin Tomlinson,DT,LAC,Questionable,Hamstring,Leg,,2026-10-04,2026-09-29 16:45,id
+3691739,Derwin James Jr.,S,LAC,Questionable,Hamstring,Leg,,2026-10-04,2026-10-02 01:00,id
+3843769,Donte Jackson,CB,LAC,Questionable,Concussion,Head,Concussion,2026-10-04,2026-10-02 00:54,id
+4243328,Elijah Molden,CB,LAC,Questionable,Hamstring,Leg,,2026-10-04,2026-09-29 16:45,id
+4567138,Justin Eboigbe,DT,LAC,Questionable,Eye,Head,,2026-10-04,2026-09-30 22:27,id
+4040842,Kayode Awosika,G,LAC,Questionable,Lower Leg,Leg,,2026-10-04,2026-09-29 16:45,id
+4596334,Keaton Mitchell,RB,LAC,Questionable,Ankle,Leg,,2026-10-04,2026-10-01 22:06,id
+4612826,Ladd McConkey,WR,LAC,Questionable,Foot,Leg,,2026-10-04,2026-10-01 23:19,id
+4383351,Trey Lance,QB,LAC,Questionable,Groin,Groin,,2026-10-04,2026-10-02 00:47,id
+4411189,Trey Pipkins III,OT,LAC,Injured Reserve,Knee,Leg,,2026-11-01,2026-09-26 21:25,id
+16716,Aaron Donald,DT,LAR,Questionable,Back,Torso,Soreness,2026-10-04,2026-10-01 23:12,id
+4242557,Colby Parkinson,TE,LAR,Questionable,Shoulder - AC Joint,Arm,Sprain,2026-10-04,2026-10-01 23:31,id
+4697639,Jaylen Watson,CB,LAR,Doubtful,Shoulder,Arm,Dislocated,2026-10-04,2026-09-28 23:53,id
+4572371,Josh Wallace,CB,LAR,Questionable,Shoulder,Arm,,2026-10-04,2026-09-30 23:56,id
+4596363,Kamren Kinchens,S,LAR,Questionable,Hamstring,Leg,,2026-10-04,2026-10-01 00:24,id
+3122132,Myles Garrett,DE,LAR,Injured Reserve,Knee,Leg,Surgery,2026-10-18,2026-09-27 10:57,id
+4243181,Nate Landman,LB,LAR,Questionable,Shoulder,Arm,,2026-10-04,2026-10-01 00:20,id
+4426515,Puka Nacua,WR,LAR,Questionable,Hip,Leg,Soreness,2026-10-04,2026-10-01 23:00,id
+4243003,Ronnie Rivers,RB,LAR,Injured Reserve,Calf,Leg,,2026-10-25,2026-09-24 00:22,id
+4570037,Terrance Ferguson,TE,LAR,Doubtful,Ankle,Leg,Sprain,2026-10-04,2026-10-01 23:14,id
+4260394,Aidan O'Connell,QB,LV,Questionable,Personal,Other,,2026-10-04,2026-09-30 20:49,id
+4603186,Jack Bech,WR,LV,Injured Reserve,Forearm,Arm,Fracture,2026-11-01,2026-09-29 22:27,id
+4875295,Jackson Powers-Johnson,G,LV,Questionable,Groin,Groin,Soreness,2026-10-04,2026-09-29 00:31,id
+4040537,Aaron Brewer,C,MIA,Questionable,Hand,Arm,,2026-10-04,2026-10-01 21:15,id
+4869645,Caleb Douglas,WR,MIA,Questionable,Ankle,Leg,,2026-10-04,2026-10-01 17:58,id
+4869961,Chris Bell,WR,MIA,Questionable,Knee,Leg,,2026-10-04,2026-10-01 21:30,id
+4429160,De'Von Achane,RB,MIA,Injured Reserve,Knee - ACL,Leg,Surgery,2027-02-15,2026-09-28 20:10,id
+4259558,Robert Beal Jr.,DE,MIA,Questionable,Hamstring,Leg,,2026-10-04,2026-09-29 16:45,id
+4427103,Storm Duck,CB,MIA,Out,Knee,Leg,,2026-10-11,2026-10-01 01:21,id
+4034729,Tucker Addington,LS,MIA,Questionable,Shoulder,Arm,,2026-10-04,2026-09-30 22:07,id
+3728281,Blake Cashman,LB,MIN,Questionable,Elbow,Arm,,2026-10-04,2026-10-02 00:19,id
+4799994,Brett Thorson,P,MIN,Questionable,Hamstring,Leg,,2026-10-04,2026-09-29 16:45,id
+5091793,Charles Demmings,CB,MIN,Out,Hamstring,Leg,,2026-10-11,2026-09-29 00:35,id
+3921690,Josh Oliver,TE,MIN,Injured Reserve,Biceps,Arm,Surgery,2027-01-17,2026-09-30 00:26,id
+4262921,Justin Jefferson,WR,MIN,Questionable,Ankle,Leg,Sprain,2026-10-04,2026-10-01 21:07,id
+4428421,Nick Samac,C,MIN,Injured Reserve,Knee,Leg,,2026-11-01,2026-09-26 21:28,id
+4047646,A.J. Brown,WR,NE,Injured Reserve,Ankle,Leg,Sprain,2026-11-01,2026-09-28 17:01,id
+4688779,Channing Canada,CB,NE,Questionable,Hamstring,Leg,,2026-10-04,2026-10-01 20:44,id
+4372030,Christian Barmore,DT,NE,Questionable,Shoulder,Arm,,2026-10-04,2026-09-30 23:24,id
+4245273,Christian Elliss,LB,NE,Questionable,Chest,Torso,,2026-10-04,2026-09-30 21:14,id
+4686772,Christian Gonzalez,CB,NE,Questionable,Shoulder,Arm,,2026-10-04,2026-09-30 23:26,id
+4428930,Craig Woodson,S,NE,Questionable,Shoulder,Arm,,2026-10-04,2026-09-29 16:45,id
+4428232,Dell Pettus,S,NE,Injured Reserve,Ankle,Leg,,2026-10-22,2026-09-24 02:28,id
+3915525,Dre'Mont Jones,DE,NE,Questionable,Shoulder,Arm,,2026-10-04,2026-10-01 23:36,id
+4831959,Eli Raridon,TE,NE,Questionable,Thigh,Leg,,2026-10-04,2026-10-01 23:44,id
+15718,Greg Van Roten,G,NE,Injured Reserve,Thigh,Leg,,2026-11-01,2026-09-30 01:03,id
+16771,Morgan Moses,OT,NE,Questionable,Foot,Leg,,2026-10-04,2026-09-30 21:17,id
+4698181,Quintayvious Hutchins,LB,NE,Injured Reserve,Knee,Leg,,2026-10-22,2026-09-26 01:55,id
+4039505,Reggie Gilliam,FB,NE,Questionable,Knee,Leg,,2026-10-04,2026-10-01 22:47,id
+3925350,Anfernee Jennings,LB,NO,Questionable,Knee,Leg,,2026-10-05,2026-09-27 23:33,id
+4698597,Barion Brown,WR,NO,Questionable,Hamstring,Leg,,2026-10-05,2026-09-29 16:45,id
+3918310,Carl Granderson,DE,NO,Questionable,Ankle,Leg,,2026-10-05,2026-10-01 21:39,id
+4685479,Christen Miller,DT,NO,Questionable,Toe,Leg,,2026-10-05,2026-09-29 16:45,id
+4880281,Jordyn Tyson,WR,NO,Injured Reserve,Hamstring,Leg,Strain,2026-10-11,2026-10-01 20:53,id
+4035661,Julian Blackmon,S,NO,Questionable,Calf,Leg,,2026-10-05,2026-10-02 00:11,id
+3124890,Kaden Elliss,LB,NO,Questionable,Calf,Leg,,2026-10-05,2026-10-02 00:04,id
+4685260,Kelvin Banks Jr.,OT,NO,Injured Reserve,Ankle,Leg,Surgery,2026-11-29,2026-09-26 00:47,id
+4036131,Noah Fant,TE,NO,Questionable,Abdomen,Torso,,2026-10-05,2026-10-01 21:00,id
+4241993,Pete Werner,LB,NO,Questionable,Neck,Head,Stinger,2026-10-05,2026-10-02 00:06,id
+4239996,Travis Etienne Jr.,RB,NO,Injured Reserve,Hamstring,Leg,Strain,2026-11-08,2026-10-01 20:44,id
+4259566,Andrew Thomas,OT,NYG,Questionable,Groin,Groin,,2026-10-04,2026-10-02 01:23,id
+4035631,Brian Burns,LB,NYG,Injured Reserve,Knee - ACL,Leg,Surgery,2027-02-15,2026-09-29 23:44,id
+4428328,Deonte Banks,CB,NYG,Questionable,Calf,Leg,,2026-10-04,2026-10-01 23:56,id
+4689114,Jaxson Dart,QB,NYG,Injured Reserve,Knee - Meniscus,Leg,Surgery,2027-01-17,2026-09-30 20:35,id
+4430261,Tyler Nubin,S,NYG,Questionable,Calf,Leg,,2026-10-04,2026-10-01 23:43,id
+4360516,Tyrone Tracy Jr.,RB,NYG,Questionable,Knee,Leg,,2026-10-04,2026-10-01 23:32,id
+4597500,Adonai Mitchell,WR,NYJ,Doubtful,Finger,Arm,,2026-10-04,2026-10-01 20:20,id
+4429105,Arian Smith,WR,NYJ,Injured Reserve,Knee - ACL,Leg,Surgery,2027-02-15,2026-09-23 21:53,id
+4427366,Breece Hall,RB,NYJ,Doubtful,Quadriceps,Leg,,2026-10-04,2026-10-01 20:13,id
+4002046,David Onyemata,DT,NYJ,Injured Reserve,Groin,Groin,Surgery,2026-11-08,2026-09-23 21:40,id
+4243375,Dylan Parham,G,NYJ,Doubtful,Knee,Leg,,2026-10-04,2026-10-01 00:57,id
+4361372,Jeremy Ruckert,TE,NYJ,Questionable,Knee,Leg,,2026-10-04,2026-10-01 21:57,id
+5083315,Kenyon Sadiq,TE,NYJ,Questionable,Back,Torso,,2026-10-04,2026-10-01 20:17,id
+4700136,Kiko Mauigoa,LB,NYJ,Questionable,Quadriceps,Leg,,2026-10-04,2026-09-29 16:45,id
+4362840,Kingsley Enagbare,LB,NYJ,Questionable,Knee,Leg,,2026-10-04,2026-10-01 21:40,id
+4808766,Mason Taylor,TE,NYJ,Doubtful,Thumb,Arm,,2026-10-04,2026-10-01 20:08,id
+3121023,Dallas Goedert,TE,PHI,Doubtful,Knee - MCL,Leg,Sprain,2026-10-04,2026-10-01 21:59,id
+4241478,DeVonta Smith,WR,PHI,Questionable,Hamstring,Leg,,2026-10-04,2026-10-01 23:11,id
+3915106,Fred Johnson,OT,PHI,Questionable,Knee,Leg,,2026-10-04,2026-09-29 16:45,id
+4241372,Hollywood Brown,WR,PHI,Questionable,Ankle,Leg,,2026-10-04,2026-10-01 20:53,id
+3139368,Marcus Epps,S,PHI,Questionable,Groin,Groin,,2026-10-04,2026-10-01 22:01,id
+4362116,Moro Ojomo,DT,PHI,Questionable,Calf,Leg,,2026-10-04,2026-09-30 23:33,id
+4431545,Will Shipley,RB,PHI,Questionable,Foot,Leg,,2026-10-04,2026-10-01 00:19,id
+3917657,Zack Baun,LB,PHI,Questionable,Concussion,Head,Concussion,2026-10-04,2026-10-02 00:40,id
+4682980,Derrick Harmon,DT,PIT,Questionable,Foot,Leg,,2026-10-11,2026-10-02 02:41,id
+4714771,Drew Allar,QB,PIT,Out,Coach's Decision,Other,,2026-10-11,2026-10-01 23:08,id
+5081508,Eli Heidenreich,RB,PIT,Out,Coach's Decision,Other,,2026-10-11,2026-10-01 22:51,id
+4431533,Gabriel Rubio,DE,PIT,Out,Coach's Decision,Other,,2026-10-11,2026-10-01 22:51,id
+3873935,Jamel Dean,CB,PIT,Questionable,Ankle,Leg,,2026-10-11,2026-10-02 02:22,id
+5084849,Kevin Jobity Jr.,DT,PIT,Out,Coach's Decision,Other,,2026-10-11,2026-10-01 22:51,id
+4038815,Rico Dowdle,RB,PIT,Out,Toe,Leg,,2026-10-11,2026-10-01 22:51,id
+4429955,Will Howard,QB,PIT,Out,Coach's Decision,Other,,2026-10-11,2026-10-01 23:01,id
+4429211,Anthony Bradford,G,SEA,Injured Reserve,Knee,Leg,,2026-10-25,2026-09-24 00:52,id
+4429835,George Holani,RB,SEA,Questionable,Ribs,Torso,,2026-10-04,2026-10-01 23:29,id
+4685512,Jadarian Price,RB,SEA,Questionable,Chest,Torso,,2026-10-04,2026-10-01 23:26,id
+4046675,Julian Love,S,SEA,Questionable,Calf,Leg,,2026-10-04,2026-10-01 00:17,id
+4247808,Ty Okada,S,SEA,Questionable,Hamstring,Leg,,2026-10-04,2026-10-02 00:40,id
+4426385,Zach Charbonnet,RB,SEA,Out,Knee - ACL,Leg,Surgery,2026-10-11,2026-10-01 16:46,id
+3916903,Dre Greenlaw,LB,SF,Questionable,Quadriceps,Leg,Bruise,2026-10-04,2026-10-02 01:08,id
+4693371,James Thompson Jr.,DT,SF,Out,Ankle,Leg,Sprain,2026-10-11,2026-09-29 00:46,id
+4243493,Keion White,DE,SF,Questionable,Hamstring,Leg,,2026-10-04,2026-09-30 22:36,id
+16737,Mike Evans,WR,SF,Questionable,Ribs,Torso,Strain,2026-10-04,2026-10-01 22:28,id
+4685623,Mykel Williams,DE,SF,Out,Knee - ACL,Leg,Surgery,2026-10-11,2026-09-30 23:11,id
+4040605,Nick Bosa,DE,SF,Out,Calf,Leg,Strain,2026-10-11,2026-09-28 21:16,id
+4432244,Romello Height,DE,SF,Questionable,Hand,Arm,Surgery,2026-10-04,2026-09-29 16:45,id
+13241,Trent Williams,OT,SF,Questionable,Neck,Head,Stinger,2026-10-04,2026-09-27 22:20,id
+3052587,Baker Mayfield,QB,TB,Out,Thumb,Arm,Dislocated,2026-10-25,2026-09-28 16:41,id
+4816107,Benjamin Morrison,CB,TB,Questionable,Quadriceps,Leg,,2026-10-04,2026-10-01 21:32,id
+4596448,Bucky Irving,RB,TB,Questionable,Lower Body,,,2026-10-04,2026-10-01 20:34,id
+4430834,Jalen McMillan,WR,TB,Injured Reserve,Knee - PCL,Leg,Sprain,2026-11-22,2026-09-30 14:34,id
+5093694,Keionte Scott,CB,TB,Questionable,Toe,Leg,,2026-10-04,2026-09-30 21:45,id
+4034779,Ko Kieft,TE,TB,Questionable,Elbow,Arm,,2026-10-04,2026-10-01 20:37,id
+2575453,Rakeem Nunez-Roches,DT,TB,Questionable,Ankle,Leg,,2026-10-04,2026-09-30 21:45,id
+4870617,Rueben Bain Jr.,LB,TB,Questionable,Groin,Groin,,2026-10-04,2026-09-30 23:55,id
+4429511,SirVocea Dennis,LB,TB,Questionable,Calf,Leg,,2026-10-04,2026-09-30 21:45,id
+4686334,Yaya Diaby,LB,TB,Questionable,Calf,Leg,,2026-10-04,2026-09-30 21:45,id
+4710000,Fernando Carmona,G,TEN,Injured Reserve,Ankle,Leg,Sprain,2026-11-01,2026-09-30 00:57,id
+4876319,Jackson Slater,G,TEN,Injured Reserve,Foot,Leg,,2026-11-01,2026-09-30 01:02,id
+3120464,John Franklin-Myers,DE,TEN,Questionable,Back,Torso,,2026-10-04,2026-09-30 20:05,id
+4428557,Tyjae Spears,RB,TEN,Questionable,Ankle,Leg,,2026-10-04,2026-10-01 20:28,id
+4690923,Ben Sinnott,TE,WSH,Questionable,Ribs,Torso,,2026-10-04,2026-10-01 20:04,id
+3929865,Charles Omenihu,DE,WSH,Questionable,Ankle,Leg,,2026-10-04,2026-09-30 20:06,id
+4360635,Chig Okonkwo,TE,WSH,Questionable,Hamstring,Leg,,2026-10-04,2026-10-01 20:02,id
+3127273,Frankie Luvu,LB,WSH,Questionable,Groin,Groin,Strain,2026-10-04,2026-10-01 21:33,id
+4259491,Javon Kinlaw,DT,WSH,Questionable,Shoulder,Arm,,2026-10-04,2026-09-30 20:05,id
+4426348,Jayden Daniels,QB,WSH,Questionable,Elbow,Arm,Dislocated,2026-10-04,2026-10-01 18:30,id
+4426901,Leo Chenal,LB,WSH,Injured Reserve,Neck,Head,Surgery,2027-02-15,2026-09-29 23:26,id
+2576736,Lucas Patrick,G,WSH,Questionable,Foot,Leg,,2026-10-04,2026-09-30 20:06,id
+3115922,Nick Allegretti,G,WSH,Questionable,Hip,Leg,,2026-10-04,2026-09-30 20:05,id
+4426403,Nick Cross,S,WSH,Out,Illness,Other,,2026-10-11,2026-09-30 02:02,id
+4363097,Percy Butler,S,WSH,Questionable,Concussion,Head,Concussion,2026-10-04,2026-09-30 01:38,id
+4697815,Rachaad White,RB,WSH,Questionable,Shoulder,Arm,,2026-10-04,2026-10-01 14:30,id
+4262199,Sam Cosmi,G,WSH,Out,Concussion,Head,Concussion,2026-10-11,2026-09-30 01:56,id

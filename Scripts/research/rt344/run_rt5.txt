@@ -1,0 +1,9 @@
+team-seasons with a usage leader who missed a week 5-14: 57
+  all events, every absent week: n_events=50  per-event mean ppg=12.97  median=12.07  pooled per-game mean=11.76 (games 141)  starter out 3.08 wks, backup played 2.82
+  2022-2025: n_events=50  per-event mean ppg=12.97  median=12.07  pooled per-game mean=11.76 (games 141)  starter out 3.08 wks, backup played 2.82
+  backup had a line in every absent week: n_events=43  per-event mean ppg=13.89  median=13.01  pooled per-game mean=12.42 (games 114)  starter out 2.65 wks, backup played 2.65
+
+sensitivity, weeks 5-14 window, leader by weeks 1-4 carries+targets, backup second by the same:
+  backup played >= 1 of the absent weeks: n_events=50  per-event mean ppg=12.97  median=12.07  pooled per-game mean=11.76 (games 141)  starter out 3.08 wks, backup played 2.82
+  backup played >= 2 of the absent weeks: n_events=34  per-event mean ppg=12.59  median=12.07  pooled per-game mean=11.50 (games 125)  starter out 4.00 wks, backup played 3.68
+  backup played >= 3 of the absent weeks: n_events=24  per-event mean ppg=10.88  median=10.81  pooled per-game mean=10.51 (games 105)  starter out 4.71 wks, backup played 4.38

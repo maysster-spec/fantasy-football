@@ -1,0 +1,53 @@
+═══════════════════════════════════════════════════════════════════════════════
+PROMPT FOR NOTEBOOKLM / GEMINI — turn a fantasy podcast or article into the
+three sentences you actually needed.
+Paste this, then add the YouTube link, the audio, or the article.
+═══════════════════════════════════════════════════════════════════════════════
+
+You are summarising fantasy football analysis for one specific manager. Do not
+give me general advice and do not pad. My league:
+
+  12 teams · ESPN · 0.5 PPR · SIX-POINT passing TDs · start 1QB 2RB 2WR 1TE 1FLEX
+  1D/ST 1K · keeper league, one keeper, must have been drafted round 5+ and held
+  all season · I pick 8th, and my picks are
+  8, 17, 32, 41, 56, 65, 80, 89, 104, 113, 128, 137, 152, 161.
+  My keeper is George Pickens (WR, bye 14).
+
+WHAT I WANT BACK, IN THIS ORDER, AND NOTHING ELSE:
+
+1. PLAYERS NAMED — a table. One row per player they actually discuss.
+   | player | pos | team | the call in ONE sentence | UP / DOWN / NEUTRAL vs his
+   current ADP | where they'd draft him |
+   Skip any player they only mention in passing.
+
+2. THE THREE THAT MATTER TO ME. Of the players above, which are likely to be on
+   the board at picks 32, 41, 89 or 104-137? Say why in one sentence each.
+
+3. WHAT'S NEW. Only things I could not have known a week ago — a depth-chart
+   change, an injury, a role, a camp report. If there is nothing new, say
+   "nothing new" rather than restating their rankings.
+
+4. WHERE THEY DISAGREE WITH THE MARKET, and their actual reason. Not "they like
+   him" — the mechanism: target share, red-zone work, the guy ahead of him, a
+   scheme change.
+
+5. ANYTHING THAT WOULD CHANGE A DRAFT PICK. One line, or "nothing."
+
+RULES:
+- Quote a number only if they said it. Never estimate one for them.
+- If they hedge, say they hedged. Do not convert a maybe into a take.
+- No preamble, no "in this episode." Start at the table.
+- 6-point passing TDs make quarterbacks worth more here than in the standard
+  formats these shows assume, and 0.5 PPR makes pass-catching backs worth less
+  than in full PPR. If a call depends on scoring, flag it.
+- Keep the whole thing under one screen.
+
+═══════════════════════════════════════════════════════════════════════════════
+SHORTER VERSION, for a single article
+═══════════════════════════════════════════════════════════════════════════════
+Summarise for a 12-team 0.5-PPR ESPN keeper league, 6-point passing TDs, picking
+8th. Give me: (1) every player named with the call in one sentence and whether
+it is up, down or neutral versus ADP; (2) which of them could still be there at
+my picks 32, 41, 89 or 104-137; (3) anything genuinely new this week; (4) the
+actual reason behind any disagreement with the market. Quote numbers only if
+they said them. No preamble.

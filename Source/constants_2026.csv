@@ -1,0 +1,31 @@
+constant,value,baseline,population,sample_n,source,captured
+replacement_QB12,341.6,"ESPN proj_2026, league scoring","all QB in code_universe_v5.csv, full 700-row pool INCLUDING keepers",70,espn_projections_2026_20260820.csv,2026-08-20
+replacement_RB30,168.6,"ESPN proj_2026, league scoring","all RB in code_universe_v5.csv, full 700-row pool INCLUDING keepers",116,espn_projections_2026_20260820.csv,2026-08-20
+replacement_WR30,163.5,"ESPN proj_2026, league scoring","all WR in code_universe_v5.csv, full 700-row pool INCLUDING keepers",199,espn_projections_2026_20260820.csv,2026-08-20
+replacement_TE12,140.3,"ESPN proj_2026, league scoring","all TE in code_universe_v5.csv, full 700-row pool INCLUDING keepers",107,espn_projections_2026_20260820.csv,2026-08-20
+replacement_D/ST12,95.9,"ESPN proj_2026, league scoring","all D/ST in code_universe_v5.csv, full 700-row pool INCLUDING keepers",32,espn_projections_2026_20260820.csv,2026-08-20
+replacement_K12,144.0,"ESPN proj_2026, league scoring","all K in code_universe_v5.csv, full 700-row pool INCLUDING keepers",32,espn_projections_2026_20260820.csv,2026-08-20
+my_pick_8_effective_adp,8.0,12 keepers removed before pick 1,"slot 8, 12-team snake, 15 rounds",12,keeper_eligibility_VERIFIED.csv + predicted_keepers_v5.csv,2026-08-22
+my_pick_17_effective_adp,17.0,12 keepers removed before pick 1,"slot 8, 12-team snake, 15 rounds",12,keeper_eligibility_VERIFIED.csv + predicted_keepers_v5.csv,2026-08-22
+my_pick_32_effective_adp,37.0,12 keepers removed before pick 1,"slot 8, 12-team snake, 15 rounds",12,keeper_eligibility_VERIFIED.csv + predicted_keepers_v5.csv,2026-08-22
+my_pick_41_effective_adp,51.0,12 keepers removed before pick 1,"slot 8, 12-team snake, 15 rounds",12,keeper_eligibility_VERIFIED.csv + predicted_keepers_v5.csv,2026-08-22
+my_pick_56_effective_adp,66.0,12 keepers removed before pick 1,"slot 8, 12-team snake, 15 rounds",12,keeper_eligibility_VERIFIED.csv + predicted_keepers_v5.csv,2026-08-22
+my_pick_65_effective_adp,75.0,12 keepers removed before pick 1,"slot 8, 12-team snake, 15 rounds",12,keeper_eligibility_VERIFIED.csv + predicted_keepers_v5.csv,2026-08-22
+my_pick_80_effective_adp,90.0,12 keepers removed before pick 1,"slot 8, 12-team snake, 15 rounds",12,keeper_eligibility_VERIFIED.csv + predicted_keepers_v5.csv,2026-08-22
+my_pick_89_effective_adp,99.0,12 keepers removed before pick 1,"slot 8, 12-team snake, 15 rounds",12,keeper_eligibility_VERIFIED.csv + predicted_keepers_v5.csv,2026-08-22
+my_pick_104_effective_adp,115.0,12 keepers removed before pick 1,"slot 8, 12-team snake, 15 rounds",12,keeper_eligibility_VERIFIED.csv + predicted_keepers_v5.csv,2026-08-22
+my_pick_113_effective_adp,124.0,12 keepers removed before pick 1,"slot 8, 12-team snake, 15 rounds",12,keeper_eligibility_VERIFIED.csv + predicted_keepers_v5.csv,2026-08-22
+my_pick_128_effective_adp,140.0,12 keepers removed before pick 1,"slot 8, 12-team snake, 15 rounds",12,keeper_eligibility_VERIFIED.csv + predicted_keepers_v5.csv,2026-08-22
+my_pick_137_effective_adp,149.0,12 keepers removed before pick 1,"slot 8, 12-team snake, 15 rounds",12,keeper_eligibility_VERIFIED.csv + predicted_keepers_v5.csv,2026-08-22
+my_pick_152_effective_adp,164.0,12 keepers removed before pick 1,"slot 8, 12-team snake, 15 rounds",12,keeper_eligibility_VERIFIED.csv + predicted_keepers_v5.csv,2026-08-22
+my_pick_161_effective_adp,173.0,12 keepers removed before pick 1,"slot 8, 12-team snake, 15 rounds",12,keeper_eligibility_VERIFIED.csv + predicted_keepers_v5.csv,2026-08-22
+structural_rd1_4_rbwr_pct,82.8,draft_history true picks,"rounds 1-4, 2021-2025",204,draft_history_2021_2025.csv / ERROR_PATTERNS.md,2026-08-22
+structural_te_before_pick32_yrs,3.0,"overall pick numbers, not rounds (ERROR_PATTERNS A14)",5 drafts 2021-2025,5,draft_history_2021_2025.csv / ERROR_PATTERNS.md,2026-08-22
+structural_first_te_pick_median,22.0,overall pick number,first TE off the board each year,5,draft_history_2021_2025.csv / ERROR_PATTERNS.md,2026-08-22
+structural_first_k_round11plus_pct,94.9,draft_history true picks,team-seasons with a K,59,draft_history_2021_2025.csv / ERROR_PATTERNS.md,2026-08-22
+structural_median_first_dst_round,12.0,draft_history true picks,team-seasons with a D/ST,60,draft_history_2021_2025.csv / ERROR_PATTERNS.md,2026-08-22
+adp_censor_threshold,169.4,ESPN undrafted sentinel,492 of 700 rows in a 1.56-pick blob,700,espn_projections_2026_20260820.csv,2026-08-22
+noise_sd_slope_on_RANK,0.1255,"board rank, NOT adp_pick (ERROR_PATTERNS A11)",draft residuals 2024-25,271,ERROR_PATTERNS.md A10,2026-08-22
+noise_sd_intercept_on_RANK,5.31,board rank,draft residuals 2024-25,271,ERROR_PATTERNS.md A10,2026-08-22
+te_lag_picks_adp_le_40,14.9,true TE selections with ADP<=40 ONLY,8 selections,8,ERROR_PATTERNS.md A11,2026-08-22
+te_lag_picks_adp_61_120,-3.7,true TE selections ADP 61-120,24 selections,24,ERROR_PATTERNS.md A11,2026-08-22

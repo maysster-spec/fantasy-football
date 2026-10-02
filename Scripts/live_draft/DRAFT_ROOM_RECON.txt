@@ -1,0 +1,73 @@
+ESPN DRAFT ROOM RECONNAISSANCE  --  paste into the browser console, read-only, changes nothing
+================================================================================================
+WHY: the FantasyPros extension proves live picks are IN THE PAGE. They are simply not in the
+REST replica we have been polling. So we stop asking ESPN's server and read the room itself.
+This finds WHERE in the page the picks are, so the reader can be written against real selectors.
+
+HOW:
+  1. Open a draft room with picks visible.  EITHER WORKS:
+       - the COMPLETED league 1608900294 draft room / Pick History  <-- zero setup, do this first
+       - or a live draft, which additionally answers the websocket question below
+  2. Press F12 -> Console tab.
+  3. Paste the whole block below, press Enter.
+  4. Copy the printed output back to me.
+
+------------------------------------------------------------------------------------------------
+(() => {
+  const out = {};
+
+  // 1. Does the page keep draft state in a global?  Most SPAs do.
+  out.globals = Object.keys(window).filter(k =>
+    /draft|pick|espn|store|state|redux|__/i.test(k)).slice(0, 60);
+
+  // 2. Any global that actually contains something pick-shaped
+  out.pickish = [];
+  for (const k of out.globals) {
+    try {
+      const v = window[k];
+      const s = JSON.stringify(v);
+      if (s && s.length > 200 && /"playerId"|"overallPickNumber"|"pickNumber"/.test(s))
+        out.pickish.push({ key: k, bytes: s.length });
+    } catch (e) {}
+  }
+
+  // 3. Where in the DOM do player names appear next to pick numbers?
+  const hits = [];
+  document.querySelectorAll('*').forEach(el => {
+    if (el.children.length) return;                       // leaf nodes only
+    const t = (el.textContent || '').trim();
+    if (t.length < 3 || t.length > 40) return;
+    if (!/^[A-Z][a-z]+[ '.\-][A-Z]/.test(t)) return;      // looks like a person's name
+    let p = el, path = [];
+    for (let i = 0; i < 4 && p; i++, p = p.parentElement)
+      path.push(p.tagName.toLowerCase() + (p.className && typeof p.className === 'string'
+        ? '.' + p.className.trim().split(/\s+/).slice(0, 3).join('.') : ''));
+    hits.push({ text: t, path: path.join(' < ') });
+  });
+  const byPath = {};
+  hits.forEach(h => { byPath[h.path] = byPath[h.path] || []; byPath[h.path].push(h.text); });
+  out.nameContainers = Object.entries(byPath)
+    .filter(([, v]) => v.length >= 3)
+    .sort((a, b) => b[1].length - a[1].length)
+    .slice(0, 8)
+    .map(([path, names]) => ({ path, count: names.length, sample: names.slice(0, 4) }));
+
+  // 4. Is there a websocket?  (only visible if it opened after this hook -- see note below)
+  out.wsNote = 'check DevTools > Network > filter "WS" for a live socket URL';
+
+  // 5. Anything on the page that looks like a pick-history list
+  out.historyTabs = [...document.querySelectorAll('button,a,[role=tab]')]
+    .map(e => (e.textContent || '').trim())
+    .filter(t => /pick history|board|history|activity/i.test(t)).slice(0, 10);
+
+  console.log(JSON.stringify(out, null, 1));
+  return 'copy the JSON above';
+})();
+------------------------------------------------------------------------------------------------
+
+ALSO USEFUL, 10 seconds:
+  DevTools -> Network tab -> filter box type: WS
+  If a websocket is listed, click it and screenshot the URL + a couple of frames.
+  A live draft almost certainly pushes picks over that socket, and that is the real source.
+
+NOTHING HERE WRITES ANYTHING. It reads the page you already have open.

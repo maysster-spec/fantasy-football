@@ -1,0 +1,26 @@
+Week,Date,Team,TeamB,Type,Status,Transaction
+2,2024-09-14 11:15,Send'em Packin,,TRADE_ACCEPT,,
+2,2024-09-14 12:32,Multiple Scorgasms,,TRADE_UPHOLD,EXECUTED,
+2,2024-09-14 13:32,Window is Always Open,,TRADE_UPHOLD,EXECUTED,
+2,2024-09-12 09:57,Below Mendoza Line,Send'em Packin,TRADE_PROPOSAL,CANCELED,TRADE Player ID 4361579 [Below Mendoza Line -> Send'em Packin] | TRADE Player ID 16731 [Below Mendoza Line -> Send'em Packin] | TRADE Player ID 4612826 [Send'em Packin -> Below Mendoza Line] | TRADE Player ID 4426385 [Send'em Packin -> Below Mendoza Line]
+5,2024-10-05 14:50,Ja'Marracle Whip Juggernauts,,TRADE_DECLINE,EXECUTED,
+5,2024-10-02 11:54,Moore Chubb for u to Love,,TRADE_DECLINE,EXECUTED,
+5,2024-10-05 13:49,Bloodied Castaways,Ja'Marracle Whip Juggernauts,TRADE_PROPOSAL,PENDING,TRADE Player ID 4428850 [Ja'Marracle Whip Juggernauts -> Bloodied Castaways] | TRADE Player ID 2577327 [Bloodied Castaways -> Ja'Marracle Whip Juggernauts] | TRADE Player ID 4241463 [Bloodied Castaways -> Ja'Marracle Whip Juggernauts] | TRADE Player ID 3916148 [Ja'Marracle Whip Juggernauts -> Bloodied Castaways]
+5,2024-10-05 14:50,Bloodied Castaways,Ja'Marracle Whip Juggernauts,TRADE_PROPOSAL,CANCELED,TRADE Player ID 4428850 [Ja'Marracle Whip Juggernauts -> Bloodied Castaways] | TRADE Player ID 2577327 [Bloodied Castaways -> Ja'Marracle Whip Juggernauts] | TRADE Player ID 4241463 [Bloodied Castaways -> Ja'Marracle Whip Juggernauts] | TRADE Player ID 3916148 [Ja'Marracle Whip Juggernauts -> Bloodied Castaways]
+6,2024-10-08 20:23,Send'em Packin,,TRADE_ACCEPT,,
+6,2024-10-08 21:30,Injury Prone,,TRADE_VETO,EXECUTED,
+6,2024-10-10 00:17,Multiple Scorgasms,,TRADE_UPHOLD,EXECUTED,
+8,2024-10-23 05:59,Ja'Marracle Whip Juggernauts,Window is Always Open,TRADE_PROPOSAL,PENDING,TRADE Player ID 4360248 [Window is Always Open -> Ja'Marracle Whip Juggernauts] | TRADE Player ID 4038815 [Ja'Marracle Whip Juggernauts -> Window is Always Open]
+8,2024-10-23 06:39,Ja'Marracle Whip Juggernauts,Window is Always Open,TRADE_PROPOSAL,CANCELED,TRADE Player ID 4360248 [Window is Always Open -> Ja'Marracle Whip Juggernauts] | TRADE Player ID 4038815 [Ja'Marracle Whip Juggernauts -> Window is Always Open]
+10,2024-11-07 18:09,Moore Chubb for u to Love,Ja'Marracle Whip Juggernauts,TRADE_PROPOSAL,PENDING,TRADE Player ID 3915416 [Moore Chubb for u to Love -> Ja'Marracle Whip Juggernauts] | TRADE Player ID 4047365 [Moore Chubb for u to Love -> Ja'Marracle Whip Juggernauts] | TRADE Player ID 4362628 [Ja'Marracle Whip Juggernauts -> Moore Chubb for u to Love]
+10,2024-11-07 17:34,Moore Chubb for u to Love,Ja'Marracle Whip Juggernauts,TRADE_PROPOSAL,PENDING,TRADE Player ID 3128720 [Moore Chubb for u to Love -> Ja'Marracle Whip Juggernauts] | TRADE Player ID 3915416 [Moore Chubb for u to Love -> Ja'Marracle Whip Juggernauts] | TRADE Player ID 4362628 [Ja'Marracle Whip Juggernauts -> Moore Chubb for u to Love]
+10,2024-11-07 18:39,Moore Chubb for u to Love,Ja'Marracle Whip Juggernauts,TRADE_PROPOSAL,CANCELED,TRADE Player ID 3915416 [Moore Chubb for u to Love -> Ja'Marracle Whip Juggernauts] | TRADE Player ID 4047365 [Moore Chubb for u to Love -> Ja'Marracle Whip Juggernauts] | TRADE Player ID 4362628 [Ja'Marracle Whip Juggernauts -> Moore Chubb for u to Love]
+10,2024-11-07 18:08,Moore Chubb for u to Love,Ja'Marracle Whip Juggernauts,TRADE_PROPOSAL,CANCELED,TRADE Player ID 3128720 [Moore Chubb for u to Love -> Ja'Marracle Whip Juggernauts] | TRADE Player ID 3915416 [Moore Chubb for u to Love -> Ja'Marracle Whip Juggernauts] | TRADE Player ID 4362628 [Ja'Marracle Whip Juggernauts -> Moore Chubb for u to Love]
+12,2024-11-21 15:52,Window is Always Open,,TRADE_DECLINE,EXECUTED,
+14,2024-12-07 17:01,Send'em Packin,,TRADE_DECLINE,EXECUTED,
+14,2024-12-05 06:44,Ja'Marracle Whip Juggernauts,Injury Prone,TRADE_PROPOSAL,PENDING,TRADE Player ID 4428557 [Injury Prone -> Ja'Marracle Whip Juggernauts] | TRADE Player ID 4429275 [Ja'Marracle Whip Juggernauts -> Injury Prone]
+14,2024-12-06 23:46,Multiple Scorgasms,,TRADE_DECLINE,EXECUTED,
+14,2024-12-06 17:35,Ja'Marracle Whip Juggernauts,Injury Prone,TRADE_PROPOSAL,CANCELED,TRADE Player ID 4428557 [Injury Prone -> Ja'Marracle Whip Juggernauts] | TRADE Player ID 4429275 [Ja'Marracle Whip Juggernauts -> Injury Prone]
+16,2024-12-18 13:52,Multiple Scorgasms,,TRADE_ACCEPT,,
+16,2024-12-18 13:52,Multiple Scorgasms,Bloodied Castaways,TRADE_PROPOSAL,CANCELED,TRADE Player ID 3128429 [Bloodied Castaways -> Multiple Scorgasms] | TRADE Player ID 4360248 [Multiple Scorgasms -> Bloodied Castaways]
+16,2024-12-19 08:05,Multiple Scorgasms,,TRADE_UPHOLD,EXECUTED,
